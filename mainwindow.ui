@@ -7,11 +7,11 @@
     <x>0</x>
     <y>0</y>
     <width>1667</width>
-    <height>1121</height>
+    <height>1046</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Fox</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout">
@@ -30,7 +30,7 @@
        <enum>Qt::ElideNone</enum>
       </property>
       <property name="tabsClosable">
-       <bool>false</bool>
+       <bool>true</bool>
       </property>
       <widget class="QWidget" name="lobby">
        <attribute name="title">
@@ -134,17 +134,26 @@
          <bool>false</bool>
         </property>
        </widget>
-       <widget class="QPushButton" name="pushButton">
+       <widget class="QLabel" name="onlineCountLabel">
         <property name="geometry">
          <rect>
-          <x>480</x>
-          <y>810</y>
-          <width>151</width>
-          <height>61</height>
+          <x>1050</x>
+          <y>0</y>
+          <width>131</width>
+          <height>31</height>
          </rect>
         </property>
+        <property name="frameShape">
+         <enum>QFrame::Box</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
         <property name="text">
-         <string>New Match Test</string>
+         <string>Online: 0</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
         </property>
        </widget>
       </widget>

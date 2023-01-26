@@ -7,6 +7,7 @@
 #include <QProgressDialog>
 
 #include <boardwidget.h>
+#include <matchtab.h>
 #include <broadcastroommodel.h>
 #include <playermodel.h>
 
@@ -26,15 +27,17 @@ private slots:
     void on_ws_disconnected();
     void on_ws_msg(QString);
 
-    void on_pushButton_clicked();
+    void on_roomTable_doubleClicked(const QModelIndex &index);
+    void on_mainTabs_tabCloseRequested(int index);
 
 private:
     Ui::MainWindow *ui;
     QWebSocket *ws;
-    ModelUtils m_modelUtils;
+    const ModelUtils m_modelUtils;
     QProgressDialog progressDialog;
     BroadcastRoomModel m_roomModel;
     PlayerModel m_playerModel;
+    QMap<int, MatchTab*> m_activeRooms;
 
     int initialRoomPages = 0;
     int lastRoomPage = 0;

@@ -2,7 +2,6 @@
 
 LoginMsg::LoginMsg()
 {
-
 }
 
 const QString &LoginMsg::username() const

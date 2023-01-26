@@ -7,6 +7,8 @@
 #include <QStandardItem>
 #include <QStyledItemDelegate>
 
+#include <rank.h>
+
 class RightDecoratorStyledItemDelegate : public QStyledItemDelegate {
 protected:
     void initStyleOption(QStyleOptionViewItem *option, const QModelIndex &index) const override;
@@ -19,8 +21,9 @@ public:
 
     QStandardItem* alignedString(QString s, Qt::Alignment, QString tooltip = "", QBrush fg = Qt::transparent) const;
     QStandardItem* nickWithFlag(QString country, QString nick, Qt::Alignment alignment, QString tooltip = "", QBrush fg = Qt::transparent) const;
+    QIcon flagForCountry(QString country) const;
 
-    static QBrush colorForRank(QString rank);
+    static QBrush colorForRank(Rank rank);
 
 private:
     QMap<QString, QIcon> m_countryFlags;

@@ -264,5 +264,6 @@
         <file>assets/avatar_00.png</file>
         <file>assets/smallBlackStone.png</file>
         <file>assets/smallWhiteStone.png</file>
+        <file>assets/capture0.wav</file>
     </qresource>
 </RCC>

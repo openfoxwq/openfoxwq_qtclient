@@ -4,13 +4,14 @@
 #include <QStandardItemModel>
 #include <QObject>
 
+#include <rank.h>
 #include <modelutils.h>
 
 struct BroadcastRoomPlayerInfo {
     int id;
     QString name;
     QString nameNative;
-    QString rank;
+    Rank rank;
     QString country;
 };
 
@@ -28,15 +29,19 @@ class BroadcastRoomModel : public QStandardItemModel
 {
     Q_OBJECT
 public:
-    explicit BroadcastRoomModel(QObject *parent, ModelUtils& modelUtils);
+    explicit BroadcastRoomModel(QObject *parent, const ModelUtils& modelUtils);
 
     void update(BroadcastRoom);
     bool contains(int id) const;
     void remove(int id);
     int size() const;
 
+    const BroadcastRoom& getRoomById(int id) const;
+    const BroadcastRoom& getRoom(int index) const;
+
 private:
-    ModelUtils& m_modelUtils;
+    const ModelUtils& m_modelUtils;
+    QVector<BroadcastRoom> m_rooms;
     QMap<int, int> m_roomIndex; // roomId -> row
 };
 

@@ -3,25 +3,30 @@
 
 #include <QWidget>
 #include <QIcon>
-#include <QSound>
-#include <QPushButton>
-#include <ui_boardwidget.h>
+#include <QSoundEffect>
+#include <boardbutton.h>
+
+namespace Ui {
+class BoardWidget;
+}
 
 class BoardWidget : public QWidget
 {
     Q_OBJECT
+
 public:
-    enum class PointState {
-        kEmpty = 0,
-        kBlack = 1,
-        kWhite = -1,
-    };
     explicit BoardWidget(QWidget *parent = nullptr, int boardSize = 19);
     ~BoardWidget();
 
     void paintEvent(QPaintEvent *) override;
-    void setPoint(int r, int c, PointState state);
+    bool movePiece(int r, int c, PointState state);
+    void setAnnotation(int r, int c, Annotation);
     PointState getPoint(int r, int c) const;
+    void clearAnnotations();
+
+    bool interactive() const;
+    void setInteractive(bool newInteractive);
+    void setSound(bool value);
 
 signals:
     void pointClicked(int r, int c);
@@ -30,11 +35,22 @@ private:
     Ui::BoardWidget *ui;
     const int boardSize;
     QIcon blackStone, whiteStone;
-    QSound placeStone;
-    QVector<QVector<PointState>> pointState;
-    QVector<QVector<QPushButton*>> pointButtons;
+    QSoundEffect placeStoneSound, captureSound;
+    QVector<QVector<BoardButton*>> pointButtons;
+    bool m_interactive = false;
+    bool m_soundEnabled = false;
+    QPair<int, int> m_lastPoint = {-1, -1};
+    PointState m_lastState = PointState::kWhite;
 
     void drawBoardLines(QPainter&);
+
+    using Point = QPair<int, int>;
+    using Group = QVector<Point>;
+    using PointSet = QSet<Point>;
+
+    PointState getExtendedState(int r, int c, const QMap<Point, PointState> &additionalPoints);
+    void collectGroup(PointState col, int r, int c, Group& group, PointSet& used, const QMap<Point, PointState> &additionalPoints);
+    QMap<PointState, QVector<Group>> computeDeadGroups(const QMap<Point, PointState> &additionalPoints);
 };
 
 #endif // BOARDWIDGET_H

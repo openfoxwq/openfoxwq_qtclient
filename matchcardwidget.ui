@@ -222,7 +222,7 @@
         <string>nickname 1D</string>
        </property>
        <property name="alignment">
-        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        <set>Qt::AlignCenter</set>
        </property>
       </widget>
      </item>
@@ -258,7 +258,7 @@
         <string>1D nickname</string>
        </property>
        <property name="alignment">
-        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+        <set>Qt::AlignCenter</set>
        </property>
       </widget>
      </item>
@@ -278,14 +278,7 @@
      <item row="3" column="0" colspan="3">
       <layout class="QHBoxLayout" name="horizontalLayout_3">
        <item>
-        <widget class="QFrame" name="whiteClockFrame">
-         <property name="frameShape">
-          <enum>QFrame::StyledPanel</enum>
-         </property>
-         <property name="frameShadow">
-          <enum>QFrame::Raised</enum>
-         </property>
-        </widget>
+        <widget class="TimeControlWidget" name="whiteClockWidget" native="true"/>
        </item>
        <item>
         <layout class="QGridLayout" name="gridLayout_2">
@@ -297,7 +290,7 @@
           </widget>
          </item>
          <item row="1" column="0">
-          <widget class="QLabel" name="label">
+          <widget class="QLabel" name="whiteByoyomiLabel">
            <property name="font">
             <font>
              <pointsize>15</pointsize>
@@ -309,7 +302,7 @@
           </widget>
          </item>
          <item row="1" column="1">
-          <widget class="QLabel" name="whiteByoyomiLabel">
+          <widget class="QLabel" name="label2">
            <property name="font">
             <font>
              <pointsize>15</pointsize>
@@ -346,7 +339,7 @@
             </font>
            </property>
            <property name="text">
-            <string>13</string>
+            <string>0</string>
            </property>
           </widget>
          </item>
@@ -358,7 +351,7 @@
             </font>
            </property>
            <property name="text">
-            <string>6</string>
+            <string>0</string>
            </property>
            <property name="alignment">
             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -383,14 +376,7 @@
         </layout>
        </item>
        <item>
-        <widget class="QFrame" name="blackClockFrame">
-         <property name="frameShape">
-          <enum>QFrame::StyledPanel</enum>
-         </property>
-         <property name="frameShadow">
-          <enum>QFrame::Raised</enum>
-         </property>
-        </widget>
+        <widget class="TimeControlWidget" name="blackClockWidget" native="true"/>
        </item>
       </layout>
      </item>
@@ -398,6 +384,14 @@
    </item>
   </layout>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>TimeControlWidget</class>
+   <extends>QWidget</extends>
+   <header>timecontrolwidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <resources>
   <include location="resources.qrc"/>
  </resources>
