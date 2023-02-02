@@ -9,12 +9,9 @@ BoardTestWindow::BoardTestWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    connect(ui->board, &BoardWidget::pointClicked, this, [=](int r, int c) {
-        ui->board->movePiece(r, c, m_curState);
-        m_curState = m_curState == PointState::kBlack ? PointState::kWhite : PointState::kBlack;
+    connect(ui->board, &BoardWidget::pointClicked, this, [=](int r, int c, openfoxwq::Color state) {
+        ui->board->movePiece(r, c, state);
     });
-
-    ui->board->setSound(true);
 }
 
 BoardTestWindow::~BoardTestWindow()

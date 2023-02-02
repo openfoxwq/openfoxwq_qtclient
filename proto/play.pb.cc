@@ -74,7 +74,7 @@ PROTOBUF_CONSTEXPR ListPlayersResponse::ListPlayersResponse(
   , /*decltype(_impl_.unknown_field_1_)*/int64_t{0}
   , /*decltype(_impl_.page_index_)*/int64_t{0}
   , /*decltype(_impl_.page_count_)*/int64_t{0}
-  , /*decltype(_impl_.unknown_field_5_)*/int64_t{0}
+  , /*decltype(_impl_.online_count_)*/int64_t{0}
   , /*decltype(_impl_.unknown_field_6_)*/int64_t{0}} {}
 struct ListPlayersResponseDefaultTypeInternal {
   PROTOBUF_CONSTEXPR ListPlayersResponseDefaultTypeInternal()
@@ -89,6 +89,7 @@ PROTOBUF_CONSTEXPR GetPlayerInfoRequest::GetPlayerInfoRequest(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.player_name_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.info_options_)*/nullptr
   , /*decltype(_impl_.player_id_)*/int64_t{0}} {}
 struct GetPlayerInfoRequestDefaultTypeInternal {
@@ -107,10 +108,8 @@ PROTOBUF_CONSTEXPR GetPlayerInfoResponse_RegisterInfo::GetPlayerInfoResponse_Reg
   , /*decltype(_impl_.name_native_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.name_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.player_id_)*/int64_t{0}
-  , /*decltype(_impl_.unknown_field_2_)*/int64_t{0}
-  , /*decltype(_impl_.unknown_field_3_)*/int64_t{0}
-  , /*decltype(_impl_.unknown_field_7_)*/int64_t{0}
-  , /*decltype(_impl_.member_since_unix_ts_)*/int64_t{0}} {}
+  , /*decltype(_impl_.member_since_unix_ts_)*/int64_t{0}
+  , /*decltype(_impl_.country_)*/0} {}
 struct GetPlayerInfoResponse_RegisterInfoDefaultTypeInternal {
   PROTOBUF_CONSTEXPR GetPlayerInfoResponse_RegisterInfoDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -120,15 +119,190 @@ struct GetPlayerInfoResponse_RegisterInfoDefaultTypeInternal {
   };
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetPlayerInfoResponse_RegisterInfoDefaultTypeInternal _GetPlayerInfoResponse_RegisterInfo_default_instance_;
+PROTOBUF_CONSTEXPR GetPlayerInfoResponse_RecentRecord_Unknown1::GetPlayerInfoResponse_RecentRecord_Unknown1(
+    ::_pbi::ConstantInitialized) {}
+struct GetPlayerInfoResponse_RecentRecord_Unknown1DefaultTypeInternal {
+  PROTOBUF_CONSTEXPR GetPlayerInfoResponse_RecentRecord_Unknown1DefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~GetPlayerInfoResponse_RecentRecord_Unknown1DefaultTypeInternal() {}
+  union {
+    GetPlayerInfoResponse_RecentRecord_Unknown1 _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetPlayerInfoResponse_RecentRecord_Unknown1DefaultTypeInternal _GetPlayerInfoResponse_RecentRecord_Unknown1_default_instance_;
+PROTOBUF_CONSTEXPR GetPlayerInfoResponse_RecentRecord::GetPlayerInfoResponse_RecentRecord(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.streak_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.unknown_field_3_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.unknown_field_1_)*/nullptr} {}
+struct GetPlayerInfoResponse_RecentRecordDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR GetPlayerInfoResponse_RecentRecordDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~GetPlayerInfoResponse_RecentRecordDefaultTypeInternal() {}
+  union {
+    GetPlayerInfoResponse_RecentRecord _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetPlayerInfoResponse_RecentRecordDefaultTypeInternal _GetPlayerInfoResponse_RecentRecord_default_instance_;
+PROTOBUF_CONSTEXPR GetPlayerInfoResponse_OverallResults::GetPlayerInfoResponse_OverallResults(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.rating_)*/int64_t{0}
+  , /*decltype(_impl_.wr_)*/int64_t{0}
+  , /*decltype(_impl_.stamina_)*/int64_t{0}} {}
+struct GetPlayerInfoResponse_OverallResultsDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR GetPlayerInfoResponse_OverallResultsDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~GetPlayerInfoResponse_OverallResultsDefaultTypeInternal() {}
+  union {
+    GetPlayerInfoResponse_OverallResults _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetPlayerInfoResponse_OverallResultsDefaultTypeInternal _GetPlayerInfoResponse_OverallResults_default_instance_;
+PROTOBUF_CONSTEXPR GetPlayerInfoResponse_ProInfo::GetPlayerInfoResponse_ProInfo(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.name1_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.name2_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.unknown_field_1_)*/int64_t{0}
+  , /*decltype(_impl_.unknown_field_2_)*/int64_t{0}
+  , /*decltype(_impl_.association_)*/int64_t{0}
+  , /*decltype(_impl_.rank_)*/0} {}
+struct GetPlayerInfoResponse_ProInfoDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR GetPlayerInfoResponse_ProInfoDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~GetPlayerInfoResponse_ProInfoDefaultTypeInternal() {}
+  union {
+    GetPlayerInfoResponse_ProInfo _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetPlayerInfoResponse_ProInfoDefaultTypeInternal _GetPlayerInfoResponse_ProInfo_default_instance_;
+PROTOBUF_CONSTEXPR GetPlayerInfoResponse_PerformanceRecord::GetPlayerInfoResponse_PerformanceRecord(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.wr_)*/int64_t{0}
+  , /*decltype(_impl_.stamina_)*/int64_t{0}
+  , /*decltype(_impl_.foxcoin_)*/int64_t{0}
+  , /*decltype(_impl_.rank_)*/0} {}
+struct GetPlayerInfoResponse_PerformanceRecordDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR GetPlayerInfoResponse_PerformanceRecordDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~GetPlayerInfoResponse_PerformanceRecordDefaultTypeInternal() {}
+  union {
+    GetPlayerInfoResponse_PerformanceRecord _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetPlayerInfoResponse_PerformanceRecordDefaultTypeInternal _GetPlayerInfoResponse_PerformanceRecord_default_instance_;
+PROTOBUF_CONSTEXPR GetPlayerInfoResponse_Results::GetPlayerInfoResponse_Results(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.wins_)*/int64_t{0}
+  , /*decltype(_impl_.losses_)*/int64_t{0}
+  , /*decltype(_impl_.draws_)*/int64_t{0}
+  , /*decltype(_impl_.type_)*/0} {}
+struct GetPlayerInfoResponse_ResultsDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR GetPlayerInfoResponse_ResultsDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~GetPlayerInfoResponse_ResultsDefaultTypeInternal() {}
+  union {
+    GetPlayerInfoResponse_Results _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetPlayerInfoResponse_ResultsDefaultTypeInternal _GetPlayerInfoResponse_Results_default_instance_;
+PROTOBUF_CONSTEXPR GetPlayerInfoResponse_Rooms_Room_ShortPlayerInfo::GetPlayerInfoResponse_Rooms_Room_ShortPlayerInfo(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.name4_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.name5_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.player_id_)*/int64_t{0}
+  , /*decltype(_impl_.rank_)*/0
+  , /*decltype(_impl_.country_)*/0} {}
+struct GetPlayerInfoResponse_Rooms_Room_ShortPlayerInfoDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR GetPlayerInfoResponse_Rooms_Room_ShortPlayerInfoDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~GetPlayerInfoResponse_Rooms_Room_ShortPlayerInfoDefaultTypeInternal() {}
+  union {
+    GetPlayerInfoResponse_Rooms_Room_ShortPlayerInfo _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetPlayerInfoResponse_Rooms_Room_ShortPlayerInfoDefaultTypeInternal _GetPlayerInfoResponse_Rooms_Room_ShortPlayerInfo_default_instance_;
+PROTOBUF_CONSTEXPR GetPlayerInfoResponse_Rooms_Room::GetPlayerInfoResponse_Rooms_Room(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.id_)*/nullptr
+  , /*decltype(_impl_.player1_)*/nullptr
+  , /*decltype(_impl_.player2_)*/nullptr
+  , /*decltype(_impl_.unknown_field_2_)*/int64_t{0}} {}
+struct GetPlayerInfoResponse_Rooms_RoomDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR GetPlayerInfoResponse_Rooms_RoomDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~GetPlayerInfoResponse_Rooms_RoomDefaultTypeInternal() {}
+  union {
+    GetPlayerInfoResponse_Rooms_Room _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetPlayerInfoResponse_Rooms_RoomDefaultTypeInternal _GetPlayerInfoResponse_Rooms_Room_default_instance_;
+PROTOBUF_CONSTEXPR GetPlayerInfoResponse_Rooms::GetPlayerInfoResponse_Rooms(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.rooms_)*/{}
+  , /*decltype(_impl_.unknown_field_2_)*/int64_t{0}
+  , /*decltype(_impl_.unknown_field_3_)*/int64_t{0}
+  , /*decltype(_impl_.unknown_field_4_)*/int64_t{0}} {}
+struct GetPlayerInfoResponse_RoomsDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR GetPlayerInfoResponse_RoomsDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~GetPlayerInfoResponse_RoomsDefaultTypeInternal() {}
+  union {
+    GetPlayerInfoResponse_Rooms _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetPlayerInfoResponse_RoomsDefaultTypeInternal _GetPlayerInfoResponse_Rooms_default_instance_;
+PROTOBUF_CONSTEXPR GetPlayerInfoResponse_AdditionalInfo::GetPlayerInfoResponse_AdditionalInfo(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.unknown_field_3_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.unknown_field_4_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.unknown_field_1_)*/int64_t{0}
+  , /*decltype(_impl_.unknown_field_2_)*/int64_t{0}} {}
+struct GetPlayerInfoResponse_AdditionalInfoDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR GetPlayerInfoResponse_AdditionalInfoDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~GetPlayerInfoResponse_AdditionalInfoDefaultTypeInternal() {}
+  union {
+    GetPlayerInfoResponse_AdditionalInfo _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetPlayerInfoResponse_AdditionalInfoDefaultTypeInternal _GetPlayerInfoResponse_AdditionalInfo_default_instance_;
 PROTOBUF_CONSTEXPR GetPlayerInfoResponse::GetPlayerInfoResponse(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.game_results_)*/{}
+  , /*decltype(_impl_.results_)*/{}
+  , /*decltype(_impl_.searched_player_name_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.info_options_)*/nullptr
   , /*decltype(_impl_.register_info_)*/nullptr
+  , /*decltype(_impl_.recent_record_)*/nullptr
+  , /*decltype(_impl_.overall_results_)*/nullptr
+  , /*decltype(_impl_.pro_info_)*/nullptr
+  , /*decltype(_impl_.perf_record_)*/nullptr
+  , /*decltype(_impl_.rooms_)*/nullptr
+  , /*decltype(_impl_.additional_info_)*/nullptr
+  , /*decltype(_impl_.error_code_)*/int64_t{0}
+  , /*decltype(_impl_.seached_player_id_)*/int64_t{0}
   , /*decltype(_impl_.player_id_)*/int64_t{0}
-  , /*decltype(_impl_.player_id_again_)*/int64_t{0}} {}
+  , /*decltype(_impl_.foxcoin_)*/int64_t{0}
+  , /*decltype(_impl_.rank_)*/0} {}
 struct GetPlayerInfoResponseDefaultTypeInternal {
   PROTOBUF_CONSTEXPR GetPlayerInfoResponseDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -227,27 +401,58 @@ struct PlayerStateEventDefaultTypeInternal {
   };
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 PlayerStateEventDefaultTypeInternal _PlayerStateEvent_default_instance_;
-PROTOBUF_CONSTEXPR UnknownPlayerEvent1::UnknownPlayerEvent1(
+PROTOBUF_CONSTEXPR PlayerOnlineCountEvent::PlayerOnlineCountEvent(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.unknown_field_1_)*/int64_t{0}
+  , /*decltype(_impl_.online_count_)*/int64_t{0}} {}
+struct PlayerOnlineCountEventDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR PlayerOnlineCountEventDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~PlayerOnlineCountEventDefaultTypeInternal() {}
+  union {
+    PlayerOnlineCountEvent _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 PlayerOnlineCountEventDefaultTypeInternal _PlayerOnlineCountEvent_default_instance_;
+PROTOBUF_CONSTEXPR PlayerOnlineEvent::PlayerOnlineEvent(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.player_info_)*/nullptr
+  , /*decltype(_impl_.online_count_)*/int64_t{0}
+  , /*decltype(_impl_.unknown_field_3_)*/int64_t{0}} {}
+struct PlayerOnlineEventDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR PlayerOnlineEventDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~PlayerOnlineEventDefaultTypeInternal() {}
+  union {
+    PlayerOnlineEvent _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 PlayerOnlineEventDefaultTypeInternal _PlayerOnlineEvent_default_instance_;
+PROTOBUF_CONSTEXPR PlayerOfflineEvent::PlayerOfflineEvent(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
   , /*decltype(_impl_.player_id_)*/int64_t{0}
   , /*decltype(_impl_.online_count_)*/int64_t{0}
   , /*decltype(_impl_.unknown_field_3_)*/int64_t{0}} {}
-struct UnknownPlayerEvent1DefaultTypeInternal {
-  PROTOBUF_CONSTEXPR UnknownPlayerEvent1DefaultTypeInternal()
+struct PlayerOfflineEventDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR PlayerOfflineEventDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
-  ~UnknownPlayerEvent1DefaultTypeInternal() {}
+  ~PlayerOfflineEventDefaultTypeInternal() {}
   union {
-    UnknownPlayerEvent1 _instance;
+    PlayerOfflineEvent _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 UnknownPlayerEvent1DefaultTypeInternal _UnknownPlayerEvent1_default_instance_;
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 PlayerOfflineEventDefaultTypeInternal _PlayerOfflineEvent_default_instance_;
 PROTOBUF_CONSTEXPR UnknownPlayRequest1_UnknownPlayRequest1Nested1::UnknownPlayRequest1_UnknownPlayRequest1Nested1(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.unknown_field_1_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+  , /*decltype(_impl_.mac_address_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct UnknownPlayRequest1_UnknownPlayRequest1Nested1DefaultTypeInternal {
   PROTOBUF_CONSTEXPR UnknownPlayRequest1_UnknownPlayRequest1Nested1DefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -286,9 +491,827 @@ struct UnknownPlayResponse1DefaultTypeInternal {
   };
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 UnknownPlayResponse1DefaultTypeInternal _UnknownPlayResponse1_default_instance_;
+PROTOBUF_CONSTEXPR GetRoomInfoRequest::GetRoomInfoRequest(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.id_)*/nullptr} {}
+struct GetRoomInfoRequestDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR GetRoomInfoRequestDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~GetRoomInfoRequestDefaultTypeInternal() {}
+  union {
+    GetRoomInfoRequest _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetRoomInfoRequestDefaultTypeInternal _GetRoomInfoRequest_default_instance_;
+PROTOBUF_CONSTEXPR GetRoomInfoResponse_Unknown2::GetRoomInfoResponse_Unknown2(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.unknown_field_1_)*/int64_t{0}
+  , /*decltype(_impl_.unknown_field_2_)*/int64_t{0}} {}
+struct GetRoomInfoResponse_Unknown2DefaultTypeInternal {
+  PROTOBUF_CONSTEXPR GetRoomInfoResponse_Unknown2DefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~GetRoomInfoResponse_Unknown2DefaultTypeInternal() {}
+  union {
+    GetRoomInfoResponse_Unknown2 _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetRoomInfoResponse_Unknown2DefaultTypeInternal _GetRoomInfoResponse_Unknown2_default_instance_;
+PROTOBUF_CONSTEXPR GetRoomInfoResponse_PlayerEntry::GetRoomInfoResponse_PlayerEntry(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.name_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.avatar_url_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.name_alt_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.id_)*/int64_t{0}
+  , /*decltype(_impl_.main_time_)*/int64_t{0}
+  , /*decltype(_impl_.rank_)*/0
+  , /*decltype(_impl_.country_)*/0
+  , /*decltype(_impl_.byoyomi_periods_)*/int64_t{0}
+  , /*decltype(_impl_.byoyomi_time_)*/int64_t{0}} {}
+struct GetRoomInfoResponse_PlayerEntryDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR GetRoomInfoResponse_PlayerEntryDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~GetRoomInfoResponse_PlayerEntryDefaultTypeInternal() {}
+  union {
+    GetRoomInfoResponse_PlayerEntry _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetRoomInfoResponse_PlayerEntryDefaultTypeInternal _GetRoomInfoResponse_PlayerEntry_default_instance_;
+PROTOBUF_CONSTEXPR GetRoomInfoResponse_RoomSettings::GetRoomInfoResponse_RoomSettings(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.board_size_)*/int64_t{0}
+  , /*decltype(_impl_.komi_)*/int64_t{0}
+  , /*decltype(_impl_.player_id_1_)*/int64_t{0}
+  , /*decltype(_impl_.main_time_)*/int64_t{0}
+  , /*decltype(_impl_.byoyomi_time_)*/int64_t{0}
+  , /*decltype(_impl_.byoyomi_periods_)*/int64_t{0}
+  , /*decltype(_impl_.player_id_2_)*/int64_t{0}} {}
+struct GetRoomInfoResponse_RoomSettingsDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR GetRoomInfoResponse_RoomSettingsDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~GetRoomInfoResponse_RoomSettingsDefaultTypeInternal() {}
+  union {
+    GetRoomInfoResponse_RoomSettings _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetRoomInfoResponse_RoomSettingsDefaultTypeInternal _GetRoomInfoResponse_RoomSettings_default_instance_;
+PROTOBUF_CONSTEXPR GetRoomInfoResponse_Unknown5::GetRoomInfoResponse_Unknown5(
+    ::_pbi::ConstantInitialized) {}
+struct GetRoomInfoResponse_Unknown5DefaultTypeInternal {
+  PROTOBUF_CONSTEXPR GetRoomInfoResponse_Unknown5DefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~GetRoomInfoResponse_Unknown5DefaultTypeInternal() {}
+  union {
+    GetRoomInfoResponse_Unknown5 _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetRoomInfoResponse_Unknown5DefaultTypeInternal _GetRoomInfoResponse_Unknown5_default_instance_;
+PROTOBUF_CONSTEXPR GetRoomInfoResponse_RoomInfo::GetRoomInfoResponse_RoomInfo(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.players_)*/{}
+  , /*decltype(_impl_.id_)*/nullptr
+  , /*decltype(_impl_.settings_)*/nullptr
+  , /*decltype(_impl_.unknown_field_5_)*/nullptr
+  , /*decltype(_impl_.unknown_field_4_)*/int64_t{0}
+  , /*decltype(_impl_.ts_unix_)*/int64_t{0}
+  , /*decltype(_impl_.ts_unix_ns_)*/int64_t{0}} {}
+struct GetRoomInfoResponse_RoomInfoDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR GetRoomInfoResponse_RoomInfoDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~GetRoomInfoResponse_RoomInfoDefaultTypeInternal() {}
+  union {
+    GetRoomInfoResponse_RoomInfo _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetRoomInfoResponse_RoomInfoDefaultTypeInternal _GetRoomInfoResponse_RoomInfo_default_instance_;
+PROTOBUF_CONSTEXPR GetRoomInfoResponse::GetRoomInfoResponse(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.unknown_field_2_)*/{}
+  , /*decltype(_impl_.room_info_)*/nullptr
+  , /*decltype(_impl_.error_code_)*/int64_t{0}} {}
+struct GetRoomInfoResponseDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR GetRoomInfoResponseDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~GetRoomInfoResponseDefaultTypeInternal() {}
+  union {
+    GetRoomInfoResponse _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetRoomInfoResponseDefaultTypeInternal _GetRoomInfoResponse_default_instance_;
+PROTOBUF_CONSTEXPR GetAutomatchStatsRequest::GetAutomatchStatsRequest(
+    ::_pbi::ConstantInitialized) {}
+struct GetAutomatchStatsRequestDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR GetAutomatchStatsRequestDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~GetAutomatchStatsRequestDefaultTypeInternal() {}
+  union {
+    GetAutomatchStatsRequest _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetAutomatchStatsRequestDefaultTypeInternal _GetAutomatchStatsRequest_default_instance_;
+PROTOBUF_CONSTEXPR GetAutomatchStatsResponse_PopulationEntry_DoNotUse::GetAutomatchStatsResponse_PopulationEntry_DoNotUse(
+    ::_pbi::ConstantInitialized) {}
+struct GetAutomatchStatsResponse_PopulationEntry_DoNotUseDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR GetAutomatchStatsResponse_PopulationEntry_DoNotUseDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~GetAutomatchStatsResponse_PopulationEntry_DoNotUseDefaultTypeInternal() {}
+  union {
+    GetAutomatchStatsResponse_PopulationEntry_DoNotUse _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetAutomatchStatsResponse_PopulationEntry_DoNotUseDefaultTypeInternal _GetAutomatchStatsResponse_PopulationEntry_DoNotUse_default_instance_;
+PROTOBUF_CONSTEXPR GetAutomatchStatsResponse::GetAutomatchStatsResponse(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.population_)*/{::_pbi::ConstantInitialized()}
+  , /*decltype(_impl_.error_code_)*/int64_t{0}} {}
+struct GetAutomatchStatsResponseDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR GetAutomatchStatsResponseDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~GetAutomatchStatsResponseDefaultTypeInternal() {}
+  union {
+    GetAutomatchStatsResponse _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetAutomatchStatsResponseDefaultTypeInternal _GetAutomatchStatsResponse_default_instance_;
+PROTOBUF_CONSTEXPR StartAutomatchRequest::StartAutomatchRequest(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.preset_id_)*/int64_t{0}
+  , /*decltype(_impl_.unknown_field_2_)*/int64_t{0}} {}
+struct StartAutomatchRequestDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR StartAutomatchRequestDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~StartAutomatchRequestDefaultTypeInternal() {}
+  union {
+    StartAutomatchRequest _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 StartAutomatchRequestDefaultTypeInternal _StartAutomatchRequest_default_instance_;
+PROTOBUF_CONSTEXPR StartAutomatchResponse::StartAutomatchResponse(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.error_code_)*/int64_t{0}
+  , /*decltype(_impl_.unknown_field_2_)*/int64_t{0}
+  , /*decltype(_impl_.unknown_field_3_)*/int64_t{0}} {}
+struct StartAutomatchResponseDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR StartAutomatchResponseDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~StartAutomatchResponseDefaultTypeInternal() {}
+  union {
+    StartAutomatchResponse _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 StartAutomatchResponseDefaultTypeInternal _StartAutomatchResponse_default_instance_;
+PROTOBUF_CONSTEXPR StopAutomatchRequest::StopAutomatchRequest(
+    ::_pbi::ConstantInitialized) {}
+struct StopAutomatchRequestDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR StopAutomatchRequestDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~StopAutomatchRequestDefaultTypeInternal() {}
+  union {
+    StopAutomatchRequest _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 StopAutomatchRequestDefaultTypeInternal _StopAutomatchRequest_default_instance_;
+PROTOBUF_CONSTEXPR StopAutomatchResponse::StopAutomatchResponse(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.error_code_)*/int64_t{0}} {}
+struct StopAutomatchResponseDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR StopAutomatchResponseDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~StopAutomatchResponseDefaultTypeInternal() {}
+  union {
+    StopAutomatchResponse _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 StopAutomatchResponseDefaultTypeInternal _StopAutomatchResponse_default_instance_;
+PROTOBUF_CONSTEXPR AutomatchFoundEvent_RoomParticipant::AutomatchFoundEvent_RoomParticipant(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.name_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.avatar_url_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.player_id_)*/int64_t{0}
+  , /*decltype(_impl_.rank_)*/0} {}
+struct AutomatchFoundEvent_RoomParticipantDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR AutomatchFoundEvent_RoomParticipantDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~AutomatchFoundEvent_RoomParticipantDefaultTypeInternal() {}
+  union {
+    AutomatchFoundEvent_RoomParticipant _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 AutomatchFoundEvent_RoomParticipantDefaultTypeInternal _AutomatchFoundEvent_RoomParticipant_default_instance_;
+PROTOBUF_CONSTEXPR AutomatchFoundEvent::AutomatchFoundEvent(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.participants_)*/{}
+  , /*decltype(_impl_.error_code_)*/int64_t{0}
+  , /*decltype(_impl_.room_id_1_)*/int64_t{0}
+  , /*decltype(_impl_.room_id_2_)*/int64_t{0}
+  , /*decltype(_impl_.room_id_3_)*/int64_t{0}
+  , /*decltype(_impl_.unknown_field_6_)*/int64_t{0}} {}
+struct AutomatchFoundEventDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR AutomatchFoundEventDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~AutomatchFoundEventDefaultTypeInternal() {}
+  union {
+    AutomatchFoundEvent _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 AutomatchFoundEventDefaultTypeInternal _AutomatchFoundEvent_default_instance_;
+PROTOBUF_CONSTEXPR AcceptMatchRequest::AcceptMatchRequest(
+    ::_pbi::ConstantInitialized) {}
+struct AcceptMatchRequestDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR AcceptMatchRequestDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~AcceptMatchRequestDefaultTypeInternal() {}
+  union {
+    AcceptMatchRequest _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 AcceptMatchRequestDefaultTypeInternal _AcceptMatchRequest_default_instance_;
+PROTOBUF_CONSTEXPR AcceptMatchResponse::AcceptMatchResponse(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.error_code_)*/int64_t{0}} {}
+struct AcceptMatchResponseDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR AcceptMatchResponseDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~AcceptMatchResponseDefaultTypeInternal() {}
+  union {
+    AcceptMatchResponse _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 AcceptMatchResponseDefaultTypeInternal _AcceptMatchResponse_default_instance_;
+PROTOBUF_CONSTEXPR MatchStartEvent_MatchInfo::MatchStartEvent_MatchInfo(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.board_size_)*/int64_t{0}
+  , /*decltype(_impl_.player_id_black_)*/int64_t{0}
+  , /*decltype(_impl_.main_time_sec_)*/int64_t{0}
+  , /*decltype(_impl_.byoyomi_time_sec_)*/int64_t{0}
+  , /*decltype(_impl_.byoyomi_periods_)*/int64_t{0}
+  , /*decltype(_impl_.player_id_white_)*/int64_t{0}} {}
+struct MatchStartEvent_MatchInfoDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR MatchStartEvent_MatchInfoDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~MatchStartEvent_MatchInfoDefaultTypeInternal() {}
+  union {
+    MatchStartEvent_MatchInfo _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 MatchStartEvent_MatchInfoDefaultTypeInternal _MatchStartEvent_MatchInfo_default_instance_;
+PROTOBUF_CONSTEXPR MatchStartEvent_MatchPlayerInfo::MatchStartEvent_MatchPlayerInfo(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.name_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.player_id_)*/int64_t{0}
+  , /*decltype(_impl_.rank_)*/0
+  , /*decltype(_impl_.country_)*/0} {}
+struct MatchStartEvent_MatchPlayerInfoDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR MatchStartEvent_MatchPlayerInfoDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~MatchStartEvent_MatchPlayerInfoDefaultTypeInternal() {}
+  union {
+    MatchStartEvent_MatchPlayerInfo _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 MatchStartEvent_MatchPlayerInfoDefaultTypeInternal _MatchStartEvent_MatchPlayerInfo_default_instance_;
+PROTOBUF_CONSTEXPR MatchStartEvent_AutomatchPreset::MatchStartEvent_AutomatchPreset(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.id_)*/int64_t{0}
+  , /*decltype(_impl_.board_size_)*/int64_t{0}
+  , /*decltype(_impl_.main_time_sec_)*/int64_t{0}
+  , /*decltype(_impl_.byoyomi_periods_)*/int64_t{0}
+  , /*decltype(_impl_.byoyomi_time_sec_)*/int64_t{0}
+  , /*decltype(_impl_.min_duan_)*/int64_t{0}
+  , /*decltype(_impl_.max_duan_)*/int64_t{0}
+  , /*decltype(_impl_.chinese_rules_)*/false} {}
+struct MatchStartEvent_AutomatchPresetDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR MatchStartEvent_AutomatchPresetDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~MatchStartEvent_AutomatchPresetDefaultTypeInternal() {}
+  union {
+    MatchStartEvent_AutomatchPreset _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 MatchStartEvent_AutomatchPresetDefaultTypeInternal _MatchStartEvent_AutomatchPreset_default_instance_;
+PROTOBUF_CONSTEXPR MatchStartEvent::MatchStartEvent(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.players_)*/{}
+  , /*decltype(_impl_.unix_ts_nanos_str_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.match_info_)*/nullptr
+  , /*decltype(_impl_.automatch_preset_)*/nullptr
+  , /*decltype(_impl_.unknown_field_2_)*/int64_t{0}
+  , /*decltype(_impl_.unix_ts_nanos_)*/int64_t{0}
+  , /*decltype(_impl_.unknown_field_4_)*/int64_t{0}
+  , /*decltype(_impl_.unknown_field_6_)*/int64_t{0}
+  , /*decltype(_impl_.unix_ts_)*/int64_t{0}
+  , /*decltype(_impl_.room_id_1_)*/int64_t{0}
+  , /*decltype(_impl_.room_id_2_)*/int64_t{0}
+  , /*decltype(_impl_.room_id_4_)*/int64_t{0}
+  , /*decltype(_impl_.room_id_3_)*/int64_t{0}
+  , /*decltype(_impl_.automatch_preset_id_)*/int64_t{0}} {}
+struct MatchStartEventDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR MatchStartEventDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~MatchStartEventDefaultTypeInternal() {}
+  union {
+    MatchStartEvent _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 MatchStartEventDefaultTypeInternal _MatchStartEvent_default_instance_;
+PROTOBUF_CONSTEXPR HeartbeatInfo::HeartbeatInfo(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.unknown_field_1_)*/int64_t{0}
+  , /*decltype(_impl_.unknown_field_2_)*/int64_t{0}} {}
+struct HeartbeatInfoDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR HeartbeatInfoDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~HeartbeatInfoDefaultTypeInternal() {}
+  union {
+    HeartbeatInfo _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 HeartbeatInfoDefaultTypeInternal _HeartbeatInfo_default_instance_;
+PROTOBUF_CONSTEXPR EnterRoomRequest::EnterRoomRequest(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.id_)*/nullptr} {}
+struct EnterRoomRequestDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR EnterRoomRequestDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~EnterRoomRequestDefaultTypeInternal() {}
+  union {
+    EnterRoomRequest _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 EnterRoomRequestDefaultTypeInternal _EnterRoomRequest_default_instance_;
+PROTOBUF_CONSTEXPR EnterRoomResponse::EnterRoomResponse(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.room_id_)*/nullptr
+  , /*decltype(_impl_.heartbeat_info_)*/nullptr
+  , /*decltype(_impl_.error_code_)*/int64_t{0}} {}
+struct EnterRoomResponseDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR EnterRoomResponseDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~EnterRoomResponseDefaultTypeInternal() {}
+  union {
+    EnterRoomResponse _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 EnterRoomResponseDefaultTypeInternal _EnterRoomResponse_default_instance_;
+PROTOBUF_CONSTEXPR LeaveRoomRequest::LeaveRoomRequest(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.id_)*/nullptr} {}
+struct LeaveRoomRequestDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR LeaveRoomRequestDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~LeaveRoomRequestDefaultTypeInternal() {}
+  union {
+    LeaveRoomRequest _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 LeaveRoomRequestDefaultTypeInternal _LeaveRoomRequest_default_instance_;
+PROTOBUF_CONSTEXPR LeaveRoomResponse::LeaveRoomResponse(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.room_id_)*/nullptr
+  , /*decltype(_impl_.error_code_)*/int64_t{0}} {}
+struct LeaveRoomResponseDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR LeaveRoomResponseDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~LeaveRoomResponseDefaultTypeInternal() {}
+  union {
+    LeaveRoomResponse _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 LeaveRoomResponseDefaultTypeInternal _LeaveRoomResponse_default_instance_;
+PROTOBUF_CONSTEXPR ListRoomParticipantsRequest::ListRoomParticipantsRequest(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.id_)*/nullptr
+  , /*decltype(_impl_.player_id_1_)*/int64_t{0}
+  , /*decltype(_impl_.player_id_2_)*/int64_t{0}} {}
+struct ListRoomParticipantsRequestDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR ListRoomParticipantsRequestDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~ListRoomParticipantsRequestDefaultTypeInternal() {}
+  union {
+    ListRoomParticipantsRequest _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ListRoomParticipantsRequestDefaultTypeInternal _ListRoomParticipantsRequest_default_instance_;
+PROTOBUF_CONSTEXPR ListRoomParticipantsResponse_RoomParticipantInfo::ListRoomParticipantsResponse_RoomParticipantInfo(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.name_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.name_alt_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.player_id_)*/int64_t{0}
+  , /*decltype(_impl_.wins_)*/int64_t{0}
+  , /*decltype(_impl_.losses_)*/int64_t{0}
+  , /*decltype(_impl_.rank_)*/0
+  , /*decltype(_impl_.country_)*/0} {}
+struct ListRoomParticipantsResponse_RoomParticipantInfoDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR ListRoomParticipantsResponse_RoomParticipantInfoDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~ListRoomParticipantsResponse_RoomParticipantInfoDefaultTypeInternal() {}
+  union {
+    ListRoomParticipantsResponse_RoomParticipantInfo _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ListRoomParticipantsResponse_RoomParticipantInfoDefaultTypeInternal _ListRoomParticipantsResponse_RoomParticipantInfo_default_instance_;
+PROTOBUF_CONSTEXPR ListRoomParticipantsResponse::ListRoomParticipantsResponse(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.participants_)*/{}
+  , /*decltype(_impl_.id_)*/nullptr
+  , /*decltype(_impl_.error_code_)*/int64_t{0}
+  , /*decltype(_impl_.participant_count_)*/int64_t{0}} {}
+struct ListRoomParticipantsResponseDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR ListRoomParticipantsResponseDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~ListRoomParticipantsResponseDefaultTypeInternal() {}
+  union {
+    ListRoomParticipantsResponse _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ListRoomParticipantsResponseDefaultTypeInternal _ListRoomParticipantsResponse_default_instance_;
+PROTOBUF_CONSTEXPR LastTurnInfo::LastTurnInfo(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.move_count_)*/int64_t{0}} {}
+struct LastTurnInfoDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR LastTurnInfoDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~LastTurnInfoDefaultTypeInternal() {}
+  union {
+    LastTurnInfo _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 LastTurnInfoDefaultTypeInternal _LastTurnInfo_default_instance_;
+PROTOBUF_CONSTEXPR MoveRequest::MoveRequest(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.last_turn_)*/nullptr
+  , /*decltype(_impl_.x_)*/int64_t{0}
+  , /*decltype(_impl_.y_)*/int64_t{0}
+  , /*decltype(_impl_.col_)*/0} {}
+struct MoveRequestDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR MoveRequestDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~MoveRequestDefaultTypeInternal() {}
+  union {
+    MoveRequest _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 MoveRequestDefaultTypeInternal _MoveRequest_default_instance_;
+PROTOBUF_CONSTEXPR MoveResponse::MoveResponse(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.error_code_)*/int64_t{0}} {}
+struct MoveResponseDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR MoveResponseDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~MoveResponseDefaultTypeInternal() {}
+  union {
+    MoveResponse _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 MoveResponseDefaultTypeInternal _MoveResponse_default_instance_;
+PROTOBUF_CONSTEXPR PassRequest::PassRequest(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.last_turn_)*/nullptr} {}
+struct PassRequestDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR PassRequestDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~PassRequestDefaultTypeInternal() {}
+  union {
+    PassRequest _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 PassRequestDefaultTypeInternal _PassRequest_default_instance_;
+PROTOBUF_CONSTEXPR PassResponse::PassResponse(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.error_code_)*/int64_t{0}} {}
+struct PassResponseDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR PassResponseDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~PassResponseDefaultTypeInternal() {}
+  union {
+    PassResponse _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 PassResponseDefaultTypeInternal _PassResponse_default_instance_;
+PROTOBUF_CONSTEXPR SyncMatchTimeRequest::SyncMatchTimeRequest(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.ts_)*/int64_t{0}} {}
+struct SyncMatchTimeRequestDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR SyncMatchTimeRequestDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~SyncMatchTimeRequestDefaultTypeInternal() {}
+  union {
+    SyncMatchTimeRequest _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SyncMatchTimeRequestDefaultTypeInternal _SyncMatchTimeRequest_default_instance_;
+PROTOBUF_CONSTEXPR SyncMatchTimeResponse_ElapsedInfo::SyncMatchTimeResponse_ElapsedInfo(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.time_elapsed_sec_)*/int64_t{0}} {}
+struct SyncMatchTimeResponse_ElapsedInfoDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR SyncMatchTimeResponse_ElapsedInfoDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~SyncMatchTimeResponse_ElapsedInfoDefaultTypeInternal() {}
+  union {
+    SyncMatchTimeResponse_ElapsedInfo _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SyncMatchTimeResponse_ElapsedInfoDefaultTypeInternal _SyncMatchTimeResponse_ElapsedInfo_default_instance_;
+PROTOBUF_CONSTEXPR SyncMatchTimeResponse::SyncMatchTimeResponse(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.elapsed_info_)*/nullptr
+  , /*decltype(_impl_.room_id_)*/nullptr
+  , /*decltype(_impl_.ts_)*/int64_t{0}
+  , /*decltype(_impl_.server_ts_)*/int64_t{0}} {}
+struct SyncMatchTimeResponseDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR SyncMatchTimeResponseDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~SyncMatchTimeResponseDefaultTypeInternal() {}
+  union {
+    SyncMatchTimeResponse _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SyncMatchTimeResponseDefaultTypeInternal _SyncMatchTimeResponse_default_instance_;
+PROTOBUF_CONSTEXPR MatchPlayerTimeState::MatchPlayerTimeState(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.unknown_field_1_)*/int64_t{0}
+  , /*decltype(_impl_.main_time_left_sec_)*/int64_t{0}
+  , /*decltype(_impl_.byoyomi_periods_left_)*/int64_t{0}
+  , /*decltype(_impl_.byoyomi_duration_sec_)*/int64_t{0}
+  , /*decltype(_impl_.player_id_)*/int64_t{0}
+  , /*decltype(_impl_.disconnected_time_left_sec_)*/int64_t{0}} {}
+struct MatchPlayerTimeStateDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR MatchPlayerTimeStateDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~MatchPlayerTimeStateDefaultTypeInternal() {}
+  union {
+    MatchPlayerTimeState _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 MatchPlayerTimeStateDefaultTypeInternal _MatchPlayerTimeState_default_instance_;
+PROTOBUF_CONSTEXPR NextMoveEvent::NextMoveEvent(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.time_state_)*/nullptr
+  , /*decltype(_impl_.last_turn_)*/nullptr
+  , /*decltype(_impl_.x_)*/int64_t{0}
+  , /*decltype(_impl_.y_)*/int64_t{0}
+  , /*decltype(_impl_.player_id_)*/int64_t{0}
+  , /*decltype(_impl_.ts_)*/int64_t{0}
+  , /*decltype(_impl_.col_)*/0} {}
+struct NextMoveEventDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR NextMoveEventDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~NextMoveEventDefaultTypeInternal() {}
+  union {
+    NextMoveEvent _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 NextMoveEventDefaultTypeInternal _NextMoveEvent_default_instance_;
+PROTOBUF_CONSTEXPR PassEvent::PassEvent(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.time_state_)*/nullptr
+  , /*decltype(_impl_.last_turn_)*/nullptr
+  , /*decltype(_impl_.player_id_)*/int64_t{0}
+  , /*decltype(_impl_.unknown_field_4_)*/int64_t{0}} {}
+struct PassEventDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR PassEventDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~PassEventDefaultTypeInternal() {}
+  union {
+    PassEvent _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 PassEventDefaultTypeInternal _PassEvent_default_instance_;
+PROTOBUF_CONSTEXPR CountdownEvent::CountdownEvent(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.unknown_field_1_)*/int64_t{0}
+  , /*decltype(_impl_.main_time_left_sec_)*/int64_t{0}
+  , /*decltype(_impl_.byoyomi_periods_left_)*/int64_t{0}
+  , /*decltype(_impl_.byoyomi_time_left_sec_)*/int64_t{0}
+  , /*decltype(_impl_.player_id_)*/int64_t{0}
+  , /*decltype(_impl_.unknown_field_6_)*/int64_t{0}} {}
+struct CountdownEventDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR CountdownEventDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~CountdownEventDefaultTypeInternal() {}
+  union {
+    CountdownEvent _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CountdownEventDefaultTypeInternal _CountdownEvent_default_instance_;
+PROTOBUF_CONSTEXPR ResumeCountdownEvent::ResumeCountdownEvent(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.countdown_)*/nullptr
+  , /*decltype(_impl_.unknown_field_1_)*/int64_t{0}} {}
+struct ResumeCountdownEventDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR ResumeCountdownEventDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~ResumeCountdownEventDefaultTypeInternal() {}
+  union {
+    ResumeCountdownEvent _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ResumeCountdownEventDefaultTypeInternal _ResumeCountdownEvent_default_instance_;
+PROTOBUF_CONSTEXPR RequestCountingRequest::RequestCountingRequest(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.unknown_field_1_)*/int64_t{0}} {}
+struct RequestCountingRequestDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR RequestCountingRequestDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~RequestCountingRequestDefaultTypeInternal() {}
+  union {
+    RequestCountingRequest _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 RequestCountingRequestDefaultTypeInternal _RequestCountingRequest_default_instance_;
+PROTOBUF_CONSTEXPR RequestCountingResponse::RequestCountingResponse(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.error_code_)*/int64_t{0}} {}
+struct RequestCountingResponseDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR RequestCountingResponseDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~RequestCountingResponseDefaultTypeInternal() {}
+  union {
+    RequestCountingResponse _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 RequestCountingResponseDefaultTypeInternal _RequestCountingResponse_default_instance_;
+PROTOBUF_CONSTEXPR SendCountingDecisionResponse::SendCountingDecisionResponse(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.error_code_)*/int64_t{0}} {}
+struct SendCountingDecisionResponseDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR SendCountingDecisionResponseDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~SendCountingDecisionResponseDefaultTypeInternal() {}
+  union {
+    SendCountingDecisionResponse _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SendCountingDecisionResponseDefaultTypeInternal _SendCountingDecisionResponse_default_instance_;
+PROTOBUF_CONSTEXPR CountingDecision::CountingDecision(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.agree_)*/false
+  , /*decltype(_impl_.stage_)*/0} {}
+struct CountingDecisionDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR CountingDecisionDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~CountingDecisionDefaultTypeInternal() {}
+  union {
+    CountingDecision _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CountingDecisionDefaultTypeInternal _CountingDecision_default_instance_;
+PROTOBUF_CONSTEXPR CountingEvent::CountingEvent(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.unknown_field_4_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.ownership_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.unknown_field_1_)*/int64_t{0}
+  , /*decltype(_impl_.stage_)*/0
+  , /*decltype(_impl_.unknown_field_6_)*/0
+  , /*decltype(_impl_.time_left_)*/int64_t{0}
+  , /*decltype(_impl_.winner_)*/0
+  , /*decltype(_impl_.score_lead_)*/0} {}
+struct CountingEventDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR CountingEventDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~CountingEventDefaultTypeInternal() {}
+  union {
+    CountingEvent _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CountingEventDefaultTypeInternal _CountingEvent_default_instance_;
+PROTOBUF_CONSTEXPR ResignRequest::ResignRequest(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.unknown_field_1_)*/int64_t{0}} {}
+struct ResignRequestDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR ResignRequestDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~ResignRequestDefaultTypeInternal() {}
+  union {
+    ResignRequest _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ResignRequestDefaultTypeInternal _ResignRequest_default_instance_;
+PROTOBUF_CONSTEXPR ResignResponse::ResignResponse(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.unknown_field_1_)*/int64_t{0}} {}
+struct ResignResponseDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR ResignResponseDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~ResignResponseDefaultTypeInternal() {}
+  union {
+    ResignResponse _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ResignResponseDefaultTypeInternal _ResignResponse_default_instance_;
+PROTOBUF_CONSTEXPR GameResultEvent::GameResultEvent(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.message_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.unknown_field_1_)*/int64_t{0}
+  , /*decltype(_impl_.score_lead_)*/int64_t{0}
+  , /*decltype(_impl_.unknown_field_4_)*/int64_t{0}
+  , /*decltype(_impl_.ts_10_)*/int64_t{0}
+  , /*decltype(_impl_.ts_12_)*/int64_t{0}
+  , /*decltype(_impl_.ts_13_)*/int64_t{0}
+  , /*decltype(_impl_.winner_)*/0} {}
+struct GameResultEventDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR GameResultEventDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~GameResultEventDefaultTypeInternal() {}
+  union {
+    GameResultEvent _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GameResultEventDefaultTypeInternal _GameResultEvent_default_instance_;
 }  // namespace openfoxwq
-static ::_pb::Metadata file_level_metadata_proto_2fplay_2eproto[17];
-static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_proto_2fplay_2eproto = nullptr;
+static ::_pb::Metadata file_level_metadata_proto_2fplay_2eproto[80];
+static const ::_pb::EnumDescriptor* file_level_enum_descriptors_proto_2fplay_2eproto[2];
 static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_proto_2fplay_2eproto = nullptr;
 
 const uint32_t TableStruct_proto_2fplay_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
@@ -331,14 +1354,14 @@ const uint32_t TableStruct_proto_2fplay_2eproto::offsets[] PROTOBUF_SECTION_VARI
   PROTOBUF_FIELD_OFFSET(::openfoxwq::ListPlayersResponse, _impl_.players_),
   PROTOBUF_FIELD_OFFSET(::openfoxwq::ListPlayersResponse, _impl_.page_index_),
   PROTOBUF_FIELD_OFFSET(::openfoxwq::ListPlayersResponse, _impl_.page_count_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::ListPlayersResponse, _impl_.online_count_),
   PROTOBUF_FIELD_OFFSET(::openfoxwq::ListPlayersResponse, _impl_.unknown_field_1_),
-  PROTOBUF_FIELD_OFFSET(::openfoxwq::ListPlayersResponse, _impl_.unknown_field_5_),
   PROTOBUF_FIELD_OFFSET(::openfoxwq::ListPlayersResponse, _impl_.unknown_field_6_),
   ~0u,
   1,
   2,
-  0,
   3,
+  0,
   4,
   PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoRequest, _impl_._has_bits_),
   PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoRequest, _internal_metadata_),
@@ -347,9 +1370,11 @@ const uint32_t TableStruct_proto_2fplay_2eproto::offsets[] PROTOBUF_SECTION_VARI
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
   PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoRequest, _impl_.player_id_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoRequest, _impl_.player_name_),
   PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoRequest, _impl_.info_options_),
-  1,
+  2,
   0,
+  1,
   PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoResponse_RegisterInfo, _impl_._has_bits_),
   PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoResponse_RegisterInfo, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -359,33 +1384,183 @@ const uint32_t TableStruct_proto_2fplay_2eproto::offsets[] PROTOBUF_SECTION_VARI
   PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoResponse_RegisterInfo, _impl_.player_id_),
   PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoResponse_RegisterInfo, _impl_.name_native_),
   PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoResponse_RegisterInfo, _impl_.name_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoResponse_RegisterInfo, _impl_.country_),
   PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoResponse_RegisterInfo, _impl_.member_since_unix_ts_),
-  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoResponse_RegisterInfo, _impl_.unknown_field_2_),
-  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoResponse_RegisterInfo, _impl_.unknown_field_3_),
-  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoResponse_RegisterInfo, _impl_.unknown_field_7_),
   2,
   0,
   1,
-  6,
+  4,
+  3,
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoResponse_RecentRecord_Unknown1, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoResponse_RecentRecord, _impl_._has_bits_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoResponse_RecentRecord, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoResponse_RecentRecord, _impl_.unknown_field_1_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoResponse_RecentRecord, _impl_.streak_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoResponse_RecentRecord, _impl_.unknown_field_3_),
+  2,
+  0,
+  1,
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoResponse_OverallResults, _impl_._has_bits_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoResponse_OverallResults, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoResponse_OverallResults, _impl_.rating_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoResponse_OverallResults, _impl_.wr_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoResponse_OverallResults, _impl_.stamina_),
+  0,
+  1,
+  2,
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoResponse_ProInfo, _impl_._has_bits_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoResponse_ProInfo, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoResponse_ProInfo, _impl_.unknown_field_1_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoResponse_ProInfo, _impl_.unknown_field_2_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoResponse_ProInfo, _impl_.name1_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoResponse_ProInfo, _impl_.name2_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoResponse_ProInfo, _impl_.rank_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoResponse_ProInfo, _impl_.association_),
+  2,
+  3,
+  0,
+  1,
+  5,
+  4,
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoResponse_PerformanceRecord, _impl_._has_bits_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoResponse_PerformanceRecord, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoResponse_PerformanceRecord, _impl_.rank_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoResponse_PerformanceRecord, _impl_.wr_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoResponse_PerformanceRecord, _impl_.stamina_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoResponse_PerformanceRecord, _impl_.foxcoin_),
+  3,
+  0,
+  1,
+  2,
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoResponse_Results, _impl_._has_bits_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoResponse_Results, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoResponse_Results, _impl_.type_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoResponse_Results, _impl_.wins_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoResponse_Results, _impl_.losses_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoResponse_Results, _impl_.draws_),
+  3,
+  0,
+  1,
+  2,
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoResponse_Rooms_Room_ShortPlayerInfo, _impl_._has_bits_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoResponse_Rooms_Room_ShortPlayerInfo, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoResponse_Rooms_Room_ShortPlayerInfo, _impl_.player_id_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoResponse_Rooms_Room_ShortPlayerInfo, _impl_.rank_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoResponse_Rooms_Room_ShortPlayerInfo, _impl_.country_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoResponse_Rooms_Room_ShortPlayerInfo, _impl_.name4_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoResponse_Rooms_Room_ShortPlayerInfo, _impl_.name5_),
+  2,
   3,
   4,
-  5,
+  0,
+  1,
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoResponse_Rooms_Room, _impl_._has_bits_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoResponse_Rooms_Room, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoResponse_Rooms_Room, _impl_.id_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoResponse_Rooms_Room, _impl_.unknown_field_2_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoResponse_Rooms_Room, _impl_.player1_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoResponse_Rooms_Room, _impl_.player2_),
+  0,
+  3,
+  1,
+  2,
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoResponse_Rooms, _impl_._has_bits_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoResponse_Rooms, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoResponse_Rooms, _impl_.rooms_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoResponse_Rooms, _impl_.unknown_field_2_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoResponse_Rooms, _impl_.unknown_field_3_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoResponse_Rooms, _impl_.unknown_field_4_),
+  ~0u,
+  0,
+  1,
+  2,
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoResponse_AdditionalInfo, _impl_._has_bits_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoResponse_AdditionalInfo, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoResponse_AdditionalInfo, _impl_.unknown_field_1_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoResponse_AdditionalInfo, _impl_.unknown_field_2_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoResponse_AdditionalInfo, _impl_.unknown_field_3_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoResponse_AdditionalInfo, _impl_.unknown_field_4_),
+  2,
+  3,
+  0,
+  1,
   PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoResponse, _impl_._has_bits_),
   PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoResponse, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoResponse, _impl_.player_id_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoResponse, _impl_.error_code_),
   PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoResponse, _impl_.info_options_),
-  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoResponse, _impl_.player_id_again_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoResponse, _impl_.seached_player_id_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoResponse, _impl_.searched_player_name_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoResponse, _impl_.player_id_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoResponse, _impl_.foxcoin_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoResponse, _impl_.rank_),
   PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoResponse, _impl_.register_info_),
-  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoResponse, _impl_.game_results_),
-  2,
-  0,
-  3,
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoResponse, _impl_.recent_record_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoResponse, _impl_.overall_results_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoResponse, _impl_.pro_info_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoResponse, _impl_.perf_record_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoResponse, _impl_.results_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoResponse, _impl_.rooms_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoResponse, _impl_.additional_info_),
+  9,
   1,
+  10,
+  0,
+  11,
+  12,
+  13,
+  2,
+  3,
+  4,
+  5,
+  6,
   ~0u,
+  7,
+  8,
   PROTOBUF_FIELD_OFFSET(::openfoxwq::InfoOptions, _impl_._has_bits_),
   PROTOBUF_FIELD_OFFSET(::openfoxwq::InfoOptions, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -444,15 +1619,37 @@ const uint32_t TableStruct_proto_2fplay_2eproto::offsets[] PROTOBUF_SECTION_VARI
   0,
   1,
   2,
-  PROTOBUF_FIELD_OFFSET(::openfoxwq::UnknownPlayerEvent1, _impl_._has_bits_),
-  PROTOBUF_FIELD_OFFSET(::openfoxwq::UnknownPlayerEvent1, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::PlayerOnlineCountEvent, _impl_._has_bits_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::PlayerOnlineCountEvent, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::openfoxwq::UnknownPlayerEvent1, _impl_.player_id_),
-  PROTOBUF_FIELD_OFFSET(::openfoxwq::UnknownPlayerEvent1, _impl_.online_count_),
-  PROTOBUF_FIELD_OFFSET(::openfoxwq::UnknownPlayerEvent1, _impl_.unknown_field_3_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::PlayerOnlineCountEvent, _impl_.unknown_field_1_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::PlayerOnlineCountEvent, _impl_.online_count_),
+  0,
+  1,
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::PlayerOnlineEvent, _impl_._has_bits_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::PlayerOnlineEvent, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::PlayerOnlineEvent, _impl_.player_info_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::PlayerOnlineEvent, _impl_.online_count_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::PlayerOnlineEvent, _impl_.unknown_field_3_),
+  0,
+  1,
+  2,
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::PlayerOfflineEvent, _impl_._has_bits_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::PlayerOfflineEvent, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::PlayerOfflineEvent, _impl_.player_id_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::PlayerOfflineEvent, _impl_.online_count_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::PlayerOfflineEvent, _impl_.unknown_field_3_),
   0,
   1,
   2,
@@ -462,7 +1659,7 @@ const uint32_t TableStruct_proto_2fplay_2eproto::offsets[] PROTOBUF_SECTION_VARI
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::openfoxwq::UnknownPlayRequest1_UnknownPlayRequest1Nested1, _impl_.unknown_field_1_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::UnknownPlayRequest1_UnknownPlayRequest1Nested1, _impl_.mac_address_),
   0,
   PROTOBUF_FIELD_OFFSET(::openfoxwq::UnknownPlayRequest1, _impl_._has_bits_),
   PROTOBUF_FIELD_OFFSET(::openfoxwq::UnknownPlayRequest1, _internal_metadata_),
@@ -482,25 +1679,728 @@ const uint32_t TableStruct_proto_2fplay_2eproto::offsets[] PROTOBUF_SECTION_VARI
   ~0u,  // no _inlined_string_donated_
   PROTOBUF_FIELD_OFFSET(::openfoxwq::UnknownPlayResponse1, _impl_.unknown_field_1_),
   0,
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetRoomInfoRequest, _impl_._has_bits_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetRoomInfoRequest, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetRoomInfoRequest, _impl_.id_),
+  0,
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetRoomInfoResponse_Unknown2, _impl_._has_bits_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetRoomInfoResponse_Unknown2, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetRoomInfoResponse_Unknown2, _impl_.unknown_field_1_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetRoomInfoResponse_Unknown2, _impl_.unknown_field_2_),
+  0,
+  1,
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetRoomInfoResponse_PlayerEntry, _impl_._has_bits_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetRoomInfoResponse_PlayerEntry, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetRoomInfoResponse_PlayerEntry, _impl_.id_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetRoomInfoResponse_PlayerEntry, _impl_.name_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetRoomInfoResponse_PlayerEntry, _impl_.rank_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetRoomInfoResponse_PlayerEntry, _impl_.main_time_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetRoomInfoResponse_PlayerEntry, _impl_.byoyomi_periods_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetRoomInfoResponse_PlayerEntry, _impl_.byoyomi_time_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetRoomInfoResponse_PlayerEntry, _impl_.avatar_url_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetRoomInfoResponse_PlayerEntry, _impl_.country_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetRoomInfoResponse_PlayerEntry, _impl_.name_alt_),
+  3,
+  0,
+  5,
+  4,
+  7,
+  8,
+  1,
+  6,
+  2,
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetRoomInfoResponse_RoomSettings, _impl_._has_bits_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetRoomInfoResponse_RoomSettings, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetRoomInfoResponse_RoomSettings, _impl_.board_size_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetRoomInfoResponse_RoomSettings, _impl_.komi_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetRoomInfoResponse_RoomSettings, _impl_.player_id_1_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetRoomInfoResponse_RoomSettings, _impl_.main_time_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetRoomInfoResponse_RoomSettings, _impl_.byoyomi_time_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetRoomInfoResponse_RoomSettings, _impl_.byoyomi_periods_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetRoomInfoResponse_RoomSettings, _impl_.player_id_2_),
+  0,
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetRoomInfoResponse_Unknown5, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetRoomInfoResponse_RoomInfo, _impl_._has_bits_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetRoomInfoResponse_RoomInfo, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetRoomInfoResponse_RoomInfo, _impl_.id_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetRoomInfoResponse_RoomInfo, _impl_.players_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetRoomInfoResponse_RoomInfo, _impl_.settings_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetRoomInfoResponse_RoomInfo, _impl_.unknown_field_4_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetRoomInfoResponse_RoomInfo, _impl_.unknown_field_5_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetRoomInfoResponse_RoomInfo, _impl_.ts_unix_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetRoomInfoResponse_RoomInfo, _impl_.ts_unix_ns_),
+  0,
+  ~0u,
+  1,
+  3,
+  2,
+  4,
+  5,
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetRoomInfoResponse, _impl_._has_bits_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetRoomInfoResponse, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetRoomInfoResponse, _impl_.error_code_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetRoomInfoResponse, _impl_.unknown_field_2_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetRoomInfoResponse, _impl_.room_info_),
+  1,
+  ~0u,
+  0,
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetAutomatchStatsRequest, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetAutomatchStatsResponse_PopulationEntry_DoNotUse, _has_bits_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetAutomatchStatsResponse_PopulationEntry_DoNotUse, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetAutomatchStatsResponse_PopulationEntry_DoNotUse, key_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetAutomatchStatsResponse_PopulationEntry_DoNotUse, value_),
+  0,
+  1,
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetAutomatchStatsResponse, _impl_._has_bits_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetAutomatchStatsResponse, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetAutomatchStatsResponse, _impl_.error_code_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetAutomatchStatsResponse, _impl_.population_),
+  0,
+  ~0u,
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::StartAutomatchRequest, _impl_._has_bits_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::StartAutomatchRequest, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::StartAutomatchRequest, _impl_.preset_id_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::StartAutomatchRequest, _impl_.unknown_field_2_),
+  0,
+  1,
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::StartAutomatchResponse, _impl_._has_bits_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::StartAutomatchResponse, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::StartAutomatchResponse, _impl_.error_code_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::StartAutomatchResponse, _impl_.unknown_field_2_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::StartAutomatchResponse, _impl_.unknown_field_3_),
+  0,
+  1,
+  2,
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::StopAutomatchRequest, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::StopAutomatchResponse, _impl_._has_bits_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::StopAutomatchResponse, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::StopAutomatchResponse, _impl_.error_code_),
+  0,
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::AutomatchFoundEvent_RoomParticipant, _impl_._has_bits_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::AutomatchFoundEvent_RoomParticipant, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::AutomatchFoundEvent_RoomParticipant, _impl_.player_id_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::AutomatchFoundEvent_RoomParticipant, _impl_.name_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::AutomatchFoundEvent_RoomParticipant, _impl_.rank_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::AutomatchFoundEvent_RoomParticipant, _impl_.avatar_url_),
+  2,
+  0,
+  3,
+  1,
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::AutomatchFoundEvent, _impl_._has_bits_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::AutomatchFoundEvent, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::AutomatchFoundEvent, _impl_.error_code_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::AutomatchFoundEvent, _impl_.room_id_1_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::AutomatchFoundEvent, _impl_.room_id_2_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::AutomatchFoundEvent, _impl_.room_id_3_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::AutomatchFoundEvent, _impl_.participants_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::AutomatchFoundEvent, _impl_.unknown_field_6_),
+  0,
+  1,
+  2,
+  3,
+  ~0u,
+  4,
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::AcceptMatchRequest, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::AcceptMatchResponse, _impl_._has_bits_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::AcceptMatchResponse, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::AcceptMatchResponse, _impl_.error_code_),
+  0,
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::MatchStartEvent_MatchInfo, _impl_._has_bits_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::MatchStartEvent_MatchInfo, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::MatchStartEvent_MatchInfo, _impl_.board_size_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::MatchStartEvent_MatchInfo, _impl_.player_id_black_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::MatchStartEvent_MatchInfo, _impl_.main_time_sec_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::MatchStartEvent_MatchInfo, _impl_.byoyomi_time_sec_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::MatchStartEvent_MatchInfo, _impl_.byoyomi_periods_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::MatchStartEvent_MatchInfo, _impl_.player_id_white_),
+  0,
+  1,
+  2,
+  3,
+  4,
+  5,
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::MatchStartEvent_MatchPlayerInfo, _impl_._has_bits_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::MatchStartEvent_MatchPlayerInfo, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::MatchStartEvent_MatchPlayerInfo, _impl_.player_id_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::MatchStartEvent_MatchPlayerInfo, _impl_.name_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::MatchStartEvent_MatchPlayerInfo, _impl_.rank_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::MatchStartEvent_MatchPlayerInfo, _impl_.country_),
+  1,
+  0,
+  2,
+  3,
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::MatchStartEvent_AutomatchPreset, _impl_._has_bits_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::MatchStartEvent_AutomatchPreset, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::MatchStartEvent_AutomatchPreset, _impl_.id_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::MatchStartEvent_AutomatchPreset, _impl_.board_size_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::MatchStartEvent_AutomatchPreset, _impl_.main_time_sec_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::MatchStartEvent_AutomatchPreset, _impl_.byoyomi_periods_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::MatchStartEvent_AutomatchPreset, _impl_.byoyomi_time_sec_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::MatchStartEvent_AutomatchPreset, _impl_.chinese_rules_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::MatchStartEvent_AutomatchPreset, _impl_.min_duan_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::MatchStartEvent_AutomatchPreset, _impl_.max_duan_),
+  0,
+  1,
+  2,
+  3,
+  4,
+  7,
+  5,
+  6,
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::MatchStartEvent, _impl_._has_bits_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::MatchStartEvent, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::MatchStartEvent, _impl_.match_info_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::MatchStartEvent, _impl_.unknown_field_2_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::MatchStartEvent, _impl_.unix_ts_nanos_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::MatchStartEvent, _impl_.unknown_field_4_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::MatchStartEvent, _impl_.unknown_field_6_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::MatchStartEvent, _impl_.unix_ts_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::MatchStartEvent, _impl_.unix_ts_nanos_str_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::MatchStartEvent, _impl_.players_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::MatchStartEvent, _impl_.room_id_1_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::MatchStartEvent, _impl_.room_id_2_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::MatchStartEvent, _impl_.room_id_3_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::MatchStartEvent, _impl_.room_id_4_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::MatchStartEvent, _impl_.automatch_preset_id_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::MatchStartEvent, _impl_.automatch_preset_),
+  1,
+  3,
+  4,
+  5,
+  6,
+  7,
+  0,
+  ~0u,
+  8,
+  9,
+  11,
+  10,
+  12,
+  2,
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::HeartbeatInfo, _impl_._has_bits_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::HeartbeatInfo, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::HeartbeatInfo, _impl_.unknown_field_1_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::HeartbeatInfo, _impl_.unknown_field_2_),
+  0,
+  1,
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::EnterRoomRequest, _impl_._has_bits_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::EnterRoomRequest, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::EnterRoomRequest, _impl_.id_),
+  0,
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::EnterRoomResponse, _impl_._has_bits_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::EnterRoomResponse, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::EnterRoomResponse, _impl_.error_code_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::EnterRoomResponse, _impl_.room_id_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::EnterRoomResponse, _impl_.heartbeat_info_),
+  2,
+  0,
+  1,
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::LeaveRoomRequest, _impl_._has_bits_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::LeaveRoomRequest, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::LeaveRoomRequest, _impl_.id_),
+  0,
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::LeaveRoomResponse, _impl_._has_bits_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::LeaveRoomResponse, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::LeaveRoomResponse, _impl_.error_code_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::LeaveRoomResponse, _impl_.room_id_),
+  1,
+  0,
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::ListRoomParticipantsRequest, _impl_._has_bits_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::ListRoomParticipantsRequest, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::ListRoomParticipantsRequest, _impl_.id_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::ListRoomParticipantsRequest, _impl_.player_id_1_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::ListRoomParticipantsRequest, _impl_.player_id_2_),
+  0,
+  1,
+  2,
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::ListRoomParticipantsResponse_RoomParticipantInfo, _impl_._has_bits_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::ListRoomParticipantsResponse_RoomParticipantInfo, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::ListRoomParticipantsResponse_RoomParticipantInfo, _impl_.player_id_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::ListRoomParticipantsResponse_RoomParticipantInfo, _impl_.name_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::ListRoomParticipantsResponse_RoomParticipantInfo, _impl_.name_alt_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::ListRoomParticipantsResponse_RoomParticipantInfo, _impl_.rank_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::ListRoomParticipantsResponse_RoomParticipantInfo, _impl_.wins_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::ListRoomParticipantsResponse_RoomParticipantInfo, _impl_.losses_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::ListRoomParticipantsResponse_RoomParticipantInfo, _impl_.country_),
+  2,
+  0,
+  1,
+  5,
+  3,
+  4,
+  6,
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::ListRoomParticipantsResponse, _impl_._has_bits_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::ListRoomParticipantsResponse, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::ListRoomParticipantsResponse, _impl_.error_code_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::ListRoomParticipantsResponse, _impl_.id_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::ListRoomParticipantsResponse, _impl_.participants_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::ListRoomParticipantsResponse, _impl_.participant_count_),
+  1,
+  0,
+  ~0u,
+  2,
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::LastTurnInfo, _impl_._has_bits_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::LastTurnInfo, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::LastTurnInfo, _impl_.move_count_),
+  0,
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::MoveRequest, _impl_._has_bits_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::MoveRequest, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::MoveRequest, _impl_.x_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::MoveRequest, _impl_.y_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::MoveRequest, _impl_.col_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::MoveRequest, _impl_.last_turn_),
+  1,
+  2,
+  3,
+  0,
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::MoveResponse, _impl_._has_bits_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::MoveResponse, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::MoveResponse, _impl_.error_code_),
+  0,
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::PassRequest, _impl_._has_bits_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::PassRequest, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::PassRequest, _impl_.last_turn_),
+  0,
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::PassResponse, _impl_._has_bits_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::PassResponse, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::PassResponse, _impl_.error_code_),
+  0,
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::SyncMatchTimeRequest, _impl_._has_bits_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::SyncMatchTimeRequest, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::SyncMatchTimeRequest, _impl_.ts_),
+  0,
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::SyncMatchTimeResponse_ElapsedInfo, _impl_._has_bits_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::SyncMatchTimeResponse_ElapsedInfo, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::SyncMatchTimeResponse_ElapsedInfo, _impl_.time_elapsed_sec_),
+  0,
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::SyncMatchTimeResponse, _impl_._has_bits_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::SyncMatchTimeResponse, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::SyncMatchTimeResponse, _impl_.ts_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::SyncMatchTimeResponse, _impl_.server_ts_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::SyncMatchTimeResponse, _impl_.elapsed_info_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::SyncMatchTimeResponse, _impl_.room_id_),
+  2,
+  3,
+  0,
+  1,
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::MatchPlayerTimeState, _impl_._has_bits_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::MatchPlayerTimeState, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::MatchPlayerTimeState, _impl_.unknown_field_1_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::MatchPlayerTimeState, _impl_.main_time_left_sec_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::MatchPlayerTimeState, _impl_.byoyomi_periods_left_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::MatchPlayerTimeState, _impl_.byoyomi_duration_sec_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::MatchPlayerTimeState, _impl_.player_id_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::MatchPlayerTimeState, _impl_.disconnected_time_left_sec_),
+  0,
+  1,
+  2,
+  3,
+  4,
+  5,
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::NextMoveEvent, _impl_._has_bits_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::NextMoveEvent, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::NextMoveEvent, _impl_.x_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::NextMoveEvent, _impl_.y_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::NextMoveEvent, _impl_.col_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::NextMoveEvent, _impl_.time_state_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::NextMoveEvent, _impl_.last_turn_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::NextMoveEvent, _impl_.player_id_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::NextMoveEvent, _impl_.ts_),
+  2,
+  3,
+  6,
+  0,
+  1,
+  4,
+  5,
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::PassEvent, _impl_._has_bits_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::PassEvent, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::PassEvent, _impl_.time_state_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::PassEvent, _impl_.last_turn_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::PassEvent, _impl_.player_id_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::PassEvent, _impl_.unknown_field_4_),
+  0,
+  1,
+  2,
+  3,
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::CountdownEvent, _impl_._has_bits_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::CountdownEvent, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::CountdownEvent, _impl_.unknown_field_1_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::CountdownEvent, _impl_.main_time_left_sec_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::CountdownEvent, _impl_.byoyomi_periods_left_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::CountdownEvent, _impl_.byoyomi_time_left_sec_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::CountdownEvent, _impl_.player_id_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::CountdownEvent, _impl_.unknown_field_6_),
+  0,
+  1,
+  2,
+  3,
+  4,
+  5,
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::ResumeCountdownEvent, _impl_._has_bits_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::ResumeCountdownEvent, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::ResumeCountdownEvent, _impl_.unknown_field_1_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::ResumeCountdownEvent, _impl_.countdown_),
+  1,
+  0,
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::RequestCountingRequest, _impl_._has_bits_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::RequestCountingRequest, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::RequestCountingRequest, _impl_.unknown_field_1_),
+  0,
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::RequestCountingResponse, _impl_._has_bits_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::RequestCountingResponse, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::RequestCountingResponse, _impl_.error_code_),
+  0,
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::SendCountingDecisionResponse, _impl_._has_bits_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::SendCountingDecisionResponse, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::SendCountingDecisionResponse, _impl_.error_code_),
+  0,
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::CountingDecision, _impl_._has_bits_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::CountingDecision, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::CountingDecision, _impl_.agree_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::CountingDecision, _impl_.stage_),
+  0,
+  1,
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::CountingEvent, _impl_._has_bits_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::CountingEvent, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::CountingEvent, _impl_.unknown_field_1_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::CountingEvent, _impl_.stage_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::CountingEvent, _impl_.unknown_field_4_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::CountingEvent, _impl_.ownership_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::CountingEvent, _impl_.unknown_field_6_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::CountingEvent, _impl_.winner_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::CountingEvent, _impl_.score_lead_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::CountingEvent, _impl_.time_left_),
+  2,
+  3,
+  0,
+  1,
+  4,
+  6,
+  7,
+  5,
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::ResignRequest, _impl_._has_bits_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::ResignRequest, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::ResignRequest, _impl_.unknown_field_1_),
+  0,
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::ResignResponse, _impl_._has_bits_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::ResignResponse, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::ResignResponse, _impl_.unknown_field_1_),
+  0,
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GameResultEvent, _impl_._has_bits_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GameResultEvent, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GameResultEvent, _impl_.unknown_field_1_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GameResultEvent, _impl_.winner_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GameResultEvent, _impl_.score_lead_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GameResultEvent, _impl_.unknown_field_4_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GameResultEvent, _impl_.message_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GameResultEvent, _impl_.ts_10_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GameResultEvent, _impl_.ts_12_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GameResultEvent, _impl_.ts_13_),
+  1,
+  7,
+  2,
+  3,
+  0,
+  4,
+  5,
+  6,
 };
 static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, 7, -1, sizeof(::openfoxwq::LoginPlayServerRequest)},
   { 8, 18, -1, sizeof(::openfoxwq::LoginPlayServerResponse)},
   { 22, 29, -1, sizeof(::openfoxwq::ListPlayersRequest)},
   { 30, 42, -1, sizeof(::openfoxwq::ListPlayersResponse)},
-  { 48, 56, -1, sizeof(::openfoxwq::GetPlayerInfoRequest)},
-  { 58, 71, -1, sizeof(::openfoxwq::GetPlayerInfoResponse_RegisterInfo)},
-  { 78, 89, -1, sizeof(::openfoxwq::GetPlayerInfoResponse)},
-  { 94, 102, -1, sizeof(::openfoxwq::InfoOptions)},
-  { 104, 111, -1, sizeof(::openfoxwq::SyncTimeRequest)},
-  { 112, 120, -1, sizeof(::openfoxwq::SyncTimeResponse)},
-  { 122, 129, -1, sizeof(::openfoxwq::SyncPlayersRequest)},
-  { 130, 138, -1, sizeof(::openfoxwq::SyncPlayersResponse)},
-  { 140, 149, -1, sizeof(::openfoxwq::PlayerStateEvent)},
-  { 152, 161, -1, sizeof(::openfoxwq::UnknownPlayerEvent1)},
-  { 164, 171, -1, sizeof(::openfoxwq::UnknownPlayRequest1_UnknownPlayRequest1Nested1)},
-  { 172, 180, -1, sizeof(::openfoxwq::UnknownPlayRequest1)},
-  { 182, 189, -1, sizeof(::openfoxwq::UnknownPlayResponse1)},
+  { 48, 57, -1, sizeof(::openfoxwq::GetPlayerInfoRequest)},
+  { 60, 71, -1, sizeof(::openfoxwq::GetPlayerInfoResponse_RegisterInfo)},
+  { 76, -1, -1, sizeof(::openfoxwq::GetPlayerInfoResponse_RecentRecord_Unknown1)},
+  { 82, 91, -1, sizeof(::openfoxwq::GetPlayerInfoResponse_RecentRecord)},
+  { 94, 103, -1, sizeof(::openfoxwq::GetPlayerInfoResponse_OverallResults)},
+  { 106, 118, -1, sizeof(::openfoxwq::GetPlayerInfoResponse_ProInfo)},
+  { 124, 134, -1, sizeof(::openfoxwq::GetPlayerInfoResponse_PerformanceRecord)},
+  { 138, 148, -1, sizeof(::openfoxwq::GetPlayerInfoResponse_Results)},
+  { 152, 163, -1, sizeof(::openfoxwq::GetPlayerInfoResponse_Rooms_Room_ShortPlayerInfo)},
+  { 168, 178, -1, sizeof(::openfoxwq::GetPlayerInfoResponse_Rooms_Room)},
+  { 182, 192, -1, sizeof(::openfoxwq::GetPlayerInfoResponse_Rooms)},
+  { 196, 206, -1, sizeof(::openfoxwq::GetPlayerInfoResponse_AdditionalInfo)},
+  { 210, 231, -1, sizeof(::openfoxwq::GetPlayerInfoResponse)},
+  { 246, 254, -1, sizeof(::openfoxwq::InfoOptions)},
+  { 256, 263, -1, sizeof(::openfoxwq::SyncTimeRequest)},
+  { 264, 272, -1, sizeof(::openfoxwq::SyncTimeResponse)},
+  { 274, 281, -1, sizeof(::openfoxwq::SyncPlayersRequest)},
+  { 282, 290, -1, sizeof(::openfoxwq::SyncPlayersResponse)},
+  { 292, 301, -1, sizeof(::openfoxwq::PlayerStateEvent)},
+  { 304, 312, -1, sizeof(::openfoxwq::PlayerOnlineCountEvent)},
+  { 314, 323, -1, sizeof(::openfoxwq::PlayerOnlineEvent)},
+  { 326, 335, -1, sizeof(::openfoxwq::PlayerOfflineEvent)},
+  { 338, 345, -1, sizeof(::openfoxwq::UnknownPlayRequest1_UnknownPlayRequest1Nested1)},
+  { 346, 354, -1, sizeof(::openfoxwq::UnknownPlayRequest1)},
+  { 356, 363, -1, sizeof(::openfoxwq::UnknownPlayResponse1)},
+  { 364, 371, -1, sizeof(::openfoxwq::GetRoomInfoRequest)},
+  { 372, 380, -1, sizeof(::openfoxwq::GetRoomInfoResponse_Unknown2)},
+  { 382, 397, -1, sizeof(::openfoxwq::GetRoomInfoResponse_PlayerEntry)},
+  { 406, 419, -1, sizeof(::openfoxwq::GetRoomInfoResponse_RoomSettings)},
+  { 426, -1, -1, sizeof(::openfoxwq::GetRoomInfoResponse_Unknown5)},
+  { 432, 445, -1, sizeof(::openfoxwq::GetRoomInfoResponse_RoomInfo)},
+  { 452, 461, -1, sizeof(::openfoxwq::GetRoomInfoResponse)},
+  { 464, -1, -1, sizeof(::openfoxwq::GetAutomatchStatsRequest)},
+  { 470, 478, -1, sizeof(::openfoxwq::GetAutomatchStatsResponse_PopulationEntry_DoNotUse)},
+  { 480, 488, -1, sizeof(::openfoxwq::GetAutomatchStatsResponse)},
+  { 490, 498, -1, sizeof(::openfoxwq::StartAutomatchRequest)},
+  { 500, 509, -1, sizeof(::openfoxwq::StartAutomatchResponse)},
+  { 512, -1, -1, sizeof(::openfoxwq::StopAutomatchRequest)},
+  { 518, 525, -1, sizeof(::openfoxwq::StopAutomatchResponse)},
+  { 526, 536, -1, sizeof(::openfoxwq::AutomatchFoundEvent_RoomParticipant)},
+  { 540, 552, -1, sizeof(::openfoxwq::AutomatchFoundEvent)},
+  { 558, -1, -1, sizeof(::openfoxwq::AcceptMatchRequest)},
+  { 564, 571, -1, sizeof(::openfoxwq::AcceptMatchResponse)},
+  { 572, 584, -1, sizeof(::openfoxwq::MatchStartEvent_MatchInfo)},
+  { 590, 600, -1, sizeof(::openfoxwq::MatchStartEvent_MatchPlayerInfo)},
+  { 604, 618, -1, sizeof(::openfoxwq::MatchStartEvent_AutomatchPreset)},
+  { 626, 646, -1, sizeof(::openfoxwq::MatchStartEvent)},
+  { 660, 668, -1, sizeof(::openfoxwq::HeartbeatInfo)},
+  { 670, 677, -1, sizeof(::openfoxwq::EnterRoomRequest)},
+  { 678, 687, -1, sizeof(::openfoxwq::EnterRoomResponse)},
+  { 690, 697, -1, sizeof(::openfoxwq::LeaveRoomRequest)},
+  { 698, 706, -1, sizeof(::openfoxwq::LeaveRoomResponse)},
+  { 708, 717, -1, sizeof(::openfoxwq::ListRoomParticipantsRequest)},
+  { 720, 733, -1, sizeof(::openfoxwq::ListRoomParticipantsResponse_RoomParticipantInfo)},
+  { 740, 750, -1, sizeof(::openfoxwq::ListRoomParticipantsResponse)},
+  { 754, 761, -1, sizeof(::openfoxwq::LastTurnInfo)},
+  { 762, 772, -1, sizeof(::openfoxwq::MoveRequest)},
+  { 776, 783, -1, sizeof(::openfoxwq::MoveResponse)},
+  { 784, 791, -1, sizeof(::openfoxwq::PassRequest)},
+  { 792, 799, -1, sizeof(::openfoxwq::PassResponse)},
+  { 800, 807, -1, sizeof(::openfoxwq::SyncMatchTimeRequest)},
+  { 808, 815, -1, sizeof(::openfoxwq::SyncMatchTimeResponse_ElapsedInfo)},
+  { 816, 826, -1, sizeof(::openfoxwq::SyncMatchTimeResponse)},
+  { 830, 842, -1, sizeof(::openfoxwq::MatchPlayerTimeState)},
+  { 848, 861, -1, sizeof(::openfoxwq::NextMoveEvent)},
+  { 868, 878, -1, sizeof(::openfoxwq::PassEvent)},
+  { 882, 894, -1, sizeof(::openfoxwq::CountdownEvent)},
+  { 900, 908, -1, sizeof(::openfoxwq::ResumeCountdownEvent)},
+  { 910, 917, -1, sizeof(::openfoxwq::RequestCountingRequest)},
+  { 918, 925, -1, sizeof(::openfoxwq::RequestCountingResponse)},
+  { 926, 933, -1, sizeof(::openfoxwq::SendCountingDecisionResponse)},
+  { 934, 942, -1, sizeof(::openfoxwq::CountingDecision)},
+  { 944, 958, -1, sizeof(::openfoxwq::CountingEvent)},
+  { 966, 973, -1, sizeof(::openfoxwq::ResignRequest)},
+  { 974, 981, -1, sizeof(::openfoxwq::ResignResponse)},
+  { 982, 996, -1, sizeof(::openfoxwq::GameResultEvent)},
 };
 
 static const ::_pb::Message* const file_default_instances[] = {
@@ -510,6 +2410,16 @@ static const ::_pb::Message* const file_default_instances[] = {
   &::openfoxwq::_ListPlayersResponse_default_instance_._instance,
   &::openfoxwq::_GetPlayerInfoRequest_default_instance_._instance,
   &::openfoxwq::_GetPlayerInfoResponse_RegisterInfo_default_instance_._instance,
+  &::openfoxwq::_GetPlayerInfoResponse_RecentRecord_Unknown1_default_instance_._instance,
+  &::openfoxwq::_GetPlayerInfoResponse_RecentRecord_default_instance_._instance,
+  &::openfoxwq::_GetPlayerInfoResponse_OverallResults_default_instance_._instance,
+  &::openfoxwq::_GetPlayerInfoResponse_ProInfo_default_instance_._instance,
+  &::openfoxwq::_GetPlayerInfoResponse_PerformanceRecord_default_instance_._instance,
+  &::openfoxwq::_GetPlayerInfoResponse_Results_default_instance_._instance,
+  &::openfoxwq::_GetPlayerInfoResponse_Rooms_Room_ShortPlayerInfo_default_instance_._instance,
+  &::openfoxwq::_GetPlayerInfoResponse_Rooms_Room_default_instance_._instance,
+  &::openfoxwq::_GetPlayerInfoResponse_Rooms_default_instance_._instance,
+  &::openfoxwq::_GetPlayerInfoResponse_AdditionalInfo_default_instance_._instance,
   &::openfoxwq::_GetPlayerInfoResponse_default_instance_._instance,
   &::openfoxwq::_InfoOptions_default_instance_._instance,
   &::openfoxwq::_SyncTimeRequest_default_instance_._instance,
@@ -517,38 +2427,135 @@ static const ::_pb::Message* const file_default_instances[] = {
   &::openfoxwq::_SyncPlayersRequest_default_instance_._instance,
   &::openfoxwq::_SyncPlayersResponse_default_instance_._instance,
   &::openfoxwq::_PlayerStateEvent_default_instance_._instance,
-  &::openfoxwq::_UnknownPlayerEvent1_default_instance_._instance,
+  &::openfoxwq::_PlayerOnlineCountEvent_default_instance_._instance,
+  &::openfoxwq::_PlayerOnlineEvent_default_instance_._instance,
+  &::openfoxwq::_PlayerOfflineEvent_default_instance_._instance,
   &::openfoxwq::_UnknownPlayRequest1_UnknownPlayRequest1Nested1_default_instance_._instance,
   &::openfoxwq::_UnknownPlayRequest1_default_instance_._instance,
   &::openfoxwq::_UnknownPlayResponse1_default_instance_._instance,
+  &::openfoxwq::_GetRoomInfoRequest_default_instance_._instance,
+  &::openfoxwq::_GetRoomInfoResponse_Unknown2_default_instance_._instance,
+  &::openfoxwq::_GetRoomInfoResponse_PlayerEntry_default_instance_._instance,
+  &::openfoxwq::_GetRoomInfoResponse_RoomSettings_default_instance_._instance,
+  &::openfoxwq::_GetRoomInfoResponse_Unknown5_default_instance_._instance,
+  &::openfoxwq::_GetRoomInfoResponse_RoomInfo_default_instance_._instance,
+  &::openfoxwq::_GetRoomInfoResponse_default_instance_._instance,
+  &::openfoxwq::_GetAutomatchStatsRequest_default_instance_._instance,
+  &::openfoxwq::_GetAutomatchStatsResponse_PopulationEntry_DoNotUse_default_instance_._instance,
+  &::openfoxwq::_GetAutomatchStatsResponse_default_instance_._instance,
+  &::openfoxwq::_StartAutomatchRequest_default_instance_._instance,
+  &::openfoxwq::_StartAutomatchResponse_default_instance_._instance,
+  &::openfoxwq::_StopAutomatchRequest_default_instance_._instance,
+  &::openfoxwq::_StopAutomatchResponse_default_instance_._instance,
+  &::openfoxwq::_AutomatchFoundEvent_RoomParticipant_default_instance_._instance,
+  &::openfoxwq::_AutomatchFoundEvent_default_instance_._instance,
+  &::openfoxwq::_AcceptMatchRequest_default_instance_._instance,
+  &::openfoxwq::_AcceptMatchResponse_default_instance_._instance,
+  &::openfoxwq::_MatchStartEvent_MatchInfo_default_instance_._instance,
+  &::openfoxwq::_MatchStartEvent_MatchPlayerInfo_default_instance_._instance,
+  &::openfoxwq::_MatchStartEvent_AutomatchPreset_default_instance_._instance,
+  &::openfoxwq::_MatchStartEvent_default_instance_._instance,
+  &::openfoxwq::_HeartbeatInfo_default_instance_._instance,
+  &::openfoxwq::_EnterRoomRequest_default_instance_._instance,
+  &::openfoxwq::_EnterRoomResponse_default_instance_._instance,
+  &::openfoxwq::_LeaveRoomRequest_default_instance_._instance,
+  &::openfoxwq::_LeaveRoomResponse_default_instance_._instance,
+  &::openfoxwq::_ListRoomParticipantsRequest_default_instance_._instance,
+  &::openfoxwq::_ListRoomParticipantsResponse_RoomParticipantInfo_default_instance_._instance,
+  &::openfoxwq::_ListRoomParticipantsResponse_default_instance_._instance,
+  &::openfoxwq::_LastTurnInfo_default_instance_._instance,
+  &::openfoxwq::_MoveRequest_default_instance_._instance,
+  &::openfoxwq::_MoveResponse_default_instance_._instance,
+  &::openfoxwq::_PassRequest_default_instance_._instance,
+  &::openfoxwq::_PassResponse_default_instance_._instance,
+  &::openfoxwq::_SyncMatchTimeRequest_default_instance_._instance,
+  &::openfoxwq::_SyncMatchTimeResponse_ElapsedInfo_default_instance_._instance,
+  &::openfoxwq::_SyncMatchTimeResponse_default_instance_._instance,
+  &::openfoxwq::_MatchPlayerTimeState_default_instance_._instance,
+  &::openfoxwq::_NextMoveEvent_default_instance_._instance,
+  &::openfoxwq::_PassEvent_default_instance_._instance,
+  &::openfoxwq::_CountdownEvent_default_instance_._instance,
+  &::openfoxwq::_ResumeCountdownEvent_default_instance_._instance,
+  &::openfoxwq::_RequestCountingRequest_default_instance_._instance,
+  &::openfoxwq::_RequestCountingResponse_default_instance_._instance,
+  &::openfoxwq::_SendCountingDecisionResponse_default_instance_._instance,
+  &::openfoxwq::_CountingDecision_default_instance_._instance,
+  &::openfoxwq::_CountingEvent_default_instance_._instance,
+  &::openfoxwq::_ResignRequest_default_instance_._instance,
+  &::openfoxwq::_ResignResponse_default_instance_._instance,
+  &::openfoxwq::_GameResultEvent_default_instance_._instance,
 };
 
 const char descriptor_table_protodef_proto_2fplay_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
   "\n\020proto/play.proto\022\topenfoxwq\032\033google/pr"
   "otobuf/empty.proto\032\025proto/reqOption.prot"
   "o\032\022proto/common.proto\"\'\n\026LoginPlayServer"
-  "Request\022\r\n\005token\030\001 \002(\t\"}\n\027LoginPlayServe"
+  "Request\022\r\n\005token\030\001 \002(\014\"}\n\027LoginPlayServe"
   "rResponse\022\027\n\017unknown_field_1\030\001 \001(\003\022\027\n\017un"
   "known_field_2\030\002 \001(\003\022\027\n\017unknown_field_3\030\003"
   " \001(\003\022\027\n\017unknown_field_4\030\004 \001(\003\"-\n\022ListPla"
-  "yersRequest\022\027\n\017unknown_field_1\030\001 \002(\003\"\260\001\n"
+  "yersRequest\022\027\n\017unknown_field_1\030\001 \002(\003\"\255\001\n"
   "\023ListPlayersResponse\022&\n\007players\030\002 \003(\0132\025."
   "openfoxwq.PlayerInfo\022\022\n\npage_index\030\003 \002(\003"
-  "\022\022\n\npage_count\030\004 \002(\003\022\027\n\017unknown_field_1\030"
-  "\001 \001(\003\022\027\n\017unknown_field_5\030\005 \001(\003\022\027\n\017unknow"
-  "n_field_6\030\006 \001(\003\"W\n\024GetPlayerInfoRequest\022"
-  "\021\n\tplayer_id\030\001 \002(\003\022,\n\014info_options\030\003 \002(\013"
-  "2\026.openfoxwq.InfoOptions\"\235\003\n\025GetPlayerIn"
-  "foResponse\022\021\n\tplayer_id\030\003 \002(\003\022,\n\014info_op"
-  "tions\030\002 \002(\0132\026.openfoxwq.InfoOptions\022\027\n\017p"
-  "layer_id_again\030\005 \002(\003\022D\n\rregister_info\030\010 "
-  "\001(\0132-.openfoxwq.GetPlayerInfoResponse.Re"
-  "gisterInfo\0224\n\014game_results\030\020 \003(\0132\036.openf"
-  "oxwq.ExtendedGameResults\032\255\001\n\014RegisterInf"
-  "o\022\021\n\tplayer_id\030\001 \002(\003\022\023\n\013name_native\030\004 \002("
-  "\t\022\014\n\004name\030\005 \002(\t\022\034\n\024member_since_unix_ts\030"
-  "\010 \002(\003\022\027\n\017unknown_field_2\030\002 \002(\003\022\027\n\017unknow"
-  "n_field_3\030\003 \002(\003\022\027\n\017unknown_field_7\030\007 \002(\003"
+  "\022\022\n\npage_count\030\004 \002(\003\022\024\n\014online_count\030\005 \001"
+  "(\003\022\027\n\017unknown_field_1\030\001 \001(\003\022\027\n\017unknown_f"
+  "ield_6\030\006 \001(\003\"l\n\024GetPlayerInfoRequest\022\021\n\t"
+  "player_id\030\001 \001(\003\022\023\n\013player_name\030\002 \001(\t\022,\n\014"
+  "info_options\030\003 \002(\0132\026.openfoxwq.InfoOptio"
+  "ns\"\353\020\n\025GetPlayerInfoResponse\022\022\n\nerror_co"
+  "de\030\001 \002(\003\022,\n\014info_options\030\002 \002(\0132\026.openfox"
+  "wq.InfoOptions\022\031\n\021seached_player_id\030\003 \001("
+  "\003\022\034\n\024searched_player_name\030\004 \001(\t\022\021\n\tplaye"
+  "r_id\030\005 \001(\003\022\017\n\007foxcoin\030\006 \001(\003\022\035\n\004rank\030\007 \001("
+  "\0162\017.openfoxwq.Rank\022D\n\rregister_info\030\010 \001("
+  "\0132-.openfoxwq.GetPlayerInfoResponse.Regi"
+  "sterInfo\022D\n\rrecent_record\030\t \001(\0132-.openfo"
+  "xwq.GetPlayerInfoResponse.RecentRecord\022H"
+  "\n\017overall_results\030\014 \001(\0132/.openfoxwq.GetP"
+  "layerInfoResponse.OverallResults\022:\n\010pro_"
+  "info\030\017 \001(\0132(.openfoxwq.GetPlayerInfoResp"
+  "onse.ProInfo\022G\n\013perf_record\030\022 \001(\01322.open"
+  "foxwq.GetPlayerInfoResponse.PerformanceR"
+  "ecord\0229\n\007results\030\020 \003(\0132(.openfoxwq.GetPl"
+  "ayerInfoResponse.Results\0225\n\005rooms\030\024 \001(\0132"
+  "&.openfoxwq.GetPlayerInfoResponse.Rooms\022"
+  "H\n\017additional_info\030\026 \001(\0132/.openfoxwq.Get"
+  "PlayerInfoResponse.AdditionalInfo\032\207\001\n\014Re"
+  "gisterInfo\022\021\n\tplayer_id\030\001 \002(\003\022\023\n\013name_na"
+  "tive\030\004 \002(\t\022\014\n\004name\030\005 \002(\t\022#\n\007country\030\007 \002("
+  "\0162\022.openfoxwq.Country\022\034\n\024member_since_un"
+  "ix_ts\030\010 \002(\003\032\224\001\n\014RecentRecord\022O\n\017unknown_"
+  "field_1\030\001 \001(\01326.openfoxwq.GetPlayerInfoR"
+  "esponse.RecentRecord.Unknown1\022\016\n\006streak\030"
+  "\002 \001(\t\022\027\n\017unknown_field_3\030\003 \001(\t\032\n\n\010Unknow"
+  "n1\032=\n\016OverallResults\022\016\n\006rating\030\001 \001(\003\022\n\n\002"
+  "wr\030\002 \001(\003\022\017\n\007stamina\030\003 \001(\003\032\215\001\n\007ProInfo\022\027\n"
+  "\017unknown_field_1\030\001 \001(\003\022\027\n\017unknown_field_"
+  "2\030\002 \001(\003\022\r\n\005name1\030\003 \001(\t\022\r\n\005name2\030\004 \001(\t\022\035\n"
+  "\004rank\030\005 \001(\0162\017.openfoxwq.Rank\022\023\n\013associat"
+  "ion\030\006 \001(\003\032`\n\021PerformanceRecord\022\035\n\004rank\030\001"
+  " \001(\0162\017.openfoxwq.Rank\022\n\n\002wr\030\002 \001(\003\022\017\n\007sta"
+  "mina\030\003 \001(\003\022\017\n\007foxcoin\030\005 \001(\003\032r\n\007Results\022:"
+  "\n\004type\030\001 \002(\0162,.openfoxwq.GetPlayerInfoRe"
+  "sponse.ResultsType\022\014\n\004wins\030\002 \002(\003\022\016\n\006loss"
+  "es\030\003 \002(\003\022\r\n\005draws\030\004 \002(\003\032\364\003\n\005Rooms\022:\n\005roo"
+  "ms\030\001 \003(\0132+.openfoxwq.GetPlayerInfoRespon"
+  "se.Rooms.Room\022\027\n\017unknown_field_2\030\002 \001(\003\022\027"
+  "\n\017unknown_field_3\030\003 \001(\003\022\027\n\017unknown_field"
+  "_4\030\004 \001(\003\032\343\002\n\004Room\022\035\n\002id\030\001 \001(\0132\021.openfoxw"
+  "q.RoomId\022\027\n\017unknown_field_2\030\002 \001(\003\022L\n\007pla"
+  "yer1\030\003 \001(\0132;.openfoxwq.GetPlayerInfoResp"
+  "onse.Rooms.Room.ShortPlayerInfo\022L\n\007playe"
+  "r2\030\004 \001(\0132;.openfoxwq.GetPlayerInfoRespon"
+  "se.Rooms.Room.ShortPlayerInfo\032\206\001\n\017ShortP"
+  "layerInfo\022\021\n\tplayer_id\030\001 \001(\003\022\035\n\004rank\030\002 \001"
+  "(\0162\017.openfoxwq.Rank\022#\n\007country\030\003 \001(\0162\022.o"
+  "penfoxwq.Country\022\r\n\005name4\030\004 \001(\t\022\r\n\005name5"
+  "\030\005 \001(\t\032t\n\016AdditionalInfo\022\027\n\017unknown_fiel"
+  "d_1\030\001 \001(\003\022\027\n\017unknown_field_2\030\002 \001(\003\022\027\n\017un"
+  "known_field_3\030\003 \001(\t\022\027\n\017unknown_field_4\030\004"
+  " \001(\t\"J\n\013ResultsType\022\013\n\007OVERALL\020\000\022\010\n\004FREE"
+  "\020\001\022\n\n\006RANKED\020\002\022\013\n\007UNKNOWN\020\004\022\013\n\007CURRENT\020\005"
   "\"\?\n\013InfoOptions\022\027\n\017unknown_field_1\030\001 \002(\003"
   "\022\027\n\017unknown_field_2\030\002 \001(\003\"\"\n\017SyncTimeReq"
   "uest\022\017\n\007unix_ts\030\001 \002(\003\"7\n\020SyncTimeRespons"
@@ -558,38 +2565,250 @@ const char descriptor_table_protodef_proto_2fplay_2eproto[] PROTOBUF_SECTION_VAR
   "field_1\030\001 \002(\003\022\027\n\017unknown_field_2\030\002 \002(\003\"m"
   "\n\020PlayerStateEvent\022*\n\013player_info\030\001 \002(\0132"
   "\025.openfoxwq.PlayerInfo\022\024\n\014online_count\030\002"
-  " \002(\003\022\027\n\017unknown_field_3\030\003 \001(\003\"W\n\023Unknown"
-  "PlayerEvent1\022\021\n\tplayer_id\030\001 \002(\003\022\024\n\014onlin"
-  "e_count\030\002 \002(\003\022\027\n\017unknown_field_3\030\003 \001(\003\"\271"
-  "\001\n\023UnknownPlayRequest1\022R\n\017unknown_field_"
-  "1\030\001 \002(\01329.openfoxwq.UnknownPlayRequest1."
-  "UnknownPlayRequest1Nested1\022\027\n\017unknown_fi"
-  "eld_2\030\002 \002(\003\0325\n\032UnknownPlayRequest1Nested"
-  "1\022\027\n\017unknown_field_1\030\001 \002(\t\"/\n\024UnknownPla"
-  "yResponse1\022\027\n\017unknown_field_1\030\001 \001(\0032\327\006\n\004"
-  "Play\022h\n\005Login\022!.openfoxwq.LoginPlayServe"
-  "rRequest\032\".openfoxwq.LoginPlayServerResp"
-  "onse\"\030\202\265\030\024\010\330\314\001\020\330\314\001\032\n\010\001( 0\0068\241\234\001\022i\n\013ListPl"
-  "ayers\022\035.openfoxwq.ListPlayersRequest\032\036.o"
-  "penfoxwq.ListPlayersResponse\"\031\202\265\030\025\010\330\314\001\020\330"
-  "\314\001\032\013\010\311\001( 0\0068\316\234\0010\001\022m\n\rGetPlayerInfo\022\037.ope"
-  "nfoxwq.GetPlayerInfoRequest\032 .openfoxwq."
-  "GetPlayerInfoResponse\"\031\202\265\030\025\010\330\314\001\020\330\314\001\032\013\010\351\007"
-  "( 0\0068\313\234\001\022a\n\010SyncTime\022\032.openfoxwq.SyncTim"
-  "eRequest\032\033.openfoxwq.SyncTimeResponse\"\034\202"
-  "\265\030\030\010\330\314\001\020\330\314\001\032\016\010\005( 0\0068\241\234\001@\013H\001\022i\n\013SyncPlaye"
-  "rs\022\035.openfoxwq.SyncPlayersRequest\032\036.open"
-  "foxwq.SyncPlayersResponse\"\033\202\265\030\027\010\330\314\001\020\330\314\001\032"
-  "\r\010\313\001( 0\0068\316\234\001@\003\022f\n\026ListenPlayerStateEvent"
-  "\022\026.google.protobuf.Empty\032\033.openfoxwq.Pla"
-  "yerStateEvent\"\025\202\265\030\021\010\330\314\001\020\330\314\001\032\007\010\224\0038\316\234\0010\001\022l"
-  "\n\031ListenUnknownPlayerEvent1\022\026.google.pro"
-  "tobuf.Empty\032\036.openfoxwq.UnknownPlayerEve"
-  "nt1\"\025\202\265\030\021\010\330\314\001\020\330\314\001\032\007\010\223\0038\316\234\0010\001\022g\n\010Unknown1"
-  "\022\036.openfoxwq.UnknownPlayRequest1\032\037.openf"
-  "oxwq.UnknownPlayResponse1\"\032\202\265\030\026\010\330\314\001\020\330\314\001\032"
-  "\014\010\002( 0\0068\340\352\001@\001B%Z#github.com/ale64bit/ope"
-  "nfoxwq/proto"
+  " \002(\003\022\027\n\017unknown_field_3\030\003 \001(\003\"G\n\026PlayerO"
+  "nlineCountEvent\022\027\n\017unknown_field_1\030\001 \001(\003"
+  "\022\024\n\014online_count\030\002 \002(\003\"n\n\021PlayerOnlineEv"
+  "ent\022*\n\013player_info\030\001 \002(\0132\025.openfoxwq.Pla"
+  "yerInfo\022\024\n\014online_count\030\002 \002(\003\022\027\n\017unknown"
+  "_field_3\030\003 \001(\003\"V\n\022PlayerOfflineEvent\022\021\n\t"
+  "player_id\030\001 \002(\003\022\024\n\014online_count\030\002 \002(\003\022\027\n"
+  "\017unknown_field_3\030\003 \001(\003\"\265\001\n\023UnknownPlayRe"
+  "quest1\022R\n\017unknown_field_1\030\001 \002(\01329.openfo"
+  "xwq.UnknownPlayRequest1.UnknownPlayReque"
+  "st1Nested1\022\027\n\017unknown_field_2\030\002 \002(\003\0321\n\032U"
+  "nknownPlayRequest1Nested1\022\023\n\013mac_address"
+  "\030\001 \002(\t\"/\n\024UnknownPlayResponse1\022\027\n\017unknow"
+  "n_field_1\030\001 \001(\003\"3\n\022GetRoomInfoRequest\022\035\n"
+  "\002id\030\001 \002(\0132\021.openfoxwq.RoomId\"\216\007\n\023GetRoom"
+  "InfoResponse\022\022\n\nerror_code\030\001 \001(\003\022@\n\017unkn"
+  "own_field_2\030\002 \003(\0132\'.openfoxwq.GetRoomInf"
+  "oResponse.Unknown2\022:\n\troom_info\030\003 \001(\0132\'."
+  "openfoxwq.GetRoomInfoResponse.RoomInfo\032<"
+  "\n\010Unknown2\022\027\n\017unknown_field_1\030\001 \001(\003\022\027\n\017u"
+  "nknown_field_2\030\002 \001(\003\032\323\001\n\013PlayerEntry\022\n\n\002"
+  "id\030\001 \001(\003\022\014\n\004name\030\002 \001(\t\022\035\n\004rank\030\003 \001(\0162\017.o"
+  "penfoxwq.Rank\022\021\n\tmain_time\030\t \001(\003\022\027\n\017byoy"
+  "omi_periods\030\n \001(\003\022\024\n\014byoyomi_time\030\013 \001(\003\022"
+  "\022\n\navatar_url\030\r \001(\t\022#\n\007country\030\017 \001(\0162\022.o"
+  "penfoxwq.Country\022\020\n\010name_alt\030\020 \001(\t\032\234\001\n\014R"
+  "oomSettings\022\022\n\nboard_size\030\001 \001(\003\022\014\n\004komi\030"
+  "\004 \001(\003\022\023\n\013player_id_1\030\005 \001(\003\022\021\n\tmain_time\030"
+  "\006 \001(\003\022\024\n\014byoyomi_time\030\007 \001(\003\022\027\n\017byoyomi_p"
+  "eriods\030\010 \001(\003\022\023\n\013player_id_2\030\032 \001(\003\032\n\n\010Unk"
+  "nown5\032\245\002\n\010RoomInfo\022\035\n\002id\030\001 \001(\0132\021.openfox"
+  "wq.RoomId\022;\n\007players\030\002 \003(\0132*.openfoxwq.G"
+  "etRoomInfoResponse.PlayerEntry\022=\n\010settin"
+  "gs\030\003 \001(\0132+.openfoxwq.GetRoomInfoResponse"
+  ".RoomSettings\022\027\n\017unknown_field_4\030\004 \001(\003\022@"
+  "\n\017unknown_field_5\030\005 \001(\0132\'.openfoxwq.GetR"
+  "oomInfoResponse.Unknown5\022\017\n\007ts_unix\030\006 \001("
+  "\003\022\022\n\nts_unix_ns\030\014 \001(\003\"\032\n\030GetAutomatchSta"
+  "tsRequest\"\254\001\n\031GetAutomatchStatsResponse\022"
+  "\022\n\nerror_code\030\001 \001(\003\022H\n\npopulation\030\002 \003(\0132"
+  "4.openfoxwq.GetAutomatchStatsResponse.Po"
+  "pulationEntry\0321\n\017PopulationEntry\022\013\n\003key\030"
+  "\001 \001(\003\022\r\n\005value\030\002 \001(\003:\0028\001\"C\n\025StartAutomat"
+  "chRequest\022\021\n\tpreset_id\030\001 \002(\003\022\027\n\017unknown_"
+  "field_2\030\002 \001(\003\"^\n\026StartAutomatchResponse\022"
+  "\022\n\nerror_code\030\001 \001(\003\022\027\n\017unknown_field_2\030\002"
+  " \001(\003\022\027\n\017unknown_field_3\030\003 \001(\003\"\026\n\024StopAut"
+  "omatchRequest\"+\n\025StopAutomatchResponse\022\022"
+  "\n\nerror_code\030\001 \001(\003\"\250\002\n\023AutomatchFoundEve"
+  "nt\022\022\n\nerror_code\030\001 \001(\003\022\021\n\troom_id_1\030\002 \001("
+  "\003\022\021\n\troom_id_2\030\003 \001(\003\022\021\n\troom_id_3\030\004 \001(\003\022"
+  "D\n\014participants\030\005 \003(\0132..openfoxwq.Automa"
+  "tchFoundEvent.RoomParticipant\022\027\n\017unknown"
+  "_field_6\030\006 \001(\003\032e\n\017RoomParticipant\022\021\n\tpla"
+  "yer_id\030\001 \002(\003\022\014\n\004name\030\003 \001(\t\022\035\n\004rank\030\004 \001(\016"
+  "2\017.openfoxwq.Rank\022\022\n\navatar_url\030\022 \001(\t\"\024\n"
+  "\022AcceptMatchRequest\")\n\023AcceptMatchRespon"
+  "se\022\022\n\nerror_code\030\001 \001(\003\"\224\007\n\017MatchStartEve"
+  "nt\0228\n\nmatch_info\030\001 \001(\0132$.openfoxwq.Match"
+  "StartEvent.MatchInfo\022\027\n\017unknown_field_2\030"
+  "\002 \001(\003\022\025\n\runix_ts_nanos\030\003 \001(\003\022\027\n\017unknown_"
+  "field_4\030\004 \001(\003\022\027\n\017unknown_field_6\030\006 \001(\003\022\017"
+  "\n\007unix_ts\030\007 \001(\003\022\031\n\021unix_ts_nanos_str\030\010 \001"
+  "(\t\022;\n\007players\030\t \003(\0132*.openfoxwq.MatchSta"
+  "rtEvent.MatchPlayerInfo\022\021\n\troom_id_1\030\013 \001"
+  "(\003\022\021\n\troom_id_2\030\014 \001(\003\022\021\n\troom_id_3\030\016 \001(\003"
+  "\022\021\n\troom_id_4\030\r \001(\003\022\033\n\023automatch_preset_"
+  "id\030\017 \001(\003\022D\n\020automatch_preset\030\021 \001(\0132*.ope"
+  "nfoxwq.MatchStartEvent.AutomatchPreset\032\233"
+  "\001\n\tMatchInfo\022\022\n\nboard_size\030\001 \001(\003\022\027\n\017play"
+  "er_id_black\030\005 \001(\003\022\025\n\rmain_time_sec\030\006 \001(\003"
+  "\022\030\n\020byoyomi_time_sec\030\007 \001(\003\022\027\n\017byoyomi_pe"
+  "riods\030\010 \001(\003\022\027\n\017player_id_white\030\032 \001(\003\032v\n\017"
+  "MatchPlayerInfo\022\021\n\tplayer_id\030\001 \001(\003\022\014\n\004na"
+  "me\030\003 \001(\t\022\035\n\004rank\030\004 \001(\0162\017.openfoxwq.Rank\022"
+  "#\n\007country\030\024 \001(\0162\022.openfoxwq.Country\032\266\001\n"
+  "\017AutomatchPreset\022\n\n\002id\030\001 \001(\003\022\022\n\nboard_si"
+  "ze\030\002 \001(\003\022\025\n\rmain_time_sec\030\003 \001(\003\022\027\n\017byoyo"
+  "mi_periods\030\004 \001(\003\022\030\n\020byoyomi_time_sec\030\005 \001"
+  "(\003\022\025\n\rchinese_rules\030\006 \001(\010\022\020\n\010min_duan\030\007 "
+  "\001(\003\022\020\n\010max_duan\030\010 \001(\003\"A\n\rHeartbeatInfo\022\027"
+  "\n\017unknown_field_1\030\001 \001(\003\022\027\n\017unknown_field"
+  "_2\030\002 \001(\003\"1\n\020EnterRoomRequest\022\035\n\002id\030\001 \002(\013"
+  "2\021.openfoxwq.RoomId\"}\n\021EnterRoomResponse"
+  "\022\022\n\nerror_code\030\001 \001(\003\022\"\n\007room_id\030\002 \001(\0132\021."
+  "openfoxwq.RoomId\0220\n\016heartbeat_info\030\003 \001(\013"
+  "2\030.openfoxwq.HeartbeatInfo\"1\n\020LeaveRoomR"
+  "equest\022\035\n\002id\030\001 \002(\0132\021.openfoxwq.RoomId\"K\n"
+  "\021LeaveRoomResponse\022\022\n\nerror_code\030\001 \001(\003\022\""
+  "\n\007room_id\030\002 \001(\0132\021.openfoxwq.RoomId\"f\n\033Li"
+  "stRoomParticipantsRequest\022\035\n\002id\030\001 \002(\0132\021."
+  "openfoxwq.RoomId\022\023\n\013player_id_1\030\002 \002(\003\022\023\n"
+  "\013player_id_2\030\003 \002(\003\"\354\002\n\034ListRoomParticipa"
+  "ntsResponse\022\022\n\nerror_code\030\001 \001(\003\022\035\n\002id\030\002 "
+  "\001(\0132\021.openfoxwq.RoomId\022Q\n\014participants\030\003"
+  " \003(\0132;.openfoxwq.ListRoomParticipantsRes"
+  "ponse.RoomParticipantInfo\022\031\n\021participant"
+  "_count\030\005 \001(\003\032\252\001\n\023RoomParticipantInfo\022\021\n\t"
+  "player_id\030\001 \001(\003\022\014\n\004name\030\002 \001(\t\022\020\n\010name_al"
+  "t\030\003 \001(\t\022\035\n\004rank\030\004 \001(\0162\017.openfoxwq.Rank\022\014"
+  "\n\004wins\030\005 \001(\003\022\016\n\006losses\030\006 \001(\003\022#\n\007country\030"
+  "\t \001(\0162\022.openfoxwq.Country\"\"\n\014LastTurnInf"
+  "o\022\022\n\nmove_count\030\001 \001(\003\"n\n\013MoveRequest\022\t\n\001"
+  "x\030\001 \002(\003\022\t\n\001y\030\002 \002(\003\022\035\n\003col\030\003 \002(\0162\020.openfo"
+  "xwq.Color\022*\n\tlast_turn\030\004 \002(\0132\027.openfoxwq"
+  ".LastTurnInfo\"\"\n\014MoveResponse\022\022\n\nerror_c"
+  "ode\030\001 \001(\003\"9\n\013PassRequest\022*\n\tlast_turn\030\001 "
+  "\002(\0132\027.openfoxwq.LastTurnInfo\"\"\n\014PassResp"
+  "onse\022\022\n\nerror_code\030\001 \001(\003\"\"\n\024SyncMatchTim"
+  "eRequest\022\n\n\002ts\030\001 \002(\003\"\307\001\n\025SyncMatchTimeRe"
+  "sponse\022\n\n\002ts\030\001 \002(\003\022\021\n\tserver_ts\030\002 \001(\003\022B\n"
+  "\014elapsed_info\030\003 \001(\0132,.openfoxwq.SyncMatc"
+  "hTimeResponse.ElapsedInfo\022\"\n\007room_id\030\004 \001"
+  "(\0132\021.openfoxwq.RoomId\032\'\n\013ElapsedInfo\022\030\n\020"
+  "time_elapsed_sec\030\001 \001(\003\"\276\001\n\024MatchPlayerTi"
+  "meState\022\027\n\017unknown_field_1\030\001 \001(\003\022\032\n\022main"
+  "_time_left_sec\030\002 \002(\003\022\034\n\024byoyomi_periods_"
+  "left\030\003 \002(\003\022\034\n\024byoyomi_duration_sec\030\004 \001(\003"
+  "\022\021\n\tplayer_id\030\005 \002(\003\022\"\n\032disconnected_time"
+  "_left_sec\030\006 \001(\003\"\304\001\n\rNextMoveEvent\022\t\n\001x\030\001"
+  " \001(\003\022\t\n\001y\030\002 \001(\003\022\035\n\003col\030\003 \001(\0162\020.openfoxwq"
+  ".Color\0223\n\ntime_state\030\004 \001(\0132\037.openfoxwq.M"
+  "atchPlayerTimeState\022*\n\tlast_turn\030\005 \001(\0132\027"
+  ".openfoxwq.LastTurnInfo\022\021\n\tplayer_id\030\006 \001"
+  "(\003\022\n\n\002ts\030\007 \001(\003\"\230\001\n\tPassEvent\0223\n\ntime_sta"
+  "te\030\001 \001(\0132\037.openfoxwq.MatchPlayerTimeStat"
+  "e\022*\n\tlast_turn\030\002 \001(\0132\027.openfoxwq.LastTur"
+  "nInfo\022\021\n\tplayer_id\030\003 \001(\003\022\027\n\017unknown_fiel"
+  "d_4\030\004 \001(\003\"\256\001\n\016CountdownEvent\022\027\n\017unknown_"
+  "field_1\030\001 \001(\003\022\032\n\022main_time_left_sec\030\002 \002("
+  "\003\022\034\n\024byoyomi_periods_left\030\003 \002(\003\022\035\n\025byoyo"
+  "mi_time_left_sec\030\004 \001(\003\022\021\n\tplayer_id\030\005 \002("
+  "\003\022\027\n\017unknown_field_6\030\006 \001(\003\"]\n\024ResumeCoun"
+  "tdownEvent\022\027\n\017unknown_field_1\030\001 \001(\003\022,\n\tc"
+  "ountdown\030\002 \002(\0132\031.openfoxwq.CountdownEven"
+  "t\"1\n\026RequestCountingRequest\022\027\n\017unknown_f"
+  "ield_1\030\001 \001(\003\"-\n\027RequestCountingResponse\022"
+  "\022\n\nerror_code\030\001 \001(\003\"2\n\034SendCountingDecis"
+  "ionResponse\022\022\n\nerror_code\030\001 \001(\003\"J\n\020Count"
+  "ingDecision\022\r\n\005agree\030\001 \002(\010\022\'\n\005stage\030\002 \002("
+  "\0162\030.openfoxwq.CountingStage\"\337\001\n\rCounting"
+  "Event\022\027\n\017unknown_field_1\030\001 \001(\003\022\'\n\005stage\030"
+  "\002 \002(\0162\030.openfoxwq.CountingStage\022\027\n\017unkno"
+  "wn_field_4\030\004 \001(\014\022\021\n\townership\030\005 \001(\t\022\027\n\017u"
+  "nknown_field_6\030\006 \001(\002\022 \n\006winner\030\010 \001(\0162\020.o"
+  "penfoxwq.Color\022\022\n\nscore_lead\030\t \001(\002\022\021\n\tti"
+  "me_left\030\007 \002(\003\"(\n\rResignRequest\022\027\n\017unknow"
+  "n_field_1\030\001 \001(\003\")\n\016ResignResponse\022\027\n\017unk"
+  "nown_field_1\030\001 \001(\003\"\267\001\n\017GameResultEvent\022\027"
+  "\n\017unknown_field_1\030\001 \001(\003\022 \n\006winner\030\002 \002(\0162"
+  "\020.openfoxwq.Color\022\022\n\nscore_lead\030\003 \002(\003\022\027\n"
+  "\017unknown_field_4\030\004 \001(\003\022\017\n\007message\030\005 \001(\t\022"
+  "\r\n\005ts_10\030\n \001(\003\022\r\n\005ts_12\030\014 \001(\003\022\r\n\005ts_13\030\r"
+  " \001(\003*_\n\rCountingStage\022\021\n\rSTAGE_UNKNOWN\020\000"
+  "\022\030\n\024STAGE_AGREE_TO_COUNT\020\001\022!\n\035STAGE_AGRE"
+  "E_WITH_COUNT_RESULT\020\0022\250\033\n\004Play\022h\n\005Login\022"
+  "!.openfoxwq.LoginPlayServerRequest\032\".ope"
+  "nfoxwq.LoginPlayServerResponse\"\030\202\265\030\024\010\330\314\001"
+  "\020\330\314\001\032\n\010\001( 0\0068\241\234\001\022i\n\013ListPlayers\022\035.openfo"
+  "xwq.ListPlayersRequest\032\036.openfoxwq.ListP"
+  "layersResponse\"\031\202\265\030\025\010\330\314\001\020\330\314\001\032\013\010\311\001( 0\0068\316\234"
+  "\0010\001\022m\n\rGetPlayerInfo\022\037.openfoxwq.GetPlay"
+  "erInfoRequest\032 .openfoxwq.GetPlayerInfoR"
+  "esponse\"\031\202\265\030\025\010\330\314\001\020\330\314\001\032\013\010\351\007( 0\0068\313\234\001\022i\n\013Sy"
+  "ncPlayers\022\035.openfoxwq.SyncPlayersRequest"
+  "\032\036.openfoxwq.SyncPlayersResponse\"\033\202\265\030\027\010\330"
+  "\314\001\020\330\314\001\032\r\010\313\001( 0\0068\316\234\001@\003\022f\n\013GetRoomInfo\022\035.o"
+  "penfoxwq.GetRoomInfoRequest\032\036.openfoxwq."
+  "GetRoomInfoResponse\"\030\202\265\030\024\010\330\314\001\020\330\314\001\032\n\010z( 0"
+  "\0068\300\352\001\022`\n\tEnterRoom\022\033.openfoxwq.EnterRoom"
+  "Request\032\034.openfoxwq.EnterRoomResponse\"\030\202"
+  "\265\030\024\010\330\314\001\020\330\314\001\032\n\010d( 0\0068\305\352\001\022`\n\tLeaveRoom\022\033.o"
+  "penfoxwq.LeaveRoomRequest\032\034.openfoxwq.Le"
+  "aveRoomResponse\"\030\202\265\030\024\010\330\314\001\020\330\314\001\032\n\010e( 0\0068\306\352"
+  "\001\022\201\001\n\024ListRoomParticipants\022&.openfoxwq.L"
+  "istRoomParticipantsRequest\032\'.openfoxwq.L"
+  "istRoomParticipantsResponse\"\030\202\265\030\024\010\330\314\001\020\330\314"
+  "\001\032\n\010d( 0\0068\332\352\001\022s\n\035ListenPlayerOnlineCount"
+  "Events\022\026.google.protobuf.Empty\032!.openfox"
+  "wq.PlayerOnlineCountEvent\"\025\202\265\030\021\010\330\314\001\020\330\314\001\032"
+  "\007\010\221\0038\316\234\0010\001\022i\n\030ListenPlayerOnlineEvents\022\026"
+  ".google.protobuf.Empty\032\034.openfoxwq.Playe"
+  "rOnlineEvent\"\025\202\265\030\021\010\330\314\001\020\330\314\001\032\007\010\222\0038\316\234\0010\001\022k\n"
+  "\031ListenPlayerOfflineEvents\022\026.google.prot"
+  "obuf.Empty\032\035.openfoxwq.PlayerOfflineEven"
+  "t\"\025\202\265\030\021\010\330\314\001\020\330\314\001\032\007\010\223\0038\316\234\0010\001\022g\n\027ListenPlay"
+  "erStateEvents\022\026.google.protobuf.Empty\032\033."
+  "openfoxwq.PlayerStateEvent\"\025\202\265\030\021\010\330\314\001\020\330\314\001"
+  "\032\007\010\224\0038\316\234\0010\001\022z\n\021GetAutomatchStats\022#.openf"
+  "oxwq.GetAutomatchStatsRequest\032$.openfoxw"
+  "q.GetAutomatchStatsResponse\"\032\202\265\030\026\010\330\314\001\020\330\314"
+  "\001\032\014\010\261\216\006( 0\0068\266\352\001\022q\n\016StartAutomatch\022 .open"
+  "foxwq.StartAutomatchRequest\032!.openfoxwq."
+  "StartAutomatchResponse\"\032\202\265\030\026\010\330\314\001\020\330\314\001\032\014\010\242"
+  "\216\006( 0\0068\266\352\001\022n\n\032ListenAutomatchFoundEvents"
+  "\022\026.google.protobuf.Empty\032\036.openfoxwq.Aut"
+  "omatchFoundEvent\"\026\202\265\030\022\010\330\314\001\020\330\314\001\032\010\010\254\216\0068\266\352\001"
+  "0\001\022n\n\rStopAutomatch\022\037.openfoxwq.StopAuto"
+  "matchRequest\032 .openfoxwq.StopAutomatchRe"
+  "sponse\"\032\202\265\030\026\010\330\314\001\020\330\314\001\032\014\010\253\216\006( 0\0068\266\352\001\022f\n\013Ac"
+  "ceptMatch\022\035.openfoxwq.AcceptMatchRequest"
+  "\032\036.openfoxwq.AcceptMatchResponse\"\030\202\265\030\024\010\330"
+  "\314\001\020\330\314\001\032\n\010i( 0\0068\230\362\001\022m\n\rSyncMatchTime\022\037.op"
+  "enfoxwq.SyncMatchTimeRequest\032 .openfoxwq"
+  ".SyncMatchTimeResponse\"\031\202\265\030\025\010\330\314\001\020\330\314\001\032\013\010\310"
+  "\001( 0\0068\230\362\001\022R\n\004Move\022\026.openfoxwq.MoveReques"
+  "t\032\027.openfoxwq.MoveResponse\"\031\202\265\030\025\010\330\314\001\020\330\314\001"
+  "\032\013\010\311\001( 0\0068\230\362\001\022R\n\004Pass\022\026.openfoxwq.PassRe"
+  "quest\032\027.openfoxwq.PassResponse\"\031\202\265\030\025\010\330\314\001"
+  "\020\330\314\001\032\013\010\314\001( 0\0068\230\362\001\022s\n\017RequestCounting\022!.o"
+  "penfoxwq.RequestCountingRequest\032\".openfo"
+  "xwq.RequestCountingResponse\"\031\202\265\030\025\010\330\314\001\020\330\314"
+  "\001\032\013\010\255\002( 0\0068\230\362\001\022w\n\024SendCountingDecision\022\033"
+  ".openfoxwq.CountingDecision\032\'.openfoxwq."
+  "SendCountingDecisionResponse\"\031\202\265\030\025\010\330\314\001\020\330"
+  "\314\001\032\013\010\260\002( 0\0068\230\362\001\022X\n\006Resign\022\030.openfoxwq.Re"
+  "signRequest\032\031.openfoxwq.ResignResponse\"\031"
+  "\202\265\030\025\010\330\314\001\020\330\314\001\032\013\010\267\002( 0\0068\230\362\001\022d\n\026ListenMatch"
+  "StartEvents\022\026.google.protobuf.Empty\032\032.op"
+  "enfoxwq.MatchStartEvent\"\024\202\265\030\020\010\330\314\001\020\330\314\001\032\006\010"
+  "k8\230\362\0010\001\022a\n\024ListenNextMoveEvents\022\026.google"
+  ".protobuf.Empty\032\030.openfoxwq.NextMoveEven"
+  "t\"\025\202\265\030\021\010\330\314\001\020\330\314\001\032\007\010\313\0018\230\362\0010\001\022Y\n\020ListenPass"
+  "Events\022\026.google.protobuf.Empty\032\024.openfox"
+  "wq.PassEvent\"\025\202\265\030\021\010\330\314\001\020\330\314\001\032\007\010\316\0018\230\362\0010\001\022b\n"
+  "\025ListenCountdownEvents\022\026.google.protobuf"
+  ".Empty\032\031.openfoxwq.CountdownEvent\"\024\202\265\030\020\010"
+  "\330\314\001\020\330\314\001\032\006\010l8\230\362\0010\001\022n\n\033ListenResumeCountdo"
+  "wnEvents\022\026.google.protobuf.Empty\032\037.openf"
+  "oxwq.ResumeCountdownEvent\"\024\202\265\030\020\010\330\314\001\020\330\314\001\032"
+  "\006\010m8\230\362\0010\001\022g\n\027ListenCountingDecisions\022\026.g"
+  "oogle.protobuf.Empty\032\033.openfoxwq.Countin"
+  "gDecision\"\025\202\265\030\021\010\330\314\001\020\330\314\001\032\007\010\262\0028\230\362\0010\001\022a\n\024Li"
+  "stenCountingEvents\022\026.google.protobuf.Emp"
+  "ty\032\030.openfoxwq.CountingEvent\"\025\202\265\030\021\010\330\314\001\020\330"
+  "\314\001\032\007\010\257\0028\230\362\0010\001\022e\n\026ListenGameResultEvents\022"
+  "\026.google.protobuf.Empty\032\032.openfoxwq.Game"
+  "ResultEvent\"\025\202\265\030\021\010\330\314\001\020\330\314\001\032\007\010\225\0038\230\362\0010\001\022a\n\010"
+  "SyncTime\022\032.openfoxwq.SyncTimeRequest\032\033.o"
+  "penfoxwq.SyncTimeResponse\"\034\202\265\030\030\010\330\314\001\020\330\314\001\032"
+  "\016\010\005( 0\0068\241\234\001@\013H\001\022g\n\010Unknown1\022\036.openfoxwq."
+  "UnknownPlayRequest1\032\037.openfoxwq.UnknownP"
+  "layResponse1\"\032\202\265\030\026\010\330\314\001\020\330\314\001\032\014\010\002( 0\0068\340\352\001@\001"
+  "B&Z$github.com/openfoxwq/openfoxwq/proto"
   ;
 static const ::_pbi::DescriptorTable* const descriptor_table_proto_2fplay_2eproto_deps[3] = {
   &::descriptor_table_google_2fprotobuf_2fempty_2eproto,
@@ -598,9 +2817,9 @@ static const ::_pbi::DescriptorTable* const descriptor_table_proto_2fplay_2eprot
 };
 static ::_pbi::once_flag descriptor_table_proto_2fplay_2eproto_once;
 const ::_pbi::DescriptorTable descriptor_table_proto_2fplay_2eproto = {
-    false, false, 2612, descriptor_table_protodef_proto_2fplay_2eproto,
+    false, false, 12880, descriptor_table_protodef_proto_2fplay_2eproto,
     "proto/play.proto",
-    &descriptor_table_proto_2fplay_2eproto_once, descriptor_table_proto_2fplay_2eproto_deps, 3, 17,
+    &descriptor_table_proto_2fplay_2eproto_once, descriptor_table_proto_2fplay_2eproto_deps, 3, 80,
     schemas, file_default_instances, TableStruct_proto_2fplay_2eproto::offsets,
     file_level_metadata_proto_2fplay_2eproto, file_level_enum_descriptors_proto_2fplay_2eproto,
     file_level_service_descriptors_proto_2fplay_2eproto,
@@ -612,6 +2831,48 @@ PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_proto_2f
 // Force running AddDescriptors() at dynamic initialization time.
 PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_proto_2fplay_2eproto(&descriptor_table_proto_2fplay_2eproto);
 namespace openfoxwq {
+const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* GetPlayerInfoResponse_ResultsType_descriptor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_proto_2fplay_2eproto);
+  return file_level_enum_descriptors_proto_2fplay_2eproto[0];
+}
+bool GetPlayerInfoResponse_ResultsType_IsValid(int value) {
+  switch (value) {
+    case 0:
+    case 1:
+    case 2:
+    case 4:
+    case 5:
+      return true;
+    default:
+      return false;
+  }
+}
+
+#if (__cplusplus < 201703) && (!defined(_MSC_VER) || (_MSC_VER >= 1900 && _MSC_VER < 1912))
+constexpr GetPlayerInfoResponse_ResultsType GetPlayerInfoResponse::OVERALL;
+constexpr GetPlayerInfoResponse_ResultsType GetPlayerInfoResponse::FREE;
+constexpr GetPlayerInfoResponse_ResultsType GetPlayerInfoResponse::RANKED;
+constexpr GetPlayerInfoResponse_ResultsType GetPlayerInfoResponse::UNKNOWN;
+constexpr GetPlayerInfoResponse_ResultsType GetPlayerInfoResponse::CURRENT;
+constexpr GetPlayerInfoResponse_ResultsType GetPlayerInfoResponse::ResultsType_MIN;
+constexpr GetPlayerInfoResponse_ResultsType GetPlayerInfoResponse::ResultsType_MAX;
+constexpr int GetPlayerInfoResponse::ResultsType_ARRAYSIZE;
+#endif  // (__cplusplus < 201703) && (!defined(_MSC_VER) || (_MSC_VER >= 1900 && _MSC_VER < 1912))
+const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* CountingStage_descriptor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_proto_2fplay_2eproto);
+  return file_level_enum_descriptors_proto_2fplay_2eproto[1];
+}
+bool CountingStage_IsValid(int value) {
+  switch (value) {
+    case 0:
+    case 1:
+    case 2:
+      return true;
+    default:
+      return false;
+  }
+}
+
 
 // ===================================================================
 
@@ -706,15 +2967,12 @@ const char* LoginPlayServerRequest::_InternalParse(const char* ptr, ::_pbi::Pars
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string token = 1;
+      // required bytes token = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_token();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "openfoxwq.LoginPlayServerRequest.token");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
@@ -749,13 +3007,9 @@ uint8_t* LoginPlayServerRequest::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string token = 1;
+  // required bytes token = 1;
   if (cached_has_bits & 0x00000001u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_token().data(), static_cast<int>(this->_internal_token().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "openfoxwq.LoginPlayServerRequest.token");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         1, this->_internal_token(), target);
   }
 
@@ -771,10 +3025,10 @@ size_t LoginPlayServerRequest::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:openfoxwq.LoginPlayServerRequest)
   size_t total_size = 0;
 
-  // required string token = 1;
+  // required bytes token = 1;
   if (_internal_has_token()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_token());
   }
   uint32_t cached_has_bits = 0;
@@ -1332,11 +3586,11 @@ class ListPlayersResponse::_Internal {
   static void set_has_page_count(HasBits* has_bits) {
     (*has_bits)[0] |= 4u;
   }
+  static void set_has_online_count(HasBits* has_bits) {
+    (*has_bits)[0] |= 8u;
+  }
   static void set_has_unknown_field_1(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
-  }
-  static void set_has_unknown_field_5(HasBits* has_bits) {
-    (*has_bits)[0] |= 8u;
   }
   static void set_has_unknown_field_6(HasBits* has_bits) {
     (*has_bits)[0] |= 16u;
@@ -1365,7 +3619,7 @@ ListPlayersResponse::ListPlayersResponse(const ListPlayersResponse& from)
     , decltype(_impl_.unknown_field_1_){}
     , decltype(_impl_.page_index_){}
     , decltype(_impl_.page_count_){}
-    , decltype(_impl_.unknown_field_5_){}
+    , decltype(_impl_.online_count_){}
     , decltype(_impl_.unknown_field_6_){}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
@@ -1386,7 +3640,7 @@ inline void ListPlayersResponse::SharedCtor(
     , decltype(_impl_.unknown_field_1_){int64_t{0}}
     , decltype(_impl_.page_index_){int64_t{0}}
     , decltype(_impl_.page_count_){int64_t{0}}
-    , decltype(_impl_.unknown_field_5_){int64_t{0}}
+    , decltype(_impl_.online_count_){int64_t{0}}
     , decltype(_impl_.unknown_field_6_){int64_t{0}}
   };
 }
@@ -1473,11 +3727,11 @@ const char* ListPlayersResponse::_InternalParse(const char* ptr, ::_pbi::ParseCo
         } else
           goto handle_unusual;
         continue;
-      // optional int64 unknown_field_5 = 5;
+      // optional int64 online_count = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
-          _Internal::set_has_unknown_field_5(&has_bits);
-          _impl_.unknown_field_5_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _Internal::set_has_online_count(&has_bits);
+          _impl_.online_count_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -1548,10 +3802,10 @@ uint8_t* ListPlayersResponse::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteInt64ToArray(4, this->_internal_page_count(), target);
   }
 
-  // optional int64 unknown_field_5 = 5;
+  // optional int64 online_count = 5;
   if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt64ToArray(5, this->_internal_unknown_field_5(), target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(5, this->_internal_online_count(), target);
   }
 
   // optional int64 unknown_field_6 = 6;
@@ -1616,9 +3870,9 @@ size_t ListPlayersResponse::ByteSizeLong() const {
   }
 
   if (cached_has_bits & 0x00000018u) {
-    // optional int64 unknown_field_5 = 5;
+    // optional int64 online_count = 5;
     if (cached_has_bits & 0x00000008u) {
-      total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_unknown_field_5());
+      total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_online_count());
     }
 
     // optional int64 unknown_field_6 = 6;
@@ -1658,7 +3912,7 @@ void ListPlayersResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, co
       _this->_impl_.page_count_ = from._impl_.page_count_;
     }
     if (cached_has_bits & 0x00000008u) {
-      _this->_impl_.unknown_field_5_ = from._impl_.unknown_field_5_;
+      _this->_impl_.online_count_ = from._impl_.online_count_;
     }
     if (cached_has_bits & 0x00000010u) {
       _this->_impl_.unknown_field_6_ = from._impl_.unknown_field_6_;
@@ -1707,14 +3961,17 @@ class GetPlayerInfoRequest::_Internal {
  public:
   using HasBits = decltype(std::declval<GetPlayerInfoRequest>()._impl_._has_bits_);
   static void set_has_player_id(HasBits* has_bits) {
-    (*has_bits)[0] |= 2u;
+    (*has_bits)[0] |= 4u;
+  }
+  static void set_has_player_name(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
   }
   static const ::openfoxwq::InfoOptions& info_options(const GetPlayerInfoRequest* msg);
   static void set_has_info_options(HasBits* has_bits) {
-    (*has_bits)[0] |= 1u;
+    (*has_bits)[0] |= 2u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
+    return ((has_bits[0] & 0x00000002) ^ 0x00000002) != 0;
   }
 };
 
@@ -1734,10 +3991,19 @@ GetPlayerInfoRequest::GetPlayerInfoRequest(const GetPlayerInfoRequest& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.player_name_){}
     , decltype(_impl_.info_options_){nullptr}
     , decltype(_impl_.player_id_){}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _impl_.player_name_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.player_name_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (from._internal_has_player_name()) {
+    _this->_impl_.player_name_.Set(from._internal_player_name(), 
+      _this->GetArenaForAllocation());
+  }
   if (from._internal_has_info_options()) {
     _this->_impl_.info_options_ = new ::openfoxwq::InfoOptions(*from._impl_.info_options_);
   }
@@ -1752,9 +4018,14 @@ inline void GetPlayerInfoRequest::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.player_name_){}
     , decltype(_impl_.info_options_){nullptr}
     , decltype(_impl_.player_id_){int64_t{0}}
   };
+  _impl_.player_name_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.player_name_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 GetPlayerInfoRequest::~GetPlayerInfoRequest() {
@@ -1768,6 +4039,7 @@ GetPlayerInfoRequest::~GetPlayerInfoRequest() {
 
 inline void GetPlayerInfoRequest::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.player_name_.Destroy();
   if (this != internal_default_instance()) delete _impl_.info_options_;
 }
 
@@ -1782,9 +4054,14 @@ void GetPlayerInfoRequest::Clear() {
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000001u) {
-    GOOGLE_DCHECK(_impl_.info_options_ != nullptr);
-    _impl_.info_options_->Clear();
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      _impl_.player_name_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000002u) {
+      GOOGLE_DCHECK(_impl_.info_options_ != nullptr);
+      _impl_.info_options_->Clear();
+    }
   }
   _impl_.player_id_ = int64_t{0};
   _impl_._has_bits_.Clear();
@@ -1798,12 +4075,24 @@ const char* GetPlayerInfoRequest::_InternalParse(const char* ptr, ::_pbi::ParseC
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required int64 player_id = 1;
+      // optional int64 player_id = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_player_id(&has_bits);
           _impl_.player_id_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional string player_name = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
+          auto str = _internal_mutable_player_name();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+          #ifndef NDEBUG
+          ::_pbi::VerifyUTF8(str, "openfoxwq.GetPlayerInfoRequest.player_name");
+          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
@@ -1846,14 +4135,24 @@ uint8_t* GetPlayerInfoRequest::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required int64 player_id = 1;
-  if (cached_has_bits & 0x00000002u) {
+  // optional int64 player_id = 1;
+  if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteInt64ToArray(1, this->_internal_player_id(), target);
   }
 
-  // required .openfoxwq.InfoOptions info_options = 3;
+  // optional string player_name = 2;
   if (cached_has_bits & 0x00000001u) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->_internal_player_name().data(), static_cast<int>(this->_internal_player_name().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
+      "openfoxwq.GetPlayerInfoRequest.player_name");
+    target = stream->WriteStringMaybeAliased(
+        2, this->_internal_player_name(), target);
+  }
+
+  // required .openfoxwq.InfoOptions info_options = 3;
+  if (cached_has_bits & 0x00000002u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(3, _Internal::info_options(this),
         _Internal::info_options(this).GetCachedSize(), target, stream);
@@ -1867,43 +4166,32 @@ uint8_t* GetPlayerInfoRequest::_InternalSerialize(
   return target;
 }
 
-size_t GetPlayerInfoRequest::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:openfoxwq.GetPlayerInfoRequest)
-  size_t total_size = 0;
-
-  if (_internal_has_info_options()) {
-    // required .openfoxwq.InfoOptions info_options = 3;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.info_options_);
-  }
-
-  if (_internal_has_player_id()) {
-    // required int64 player_id = 1;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_player_id());
-  }
-
-  return total_size;
-}
 size_t GetPlayerInfoRequest::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:openfoxwq.GetPlayerInfoRequest)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required .openfoxwq.InfoOptions info_options = 3;
+  // required .openfoxwq.InfoOptions info_options = 3;
+  if (_internal_has_info_options()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.info_options_);
-
-    // required int64 player_id = 1;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_player_id());
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
+
+  // optional string player_name = 2;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_player_name());
+  }
+
+  // optional int64 player_id = 1;
+  if (cached_has_bits & 0x00000004u) {
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_player_id());
+  }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
@@ -1924,12 +4212,15 @@ void GetPlayerInfoRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, c
   (void) cached_has_bits;
 
   cached_has_bits = from._impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000003u) {
+  if (cached_has_bits & 0x00000007u) {
     if (cached_has_bits & 0x00000001u) {
+      _this->_internal_set_player_name(from._internal_player_name());
+    }
+    if (cached_has_bits & 0x00000002u) {
       _this->_internal_mutable_info_options()->::openfoxwq::InfoOptions::MergeFrom(
           from._internal_info_options());
     }
-    if (cached_has_bits & 0x00000002u) {
+    if (cached_has_bits & 0x00000004u) {
       _this->_impl_.player_id_ = from._impl_.player_id_;
     }
     _this->_impl_._has_bits_[0] |= cached_has_bits;
@@ -1954,8 +4245,14 @@ bool GetPlayerInfoRequest::IsInitialized() const {
 
 void GetPlayerInfoRequest::InternalSwap(GetPlayerInfoRequest* other) {
   using std::swap;
+  auto* lhs_arena = GetArenaForAllocation();
+  auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.player_name_, lhs_arena,
+      &other->_impl_.player_name_, rhs_arena
+  );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
       PROTOBUF_FIELD_OFFSET(GetPlayerInfoRequest, _impl_.player_id_)
       + sizeof(GetPlayerInfoRequest::_impl_.player_id_)
@@ -1984,20 +4281,14 @@ class GetPlayerInfoResponse_RegisterInfo::_Internal {
   static void set_has_name(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
-  static void set_has_member_since_unix_ts(HasBits* has_bits) {
-    (*has_bits)[0] |= 64u;
-  }
-  static void set_has_unknown_field_2(HasBits* has_bits) {
-    (*has_bits)[0] |= 8u;
-  }
-  static void set_has_unknown_field_3(HasBits* has_bits) {
+  static void set_has_country(HasBits* has_bits) {
     (*has_bits)[0] |= 16u;
   }
-  static void set_has_unknown_field_7(HasBits* has_bits) {
-    (*has_bits)[0] |= 32u;
+  static void set_has_member_since_unix_ts(HasBits* has_bits) {
+    (*has_bits)[0] |= 8u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x0000007f) ^ 0x0000007f) != 0;
+    return ((has_bits[0] & 0x0000001f) ^ 0x0000001f) != 0;
   }
 };
 
@@ -2016,10 +4307,8 @@ GetPlayerInfoResponse_RegisterInfo::GetPlayerInfoResponse_RegisterInfo(const Get
     , decltype(_impl_.name_native_){}
     , decltype(_impl_.name_){}
     , decltype(_impl_.player_id_){}
-    , decltype(_impl_.unknown_field_2_){}
-    , decltype(_impl_.unknown_field_3_){}
-    , decltype(_impl_.unknown_field_7_){}
-    , decltype(_impl_.member_since_unix_ts_){}};
+    , decltype(_impl_.member_since_unix_ts_){}
+    , decltype(_impl_.country_){}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   _impl_.name_native_.InitDefault();
@@ -2039,8 +4328,8 @@ GetPlayerInfoResponse_RegisterInfo::GetPlayerInfoResponse_RegisterInfo(const Get
       _this->GetArenaForAllocation());
   }
   ::memcpy(&_impl_.player_id_, &from._impl_.player_id_,
-    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.member_since_unix_ts_) -
-    reinterpret_cast<char*>(&_impl_.player_id_)) + sizeof(_impl_.member_since_unix_ts_));
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.country_) -
+    reinterpret_cast<char*>(&_impl_.player_id_)) + sizeof(_impl_.country_));
   // @@protoc_insertion_point(copy_constructor:openfoxwq.GetPlayerInfoResponse.RegisterInfo)
 }
 
@@ -2054,10 +4343,8 @@ inline void GetPlayerInfoResponse_RegisterInfo::SharedCtor(
     , decltype(_impl_.name_native_){}
     , decltype(_impl_.name_){}
     , decltype(_impl_.player_id_){int64_t{0}}
-    , decltype(_impl_.unknown_field_2_){int64_t{0}}
-    , decltype(_impl_.unknown_field_3_){int64_t{0}}
-    , decltype(_impl_.unknown_field_7_){int64_t{0}}
     , decltype(_impl_.member_since_unix_ts_){int64_t{0}}
+    , decltype(_impl_.country_){0}
   };
   _impl_.name_native_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2103,10 +4390,10 @@ void GetPlayerInfoResponse_RegisterInfo::Clear() {
       _impl_.name_.ClearNonDefaultToEmpty();
     }
   }
-  if (cached_has_bits & 0x0000007cu) {
+  if (cached_has_bits & 0x0000001cu) {
     ::memset(&_impl_.player_id_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&_impl_.member_since_unix_ts_) -
-        reinterpret_cast<char*>(&_impl_.player_id_)) + sizeof(_impl_.member_since_unix_ts_));
+        reinterpret_cast<char*>(&_impl_.country_) -
+        reinterpret_cast<char*>(&_impl_.player_id_)) + sizeof(_impl_.country_));
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
@@ -2124,24 +4411,6 @@ const char* GetPlayerInfoResponse_RegisterInfo::_InternalParse(const char* ptr, 
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_player_id(&has_bits);
           _impl_.player_id_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
-          CHK_(ptr);
-        } else
-          goto handle_unusual;
-        continue;
-      // required int64 unknown_field_2 = 2;
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
-          _Internal::set_has_unknown_field_2(&has_bits);
-          _impl_.unknown_field_2_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
-          CHK_(ptr);
-        } else
-          goto handle_unusual;
-        continue;
-      // required int64 unknown_field_3 = 3;
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
-          _Internal::set_has_unknown_field_3(&has_bits);
-          _impl_.unknown_field_3_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -2170,12 +4439,16 @@ const char* GetPlayerInfoResponse_RegisterInfo::_InternalParse(const char* ptr, 
         } else
           goto handle_unusual;
         continue;
-      // required int64 unknown_field_7 = 7;
+      // required .openfoxwq.Country country = 7;
       case 7:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 56)) {
-          _Internal::set_has_unknown_field_7(&has_bits);
-          _impl_.unknown_field_7_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
+          if (PROTOBUF_PREDICT_TRUE(::openfoxwq::Country_IsValid(val))) {
+            _internal_set_country(static_cast<::openfoxwq::Country>(val));
+          } else {
+            ::PROTOBUF_NAMESPACE_ID::internal::WriteVarint(7, val, mutable_unknown_fields());
+          }
         } else
           goto handle_unusual;
         continue;
@@ -2225,18 +4498,6 @@ uint8_t* GetPlayerInfoResponse_RegisterInfo::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteInt64ToArray(1, this->_internal_player_id(), target);
   }
 
-  // required int64 unknown_field_2 = 2;
-  if (cached_has_bits & 0x00000008u) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt64ToArray(2, this->_internal_unknown_field_2(), target);
-  }
-
-  // required int64 unknown_field_3 = 3;
-  if (cached_has_bits & 0x00000010u) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt64ToArray(3, this->_internal_unknown_field_3(), target);
-  }
-
   // required string name_native = 4;
   if (cached_has_bits & 0x00000001u) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
@@ -2257,14 +4518,15 @@ uint8_t* GetPlayerInfoResponse_RegisterInfo::_InternalSerialize(
         5, this->_internal_name(), target);
   }
 
-  // required int64 unknown_field_7 = 7;
-  if (cached_has_bits & 0x00000020u) {
+  // required .openfoxwq.Country country = 7;
+  if (cached_has_bits & 0x00000010u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt64ToArray(7, this->_internal_unknown_field_7(), target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      7, this->_internal_country(), target);
   }
 
   // required int64 member_since_unix_ts = 8;
-  if (cached_has_bits & 0x00000040u) {
+  if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteInt64ToArray(8, this->_internal_member_since_unix_ts(), target);
   }
@@ -2300,24 +4562,15 @@ size_t GetPlayerInfoResponse_RegisterInfo::RequiredFieldsByteSizeFallback() cons
     total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_player_id());
   }
 
-  if (_internal_has_unknown_field_2()) {
-    // required int64 unknown_field_2 = 2;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_unknown_field_2());
-  }
-
-  if (_internal_has_unknown_field_3()) {
-    // required int64 unknown_field_3 = 3;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_unknown_field_3());
-  }
-
-  if (_internal_has_unknown_field_7()) {
-    // required int64 unknown_field_7 = 7;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_unknown_field_7());
-  }
-
   if (_internal_has_member_since_unix_ts()) {
     // required int64 member_since_unix_ts = 8;
     total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_member_since_unix_ts());
+  }
+
+  if (_internal_has_country()) {
+    // required .openfoxwq.Country country = 7;
+    total_size += 1 +
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_country());
   }
 
   return total_size;
@@ -2326,7 +4579,7 @@ size_t GetPlayerInfoResponse_RegisterInfo::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:openfoxwq.GetPlayerInfoResponse.RegisterInfo)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x0000007f) ^ 0x0000007f) == 0) {  // All required fields are present.
+  if (((_impl_._has_bits_[0] & 0x0000001f) ^ 0x0000001f) == 0) {  // All required fields are present.
     // required string name_native = 4;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
@@ -2340,17 +4593,12 @@ size_t GetPlayerInfoResponse_RegisterInfo::ByteSizeLong() const {
     // required int64 player_id = 1;
     total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_player_id());
 
-    // required int64 unknown_field_2 = 2;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_unknown_field_2());
-
-    // required int64 unknown_field_3 = 3;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_unknown_field_3());
-
-    // required int64 unknown_field_7 = 7;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_unknown_field_7());
-
     // required int64 member_since_unix_ts = 8;
     total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_member_since_unix_ts());
+
+    // required .openfoxwq.Country country = 7;
+    total_size += 1 +
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_country());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -2378,7 +4626,7 @@ void GetPlayerInfoResponse_RegisterInfo::MergeImpl(::PROTOBUF_NAMESPACE_ID::Mess
   (void) cached_has_bits;
 
   cached_has_bits = from._impl_._has_bits_[0];
-  if (cached_has_bits & 0x0000007fu) {
+  if (cached_has_bits & 0x0000001fu) {
     if (cached_has_bits & 0x00000001u) {
       _this->_internal_set_name_native(from._internal_name_native());
     }
@@ -2389,16 +4637,10 @@ void GetPlayerInfoResponse_RegisterInfo::MergeImpl(::PROTOBUF_NAMESPACE_ID::Mess
       _this->_impl_.player_id_ = from._impl_.player_id_;
     }
     if (cached_has_bits & 0x00000008u) {
-      _this->_impl_.unknown_field_2_ = from._impl_.unknown_field_2_;
+      _this->_impl_.member_since_unix_ts_ = from._impl_.member_since_unix_ts_;
     }
     if (cached_has_bits & 0x00000010u) {
-      _this->_impl_.unknown_field_3_ = from._impl_.unknown_field_3_;
-    }
-    if (cached_has_bits & 0x00000020u) {
-      _this->_impl_.unknown_field_7_ = from._impl_.unknown_field_7_;
-    }
-    if (cached_has_bits & 0x00000040u) {
-      _this->_impl_.member_since_unix_ts_ = from._impl_.member_since_unix_ts_;
+      _this->_impl_.country_ = from._impl_.country_;
     }
     _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
@@ -2432,8 +4674,8 @@ void GetPlayerInfoResponse_RegisterInfo::InternalSwap(GetPlayerInfoResponse_Regi
       &other->_impl_.name_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(GetPlayerInfoResponse_RegisterInfo, _impl_.member_since_unix_ts_)
-      + sizeof(GetPlayerInfoResponse_RegisterInfo::_impl_.member_since_unix_ts_)
+      PROTOBUF_FIELD_OFFSET(GetPlayerInfoResponse_RegisterInfo, _impl_.country_)
+      + sizeof(GetPlayerInfoResponse_RegisterInfo::_impl_.country_)
       - PROTOBUF_FIELD_OFFSET(GetPlayerInfoResponse_RegisterInfo, _impl_.player_id_)>(
           reinterpret_cast<char*>(&_impl_.player_id_),
           reinterpret_cast<char*>(&other->_impl_.player_id_));
@@ -2447,25 +4689,3124 @@ void GetPlayerInfoResponse_RegisterInfo::InternalSwap(GetPlayerInfoResponse_Regi
 
 // ===================================================================
 
-class GetPlayerInfoResponse::_Internal {
+class GetPlayerInfoResponse_RecentRecord_Unknown1::_Internal {
  public:
-  using HasBits = decltype(std::declval<GetPlayerInfoResponse>()._impl_._has_bits_);
+};
+
+GetPlayerInfoResponse_RecentRecord_Unknown1::GetPlayerInfoResponse_RecentRecord_Unknown1(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase(arena, is_message_owned) {
+  // @@protoc_insertion_point(arena_constructor:openfoxwq.GetPlayerInfoResponse.RecentRecord.Unknown1)
+}
+GetPlayerInfoResponse_RecentRecord_Unknown1::GetPlayerInfoResponse_RecentRecord_Unknown1(const GetPlayerInfoResponse_RecentRecord_Unknown1& from)
+  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase() {
+  GetPlayerInfoResponse_RecentRecord_Unknown1* const _this = this; (void)_this;
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  // @@protoc_insertion_point(copy_constructor:openfoxwq.GetPlayerInfoResponse.RecentRecord.Unknown1)
+}
+
+
+
+
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData GetPlayerInfoResponse_RecentRecord_Unknown1::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl,
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl,
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetPlayerInfoResponse_RecentRecord_Unknown1::GetClassData() const { return &_class_data_; }
+
+
+
+
+
+
+
+::PROTOBUF_NAMESPACE_ID::Metadata GetPlayerInfoResponse_RecentRecord_Unknown1::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_proto_2fplay_2eproto_getter, &descriptor_table_proto_2fplay_2eproto_once,
+      file_level_metadata_proto_2fplay_2eproto[6]);
+}
+
+// ===================================================================
+
+class GetPlayerInfoResponse_RecentRecord::_Internal {
+ public:
+  using HasBits = decltype(std::declval<GetPlayerInfoResponse_RecentRecord>()._impl_._has_bits_);
+  static const ::openfoxwq::GetPlayerInfoResponse_RecentRecord_Unknown1& unknown_field_1(const GetPlayerInfoResponse_RecentRecord* msg);
+  static void set_has_unknown_field_1(HasBits* has_bits) {
+    (*has_bits)[0] |= 4u;
+  }
+  static void set_has_streak(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static void set_has_unknown_field_3(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+};
+
+const ::openfoxwq::GetPlayerInfoResponse_RecentRecord_Unknown1&
+GetPlayerInfoResponse_RecentRecord::_Internal::unknown_field_1(const GetPlayerInfoResponse_RecentRecord* msg) {
+  return *msg->_impl_.unknown_field_1_;
+}
+GetPlayerInfoResponse_RecentRecord::GetPlayerInfoResponse_RecentRecord(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:openfoxwq.GetPlayerInfoResponse.RecentRecord)
+}
+GetPlayerInfoResponse_RecentRecord::GetPlayerInfoResponse_RecentRecord(const GetPlayerInfoResponse_RecentRecord& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  GetPlayerInfoResponse_RecentRecord* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.streak_){}
+    , decltype(_impl_.unknown_field_3_){}
+    , decltype(_impl_.unknown_field_1_){nullptr}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _impl_.streak_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.streak_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (from._internal_has_streak()) {
+    _this->_impl_.streak_.Set(from._internal_streak(), 
+      _this->GetArenaForAllocation());
+  }
+  _impl_.unknown_field_3_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.unknown_field_3_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (from._internal_has_unknown_field_3()) {
+    _this->_impl_.unknown_field_3_.Set(from._internal_unknown_field_3(), 
+      _this->GetArenaForAllocation());
+  }
+  if (from._internal_has_unknown_field_1()) {
+    _this->_impl_.unknown_field_1_ = new ::openfoxwq::GetPlayerInfoResponse_RecentRecord_Unknown1(*from._impl_.unknown_field_1_);
+  }
+  // @@protoc_insertion_point(copy_constructor:openfoxwq.GetPlayerInfoResponse.RecentRecord)
+}
+
+inline void GetPlayerInfoResponse_RecentRecord::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.streak_){}
+    , decltype(_impl_.unknown_field_3_){}
+    , decltype(_impl_.unknown_field_1_){nullptr}
+  };
+  _impl_.streak_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.streak_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  _impl_.unknown_field_3_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.unknown_field_3_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+}
+
+GetPlayerInfoResponse_RecentRecord::~GetPlayerInfoResponse_RecentRecord() {
+  // @@protoc_insertion_point(destructor:openfoxwq.GetPlayerInfoResponse.RecentRecord)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void GetPlayerInfoResponse_RecentRecord::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.streak_.Destroy();
+  _impl_.unknown_field_3_.Destroy();
+  if (this != internal_default_instance()) delete _impl_.unknown_field_1_;
+}
+
+void GetPlayerInfoResponse_RecentRecord::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void GetPlayerInfoResponse_RecentRecord::Clear() {
+// @@protoc_insertion_point(message_clear_start:openfoxwq.GetPlayerInfoResponse.RecentRecord)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000007u) {
+    if (cached_has_bits & 0x00000001u) {
+      _impl_.streak_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _impl_.unknown_field_3_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000004u) {
+      GOOGLE_DCHECK(_impl_.unknown_field_1_ != nullptr);
+      _impl_.unknown_field_1_->Clear();
+    }
+  }
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* GetPlayerInfoResponse_RecentRecord::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // optional .openfoxwq.GetPlayerInfoResponse.RecentRecord.Unknown1 unknown_field_1 = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_unknown_field_1(), ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional string streak = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
+          auto str = _internal_mutable_streak();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+          #ifndef NDEBUG
+          ::_pbi::VerifyUTF8(str, "openfoxwq.GetPlayerInfoResponse.RecentRecord.streak");
+          #endif  // !NDEBUG
+        } else
+          goto handle_unusual;
+        continue;
+      // optional string unknown_field_3 = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
+          auto str = _internal_mutable_unknown_field_3();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+          #ifndef NDEBUG
+          ::_pbi::VerifyUTF8(str, "openfoxwq.GetPlayerInfoResponse.RecentRecord.unknown_field_3");
+          #endif  // !NDEBUG
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  _impl_._has_bits_.Or(has_bits);
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* GetPlayerInfoResponse_RecentRecord::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:openfoxwq.GetPlayerInfoResponse.RecentRecord)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  // optional .openfoxwq.GetPlayerInfoResponse.RecentRecord.Unknown1 unknown_field_1 = 1;
+  if (cached_has_bits & 0x00000004u) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::unknown_field_1(this),
+        _Internal::unknown_field_1(this).GetCachedSize(), target, stream);
+  }
+
+  // optional string streak = 2;
+  if (cached_has_bits & 0x00000001u) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->_internal_streak().data(), static_cast<int>(this->_internal_streak().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
+      "openfoxwq.GetPlayerInfoResponse.RecentRecord.streak");
+    target = stream->WriteStringMaybeAliased(
+        2, this->_internal_streak(), target);
+  }
+
+  // optional string unknown_field_3 = 3;
+  if (cached_has_bits & 0x00000002u) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->_internal_unknown_field_3().data(), static_cast<int>(this->_internal_unknown_field_3().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
+      "openfoxwq.GetPlayerInfoResponse.RecentRecord.unknown_field_3");
+    target = stream->WriteStringMaybeAliased(
+        3, this->_internal_unknown_field_3(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:openfoxwq.GetPlayerInfoResponse.RecentRecord)
+  return target;
+}
+
+size_t GetPlayerInfoResponse_RecentRecord::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:openfoxwq.GetPlayerInfoResponse.RecentRecord)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000007u) {
+    // optional string streak = 2;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+          this->_internal_streak());
+    }
+
+    // optional string unknown_field_3 = 3;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+          this->_internal_unknown_field_3());
+    }
+
+    // optional .openfoxwq.GetPlayerInfoResponse.RecentRecord.Unknown1 unknown_field_1 = 1;
+    if (cached_has_bits & 0x00000004u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+          *_impl_.unknown_field_1_);
+    }
+
+  }
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData GetPlayerInfoResponse_RecentRecord::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    GetPlayerInfoResponse_RecentRecord::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetPlayerInfoResponse_RecentRecord::GetClassData() const { return &_class_data_; }
+
+
+void GetPlayerInfoResponse_RecentRecord::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<GetPlayerInfoResponse_RecentRecord*>(&to_msg);
+  auto& from = static_cast<const GetPlayerInfoResponse_RecentRecord&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:openfoxwq.GetPlayerInfoResponse.RecentRecord)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000007u) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_set_streak(from._internal_streak());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_internal_set_unknown_field_3(from._internal_unknown_field_3());
+    }
+    if (cached_has_bits & 0x00000004u) {
+      _this->_internal_mutable_unknown_field_1()->::openfoxwq::GetPlayerInfoResponse_RecentRecord_Unknown1::MergeFrom(
+          from._internal_unknown_field_1());
+    }
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void GetPlayerInfoResponse_RecentRecord::CopyFrom(const GetPlayerInfoResponse_RecentRecord& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:openfoxwq.GetPlayerInfoResponse.RecentRecord)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool GetPlayerInfoResponse_RecentRecord::IsInitialized() const {
+  return true;
+}
+
+void GetPlayerInfoResponse_RecentRecord::InternalSwap(GetPlayerInfoResponse_RecentRecord* other) {
+  using std::swap;
+  auto* lhs_arena = GetArenaForAllocation();
+  auto* rhs_arena = other->GetArenaForAllocation();
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.streak_, lhs_arena,
+      &other->_impl_.streak_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.unknown_field_3_, lhs_arena,
+      &other->_impl_.unknown_field_3_, rhs_arena
+  );
+  swap(_impl_.unknown_field_1_, other->_impl_.unknown_field_1_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata GetPlayerInfoResponse_RecentRecord::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_proto_2fplay_2eproto_getter, &descriptor_table_proto_2fplay_2eproto_once,
+      file_level_metadata_proto_2fplay_2eproto[7]);
+}
+
+// ===================================================================
+
+class GetPlayerInfoResponse_OverallResults::_Internal {
+ public:
+  using HasBits = decltype(std::declval<GetPlayerInfoResponse_OverallResults>()._impl_._has_bits_);
+  static void set_has_rating(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static void set_has_wr(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static void set_has_stamina(HasBits* has_bits) {
+    (*has_bits)[0] |= 4u;
+  }
+};
+
+GetPlayerInfoResponse_OverallResults::GetPlayerInfoResponse_OverallResults(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:openfoxwq.GetPlayerInfoResponse.OverallResults)
+}
+GetPlayerInfoResponse_OverallResults::GetPlayerInfoResponse_OverallResults(const GetPlayerInfoResponse_OverallResults& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  GetPlayerInfoResponse_OverallResults* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.rating_){}
+    , decltype(_impl_.wr_){}
+    , decltype(_impl_.stamina_){}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::memcpy(&_impl_.rating_, &from._impl_.rating_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.stamina_) -
+    reinterpret_cast<char*>(&_impl_.rating_)) + sizeof(_impl_.stamina_));
+  // @@protoc_insertion_point(copy_constructor:openfoxwq.GetPlayerInfoResponse.OverallResults)
+}
+
+inline void GetPlayerInfoResponse_OverallResults::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.rating_){int64_t{0}}
+    , decltype(_impl_.wr_){int64_t{0}}
+    , decltype(_impl_.stamina_){int64_t{0}}
+  };
+}
+
+GetPlayerInfoResponse_OverallResults::~GetPlayerInfoResponse_OverallResults() {
+  // @@protoc_insertion_point(destructor:openfoxwq.GetPlayerInfoResponse.OverallResults)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void GetPlayerInfoResponse_OverallResults::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+}
+
+void GetPlayerInfoResponse_OverallResults::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void GetPlayerInfoResponse_OverallResults::Clear() {
+// @@protoc_insertion_point(message_clear_start:openfoxwq.GetPlayerInfoResponse.OverallResults)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000007u) {
+    ::memset(&_impl_.rating_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&_impl_.stamina_) -
+        reinterpret_cast<char*>(&_impl_.rating_)) + sizeof(_impl_.stamina_));
+  }
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* GetPlayerInfoResponse_OverallResults::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // optional int64 rating = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_rating(&has_bits);
+          _impl_.rating_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional int64 wr = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          _Internal::set_has_wr(&has_bits);
+          _impl_.wr_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional int64 stamina = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
+          _Internal::set_has_stamina(&has_bits);
+          _impl_.stamina_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  _impl_._has_bits_.Or(has_bits);
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* GetPlayerInfoResponse_OverallResults::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:openfoxwq.GetPlayerInfoResponse.OverallResults)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  // optional int64 rating = 1;
+  if (cached_has_bits & 0x00000001u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(1, this->_internal_rating(), target);
+  }
+
+  // optional int64 wr = 2;
+  if (cached_has_bits & 0x00000002u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(2, this->_internal_wr(), target);
+  }
+
+  // optional int64 stamina = 3;
+  if (cached_has_bits & 0x00000004u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(3, this->_internal_stamina(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:openfoxwq.GetPlayerInfoResponse.OverallResults)
+  return target;
+}
+
+size_t GetPlayerInfoResponse_OverallResults::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:openfoxwq.GetPlayerInfoResponse.OverallResults)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000007u) {
+    // optional int64 rating = 1;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_rating());
+    }
+
+    // optional int64 wr = 2;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_wr());
+    }
+
+    // optional int64 stamina = 3;
+    if (cached_has_bits & 0x00000004u) {
+      total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_stamina());
+    }
+
+  }
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData GetPlayerInfoResponse_OverallResults::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    GetPlayerInfoResponse_OverallResults::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetPlayerInfoResponse_OverallResults::GetClassData() const { return &_class_data_; }
+
+
+void GetPlayerInfoResponse_OverallResults::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<GetPlayerInfoResponse_OverallResults*>(&to_msg);
+  auto& from = static_cast<const GetPlayerInfoResponse_OverallResults&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:openfoxwq.GetPlayerInfoResponse.OverallResults)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000007u) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_impl_.rating_ = from._impl_.rating_;
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_impl_.wr_ = from._impl_.wr_;
+    }
+    if (cached_has_bits & 0x00000004u) {
+      _this->_impl_.stamina_ = from._impl_.stamina_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void GetPlayerInfoResponse_OverallResults::CopyFrom(const GetPlayerInfoResponse_OverallResults& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:openfoxwq.GetPlayerInfoResponse.OverallResults)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool GetPlayerInfoResponse_OverallResults::IsInitialized() const {
+  return true;
+}
+
+void GetPlayerInfoResponse_OverallResults::InternalSwap(GetPlayerInfoResponse_OverallResults* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(GetPlayerInfoResponse_OverallResults, _impl_.stamina_)
+      + sizeof(GetPlayerInfoResponse_OverallResults::_impl_.stamina_)
+      - PROTOBUF_FIELD_OFFSET(GetPlayerInfoResponse_OverallResults, _impl_.rating_)>(
+          reinterpret_cast<char*>(&_impl_.rating_),
+          reinterpret_cast<char*>(&other->_impl_.rating_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata GetPlayerInfoResponse_OverallResults::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_proto_2fplay_2eproto_getter, &descriptor_table_proto_2fplay_2eproto_once,
+      file_level_metadata_proto_2fplay_2eproto[8]);
+}
+
+// ===================================================================
+
+class GetPlayerInfoResponse_ProInfo::_Internal {
+ public:
+  using HasBits = decltype(std::declval<GetPlayerInfoResponse_ProInfo>()._impl_._has_bits_);
+  static void set_has_unknown_field_1(HasBits* has_bits) {
+    (*has_bits)[0] |= 4u;
+  }
+  static void set_has_unknown_field_2(HasBits* has_bits) {
+    (*has_bits)[0] |= 8u;
+  }
+  static void set_has_name1(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static void set_has_name2(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static void set_has_rank(HasBits* has_bits) {
+    (*has_bits)[0] |= 32u;
+  }
+  static void set_has_association(HasBits* has_bits) {
+    (*has_bits)[0] |= 16u;
+  }
+};
+
+GetPlayerInfoResponse_ProInfo::GetPlayerInfoResponse_ProInfo(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:openfoxwq.GetPlayerInfoResponse.ProInfo)
+}
+GetPlayerInfoResponse_ProInfo::GetPlayerInfoResponse_ProInfo(const GetPlayerInfoResponse_ProInfo& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  GetPlayerInfoResponse_ProInfo* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.name1_){}
+    , decltype(_impl_.name2_){}
+    , decltype(_impl_.unknown_field_1_){}
+    , decltype(_impl_.unknown_field_2_){}
+    , decltype(_impl_.association_){}
+    , decltype(_impl_.rank_){}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _impl_.name1_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.name1_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (from._internal_has_name1()) {
+    _this->_impl_.name1_.Set(from._internal_name1(), 
+      _this->GetArenaForAllocation());
+  }
+  _impl_.name2_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.name2_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (from._internal_has_name2()) {
+    _this->_impl_.name2_.Set(from._internal_name2(), 
+      _this->GetArenaForAllocation());
+  }
+  ::memcpy(&_impl_.unknown_field_1_, &from._impl_.unknown_field_1_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.rank_) -
+    reinterpret_cast<char*>(&_impl_.unknown_field_1_)) + sizeof(_impl_.rank_));
+  // @@protoc_insertion_point(copy_constructor:openfoxwq.GetPlayerInfoResponse.ProInfo)
+}
+
+inline void GetPlayerInfoResponse_ProInfo::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.name1_){}
+    , decltype(_impl_.name2_){}
+    , decltype(_impl_.unknown_field_1_){int64_t{0}}
+    , decltype(_impl_.unknown_field_2_){int64_t{0}}
+    , decltype(_impl_.association_){int64_t{0}}
+    , decltype(_impl_.rank_){0}
+  };
+  _impl_.name1_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.name1_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  _impl_.name2_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.name2_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+}
+
+GetPlayerInfoResponse_ProInfo::~GetPlayerInfoResponse_ProInfo() {
+  // @@protoc_insertion_point(destructor:openfoxwq.GetPlayerInfoResponse.ProInfo)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void GetPlayerInfoResponse_ProInfo::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.name1_.Destroy();
+  _impl_.name2_.Destroy();
+}
+
+void GetPlayerInfoResponse_ProInfo::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void GetPlayerInfoResponse_ProInfo::Clear() {
+// @@protoc_insertion_point(message_clear_start:openfoxwq.GetPlayerInfoResponse.ProInfo)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      _impl_.name1_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _impl_.name2_.ClearNonDefaultToEmpty();
+    }
+  }
+  if (cached_has_bits & 0x0000003cu) {
+    ::memset(&_impl_.unknown_field_1_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&_impl_.rank_) -
+        reinterpret_cast<char*>(&_impl_.unknown_field_1_)) + sizeof(_impl_.rank_));
+  }
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* GetPlayerInfoResponse_ProInfo::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // optional int64 unknown_field_1 = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_unknown_field_1(&has_bits);
+          _impl_.unknown_field_1_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional int64 unknown_field_2 = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          _Internal::set_has_unknown_field_2(&has_bits);
+          _impl_.unknown_field_2_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional string name1 = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
+          auto str = _internal_mutable_name1();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+          #ifndef NDEBUG
+          ::_pbi::VerifyUTF8(str, "openfoxwq.GetPlayerInfoResponse.ProInfo.name1");
+          #endif  // !NDEBUG
+        } else
+          goto handle_unusual;
+        continue;
+      // optional string name2 = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
+          auto str = _internal_mutable_name2();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+          #ifndef NDEBUG
+          ::_pbi::VerifyUTF8(str, "openfoxwq.GetPlayerInfoResponse.ProInfo.name2");
+          #endif  // !NDEBUG
+        } else
+          goto handle_unusual;
+        continue;
+      // optional .openfoxwq.Rank rank = 5;
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+          if (PROTOBUF_PREDICT_TRUE(::openfoxwq::Rank_IsValid(val))) {
+            _internal_set_rank(static_cast<::openfoxwq::Rank>(val));
+          } else {
+            ::PROTOBUF_NAMESPACE_ID::internal::WriteVarint(5, val, mutable_unknown_fields());
+          }
+        } else
+          goto handle_unusual;
+        continue;
+      // optional int64 association = 6;
+      case 6:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 48)) {
+          _Internal::set_has_association(&has_bits);
+          _impl_.association_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  _impl_._has_bits_.Or(has_bits);
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* GetPlayerInfoResponse_ProInfo::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:openfoxwq.GetPlayerInfoResponse.ProInfo)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  // optional int64 unknown_field_1 = 1;
+  if (cached_has_bits & 0x00000004u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(1, this->_internal_unknown_field_1(), target);
+  }
+
+  // optional int64 unknown_field_2 = 2;
+  if (cached_has_bits & 0x00000008u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(2, this->_internal_unknown_field_2(), target);
+  }
+
+  // optional string name1 = 3;
+  if (cached_has_bits & 0x00000001u) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->_internal_name1().data(), static_cast<int>(this->_internal_name1().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
+      "openfoxwq.GetPlayerInfoResponse.ProInfo.name1");
+    target = stream->WriteStringMaybeAliased(
+        3, this->_internal_name1(), target);
+  }
+
+  // optional string name2 = 4;
+  if (cached_has_bits & 0x00000002u) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->_internal_name2().data(), static_cast<int>(this->_internal_name2().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
+      "openfoxwq.GetPlayerInfoResponse.ProInfo.name2");
+    target = stream->WriteStringMaybeAliased(
+        4, this->_internal_name2(), target);
+  }
+
+  // optional .openfoxwq.Rank rank = 5;
+  if (cached_has_bits & 0x00000020u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      5, this->_internal_rank(), target);
+  }
+
+  // optional int64 association = 6;
+  if (cached_has_bits & 0x00000010u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(6, this->_internal_association(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:openfoxwq.GetPlayerInfoResponse.ProInfo)
+  return target;
+}
+
+size_t GetPlayerInfoResponse_ProInfo::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:openfoxwq.GetPlayerInfoResponse.ProInfo)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x0000003fu) {
+    // optional string name1 = 3;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+          this->_internal_name1());
+    }
+
+    // optional string name2 = 4;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+          this->_internal_name2());
+    }
+
+    // optional int64 unknown_field_1 = 1;
+    if (cached_has_bits & 0x00000004u) {
+      total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_unknown_field_1());
+    }
+
+    // optional int64 unknown_field_2 = 2;
+    if (cached_has_bits & 0x00000008u) {
+      total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_unknown_field_2());
+    }
+
+    // optional int64 association = 6;
+    if (cached_has_bits & 0x00000010u) {
+      total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_association());
+    }
+
+    // optional .openfoxwq.Rank rank = 5;
+    if (cached_has_bits & 0x00000020u) {
+      total_size += 1 +
+        ::_pbi::WireFormatLite::EnumSize(this->_internal_rank());
+    }
+
+  }
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData GetPlayerInfoResponse_ProInfo::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    GetPlayerInfoResponse_ProInfo::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetPlayerInfoResponse_ProInfo::GetClassData() const { return &_class_data_; }
+
+
+void GetPlayerInfoResponse_ProInfo::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<GetPlayerInfoResponse_ProInfo*>(&to_msg);
+  auto& from = static_cast<const GetPlayerInfoResponse_ProInfo&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:openfoxwq.GetPlayerInfoResponse.ProInfo)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x0000003fu) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_set_name1(from._internal_name1());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_internal_set_name2(from._internal_name2());
+    }
+    if (cached_has_bits & 0x00000004u) {
+      _this->_impl_.unknown_field_1_ = from._impl_.unknown_field_1_;
+    }
+    if (cached_has_bits & 0x00000008u) {
+      _this->_impl_.unknown_field_2_ = from._impl_.unknown_field_2_;
+    }
+    if (cached_has_bits & 0x00000010u) {
+      _this->_impl_.association_ = from._impl_.association_;
+    }
+    if (cached_has_bits & 0x00000020u) {
+      _this->_impl_.rank_ = from._impl_.rank_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void GetPlayerInfoResponse_ProInfo::CopyFrom(const GetPlayerInfoResponse_ProInfo& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:openfoxwq.GetPlayerInfoResponse.ProInfo)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool GetPlayerInfoResponse_ProInfo::IsInitialized() const {
+  return true;
+}
+
+void GetPlayerInfoResponse_ProInfo::InternalSwap(GetPlayerInfoResponse_ProInfo* other) {
+  using std::swap;
+  auto* lhs_arena = GetArenaForAllocation();
+  auto* rhs_arena = other->GetArenaForAllocation();
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.name1_, lhs_arena,
+      &other->_impl_.name1_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.name2_, lhs_arena,
+      &other->_impl_.name2_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(GetPlayerInfoResponse_ProInfo, _impl_.rank_)
+      + sizeof(GetPlayerInfoResponse_ProInfo::_impl_.rank_)
+      - PROTOBUF_FIELD_OFFSET(GetPlayerInfoResponse_ProInfo, _impl_.unknown_field_1_)>(
+          reinterpret_cast<char*>(&_impl_.unknown_field_1_),
+          reinterpret_cast<char*>(&other->_impl_.unknown_field_1_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata GetPlayerInfoResponse_ProInfo::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_proto_2fplay_2eproto_getter, &descriptor_table_proto_2fplay_2eproto_once,
+      file_level_metadata_proto_2fplay_2eproto[9]);
+}
+
+// ===================================================================
+
+class GetPlayerInfoResponse_PerformanceRecord::_Internal {
+ public:
+  using HasBits = decltype(std::declval<GetPlayerInfoResponse_PerformanceRecord>()._impl_._has_bits_);
+  static void set_has_rank(HasBits* has_bits) {
+    (*has_bits)[0] |= 8u;
+  }
+  static void set_has_wr(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static void set_has_stamina(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static void set_has_foxcoin(HasBits* has_bits) {
+    (*has_bits)[0] |= 4u;
+  }
+};
+
+GetPlayerInfoResponse_PerformanceRecord::GetPlayerInfoResponse_PerformanceRecord(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:openfoxwq.GetPlayerInfoResponse.PerformanceRecord)
+}
+GetPlayerInfoResponse_PerformanceRecord::GetPlayerInfoResponse_PerformanceRecord(const GetPlayerInfoResponse_PerformanceRecord& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  GetPlayerInfoResponse_PerformanceRecord* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.wr_){}
+    , decltype(_impl_.stamina_){}
+    , decltype(_impl_.foxcoin_){}
+    , decltype(_impl_.rank_){}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::memcpy(&_impl_.wr_, &from._impl_.wr_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.rank_) -
+    reinterpret_cast<char*>(&_impl_.wr_)) + sizeof(_impl_.rank_));
+  // @@protoc_insertion_point(copy_constructor:openfoxwq.GetPlayerInfoResponse.PerformanceRecord)
+}
+
+inline void GetPlayerInfoResponse_PerformanceRecord::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.wr_){int64_t{0}}
+    , decltype(_impl_.stamina_){int64_t{0}}
+    , decltype(_impl_.foxcoin_){int64_t{0}}
+    , decltype(_impl_.rank_){0}
+  };
+}
+
+GetPlayerInfoResponse_PerformanceRecord::~GetPlayerInfoResponse_PerformanceRecord() {
+  // @@protoc_insertion_point(destructor:openfoxwq.GetPlayerInfoResponse.PerformanceRecord)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void GetPlayerInfoResponse_PerformanceRecord::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+}
+
+void GetPlayerInfoResponse_PerformanceRecord::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void GetPlayerInfoResponse_PerformanceRecord::Clear() {
+// @@protoc_insertion_point(message_clear_start:openfoxwq.GetPlayerInfoResponse.PerformanceRecord)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x0000000fu) {
+    ::memset(&_impl_.wr_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&_impl_.rank_) -
+        reinterpret_cast<char*>(&_impl_.wr_)) + sizeof(_impl_.rank_));
+  }
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* GetPlayerInfoResponse_PerformanceRecord::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // optional .openfoxwq.Rank rank = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+          if (PROTOBUF_PREDICT_TRUE(::openfoxwq::Rank_IsValid(val))) {
+            _internal_set_rank(static_cast<::openfoxwq::Rank>(val));
+          } else {
+            ::PROTOBUF_NAMESPACE_ID::internal::WriteVarint(1, val, mutable_unknown_fields());
+          }
+        } else
+          goto handle_unusual;
+        continue;
+      // optional int64 wr = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          _Internal::set_has_wr(&has_bits);
+          _impl_.wr_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional int64 stamina = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
+          _Internal::set_has_stamina(&has_bits);
+          _impl_.stamina_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional int64 foxcoin = 5;
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
+          _Internal::set_has_foxcoin(&has_bits);
+          _impl_.foxcoin_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  _impl_._has_bits_.Or(has_bits);
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* GetPlayerInfoResponse_PerformanceRecord::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:openfoxwq.GetPlayerInfoResponse.PerformanceRecord)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  // optional .openfoxwq.Rank rank = 1;
+  if (cached_has_bits & 0x00000008u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      1, this->_internal_rank(), target);
+  }
+
+  // optional int64 wr = 2;
+  if (cached_has_bits & 0x00000001u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(2, this->_internal_wr(), target);
+  }
+
+  // optional int64 stamina = 3;
+  if (cached_has_bits & 0x00000002u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(3, this->_internal_stamina(), target);
+  }
+
+  // optional int64 foxcoin = 5;
+  if (cached_has_bits & 0x00000004u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(5, this->_internal_foxcoin(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:openfoxwq.GetPlayerInfoResponse.PerformanceRecord)
+  return target;
+}
+
+size_t GetPlayerInfoResponse_PerformanceRecord::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:openfoxwq.GetPlayerInfoResponse.PerformanceRecord)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x0000000fu) {
+    // optional int64 wr = 2;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_wr());
+    }
+
+    // optional int64 stamina = 3;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_stamina());
+    }
+
+    // optional int64 foxcoin = 5;
+    if (cached_has_bits & 0x00000004u) {
+      total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_foxcoin());
+    }
+
+    // optional .openfoxwq.Rank rank = 1;
+    if (cached_has_bits & 0x00000008u) {
+      total_size += 1 +
+        ::_pbi::WireFormatLite::EnumSize(this->_internal_rank());
+    }
+
+  }
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData GetPlayerInfoResponse_PerformanceRecord::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    GetPlayerInfoResponse_PerformanceRecord::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetPlayerInfoResponse_PerformanceRecord::GetClassData() const { return &_class_data_; }
+
+
+void GetPlayerInfoResponse_PerformanceRecord::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<GetPlayerInfoResponse_PerformanceRecord*>(&to_msg);
+  auto& from = static_cast<const GetPlayerInfoResponse_PerformanceRecord&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:openfoxwq.GetPlayerInfoResponse.PerformanceRecord)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x0000000fu) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_impl_.wr_ = from._impl_.wr_;
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_impl_.stamina_ = from._impl_.stamina_;
+    }
+    if (cached_has_bits & 0x00000004u) {
+      _this->_impl_.foxcoin_ = from._impl_.foxcoin_;
+    }
+    if (cached_has_bits & 0x00000008u) {
+      _this->_impl_.rank_ = from._impl_.rank_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void GetPlayerInfoResponse_PerformanceRecord::CopyFrom(const GetPlayerInfoResponse_PerformanceRecord& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:openfoxwq.GetPlayerInfoResponse.PerformanceRecord)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool GetPlayerInfoResponse_PerformanceRecord::IsInitialized() const {
+  return true;
+}
+
+void GetPlayerInfoResponse_PerformanceRecord::InternalSwap(GetPlayerInfoResponse_PerformanceRecord* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(GetPlayerInfoResponse_PerformanceRecord, _impl_.rank_)
+      + sizeof(GetPlayerInfoResponse_PerformanceRecord::_impl_.rank_)
+      - PROTOBUF_FIELD_OFFSET(GetPlayerInfoResponse_PerformanceRecord, _impl_.wr_)>(
+          reinterpret_cast<char*>(&_impl_.wr_),
+          reinterpret_cast<char*>(&other->_impl_.wr_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata GetPlayerInfoResponse_PerformanceRecord::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_proto_2fplay_2eproto_getter, &descriptor_table_proto_2fplay_2eproto_once,
+      file_level_metadata_proto_2fplay_2eproto[10]);
+}
+
+// ===================================================================
+
+class GetPlayerInfoResponse_Results::_Internal {
+ public:
+  using HasBits = decltype(std::declval<GetPlayerInfoResponse_Results>()._impl_._has_bits_);
+  static void set_has_type(HasBits* has_bits) {
+    (*has_bits)[0] |= 8u;
+  }
+  static void set_has_wins(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static void set_has_losses(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static void set_has_draws(HasBits* has_bits) {
+    (*has_bits)[0] |= 4u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x0000000f) ^ 0x0000000f) != 0;
+  }
+};
+
+GetPlayerInfoResponse_Results::GetPlayerInfoResponse_Results(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:openfoxwq.GetPlayerInfoResponse.Results)
+}
+GetPlayerInfoResponse_Results::GetPlayerInfoResponse_Results(const GetPlayerInfoResponse_Results& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  GetPlayerInfoResponse_Results* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.wins_){}
+    , decltype(_impl_.losses_){}
+    , decltype(_impl_.draws_){}
+    , decltype(_impl_.type_){}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::memcpy(&_impl_.wins_, &from._impl_.wins_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.type_) -
+    reinterpret_cast<char*>(&_impl_.wins_)) + sizeof(_impl_.type_));
+  // @@protoc_insertion_point(copy_constructor:openfoxwq.GetPlayerInfoResponse.Results)
+}
+
+inline void GetPlayerInfoResponse_Results::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.wins_){int64_t{0}}
+    , decltype(_impl_.losses_){int64_t{0}}
+    , decltype(_impl_.draws_){int64_t{0}}
+    , decltype(_impl_.type_){0}
+  };
+}
+
+GetPlayerInfoResponse_Results::~GetPlayerInfoResponse_Results() {
+  // @@protoc_insertion_point(destructor:openfoxwq.GetPlayerInfoResponse.Results)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void GetPlayerInfoResponse_Results::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+}
+
+void GetPlayerInfoResponse_Results::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void GetPlayerInfoResponse_Results::Clear() {
+// @@protoc_insertion_point(message_clear_start:openfoxwq.GetPlayerInfoResponse.Results)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x0000000fu) {
+    ::memset(&_impl_.wins_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&_impl_.type_) -
+        reinterpret_cast<char*>(&_impl_.wins_)) + sizeof(_impl_.type_));
+  }
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* GetPlayerInfoResponse_Results::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // required .openfoxwq.GetPlayerInfoResponse.ResultsType type = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+          if (PROTOBUF_PREDICT_TRUE(::openfoxwq::GetPlayerInfoResponse_ResultsType_IsValid(val))) {
+            _internal_set_type(static_cast<::openfoxwq::GetPlayerInfoResponse_ResultsType>(val));
+          } else {
+            ::PROTOBUF_NAMESPACE_ID::internal::WriteVarint(1, val, mutable_unknown_fields());
+          }
+        } else
+          goto handle_unusual;
+        continue;
+      // required int64 wins = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          _Internal::set_has_wins(&has_bits);
+          _impl_.wins_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // required int64 losses = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
+          _Internal::set_has_losses(&has_bits);
+          _impl_.losses_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // required int64 draws = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
+          _Internal::set_has_draws(&has_bits);
+          _impl_.draws_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  _impl_._has_bits_.Or(has_bits);
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* GetPlayerInfoResponse_Results::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:openfoxwq.GetPlayerInfoResponse.Results)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  // required .openfoxwq.GetPlayerInfoResponse.ResultsType type = 1;
+  if (cached_has_bits & 0x00000008u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      1, this->_internal_type(), target);
+  }
+
+  // required int64 wins = 2;
+  if (cached_has_bits & 0x00000001u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(2, this->_internal_wins(), target);
+  }
+
+  // required int64 losses = 3;
+  if (cached_has_bits & 0x00000002u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(3, this->_internal_losses(), target);
+  }
+
+  // required int64 draws = 4;
+  if (cached_has_bits & 0x00000004u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(4, this->_internal_draws(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:openfoxwq.GetPlayerInfoResponse.Results)
+  return target;
+}
+
+size_t GetPlayerInfoResponse_Results::RequiredFieldsByteSizeFallback() const {
+// @@protoc_insertion_point(required_fields_byte_size_fallback_start:openfoxwq.GetPlayerInfoResponse.Results)
+  size_t total_size = 0;
+
+  if (_internal_has_wins()) {
+    // required int64 wins = 2;
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_wins());
+  }
+
+  if (_internal_has_losses()) {
+    // required int64 losses = 3;
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_losses());
+  }
+
+  if (_internal_has_draws()) {
+    // required int64 draws = 4;
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_draws());
+  }
+
+  if (_internal_has_type()) {
+    // required .openfoxwq.GetPlayerInfoResponse.ResultsType type = 1;
+    total_size += 1 +
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_type());
+  }
+
+  return total_size;
+}
+size_t GetPlayerInfoResponse_Results::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:openfoxwq.GetPlayerInfoResponse.Results)
+  size_t total_size = 0;
+
+  if (((_impl_._has_bits_[0] & 0x0000000f) ^ 0x0000000f) == 0) {  // All required fields are present.
+    // required int64 wins = 2;
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_wins());
+
+    // required int64 losses = 3;
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_losses());
+
+    // required int64 draws = 4;
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_draws());
+
+    // required .openfoxwq.GetPlayerInfoResponse.ResultsType type = 1;
+    total_size += 1 +
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_type());
+
+  } else {
+    total_size += RequiredFieldsByteSizeFallback();
+  }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData GetPlayerInfoResponse_Results::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    GetPlayerInfoResponse_Results::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetPlayerInfoResponse_Results::GetClassData() const { return &_class_data_; }
+
+
+void GetPlayerInfoResponse_Results::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<GetPlayerInfoResponse_Results*>(&to_msg);
+  auto& from = static_cast<const GetPlayerInfoResponse_Results&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:openfoxwq.GetPlayerInfoResponse.Results)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x0000000fu) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_impl_.wins_ = from._impl_.wins_;
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_impl_.losses_ = from._impl_.losses_;
+    }
+    if (cached_has_bits & 0x00000004u) {
+      _this->_impl_.draws_ = from._impl_.draws_;
+    }
+    if (cached_has_bits & 0x00000008u) {
+      _this->_impl_.type_ = from._impl_.type_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void GetPlayerInfoResponse_Results::CopyFrom(const GetPlayerInfoResponse_Results& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:openfoxwq.GetPlayerInfoResponse.Results)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool GetPlayerInfoResponse_Results::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
+  return true;
+}
+
+void GetPlayerInfoResponse_Results::InternalSwap(GetPlayerInfoResponse_Results* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(GetPlayerInfoResponse_Results, _impl_.type_)
+      + sizeof(GetPlayerInfoResponse_Results::_impl_.type_)
+      - PROTOBUF_FIELD_OFFSET(GetPlayerInfoResponse_Results, _impl_.wins_)>(
+          reinterpret_cast<char*>(&_impl_.wins_),
+          reinterpret_cast<char*>(&other->_impl_.wins_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata GetPlayerInfoResponse_Results::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_proto_2fplay_2eproto_getter, &descriptor_table_proto_2fplay_2eproto_once,
+      file_level_metadata_proto_2fplay_2eproto[11]);
+}
+
+// ===================================================================
+
+class GetPlayerInfoResponse_Rooms_Room_ShortPlayerInfo::_Internal {
+ public:
+  using HasBits = decltype(std::declval<GetPlayerInfoResponse_Rooms_Room_ShortPlayerInfo>()._impl_._has_bits_);
   static void set_has_player_id(HasBits* has_bits) {
     (*has_bits)[0] |= 4u;
   }
-  static const ::openfoxwq::InfoOptions& info_options(const GetPlayerInfoResponse* msg);
-  static void set_has_info_options(HasBits* has_bits) {
+  static void set_has_rank(HasBits* has_bits) {
+    (*has_bits)[0] |= 8u;
+  }
+  static void set_has_country(HasBits* has_bits) {
+    (*has_bits)[0] |= 16u;
+  }
+  static void set_has_name4(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static void set_has_player_id_again(HasBits* has_bits) {
+  static void set_has_name5(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+};
+
+GetPlayerInfoResponse_Rooms_Room_ShortPlayerInfo::GetPlayerInfoResponse_Rooms_Room_ShortPlayerInfo(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:openfoxwq.GetPlayerInfoResponse.Rooms.Room.ShortPlayerInfo)
+}
+GetPlayerInfoResponse_Rooms_Room_ShortPlayerInfo::GetPlayerInfoResponse_Rooms_Room_ShortPlayerInfo(const GetPlayerInfoResponse_Rooms_Room_ShortPlayerInfo& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  GetPlayerInfoResponse_Rooms_Room_ShortPlayerInfo* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.name4_){}
+    , decltype(_impl_.name5_){}
+    , decltype(_impl_.player_id_){}
+    , decltype(_impl_.rank_){}
+    , decltype(_impl_.country_){}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _impl_.name4_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.name4_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (from._internal_has_name4()) {
+    _this->_impl_.name4_.Set(from._internal_name4(), 
+      _this->GetArenaForAllocation());
+  }
+  _impl_.name5_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.name5_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (from._internal_has_name5()) {
+    _this->_impl_.name5_.Set(from._internal_name5(), 
+      _this->GetArenaForAllocation());
+  }
+  ::memcpy(&_impl_.player_id_, &from._impl_.player_id_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.country_) -
+    reinterpret_cast<char*>(&_impl_.player_id_)) + sizeof(_impl_.country_));
+  // @@protoc_insertion_point(copy_constructor:openfoxwq.GetPlayerInfoResponse.Rooms.Room.ShortPlayerInfo)
+}
+
+inline void GetPlayerInfoResponse_Rooms_Room_ShortPlayerInfo::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.name4_){}
+    , decltype(_impl_.name5_){}
+    , decltype(_impl_.player_id_){int64_t{0}}
+    , decltype(_impl_.rank_){0}
+    , decltype(_impl_.country_){0}
+  };
+  _impl_.name4_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.name4_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  _impl_.name5_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.name5_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+}
+
+GetPlayerInfoResponse_Rooms_Room_ShortPlayerInfo::~GetPlayerInfoResponse_Rooms_Room_ShortPlayerInfo() {
+  // @@protoc_insertion_point(destructor:openfoxwq.GetPlayerInfoResponse.Rooms.Room.ShortPlayerInfo)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void GetPlayerInfoResponse_Rooms_Room_ShortPlayerInfo::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.name4_.Destroy();
+  _impl_.name5_.Destroy();
+}
+
+void GetPlayerInfoResponse_Rooms_Room_ShortPlayerInfo::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void GetPlayerInfoResponse_Rooms_Room_ShortPlayerInfo::Clear() {
+// @@protoc_insertion_point(message_clear_start:openfoxwq.GetPlayerInfoResponse.Rooms.Room.ShortPlayerInfo)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      _impl_.name4_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _impl_.name5_.ClearNonDefaultToEmpty();
+    }
+  }
+  if (cached_has_bits & 0x0000001cu) {
+    ::memset(&_impl_.player_id_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&_impl_.country_) -
+        reinterpret_cast<char*>(&_impl_.player_id_)) + sizeof(_impl_.country_));
+  }
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* GetPlayerInfoResponse_Rooms_Room_ShortPlayerInfo::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // optional int64 player_id = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_player_id(&has_bits);
+          _impl_.player_id_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional .openfoxwq.Rank rank = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+          if (PROTOBUF_PREDICT_TRUE(::openfoxwq::Rank_IsValid(val))) {
+            _internal_set_rank(static_cast<::openfoxwq::Rank>(val));
+          } else {
+            ::PROTOBUF_NAMESPACE_ID::internal::WriteVarint(2, val, mutable_unknown_fields());
+          }
+        } else
+          goto handle_unusual;
+        continue;
+      // optional .openfoxwq.Country country = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+          if (PROTOBUF_PREDICT_TRUE(::openfoxwq::Country_IsValid(val))) {
+            _internal_set_country(static_cast<::openfoxwq::Country>(val));
+          } else {
+            ::PROTOBUF_NAMESPACE_ID::internal::WriteVarint(3, val, mutable_unknown_fields());
+          }
+        } else
+          goto handle_unusual;
+        continue;
+      // optional string name4 = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
+          auto str = _internal_mutable_name4();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+          #ifndef NDEBUG
+          ::_pbi::VerifyUTF8(str, "openfoxwq.GetPlayerInfoResponse.Rooms.Room.ShortPlayerInfo.name4");
+          #endif  // !NDEBUG
+        } else
+          goto handle_unusual;
+        continue;
+      // optional string name5 = 5;
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
+          auto str = _internal_mutable_name5();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+          #ifndef NDEBUG
+          ::_pbi::VerifyUTF8(str, "openfoxwq.GetPlayerInfoResponse.Rooms.Room.ShortPlayerInfo.name5");
+          #endif  // !NDEBUG
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  _impl_._has_bits_.Or(has_bits);
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* GetPlayerInfoResponse_Rooms_Room_ShortPlayerInfo::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:openfoxwq.GetPlayerInfoResponse.Rooms.Room.ShortPlayerInfo)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  // optional int64 player_id = 1;
+  if (cached_has_bits & 0x00000004u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(1, this->_internal_player_id(), target);
+  }
+
+  // optional .openfoxwq.Rank rank = 2;
+  if (cached_has_bits & 0x00000008u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      2, this->_internal_rank(), target);
+  }
+
+  // optional .openfoxwq.Country country = 3;
+  if (cached_has_bits & 0x00000010u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      3, this->_internal_country(), target);
+  }
+
+  // optional string name4 = 4;
+  if (cached_has_bits & 0x00000001u) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->_internal_name4().data(), static_cast<int>(this->_internal_name4().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
+      "openfoxwq.GetPlayerInfoResponse.Rooms.Room.ShortPlayerInfo.name4");
+    target = stream->WriteStringMaybeAliased(
+        4, this->_internal_name4(), target);
+  }
+
+  // optional string name5 = 5;
+  if (cached_has_bits & 0x00000002u) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->_internal_name5().data(), static_cast<int>(this->_internal_name5().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
+      "openfoxwq.GetPlayerInfoResponse.Rooms.Room.ShortPlayerInfo.name5");
+    target = stream->WriteStringMaybeAliased(
+        5, this->_internal_name5(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:openfoxwq.GetPlayerInfoResponse.Rooms.Room.ShortPlayerInfo)
+  return target;
+}
+
+size_t GetPlayerInfoResponse_Rooms_Room_ShortPlayerInfo::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:openfoxwq.GetPlayerInfoResponse.Rooms.Room.ShortPlayerInfo)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x0000001fu) {
+    // optional string name4 = 4;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+          this->_internal_name4());
+    }
+
+    // optional string name5 = 5;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+          this->_internal_name5());
+    }
+
+    // optional int64 player_id = 1;
+    if (cached_has_bits & 0x00000004u) {
+      total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_player_id());
+    }
+
+    // optional .openfoxwq.Rank rank = 2;
+    if (cached_has_bits & 0x00000008u) {
+      total_size += 1 +
+        ::_pbi::WireFormatLite::EnumSize(this->_internal_rank());
+    }
+
+    // optional .openfoxwq.Country country = 3;
+    if (cached_has_bits & 0x00000010u) {
+      total_size += 1 +
+        ::_pbi::WireFormatLite::EnumSize(this->_internal_country());
+    }
+
+  }
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData GetPlayerInfoResponse_Rooms_Room_ShortPlayerInfo::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    GetPlayerInfoResponse_Rooms_Room_ShortPlayerInfo::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetPlayerInfoResponse_Rooms_Room_ShortPlayerInfo::GetClassData() const { return &_class_data_; }
+
+
+void GetPlayerInfoResponse_Rooms_Room_ShortPlayerInfo::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<GetPlayerInfoResponse_Rooms_Room_ShortPlayerInfo*>(&to_msg);
+  auto& from = static_cast<const GetPlayerInfoResponse_Rooms_Room_ShortPlayerInfo&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:openfoxwq.GetPlayerInfoResponse.Rooms.Room.ShortPlayerInfo)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x0000001fu) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_set_name4(from._internal_name4());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_internal_set_name5(from._internal_name5());
+    }
+    if (cached_has_bits & 0x00000004u) {
+      _this->_impl_.player_id_ = from._impl_.player_id_;
+    }
+    if (cached_has_bits & 0x00000008u) {
+      _this->_impl_.rank_ = from._impl_.rank_;
+    }
+    if (cached_has_bits & 0x00000010u) {
+      _this->_impl_.country_ = from._impl_.country_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void GetPlayerInfoResponse_Rooms_Room_ShortPlayerInfo::CopyFrom(const GetPlayerInfoResponse_Rooms_Room_ShortPlayerInfo& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:openfoxwq.GetPlayerInfoResponse.Rooms.Room.ShortPlayerInfo)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool GetPlayerInfoResponse_Rooms_Room_ShortPlayerInfo::IsInitialized() const {
+  return true;
+}
+
+void GetPlayerInfoResponse_Rooms_Room_ShortPlayerInfo::InternalSwap(GetPlayerInfoResponse_Rooms_Room_ShortPlayerInfo* other) {
+  using std::swap;
+  auto* lhs_arena = GetArenaForAllocation();
+  auto* rhs_arena = other->GetArenaForAllocation();
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.name4_, lhs_arena,
+      &other->_impl_.name4_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.name5_, lhs_arena,
+      &other->_impl_.name5_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(GetPlayerInfoResponse_Rooms_Room_ShortPlayerInfo, _impl_.country_)
+      + sizeof(GetPlayerInfoResponse_Rooms_Room_ShortPlayerInfo::_impl_.country_)
+      - PROTOBUF_FIELD_OFFSET(GetPlayerInfoResponse_Rooms_Room_ShortPlayerInfo, _impl_.player_id_)>(
+          reinterpret_cast<char*>(&_impl_.player_id_),
+          reinterpret_cast<char*>(&other->_impl_.player_id_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata GetPlayerInfoResponse_Rooms_Room_ShortPlayerInfo::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_proto_2fplay_2eproto_getter, &descriptor_table_proto_2fplay_2eproto_once,
+      file_level_metadata_proto_2fplay_2eproto[12]);
+}
+
+// ===================================================================
+
+class GetPlayerInfoResponse_Rooms_Room::_Internal {
+ public:
+  using HasBits = decltype(std::declval<GetPlayerInfoResponse_Rooms_Room>()._impl_._has_bits_);
+  static const ::openfoxwq::RoomId& id(const GetPlayerInfoResponse_Rooms_Room* msg);
+  static void set_has_id(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static void set_has_unknown_field_2(HasBits* has_bits) {
     (*has_bits)[0] |= 8u;
+  }
+  static const ::openfoxwq::GetPlayerInfoResponse_Rooms_Room_ShortPlayerInfo& player1(const GetPlayerInfoResponse_Rooms_Room* msg);
+  static void set_has_player1(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static const ::openfoxwq::GetPlayerInfoResponse_Rooms_Room_ShortPlayerInfo& player2(const GetPlayerInfoResponse_Rooms_Room* msg);
+  static void set_has_player2(HasBits* has_bits) {
+    (*has_bits)[0] |= 4u;
+  }
+};
+
+const ::openfoxwq::RoomId&
+GetPlayerInfoResponse_Rooms_Room::_Internal::id(const GetPlayerInfoResponse_Rooms_Room* msg) {
+  return *msg->_impl_.id_;
+}
+const ::openfoxwq::GetPlayerInfoResponse_Rooms_Room_ShortPlayerInfo&
+GetPlayerInfoResponse_Rooms_Room::_Internal::player1(const GetPlayerInfoResponse_Rooms_Room* msg) {
+  return *msg->_impl_.player1_;
+}
+const ::openfoxwq::GetPlayerInfoResponse_Rooms_Room_ShortPlayerInfo&
+GetPlayerInfoResponse_Rooms_Room::_Internal::player2(const GetPlayerInfoResponse_Rooms_Room* msg) {
+  return *msg->_impl_.player2_;
+}
+void GetPlayerInfoResponse_Rooms_Room::clear_id() {
+  if (_impl_.id_ != nullptr) _impl_.id_->Clear();
+  _impl_._has_bits_[0] &= ~0x00000001u;
+}
+GetPlayerInfoResponse_Rooms_Room::GetPlayerInfoResponse_Rooms_Room(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:openfoxwq.GetPlayerInfoResponse.Rooms.Room)
+}
+GetPlayerInfoResponse_Rooms_Room::GetPlayerInfoResponse_Rooms_Room(const GetPlayerInfoResponse_Rooms_Room& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  GetPlayerInfoResponse_Rooms_Room* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.id_){nullptr}
+    , decltype(_impl_.player1_){nullptr}
+    , decltype(_impl_.player2_){nullptr}
+    , decltype(_impl_.unknown_field_2_){}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_id()) {
+    _this->_impl_.id_ = new ::openfoxwq::RoomId(*from._impl_.id_);
+  }
+  if (from._internal_has_player1()) {
+    _this->_impl_.player1_ = new ::openfoxwq::GetPlayerInfoResponse_Rooms_Room_ShortPlayerInfo(*from._impl_.player1_);
+  }
+  if (from._internal_has_player2()) {
+    _this->_impl_.player2_ = new ::openfoxwq::GetPlayerInfoResponse_Rooms_Room_ShortPlayerInfo(*from._impl_.player2_);
+  }
+  _this->_impl_.unknown_field_2_ = from._impl_.unknown_field_2_;
+  // @@protoc_insertion_point(copy_constructor:openfoxwq.GetPlayerInfoResponse.Rooms.Room)
+}
+
+inline void GetPlayerInfoResponse_Rooms_Room::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.id_){nullptr}
+    , decltype(_impl_.player1_){nullptr}
+    , decltype(_impl_.player2_){nullptr}
+    , decltype(_impl_.unknown_field_2_){int64_t{0}}
+  };
+}
+
+GetPlayerInfoResponse_Rooms_Room::~GetPlayerInfoResponse_Rooms_Room() {
+  // @@protoc_insertion_point(destructor:openfoxwq.GetPlayerInfoResponse.Rooms.Room)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void GetPlayerInfoResponse_Rooms_Room::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.id_;
+  if (this != internal_default_instance()) delete _impl_.player1_;
+  if (this != internal_default_instance()) delete _impl_.player2_;
+}
+
+void GetPlayerInfoResponse_Rooms_Room::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void GetPlayerInfoResponse_Rooms_Room::Clear() {
+// @@protoc_insertion_point(message_clear_start:openfoxwq.GetPlayerInfoResponse.Rooms.Room)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000007u) {
+    if (cached_has_bits & 0x00000001u) {
+      GOOGLE_DCHECK(_impl_.id_ != nullptr);
+      _impl_.id_->Clear();
+    }
+    if (cached_has_bits & 0x00000002u) {
+      GOOGLE_DCHECK(_impl_.player1_ != nullptr);
+      _impl_.player1_->Clear();
+    }
+    if (cached_has_bits & 0x00000004u) {
+      GOOGLE_DCHECK(_impl_.player2_ != nullptr);
+      _impl_.player2_->Clear();
+    }
+  }
+  _impl_.unknown_field_2_ = int64_t{0};
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* GetPlayerInfoResponse_Rooms_Room::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // optional .openfoxwq.RoomId id = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_id(), ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional int64 unknown_field_2 = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          _Internal::set_has_unknown_field_2(&has_bits);
+          _impl_.unknown_field_2_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional .openfoxwq.GetPlayerInfoResponse.Rooms.Room.ShortPlayerInfo player1 = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
+          ptr = ctx->ParseMessage(_internal_mutable_player1(), ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional .openfoxwq.GetPlayerInfoResponse.Rooms.Room.ShortPlayerInfo player2 = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
+          ptr = ctx->ParseMessage(_internal_mutable_player2(), ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  _impl_._has_bits_.Or(has_bits);
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* GetPlayerInfoResponse_Rooms_Room::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:openfoxwq.GetPlayerInfoResponse.Rooms.Room)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  // optional .openfoxwq.RoomId id = 1;
+  if (cached_has_bits & 0x00000001u) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::id(this),
+        _Internal::id(this).GetCachedSize(), target, stream);
+  }
+
+  // optional int64 unknown_field_2 = 2;
+  if (cached_has_bits & 0x00000008u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(2, this->_internal_unknown_field_2(), target);
+  }
+
+  // optional .openfoxwq.GetPlayerInfoResponse.Rooms.Room.ShortPlayerInfo player1 = 3;
+  if (cached_has_bits & 0x00000002u) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(3, _Internal::player1(this),
+        _Internal::player1(this).GetCachedSize(), target, stream);
+  }
+
+  // optional .openfoxwq.GetPlayerInfoResponse.Rooms.Room.ShortPlayerInfo player2 = 4;
+  if (cached_has_bits & 0x00000004u) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(4, _Internal::player2(this),
+        _Internal::player2(this).GetCachedSize(), target, stream);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:openfoxwq.GetPlayerInfoResponse.Rooms.Room)
+  return target;
+}
+
+size_t GetPlayerInfoResponse_Rooms_Room::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:openfoxwq.GetPlayerInfoResponse.Rooms.Room)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x0000000fu) {
+    // optional .openfoxwq.RoomId id = 1;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+          *_impl_.id_);
+    }
+
+    // optional .openfoxwq.GetPlayerInfoResponse.Rooms.Room.ShortPlayerInfo player1 = 3;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+          *_impl_.player1_);
+    }
+
+    // optional .openfoxwq.GetPlayerInfoResponse.Rooms.Room.ShortPlayerInfo player2 = 4;
+    if (cached_has_bits & 0x00000004u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+          *_impl_.player2_);
+    }
+
+    // optional int64 unknown_field_2 = 2;
+    if (cached_has_bits & 0x00000008u) {
+      total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_unknown_field_2());
+    }
+
+  }
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData GetPlayerInfoResponse_Rooms_Room::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    GetPlayerInfoResponse_Rooms_Room::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetPlayerInfoResponse_Rooms_Room::GetClassData() const { return &_class_data_; }
+
+
+void GetPlayerInfoResponse_Rooms_Room::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<GetPlayerInfoResponse_Rooms_Room*>(&to_msg);
+  auto& from = static_cast<const GetPlayerInfoResponse_Rooms_Room&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:openfoxwq.GetPlayerInfoResponse.Rooms.Room)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x0000000fu) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_mutable_id()->::openfoxwq::RoomId::MergeFrom(
+          from._internal_id());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_internal_mutable_player1()->::openfoxwq::GetPlayerInfoResponse_Rooms_Room_ShortPlayerInfo::MergeFrom(
+          from._internal_player1());
+    }
+    if (cached_has_bits & 0x00000004u) {
+      _this->_internal_mutable_player2()->::openfoxwq::GetPlayerInfoResponse_Rooms_Room_ShortPlayerInfo::MergeFrom(
+          from._internal_player2());
+    }
+    if (cached_has_bits & 0x00000008u) {
+      _this->_impl_.unknown_field_2_ = from._impl_.unknown_field_2_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void GetPlayerInfoResponse_Rooms_Room::CopyFrom(const GetPlayerInfoResponse_Rooms_Room& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:openfoxwq.GetPlayerInfoResponse.Rooms.Room)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool GetPlayerInfoResponse_Rooms_Room::IsInitialized() const {
+  return true;
+}
+
+void GetPlayerInfoResponse_Rooms_Room::InternalSwap(GetPlayerInfoResponse_Rooms_Room* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(GetPlayerInfoResponse_Rooms_Room, _impl_.unknown_field_2_)
+      + sizeof(GetPlayerInfoResponse_Rooms_Room::_impl_.unknown_field_2_)
+      - PROTOBUF_FIELD_OFFSET(GetPlayerInfoResponse_Rooms_Room, _impl_.id_)>(
+          reinterpret_cast<char*>(&_impl_.id_),
+          reinterpret_cast<char*>(&other->_impl_.id_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata GetPlayerInfoResponse_Rooms_Room::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_proto_2fplay_2eproto_getter, &descriptor_table_proto_2fplay_2eproto_once,
+      file_level_metadata_proto_2fplay_2eproto[13]);
+}
+
+// ===================================================================
+
+class GetPlayerInfoResponse_Rooms::_Internal {
+ public:
+  using HasBits = decltype(std::declval<GetPlayerInfoResponse_Rooms>()._impl_._has_bits_);
+  static void set_has_unknown_field_2(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static void set_has_unknown_field_3(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static void set_has_unknown_field_4(HasBits* has_bits) {
+    (*has_bits)[0] |= 4u;
+  }
+};
+
+GetPlayerInfoResponse_Rooms::GetPlayerInfoResponse_Rooms(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:openfoxwq.GetPlayerInfoResponse.Rooms)
+}
+GetPlayerInfoResponse_Rooms::GetPlayerInfoResponse_Rooms(const GetPlayerInfoResponse_Rooms& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  GetPlayerInfoResponse_Rooms* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.rooms_){from._impl_.rooms_}
+    , decltype(_impl_.unknown_field_2_){}
+    , decltype(_impl_.unknown_field_3_){}
+    , decltype(_impl_.unknown_field_4_){}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::memcpy(&_impl_.unknown_field_2_, &from._impl_.unknown_field_2_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.unknown_field_4_) -
+    reinterpret_cast<char*>(&_impl_.unknown_field_2_)) + sizeof(_impl_.unknown_field_4_));
+  // @@protoc_insertion_point(copy_constructor:openfoxwq.GetPlayerInfoResponse.Rooms)
+}
+
+inline void GetPlayerInfoResponse_Rooms::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.rooms_){arena}
+    , decltype(_impl_.unknown_field_2_){int64_t{0}}
+    , decltype(_impl_.unknown_field_3_){int64_t{0}}
+    , decltype(_impl_.unknown_field_4_){int64_t{0}}
+  };
+}
+
+GetPlayerInfoResponse_Rooms::~GetPlayerInfoResponse_Rooms() {
+  // @@protoc_insertion_point(destructor:openfoxwq.GetPlayerInfoResponse.Rooms)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void GetPlayerInfoResponse_Rooms::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.rooms_.~RepeatedPtrField();
+}
+
+void GetPlayerInfoResponse_Rooms::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void GetPlayerInfoResponse_Rooms::Clear() {
+// @@protoc_insertion_point(message_clear_start:openfoxwq.GetPlayerInfoResponse.Rooms)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _impl_.rooms_.Clear();
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000007u) {
+    ::memset(&_impl_.unknown_field_2_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&_impl_.unknown_field_4_) -
+        reinterpret_cast<char*>(&_impl_.unknown_field_2_)) + sizeof(_impl_.unknown_field_4_));
+  }
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* GetPlayerInfoResponse_Rooms::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // repeated .openfoxwq.GetPlayerInfoResponse.Rooms.Room rooms = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            ptr = ctx->ParseMessage(_internal_add_rooms(), ptr);
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<10>(ptr));
+        } else
+          goto handle_unusual;
+        continue;
+      // optional int64 unknown_field_2 = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          _Internal::set_has_unknown_field_2(&has_bits);
+          _impl_.unknown_field_2_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional int64 unknown_field_3 = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
+          _Internal::set_has_unknown_field_3(&has_bits);
+          _impl_.unknown_field_3_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional int64 unknown_field_4 = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
+          _Internal::set_has_unknown_field_4(&has_bits);
+          _impl_.unknown_field_4_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  _impl_._has_bits_.Or(has_bits);
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* GetPlayerInfoResponse_Rooms::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:openfoxwq.GetPlayerInfoResponse.Rooms)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // repeated .openfoxwq.GetPlayerInfoResponse.Rooms.Room rooms = 1;
+  for (unsigned i = 0,
+      n = static_cast<unsigned>(this->_internal_rooms_size()); i < n; i++) {
+    const auto& repfield = this->_internal_rooms(i);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+        InternalWriteMessage(1, repfield, repfield.GetCachedSize(), target, stream);
+  }
+
+  cached_has_bits = _impl_._has_bits_[0];
+  // optional int64 unknown_field_2 = 2;
+  if (cached_has_bits & 0x00000001u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(2, this->_internal_unknown_field_2(), target);
+  }
+
+  // optional int64 unknown_field_3 = 3;
+  if (cached_has_bits & 0x00000002u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(3, this->_internal_unknown_field_3(), target);
+  }
+
+  // optional int64 unknown_field_4 = 4;
+  if (cached_has_bits & 0x00000004u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(4, this->_internal_unknown_field_4(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:openfoxwq.GetPlayerInfoResponse.Rooms)
+  return target;
+}
+
+size_t GetPlayerInfoResponse_Rooms::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:openfoxwq.GetPlayerInfoResponse.Rooms)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // repeated .openfoxwq.GetPlayerInfoResponse.Rooms.Room rooms = 1;
+  total_size += 1UL * this->_internal_rooms_size();
+  for (const auto& msg : this->_impl_.rooms_) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
+  }
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000007u) {
+    // optional int64 unknown_field_2 = 2;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_unknown_field_2());
+    }
+
+    // optional int64 unknown_field_3 = 3;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_unknown_field_3());
+    }
+
+    // optional int64 unknown_field_4 = 4;
+    if (cached_has_bits & 0x00000004u) {
+      total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_unknown_field_4());
+    }
+
+  }
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData GetPlayerInfoResponse_Rooms::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    GetPlayerInfoResponse_Rooms::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetPlayerInfoResponse_Rooms::GetClassData() const { return &_class_data_; }
+
+
+void GetPlayerInfoResponse_Rooms::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<GetPlayerInfoResponse_Rooms*>(&to_msg);
+  auto& from = static_cast<const GetPlayerInfoResponse_Rooms&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:openfoxwq.GetPlayerInfoResponse.Rooms)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  _this->_impl_.rooms_.MergeFrom(from._impl_.rooms_);
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000007u) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_impl_.unknown_field_2_ = from._impl_.unknown_field_2_;
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_impl_.unknown_field_3_ = from._impl_.unknown_field_3_;
+    }
+    if (cached_has_bits & 0x00000004u) {
+      _this->_impl_.unknown_field_4_ = from._impl_.unknown_field_4_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void GetPlayerInfoResponse_Rooms::CopyFrom(const GetPlayerInfoResponse_Rooms& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:openfoxwq.GetPlayerInfoResponse.Rooms)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool GetPlayerInfoResponse_Rooms::IsInitialized() const {
+  return true;
+}
+
+void GetPlayerInfoResponse_Rooms::InternalSwap(GetPlayerInfoResponse_Rooms* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  _impl_.rooms_.InternalSwap(&other->_impl_.rooms_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(GetPlayerInfoResponse_Rooms, _impl_.unknown_field_4_)
+      + sizeof(GetPlayerInfoResponse_Rooms::_impl_.unknown_field_4_)
+      - PROTOBUF_FIELD_OFFSET(GetPlayerInfoResponse_Rooms, _impl_.unknown_field_2_)>(
+          reinterpret_cast<char*>(&_impl_.unknown_field_2_),
+          reinterpret_cast<char*>(&other->_impl_.unknown_field_2_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata GetPlayerInfoResponse_Rooms::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_proto_2fplay_2eproto_getter, &descriptor_table_proto_2fplay_2eproto_once,
+      file_level_metadata_proto_2fplay_2eproto[14]);
+}
+
+// ===================================================================
+
+class GetPlayerInfoResponse_AdditionalInfo::_Internal {
+ public:
+  using HasBits = decltype(std::declval<GetPlayerInfoResponse_AdditionalInfo>()._impl_._has_bits_);
+  static void set_has_unknown_field_1(HasBits* has_bits) {
+    (*has_bits)[0] |= 4u;
+  }
+  static void set_has_unknown_field_2(HasBits* has_bits) {
+    (*has_bits)[0] |= 8u;
+  }
+  static void set_has_unknown_field_3(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static void set_has_unknown_field_4(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+};
+
+GetPlayerInfoResponse_AdditionalInfo::GetPlayerInfoResponse_AdditionalInfo(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:openfoxwq.GetPlayerInfoResponse.AdditionalInfo)
+}
+GetPlayerInfoResponse_AdditionalInfo::GetPlayerInfoResponse_AdditionalInfo(const GetPlayerInfoResponse_AdditionalInfo& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  GetPlayerInfoResponse_AdditionalInfo* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.unknown_field_3_){}
+    , decltype(_impl_.unknown_field_4_){}
+    , decltype(_impl_.unknown_field_1_){}
+    , decltype(_impl_.unknown_field_2_){}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _impl_.unknown_field_3_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.unknown_field_3_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (from._internal_has_unknown_field_3()) {
+    _this->_impl_.unknown_field_3_.Set(from._internal_unknown_field_3(), 
+      _this->GetArenaForAllocation());
+  }
+  _impl_.unknown_field_4_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.unknown_field_4_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (from._internal_has_unknown_field_4()) {
+    _this->_impl_.unknown_field_4_.Set(from._internal_unknown_field_4(), 
+      _this->GetArenaForAllocation());
+  }
+  ::memcpy(&_impl_.unknown_field_1_, &from._impl_.unknown_field_1_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.unknown_field_2_) -
+    reinterpret_cast<char*>(&_impl_.unknown_field_1_)) + sizeof(_impl_.unknown_field_2_));
+  // @@protoc_insertion_point(copy_constructor:openfoxwq.GetPlayerInfoResponse.AdditionalInfo)
+}
+
+inline void GetPlayerInfoResponse_AdditionalInfo::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.unknown_field_3_){}
+    , decltype(_impl_.unknown_field_4_){}
+    , decltype(_impl_.unknown_field_1_){int64_t{0}}
+    , decltype(_impl_.unknown_field_2_){int64_t{0}}
+  };
+  _impl_.unknown_field_3_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.unknown_field_3_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  _impl_.unknown_field_4_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.unknown_field_4_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+}
+
+GetPlayerInfoResponse_AdditionalInfo::~GetPlayerInfoResponse_AdditionalInfo() {
+  // @@protoc_insertion_point(destructor:openfoxwq.GetPlayerInfoResponse.AdditionalInfo)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void GetPlayerInfoResponse_AdditionalInfo::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.unknown_field_3_.Destroy();
+  _impl_.unknown_field_4_.Destroy();
+}
+
+void GetPlayerInfoResponse_AdditionalInfo::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void GetPlayerInfoResponse_AdditionalInfo::Clear() {
+// @@protoc_insertion_point(message_clear_start:openfoxwq.GetPlayerInfoResponse.AdditionalInfo)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      _impl_.unknown_field_3_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _impl_.unknown_field_4_.ClearNonDefaultToEmpty();
+    }
+  }
+  if (cached_has_bits & 0x0000000cu) {
+    ::memset(&_impl_.unknown_field_1_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&_impl_.unknown_field_2_) -
+        reinterpret_cast<char*>(&_impl_.unknown_field_1_)) + sizeof(_impl_.unknown_field_2_));
+  }
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* GetPlayerInfoResponse_AdditionalInfo::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // optional int64 unknown_field_1 = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_unknown_field_1(&has_bits);
+          _impl_.unknown_field_1_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional int64 unknown_field_2 = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          _Internal::set_has_unknown_field_2(&has_bits);
+          _impl_.unknown_field_2_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional string unknown_field_3 = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
+          auto str = _internal_mutable_unknown_field_3();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+          #ifndef NDEBUG
+          ::_pbi::VerifyUTF8(str, "openfoxwq.GetPlayerInfoResponse.AdditionalInfo.unknown_field_3");
+          #endif  // !NDEBUG
+        } else
+          goto handle_unusual;
+        continue;
+      // optional string unknown_field_4 = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
+          auto str = _internal_mutable_unknown_field_4();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+          #ifndef NDEBUG
+          ::_pbi::VerifyUTF8(str, "openfoxwq.GetPlayerInfoResponse.AdditionalInfo.unknown_field_4");
+          #endif  // !NDEBUG
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  _impl_._has_bits_.Or(has_bits);
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* GetPlayerInfoResponse_AdditionalInfo::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:openfoxwq.GetPlayerInfoResponse.AdditionalInfo)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  // optional int64 unknown_field_1 = 1;
+  if (cached_has_bits & 0x00000004u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(1, this->_internal_unknown_field_1(), target);
+  }
+
+  // optional int64 unknown_field_2 = 2;
+  if (cached_has_bits & 0x00000008u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(2, this->_internal_unknown_field_2(), target);
+  }
+
+  // optional string unknown_field_3 = 3;
+  if (cached_has_bits & 0x00000001u) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->_internal_unknown_field_3().data(), static_cast<int>(this->_internal_unknown_field_3().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
+      "openfoxwq.GetPlayerInfoResponse.AdditionalInfo.unknown_field_3");
+    target = stream->WriteStringMaybeAliased(
+        3, this->_internal_unknown_field_3(), target);
+  }
+
+  // optional string unknown_field_4 = 4;
+  if (cached_has_bits & 0x00000002u) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->_internal_unknown_field_4().data(), static_cast<int>(this->_internal_unknown_field_4().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
+      "openfoxwq.GetPlayerInfoResponse.AdditionalInfo.unknown_field_4");
+    target = stream->WriteStringMaybeAliased(
+        4, this->_internal_unknown_field_4(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:openfoxwq.GetPlayerInfoResponse.AdditionalInfo)
+  return target;
+}
+
+size_t GetPlayerInfoResponse_AdditionalInfo::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:openfoxwq.GetPlayerInfoResponse.AdditionalInfo)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x0000000fu) {
+    // optional string unknown_field_3 = 3;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+          this->_internal_unknown_field_3());
+    }
+
+    // optional string unknown_field_4 = 4;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+          this->_internal_unknown_field_4());
+    }
+
+    // optional int64 unknown_field_1 = 1;
+    if (cached_has_bits & 0x00000004u) {
+      total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_unknown_field_1());
+    }
+
+    // optional int64 unknown_field_2 = 2;
+    if (cached_has_bits & 0x00000008u) {
+      total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_unknown_field_2());
+    }
+
+  }
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData GetPlayerInfoResponse_AdditionalInfo::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    GetPlayerInfoResponse_AdditionalInfo::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetPlayerInfoResponse_AdditionalInfo::GetClassData() const { return &_class_data_; }
+
+
+void GetPlayerInfoResponse_AdditionalInfo::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<GetPlayerInfoResponse_AdditionalInfo*>(&to_msg);
+  auto& from = static_cast<const GetPlayerInfoResponse_AdditionalInfo&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:openfoxwq.GetPlayerInfoResponse.AdditionalInfo)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x0000000fu) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_set_unknown_field_3(from._internal_unknown_field_3());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_internal_set_unknown_field_4(from._internal_unknown_field_4());
+    }
+    if (cached_has_bits & 0x00000004u) {
+      _this->_impl_.unknown_field_1_ = from._impl_.unknown_field_1_;
+    }
+    if (cached_has_bits & 0x00000008u) {
+      _this->_impl_.unknown_field_2_ = from._impl_.unknown_field_2_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void GetPlayerInfoResponse_AdditionalInfo::CopyFrom(const GetPlayerInfoResponse_AdditionalInfo& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:openfoxwq.GetPlayerInfoResponse.AdditionalInfo)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool GetPlayerInfoResponse_AdditionalInfo::IsInitialized() const {
+  return true;
+}
+
+void GetPlayerInfoResponse_AdditionalInfo::InternalSwap(GetPlayerInfoResponse_AdditionalInfo* other) {
+  using std::swap;
+  auto* lhs_arena = GetArenaForAllocation();
+  auto* rhs_arena = other->GetArenaForAllocation();
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.unknown_field_3_, lhs_arena,
+      &other->_impl_.unknown_field_3_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.unknown_field_4_, lhs_arena,
+      &other->_impl_.unknown_field_4_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(GetPlayerInfoResponse_AdditionalInfo, _impl_.unknown_field_2_)
+      + sizeof(GetPlayerInfoResponse_AdditionalInfo::_impl_.unknown_field_2_)
+      - PROTOBUF_FIELD_OFFSET(GetPlayerInfoResponse_AdditionalInfo, _impl_.unknown_field_1_)>(
+          reinterpret_cast<char*>(&_impl_.unknown_field_1_),
+          reinterpret_cast<char*>(&other->_impl_.unknown_field_1_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata GetPlayerInfoResponse_AdditionalInfo::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_proto_2fplay_2eproto_getter, &descriptor_table_proto_2fplay_2eproto_once,
+      file_level_metadata_proto_2fplay_2eproto[15]);
+}
+
+// ===================================================================
+
+class GetPlayerInfoResponse::_Internal {
+ public:
+  using HasBits = decltype(std::declval<GetPlayerInfoResponse>()._impl_._has_bits_);
+  static void set_has_error_code(HasBits* has_bits) {
+    (*has_bits)[0] |= 512u;
+  }
+  static const ::openfoxwq::InfoOptions& info_options(const GetPlayerInfoResponse* msg);
+  static void set_has_info_options(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static void set_has_seached_player_id(HasBits* has_bits) {
+    (*has_bits)[0] |= 1024u;
+  }
+  static void set_has_searched_player_name(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static void set_has_player_id(HasBits* has_bits) {
+    (*has_bits)[0] |= 2048u;
+  }
+  static void set_has_foxcoin(HasBits* has_bits) {
+    (*has_bits)[0] |= 4096u;
+  }
+  static void set_has_rank(HasBits* has_bits) {
+    (*has_bits)[0] |= 8192u;
   }
   static const ::openfoxwq::GetPlayerInfoResponse_RegisterInfo& register_info(const GetPlayerInfoResponse* msg);
   static void set_has_register_info(HasBits* has_bits) {
-    (*has_bits)[0] |= 2u;
+    (*has_bits)[0] |= 4u;
+  }
+  static const ::openfoxwq::GetPlayerInfoResponse_RecentRecord& recent_record(const GetPlayerInfoResponse* msg);
+  static void set_has_recent_record(HasBits* has_bits) {
+    (*has_bits)[0] |= 8u;
+  }
+  static const ::openfoxwq::GetPlayerInfoResponse_OverallResults& overall_results(const GetPlayerInfoResponse* msg);
+  static void set_has_overall_results(HasBits* has_bits) {
+    (*has_bits)[0] |= 16u;
+  }
+  static const ::openfoxwq::GetPlayerInfoResponse_ProInfo& pro_info(const GetPlayerInfoResponse* msg);
+  static void set_has_pro_info(HasBits* has_bits) {
+    (*has_bits)[0] |= 32u;
+  }
+  static const ::openfoxwq::GetPlayerInfoResponse_PerformanceRecord& perf_record(const GetPlayerInfoResponse* msg);
+  static void set_has_perf_record(HasBits* has_bits) {
+    (*has_bits)[0] |= 64u;
+  }
+  static const ::openfoxwq::GetPlayerInfoResponse_Rooms& rooms(const GetPlayerInfoResponse* msg);
+  static void set_has_rooms(HasBits* has_bits) {
+    (*has_bits)[0] |= 128u;
+  }
+  static const ::openfoxwq::GetPlayerInfoResponse_AdditionalInfo& additional_info(const GetPlayerInfoResponse* msg);
+  static void set_has_additional_info(HasBits* has_bits) {
+    (*has_bits)[0] |= 256u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x0000000d) ^ 0x0000000d) != 0;
+    return ((has_bits[0] & 0x00000202) ^ 0x00000202) != 0;
   }
 };
 
@@ -2477,8 +7818,29 @@ const ::openfoxwq::GetPlayerInfoResponse_RegisterInfo&
 GetPlayerInfoResponse::_Internal::register_info(const GetPlayerInfoResponse* msg) {
   return *msg->_impl_.register_info_;
 }
-void GetPlayerInfoResponse::clear_game_results() {
-  _impl_.game_results_.Clear();
+const ::openfoxwq::GetPlayerInfoResponse_RecentRecord&
+GetPlayerInfoResponse::_Internal::recent_record(const GetPlayerInfoResponse* msg) {
+  return *msg->_impl_.recent_record_;
+}
+const ::openfoxwq::GetPlayerInfoResponse_OverallResults&
+GetPlayerInfoResponse::_Internal::overall_results(const GetPlayerInfoResponse* msg) {
+  return *msg->_impl_.overall_results_;
+}
+const ::openfoxwq::GetPlayerInfoResponse_ProInfo&
+GetPlayerInfoResponse::_Internal::pro_info(const GetPlayerInfoResponse* msg) {
+  return *msg->_impl_.pro_info_;
+}
+const ::openfoxwq::GetPlayerInfoResponse_PerformanceRecord&
+GetPlayerInfoResponse::_Internal::perf_record(const GetPlayerInfoResponse* msg) {
+  return *msg->_impl_.perf_record_;
+}
+const ::openfoxwq::GetPlayerInfoResponse_Rooms&
+GetPlayerInfoResponse::_Internal::rooms(const GetPlayerInfoResponse* msg) {
+  return *msg->_impl_.rooms_;
+}
+const ::openfoxwq::GetPlayerInfoResponse_AdditionalInfo&
+GetPlayerInfoResponse::_Internal::additional_info(const GetPlayerInfoResponse* msg) {
+  return *msg->_impl_.additional_info_;
 }
 GetPlayerInfoResponse::GetPlayerInfoResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
@@ -2492,22 +7854,58 @@ GetPlayerInfoResponse::GetPlayerInfoResponse(const GetPlayerInfoResponse& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.game_results_){from._impl_.game_results_}
+    , decltype(_impl_.results_){from._impl_.results_}
+    , decltype(_impl_.searched_player_name_){}
     , decltype(_impl_.info_options_){nullptr}
     , decltype(_impl_.register_info_){nullptr}
+    , decltype(_impl_.recent_record_){nullptr}
+    , decltype(_impl_.overall_results_){nullptr}
+    , decltype(_impl_.pro_info_){nullptr}
+    , decltype(_impl_.perf_record_){nullptr}
+    , decltype(_impl_.rooms_){nullptr}
+    , decltype(_impl_.additional_info_){nullptr}
+    , decltype(_impl_.error_code_){}
+    , decltype(_impl_.seached_player_id_){}
     , decltype(_impl_.player_id_){}
-    , decltype(_impl_.player_id_again_){}};
+    , decltype(_impl_.foxcoin_){}
+    , decltype(_impl_.rank_){}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _impl_.searched_player_name_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.searched_player_name_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (from._internal_has_searched_player_name()) {
+    _this->_impl_.searched_player_name_.Set(from._internal_searched_player_name(), 
+      _this->GetArenaForAllocation());
+  }
   if (from._internal_has_info_options()) {
     _this->_impl_.info_options_ = new ::openfoxwq::InfoOptions(*from._impl_.info_options_);
   }
   if (from._internal_has_register_info()) {
     _this->_impl_.register_info_ = new ::openfoxwq::GetPlayerInfoResponse_RegisterInfo(*from._impl_.register_info_);
   }
-  ::memcpy(&_impl_.player_id_, &from._impl_.player_id_,
-    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.player_id_again_) -
-    reinterpret_cast<char*>(&_impl_.player_id_)) + sizeof(_impl_.player_id_again_));
+  if (from._internal_has_recent_record()) {
+    _this->_impl_.recent_record_ = new ::openfoxwq::GetPlayerInfoResponse_RecentRecord(*from._impl_.recent_record_);
+  }
+  if (from._internal_has_overall_results()) {
+    _this->_impl_.overall_results_ = new ::openfoxwq::GetPlayerInfoResponse_OverallResults(*from._impl_.overall_results_);
+  }
+  if (from._internal_has_pro_info()) {
+    _this->_impl_.pro_info_ = new ::openfoxwq::GetPlayerInfoResponse_ProInfo(*from._impl_.pro_info_);
+  }
+  if (from._internal_has_perf_record()) {
+    _this->_impl_.perf_record_ = new ::openfoxwq::GetPlayerInfoResponse_PerformanceRecord(*from._impl_.perf_record_);
+  }
+  if (from._internal_has_rooms()) {
+    _this->_impl_.rooms_ = new ::openfoxwq::GetPlayerInfoResponse_Rooms(*from._impl_.rooms_);
+  }
+  if (from._internal_has_additional_info()) {
+    _this->_impl_.additional_info_ = new ::openfoxwq::GetPlayerInfoResponse_AdditionalInfo(*from._impl_.additional_info_);
+  }
+  ::memcpy(&_impl_.error_code_, &from._impl_.error_code_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.rank_) -
+    reinterpret_cast<char*>(&_impl_.error_code_)) + sizeof(_impl_.rank_));
   // @@protoc_insertion_point(copy_constructor:openfoxwq.GetPlayerInfoResponse)
 }
 
@@ -2518,12 +7916,26 @@ inline void GetPlayerInfoResponse::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.game_results_){arena}
+    , decltype(_impl_.results_){arena}
+    , decltype(_impl_.searched_player_name_){}
     , decltype(_impl_.info_options_){nullptr}
     , decltype(_impl_.register_info_){nullptr}
+    , decltype(_impl_.recent_record_){nullptr}
+    , decltype(_impl_.overall_results_){nullptr}
+    , decltype(_impl_.pro_info_){nullptr}
+    , decltype(_impl_.perf_record_){nullptr}
+    , decltype(_impl_.rooms_){nullptr}
+    , decltype(_impl_.additional_info_){nullptr}
+    , decltype(_impl_.error_code_){int64_t{0}}
+    , decltype(_impl_.seached_player_id_){int64_t{0}}
     , decltype(_impl_.player_id_){int64_t{0}}
-    , decltype(_impl_.player_id_again_){int64_t{0}}
+    , decltype(_impl_.foxcoin_){int64_t{0}}
+    , decltype(_impl_.rank_){0}
   };
+  _impl_.searched_player_name_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.searched_player_name_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 GetPlayerInfoResponse::~GetPlayerInfoResponse() {
@@ -2537,9 +7949,16 @@ GetPlayerInfoResponse::~GetPlayerInfoResponse() {
 
 inline void GetPlayerInfoResponse::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.game_results_.~RepeatedPtrField();
+  _impl_.results_.~RepeatedPtrField();
+  _impl_.searched_player_name_.Destroy();
   if (this != internal_default_instance()) delete _impl_.info_options_;
   if (this != internal_default_instance()) delete _impl_.register_info_;
+  if (this != internal_default_instance()) delete _impl_.recent_record_;
+  if (this != internal_default_instance()) delete _impl_.overall_results_;
+  if (this != internal_default_instance()) delete _impl_.pro_info_;
+  if (this != internal_default_instance()) delete _impl_.perf_record_;
+  if (this != internal_default_instance()) delete _impl_.rooms_;
+  if (this != internal_default_instance()) delete _impl_.additional_info_;
 }
 
 void GetPlayerInfoResponse::SetCachedSize(int size) const {
@@ -2552,22 +7971,49 @@ void GetPlayerInfoResponse::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.game_results_.Clear();
+  _impl_.results_.Clear();
   cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000003u) {
+  if (cached_has_bits & 0x000000ffu) {
     if (cached_has_bits & 0x00000001u) {
+      _impl_.searched_player_name_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000002u) {
       GOOGLE_DCHECK(_impl_.info_options_ != nullptr);
       _impl_.info_options_->Clear();
     }
-    if (cached_has_bits & 0x00000002u) {
+    if (cached_has_bits & 0x00000004u) {
       GOOGLE_DCHECK(_impl_.register_info_ != nullptr);
       _impl_.register_info_->Clear();
     }
+    if (cached_has_bits & 0x00000008u) {
+      GOOGLE_DCHECK(_impl_.recent_record_ != nullptr);
+      _impl_.recent_record_->Clear();
+    }
+    if (cached_has_bits & 0x00000010u) {
+      GOOGLE_DCHECK(_impl_.overall_results_ != nullptr);
+      _impl_.overall_results_->Clear();
+    }
+    if (cached_has_bits & 0x00000020u) {
+      GOOGLE_DCHECK(_impl_.pro_info_ != nullptr);
+      _impl_.pro_info_->Clear();
+    }
+    if (cached_has_bits & 0x00000040u) {
+      GOOGLE_DCHECK(_impl_.perf_record_ != nullptr);
+      _impl_.perf_record_->Clear();
+    }
+    if (cached_has_bits & 0x00000080u) {
+      GOOGLE_DCHECK(_impl_.rooms_ != nullptr);
+      _impl_.rooms_->Clear();
+    }
   }
-  if (cached_has_bits & 0x0000000cu) {
-    ::memset(&_impl_.player_id_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&_impl_.player_id_again_) -
-        reinterpret_cast<char*>(&_impl_.player_id_)) + sizeof(_impl_.player_id_again_));
+  if (cached_has_bits & 0x00000100u) {
+    GOOGLE_DCHECK(_impl_.additional_info_ != nullptr);
+    _impl_.additional_info_->Clear();
+  }
+  if (cached_has_bits & 0x00003e00u) {
+    ::memset(&_impl_.error_code_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&_impl_.rank_) -
+        reinterpret_cast<char*>(&_impl_.error_code_)) + sizeof(_impl_.rank_));
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
@@ -2580,6 +8026,15 @@ const char* GetPlayerInfoResponse::_InternalParse(const char* ptr, ::_pbi::Parse
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
+      // required int64 error_code = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_error_code(&has_bits);
+          _impl_.error_code_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
       // required .openfoxwq.InfoOptions info_options = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
@@ -2588,21 +8043,55 @@ const char* GetPlayerInfoResponse::_InternalParse(const char* ptr, ::_pbi::Parse
         } else
           goto handle_unusual;
         continue;
-      // required int64 player_id = 3;
+      // optional int64 seached_player_id = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
+          _Internal::set_has_seached_player_id(&has_bits);
+          _impl_.seached_player_id_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional string searched_player_name = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
+          auto str = _internal_mutable_searched_player_name();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+          #ifndef NDEBUG
+          ::_pbi::VerifyUTF8(str, "openfoxwq.GetPlayerInfoResponse.searched_player_name");
+          #endif  // !NDEBUG
+        } else
+          goto handle_unusual;
+        continue;
+      // optional int64 player_id = 5;
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
           _Internal::set_has_player_id(&has_bits);
           _impl_.player_id_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required int64 player_id_again = 5;
-      case 5:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
-          _Internal::set_has_player_id_again(&has_bits);
-          _impl_.player_id_again_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+      // optional int64 foxcoin = 6;
+      case 6:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 48)) {
+          _Internal::set_has_foxcoin(&has_bits);
+          _impl_.foxcoin_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional .openfoxwq.Rank rank = 7;
+      case 7:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 56)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+          if (PROTOBUF_PREDICT_TRUE(::openfoxwq::Rank_IsValid(val))) {
+            _internal_set_rank(static_cast<::openfoxwq::Rank>(val));
+          } else {
+            ::PROTOBUF_NAMESPACE_ID::internal::WriteVarint(7, val, mutable_unknown_fields());
+          }
         } else
           goto handle_unusual;
         continue;
@@ -2614,16 +8103,64 @@ const char* GetPlayerInfoResponse::_InternalParse(const char* ptr, ::_pbi::Parse
         } else
           goto handle_unusual;
         continue;
-      // repeated .openfoxwq.ExtendedGameResults game_results = 16;
+      // optional .openfoxwq.GetPlayerInfoResponse.RecentRecord recent_record = 9;
+      case 9:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 74)) {
+          ptr = ctx->ParseMessage(_internal_mutable_recent_record(), ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional .openfoxwq.GetPlayerInfoResponse.OverallResults overall_results = 12;
+      case 12:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 98)) {
+          ptr = ctx->ParseMessage(_internal_mutable_overall_results(), ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional .openfoxwq.GetPlayerInfoResponse.ProInfo pro_info = 15;
+      case 15:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 122)) {
+          ptr = ctx->ParseMessage(_internal_mutable_pro_info(), ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // repeated .openfoxwq.GetPlayerInfoResponse.Results results = 16;
       case 16:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 130)) {
           ptr -= 2;
           do {
             ptr += 2;
-            ptr = ctx->ParseMessage(_internal_add_game_results(), ptr);
+            ptr = ctx->ParseMessage(_internal_add_results(), ptr);
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<130>(ptr));
+        } else
+          goto handle_unusual;
+        continue;
+      // optional .openfoxwq.GetPlayerInfoResponse.PerformanceRecord perf_record = 18;
+      case 18:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 146)) {
+          ptr = ctx->ParseMessage(_internal_mutable_perf_record(), ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional .openfoxwq.GetPlayerInfoResponse.Rooms rooms = 20;
+      case 20:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 162)) {
+          ptr = ctx->ParseMessage(_internal_mutable_rooms(), ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional .openfoxwq.GetPlayerInfoResponse.AdditionalInfo additional_info = 22;
+      case 22:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 178)) {
+          ptr = ctx->ParseMessage(_internal_mutable_additional_info(), ptr);
+          CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
@@ -2658,38 +8195,109 @@ uint8_t* GetPlayerInfoResponse::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
+  // required int64 error_code = 1;
+  if (cached_has_bits & 0x00000200u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(1, this->_internal_error_code(), target);
+  }
+
   // required .openfoxwq.InfoOptions info_options = 2;
-  if (cached_has_bits & 0x00000001u) {
+  if (cached_has_bits & 0x00000002u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(2, _Internal::info_options(this),
         _Internal::info_options(this).GetCachedSize(), target, stream);
   }
 
-  // required int64 player_id = 3;
-  if (cached_has_bits & 0x00000004u) {
+  // optional int64 seached_player_id = 3;
+  if (cached_has_bits & 0x00000400u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt64ToArray(3, this->_internal_player_id(), target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(3, this->_internal_seached_player_id(), target);
   }
 
-  // required int64 player_id_again = 5;
-  if (cached_has_bits & 0x00000008u) {
+  // optional string searched_player_name = 4;
+  if (cached_has_bits & 0x00000001u) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->_internal_searched_player_name().data(), static_cast<int>(this->_internal_searched_player_name().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
+      "openfoxwq.GetPlayerInfoResponse.searched_player_name");
+    target = stream->WriteStringMaybeAliased(
+        4, this->_internal_searched_player_name(), target);
+  }
+
+  // optional int64 player_id = 5;
+  if (cached_has_bits & 0x00000800u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt64ToArray(5, this->_internal_player_id_again(), target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(5, this->_internal_player_id(), target);
+  }
+
+  // optional int64 foxcoin = 6;
+  if (cached_has_bits & 0x00001000u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(6, this->_internal_foxcoin(), target);
+  }
+
+  // optional .openfoxwq.Rank rank = 7;
+  if (cached_has_bits & 0x00002000u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      7, this->_internal_rank(), target);
   }
 
   // optional .openfoxwq.GetPlayerInfoResponse.RegisterInfo register_info = 8;
-  if (cached_has_bits & 0x00000002u) {
+  if (cached_has_bits & 0x00000004u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(8, _Internal::register_info(this),
         _Internal::register_info(this).GetCachedSize(), target, stream);
   }
 
-  // repeated .openfoxwq.ExtendedGameResults game_results = 16;
+  // optional .openfoxwq.GetPlayerInfoResponse.RecentRecord recent_record = 9;
+  if (cached_has_bits & 0x00000008u) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(9, _Internal::recent_record(this),
+        _Internal::recent_record(this).GetCachedSize(), target, stream);
+  }
+
+  // optional .openfoxwq.GetPlayerInfoResponse.OverallResults overall_results = 12;
+  if (cached_has_bits & 0x00000010u) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(12, _Internal::overall_results(this),
+        _Internal::overall_results(this).GetCachedSize(), target, stream);
+  }
+
+  // optional .openfoxwq.GetPlayerInfoResponse.ProInfo pro_info = 15;
+  if (cached_has_bits & 0x00000020u) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(15, _Internal::pro_info(this),
+        _Internal::pro_info(this).GetCachedSize(), target, stream);
+  }
+
+  // repeated .openfoxwq.GetPlayerInfoResponse.Results results = 16;
   for (unsigned i = 0,
-      n = static_cast<unsigned>(this->_internal_game_results_size()); i < n; i++) {
-    const auto& repfield = this->_internal_game_results(i);
+      n = static_cast<unsigned>(this->_internal_results_size()); i < n; i++) {
+    const auto& repfield = this->_internal_results(i);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
         InternalWriteMessage(16, repfield, repfield.GetCachedSize(), target, stream);
+  }
+
+  // optional .openfoxwq.GetPlayerInfoResponse.PerformanceRecord perf_record = 18;
+  if (cached_has_bits & 0x00000040u) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(18, _Internal::perf_record(this),
+        _Internal::perf_record(this).GetCachedSize(), target, stream);
+  }
+
+  // optional .openfoxwq.GetPlayerInfoResponse.Rooms rooms = 20;
+  if (cached_has_bits & 0x00000080u) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(20, _Internal::rooms(this),
+        _Internal::rooms(this).GetCachedSize(), target, stream);
+  }
+
+  // optional .openfoxwq.GetPlayerInfoResponse.AdditionalInfo additional_info = 22;
+  if (cached_has_bits & 0x00000100u) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(22, _Internal::additional_info(this),
+        _Internal::additional_info(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -2711,14 +8319,9 @@ size_t GetPlayerInfoResponse::RequiredFieldsByteSizeFallback() const {
         *_impl_.info_options_);
   }
 
-  if (_internal_has_player_id()) {
-    // required int64 player_id = 3;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_player_id());
-  }
-
-  if (_internal_has_player_id_again()) {
-    // required int64 player_id_again = 5;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_player_id_again());
+  if (_internal_has_error_code()) {
+    // required int64 error_code = 1;
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_error_code());
   }
 
   return total_size;
@@ -2727,17 +8330,14 @@ size_t GetPlayerInfoResponse::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:openfoxwq.GetPlayerInfoResponse)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x0000000d) ^ 0x0000000d) == 0) {  // All required fields are present.
+  if (((_impl_._has_bits_[0] & 0x00000202) ^ 0x00000202) == 0) {  // All required fields are present.
     // required .openfoxwq.InfoOptions info_options = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.info_options_);
 
-    // required int64 player_id = 3;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_player_id());
-
-    // required int64 player_id_again = 5;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_player_id_again());
+    // required int64 error_code = 1;
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_error_code());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -2746,21 +8346,95 @@ size_t GetPlayerInfoResponse::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated .openfoxwq.ExtendedGameResults game_results = 16;
-  total_size += 2UL * this->_internal_game_results_size();
-  for (const auto& msg : this->_impl_.game_results_) {
+  // repeated .openfoxwq.GetPlayerInfoResponse.Results results = 16;
+  total_size += 2UL * this->_internal_results_size();
+  for (const auto& msg : this->_impl_.results_) {
     total_size +=
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
-  // optional .openfoxwq.GetPlayerInfoResponse.RegisterInfo register_info = 8;
+  // optional string searched_player_name = 4;
   cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000002u) {
+  if (cached_has_bits & 0x00000001u) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.register_info_);
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_searched_player_name());
   }
 
+  if (cached_has_bits & 0x000000fcu) {
+    // optional .openfoxwq.GetPlayerInfoResponse.RegisterInfo register_info = 8;
+    if (cached_has_bits & 0x00000004u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+          *_impl_.register_info_);
+    }
+
+    // optional .openfoxwq.GetPlayerInfoResponse.RecentRecord recent_record = 9;
+    if (cached_has_bits & 0x00000008u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+          *_impl_.recent_record_);
+    }
+
+    // optional .openfoxwq.GetPlayerInfoResponse.OverallResults overall_results = 12;
+    if (cached_has_bits & 0x00000010u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+          *_impl_.overall_results_);
+    }
+
+    // optional .openfoxwq.GetPlayerInfoResponse.ProInfo pro_info = 15;
+    if (cached_has_bits & 0x00000020u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+          *_impl_.pro_info_);
+    }
+
+    // optional .openfoxwq.GetPlayerInfoResponse.PerformanceRecord perf_record = 18;
+    if (cached_has_bits & 0x00000040u) {
+      total_size += 2 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+          *_impl_.perf_record_);
+    }
+
+    // optional .openfoxwq.GetPlayerInfoResponse.Rooms rooms = 20;
+    if (cached_has_bits & 0x00000080u) {
+      total_size += 2 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+          *_impl_.rooms_);
+    }
+
+  }
+  // optional .openfoxwq.GetPlayerInfoResponse.AdditionalInfo additional_info = 22;
+  if (cached_has_bits & 0x00000100u) {
+    total_size += 2 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.additional_info_);
+  }
+
+  if (cached_has_bits & 0x00003c00u) {
+    // optional int64 seached_player_id = 3;
+    if (cached_has_bits & 0x00000400u) {
+      total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_seached_player_id());
+    }
+
+    // optional int64 player_id = 5;
+    if (cached_has_bits & 0x00000800u) {
+      total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_player_id());
+    }
+
+    // optional int64 foxcoin = 6;
+    if (cached_has_bits & 0x00001000u) {
+      total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_foxcoin());
+    }
+
+    // optional .openfoxwq.Rank rank = 7;
+    if (cached_has_bits & 0x00002000u) {
+      total_size += 1 +
+        ::_pbi::WireFormatLite::EnumSize(this->_internal_rank());
+    }
+
+  }
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
@@ -2779,22 +8453,60 @@ void GetPlayerInfoResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, 
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  _this->_impl_.game_results_.MergeFrom(from._impl_.game_results_);
+  _this->_impl_.results_.MergeFrom(from._impl_.results_);
   cached_has_bits = from._impl_._has_bits_[0];
-  if (cached_has_bits & 0x0000000fu) {
+  if (cached_has_bits & 0x000000ffu) {
     if (cached_has_bits & 0x00000001u) {
+      _this->_internal_set_searched_player_name(from._internal_searched_player_name());
+    }
+    if (cached_has_bits & 0x00000002u) {
       _this->_internal_mutable_info_options()->::openfoxwq::InfoOptions::MergeFrom(
           from._internal_info_options());
     }
-    if (cached_has_bits & 0x00000002u) {
+    if (cached_has_bits & 0x00000004u) {
       _this->_internal_mutable_register_info()->::openfoxwq::GetPlayerInfoResponse_RegisterInfo::MergeFrom(
           from._internal_register_info());
     }
-    if (cached_has_bits & 0x00000004u) {
+    if (cached_has_bits & 0x00000008u) {
+      _this->_internal_mutable_recent_record()->::openfoxwq::GetPlayerInfoResponse_RecentRecord::MergeFrom(
+          from._internal_recent_record());
+    }
+    if (cached_has_bits & 0x00000010u) {
+      _this->_internal_mutable_overall_results()->::openfoxwq::GetPlayerInfoResponse_OverallResults::MergeFrom(
+          from._internal_overall_results());
+    }
+    if (cached_has_bits & 0x00000020u) {
+      _this->_internal_mutable_pro_info()->::openfoxwq::GetPlayerInfoResponse_ProInfo::MergeFrom(
+          from._internal_pro_info());
+    }
+    if (cached_has_bits & 0x00000040u) {
+      _this->_internal_mutable_perf_record()->::openfoxwq::GetPlayerInfoResponse_PerformanceRecord::MergeFrom(
+          from._internal_perf_record());
+    }
+    if (cached_has_bits & 0x00000080u) {
+      _this->_internal_mutable_rooms()->::openfoxwq::GetPlayerInfoResponse_Rooms::MergeFrom(
+          from._internal_rooms());
+    }
+  }
+  if (cached_has_bits & 0x00003f00u) {
+    if (cached_has_bits & 0x00000100u) {
+      _this->_internal_mutable_additional_info()->::openfoxwq::GetPlayerInfoResponse_AdditionalInfo::MergeFrom(
+          from._internal_additional_info());
+    }
+    if (cached_has_bits & 0x00000200u) {
+      _this->_impl_.error_code_ = from._impl_.error_code_;
+    }
+    if (cached_has_bits & 0x00000400u) {
+      _this->_impl_.seached_player_id_ = from._impl_.seached_player_id_;
+    }
+    if (cached_has_bits & 0x00000800u) {
       _this->_impl_.player_id_ = from._impl_.player_id_;
     }
-    if (cached_has_bits & 0x00000008u) {
-      _this->_impl_.player_id_again_ = from._impl_.player_id_again_;
+    if (cached_has_bits & 0x00001000u) {
+      _this->_impl_.foxcoin_ = from._impl_.foxcoin_;
+    }
+    if (cached_has_bits & 0x00002000u) {
+      _this->_impl_.rank_ = from._impl_.rank_;
     }
     _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
@@ -2810,7 +8522,7 @@ void GetPlayerInfoResponse::CopyFrom(const GetPlayerInfoResponse& from) {
 
 bool GetPlayerInfoResponse::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.game_results_))
+  if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.results_))
     return false;
   if (_internal_has_info_options()) {
     if (!_impl_.info_options_->IsInitialized()) return false;
@@ -2823,12 +8535,18 @@ bool GetPlayerInfoResponse::IsInitialized() const {
 
 void GetPlayerInfoResponse::InternalSwap(GetPlayerInfoResponse* other) {
   using std::swap;
+  auto* lhs_arena = GetArenaForAllocation();
+  auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
-  _impl_.game_results_.InternalSwap(&other->_impl_.game_results_);
+  _impl_.results_.InternalSwap(&other->_impl_.results_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.searched_player_name_, lhs_arena,
+      &other->_impl_.searched_player_name_, rhs_arena
+  );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(GetPlayerInfoResponse, _impl_.player_id_again_)
-      + sizeof(GetPlayerInfoResponse::_impl_.player_id_again_)
+      PROTOBUF_FIELD_OFFSET(GetPlayerInfoResponse, _impl_.rank_)
+      + sizeof(GetPlayerInfoResponse::_impl_.rank_)
       - PROTOBUF_FIELD_OFFSET(GetPlayerInfoResponse, _impl_.info_options_)>(
           reinterpret_cast<char*>(&_impl_.info_options_),
           reinterpret_cast<char*>(&other->_impl_.info_options_));
@@ -2837,7 +8555,7 @@ void GetPlayerInfoResponse::InternalSwap(GetPlayerInfoResponse* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata GetPlayerInfoResponse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_proto_2fplay_2eproto_getter, &descriptor_table_proto_2fplay_2eproto_once,
-      file_level_metadata_proto_2fplay_2eproto[6]);
+      file_level_metadata_proto_2fplay_2eproto[16]);
 }
 
 // ===================================================================
@@ -3075,7 +8793,7 @@ void InfoOptions::InternalSwap(InfoOptions* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata InfoOptions::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_proto_2fplay_2eproto_getter, &descriptor_table_proto_2fplay_2eproto_once,
-      file_level_metadata_proto_2fplay_2eproto[7]);
+      file_level_metadata_proto_2fplay_2eproto[17]);
 }
 
 // ===================================================================
@@ -3268,7 +8986,7 @@ void SyncTimeRequest::InternalSwap(SyncTimeRequest* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata SyncTimeRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_proto_2fplay_2eproto_getter, &descriptor_table_proto_2fplay_2eproto_once,
-      file_level_metadata_proto_2fplay_2eproto[8]);
+      file_level_metadata_proto_2fplay_2eproto[18]);
 }
 
 // ===================================================================
@@ -3522,7 +9240,7 @@ void SyncTimeResponse::InternalSwap(SyncTimeResponse* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata SyncTimeResponse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_proto_2fplay_2eproto_getter, &descriptor_table_proto_2fplay_2eproto_once,
-      file_level_metadata_proto_2fplay_2eproto[9]);
+      file_level_metadata_proto_2fplay_2eproto[19]);
 }
 
 // ===================================================================
@@ -3715,7 +9433,7 @@ void SyncPlayersRequest::InternalSwap(SyncPlayersRequest* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata SyncPlayersRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_proto_2fplay_2eproto_getter, &descriptor_table_proto_2fplay_2eproto_once,
-      file_level_metadata_proto_2fplay_2eproto[10]);
+      file_level_metadata_proto_2fplay_2eproto[20]);
 }
 
 // ===================================================================
@@ -3969,7 +9687,7 @@ void SyncPlayersResponse::InternalSwap(SyncPlayersResponse* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata SyncPlayersResponse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_proto_2fplay_2eproto_getter, &descriptor_table_proto_2fplay_2eproto_once,
-      file_level_metadata_proto_2fplay_2eproto[11]);
+      file_level_metadata_proto_2fplay_2eproto[21]);
 }
 
 // ===================================================================
@@ -4277,14 +9995,560 @@ void PlayerStateEvent::InternalSwap(PlayerStateEvent* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata PlayerStateEvent::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_proto_2fplay_2eproto_getter, &descriptor_table_proto_2fplay_2eproto_once,
-      file_level_metadata_proto_2fplay_2eproto[12]);
+      file_level_metadata_proto_2fplay_2eproto[22]);
 }
 
 // ===================================================================
 
-class UnknownPlayerEvent1::_Internal {
+class PlayerOnlineCountEvent::_Internal {
  public:
-  using HasBits = decltype(std::declval<UnknownPlayerEvent1>()._impl_._has_bits_);
+  using HasBits = decltype(std::declval<PlayerOnlineCountEvent>()._impl_._has_bits_);
+  static void set_has_unknown_field_1(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static void set_has_online_count(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000002) ^ 0x00000002) != 0;
+  }
+};
+
+PlayerOnlineCountEvent::PlayerOnlineCountEvent(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:openfoxwq.PlayerOnlineCountEvent)
+}
+PlayerOnlineCountEvent::PlayerOnlineCountEvent(const PlayerOnlineCountEvent& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  PlayerOnlineCountEvent* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.unknown_field_1_){}
+    , decltype(_impl_.online_count_){}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::memcpy(&_impl_.unknown_field_1_, &from._impl_.unknown_field_1_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.online_count_) -
+    reinterpret_cast<char*>(&_impl_.unknown_field_1_)) + sizeof(_impl_.online_count_));
+  // @@protoc_insertion_point(copy_constructor:openfoxwq.PlayerOnlineCountEvent)
+}
+
+inline void PlayerOnlineCountEvent::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.unknown_field_1_){int64_t{0}}
+    , decltype(_impl_.online_count_){int64_t{0}}
+  };
+}
+
+PlayerOnlineCountEvent::~PlayerOnlineCountEvent() {
+  // @@protoc_insertion_point(destructor:openfoxwq.PlayerOnlineCountEvent)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void PlayerOnlineCountEvent::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+}
+
+void PlayerOnlineCountEvent::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void PlayerOnlineCountEvent::Clear() {
+// @@protoc_insertion_point(message_clear_start:openfoxwq.PlayerOnlineCountEvent)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    ::memset(&_impl_.unknown_field_1_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&_impl_.online_count_) -
+        reinterpret_cast<char*>(&_impl_.unknown_field_1_)) + sizeof(_impl_.online_count_));
+  }
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* PlayerOnlineCountEvent::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // optional int64 unknown_field_1 = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_unknown_field_1(&has_bits);
+          _impl_.unknown_field_1_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // required int64 online_count = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          _Internal::set_has_online_count(&has_bits);
+          _impl_.online_count_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  _impl_._has_bits_.Or(has_bits);
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* PlayerOnlineCountEvent::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:openfoxwq.PlayerOnlineCountEvent)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  // optional int64 unknown_field_1 = 1;
+  if (cached_has_bits & 0x00000001u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(1, this->_internal_unknown_field_1(), target);
+  }
+
+  // required int64 online_count = 2;
+  if (cached_has_bits & 0x00000002u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(2, this->_internal_online_count(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:openfoxwq.PlayerOnlineCountEvent)
+  return target;
+}
+
+size_t PlayerOnlineCountEvent::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:openfoxwq.PlayerOnlineCountEvent)
+  size_t total_size = 0;
+
+  // required int64 online_count = 2;
+  if (_internal_has_online_count()) {
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_online_count());
+  }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // optional int64 unknown_field_1 = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_unknown_field_1());
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData PlayerOnlineCountEvent::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    PlayerOnlineCountEvent::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*PlayerOnlineCountEvent::GetClassData() const { return &_class_data_; }
+
+
+void PlayerOnlineCountEvent::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<PlayerOnlineCountEvent*>(&to_msg);
+  auto& from = static_cast<const PlayerOnlineCountEvent&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:openfoxwq.PlayerOnlineCountEvent)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_impl_.unknown_field_1_ = from._impl_.unknown_field_1_;
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_impl_.online_count_ = from._impl_.online_count_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void PlayerOnlineCountEvent::CopyFrom(const PlayerOnlineCountEvent& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:openfoxwq.PlayerOnlineCountEvent)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool PlayerOnlineCountEvent::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
+  return true;
+}
+
+void PlayerOnlineCountEvent::InternalSwap(PlayerOnlineCountEvent* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(PlayerOnlineCountEvent, _impl_.online_count_)
+      + sizeof(PlayerOnlineCountEvent::_impl_.online_count_)
+      - PROTOBUF_FIELD_OFFSET(PlayerOnlineCountEvent, _impl_.unknown_field_1_)>(
+          reinterpret_cast<char*>(&_impl_.unknown_field_1_),
+          reinterpret_cast<char*>(&other->_impl_.unknown_field_1_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata PlayerOnlineCountEvent::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_proto_2fplay_2eproto_getter, &descriptor_table_proto_2fplay_2eproto_once,
+      file_level_metadata_proto_2fplay_2eproto[23]);
+}
+
+// ===================================================================
+
+class PlayerOnlineEvent::_Internal {
+ public:
+  using HasBits = decltype(std::declval<PlayerOnlineEvent>()._impl_._has_bits_);
+  static const ::openfoxwq::PlayerInfo& player_info(const PlayerOnlineEvent* msg);
+  static void set_has_player_info(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static void set_has_online_count(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static void set_has_unknown_field_3(HasBits* has_bits) {
+    (*has_bits)[0] |= 4u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
+  }
+};
+
+const ::openfoxwq::PlayerInfo&
+PlayerOnlineEvent::_Internal::player_info(const PlayerOnlineEvent* msg) {
+  return *msg->_impl_.player_info_;
+}
+void PlayerOnlineEvent::clear_player_info() {
+  if (_impl_.player_info_ != nullptr) _impl_.player_info_->Clear();
+  _impl_._has_bits_[0] &= ~0x00000001u;
+}
+PlayerOnlineEvent::PlayerOnlineEvent(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:openfoxwq.PlayerOnlineEvent)
+}
+PlayerOnlineEvent::PlayerOnlineEvent(const PlayerOnlineEvent& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  PlayerOnlineEvent* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.player_info_){nullptr}
+    , decltype(_impl_.online_count_){}
+    , decltype(_impl_.unknown_field_3_){}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_player_info()) {
+    _this->_impl_.player_info_ = new ::openfoxwq::PlayerInfo(*from._impl_.player_info_);
+  }
+  ::memcpy(&_impl_.online_count_, &from._impl_.online_count_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.unknown_field_3_) -
+    reinterpret_cast<char*>(&_impl_.online_count_)) + sizeof(_impl_.unknown_field_3_));
+  // @@protoc_insertion_point(copy_constructor:openfoxwq.PlayerOnlineEvent)
+}
+
+inline void PlayerOnlineEvent::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.player_info_){nullptr}
+    , decltype(_impl_.online_count_){int64_t{0}}
+    , decltype(_impl_.unknown_field_3_){int64_t{0}}
+  };
+}
+
+PlayerOnlineEvent::~PlayerOnlineEvent() {
+  // @@protoc_insertion_point(destructor:openfoxwq.PlayerOnlineEvent)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void PlayerOnlineEvent::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.player_info_;
+}
+
+void PlayerOnlineEvent::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void PlayerOnlineEvent::Clear() {
+// @@protoc_insertion_point(message_clear_start:openfoxwq.PlayerOnlineEvent)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    GOOGLE_DCHECK(_impl_.player_info_ != nullptr);
+    _impl_.player_info_->Clear();
+  }
+  if (cached_has_bits & 0x00000006u) {
+    ::memset(&_impl_.online_count_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&_impl_.unknown_field_3_) -
+        reinterpret_cast<char*>(&_impl_.online_count_)) + sizeof(_impl_.unknown_field_3_));
+  }
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* PlayerOnlineEvent::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // required .openfoxwq.PlayerInfo player_info = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_player_info(), ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // required int64 online_count = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          _Internal::set_has_online_count(&has_bits);
+          _impl_.online_count_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional int64 unknown_field_3 = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
+          _Internal::set_has_unknown_field_3(&has_bits);
+          _impl_.unknown_field_3_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  _impl_._has_bits_.Or(has_bits);
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* PlayerOnlineEvent::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:openfoxwq.PlayerOnlineEvent)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  // required .openfoxwq.PlayerInfo player_info = 1;
+  if (cached_has_bits & 0x00000001u) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::player_info(this),
+        _Internal::player_info(this).GetCachedSize(), target, stream);
+  }
+
+  // required int64 online_count = 2;
+  if (cached_has_bits & 0x00000002u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(2, this->_internal_online_count(), target);
+  }
+
+  // optional int64 unknown_field_3 = 3;
+  if (cached_has_bits & 0x00000004u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(3, this->_internal_unknown_field_3(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:openfoxwq.PlayerOnlineEvent)
+  return target;
+}
+
+size_t PlayerOnlineEvent::RequiredFieldsByteSizeFallback() const {
+// @@protoc_insertion_point(required_fields_byte_size_fallback_start:openfoxwq.PlayerOnlineEvent)
+  size_t total_size = 0;
+
+  if (_internal_has_player_info()) {
+    // required .openfoxwq.PlayerInfo player_info = 1;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.player_info_);
+  }
+
+  if (_internal_has_online_count()) {
+    // required int64 online_count = 2;
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_online_count());
+  }
+
+  return total_size;
+}
+size_t PlayerOnlineEvent::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:openfoxwq.PlayerOnlineEvent)
+  size_t total_size = 0;
+
+  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
+    // required .openfoxwq.PlayerInfo player_info = 1;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.player_info_);
+
+    // required int64 online_count = 2;
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_online_count());
+
+  } else {
+    total_size += RequiredFieldsByteSizeFallback();
+  }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // optional int64 unknown_field_3 = 3;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000004u) {
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_unknown_field_3());
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData PlayerOnlineEvent::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    PlayerOnlineEvent::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*PlayerOnlineEvent::GetClassData() const { return &_class_data_; }
+
+
+void PlayerOnlineEvent::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<PlayerOnlineEvent*>(&to_msg);
+  auto& from = static_cast<const PlayerOnlineEvent&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:openfoxwq.PlayerOnlineEvent)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000007u) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_mutable_player_info()->::openfoxwq::PlayerInfo::MergeFrom(
+          from._internal_player_info());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_impl_.online_count_ = from._impl_.online_count_;
+    }
+    if (cached_has_bits & 0x00000004u) {
+      _this->_impl_.unknown_field_3_ = from._impl_.unknown_field_3_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void PlayerOnlineEvent::CopyFrom(const PlayerOnlineEvent& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:openfoxwq.PlayerOnlineEvent)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool PlayerOnlineEvent::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
+  if (_internal_has_player_info()) {
+    if (!_impl_.player_info_->IsInitialized()) return false;
+  }
+  return true;
+}
+
+void PlayerOnlineEvent::InternalSwap(PlayerOnlineEvent* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(PlayerOnlineEvent, _impl_.unknown_field_3_)
+      + sizeof(PlayerOnlineEvent::_impl_.unknown_field_3_)
+      - PROTOBUF_FIELD_OFFSET(PlayerOnlineEvent, _impl_.player_info_)>(
+          reinterpret_cast<char*>(&_impl_.player_info_),
+          reinterpret_cast<char*>(&other->_impl_.player_info_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata PlayerOnlineEvent::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_proto_2fplay_2eproto_getter, &descriptor_table_proto_2fplay_2eproto_once,
+      file_level_metadata_proto_2fplay_2eproto[24]);
+}
+
+// ===================================================================
+
+class PlayerOfflineEvent::_Internal {
+ public:
+  using HasBits = decltype(std::declval<PlayerOfflineEvent>()._impl_._has_bits_);
   static void set_has_player_id(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
@@ -4299,15 +10563,15 @@ class UnknownPlayerEvent1::_Internal {
   }
 };
 
-UnknownPlayerEvent1::UnknownPlayerEvent1(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+PlayerOfflineEvent::PlayerOfflineEvent(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:openfoxwq.UnknownPlayerEvent1)
+  // @@protoc_insertion_point(arena_constructor:openfoxwq.PlayerOfflineEvent)
 }
-UnknownPlayerEvent1::UnknownPlayerEvent1(const UnknownPlayerEvent1& from)
+PlayerOfflineEvent::PlayerOfflineEvent(const PlayerOfflineEvent& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
-  UnknownPlayerEvent1* const _this = this; (void)_this;
+  PlayerOfflineEvent* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
@@ -4319,10 +10583,10 @@ UnknownPlayerEvent1::UnknownPlayerEvent1(const UnknownPlayerEvent1& from)
   ::memcpy(&_impl_.player_id_, &from._impl_.player_id_,
     static_cast<size_t>(reinterpret_cast<char*>(&_impl_.unknown_field_3_) -
     reinterpret_cast<char*>(&_impl_.player_id_)) + sizeof(_impl_.unknown_field_3_));
-  // @@protoc_insertion_point(copy_constructor:openfoxwq.UnknownPlayerEvent1)
+  // @@protoc_insertion_point(copy_constructor:openfoxwq.PlayerOfflineEvent)
 }
 
-inline void UnknownPlayerEvent1::SharedCtor(
+inline void PlayerOfflineEvent::SharedCtor(
     ::_pb::Arena* arena, bool is_message_owned) {
   (void)arena;
   (void)is_message_owned;
@@ -4335,8 +10599,8 @@ inline void UnknownPlayerEvent1::SharedCtor(
   };
 }
 
-UnknownPlayerEvent1::~UnknownPlayerEvent1() {
-  // @@protoc_insertion_point(destructor:openfoxwq.UnknownPlayerEvent1)
+PlayerOfflineEvent::~PlayerOfflineEvent() {
+  // @@protoc_insertion_point(destructor:openfoxwq.PlayerOfflineEvent)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -4344,16 +10608,16 @@ UnknownPlayerEvent1::~UnknownPlayerEvent1() {
   SharedDtor();
 }
 
-inline void UnknownPlayerEvent1::SharedDtor() {
+inline void PlayerOfflineEvent::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
 }
 
-void UnknownPlayerEvent1::SetCachedSize(int size) const {
+void PlayerOfflineEvent::SetCachedSize(int size) const {
   _impl_._cached_size_.Set(size);
 }
 
-void UnknownPlayerEvent1::Clear() {
-// @@protoc_insertion_point(message_clear_start:openfoxwq.UnknownPlayerEvent1)
+void PlayerOfflineEvent::Clear() {
+// @@protoc_insertion_point(message_clear_start:openfoxwq.PlayerOfflineEvent)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -4368,7 +10632,7 @@ void UnknownPlayerEvent1::Clear() {
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* UnknownPlayerEvent1::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+const char* PlayerOfflineEvent::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
@@ -4426,9 +10690,9 @@ failure:
 #undef CHK_
 }
 
-uint8_t* UnknownPlayerEvent1::_InternalSerialize(
+uint8_t* PlayerOfflineEvent::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:openfoxwq.UnknownPlayerEvent1)
+  // @@protoc_insertion_point(serialize_to_array_start:openfoxwq.PlayerOfflineEvent)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -4455,12 +10719,12 @@ uint8_t* UnknownPlayerEvent1::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:openfoxwq.UnknownPlayerEvent1)
+  // @@protoc_insertion_point(serialize_to_array_end:openfoxwq.PlayerOfflineEvent)
   return target;
 }
 
-size_t UnknownPlayerEvent1::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:openfoxwq.UnknownPlayerEvent1)
+size_t PlayerOfflineEvent::RequiredFieldsByteSizeFallback() const {
+// @@protoc_insertion_point(required_fields_byte_size_fallback_start:openfoxwq.PlayerOfflineEvent)
   size_t total_size = 0;
 
   if (_internal_has_player_id()) {
@@ -4475,8 +10739,8 @@ size_t UnknownPlayerEvent1::RequiredFieldsByteSizeFallback() const {
 
   return total_size;
 }
-size_t UnknownPlayerEvent1::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:openfoxwq.UnknownPlayerEvent1)
+size_t PlayerOfflineEvent::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:openfoxwq.PlayerOfflineEvent)
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
@@ -4502,17 +10766,17 @@ size_t UnknownPlayerEvent1::ByteSizeLong() const {
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData UnknownPlayerEvent1::_class_data_ = {
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData PlayerOfflineEvent::_class_data_ = {
     ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    UnknownPlayerEvent1::MergeImpl
+    PlayerOfflineEvent::MergeImpl
 };
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*UnknownPlayerEvent1::GetClassData() const { return &_class_data_; }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*PlayerOfflineEvent::GetClassData() const { return &_class_data_; }
 
 
-void UnknownPlayerEvent1::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<UnknownPlayerEvent1*>(&to_msg);
-  auto& from = static_cast<const UnknownPlayerEvent1&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:openfoxwq.UnknownPlayerEvent1)
+void PlayerOfflineEvent::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<PlayerOfflineEvent*>(&to_msg);
+  auto& from = static_cast<const PlayerOfflineEvent&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:openfoxwq.PlayerOfflineEvent)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -4533,34 +10797,34 @@ void UnknownPlayerEvent1::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, co
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
-void UnknownPlayerEvent1::CopyFrom(const UnknownPlayerEvent1& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:openfoxwq.UnknownPlayerEvent1)
+void PlayerOfflineEvent::CopyFrom(const PlayerOfflineEvent& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:openfoxwq.PlayerOfflineEvent)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool UnknownPlayerEvent1::IsInitialized() const {
+bool PlayerOfflineEvent::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
-void UnknownPlayerEvent1::InternalSwap(UnknownPlayerEvent1* other) {
+void PlayerOfflineEvent::InternalSwap(PlayerOfflineEvent* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(UnknownPlayerEvent1, _impl_.unknown_field_3_)
-      + sizeof(UnknownPlayerEvent1::_impl_.unknown_field_3_)
-      - PROTOBUF_FIELD_OFFSET(UnknownPlayerEvent1, _impl_.player_id_)>(
+      PROTOBUF_FIELD_OFFSET(PlayerOfflineEvent, _impl_.unknown_field_3_)
+      + sizeof(PlayerOfflineEvent::_impl_.unknown_field_3_)
+      - PROTOBUF_FIELD_OFFSET(PlayerOfflineEvent, _impl_.player_id_)>(
           reinterpret_cast<char*>(&_impl_.player_id_),
           reinterpret_cast<char*>(&other->_impl_.player_id_));
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata UnknownPlayerEvent1::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata PlayerOfflineEvent::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_proto_2fplay_2eproto_getter, &descriptor_table_proto_2fplay_2eproto_once,
-      file_level_metadata_proto_2fplay_2eproto[13]);
+      file_level_metadata_proto_2fplay_2eproto[25]);
 }
 
 // ===================================================================
@@ -4568,7 +10832,7 @@ void UnknownPlayerEvent1::InternalSwap(UnknownPlayerEvent1* other) {
 class UnknownPlayRequest1_UnknownPlayRequest1Nested1::_Internal {
  public:
   using HasBits = decltype(std::declval<UnknownPlayRequest1_UnknownPlayRequest1Nested1>()._impl_._has_bits_);
-  static void set_has_unknown_field_1(HasBits* has_bits) {
+  static void set_has_mac_address(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -4588,15 +10852,15 @@ UnknownPlayRequest1_UnknownPlayRequest1Nested1::UnknownPlayRequest1_UnknownPlayR
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.unknown_field_1_){}};
+    , decltype(_impl_.mac_address_){}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.unknown_field_1_.InitDefault();
+  _impl_.mac_address_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.unknown_field_1_.Set("", GetArenaForAllocation());
+    _impl_.mac_address_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_unknown_field_1()) {
-    _this->_impl_.unknown_field_1_.Set(from._internal_unknown_field_1(), 
+  if (from._internal_has_mac_address()) {
+    _this->_impl_.mac_address_.Set(from._internal_mac_address(), 
       _this->GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:openfoxwq.UnknownPlayRequest1.UnknownPlayRequest1Nested1)
@@ -4609,11 +10873,11 @@ inline void UnknownPlayRequest1_UnknownPlayRequest1Nested1::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.unknown_field_1_){}
+    , decltype(_impl_.mac_address_){}
   };
-  _impl_.unknown_field_1_.InitDefault();
+  _impl_.mac_address_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.unknown_field_1_.Set("", GetArenaForAllocation());
+    _impl_.mac_address_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -4628,7 +10892,7 @@ UnknownPlayRequest1_UnknownPlayRequest1Nested1::~UnknownPlayRequest1_UnknownPlay
 
 inline void UnknownPlayRequest1_UnknownPlayRequest1Nested1::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.unknown_field_1_.Destroy();
+  _impl_.mac_address_.Destroy();
 }
 
 void UnknownPlayRequest1_UnknownPlayRequest1Nested1::SetCachedSize(int size) const {
@@ -4643,7 +10907,7 @@ void UnknownPlayRequest1_UnknownPlayRequest1Nested1::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    _impl_.unknown_field_1_.ClearNonDefaultToEmpty();
+    _impl_.mac_address_.ClearNonDefaultToEmpty();
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
@@ -4656,14 +10920,14 @@ const char* UnknownPlayRequest1_UnknownPlayRequest1Nested1::_InternalParse(const
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string unknown_field_1 = 1;
+      // required string mac_address = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_unknown_field_1();
+          auto str = _internal_mutable_mac_address();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
           #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "openfoxwq.UnknownPlayRequest1.UnknownPlayRequest1Nested1.unknown_field_1");
+          ::_pbi::VerifyUTF8(str, "openfoxwq.UnknownPlayRequest1.UnknownPlayRequest1Nested1.mac_address");
           #endif  // !NDEBUG
         } else
           goto handle_unusual;
@@ -4699,14 +10963,14 @@ uint8_t* UnknownPlayRequest1_UnknownPlayRequest1Nested1::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string unknown_field_1 = 1;
+  // required string mac_address = 1;
   if (cached_has_bits & 0x00000001u) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_unknown_field_1().data(), static_cast<int>(this->_internal_unknown_field_1().length()),
+      this->_internal_mac_address().data(), static_cast<int>(this->_internal_mac_address().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "openfoxwq.UnknownPlayRequest1.UnknownPlayRequest1Nested1.unknown_field_1");
+      "openfoxwq.UnknownPlayRequest1.UnknownPlayRequest1Nested1.mac_address");
     target = stream->WriteStringMaybeAliased(
-        1, this->_internal_unknown_field_1(), target);
+        1, this->_internal_mac_address(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -4721,11 +10985,11 @@ size_t UnknownPlayRequest1_UnknownPlayRequest1Nested1::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:openfoxwq.UnknownPlayRequest1.UnknownPlayRequest1Nested1)
   size_t total_size = 0;
 
-  // required string unknown_field_1 = 1;
-  if (_internal_has_unknown_field_1()) {
+  // required string mac_address = 1;
+  if (_internal_has_mac_address()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_unknown_field_1());
+        this->_internal_mac_address());
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -4749,8 +11013,8 @@ void UnknownPlayRequest1_UnknownPlayRequest1Nested1::MergeImpl(::PROTOBUF_NAMESP
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_unknown_field_1()) {
-    _this->_internal_set_unknown_field_1(from._internal_unknown_field_1());
+  if (from._internal_has_mac_address()) {
+    _this->_internal_set_mac_address(from._internal_mac_address());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -4774,15 +11038,15 @@ void UnknownPlayRequest1_UnknownPlayRequest1Nested1::InternalSwap(UnknownPlayReq
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.unknown_field_1_, lhs_arena,
-      &other->_impl_.unknown_field_1_, rhs_arena
+      &_impl_.mac_address_, lhs_arena,
+      &other->_impl_.mac_address_, rhs_arena
   );
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata UnknownPlayRequest1_UnknownPlayRequest1Nested1::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_proto_2fplay_2eproto_getter, &descriptor_table_proto_2fplay_2eproto_once,
-      file_level_metadata_proto_2fplay_2eproto[14]);
+      file_level_metadata_proto_2fplay_2eproto[26]);
 }
 
 // ===================================================================
@@ -5051,7 +11315,7 @@ void UnknownPlayRequest1::InternalSwap(UnknownPlayRequest1* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata UnknownPlayRequest1::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_proto_2fplay_2eproto_getter, &descriptor_table_proto_2fplay_2eproto_once,
-      file_level_metadata_proto_2fplay_2eproto[15]);
+      file_level_metadata_proto_2fplay_2eproto[27]);
 }
 
 // ===================================================================
@@ -5242,7 +11506,13905 @@ void UnknownPlayResponse1::InternalSwap(UnknownPlayResponse1* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata UnknownPlayResponse1::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_proto_2fplay_2eproto_getter, &descriptor_table_proto_2fplay_2eproto_once,
-      file_level_metadata_proto_2fplay_2eproto[16]);
+      file_level_metadata_proto_2fplay_2eproto[28]);
+}
+
+// ===================================================================
+
+class GetRoomInfoRequest::_Internal {
+ public:
+  using HasBits = decltype(std::declval<GetRoomInfoRequest>()._impl_._has_bits_);
+  static const ::openfoxwq::RoomId& id(const GetRoomInfoRequest* msg);
+  static void set_has_id(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
+  }
+};
+
+const ::openfoxwq::RoomId&
+GetRoomInfoRequest::_Internal::id(const GetRoomInfoRequest* msg) {
+  return *msg->_impl_.id_;
+}
+void GetRoomInfoRequest::clear_id() {
+  if (_impl_.id_ != nullptr) _impl_.id_->Clear();
+  _impl_._has_bits_[0] &= ~0x00000001u;
+}
+GetRoomInfoRequest::GetRoomInfoRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:openfoxwq.GetRoomInfoRequest)
+}
+GetRoomInfoRequest::GetRoomInfoRequest(const GetRoomInfoRequest& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  GetRoomInfoRequest* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.id_){nullptr}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_id()) {
+    _this->_impl_.id_ = new ::openfoxwq::RoomId(*from._impl_.id_);
+  }
+  // @@protoc_insertion_point(copy_constructor:openfoxwq.GetRoomInfoRequest)
+}
+
+inline void GetRoomInfoRequest::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.id_){nullptr}
+  };
+}
+
+GetRoomInfoRequest::~GetRoomInfoRequest() {
+  // @@protoc_insertion_point(destructor:openfoxwq.GetRoomInfoRequest)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void GetRoomInfoRequest::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.id_;
+}
+
+void GetRoomInfoRequest::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void GetRoomInfoRequest::Clear() {
+// @@protoc_insertion_point(message_clear_start:openfoxwq.GetRoomInfoRequest)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    GOOGLE_DCHECK(_impl_.id_ != nullptr);
+    _impl_.id_->Clear();
+  }
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* GetRoomInfoRequest::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // required .openfoxwq.RoomId id = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_id(), ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  _impl_._has_bits_.Or(has_bits);
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* GetRoomInfoRequest::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:openfoxwq.GetRoomInfoRequest)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  // required .openfoxwq.RoomId id = 1;
+  if (cached_has_bits & 0x00000001u) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::id(this),
+        _Internal::id(this).GetCachedSize(), target, stream);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:openfoxwq.GetRoomInfoRequest)
+  return target;
+}
+
+size_t GetRoomInfoRequest::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:openfoxwq.GetRoomInfoRequest)
+  size_t total_size = 0;
+
+  // required .openfoxwq.RoomId id = 1;
+  if (_internal_has_id()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.id_);
+  }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData GetRoomInfoRequest::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    GetRoomInfoRequest::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetRoomInfoRequest::GetClassData() const { return &_class_data_; }
+
+
+void GetRoomInfoRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<GetRoomInfoRequest*>(&to_msg);
+  auto& from = static_cast<const GetRoomInfoRequest&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:openfoxwq.GetRoomInfoRequest)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from._internal_has_id()) {
+    _this->_internal_mutable_id()->::openfoxwq::RoomId::MergeFrom(
+        from._internal_id());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void GetRoomInfoRequest::CopyFrom(const GetRoomInfoRequest& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:openfoxwq.GetRoomInfoRequest)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool GetRoomInfoRequest::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
+  return true;
+}
+
+void GetRoomInfoRequest::InternalSwap(GetRoomInfoRequest* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  swap(_impl_.id_, other->_impl_.id_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata GetRoomInfoRequest::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_proto_2fplay_2eproto_getter, &descriptor_table_proto_2fplay_2eproto_once,
+      file_level_metadata_proto_2fplay_2eproto[29]);
+}
+
+// ===================================================================
+
+class GetRoomInfoResponse_Unknown2::_Internal {
+ public:
+  using HasBits = decltype(std::declval<GetRoomInfoResponse_Unknown2>()._impl_._has_bits_);
+  static void set_has_unknown_field_1(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static void set_has_unknown_field_2(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+};
+
+GetRoomInfoResponse_Unknown2::GetRoomInfoResponse_Unknown2(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:openfoxwq.GetRoomInfoResponse.Unknown2)
+}
+GetRoomInfoResponse_Unknown2::GetRoomInfoResponse_Unknown2(const GetRoomInfoResponse_Unknown2& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  GetRoomInfoResponse_Unknown2* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.unknown_field_1_){}
+    , decltype(_impl_.unknown_field_2_){}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::memcpy(&_impl_.unknown_field_1_, &from._impl_.unknown_field_1_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.unknown_field_2_) -
+    reinterpret_cast<char*>(&_impl_.unknown_field_1_)) + sizeof(_impl_.unknown_field_2_));
+  // @@protoc_insertion_point(copy_constructor:openfoxwq.GetRoomInfoResponse.Unknown2)
+}
+
+inline void GetRoomInfoResponse_Unknown2::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.unknown_field_1_){int64_t{0}}
+    , decltype(_impl_.unknown_field_2_){int64_t{0}}
+  };
+}
+
+GetRoomInfoResponse_Unknown2::~GetRoomInfoResponse_Unknown2() {
+  // @@protoc_insertion_point(destructor:openfoxwq.GetRoomInfoResponse.Unknown2)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void GetRoomInfoResponse_Unknown2::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+}
+
+void GetRoomInfoResponse_Unknown2::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void GetRoomInfoResponse_Unknown2::Clear() {
+// @@protoc_insertion_point(message_clear_start:openfoxwq.GetRoomInfoResponse.Unknown2)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    ::memset(&_impl_.unknown_field_1_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&_impl_.unknown_field_2_) -
+        reinterpret_cast<char*>(&_impl_.unknown_field_1_)) + sizeof(_impl_.unknown_field_2_));
+  }
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* GetRoomInfoResponse_Unknown2::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // optional int64 unknown_field_1 = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_unknown_field_1(&has_bits);
+          _impl_.unknown_field_1_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional int64 unknown_field_2 = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          _Internal::set_has_unknown_field_2(&has_bits);
+          _impl_.unknown_field_2_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  _impl_._has_bits_.Or(has_bits);
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* GetRoomInfoResponse_Unknown2::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:openfoxwq.GetRoomInfoResponse.Unknown2)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  // optional int64 unknown_field_1 = 1;
+  if (cached_has_bits & 0x00000001u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(1, this->_internal_unknown_field_1(), target);
+  }
+
+  // optional int64 unknown_field_2 = 2;
+  if (cached_has_bits & 0x00000002u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(2, this->_internal_unknown_field_2(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:openfoxwq.GetRoomInfoResponse.Unknown2)
+  return target;
+}
+
+size_t GetRoomInfoResponse_Unknown2::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:openfoxwq.GetRoomInfoResponse.Unknown2)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    // optional int64 unknown_field_1 = 1;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_unknown_field_1());
+    }
+
+    // optional int64 unknown_field_2 = 2;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_unknown_field_2());
+    }
+
+  }
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData GetRoomInfoResponse_Unknown2::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    GetRoomInfoResponse_Unknown2::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetRoomInfoResponse_Unknown2::GetClassData() const { return &_class_data_; }
+
+
+void GetRoomInfoResponse_Unknown2::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<GetRoomInfoResponse_Unknown2*>(&to_msg);
+  auto& from = static_cast<const GetRoomInfoResponse_Unknown2&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:openfoxwq.GetRoomInfoResponse.Unknown2)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_impl_.unknown_field_1_ = from._impl_.unknown_field_1_;
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_impl_.unknown_field_2_ = from._impl_.unknown_field_2_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void GetRoomInfoResponse_Unknown2::CopyFrom(const GetRoomInfoResponse_Unknown2& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:openfoxwq.GetRoomInfoResponse.Unknown2)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool GetRoomInfoResponse_Unknown2::IsInitialized() const {
+  return true;
+}
+
+void GetRoomInfoResponse_Unknown2::InternalSwap(GetRoomInfoResponse_Unknown2* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(GetRoomInfoResponse_Unknown2, _impl_.unknown_field_2_)
+      + sizeof(GetRoomInfoResponse_Unknown2::_impl_.unknown_field_2_)
+      - PROTOBUF_FIELD_OFFSET(GetRoomInfoResponse_Unknown2, _impl_.unknown_field_1_)>(
+          reinterpret_cast<char*>(&_impl_.unknown_field_1_),
+          reinterpret_cast<char*>(&other->_impl_.unknown_field_1_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata GetRoomInfoResponse_Unknown2::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_proto_2fplay_2eproto_getter, &descriptor_table_proto_2fplay_2eproto_once,
+      file_level_metadata_proto_2fplay_2eproto[30]);
+}
+
+// ===================================================================
+
+class GetRoomInfoResponse_PlayerEntry::_Internal {
+ public:
+  using HasBits = decltype(std::declval<GetRoomInfoResponse_PlayerEntry>()._impl_._has_bits_);
+  static void set_has_id(HasBits* has_bits) {
+    (*has_bits)[0] |= 8u;
+  }
+  static void set_has_name(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static void set_has_rank(HasBits* has_bits) {
+    (*has_bits)[0] |= 32u;
+  }
+  static void set_has_main_time(HasBits* has_bits) {
+    (*has_bits)[0] |= 16u;
+  }
+  static void set_has_byoyomi_periods(HasBits* has_bits) {
+    (*has_bits)[0] |= 128u;
+  }
+  static void set_has_byoyomi_time(HasBits* has_bits) {
+    (*has_bits)[0] |= 256u;
+  }
+  static void set_has_avatar_url(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static void set_has_country(HasBits* has_bits) {
+    (*has_bits)[0] |= 64u;
+  }
+  static void set_has_name_alt(HasBits* has_bits) {
+    (*has_bits)[0] |= 4u;
+  }
+};
+
+GetRoomInfoResponse_PlayerEntry::GetRoomInfoResponse_PlayerEntry(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:openfoxwq.GetRoomInfoResponse.PlayerEntry)
+}
+GetRoomInfoResponse_PlayerEntry::GetRoomInfoResponse_PlayerEntry(const GetRoomInfoResponse_PlayerEntry& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  GetRoomInfoResponse_PlayerEntry* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.name_){}
+    , decltype(_impl_.avatar_url_){}
+    , decltype(_impl_.name_alt_){}
+    , decltype(_impl_.id_){}
+    , decltype(_impl_.main_time_){}
+    , decltype(_impl_.rank_){}
+    , decltype(_impl_.country_){}
+    , decltype(_impl_.byoyomi_periods_){}
+    , decltype(_impl_.byoyomi_time_){}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _impl_.name_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.name_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (from._internal_has_name()) {
+    _this->_impl_.name_.Set(from._internal_name(), 
+      _this->GetArenaForAllocation());
+  }
+  _impl_.avatar_url_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.avatar_url_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (from._internal_has_avatar_url()) {
+    _this->_impl_.avatar_url_.Set(from._internal_avatar_url(), 
+      _this->GetArenaForAllocation());
+  }
+  _impl_.name_alt_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.name_alt_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (from._internal_has_name_alt()) {
+    _this->_impl_.name_alt_.Set(from._internal_name_alt(), 
+      _this->GetArenaForAllocation());
+  }
+  ::memcpy(&_impl_.id_, &from._impl_.id_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.byoyomi_time_) -
+    reinterpret_cast<char*>(&_impl_.id_)) + sizeof(_impl_.byoyomi_time_));
+  // @@protoc_insertion_point(copy_constructor:openfoxwq.GetRoomInfoResponse.PlayerEntry)
+}
+
+inline void GetRoomInfoResponse_PlayerEntry::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.name_){}
+    , decltype(_impl_.avatar_url_){}
+    , decltype(_impl_.name_alt_){}
+    , decltype(_impl_.id_){int64_t{0}}
+    , decltype(_impl_.main_time_){int64_t{0}}
+    , decltype(_impl_.rank_){0}
+    , decltype(_impl_.country_){0}
+    , decltype(_impl_.byoyomi_periods_){int64_t{0}}
+    , decltype(_impl_.byoyomi_time_){int64_t{0}}
+  };
+  _impl_.name_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.name_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  _impl_.avatar_url_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.avatar_url_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  _impl_.name_alt_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.name_alt_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+}
+
+GetRoomInfoResponse_PlayerEntry::~GetRoomInfoResponse_PlayerEntry() {
+  // @@protoc_insertion_point(destructor:openfoxwq.GetRoomInfoResponse.PlayerEntry)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void GetRoomInfoResponse_PlayerEntry::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.name_.Destroy();
+  _impl_.avatar_url_.Destroy();
+  _impl_.name_alt_.Destroy();
+}
+
+void GetRoomInfoResponse_PlayerEntry::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void GetRoomInfoResponse_PlayerEntry::Clear() {
+// @@protoc_insertion_point(message_clear_start:openfoxwq.GetRoomInfoResponse.PlayerEntry)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000007u) {
+    if (cached_has_bits & 0x00000001u) {
+      _impl_.name_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _impl_.avatar_url_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000004u) {
+      _impl_.name_alt_.ClearNonDefaultToEmpty();
+    }
+  }
+  if (cached_has_bits & 0x000000f8u) {
+    ::memset(&_impl_.id_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&_impl_.byoyomi_periods_) -
+        reinterpret_cast<char*>(&_impl_.id_)) + sizeof(_impl_.byoyomi_periods_));
+  }
+  _impl_.byoyomi_time_ = int64_t{0};
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* GetRoomInfoResponse_PlayerEntry::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // optional int64 id = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_id(&has_bits);
+          _impl_.id_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional string name = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
+          auto str = _internal_mutable_name();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+          #ifndef NDEBUG
+          ::_pbi::VerifyUTF8(str, "openfoxwq.GetRoomInfoResponse.PlayerEntry.name");
+          #endif  // !NDEBUG
+        } else
+          goto handle_unusual;
+        continue;
+      // optional .openfoxwq.Rank rank = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+          if (PROTOBUF_PREDICT_TRUE(::openfoxwq::Rank_IsValid(val))) {
+            _internal_set_rank(static_cast<::openfoxwq::Rank>(val));
+          } else {
+            ::PROTOBUF_NAMESPACE_ID::internal::WriteVarint(3, val, mutable_unknown_fields());
+          }
+        } else
+          goto handle_unusual;
+        continue;
+      // optional int64 main_time = 9;
+      case 9:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 72)) {
+          _Internal::set_has_main_time(&has_bits);
+          _impl_.main_time_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional int64 byoyomi_periods = 10;
+      case 10:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 80)) {
+          _Internal::set_has_byoyomi_periods(&has_bits);
+          _impl_.byoyomi_periods_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional int64 byoyomi_time = 11;
+      case 11:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 88)) {
+          _Internal::set_has_byoyomi_time(&has_bits);
+          _impl_.byoyomi_time_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional string avatar_url = 13;
+      case 13:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 106)) {
+          auto str = _internal_mutable_avatar_url();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+          #ifndef NDEBUG
+          ::_pbi::VerifyUTF8(str, "openfoxwq.GetRoomInfoResponse.PlayerEntry.avatar_url");
+          #endif  // !NDEBUG
+        } else
+          goto handle_unusual;
+        continue;
+      // optional .openfoxwq.Country country = 15;
+      case 15:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 120)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+          if (PROTOBUF_PREDICT_TRUE(::openfoxwq::Country_IsValid(val))) {
+            _internal_set_country(static_cast<::openfoxwq::Country>(val));
+          } else {
+            ::PROTOBUF_NAMESPACE_ID::internal::WriteVarint(15, val, mutable_unknown_fields());
+          }
+        } else
+          goto handle_unusual;
+        continue;
+      // optional string name_alt = 16;
+      case 16:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 130)) {
+          auto str = _internal_mutable_name_alt();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+          #ifndef NDEBUG
+          ::_pbi::VerifyUTF8(str, "openfoxwq.GetRoomInfoResponse.PlayerEntry.name_alt");
+          #endif  // !NDEBUG
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  _impl_._has_bits_.Or(has_bits);
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* GetRoomInfoResponse_PlayerEntry::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:openfoxwq.GetRoomInfoResponse.PlayerEntry)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  // optional int64 id = 1;
+  if (cached_has_bits & 0x00000008u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(1, this->_internal_id(), target);
+  }
+
+  // optional string name = 2;
+  if (cached_has_bits & 0x00000001u) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->_internal_name().data(), static_cast<int>(this->_internal_name().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
+      "openfoxwq.GetRoomInfoResponse.PlayerEntry.name");
+    target = stream->WriteStringMaybeAliased(
+        2, this->_internal_name(), target);
+  }
+
+  // optional .openfoxwq.Rank rank = 3;
+  if (cached_has_bits & 0x00000020u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      3, this->_internal_rank(), target);
+  }
+
+  // optional int64 main_time = 9;
+  if (cached_has_bits & 0x00000010u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(9, this->_internal_main_time(), target);
+  }
+
+  // optional int64 byoyomi_periods = 10;
+  if (cached_has_bits & 0x00000080u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(10, this->_internal_byoyomi_periods(), target);
+  }
+
+  // optional int64 byoyomi_time = 11;
+  if (cached_has_bits & 0x00000100u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(11, this->_internal_byoyomi_time(), target);
+  }
+
+  // optional string avatar_url = 13;
+  if (cached_has_bits & 0x00000002u) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->_internal_avatar_url().data(), static_cast<int>(this->_internal_avatar_url().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
+      "openfoxwq.GetRoomInfoResponse.PlayerEntry.avatar_url");
+    target = stream->WriteStringMaybeAliased(
+        13, this->_internal_avatar_url(), target);
+  }
+
+  // optional .openfoxwq.Country country = 15;
+  if (cached_has_bits & 0x00000040u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      15, this->_internal_country(), target);
+  }
+
+  // optional string name_alt = 16;
+  if (cached_has_bits & 0x00000004u) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->_internal_name_alt().data(), static_cast<int>(this->_internal_name_alt().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
+      "openfoxwq.GetRoomInfoResponse.PlayerEntry.name_alt");
+    target = stream->WriteStringMaybeAliased(
+        16, this->_internal_name_alt(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:openfoxwq.GetRoomInfoResponse.PlayerEntry)
+  return target;
+}
+
+size_t GetRoomInfoResponse_PlayerEntry::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:openfoxwq.GetRoomInfoResponse.PlayerEntry)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x000000ffu) {
+    // optional string name = 2;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+          this->_internal_name());
+    }
+
+    // optional string avatar_url = 13;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+          this->_internal_avatar_url());
+    }
+
+    // optional string name_alt = 16;
+    if (cached_has_bits & 0x00000004u) {
+      total_size += 2 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+          this->_internal_name_alt());
+    }
+
+    // optional int64 id = 1;
+    if (cached_has_bits & 0x00000008u) {
+      total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_id());
+    }
+
+    // optional int64 main_time = 9;
+    if (cached_has_bits & 0x00000010u) {
+      total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_main_time());
+    }
+
+    // optional .openfoxwq.Rank rank = 3;
+    if (cached_has_bits & 0x00000020u) {
+      total_size += 1 +
+        ::_pbi::WireFormatLite::EnumSize(this->_internal_rank());
+    }
+
+    // optional .openfoxwq.Country country = 15;
+    if (cached_has_bits & 0x00000040u) {
+      total_size += 1 +
+        ::_pbi::WireFormatLite::EnumSize(this->_internal_country());
+    }
+
+    // optional int64 byoyomi_periods = 10;
+    if (cached_has_bits & 0x00000080u) {
+      total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_byoyomi_periods());
+    }
+
+  }
+  // optional int64 byoyomi_time = 11;
+  if (cached_has_bits & 0x00000100u) {
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_byoyomi_time());
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData GetRoomInfoResponse_PlayerEntry::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    GetRoomInfoResponse_PlayerEntry::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetRoomInfoResponse_PlayerEntry::GetClassData() const { return &_class_data_; }
+
+
+void GetRoomInfoResponse_PlayerEntry::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<GetRoomInfoResponse_PlayerEntry*>(&to_msg);
+  auto& from = static_cast<const GetRoomInfoResponse_PlayerEntry&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:openfoxwq.GetRoomInfoResponse.PlayerEntry)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x000000ffu) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_set_name(from._internal_name());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_internal_set_avatar_url(from._internal_avatar_url());
+    }
+    if (cached_has_bits & 0x00000004u) {
+      _this->_internal_set_name_alt(from._internal_name_alt());
+    }
+    if (cached_has_bits & 0x00000008u) {
+      _this->_impl_.id_ = from._impl_.id_;
+    }
+    if (cached_has_bits & 0x00000010u) {
+      _this->_impl_.main_time_ = from._impl_.main_time_;
+    }
+    if (cached_has_bits & 0x00000020u) {
+      _this->_impl_.rank_ = from._impl_.rank_;
+    }
+    if (cached_has_bits & 0x00000040u) {
+      _this->_impl_.country_ = from._impl_.country_;
+    }
+    if (cached_has_bits & 0x00000080u) {
+      _this->_impl_.byoyomi_periods_ = from._impl_.byoyomi_periods_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
+  }
+  if (cached_has_bits & 0x00000100u) {
+    _this->_internal_set_byoyomi_time(from._internal_byoyomi_time());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void GetRoomInfoResponse_PlayerEntry::CopyFrom(const GetRoomInfoResponse_PlayerEntry& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:openfoxwq.GetRoomInfoResponse.PlayerEntry)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool GetRoomInfoResponse_PlayerEntry::IsInitialized() const {
+  return true;
+}
+
+void GetRoomInfoResponse_PlayerEntry::InternalSwap(GetRoomInfoResponse_PlayerEntry* other) {
+  using std::swap;
+  auto* lhs_arena = GetArenaForAllocation();
+  auto* rhs_arena = other->GetArenaForAllocation();
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.name_, lhs_arena,
+      &other->_impl_.name_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.avatar_url_, lhs_arena,
+      &other->_impl_.avatar_url_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.name_alt_, lhs_arena,
+      &other->_impl_.name_alt_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(GetRoomInfoResponse_PlayerEntry, _impl_.byoyomi_time_)
+      + sizeof(GetRoomInfoResponse_PlayerEntry::_impl_.byoyomi_time_)
+      - PROTOBUF_FIELD_OFFSET(GetRoomInfoResponse_PlayerEntry, _impl_.id_)>(
+          reinterpret_cast<char*>(&_impl_.id_),
+          reinterpret_cast<char*>(&other->_impl_.id_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata GetRoomInfoResponse_PlayerEntry::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_proto_2fplay_2eproto_getter, &descriptor_table_proto_2fplay_2eproto_once,
+      file_level_metadata_proto_2fplay_2eproto[31]);
+}
+
+// ===================================================================
+
+class GetRoomInfoResponse_RoomSettings::_Internal {
+ public:
+  using HasBits = decltype(std::declval<GetRoomInfoResponse_RoomSettings>()._impl_._has_bits_);
+  static void set_has_board_size(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static void set_has_komi(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static void set_has_player_id_1(HasBits* has_bits) {
+    (*has_bits)[0] |= 4u;
+  }
+  static void set_has_main_time(HasBits* has_bits) {
+    (*has_bits)[0] |= 8u;
+  }
+  static void set_has_byoyomi_time(HasBits* has_bits) {
+    (*has_bits)[0] |= 16u;
+  }
+  static void set_has_byoyomi_periods(HasBits* has_bits) {
+    (*has_bits)[0] |= 32u;
+  }
+  static void set_has_player_id_2(HasBits* has_bits) {
+    (*has_bits)[0] |= 64u;
+  }
+};
+
+GetRoomInfoResponse_RoomSettings::GetRoomInfoResponse_RoomSettings(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:openfoxwq.GetRoomInfoResponse.RoomSettings)
+}
+GetRoomInfoResponse_RoomSettings::GetRoomInfoResponse_RoomSettings(const GetRoomInfoResponse_RoomSettings& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  GetRoomInfoResponse_RoomSettings* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.board_size_){}
+    , decltype(_impl_.komi_){}
+    , decltype(_impl_.player_id_1_){}
+    , decltype(_impl_.main_time_){}
+    , decltype(_impl_.byoyomi_time_){}
+    , decltype(_impl_.byoyomi_periods_){}
+    , decltype(_impl_.player_id_2_){}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::memcpy(&_impl_.board_size_, &from._impl_.board_size_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.player_id_2_) -
+    reinterpret_cast<char*>(&_impl_.board_size_)) + sizeof(_impl_.player_id_2_));
+  // @@protoc_insertion_point(copy_constructor:openfoxwq.GetRoomInfoResponse.RoomSettings)
+}
+
+inline void GetRoomInfoResponse_RoomSettings::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.board_size_){int64_t{0}}
+    , decltype(_impl_.komi_){int64_t{0}}
+    , decltype(_impl_.player_id_1_){int64_t{0}}
+    , decltype(_impl_.main_time_){int64_t{0}}
+    , decltype(_impl_.byoyomi_time_){int64_t{0}}
+    , decltype(_impl_.byoyomi_periods_){int64_t{0}}
+    , decltype(_impl_.player_id_2_){int64_t{0}}
+  };
+}
+
+GetRoomInfoResponse_RoomSettings::~GetRoomInfoResponse_RoomSettings() {
+  // @@protoc_insertion_point(destructor:openfoxwq.GetRoomInfoResponse.RoomSettings)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void GetRoomInfoResponse_RoomSettings::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+}
+
+void GetRoomInfoResponse_RoomSettings::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void GetRoomInfoResponse_RoomSettings::Clear() {
+// @@protoc_insertion_point(message_clear_start:openfoxwq.GetRoomInfoResponse.RoomSettings)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x0000007fu) {
+    ::memset(&_impl_.board_size_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&_impl_.player_id_2_) -
+        reinterpret_cast<char*>(&_impl_.board_size_)) + sizeof(_impl_.player_id_2_));
+  }
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* GetRoomInfoResponse_RoomSettings::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // optional int64 board_size = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_board_size(&has_bits);
+          _impl_.board_size_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional int64 komi = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
+          _Internal::set_has_komi(&has_bits);
+          _impl_.komi_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional int64 player_id_1 = 5;
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
+          _Internal::set_has_player_id_1(&has_bits);
+          _impl_.player_id_1_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional int64 main_time = 6;
+      case 6:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 48)) {
+          _Internal::set_has_main_time(&has_bits);
+          _impl_.main_time_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional int64 byoyomi_time = 7;
+      case 7:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 56)) {
+          _Internal::set_has_byoyomi_time(&has_bits);
+          _impl_.byoyomi_time_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional int64 byoyomi_periods = 8;
+      case 8:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 64)) {
+          _Internal::set_has_byoyomi_periods(&has_bits);
+          _impl_.byoyomi_periods_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional int64 player_id_2 = 26;
+      case 26:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 208)) {
+          _Internal::set_has_player_id_2(&has_bits);
+          _impl_.player_id_2_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  _impl_._has_bits_.Or(has_bits);
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* GetRoomInfoResponse_RoomSettings::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:openfoxwq.GetRoomInfoResponse.RoomSettings)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  // optional int64 board_size = 1;
+  if (cached_has_bits & 0x00000001u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(1, this->_internal_board_size(), target);
+  }
+
+  // optional int64 komi = 4;
+  if (cached_has_bits & 0x00000002u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(4, this->_internal_komi(), target);
+  }
+
+  // optional int64 player_id_1 = 5;
+  if (cached_has_bits & 0x00000004u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(5, this->_internal_player_id_1(), target);
+  }
+
+  // optional int64 main_time = 6;
+  if (cached_has_bits & 0x00000008u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(6, this->_internal_main_time(), target);
+  }
+
+  // optional int64 byoyomi_time = 7;
+  if (cached_has_bits & 0x00000010u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(7, this->_internal_byoyomi_time(), target);
+  }
+
+  // optional int64 byoyomi_periods = 8;
+  if (cached_has_bits & 0x00000020u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(8, this->_internal_byoyomi_periods(), target);
+  }
+
+  // optional int64 player_id_2 = 26;
+  if (cached_has_bits & 0x00000040u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(26, this->_internal_player_id_2(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:openfoxwq.GetRoomInfoResponse.RoomSettings)
+  return target;
+}
+
+size_t GetRoomInfoResponse_RoomSettings::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:openfoxwq.GetRoomInfoResponse.RoomSettings)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x0000007fu) {
+    // optional int64 board_size = 1;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_board_size());
+    }
+
+    // optional int64 komi = 4;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_komi());
+    }
+
+    // optional int64 player_id_1 = 5;
+    if (cached_has_bits & 0x00000004u) {
+      total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_player_id_1());
+    }
+
+    // optional int64 main_time = 6;
+    if (cached_has_bits & 0x00000008u) {
+      total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_main_time());
+    }
+
+    // optional int64 byoyomi_time = 7;
+    if (cached_has_bits & 0x00000010u) {
+      total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_byoyomi_time());
+    }
+
+    // optional int64 byoyomi_periods = 8;
+    if (cached_has_bits & 0x00000020u) {
+      total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_byoyomi_periods());
+    }
+
+    // optional int64 player_id_2 = 26;
+    if (cached_has_bits & 0x00000040u) {
+      total_size += 2 +
+        ::_pbi::WireFormatLite::Int64Size(
+          this->_internal_player_id_2());
+    }
+
+  }
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData GetRoomInfoResponse_RoomSettings::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    GetRoomInfoResponse_RoomSettings::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetRoomInfoResponse_RoomSettings::GetClassData() const { return &_class_data_; }
+
+
+void GetRoomInfoResponse_RoomSettings::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<GetRoomInfoResponse_RoomSettings*>(&to_msg);
+  auto& from = static_cast<const GetRoomInfoResponse_RoomSettings&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:openfoxwq.GetRoomInfoResponse.RoomSettings)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x0000007fu) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_impl_.board_size_ = from._impl_.board_size_;
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_impl_.komi_ = from._impl_.komi_;
+    }
+    if (cached_has_bits & 0x00000004u) {
+      _this->_impl_.player_id_1_ = from._impl_.player_id_1_;
+    }
+    if (cached_has_bits & 0x00000008u) {
+      _this->_impl_.main_time_ = from._impl_.main_time_;
+    }
+    if (cached_has_bits & 0x00000010u) {
+      _this->_impl_.byoyomi_time_ = from._impl_.byoyomi_time_;
+    }
+    if (cached_has_bits & 0x00000020u) {
+      _this->_impl_.byoyomi_periods_ = from._impl_.byoyomi_periods_;
+    }
+    if (cached_has_bits & 0x00000040u) {
+      _this->_impl_.player_id_2_ = from._impl_.player_id_2_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void GetRoomInfoResponse_RoomSettings::CopyFrom(const GetRoomInfoResponse_RoomSettings& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:openfoxwq.GetRoomInfoResponse.RoomSettings)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool GetRoomInfoResponse_RoomSettings::IsInitialized() const {
+  return true;
+}
+
+void GetRoomInfoResponse_RoomSettings::InternalSwap(GetRoomInfoResponse_RoomSettings* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(GetRoomInfoResponse_RoomSettings, _impl_.player_id_2_)
+      + sizeof(GetRoomInfoResponse_RoomSettings::_impl_.player_id_2_)
+      - PROTOBUF_FIELD_OFFSET(GetRoomInfoResponse_RoomSettings, _impl_.board_size_)>(
+          reinterpret_cast<char*>(&_impl_.board_size_),
+          reinterpret_cast<char*>(&other->_impl_.board_size_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata GetRoomInfoResponse_RoomSettings::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_proto_2fplay_2eproto_getter, &descriptor_table_proto_2fplay_2eproto_once,
+      file_level_metadata_proto_2fplay_2eproto[32]);
+}
+
+// ===================================================================
+
+class GetRoomInfoResponse_Unknown5::_Internal {
+ public:
+};
+
+GetRoomInfoResponse_Unknown5::GetRoomInfoResponse_Unknown5(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase(arena, is_message_owned) {
+  // @@protoc_insertion_point(arena_constructor:openfoxwq.GetRoomInfoResponse.Unknown5)
+}
+GetRoomInfoResponse_Unknown5::GetRoomInfoResponse_Unknown5(const GetRoomInfoResponse_Unknown5& from)
+  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase() {
+  GetRoomInfoResponse_Unknown5* const _this = this; (void)_this;
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  // @@protoc_insertion_point(copy_constructor:openfoxwq.GetRoomInfoResponse.Unknown5)
+}
+
+
+
+
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData GetRoomInfoResponse_Unknown5::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl,
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl,
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetRoomInfoResponse_Unknown5::GetClassData() const { return &_class_data_; }
+
+
+
+
+
+
+
+::PROTOBUF_NAMESPACE_ID::Metadata GetRoomInfoResponse_Unknown5::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_proto_2fplay_2eproto_getter, &descriptor_table_proto_2fplay_2eproto_once,
+      file_level_metadata_proto_2fplay_2eproto[33]);
+}
+
+// ===================================================================
+
+class GetRoomInfoResponse_RoomInfo::_Internal {
+ public:
+  using HasBits = decltype(std::declval<GetRoomInfoResponse_RoomInfo>()._impl_._has_bits_);
+  static const ::openfoxwq::RoomId& id(const GetRoomInfoResponse_RoomInfo* msg);
+  static void set_has_id(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static const ::openfoxwq::GetRoomInfoResponse_RoomSettings& settings(const GetRoomInfoResponse_RoomInfo* msg);
+  static void set_has_settings(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static void set_has_unknown_field_4(HasBits* has_bits) {
+    (*has_bits)[0] |= 8u;
+  }
+  static const ::openfoxwq::GetRoomInfoResponse_Unknown5& unknown_field_5(const GetRoomInfoResponse_RoomInfo* msg);
+  static void set_has_unknown_field_5(HasBits* has_bits) {
+    (*has_bits)[0] |= 4u;
+  }
+  static void set_has_ts_unix(HasBits* has_bits) {
+    (*has_bits)[0] |= 16u;
+  }
+  static void set_has_ts_unix_ns(HasBits* has_bits) {
+    (*has_bits)[0] |= 32u;
+  }
+};
+
+const ::openfoxwq::RoomId&
+GetRoomInfoResponse_RoomInfo::_Internal::id(const GetRoomInfoResponse_RoomInfo* msg) {
+  return *msg->_impl_.id_;
+}
+const ::openfoxwq::GetRoomInfoResponse_RoomSettings&
+GetRoomInfoResponse_RoomInfo::_Internal::settings(const GetRoomInfoResponse_RoomInfo* msg) {
+  return *msg->_impl_.settings_;
+}
+const ::openfoxwq::GetRoomInfoResponse_Unknown5&
+GetRoomInfoResponse_RoomInfo::_Internal::unknown_field_5(const GetRoomInfoResponse_RoomInfo* msg) {
+  return *msg->_impl_.unknown_field_5_;
+}
+void GetRoomInfoResponse_RoomInfo::clear_id() {
+  if (_impl_.id_ != nullptr) _impl_.id_->Clear();
+  _impl_._has_bits_[0] &= ~0x00000001u;
+}
+GetRoomInfoResponse_RoomInfo::GetRoomInfoResponse_RoomInfo(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:openfoxwq.GetRoomInfoResponse.RoomInfo)
+}
+GetRoomInfoResponse_RoomInfo::GetRoomInfoResponse_RoomInfo(const GetRoomInfoResponse_RoomInfo& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  GetRoomInfoResponse_RoomInfo* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.players_){from._impl_.players_}
+    , decltype(_impl_.id_){nullptr}
+    , decltype(_impl_.settings_){nullptr}
+    , decltype(_impl_.unknown_field_5_){nullptr}
+    , decltype(_impl_.unknown_field_4_){}
+    , decltype(_impl_.ts_unix_){}
+    , decltype(_impl_.ts_unix_ns_){}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_id()) {
+    _this->_impl_.id_ = new ::openfoxwq::RoomId(*from._impl_.id_);
+  }
+  if (from._internal_has_settings()) {
+    _this->_impl_.settings_ = new ::openfoxwq::GetRoomInfoResponse_RoomSettings(*from._impl_.settings_);
+  }
+  if (from._internal_has_unknown_field_5()) {
+    _this->_impl_.unknown_field_5_ = new ::openfoxwq::GetRoomInfoResponse_Unknown5(*from._impl_.unknown_field_5_);
+  }
+  ::memcpy(&_impl_.unknown_field_4_, &from._impl_.unknown_field_4_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.ts_unix_ns_) -
+    reinterpret_cast<char*>(&_impl_.unknown_field_4_)) + sizeof(_impl_.ts_unix_ns_));
+  // @@protoc_insertion_point(copy_constructor:openfoxwq.GetRoomInfoResponse.RoomInfo)
+}
+
+inline void GetRoomInfoResponse_RoomInfo::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.players_){arena}
+    , decltype(_impl_.id_){nullptr}
+    , decltype(_impl_.settings_){nullptr}
+    , decltype(_impl_.unknown_field_5_){nullptr}
+    , decltype(_impl_.unknown_field_4_){int64_t{0}}
+    , decltype(_impl_.ts_unix_){int64_t{0}}
+    , decltype(_impl_.ts_unix_ns_){int64_t{0}}
+  };
+}
+
+GetRoomInfoResponse_RoomInfo::~GetRoomInfoResponse_RoomInfo() {
+  // @@protoc_insertion_point(destructor:openfoxwq.GetRoomInfoResponse.RoomInfo)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void GetRoomInfoResponse_RoomInfo::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.players_.~RepeatedPtrField();
+  if (this != internal_default_instance()) delete _impl_.id_;
+  if (this != internal_default_instance()) delete _impl_.settings_;
+  if (this != internal_default_instance()) delete _impl_.unknown_field_5_;
+}
+
+void GetRoomInfoResponse_RoomInfo::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void GetRoomInfoResponse_RoomInfo::Clear() {
+// @@protoc_insertion_point(message_clear_start:openfoxwq.GetRoomInfoResponse.RoomInfo)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _impl_.players_.Clear();
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000007u) {
+    if (cached_has_bits & 0x00000001u) {
+      GOOGLE_DCHECK(_impl_.id_ != nullptr);
+      _impl_.id_->Clear();
+    }
+    if (cached_has_bits & 0x00000002u) {
+      GOOGLE_DCHECK(_impl_.settings_ != nullptr);
+      _impl_.settings_->Clear();
+    }
+    if (cached_has_bits & 0x00000004u) {
+      GOOGLE_DCHECK(_impl_.unknown_field_5_ != nullptr);
+      _impl_.unknown_field_5_->Clear();
+    }
+  }
+  if (cached_has_bits & 0x00000038u) {
+    ::memset(&_impl_.unknown_field_4_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&_impl_.ts_unix_ns_) -
+        reinterpret_cast<char*>(&_impl_.unknown_field_4_)) + sizeof(_impl_.ts_unix_ns_));
+  }
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* GetRoomInfoResponse_RoomInfo::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // optional .openfoxwq.RoomId id = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_id(), ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // repeated .openfoxwq.GetRoomInfoResponse.PlayerEntry players = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            ptr = ctx->ParseMessage(_internal_add_players(), ptr);
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<18>(ptr));
+        } else
+          goto handle_unusual;
+        continue;
+      // optional .openfoxwq.GetRoomInfoResponse.RoomSettings settings = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
+          ptr = ctx->ParseMessage(_internal_mutable_settings(), ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional int64 unknown_field_4 = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
+          _Internal::set_has_unknown_field_4(&has_bits);
+          _impl_.unknown_field_4_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional .openfoxwq.GetRoomInfoResponse.Unknown5 unknown_field_5 = 5;
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
+          ptr = ctx->ParseMessage(_internal_mutable_unknown_field_5(), ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional int64 ts_unix = 6;
+      case 6:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 48)) {
+          _Internal::set_has_ts_unix(&has_bits);
+          _impl_.ts_unix_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional int64 ts_unix_ns = 12;
+      case 12:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 96)) {
+          _Internal::set_has_ts_unix_ns(&has_bits);
+          _impl_.ts_unix_ns_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  _impl_._has_bits_.Or(has_bits);
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* GetRoomInfoResponse_RoomInfo::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:openfoxwq.GetRoomInfoResponse.RoomInfo)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  // optional .openfoxwq.RoomId id = 1;
+  if (cached_has_bits & 0x00000001u) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::id(this),
+        _Internal::id(this).GetCachedSize(), target, stream);
+  }
+
+  // repeated .openfoxwq.GetRoomInfoResponse.PlayerEntry players = 2;
+  for (unsigned i = 0,
+      n = static_cast<unsigned>(this->_internal_players_size()); i < n; i++) {
+    const auto& repfield = this->_internal_players(i);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+        InternalWriteMessage(2, repfield, repfield.GetCachedSize(), target, stream);
+  }
+
+  // optional .openfoxwq.GetRoomInfoResponse.RoomSettings settings = 3;
+  if (cached_has_bits & 0x00000002u) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(3, _Internal::settings(this),
+        _Internal::settings(this).GetCachedSize(), target, stream);
+  }
+
+  // optional int64 unknown_field_4 = 4;
+  if (cached_has_bits & 0x00000008u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(4, this->_internal_unknown_field_4(), target);
+  }
+
+  // optional .openfoxwq.GetRoomInfoResponse.Unknown5 unknown_field_5 = 5;
+  if (cached_has_bits & 0x00000004u) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(5, _Internal::unknown_field_5(this),
+        _Internal::unknown_field_5(this).GetCachedSize(), target, stream);
+  }
+
+  // optional int64 ts_unix = 6;
+  if (cached_has_bits & 0x00000010u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(6, this->_internal_ts_unix(), target);
+  }
+
+  // optional int64 ts_unix_ns = 12;
+  if (cached_has_bits & 0x00000020u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(12, this->_internal_ts_unix_ns(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:openfoxwq.GetRoomInfoResponse.RoomInfo)
+  return target;
+}
+
+size_t GetRoomInfoResponse_RoomInfo::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:openfoxwq.GetRoomInfoResponse.RoomInfo)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // repeated .openfoxwq.GetRoomInfoResponse.PlayerEntry players = 2;
+  total_size += 1UL * this->_internal_players_size();
+  for (const auto& msg : this->_impl_.players_) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
+  }
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x0000003fu) {
+    // optional .openfoxwq.RoomId id = 1;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+          *_impl_.id_);
+    }
+
+    // optional .openfoxwq.GetRoomInfoResponse.RoomSettings settings = 3;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+          *_impl_.settings_);
+    }
+
+    // optional .openfoxwq.GetRoomInfoResponse.Unknown5 unknown_field_5 = 5;
+    if (cached_has_bits & 0x00000004u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+          *_impl_.unknown_field_5_);
+    }
+
+    // optional int64 unknown_field_4 = 4;
+    if (cached_has_bits & 0x00000008u) {
+      total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_unknown_field_4());
+    }
+
+    // optional int64 ts_unix = 6;
+    if (cached_has_bits & 0x00000010u) {
+      total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_ts_unix());
+    }
+
+    // optional int64 ts_unix_ns = 12;
+    if (cached_has_bits & 0x00000020u) {
+      total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_ts_unix_ns());
+    }
+
+  }
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData GetRoomInfoResponse_RoomInfo::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    GetRoomInfoResponse_RoomInfo::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetRoomInfoResponse_RoomInfo::GetClassData() const { return &_class_data_; }
+
+
+void GetRoomInfoResponse_RoomInfo::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<GetRoomInfoResponse_RoomInfo*>(&to_msg);
+  auto& from = static_cast<const GetRoomInfoResponse_RoomInfo&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:openfoxwq.GetRoomInfoResponse.RoomInfo)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  _this->_impl_.players_.MergeFrom(from._impl_.players_);
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x0000003fu) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_mutable_id()->::openfoxwq::RoomId::MergeFrom(
+          from._internal_id());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_internal_mutable_settings()->::openfoxwq::GetRoomInfoResponse_RoomSettings::MergeFrom(
+          from._internal_settings());
+    }
+    if (cached_has_bits & 0x00000004u) {
+      _this->_internal_mutable_unknown_field_5()->::openfoxwq::GetRoomInfoResponse_Unknown5::MergeFrom(
+          from._internal_unknown_field_5());
+    }
+    if (cached_has_bits & 0x00000008u) {
+      _this->_impl_.unknown_field_4_ = from._impl_.unknown_field_4_;
+    }
+    if (cached_has_bits & 0x00000010u) {
+      _this->_impl_.ts_unix_ = from._impl_.ts_unix_;
+    }
+    if (cached_has_bits & 0x00000020u) {
+      _this->_impl_.ts_unix_ns_ = from._impl_.ts_unix_ns_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void GetRoomInfoResponse_RoomInfo::CopyFrom(const GetRoomInfoResponse_RoomInfo& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:openfoxwq.GetRoomInfoResponse.RoomInfo)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool GetRoomInfoResponse_RoomInfo::IsInitialized() const {
+  return true;
+}
+
+void GetRoomInfoResponse_RoomInfo::InternalSwap(GetRoomInfoResponse_RoomInfo* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  _impl_.players_.InternalSwap(&other->_impl_.players_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(GetRoomInfoResponse_RoomInfo, _impl_.ts_unix_ns_)
+      + sizeof(GetRoomInfoResponse_RoomInfo::_impl_.ts_unix_ns_)
+      - PROTOBUF_FIELD_OFFSET(GetRoomInfoResponse_RoomInfo, _impl_.id_)>(
+          reinterpret_cast<char*>(&_impl_.id_),
+          reinterpret_cast<char*>(&other->_impl_.id_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata GetRoomInfoResponse_RoomInfo::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_proto_2fplay_2eproto_getter, &descriptor_table_proto_2fplay_2eproto_once,
+      file_level_metadata_proto_2fplay_2eproto[34]);
+}
+
+// ===================================================================
+
+class GetRoomInfoResponse::_Internal {
+ public:
+  using HasBits = decltype(std::declval<GetRoomInfoResponse>()._impl_._has_bits_);
+  static void set_has_error_code(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static const ::openfoxwq::GetRoomInfoResponse_RoomInfo& room_info(const GetRoomInfoResponse* msg);
+  static void set_has_room_info(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+};
+
+const ::openfoxwq::GetRoomInfoResponse_RoomInfo&
+GetRoomInfoResponse::_Internal::room_info(const GetRoomInfoResponse* msg) {
+  return *msg->_impl_.room_info_;
+}
+GetRoomInfoResponse::GetRoomInfoResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:openfoxwq.GetRoomInfoResponse)
+}
+GetRoomInfoResponse::GetRoomInfoResponse(const GetRoomInfoResponse& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  GetRoomInfoResponse* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.unknown_field_2_){from._impl_.unknown_field_2_}
+    , decltype(_impl_.room_info_){nullptr}
+    , decltype(_impl_.error_code_){}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_room_info()) {
+    _this->_impl_.room_info_ = new ::openfoxwq::GetRoomInfoResponse_RoomInfo(*from._impl_.room_info_);
+  }
+  _this->_impl_.error_code_ = from._impl_.error_code_;
+  // @@protoc_insertion_point(copy_constructor:openfoxwq.GetRoomInfoResponse)
+}
+
+inline void GetRoomInfoResponse::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.unknown_field_2_){arena}
+    , decltype(_impl_.room_info_){nullptr}
+    , decltype(_impl_.error_code_){int64_t{0}}
+  };
+}
+
+GetRoomInfoResponse::~GetRoomInfoResponse() {
+  // @@protoc_insertion_point(destructor:openfoxwq.GetRoomInfoResponse)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void GetRoomInfoResponse::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.unknown_field_2_.~RepeatedPtrField();
+  if (this != internal_default_instance()) delete _impl_.room_info_;
+}
+
+void GetRoomInfoResponse::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void GetRoomInfoResponse::Clear() {
+// @@protoc_insertion_point(message_clear_start:openfoxwq.GetRoomInfoResponse)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _impl_.unknown_field_2_.Clear();
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    GOOGLE_DCHECK(_impl_.room_info_ != nullptr);
+    _impl_.room_info_->Clear();
+  }
+  _impl_.error_code_ = int64_t{0};
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* GetRoomInfoResponse::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // optional int64 error_code = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_error_code(&has_bits);
+          _impl_.error_code_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // repeated .openfoxwq.GetRoomInfoResponse.Unknown2 unknown_field_2 = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            ptr = ctx->ParseMessage(_internal_add_unknown_field_2(), ptr);
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<18>(ptr));
+        } else
+          goto handle_unusual;
+        continue;
+      // optional .openfoxwq.GetRoomInfoResponse.RoomInfo room_info = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
+          ptr = ctx->ParseMessage(_internal_mutable_room_info(), ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  _impl_._has_bits_.Or(has_bits);
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* GetRoomInfoResponse::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:openfoxwq.GetRoomInfoResponse)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  // optional int64 error_code = 1;
+  if (cached_has_bits & 0x00000002u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(1, this->_internal_error_code(), target);
+  }
+
+  // repeated .openfoxwq.GetRoomInfoResponse.Unknown2 unknown_field_2 = 2;
+  for (unsigned i = 0,
+      n = static_cast<unsigned>(this->_internal_unknown_field_2_size()); i < n; i++) {
+    const auto& repfield = this->_internal_unknown_field_2(i);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+        InternalWriteMessage(2, repfield, repfield.GetCachedSize(), target, stream);
+  }
+
+  // optional .openfoxwq.GetRoomInfoResponse.RoomInfo room_info = 3;
+  if (cached_has_bits & 0x00000001u) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(3, _Internal::room_info(this),
+        _Internal::room_info(this).GetCachedSize(), target, stream);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:openfoxwq.GetRoomInfoResponse)
+  return target;
+}
+
+size_t GetRoomInfoResponse::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:openfoxwq.GetRoomInfoResponse)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // repeated .openfoxwq.GetRoomInfoResponse.Unknown2 unknown_field_2 = 2;
+  total_size += 1UL * this->_internal_unknown_field_2_size();
+  for (const auto& msg : this->_impl_.unknown_field_2_) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
+  }
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    // optional .openfoxwq.GetRoomInfoResponse.RoomInfo room_info = 3;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+          *_impl_.room_info_);
+    }
+
+    // optional int64 error_code = 1;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_error_code());
+    }
+
+  }
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData GetRoomInfoResponse::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    GetRoomInfoResponse::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetRoomInfoResponse::GetClassData() const { return &_class_data_; }
+
+
+void GetRoomInfoResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<GetRoomInfoResponse*>(&to_msg);
+  auto& from = static_cast<const GetRoomInfoResponse&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:openfoxwq.GetRoomInfoResponse)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  _this->_impl_.unknown_field_2_.MergeFrom(from._impl_.unknown_field_2_);
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_mutable_room_info()->::openfoxwq::GetRoomInfoResponse_RoomInfo::MergeFrom(
+          from._internal_room_info());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_impl_.error_code_ = from._impl_.error_code_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void GetRoomInfoResponse::CopyFrom(const GetRoomInfoResponse& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:openfoxwq.GetRoomInfoResponse)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool GetRoomInfoResponse::IsInitialized() const {
+  return true;
+}
+
+void GetRoomInfoResponse::InternalSwap(GetRoomInfoResponse* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  _impl_.unknown_field_2_.InternalSwap(&other->_impl_.unknown_field_2_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(GetRoomInfoResponse, _impl_.error_code_)
+      + sizeof(GetRoomInfoResponse::_impl_.error_code_)
+      - PROTOBUF_FIELD_OFFSET(GetRoomInfoResponse, _impl_.room_info_)>(
+          reinterpret_cast<char*>(&_impl_.room_info_),
+          reinterpret_cast<char*>(&other->_impl_.room_info_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata GetRoomInfoResponse::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_proto_2fplay_2eproto_getter, &descriptor_table_proto_2fplay_2eproto_once,
+      file_level_metadata_proto_2fplay_2eproto[35]);
+}
+
+// ===================================================================
+
+class GetAutomatchStatsRequest::_Internal {
+ public:
+};
+
+GetAutomatchStatsRequest::GetAutomatchStatsRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase(arena, is_message_owned) {
+  // @@protoc_insertion_point(arena_constructor:openfoxwq.GetAutomatchStatsRequest)
+}
+GetAutomatchStatsRequest::GetAutomatchStatsRequest(const GetAutomatchStatsRequest& from)
+  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase() {
+  GetAutomatchStatsRequest* const _this = this; (void)_this;
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  // @@protoc_insertion_point(copy_constructor:openfoxwq.GetAutomatchStatsRequest)
+}
+
+
+
+
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData GetAutomatchStatsRequest::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl,
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl,
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetAutomatchStatsRequest::GetClassData() const { return &_class_data_; }
+
+
+
+
+
+
+
+::PROTOBUF_NAMESPACE_ID::Metadata GetAutomatchStatsRequest::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_proto_2fplay_2eproto_getter, &descriptor_table_proto_2fplay_2eproto_once,
+      file_level_metadata_proto_2fplay_2eproto[36]);
+}
+
+// ===================================================================
+
+GetAutomatchStatsResponse_PopulationEntry_DoNotUse::GetAutomatchStatsResponse_PopulationEntry_DoNotUse() {}
+GetAutomatchStatsResponse_PopulationEntry_DoNotUse::GetAutomatchStatsResponse_PopulationEntry_DoNotUse(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+    : SuperType(arena) {}
+void GetAutomatchStatsResponse_PopulationEntry_DoNotUse::MergeFrom(const GetAutomatchStatsResponse_PopulationEntry_DoNotUse& other) {
+  MergeFromInternal(other);
+}
+::PROTOBUF_NAMESPACE_ID::Metadata GetAutomatchStatsResponse_PopulationEntry_DoNotUse::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_proto_2fplay_2eproto_getter, &descriptor_table_proto_2fplay_2eproto_once,
+      file_level_metadata_proto_2fplay_2eproto[37]);
+}
+
+// ===================================================================
+
+class GetAutomatchStatsResponse::_Internal {
+ public:
+  using HasBits = decltype(std::declval<GetAutomatchStatsResponse>()._impl_._has_bits_);
+  static void set_has_error_code(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+};
+
+GetAutomatchStatsResponse::GetAutomatchStatsResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  if (arena != nullptr && !is_message_owned) {
+    arena->OwnCustomDestructor(this, &GetAutomatchStatsResponse::ArenaDtor);
+  }
+  // @@protoc_insertion_point(arena_constructor:openfoxwq.GetAutomatchStatsResponse)
+}
+GetAutomatchStatsResponse::GetAutomatchStatsResponse(const GetAutomatchStatsResponse& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  GetAutomatchStatsResponse* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , /*decltype(_impl_.population_)*/{}
+    , decltype(_impl_.error_code_){}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_impl_.population_.MergeFrom(from._impl_.population_);
+  _this->_impl_.error_code_ = from._impl_.error_code_;
+  // @@protoc_insertion_point(copy_constructor:openfoxwq.GetAutomatchStatsResponse)
+}
+
+inline void GetAutomatchStatsResponse::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , /*decltype(_impl_.population_)*/{::_pbi::ArenaInitialized(), arena}
+    , decltype(_impl_.error_code_){int64_t{0}}
+  };
+}
+
+GetAutomatchStatsResponse::~GetAutomatchStatsResponse() {
+  // @@protoc_insertion_point(destructor:openfoxwq.GetAutomatchStatsResponse)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    ArenaDtor(this);
+    return;
+  }
+  SharedDtor();
+}
+
+inline void GetAutomatchStatsResponse::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.population_.Destruct();
+  _impl_.population_.~MapField();
+}
+
+void GetAutomatchStatsResponse::ArenaDtor(void* object) {
+  GetAutomatchStatsResponse* _this = reinterpret_cast< GetAutomatchStatsResponse* >(object);
+  _this->_impl_.population_.Destruct();
+}
+void GetAutomatchStatsResponse::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void GetAutomatchStatsResponse::Clear() {
+// @@protoc_insertion_point(message_clear_start:openfoxwq.GetAutomatchStatsResponse)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _impl_.population_.Clear();
+  _impl_.error_code_ = int64_t{0};
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* GetAutomatchStatsResponse::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // optional int64 error_code = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_error_code(&has_bits);
+          _impl_.error_code_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // map<int64, int64> population = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            ptr = ctx->ParseMessage(&_impl_.population_, ptr);
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<18>(ptr));
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  _impl_._has_bits_.Or(has_bits);
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* GetAutomatchStatsResponse::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:openfoxwq.GetAutomatchStatsResponse)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  // optional int64 error_code = 1;
+  if (cached_has_bits & 0x00000001u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(1, this->_internal_error_code(), target);
+  }
+
+  // map<int64, int64> population = 2;
+  if (!this->_internal_population().empty()) {
+    using MapType = ::_pb::Map<int64_t, int64_t>;
+    using WireHelper = GetAutomatchStatsResponse_PopulationEntry_DoNotUse::Funcs;
+    const auto& map_field = this->_internal_population();
+
+    if (stream->IsSerializationDeterministic() && map_field.size() > 1) {
+      for (const auto& entry : ::_pbi::MapSorterFlat<MapType>(map_field)) {
+        target = WireHelper::InternalSerialize(2, entry.first, entry.second, target, stream);
+      }
+    } else {
+      for (const auto& entry : map_field) {
+        target = WireHelper::InternalSerialize(2, entry.first, entry.second, target, stream);
+      }
+    }
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:openfoxwq.GetAutomatchStatsResponse)
+  return target;
+}
+
+size_t GetAutomatchStatsResponse::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:openfoxwq.GetAutomatchStatsResponse)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // map<int64, int64> population = 2;
+  total_size += 1 *
+      ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(this->_internal_population_size());
+  for (::PROTOBUF_NAMESPACE_ID::Map< int64_t, int64_t >::const_iterator
+      it = this->_internal_population().begin();
+      it != this->_internal_population().end(); ++it) {
+    total_size += GetAutomatchStatsResponse_PopulationEntry_DoNotUse::Funcs::ByteSizeLong(it->first, it->second);
+  }
+
+  // optional int64 error_code = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_error_code());
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData GetAutomatchStatsResponse::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    GetAutomatchStatsResponse::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetAutomatchStatsResponse::GetClassData() const { return &_class_data_; }
+
+
+void GetAutomatchStatsResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<GetAutomatchStatsResponse*>(&to_msg);
+  auto& from = static_cast<const GetAutomatchStatsResponse&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:openfoxwq.GetAutomatchStatsResponse)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  _this->_impl_.population_.MergeFrom(from._impl_.population_);
+  if (from._internal_has_error_code()) {
+    _this->_internal_set_error_code(from._internal_error_code());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void GetAutomatchStatsResponse::CopyFrom(const GetAutomatchStatsResponse& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:openfoxwq.GetAutomatchStatsResponse)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool GetAutomatchStatsResponse::IsInitialized() const {
+  return true;
+}
+
+void GetAutomatchStatsResponse::InternalSwap(GetAutomatchStatsResponse* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  _impl_.population_.InternalSwap(&other->_impl_.population_);
+  swap(_impl_.error_code_, other->_impl_.error_code_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata GetAutomatchStatsResponse::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_proto_2fplay_2eproto_getter, &descriptor_table_proto_2fplay_2eproto_once,
+      file_level_metadata_proto_2fplay_2eproto[38]);
+}
+
+// ===================================================================
+
+class StartAutomatchRequest::_Internal {
+ public:
+  using HasBits = decltype(std::declval<StartAutomatchRequest>()._impl_._has_bits_);
+  static void set_has_preset_id(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static void set_has_unknown_field_2(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
+  }
+};
+
+StartAutomatchRequest::StartAutomatchRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:openfoxwq.StartAutomatchRequest)
+}
+StartAutomatchRequest::StartAutomatchRequest(const StartAutomatchRequest& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  StartAutomatchRequest* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.preset_id_){}
+    , decltype(_impl_.unknown_field_2_){}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::memcpy(&_impl_.preset_id_, &from._impl_.preset_id_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.unknown_field_2_) -
+    reinterpret_cast<char*>(&_impl_.preset_id_)) + sizeof(_impl_.unknown_field_2_));
+  // @@protoc_insertion_point(copy_constructor:openfoxwq.StartAutomatchRequest)
+}
+
+inline void StartAutomatchRequest::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.preset_id_){int64_t{0}}
+    , decltype(_impl_.unknown_field_2_){int64_t{0}}
+  };
+}
+
+StartAutomatchRequest::~StartAutomatchRequest() {
+  // @@protoc_insertion_point(destructor:openfoxwq.StartAutomatchRequest)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void StartAutomatchRequest::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+}
+
+void StartAutomatchRequest::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void StartAutomatchRequest::Clear() {
+// @@protoc_insertion_point(message_clear_start:openfoxwq.StartAutomatchRequest)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    ::memset(&_impl_.preset_id_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&_impl_.unknown_field_2_) -
+        reinterpret_cast<char*>(&_impl_.preset_id_)) + sizeof(_impl_.unknown_field_2_));
+  }
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* StartAutomatchRequest::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // required int64 preset_id = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_preset_id(&has_bits);
+          _impl_.preset_id_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional int64 unknown_field_2 = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          _Internal::set_has_unknown_field_2(&has_bits);
+          _impl_.unknown_field_2_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  _impl_._has_bits_.Or(has_bits);
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* StartAutomatchRequest::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:openfoxwq.StartAutomatchRequest)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  // required int64 preset_id = 1;
+  if (cached_has_bits & 0x00000001u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(1, this->_internal_preset_id(), target);
+  }
+
+  // optional int64 unknown_field_2 = 2;
+  if (cached_has_bits & 0x00000002u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(2, this->_internal_unknown_field_2(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:openfoxwq.StartAutomatchRequest)
+  return target;
+}
+
+size_t StartAutomatchRequest::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:openfoxwq.StartAutomatchRequest)
+  size_t total_size = 0;
+
+  // required int64 preset_id = 1;
+  if (_internal_has_preset_id()) {
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_preset_id());
+  }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // optional int64 unknown_field_2 = 2;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000002u) {
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_unknown_field_2());
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData StartAutomatchRequest::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    StartAutomatchRequest::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*StartAutomatchRequest::GetClassData() const { return &_class_data_; }
+
+
+void StartAutomatchRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<StartAutomatchRequest*>(&to_msg);
+  auto& from = static_cast<const StartAutomatchRequest&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:openfoxwq.StartAutomatchRequest)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_impl_.preset_id_ = from._impl_.preset_id_;
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_impl_.unknown_field_2_ = from._impl_.unknown_field_2_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void StartAutomatchRequest::CopyFrom(const StartAutomatchRequest& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:openfoxwq.StartAutomatchRequest)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool StartAutomatchRequest::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
+  return true;
+}
+
+void StartAutomatchRequest::InternalSwap(StartAutomatchRequest* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(StartAutomatchRequest, _impl_.unknown_field_2_)
+      + sizeof(StartAutomatchRequest::_impl_.unknown_field_2_)
+      - PROTOBUF_FIELD_OFFSET(StartAutomatchRequest, _impl_.preset_id_)>(
+          reinterpret_cast<char*>(&_impl_.preset_id_),
+          reinterpret_cast<char*>(&other->_impl_.preset_id_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata StartAutomatchRequest::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_proto_2fplay_2eproto_getter, &descriptor_table_proto_2fplay_2eproto_once,
+      file_level_metadata_proto_2fplay_2eproto[39]);
+}
+
+// ===================================================================
+
+class StartAutomatchResponse::_Internal {
+ public:
+  using HasBits = decltype(std::declval<StartAutomatchResponse>()._impl_._has_bits_);
+  static void set_has_error_code(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static void set_has_unknown_field_2(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static void set_has_unknown_field_3(HasBits* has_bits) {
+    (*has_bits)[0] |= 4u;
+  }
+};
+
+StartAutomatchResponse::StartAutomatchResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:openfoxwq.StartAutomatchResponse)
+}
+StartAutomatchResponse::StartAutomatchResponse(const StartAutomatchResponse& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  StartAutomatchResponse* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.error_code_){}
+    , decltype(_impl_.unknown_field_2_){}
+    , decltype(_impl_.unknown_field_3_){}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::memcpy(&_impl_.error_code_, &from._impl_.error_code_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.unknown_field_3_) -
+    reinterpret_cast<char*>(&_impl_.error_code_)) + sizeof(_impl_.unknown_field_3_));
+  // @@protoc_insertion_point(copy_constructor:openfoxwq.StartAutomatchResponse)
+}
+
+inline void StartAutomatchResponse::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.error_code_){int64_t{0}}
+    , decltype(_impl_.unknown_field_2_){int64_t{0}}
+    , decltype(_impl_.unknown_field_3_){int64_t{0}}
+  };
+}
+
+StartAutomatchResponse::~StartAutomatchResponse() {
+  // @@protoc_insertion_point(destructor:openfoxwq.StartAutomatchResponse)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void StartAutomatchResponse::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+}
+
+void StartAutomatchResponse::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void StartAutomatchResponse::Clear() {
+// @@protoc_insertion_point(message_clear_start:openfoxwq.StartAutomatchResponse)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000007u) {
+    ::memset(&_impl_.error_code_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&_impl_.unknown_field_3_) -
+        reinterpret_cast<char*>(&_impl_.error_code_)) + sizeof(_impl_.unknown_field_3_));
+  }
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* StartAutomatchResponse::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // optional int64 error_code = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_error_code(&has_bits);
+          _impl_.error_code_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional int64 unknown_field_2 = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          _Internal::set_has_unknown_field_2(&has_bits);
+          _impl_.unknown_field_2_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional int64 unknown_field_3 = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
+          _Internal::set_has_unknown_field_3(&has_bits);
+          _impl_.unknown_field_3_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  _impl_._has_bits_.Or(has_bits);
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* StartAutomatchResponse::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:openfoxwq.StartAutomatchResponse)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  // optional int64 error_code = 1;
+  if (cached_has_bits & 0x00000001u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(1, this->_internal_error_code(), target);
+  }
+
+  // optional int64 unknown_field_2 = 2;
+  if (cached_has_bits & 0x00000002u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(2, this->_internal_unknown_field_2(), target);
+  }
+
+  // optional int64 unknown_field_3 = 3;
+  if (cached_has_bits & 0x00000004u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(3, this->_internal_unknown_field_3(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:openfoxwq.StartAutomatchResponse)
+  return target;
+}
+
+size_t StartAutomatchResponse::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:openfoxwq.StartAutomatchResponse)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000007u) {
+    // optional int64 error_code = 1;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_error_code());
+    }
+
+    // optional int64 unknown_field_2 = 2;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_unknown_field_2());
+    }
+
+    // optional int64 unknown_field_3 = 3;
+    if (cached_has_bits & 0x00000004u) {
+      total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_unknown_field_3());
+    }
+
+  }
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData StartAutomatchResponse::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    StartAutomatchResponse::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*StartAutomatchResponse::GetClassData() const { return &_class_data_; }
+
+
+void StartAutomatchResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<StartAutomatchResponse*>(&to_msg);
+  auto& from = static_cast<const StartAutomatchResponse&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:openfoxwq.StartAutomatchResponse)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000007u) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_impl_.error_code_ = from._impl_.error_code_;
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_impl_.unknown_field_2_ = from._impl_.unknown_field_2_;
+    }
+    if (cached_has_bits & 0x00000004u) {
+      _this->_impl_.unknown_field_3_ = from._impl_.unknown_field_3_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void StartAutomatchResponse::CopyFrom(const StartAutomatchResponse& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:openfoxwq.StartAutomatchResponse)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool StartAutomatchResponse::IsInitialized() const {
+  return true;
+}
+
+void StartAutomatchResponse::InternalSwap(StartAutomatchResponse* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(StartAutomatchResponse, _impl_.unknown_field_3_)
+      + sizeof(StartAutomatchResponse::_impl_.unknown_field_3_)
+      - PROTOBUF_FIELD_OFFSET(StartAutomatchResponse, _impl_.error_code_)>(
+          reinterpret_cast<char*>(&_impl_.error_code_),
+          reinterpret_cast<char*>(&other->_impl_.error_code_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata StartAutomatchResponse::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_proto_2fplay_2eproto_getter, &descriptor_table_proto_2fplay_2eproto_once,
+      file_level_metadata_proto_2fplay_2eproto[40]);
+}
+
+// ===================================================================
+
+class StopAutomatchRequest::_Internal {
+ public:
+};
+
+StopAutomatchRequest::StopAutomatchRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase(arena, is_message_owned) {
+  // @@protoc_insertion_point(arena_constructor:openfoxwq.StopAutomatchRequest)
+}
+StopAutomatchRequest::StopAutomatchRequest(const StopAutomatchRequest& from)
+  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase() {
+  StopAutomatchRequest* const _this = this; (void)_this;
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  // @@protoc_insertion_point(copy_constructor:openfoxwq.StopAutomatchRequest)
+}
+
+
+
+
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData StopAutomatchRequest::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl,
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl,
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*StopAutomatchRequest::GetClassData() const { return &_class_data_; }
+
+
+
+
+
+
+
+::PROTOBUF_NAMESPACE_ID::Metadata StopAutomatchRequest::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_proto_2fplay_2eproto_getter, &descriptor_table_proto_2fplay_2eproto_once,
+      file_level_metadata_proto_2fplay_2eproto[41]);
+}
+
+// ===================================================================
+
+class StopAutomatchResponse::_Internal {
+ public:
+  using HasBits = decltype(std::declval<StopAutomatchResponse>()._impl_._has_bits_);
+  static void set_has_error_code(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+};
+
+StopAutomatchResponse::StopAutomatchResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:openfoxwq.StopAutomatchResponse)
+}
+StopAutomatchResponse::StopAutomatchResponse(const StopAutomatchResponse& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  StopAutomatchResponse* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.error_code_){}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_impl_.error_code_ = from._impl_.error_code_;
+  // @@protoc_insertion_point(copy_constructor:openfoxwq.StopAutomatchResponse)
+}
+
+inline void StopAutomatchResponse::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.error_code_){int64_t{0}}
+  };
+}
+
+StopAutomatchResponse::~StopAutomatchResponse() {
+  // @@protoc_insertion_point(destructor:openfoxwq.StopAutomatchResponse)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void StopAutomatchResponse::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+}
+
+void StopAutomatchResponse::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void StopAutomatchResponse::Clear() {
+// @@protoc_insertion_point(message_clear_start:openfoxwq.StopAutomatchResponse)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _impl_.error_code_ = int64_t{0};
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* StopAutomatchResponse::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // optional int64 error_code = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_error_code(&has_bits);
+          _impl_.error_code_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  _impl_._has_bits_.Or(has_bits);
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* StopAutomatchResponse::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:openfoxwq.StopAutomatchResponse)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  // optional int64 error_code = 1;
+  if (cached_has_bits & 0x00000001u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(1, this->_internal_error_code(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:openfoxwq.StopAutomatchResponse)
+  return target;
+}
+
+size_t StopAutomatchResponse::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:openfoxwq.StopAutomatchResponse)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // optional int64 error_code = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_error_code());
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData StopAutomatchResponse::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    StopAutomatchResponse::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*StopAutomatchResponse::GetClassData() const { return &_class_data_; }
+
+
+void StopAutomatchResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<StopAutomatchResponse*>(&to_msg);
+  auto& from = static_cast<const StopAutomatchResponse&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:openfoxwq.StopAutomatchResponse)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from._internal_has_error_code()) {
+    _this->_internal_set_error_code(from._internal_error_code());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void StopAutomatchResponse::CopyFrom(const StopAutomatchResponse& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:openfoxwq.StopAutomatchResponse)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool StopAutomatchResponse::IsInitialized() const {
+  return true;
+}
+
+void StopAutomatchResponse::InternalSwap(StopAutomatchResponse* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  swap(_impl_.error_code_, other->_impl_.error_code_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata StopAutomatchResponse::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_proto_2fplay_2eproto_getter, &descriptor_table_proto_2fplay_2eproto_once,
+      file_level_metadata_proto_2fplay_2eproto[42]);
+}
+
+// ===================================================================
+
+class AutomatchFoundEvent_RoomParticipant::_Internal {
+ public:
+  using HasBits = decltype(std::declval<AutomatchFoundEvent_RoomParticipant>()._impl_._has_bits_);
+  static void set_has_player_id(HasBits* has_bits) {
+    (*has_bits)[0] |= 4u;
+  }
+  static void set_has_name(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static void set_has_rank(HasBits* has_bits) {
+    (*has_bits)[0] |= 8u;
+  }
+  static void set_has_avatar_url(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000004) ^ 0x00000004) != 0;
+  }
+};
+
+AutomatchFoundEvent_RoomParticipant::AutomatchFoundEvent_RoomParticipant(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:openfoxwq.AutomatchFoundEvent.RoomParticipant)
+}
+AutomatchFoundEvent_RoomParticipant::AutomatchFoundEvent_RoomParticipant(const AutomatchFoundEvent_RoomParticipant& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  AutomatchFoundEvent_RoomParticipant* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.name_){}
+    , decltype(_impl_.avatar_url_){}
+    , decltype(_impl_.player_id_){}
+    , decltype(_impl_.rank_){}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _impl_.name_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.name_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (from._internal_has_name()) {
+    _this->_impl_.name_.Set(from._internal_name(), 
+      _this->GetArenaForAllocation());
+  }
+  _impl_.avatar_url_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.avatar_url_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (from._internal_has_avatar_url()) {
+    _this->_impl_.avatar_url_.Set(from._internal_avatar_url(), 
+      _this->GetArenaForAllocation());
+  }
+  ::memcpy(&_impl_.player_id_, &from._impl_.player_id_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.rank_) -
+    reinterpret_cast<char*>(&_impl_.player_id_)) + sizeof(_impl_.rank_));
+  // @@protoc_insertion_point(copy_constructor:openfoxwq.AutomatchFoundEvent.RoomParticipant)
+}
+
+inline void AutomatchFoundEvent_RoomParticipant::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.name_){}
+    , decltype(_impl_.avatar_url_){}
+    , decltype(_impl_.player_id_){int64_t{0}}
+    , decltype(_impl_.rank_){0}
+  };
+  _impl_.name_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.name_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  _impl_.avatar_url_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.avatar_url_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+}
+
+AutomatchFoundEvent_RoomParticipant::~AutomatchFoundEvent_RoomParticipant() {
+  // @@protoc_insertion_point(destructor:openfoxwq.AutomatchFoundEvent.RoomParticipant)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void AutomatchFoundEvent_RoomParticipant::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.name_.Destroy();
+  _impl_.avatar_url_.Destroy();
+}
+
+void AutomatchFoundEvent_RoomParticipant::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void AutomatchFoundEvent_RoomParticipant::Clear() {
+// @@protoc_insertion_point(message_clear_start:openfoxwq.AutomatchFoundEvent.RoomParticipant)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      _impl_.name_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _impl_.avatar_url_.ClearNonDefaultToEmpty();
+    }
+  }
+  if (cached_has_bits & 0x0000000cu) {
+    ::memset(&_impl_.player_id_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&_impl_.rank_) -
+        reinterpret_cast<char*>(&_impl_.player_id_)) + sizeof(_impl_.rank_));
+  }
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* AutomatchFoundEvent_RoomParticipant::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // required int64 player_id = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_player_id(&has_bits);
+          _impl_.player_id_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional string name = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
+          auto str = _internal_mutable_name();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+          #ifndef NDEBUG
+          ::_pbi::VerifyUTF8(str, "openfoxwq.AutomatchFoundEvent.RoomParticipant.name");
+          #endif  // !NDEBUG
+        } else
+          goto handle_unusual;
+        continue;
+      // optional .openfoxwq.Rank rank = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+          if (PROTOBUF_PREDICT_TRUE(::openfoxwq::Rank_IsValid(val))) {
+            _internal_set_rank(static_cast<::openfoxwq::Rank>(val));
+          } else {
+            ::PROTOBUF_NAMESPACE_ID::internal::WriteVarint(4, val, mutable_unknown_fields());
+          }
+        } else
+          goto handle_unusual;
+        continue;
+      // optional string avatar_url = 18;
+      case 18:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 146)) {
+          auto str = _internal_mutable_avatar_url();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+          #ifndef NDEBUG
+          ::_pbi::VerifyUTF8(str, "openfoxwq.AutomatchFoundEvent.RoomParticipant.avatar_url");
+          #endif  // !NDEBUG
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  _impl_._has_bits_.Or(has_bits);
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* AutomatchFoundEvent_RoomParticipant::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:openfoxwq.AutomatchFoundEvent.RoomParticipant)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  // required int64 player_id = 1;
+  if (cached_has_bits & 0x00000004u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(1, this->_internal_player_id(), target);
+  }
+
+  // optional string name = 3;
+  if (cached_has_bits & 0x00000001u) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->_internal_name().data(), static_cast<int>(this->_internal_name().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
+      "openfoxwq.AutomatchFoundEvent.RoomParticipant.name");
+    target = stream->WriteStringMaybeAliased(
+        3, this->_internal_name(), target);
+  }
+
+  // optional .openfoxwq.Rank rank = 4;
+  if (cached_has_bits & 0x00000008u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      4, this->_internal_rank(), target);
+  }
+
+  // optional string avatar_url = 18;
+  if (cached_has_bits & 0x00000002u) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->_internal_avatar_url().data(), static_cast<int>(this->_internal_avatar_url().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
+      "openfoxwq.AutomatchFoundEvent.RoomParticipant.avatar_url");
+    target = stream->WriteStringMaybeAliased(
+        18, this->_internal_avatar_url(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:openfoxwq.AutomatchFoundEvent.RoomParticipant)
+  return target;
+}
+
+size_t AutomatchFoundEvent_RoomParticipant::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:openfoxwq.AutomatchFoundEvent.RoomParticipant)
+  size_t total_size = 0;
+
+  // required int64 player_id = 1;
+  if (_internal_has_player_id()) {
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_player_id());
+  }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    // optional string name = 3;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+          this->_internal_name());
+    }
+
+    // optional string avatar_url = 18;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += 2 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+          this->_internal_avatar_url());
+    }
+
+  }
+  // optional .openfoxwq.Rank rank = 4;
+  if (cached_has_bits & 0x00000008u) {
+    total_size += 1 +
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_rank());
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData AutomatchFoundEvent_RoomParticipant::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    AutomatchFoundEvent_RoomParticipant::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*AutomatchFoundEvent_RoomParticipant::GetClassData() const { return &_class_data_; }
+
+
+void AutomatchFoundEvent_RoomParticipant::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<AutomatchFoundEvent_RoomParticipant*>(&to_msg);
+  auto& from = static_cast<const AutomatchFoundEvent_RoomParticipant&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:openfoxwq.AutomatchFoundEvent.RoomParticipant)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x0000000fu) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_set_name(from._internal_name());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_internal_set_avatar_url(from._internal_avatar_url());
+    }
+    if (cached_has_bits & 0x00000004u) {
+      _this->_impl_.player_id_ = from._impl_.player_id_;
+    }
+    if (cached_has_bits & 0x00000008u) {
+      _this->_impl_.rank_ = from._impl_.rank_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void AutomatchFoundEvent_RoomParticipant::CopyFrom(const AutomatchFoundEvent_RoomParticipant& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:openfoxwq.AutomatchFoundEvent.RoomParticipant)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool AutomatchFoundEvent_RoomParticipant::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
+  return true;
+}
+
+void AutomatchFoundEvent_RoomParticipant::InternalSwap(AutomatchFoundEvent_RoomParticipant* other) {
+  using std::swap;
+  auto* lhs_arena = GetArenaForAllocation();
+  auto* rhs_arena = other->GetArenaForAllocation();
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.name_, lhs_arena,
+      &other->_impl_.name_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.avatar_url_, lhs_arena,
+      &other->_impl_.avatar_url_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(AutomatchFoundEvent_RoomParticipant, _impl_.rank_)
+      + sizeof(AutomatchFoundEvent_RoomParticipant::_impl_.rank_)
+      - PROTOBUF_FIELD_OFFSET(AutomatchFoundEvent_RoomParticipant, _impl_.player_id_)>(
+          reinterpret_cast<char*>(&_impl_.player_id_),
+          reinterpret_cast<char*>(&other->_impl_.player_id_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata AutomatchFoundEvent_RoomParticipant::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_proto_2fplay_2eproto_getter, &descriptor_table_proto_2fplay_2eproto_once,
+      file_level_metadata_proto_2fplay_2eproto[43]);
+}
+
+// ===================================================================
+
+class AutomatchFoundEvent::_Internal {
+ public:
+  using HasBits = decltype(std::declval<AutomatchFoundEvent>()._impl_._has_bits_);
+  static void set_has_error_code(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static void set_has_room_id_1(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static void set_has_room_id_2(HasBits* has_bits) {
+    (*has_bits)[0] |= 4u;
+  }
+  static void set_has_room_id_3(HasBits* has_bits) {
+    (*has_bits)[0] |= 8u;
+  }
+  static void set_has_unknown_field_6(HasBits* has_bits) {
+    (*has_bits)[0] |= 16u;
+  }
+};
+
+AutomatchFoundEvent::AutomatchFoundEvent(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:openfoxwq.AutomatchFoundEvent)
+}
+AutomatchFoundEvent::AutomatchFoundEvent(const AutomatchFoundEvent& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  AutomatchFoundEvent* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.participants_){from._impl_.participants_}
+    , decltype(_impl_.error_code_){}
+    , decltype(_impl_.room_id_1_){}
+    , decltype(_impl_.room_id_2_){}
+    , decltype(_impl_.room_id_3_){}
+    , decltype(_impl_.unknown_field_6_){}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::memcpy(&_impl_.error_code_, &from._impl_.error_code_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.unknown_field_6_) -
+    reinterpret_cast<char*>(&_impl_.error_code_)) + sizeof(_impl_.unknown_field_6_));
+  // @@protoc_insertion_point(copy_constructor:openfoxwq.AutomatchFoundEvent)
+}
+
+inline void AutomatchFoundEvent::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.participants_){arena}
+    , decltype(_impl_.error_code_){int64_t{0}}
+    , decltype(_impl_.room_id_1_){int64_t{0}}
+    , decltype(_impl_.room_id_2_){int64_t{0}}
+    , decltype(_impl_.room_id_3_){int64_t{0}}
+    , decltype(_impl_.unknown_field_6_){int64_t{0}}
+  };
+}
+
+AutomatchFoundEvent::~AutomatchFoundEvent() {
+  // @@protoc_insertion_point(destructor:openfoxwq.AutomatchFoundEvent)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void AutomatchFoundEvent::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.participants_.~RepeatedPtrField();
+}
+
+void AutomatchFoundEvent::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void AutomatchFoundEvent::Clear() {
+// @@protoc_insertion_point(message_clear_start:openfoxwq.AutomatchFoundEvent)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _impl_.participants_.Clear();
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x0000001fu) {
+    ::memset(&_impl_.error_code_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&_impl_.unknown_field_6_) -
+        reinterpret_cast<char*>(&_impl_.error_code_)) + sizeof(_impl_.unknown_field_6_));
+  }
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* AutomatchFoundEvent::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // optional int64 error_code = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_error_code(&has_bits);
+          _impl_.error_code_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional int64 room_id_1 = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          _Internal::set_has_room_id_1(&has_bits);
+          _impl_.room_id_1_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional int64 room_id_2 = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
+          _Internal::set_has_room_id_2(&has_bits);
+          _impl_.room_id_2_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional int64 room_id_3 = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
+          _Internal::set_has_room_id_3(&has_bits);
+          _impl_.room_id_3_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // repeated .openfoxwq.AutomatchFoundEvent.RoomParticipant participants = 5;
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            ptr = ctx->ParseMessage(_internal_add_participants(), ptr);
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<42>(ptr));
+        } else
+          goto handle_unusual;
+        continue;
+      // optional int64 unknown_field_6 = 6;
+      case 6:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 48)) {
+          _Internal::set_has_unknown_field_6(&has_bits);
+          _impl_.unknown_field_6_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  _impl_._has_bits_.Or(has_bits);
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* AutomatchFoundEvent::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:openfoxwq.AutomatchFoundEvent)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  // optional int64 error_code = 1;
+  if (cached_has_bits & 0x00000001u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(1, this->_internal_error_code(), target);
+  }
+
+  // optional int64 room_id_1 = 2;
+  if (cached_has_bits & 0x00000002u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(2, this->_internal_room_id_1(), target);
+  }
+
+  // optional int64 room_id_2 = 3;
+  if (cached_has_bits & 0x00000004u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(3, this->_internal_room_id_2(), target);
+  }
+
+  // optional int64 room_id_3 = 4;
+  if (cached_has_bits & 0x00000008u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(4, this->_internal_room_id_3(), target);
+  }
+
+  // repeated .openfoxwq.AutomatchFoundEvent.RoomParticipant participants = 5;
+  for (unsigned i = 0,
+      n = static_cast<unsigned>(this->_internal_participants_size()); i < n; i++) {
+    const auto& repfield = this->_internal_participants(i);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+        InternalWriteMessage(5, repfield, repfield.GetCachedSize(), target, stream);
+  }
+
+  // optional int64 unknown_field_6 = 6;
+  if (cached_has_bits & 0x00000010u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(6, this->_internal_unknown_field_6(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:openfoxwq.AutomatchFoundEvent)
+  return target;
+}
+
+size_t AutomatchFoundEvent::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:openfoxwq.AutomatchFoundEvent)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // repeated .openfoxwq.AutomatchFoundEvent.RoomParticipant participants = 5;
+  total_size += 1UL * this->_internal_participants_size();
+  for (const auto& msg : this->_impl_.participants_) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
+  }
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x0000001fu) {
+    // optional int64 error_code = 1;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_error_code());
+    }
+
+    // optional int64 room_id_1 = 2;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_room_id_1());
+    }
+
+    // optional int64 room_id_2 = 3;
+    if (cached_has_bits & 0x00000004u) {
+      total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_room_id_2());
+    }
+
+    // optional int64 room_id_3 = 4;
+    if (cached_has_bits & 0x00000008u) {
+      total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_room_id_3());
+    }
+
+    // optional int64 unknown_field_6 = 6;
+    if (cached_has_bits & 0x00000010u) {
+      total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_unknown_field_6());
+    }
+
+  }
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData AutomatchFoundEvent::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    AutomatchFoundEvent::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*AutomatchFoundEvent::GetClassData() const { return &_class_data_; }
+
+
+void AutomatchFoundEvent::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<AutomatchFoundEvent*>(&to_msg);
+  auto& from = static_cast<const AutomatchFoundEvent&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:openfoxwq.AutomatchFoundEvent)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  _this->_impl_.participants_.MergeFrom(from._impl_.participants_);
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x0000001fu) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_impl_.error_code_ = from._impl_.error_code_;
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_impl_.room_id_1_ = from._impl_.room_id_1_;
+    }
+    if (cached_has_bits & 0x00000004u) {
+      _this->_impl_.room_id_2_ = from._impl_.room_id_2_;
+    }
+    if (cached_has_bits & 0x00000008u) {
+      _this->_impl_.room_id_3_ = from._impl_.room_id_3_;
+    }
+    if (cached_has_bits & 0x00000010u) {
+      _this->_impl_.unknown_field_6_ = from._impl_.unknown_field_6_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void AutomatchFoundEvent::CopyFrom(const AutomatchFoundEvent& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:openfoxwq.AutomatchFoundEvent)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool AutomatchFoundEvent::IsInitialized() const {
+  if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.participants_))
+    return false;
+  return true;
+}
+
+void AutomatchFoundEvent::InternalSwap(AutomatchFoundEvent* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  _impl_.participants_.InternalSwap(&other->_impl_.participants_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(AutomatchFoundEvent, _impl_.unknown_field_6_)
+      + sizeof(AutomatchFoundEvent::_impl_.unknown_field_6_)
+      - PROTOBUF_FIELD_OFFSET(AutomatchFoundEvent, _impl_.error_code_)>(
+          reinterpret_cast<char*>(&_impl_.error_code_),
+          reinterpret_cast<char*>(&other->_impl_.error_code_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata AutomatchFoundEvent::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_proto_2fplay_2eproto_getter, &descriptor_table_proto_2fplay_2eproto_once,
+      file_level_metadata_proto_2fplay_2eproto[44]);
+}
+
+// ===================================================================
+
+class AcceptMatchRequest::_Internal {
+ public:
+};
+
+AcceptMatchRequest::AcceptMatchRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase(arena, is_message_owned) {
+  // @@protoc_insertion_point(arena_constructor:openfoxwq.AcceptMatchRequest)
+}
+AcceptMatchRequest::AcceptMatchRequest(const AcceptMatchRequest& from)
+  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase() {
+  AcceptMatchRequest* const _this = this; (void)_this;
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  // @@protoc_insertion_point(copy_constructor:openfoxwq.AcceptMatchRequest)
+}
+
+
+
+
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData AcceptMatchRequest::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl,
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl,
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*AcceptMatchRequest::GetClassData() const { return &_class_data_; }
+
+
+
+
+
+
+
+::PROTOBUF_NAMESPACE_ID::Metadata AcceptMatchRequest::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_proto_2fplay_2eproto_getter, &descriptor_table_proto_2fplay_2eproto_once,
+      file_level_metadata_proto_2fplay_2eproto[45]);
+}
+
+// ===================================================================
+
+class AcceptMatchResponse::_Internal {
+ public:
+  using HasBits = decltype(std::declval<AcceptMatchResponse>()._impl_._has_bits_);
+  static void set_has_error_code(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+};
+
+AcceptMatchResponse::AcceptMatchResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:openfoxwq.AcceptMatchResponse)
+}
+AcceptMatchResponse::AcceptMatchResponse(const AcceptMatchResponse& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  AcceptMatchResponse* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.error_code_){}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_impl_.error_code_ = from._impl_.error_code_;
+  // @@protoc_insertion_point(copy_constructor:openfoxwq.AcceptMatchResponse)
+}
+
+inline void AcceptMatchResponse::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.error_code_){int64_t{0}}
+  };
+}
+
+AcceptMatchResponse::~AcceptMatchResponse() {
+  // @@protoc_insertion_point(destructor:openfoxwq.AcceptMatchResponse)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void AcceptMatchResponse::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+}
+
+void AcceptMatchResponse::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void AcceptMatchResponse::Clear() {
+// @@protoc_insertion_point(message_clear_start:openfoxwq.AcceptMatchResponse)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _impl_.error_code_ = int64_t{0};
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* AcceptMatchResponse::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // optional int64 error_code = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_error_code(&has_bits);
+          _impl_.error_code_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  _impl_._has_bits_.Or(has_bits);
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* AcceptMatchResponse::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:openfoxwq.AcceptMatchResponse)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  // optional int64 error_code = 1;
+  if (cached_has_bits & 0x00000001u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(1, this->_internal_error_code(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:openfoxwq.AcceptMatchResponse)
+  return target;
+}
+
+size_t AcceptMatchResponse::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:openfoxwq.AcceptMatchResponse)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // optional int64 error_code = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_error_code());
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData AcceptMatchResponse::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    AcceptMatchResponse::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*AcceptMatchResponse::GetClassData() const { return &_class_data_; }
+
+
+void AcceptMatchResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<AcceptMatchResponse*>(&to_msg);
+  auto& from = static_cast<const AcceptMatchResponse&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:openfoxwq.AcceptMatchResponse)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from._internal_has_error_code()) {
+    _this->_internal_set_error_code(from._internal_error_code());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void AcceptMatchResponse::CopyFrom(const AcceptMatchResponse& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:openfoxwq.AcceptMatchResponse)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool AcceptMatchResponse::IsInitialized() const {
+  return true;
+}
+
+void AcceptMatchResponse::InternalSwap(AcceptMatchResponse* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  swap(_impl_.error_code_, other->_impl_.error_code_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata AcceptMatchResponse::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_proto_2fplay_2eproto_getter, &descriptor_table_proto_2fplay_2eproto_once,
+      file_level_metadata_proto_2fplay_2eproto[46]);
+}
+
+// ===================================================================
+
+class MatchStartEvent_MatchInfo::_Internal {
+ public:
+  using HasBits = decltype(std::declval<MatchStartEvent_MatchInfo>()._impl_._has_bits_);
+  static void set_has_board_size(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static void set_has_player_id_black(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static void set_has_main_time_sec(HasBits* has_bits) {
+    (*has_bits)[0] |= 4u;
+  }
+  static void set_has_byoyomi_time_sec(HasBits* has_bits) {
+    (*has_bits)[0] |= 8u;
+  }
+  static void set_has_byoyomi_periods(HasBits* has_bits) {
+    (*has_bits)[0] |= 16u;
+  }
+  static void set_has_player_id_white(HasBits* has_bits) {
+    (*has_bits)[0] |= 32u;
+  }
+};
+
+MatchStartEvent_MatchInfo::MatchStartEvent_MatchInfo(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:openfoxwq.MatchStartEvent.MatchInfo)
+}
+MatchStartEvent_MatchInfo::MatchStartEvent_MatchInfo(const MatchStartEvent_MatchInfo& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  MatchStartEvent_MatchInfo* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.board_size_){}
+    , decltype(_impl_.player_id_black_){}
+    , decltype(_impl_.main_time_sec_){}
+    , decltype(_impl_.byoyomi_time_sec_){}
+    , decltype(_impl_.byoyomi_periods_){}
+    , decltype(_impl_.player_id_white_){}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::memcpy(&_impl_.board_size_, &from._impl_.board_size_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.player_id_white_) -
+    reinterpret_cast<char*>(&_impl_.board_size_)) + sizeof(_impl_.player_id_white_));
+  // @@protoc_insertion_point(copy_constructor:openfoxwq.MatchStartEvent.MatchInfo)
+}
+
+inline void MatchStartEvent_MatchInfo::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.board_size_){int64_t{0}}
+    , decltype(_impl_.player_id_black_){int64_t{0}}
+    , decltype(_impl_.main_time_sec_){int64_t{0}}
+    , decltype(_impl_.byoyomi_time_sec_){int64_t{0}}
+    , decltype(_impl_.byoyomi_periods_){int64_t{0}}
+    , decltype(_impl_.player_id_white_){int64_t{0}}
+  };
+}
+
+MatchStartEvent_MatchInfo::~MatchStartEvent_MatchInfo() {
+  // @@protoc_insertion_point(destructor:openfoxwq.MatchStartEvent.MatchInfo)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void MatchStartEvent_MatchInfo::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+}
+
+void MatchStartEvent_MatchInfo::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void MatchStartEvent_MatchInfo::Clear() {
+// @@protoc_insertion_point(message_clear_start:openfoxwq.MatchStartEvent.MatchInfo)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x0000003fu) {
+    ::memset(&_impl_.board_size_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&_impl_.player_id_white_) -
+        reinterpret_cast<char*>(&_impl_.board_size_)) + sizeof(_impl_.player_id_white_));
+  }
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* MatchStartEvent_MatchInfo::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // optional int64 board_size = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_board_size(&has_bits);
+          _impl_.board_size_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional int64 player_id_black = 5;
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
+          _Internal::set_has_player_id_black(&has_bits);
+          _impl_.player_id_black_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional int64 main_time_sec = 6;
+      case 6:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 48)) {
+          _Internal::set_has_main_time_sec(&has_bits);
+          _impl_.main_time_sec_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional int64 byoyomi_time_sec = 7;
+      case 7:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 56)) {
+          _Internal::set_has_byoyomi_time_sec(&has_bits);
+          _impl_.byoyomi_time_sec_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional int64 byoyomi_periods = 8;
+      case 8:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 64)) {
+          _Internal::set_has_byoyomi_periods(&has_bits);
+          _impl_.byoyomi_periods_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional int64 player_id_white = 26;
+      case 26:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 208)) {
+          _Internal::set_has_player_id_white(&has_bits);
+          _impl_.player_id_white_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  _impl_._has_bits_.Or(has_bits);
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* MatchStartEvent_MatchInfo::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:openfoxwq.MatchStartEvent.MatchInfo)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  // optional int64 board_size = 1;
+  if (cached_has_bits & 0x00000001u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(1, this->_internal_board_size(), target);
+  }
+
+  // optional int64 player_id_black = 5;
+  if (cached_has_bits & 0x00000002u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(5, this->_internal_player_id_black(), target);
+  }
+
+  // optional int64 main_time_sec = 6;
+  if (cached_has_bits & 0x00000004u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(6, this->_internal_main_time_sec(), target);
+  }
+
+  // optional int64 byoyomi_time_sec = 7;
+  if (cached_has_bits & 0x00000008u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(7, this->_internal_byoyomi_time_sec(), target);
+  }
+
+  // optional int64 byoyomi_periods = 8;
+  if (cached_has_bits & 0x00000010u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(8, this->_internal_byoyomi_periods(), target);
+  }
+
+  // optional int64 player_id_white = 26;
+  if (cached_has_bits & 0x00000020u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(26, this->_internal_player_id_white(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:openfoxwq.MatchStartEvent.MatchInfo)
+  return target;
+}
+
+size_t MatchStartEvent_MatchInfo::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:openfoxwq.MatchStartEvent.MatchInfo)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x0000003fu) {
+    // optional int64 board_size = 1;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_board_size());
+    }
+
+    // optional int64 player_id_black = 5;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_player_id_black());
+    }
+
+    // optional int64 main_time_sec = 6;
+    if (cached_has_bits & 0x00000004u) {
+      total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_main_time_sec());
+    }
+
+    // optional int64 byoyomi_time_sec = 7;
+    if (cached_has_bits & 0x00000008u) {
+      total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_byoyomi_time_sec());
+    }
+
+    // optional int64 byoyomi_periods = 8;
+    if (cached_has_bits & 0x00000010u) {
+      total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_byoyomi_periods());
+    }
+
+    // optional int64 player_id_white = 26;
+    if (cached_has_bits & 0x00000020u) {
+      total_size += 2 +
+        ::_pbi::WireFormatLite::Int64Size(
+          this->_internal_player_id_white());
+    }
+
+  }
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData MatchStartEvent_MatchInfo::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    MatchStartEvent_MatchInfo::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*MatchStartEvent_MatchInfo::GetClassData() const { return &_class_data_; }
+
+
+void MatchStartEvent_MatchInfo::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<MatchStartEvent_MatchInfo*>(&to_msg);
+  auto& from = static_cast<const MatchStartEvent_MatchInfo&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:openfoxwq.MatchStartEvent.MatchInfo)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x0000003fu) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_impl_.board_size_ = from._impl_.board_size_;
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_impl_.player_id_black_ = from._impl_.player_id_black_;
+    }
+    if (cached_has_bits & 0x00000004u) {
+      _this->_impl_.main_time_sec_ = from._impl_.main_time_sec_;
+    }
+    if (cached_has_bits & 0x00000008u) {
+      _this->_impl_.byoyomi_time_sec_ = from._impl_.byoyomi_time_sec_;
+    }
+    if (cached_has_bits & 0x00000010u) {
+      _this->_impl_.byoyomi_periods_ = from._impl_.byoyomi_periods_;
+    }
+    if (cached_has_bits & 0x00000020u) {
+      _this->_impl_.player_id_white_ = from._impl_.player_id_white_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void MatchStartEvent_MatchInfo::CopyFrom(const MatchStartEvent_MatchInfo& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:openfoxwq.MatchStartEvent.MatchInfo)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool MatchStartEvent_MatchInfo::IsInitialized() const {
+  return true;
+}
+
+void MatchStartEvent_MatchInfo::InternalSwap(MatchStartEvent_MatchInfo* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(MatchStartEvent_MatchInfo, _impl_.player_id_white_)
+      + sizeof(MatchStartEvent_MatchInfo::_impl_.player_id_white_)
+      - PROTOBUF_FIELD_OFFSET(MatchStartEvent_MatchInfo, _impl_.board_size_)>(
+          reinterpret_cast<char*>(&_impl_.board_size_),
+          reinterpret_cast<char*>(&other->_impl_.board_size_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata MatchStartEvent_MatchInfo::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_proto_2fplay_2eproto_getter, &descriptor_table_proto_2fplay_2eproto_once,
+      file_level_metadata_proto_2fplay_2eproto[47]);
+}
+
+// ===================================================================
+
+class MatchStartEvent_MatchPlayerInfo::_Internal {
+ public:
+  using HasBits = decltype(std::declval<MatchStartEvent_MatchPlayerInfo>()._impl_._has_bits_);
+  static void set_has_player_id(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static void set_has_name(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static void set_has_rank(HasBits* has_bits) {
+    (*has_bits)[0] |= 4u;
+  }
+  static void set_has_country(HasBits* has_bits) {
+    (*has_bits)[0] |= 8u;
+  }
+};
+
+MatchStartEvent_MatchPlayerInfo::MatchStartEvent_MatchPlayerInfo(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:openfoxwq.MatchStartEvent.MatchPlayerInfo)
+}
+MatchStartEvent_MatchPlayerInfo::MatchStartEvent_MatchPlayerInfo(const MatchStartEvent_MatchPlayerInfo& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  MatchStartEvent_MatchPlayerInfo* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.name_){}
+    , decltype(_impl_.player_id_){}
+    , decltype(_impl_.rank_){}
+    , decltype(_impl_.country_){}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _impl_.name_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.name_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (from._internal_has_name()) {
+    _this->_impl_.name_.Set(from._internal_name(), 
+      _this->GetArenaForAllocation());
+  }
+  ::memcpy(&_impl_.player_id_, &from._impl_.player_id_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.country_) -
+    reinterpret_cast<char*>(&_impl_.player_id_)) + sizeof(_impl_.country_));
+  // @@protoc_insertion_point(copy_constructor:openfoxwq.MatchStartEvent.MatchPlayerInfo)
+}
+
+inline void MatchStartEvent_MatchPlayerInfo::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.name_){}
+    , decltype(_impl_.player_id_){int64_t{0}}
+    , decltype(_impl_.rank_){0}
+    , decltype(_impl_.country_){0}
+  };
+  _impl_.name_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.name_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+}
+
+MatchStartEvent_MatchPlayerInfo::~MatchStartEvent_MatchPlayerInfo() {
+  // @@protoc_insertion_point(destructor:openfoxwq.MatchStartEvent.MatchPlayerInfo)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void MatchStartEvent_MatchPlayerInfo::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.name_.Destroy();
+}
+
+void MatchStartEvent_MatchPlayerInfo::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void MatchStartEvent_MatchPlayerInfo::Clear() {
+// @@protoc_insertion_point(message_clear_start:openfoxwq.MatchStartEvent.MatchPlayerInfo)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    _impl_.name_.ClearNonDefaultToEmpty();
+  }
+  if (cached_has_bits & 0x0000000eu) {
+    ::memset(&_impl_.player_id_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&_impl_.country_) -
+        reinterpret_cast<char*>(&_impl_.player_id_)) + sizeof(_impl_.country_));
+  }
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* MatchStartEvent_MatchPlayerInfo::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // optional int64 player_id = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_player_id(&has_bits);
+          _impl_.player_id_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional string name = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
+          auto str = _internal_mutable_name();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+          #ifndef NDEBUG
+          ::_pbi::VerifyUTF8(str, "openfoxwq.MatchStartEvent.MatchPlayerInfo.name");
+          #endif  // !NDEBUG
+        } else
+          goto handle_unusual;
+        continue;
+      // optional .openfoxwq.Rank rank = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+          if (PROTOBUF_PREDICT_TRUE(::openfoxwq::Rank_IsValid(val))) {
+            _internal_set_rank(static_cast<::openfoxwq::Rank>(val));
+          } else {
+            ::PROTOBUF_NAMESPACE_ID::internal::WriteVarint(4, val, mutable_unknown_fields());
+          }
+        } else
+          goto handle_unusual;
+        continue;
+      // optional .openfoxwq.Country country = 20;
+      case 20:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 160)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+          if (PROTOBUF_PREDICT_TRUE(::openfoxwq::Country_IsValid(val))) {
+            _internal_set_country(static_cast<::openfoxwq::Country>(val));
+          } else {
+            ::PROTOBUF_NAMESPACE_ID::internal::WriteVarint(20, val, mutable_unknown_fields());
+          }
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  _impl_._has_bits_.Or(has_bits);
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* MatchStartEvent_MatchPlayerInfo::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:openfoxwq.MatchStartEvent.MatchPlayerInfo)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  // optional int64 player_id = 1;
+  if (cached_has_bits & 0x00000002u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(1, this->_internal_player_id(), target);
+  }
+
+  // optional string name = 3;
+  if (cached_has_bits & 0x00000001u) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->_internal_name().data(), static_cast<int>(this->_internal_name().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
+      "openfoxwq.MatchStartEvent.MatchPlayerInfo.name");
+    target = stream->WriteStringMaybeAliased(
+        3, this->_internal_name(), target);
+  }
+
+  // optional .openfoxwq.Rank rank = 4;
+  if (cached_has_bits & 0x00000004u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      4, this->_internal_rank(), target);
+  }
+
+  // optional .openfoxwq.Country country = 20;
+  if (cached_has_bits & 0x00000008u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      20, this->_internal_country(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:openfoxwq.MatchStartEvent.MatchPlayerInfo)
+  return target;
+}
+
+size_t MatchStartEvent_MatchPlayerInfo::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:openfoxwq.MatchStartEvent.MatchPlayerInfo)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x0000000fu) {
+    // optional string name = 3;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+          this->_internal_name());
+    }
+
+    // optional int64 player_id = 1;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_player_id());
+    }
+
+    // optional .openfoxwq.Rank rank = 4;
+    if (cached_has_bits & 0x00000004u) {
+      total_size += 1 +
+        ::_pbi::WireFormatLite::EnumSize(this->_internal_rank());
+    }
+
+    // optional .openfoxwq.Country country = 20;
+    if (cached_has_bits & 0x00000008u) {
+      total_size += 2 +
+        ::_pbi::WireFormatLite::EnumSize(this->_internal_country());
+    }
+
+  }
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData MatchStartEvent_MatchPlayerInfo::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    MatchStartEvent_MatchPlayerInfo::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*MatchStartEvent_MatchPlayerInfo::GetClassData() const { return &_class_data_; }
+
+
+void MatchStartEvent_MatchPlayerInfo::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<MatchStartEvent_MatchPlayerInfo*>(&to_msg);
+  auto& from = static_cast<const MatchStartEvent_MatchPlayerInfo&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:openfoxwq.MatchStartEvent.MatchPlayerInfo)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x0000000fu) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_set_name(from._internal_name());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_impl_.player_id_ = from._impl_.player_id_;
+    }
+    if (cached_has_bits & 0x00000004u) {
+      _this->_impl_.rank_ = from._impl_.rank_;
+    }
+    if (cached_has_bits & 0x00000008u) {
+      _this->_impl_.country_ = from._impl_.country_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void MatchStartEvent_MatchPlayerInfo::CopyFrom(const MatchStartEvent_MatchPlayerInfo& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:openfoxwq.MatchStartEvent.MatchPlayerInfo)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool MatchStartEvent_MatchPlayerInfo::IsInitialized() const {
+  return true;
+}
+
+void MatchStartEvent_MatchPlayerInfo::InternalSwap(MatchStartEvent_MatchPlayerInfo* other) {
+  using std::swap;
+  auto* lhs_arena = GetArenaForAllocation();
+  auto* rhs_arena = other->GetArenaForAllocation();
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.name_, lhs_arena,
+      &other->_impl_.name_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(MatchStartEvent_MatchPlayerInfo, _impl_.country_)
+      + sizeof(MatchStartEvent_MatchPlayerInfo::_impl_.country_)
+      - PROTOBUF_FIELD_OFFSET(MatchStartEvent_MatchPlayerInfo, _impl_.player_id_)>(
+          reinterpret_cast<char*>(&_impl_.player_id_),
+          reinterpret_cast<char*>(&other->_impl_.player_id_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata MatchStartEvent_MatchPlayerInfo::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_proto_2fplay_2eproto_getter, &descriptor_table_proto_2fplay_2eproto_once,
+      file_level_metadata_proto_2fplay_2eproto[48]);
+}
+
+// ===================================================================
+
+class MatchStartEvent_AutomatchPreset::_Internal {
+ public:
+  using HasBits = decltype(std::declval<MatchStartEvent_AutomatchPreset>()._impl_._has_bits_);
+  static void set_has_id(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static void set_has_board_size(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static void set_has_main_time_sec(HasBits* has_bits) {
+    (*has_bits)[0] |= 4u;
+  }
+  static void set_has_byoyomi_periods(HasBits* has_bits) {
+    (*has_bits)[0] |= 8u;
+  }
+  static void set_has_byoyomi_time_sec(HasBits* has_bits) {
+    (*has_bits)[0] |= 16u;
+  }
+  static void set_has_chinese_rules(HasBits* has_bits) {
+    (*has_bits)[0] |= 128u;
+  }
+  static void set_has_min_duan(HasBits* has_bits) {
+    (*has_bits)[0] |= 32u;
+  }
+  static void set_has_max_duan(HasBits* has_bits) {
+    (*has_bits)[0] |= 64u;
+  }
+};
+
+MatchStartEvent_AutomatchPreset::MatchStartEvent_AutomatchPreset(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:openfoxwq.MatchStartEvent.AutomatchPreset)
+}
+MatchStartEvent_AutomatchPreset::MatchStartEvent_AutomatchPreset(const MatchStartEvent_AutomatchPreset& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  MatchStartEvent_AutomatchPreset* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.id_){}
+    , decltype(_impl_.board_size_){}
+    , decltype(_impl_.main_time_sec_){}
+    , decltype(_impl_.byoyomi_periods_){}
+    , decltype(_impl_.byoyomi_time_sec_){}
+    , decltype(_impl_.min_duan_){}
+    , decltype(_impl_.max_duan_){}
+    , decltype(_impl_.chinese_rules_){}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::memcpy(&_impl_.id_, &from._impl_.id_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.chinese_rules_) -
+    reinterpret_cast<char*>(&_impl_.id_)) + sizeof(_impl_.chinese_rules_));
+  // @@protoc_insertion_point(copy_constructor:openfoxwq.MatchStartEvent.AutomatchPreset)
+}
+
+inline void MatchStartEvent_AutomatchPreset::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.id_){int64_t{0}}
+    , decltype(_impl_.board_size_){int64_t{0}}
+    , decltype(_impl_.main_time_sec_){int64_t{0}}
+    , decltype(_impl_.byoyomi_periods_){int64_t{0}}
+    , decltype(_impl_.byoyomi_time_sec_){int64_t{0}}
+    , decltype(_impl_.min_duan_){int64_t{0}}
+    , decltype(_impl_.max_duan_){int64_t{0}}
+    , decltype(_impl_.chinese_rules_){false}
+  };
+}
+
+MatchStartEvent_AutomatchPreset::~MatchStartEvent_AutomatchPreset() {
+  // @@protoc_insertion_point(destructor:openfoxwq.MatchStartEvent.AutomatchPreset)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void MatchStartEvent_AutomatchPreset::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+}
+
+void MatchStartEvent_AutomatchPreset::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void MatchStartEvent_AutomatchPreset::Clear() {
+// @@protoc_insertion_point(message_clear_start:openfoxwq.MatchStartEvent.AutomatchPreset)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x000000ffu) {
+    ::memset(&_impl_.id_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&_impl_.chinese_rules_) -
+        reinterpret_cast<char*>(&_impl_.id_)) + sizeof(_impl_.chinese_rules_));
+  }
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* MatchStartEvent_AutomatchPreset::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // optional int64 id = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_id(&has_bits);
+          _impl_.id_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional int64 board_size = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          _Internal::set_has_board_size(&has_bits);
+          _impl_.board_size_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional int64 main_time_sec = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
+          _Internal::set_has_main_time_sec(&has_bits);
+          _impl_.main_time_sec_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional int64 byoyomi_periods = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
+          _Internal::set_has_byoyomi_periods(&has_bits);
+          _impl_.byoyomi_periods_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional int64 byoyomi_time_sec = 5;
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
+          _Internal::set_has_byoyomi_time_sec(&has_bits);
+          _impl_.byoyomi_time_sec_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional bool chinese_rules = 6;
+      case 6:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 48)) {
+          _Internal::set_has_chinese_rules(&has_bits);
+          _impl_.chinese_rules_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional int64 min_duan = 7;
+      case 7:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 56)) {
+          _Internal::set_has_min_duan(&has_bits);
+          _impl_.min_duan_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional int64 max_duan = 8;
+      case 8:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 64)) {
+          _Internal::set_has_max_duan(&has_bits);
+          _impl_.max_duan_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  _impl_._has_bits_.Or(has_bits);
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* MatchStartEvent_AutomatchPreset::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:openfoxwq.MatchStartEvent.AutomatchPreset)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  // optional int64 id = 1;
+  if (cached_has_bits & 0x00000001u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(1, this->_internal_id(), target);
+  }
+
+  // optional int64 board_size = 2;
+  if (cached_has_bits & 0x00000002u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(2, this->_internal_board_size(), target);
+  }
+
+  // optional int64 main_time_sec = 3;
+  if (cached_has_bits & 0x00000004u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(3, this->_internal_main_time_sec(), target);
+  }
+
+  // optional int64 byoyomi_periods = 4;
+  if (cached_has_bits & 0x00000008u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(4, this->_internal_byoyomi_periods(), target);
+  }
+
+  // optional int64 byoyomi_time_sec = 5;
+  if (cached_has_bits & 0x00000010u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(5, this->_internal_byoyomi_time_sec(), target);
+  }
+
+  // optional bool chinese_rules = 6;
+  if (cached_has_bits & 0x00000080u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(6, this->_internal_chinese_rules(), target);
+  }
+
+  // optional int64 min_duan = 7;
+  if (cached_has_bits & 0x00000020u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(7, this->_internal_min_duan(), target);
+  }
+
+  // optional int64 max_duan = 8;
+  if (cached_has_bits & 0x00000040u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(8, this->_internal_max_duan(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:openfoxwq.MatchStartEvent.AutomatchPreset)
+  return target;
+}
+
+size_t MatchStartEvent_AutomatchPreset::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:openfoxwq.MatchStartEvent.AutomatchPreset)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x000000ffu) {
+    // optional int64 id = 1;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_id());
+    }
+
+    // optional int64 board_size = 2;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_board_size());
+    }
+
+    // optional int64 main_time_sec = 3;
+    if (cached_has_bits & 0x00000004u) {
+      total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_main_time_sec());
+    }
+
+    // optional int64 byoyomi_periods = 4;
+    if (cached_has_bits & 0x00000008u) {
+      total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_byoyomi_periods());
+    }
+
+    // optional int64 byoyomi_time_sec = 5;
+    if (cached_has_bits & 0x00000010u) {
+      total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_byoyomi_time_sec());
+    }
+
+    // optional int64 min_duan = 7;
+    if (cached_has_bits & 0x00000020u) {
+      total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_min_duan());
+    }
+
+    // optional int64 max_duan = 8;
+    if (cached_has_bits & 0x00000040u) {
+      total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_max_duan());
+    }
+
+    // optional bool chinese_rules = 6;
+    if (cached_has_bits & 0x00000080u) {
+      total_size += 1 + 1;
+    }
+
+  }
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData MatchStartEvent_AutomatchPreset::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    MatchStartEvent_AutomatchPreset::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*MatchStartEvent_AutomatchPreset::GetClassData() const { return &_class_data_; }
+
+
+void MatchStartEvent_AutomatchPreset::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<MatchStartEvent_AutomatchPreset*>(&to_msg);
+  auto& from = static_cast<const MatchStartEvent_AutomatchPreset&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:openfoxwq.MatchStartEvent.AutomatchPreset)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x000000ffu) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_impl_.id_ = from._impl_.id_;
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_impl_.board_size_ = from._impl_.board_size_;
+    }
+    if (cached_has_bits & 0x00000004u) {
+      _this->_impl_.main_time_sec_ = from._impl_.main_time_sec_;
+    }
+    if (cached_has_bits & 0x00000008u) {
+      _this->_impl_.byoyomi_periods_ = from._impl_.byoyomi_periods_;
+    }
+    if (cached_has_bits & 0x00000010u) {
+      _this->_impl_.byoyomi_time_sec_ = from._impl_.byoyomi_time_sec_;
+    }
+    if (cached_has_bits & 0x00000020u) {
+      _this->_impl_.min_duan_ = from._impl_.min_duan_;
+    }
+    if (cached_has_bits & 0x00000040u) {
+      _this->_impl_.max_duan_ = from._impl_.max_duan_;
+    }
+    if (cached_has_bits & 0x00000080u) {
+      _this->_impl_.chinese_rules_ = from._impl_.chinese_rules_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void MatchStartEvent_AutomatchPreset::CopyFrom(const MatchStartEvent_AutomatchPreset& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:openfoxwq.MatchStartEvent.AutomatchPreset)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool MatchStartEvent_AutomatchPreset::IsInitialized() const {
+  return true;
+}
+
+void MatchStartEvent_AutomatchPreset::InternalSwap(MatchStartEvent_AutomatchPreset* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(MatchStartEvent_AutomatchPreset, _impl_.chinese_rules_)
+      + sizeof(MatchStartEvent_AutomatchPreset::_impl_.chinese_rules_)
+      - PROTOBUF_FIELD_OFFSET(MatchStartEvent_AutomatchPreset, _impl_.id_)>(
+          reinterpret_cast<char*>(&_impl_.id_),
+          reinterpret_cast<char*>(&other->_impl_.id_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata MatchStartEvent_AutomatchPreset::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_proto_2fplay_2eproto_getter, &descriptor_table_proto_2fplay_2eproto_once,
+      file_level_metadata_proto_2fplay_2eproto[49]);
+}
+
+// ===================================================================
+
+class MatchStartEvent::_Internal {
+ public:
+  using HasBits = decltype(std::declval<MatchStartEvent>()._impl_._has_bits_);
+  static const ::openfoxwq::MatchStartEvent_MatchInfo& match_info(const MatchStartEvent* msg);
+  static void set_has_match_info(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static void set_has_unknown_field_2(HasBits* has_bits) {
+    (*has_bits)[0] |= 8u;
+  }
+  static void set_has_unix_ts_nanos(HasBits* has_bits) {
+    (*has_bits)[0] |= 16u;
+  }
+  static void set_has_unknown_field_4(HasBits* has_bits) {
+    (*has_bits)[0] |= 32u;
+  }
+  static void set_has_unknown_field_6(HasBits* has_bits) {
+    (*has_bits)[0] |= 64u;
+  }
+  static void set_has_unix_ts(HasBits* has_bits) {
+    (*has_bits)[0] |= 128u;
+  }
+  static void set_has_unix_ts_nanos_str(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static void set_has_room_id_1(HasBits* has_bits) {
+    (*has_bits)[0] |= 256u;
+  }
+  static void set_has_room_id_2(HasBits* has_bits) {
+    (*has_bits)[0] |= 512u;
+  }
+  static void set_has_room_id_3(HasBits* has_bits) {
+    (*has_bits)[0] |= 2048u;
+  }
+  static void set_has_room_id_4(HasBits* has_bits) {
+    (*has_bits)[0] |= 1024u;
+  }
+  static void set_has_automatch_preset_id(HasBits* has_bits) {
+    (*has_bits)[0] |= 4096u;
+  }
+  static const ::openfoxwq::MatchStartEvent_AutomatchPreset& automatch_preset(const MatchStartEvent* msg);
+  static void set_has_automatch_preset(HasBits* has_bits) {
+    (*has_bits)[0] |= 4u;
+  }
+};
+
+const ::openfoxwq::MatchStartEvent_MatchInfo&
+MatchStartEvent::_Internal::match_info(const MatchStartEvent* msg) {
+  return *msg->_impl_.match_info_;
+}
+const ::openfoxwq::MatchStartEvent_AutomatchPreset&
+MatchStartEvent::_Internal::automatch_preset(const MatchStartEvent* msg) {
+  return *msg->_impl_.automatch_preset_;
+}
+MatchStartEvent::MatchStartEvent(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:openfoxwq.MatchStartEvent)
+}
+MatchStartEvent::MatchStartEvent(const MatchStartEvent& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  MatchStartEvent* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.players_){from._impl_.players_}
+    , decltype(_impl_.unix_ts_nanos_str_){}
+    , decltype(_impl_.match_info_){nullptr}
+    , decltype(_impl_.automatch_preset_){nullptr}
+    , decltype(_impl_.unknown_field_2_){}
+    , decltype(_impl_.unix_ts_nanos_){}
+    , decltype(_impl_.unknown_field_4_){}
+    , decltype(_impl_.unknown_field_6_){}
+    , decltype(_impl_.unix_ts_){}
+    , decltype(_impl_.room_id_1_){}
+    , decltype(_impl_.room_id_2_){}
+    , decltype(_impl_.room_id_4_){}
+    , decltype(_impl_.room_id_3_){}
+    , decltype(_impl_.automatch_preset_id_){}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _impl_.unix_ts_nanos_str_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.unix_ts_nanos_str_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (from._internal_has_unix_ts_nanos_str()) {
+    _this->_impl_.unix_ts_nanos_str_.Set(from._internal_unix_ts_nanos_str(), 
+      _this->GetArenaForAllocation());
+  }
+  if (from._internal_has_match_info()) {
+    _this->_impl_.match_info_ = new ::openfoxwq::MatchStartEvent_MatchInfo(*from._impl_.match_info_);
+  }
+  if (from._internal_has_automatch_preset()) {
+    _this->_impl_.automatch_preset_ = new ::openfoxwq::MatchStartEvent_AutomatchPreset(*from._impl_.automatch_preset_);
+  }
+  ::memcpy(&_impl_.unknown_field_2_, &from._impl_.unknown_field_2_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.automatch_preset_id_) -
+    reinterpret_cast<char*>(&_impl_.unknown_field_2_)) + sizeof(_impl_.automatch_preset_id_));
+  // @@protoc_insertion_point(copy_constructor:openfoxwq.MatchStartEvent)
+}
+
+inline void MatchStartEvent::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.players_){arena}
+    , decltype(_impl_.unix_ts_nanos_str_){}
+    , decltype(_impl_.match_info_){nullptr}
+    , decltype(_impl_.automatch_preset_){nullptr}
+    , decltype(_impl_.unknown_field_2_){int64_t{0}}
+    , decltype(_impl_.unix_ts_nanos_){int64_t{0}}
+    , decltype(_impl_.unknown_field_4_){int64_t{0}}
+    , decltype(_impl_.unknown_field_6_){int64_t{0}}
+    , decltype(_impl_.unix_ts_){int64_t{0}}
+    , decltype(_impl_.room_id_1_){int64_t{0}}
+    , decltype(_impl_.room_id_2_){int64_t{0}}
+    , decltype(_impl_.room_id_4_){int64_t{0}}
+    , decltype(_impl_.room_id_3_){int64_t{0}}
+    , decltype(_impl_.automatch_preset_id_){int64_t{0}}
+  };
+  _impl_.unix_ts_nanos_str_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.unix_ts_nanos_str_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+}
+
+MatchStartEvent::~MatchStartEvent() {
+  // @@protoc_insertion_point(destructor:openfoxwq.MatchStartEvent)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void MatchStartEvent::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.players_.~RepeatedPtrField();
+  _impl_.unix_ts_nanos_str_.Destroy();
+  if (this != internal_default_instance()) delete _impl_.match_info_;
+  if (this != internal_default_instance()) delete _impl_.automatch_preset_;
+}
+
+void MatchStartEvent::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void MatchStartEvent::Clear() {
+// @@protoc_insertion_point(message_clear_start:openfoxwq.MatchStartEvent)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _impl_.players_.Clear();
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000007u) {
+    if (cached_has_bits & 0x00000001u) {
+      _impl_.unix_ts_nanos_str_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000002u) {
+      GOOGLE_DCHECK(_impl_.match_info_ != nullptr);
+      _impl_.match_info_->Clear();
+    }
+    if (cached_has_bits & 0x00000004u) {
+      GOOGLE_DCHECK(_impl_.automatch_preset_ != nullptr);
+      _impl_.automatch_preset_->Clear();
+    }
+  }
+  if (cached_has_bits & 0x000000f8u) {
+    ::memset(&_impl_.unknown_field_2_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&_impl_.unix_ts_) -
+        reinterpret_cast<char*>(&_impl_.unknown_field_2_)) + sizeof(_impl_.unix_ts_));
+  }
+  if (cached_has_bits & 0x00001f00u) {
+    ::memset(&_impl_.room_id_1_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&_impl_.automatch_preset_id_) -
+        reinterpret_cast<char*>(&_impl_.room_id_1_)) + sizeof(_impl_.automatch_preset_id_));
+  }
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* MatchStartEvent::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // optional .openfoxwq.MatchStartEvent.MatchInfo match_info = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_match_info(), ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional int64 unknown_field_2 = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          _Internal::set_has_unknown_field_2(&has_bits);
+          _impl_.unknown_field_2_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional int64 unix_ts_nanos = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
+          _Internal::set_has_unix_ts_nanos(&has_bits);
+          _impl_.unix_ts_nanos_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional int64 unknown_field_4 = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
+          _Internal::set_has_unknown_field_4(&has_bits);
+          _impl_.unknown_field_4_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional int64 unknown_field_6 = 6;
+      case 6:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 48)) {
+          _Internal::set_has_unknown_field_6(&has_bits);
+          _impl_.unknown_field_6_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional int64 unix_ts = 7;
+      case 7:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 56)) {
+          _Internal::set_has_unix_ts(&has_bits);
+          _impl_.unix_ts_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional string unix_ts_nanos_str = 8;
+      case 8:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 66)) {
+          auto str = _internal_mutable_unix_ts_nanos_str();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+          #ifndef NDEBUG
+          ::_pbi::VerifyUTF8(str, "openfoxwq.MatchStartEvent.unix_ts_nanos_str");
+          #endif  // !NDEBUG
+        } else
+          goto handle_unusual;
+        continue;
+      // repeated .openfoxwq.MatchStartEvent.MatchPlayerInfo players = 9;
+      case 9:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 74)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            ptr = ctx->ParseMessage(_internal_add_players(), ptr);
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<74>(ptr));
+        } else
+          goto handle_unusual;
+        continue;
+      // optional int64 room_id_1 = 11;
+      case 11:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 88)) {
+          _Internal::set_has_room_id_1(&has_bits);
+          _impl_.room_id_1_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional int64 room_id_2 = 12;
+      case 12:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 96)) {
+          _Internal::set_has_room_id_2(&has_bits);
+          _impl_.room_id_2_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional int64 room_id_4 = 13;
+      case 13:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 104)) {
+          _Internal::set_has_room_id_4(&has_bits);
+          _impl_.room_id_4_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional int64 room_id_3 = 14;
+      case 14:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 112)) {
+          _Internal::set_has_room_id_3(&has_bits);
+          _impl_.room_id_3_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional int64 automatch_preset_id = 15;
+      case 15:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 120)) {
+          _Internal::set_has_automatch_preset_id(&has_bits);
+          _impl_.automatch_preset_id_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional .openfoxwq.MatchStartEvent.AutomatchPreset automatch_preset = 17;
+      case 17:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 138)) {
+          ptr = ctx->ParseMessage(_internal_mutable_automatch_preset(), ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  _impl_._has_bits_.Or(has_bits);
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* MatchStartEvent::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:openfoxwq.MatchStartEvent)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  // optional .openfoxwq.MatchStartEvent.MatchInfo match_info = 1;
+  if (cached_has_bits & 0x00000002u) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::match_info(this),
+        _Internal::match_info(this).GetCachedSize(), target, stream);
+  }
+
+  // optional int64 unknown_field_2 = 2;
+  if (cached_has_bits & 0x00000008u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(2, this->_internal_unknown_field_2(), target);
+  }
+
+  // optional int64 unix_ts_nanos = 3;
+  if (cached_has_bits & 0x00000010u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(3, this->_internal_unix_ts_nanos(), target);
+  }
+
+  // optional int64 unknown_field_4 = 4;
+  if (cached_has_bits & 0x00000020u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(4, this->_internal_unknown_field_4(), target);
+  }
+
+  // optional int64 unknown_field_6 = 6;
+  if (cached_has_bits & 0x00000040u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(6, this->_internal_unknown_field_6(), target);
+  }
+
+  // optional int64 unix_ts = 7;
+  if (cached_has_bits & 0x00000080u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(7, this->_internal_unix_ts(), target);
+  }
+
+  // optional string unix_ts_nanos_str = 8;
+  if (cached_has_bits & 0x00000001u) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->_internal_unix_ts_nanos_str().data(), static_cast<int>(this->_internal_unix_ts_nanos_str().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
+      "openfoxwq.MatchStartEvent.unix_ts_nanos_str");
+    target = stream->WriteStringMaybeAliased(
+        8, this->_internal_unix_ts_nanos_str(), target);
+  }
+
+  // repeated .openfoxwq.MatchStartEvent.MatchPlayerInfo players = 9;
+  for (unsigned i = 0,
+      n = static_cast<unsigned>(this->_internal_players_size()); i < n; i++) {
+    const auto& repfield = this->_internal_players(i);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+        InternalWriteMessage(9, repfield, repfield.GetCachedSize(), target, stream);
+  }
+
+  // optional int64 room_id_1 = 11;
+  if (cached_has_bits & 0x00000100u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(11, this->_internal_room_id_1(), target);
+  }
+
+  // optional int64 room_id_2 = 12;
+  if (cached_has_bits & 0x00000200u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(12, this->_internal_room_id_2(), target);
+  }
+
+  // optional int64 room_id_4 = 13;
+  if (cached_has_bits & 0x00000400u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(13, this->_internal_room_id_4(), target);
+  }
+
+  // optional int64 room_id_3 = 14;
+  if (cached_has_bits & 0x00000800u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(14, this->_internal_room_id_3(), target);
+  }
+
+  // optional int64 automatch_preset_id = 15;
+  if (cached_has_bits & 0x00001000u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(15, this->_internal_automatch_preset_id(), target);
+  }
+
+  // optional .openfoxwq.MatchStartEvent.AutomatchPreset automatch_preset = 17;
+  if (cached_has_bits & 0x00000004u) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(17, _Internal::automatch_preset(this),
+        _Internal::automatch_preset(this).GetCachedSize(), target, stream);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:openfoxwq.MatchStartEvent)
+  return target;
+}
+
+size_t MatchStartEvent::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:openfoxwq.MatchStartEvent)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // repeated .openfoxwq.MatchStartEvent.MatchPlayerInfo players = 9;
+  total_size += 1UL * this->_internal_players_size();
+  for (const auto& msg : this->_impl_.players_) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
+  }
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x000000ffu) {
+    // optional string unix_ts_nanos_str = 8;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+          this->_internal_unix_ts_nanos_str());
+    }
+
+    // optional .openfoxwq.MatchStartEvent.MatchInfo match_info = 1;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+          *_impl_.match_info_);
+    }
+
+    // optional .openfoxwq.MatchStartEvent.AutomatchPreset automatch_preset = 17;
+    if (cached_has_bits & 0x00000004u) {
+      total_size += 2 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+          *_impl_.automatch_preset_);
+    }
+
+    // optional int64 unknown_field_2 = 2;
+    if (cached_has_bits & 0x00000008u) {
+      total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_unknown_field_2());
+    }
+
+    // optional int64 unix_ts_nanos = 3;
+    if (cached_has_bits & 0x00000010u) {
+      total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_unix_ts_nanos());
+    }
+
+    // optional int64 unknown_field_4 = 4;
+    if (cached_has_bits & 0x00000020u) {
+      total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_unknown_field_4());
+    }
+
+    // optional int64 unknown_field_6 = 6;
+    if (cached_has_bits & 0x00000040u) {
+      total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_unknown_field_6());
+    }
+
+    // optional int64 unix_ts = 7;
+    if (cached_has_bits & 0x00000080u) {
+      total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_unix_ts());
+    }
+
+  }
+  if (cached_has_bits & 0x00001f00u) {
+    // optional int64 room_id_1 = 11;
+    if (cached_has_bits & 0x00000100u) {
+      total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_room_id_1());
+    }
+
+    // optional int64 room_id_2 = 12;
+    if (cached_has_bits & 0x00000200u) {
+      total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_room_id_2());
+    }
+
+    // optional int64 room_id_4 = 13;
+    if (cached_has_bits & 0x00000400u) {
+      total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_room_id_4());
+    }
+
+    // optional int64 room_id_3 = 14;
+    if (cached_has_bits & 0x00000800u) {
+      total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_room_id_3());
+    }
+
+    // optional int64 automatch_preset_id = 15;
+    if (cached_has_bits & 0x00001000u) {
+      total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_automatch_preset_id());
+    }
+
+  }
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData MatchStartEvent::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    MatchStartEvent::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*MatchStartEvent::GetClassData() const { return &_class_data_; }
+
+
+void MatchStartEvent::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<MatchStartEvent*>(&to_msg);
+  auto& from = static_cast<const MatchStartEvent&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:openfoxwq.MatchStartEvent)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  _this->_impl_.players_.MergeFrom(from._impl_.players_);
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x000000ffu) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_set_unix_ts_nanos_str(from._internal_unix_ts_nanos_str());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_internal_mutable_match_info()->::openfoxwq::MatchStartEvent_MatchInfo::MergeFrom(
+          from._internal_match_info());
+    }
+    if (cached_has_bits & 0x00000004u) {
+      _this->_internal_mutable_automatch_preset()->::openfoxwq::MatchStartEvent_AutomatchPreset::MergeFrom(
+          from._internal_automatch_preset());
+    }
+    if (cached_has_bits & 0x00000008u) {
+      _this->_impl_.unknown_field_2_ = from._impl_.unknown_field_2_;
+    }
+    if (cached_has_bits & 0x00000010u) {
+      _this->_impl_.unix_ts_nanos_ = from._impl_.unix_ts_nanos_;
+    }
+    if (cached_has_bits & 0x00000020u) {
+      _this->_impl_.unknown_field_4_ = from._impl_.unknown_field_4_;
+    }
+    if (cached_has_bits & 0x00000040u) {
+      _this->_impl_.unknown_field_6_ = from._impl_.unknown_field_6_;
+    }
+    if (cached_has_bits & 0x00000080u) {
+      _this->_impl_.unix_ts_ = from._impl_.unix_ts_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
+  }
+  if (cached_has_bits & 0x00001f00u) {
+    if (cached_has_bits & 0x00000100u) {
+      _this->_impl_.room_id_1_ = from._impl_.room_id_1_;
+    }
+    if (cached_has_bits & 0x00000200u) {
+      _this->_impl_.room_id_2_ = from._impl_.room_id_2_;
+    }
+    if (cached_has_bits & 0x00000400u) {
+      _this->_impl_.room_id_4_ = from._impl_.room_id_4_;
+    }
+    if (cached_has_bits & 0x00000800u) {
+      _this->_impl_.room_id_3_ = from._impl_.room_id_3_;
+    }
+    if (cached_has_bits & 0x00001000u) {
+      _this->_impl_.automatch_preset_id_ = from._impl_.automatch_preset_id_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void MatchStartEvent::CopyFrom(const MatchStartEvent& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:openfoxwq.MatchStartEvent)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool MatchStartEvent::IsInitialized() const {
+  return true;
+}
+
+void MatchStartEvent::InternalSwap(MatchStartEvent* other) {
+  using std::swap;
+  auto* lhs_arena = GetArenaForAllocation();
+  auto* rhs_arena = other->GetArenaForAllocation();
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  _impl_.players_.InternalSwap(&other->_impl_.players_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.unix_ts_nanos_str_, lhs_arena,
+      &other->_impl_.unix_ts_nanos_str_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(MatchStartEvent, _impl_.automatch_preset_id_)
+      + sizeof(MatchStartEvent::_impl_.automatch_preset_id_)
+      - PROTOBUF_FIELD_OFFSET(MatchStartEvent, _impl_.match_info_)>(
+          reinterpret_cast<char*>(&_impl_.match_info_),
+          reinterpret_cast<char*>(&other->_impl_.match_info_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata MatchStartEvent::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_proto_2fplay_2eproto_getter, &descriptor_table_proto_2fplay_2eproto_once,
+      file_level_metadata_proto_2fplay_2eproto[50]);
+}
+
+// ===================================================================
+
+class HeartbeatInfo::_Internal {
+ public:
+  using HasBits = decltype(std::declval<HeartbeatInfo>()._impl_._has_bits_);
+  static void set_has_unknown_field_1(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static void set_has_unknown_field_2(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+};
+
+HeartbeatInfo::HeartbeatInfo(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:openfoxwq.HeartbeatInfo)
+}
+HeartbeatInfo::HeartbeatInfo(const HeartbeatInfo& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  HeartbeatInfo* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.unknown_field_1_){}
+    , decltype(_impl_.unknown_field_2_){}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::memcpy(&_impl_.unknown_field_1_, &from._impl_.unknown_field_1_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.unknown_field_2_) -
+    reinterpret_cast<char*>(&_impl_.unknown_field_1_)) + sizeof(_impl_.unknown_field_2_));
+  // @@protoc_insertion_point(copy_constructor:openfoxwq.HeartbeatInfo)
+}
+
+inline void HeartbeatInfo::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.unknown_field_1_){int64_t{0}}
+    , decltype(_impl_.unknown_field_2_){int64_t{0}}
+  };
+}
+
+HeartbeatInfo::~HeartbeatInfo() {
+  // @@protoc_insertion_point(destructor:openfoxwq.HeartbeatInfo)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void HeartbeatInfo::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+}
+
+void HeartbeatInfo::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void HeartbeatInfo::Clear() {
+// @@protoc_insertion_point(message_clear_start:openfoxwq.HeartbeatInfo)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    ::memset(&_impl_.unknown_field_1_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&_impl_.unknown_field_2_) -
+        reinterpret_cast<char*>(&_impl_.unknown_field_1_)) + sizeof(_impl_.unknown_field_2_));
+  }
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* HeartbeatInfo::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // optional int64 unknown_field_1 = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_unknown_field_1(&has_bits);
+          _impl_.unknown_field_1_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional int64 unknown_field_2 = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          _Internal::set_has_unknown_field_2(&has_bits);
+          _impl_.unknown_field_2_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  _impl_._has_bits_.Or(has_bits);
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* HeartbeatInfo::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:openfoxwq.HeartbeatInfo)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  // optional int64 unknown_field_1 = 1;
+  if (cached_has_bits & 0x00000001u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(1, this->_internal_unknown_field_1(), target);
+  }
+
+  // optional int64 unknown_field_2 = 2;
+  if (cached_has_bits & 0x00000002u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(2, this->_internal_unknown_field_2(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:openfoxwq.HeartbeatInfo)
+  return target;
+}
+
+size_t HeartbeatInfo::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:openfoxwq.HeartbeatInfo)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    // optional int64 unknown_field_1 = 1;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_unknown_field_1());
+    }
+
+    // optional int64 unknown_field_2 = 2;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_unknown_field_2());
+    }
+
+  }
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData HeartbeatInfo::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    HeartbeatInfo::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*HeartbeatInfo::GetClassData() const { return &_class_data_; }
+
+
+void HeartbeatInfo::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<HeartbeatInfo*>(&to_msg);
+  auto& from = static_cast<const HeartbeatInfo&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:openfoxwq.HeartbeatInfo)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_impl_.unknown_field_1_ = from._impl_.unknown_field_1_;
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_impl_.unknown_field_2_ = from._impl_.unknown_field_2_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void HeartbeatInfo::CopyFrom(const HeartbeatInfo& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:openfoxwq.HeartbeatInfo)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool HeartbeatInfo::IsInitialized() const {
+  return true;
+}
+
+void HeartbeatInfo::InternalSwap(HeartbeatInfo* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(HeartbeatInfo, _impl_.unknown_field_2_)
+      + sizeof(HeartbeatInfo::_impl_.unknown_field_2_)
+      - PROTOBUF_FIELD_OFFSET(HeartbeatInfo, _impl_.unknown_field_1_)>(
+          reinterpret_cast<char*>(&_impl_.unknown_field_1_),
+          reinterpret_cast<char*>(&other->_impl_.unknown_field_1_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata HeartbeatInfo::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_proto_2fplay_2eproto_getter, &descriptor_table_proto_2fplay_2eproto_once,
+      file_level_metadata_proto_2fplay_2eproto[51]);
+}
+
+// ===================================================================
+
+class EnterRoomRequest::_Internal {
+ public:
+  using HasBits = decltype(std::declval<EnterRoomRequest>()._impl_._has_bits_);
+  static const ::openfoxwq::RoomId& id(const EnterRoomRequest* msg);
+  static void set_has_id(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
+  }
+};
+
+const ::openfoxwq::RoomId&
+EnterRoomRequest::_Internal::id(const EnterRoomRequest* msg) {
+  return *msg->_impl_.id_;
+}
+void EnterRoomRequest::clear_id() {
+  if (_impl_.id_ != nullptr) _impl_.id_->Clear();
+  _impl_._has_bits_[0] &= ~0x00000001u;
+}
+EnterRoomRequest::EnterRoomRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:openfoxwq.EnterRoomRequest)
+}
+EnterRoomRequest::EnterRoomRequest(const EnterRoomRequest& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  EnterRoomRequest* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.id_){nullptr}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_id()) {
+    _this->_impl_.id_ = new ::openfoxwq::RoomId(*from._impl_.id_);
+  }
+  // @@protoc_insertion_point(copy_constructor:openfoxwq.EnterRoomRequest)
+}
+
+inline void EnterRoomRequest::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.id_){nullptr}
+  };
+}
+
+EnterRoomRequest::~EnterRoomRequest() {
+  // @@protoc_insertion_point(destructor:openfoxwq.EnterRoomRequest)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void EnterRoomRequest::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.id_;
+}
+
+void EnterRoomRequest::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void EnterRoomRequest::Clear() {
+// @@protoc_insertion_point(message_clear_start:openfoxwq.EnterRoomRequest)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    GOOGLE_DCHECK(_impl_.id_ != nullptr);
+    _impl_.id_->Clear();
+  }
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* EnterRoomRequest::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // required .openfoxwq.RoomId id = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_id(), ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  _impl_._has_bits_.Or(has_bits);
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* EnterRoomRequest::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:openfoxwq.EnterRoomRequest)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  // required .openfoxwq.RoomId id = 1;
+  if (cached_has_bits & 0x00000001u) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::id(this),
+        _Internal::id(this).GetCachedSize(), target, stream);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:openfoxwq.EnterRoomRequest)
+  return target;
+}
+
+size_t EnterRoomRequest::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:openfoxwq.EnterRoomRequest)
+  size_t total_size = 0;
+
+  // required .openfoxwq.RoomId id = 1;
+  if (_internal_has_id()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.id_);
+  }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData EnterRoomRequest::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    EnterRoomRequest::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*EnterRoomRequest::GetClassData() const { return &_class_data_; }
+
+
+void EnterRoomRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<EnterRoomRequest*>(&to_msg);
+  auto& from = static_cast<const EnterRoomRequest&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:openfoxwq.EnterRoomRequest)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from._internal_has_id()) {
+    _this->_internal_mutable_id()->::openfoxwq::RoomId::MergeFrom(
+        from._internal_id());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void EnterRoomRequest::CopyFrom(const EnterRoomRequest& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:openfoxwq.EnterRoomRequest)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool EnterRoomRequest::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
+  return true;
+}
+
+void EnterRoomRequest::InternalSwap(EnterRoomRequest* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  swap(_impl_.id_, other->_impl_.id_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata EnterRoomRequest::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_proto_2fplay_2eproto_getter, &descriptor_table_proto_2fplay_2eproto_once,
+      file_level_metadata_proto_2fplay_2eproto[52]);
+}
+
+// ===================================================================
+
+class EnterRoomResponse::_Internal {
+ public:
+  using HasBits = decltype(std::declval<EnterRoomResponse>()._impl_._has_bits_);
+  static void set_has_error_code(HasBits* has_bits) {
+    (*has_bits)[0] |= 4u;
+  }
+  static const ::openfoxwq::RoomId& room_id(const EnterRoomResponse* msg);
+  static void set_has_room_id(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static const ::openfoxwq::HeartbeatInfo& heartbeat_info(const EnterRoomResponse* msg);
+  static void set_has_heartbeat_info(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+};
+
+const ::openfoxwq::RoomId&
+EnterRoomResponse::_Internal::room_id(const EnterRoomResponse* msg) {
+  return *msg->_impl_.room_id_;
+}
+const ::openfoxwq::HeartbeatInfo&
+EnterRoomResponse::_Internal::heartbeat_info(const EnterRoomResponse* msg) {
+  return *msg->_impl_.heartbeat_info_;
+}
+void EnterRoomResponse::clear_room_id() {
+  if (_impl_.room_id_ != nullptr) _impl_.room_id_->Clear();
+  _impl_._has_bits_[0] &= ~0x00000001u;
+}
+EnterRoomResponse::EnterRoomResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:openfoxwq.EnterRoomResponse)
+}
+EnterRoomResponse::EnterRoomResponse(const EnterRoomResponse& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  EnterRoomResponse* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.room_id_){nullptr}
+    , decltype(_impl_.heartbeat_info_){nullptr}
+    , decltype(_impl_.error_code_){}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_room_id()) {
+    _this->_impl_.room_id_ = new ::openfoxwq::RoomId(*from._impl_.room_id_);
+  }
+  if (from._internal_has_heartbeat_info()) {
+    _this->_impl_.heartbeat_info_ = new ::openfoxwq::HeartbeatInfo(*from._impl_.heartbeat_info_);
+  }
+  _this->_impl_.error_code_ = from._impl_.error_code_;
+  // @@protoc_insertion_point(copy_constructor:openfoxwq.EnterRoomResponse)
+}
+
+inline void EnterRoomResponse::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.room_id_){nullptr}
+    , decltype(_impl_.heartbeat_info_){nullptr}
+    , decltype(_impl_.error_code_){int64_t{0}}
+  };
+}
+
+EnterRoomResponse::~EnterRoomResponse() {
+  // @@protoc_insertion_point(destructor:openfoxwq.EnterRoomResponse)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void EnterRoomResponse::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.room_id_;
+  if (this != internal_default_instance()) delete _impl_.heartbeat_info_;
+}
+
+void EnterRoomResponse::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void EnterRoomResponse::Clear() {
+// @@protoc_insertion_point(message_clear_start:openfoxwq.EnterRoomResponse)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      GOOGLE_DCHECK(_impl_.room_id_ != nullptr);
+      _impl_.room_id_->Clear();
+    }
+    if (cached_has_bits & 0x00000002u) {
+      GOOGLE_DCHECK(_impl_.heartbeat_info_ != nullptr);
+      _impl_.heartbeat_info_->Clear();
+    }
+  }
+  _impl_.error_code_ = int64_t{0};
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* EnterRoomResponse::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // optional int64 error_code = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_error_code(&has_bits);
+          _impl_.error_code_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional .openfoxwq.RoomId room_id = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
+          ptr = ctx->ParseMessage(_internal_mutable_room_id(), ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional .openfoxwq.HeartbeatInfo heartbeat_info = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
+          ptr = ctx->ParseMessage(_internal_mutable_heartbeat_info(), ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  _impl_._has_bits_.Or(has_bits);
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* EnterRoomResponse::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:openfoxwq.EnterRoomResponse)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  // optional int64 error_code = 1;
+  if (cached_has_bits & 0x00000004u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(1, this->_internal_error_code(), target);
+  }
+
+  // optional .openfoxwq.RoomId room_id = 2;
+  if (cached_has_bits & 0x00000001u) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(2, _Internal::room_id(this),
+        _Internal::room_id(this).GetCachedSize(), target, stream);
+  }
+
+  // optional .openfoxwq.HeartbeatInfo heartbeat_info = 3;
+  if (cached_has_bits & 0x00000002u) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(3, _Internal::heartbeat_info(this),
+        _Internal::heartbeat_info(this).GetCachedSize(), target, stream);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:openfoxwq.EnterRoomResponse)
+  return target;
+}
+
+size_t EnterRoomResponse::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:openfoxwq.EnterRoomResponse)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000007u) {
+    // optional .openfoxwq.RoomId room_id = 2;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+          *_impl_.room_id_);
+    }
+
+    // optional .openfoxwq.HeartbeatInfo heartbeat_info = 3;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+          *_impl_.heartbeat_info_);
+    }
+
+    // optional int64 error_code = 1;
+    if (cached_has_bits & 0x00000004u) {
+      total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_error_code());
+    }
+
+  }
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData EnterRoomResponse::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    EnterRoomResponse::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*EnterRoomResponse::GetClassData() const { return &_class_data_; }
+
+
+void EnterRoomResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<EnterRoomResponse*>(&to_msg);
+  auto& from = static_cast<const EnterRoomResponse&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:openfoxwq.EnterRoomResponse)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000007u) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_mutable_room_id()->::openfoxwq::RoomId::MergeFrom(
+          from._internal_room_id());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_internal_mutable_heartbeat_info()->::openfoxwq::HeartbeatInfo::MergeFrom(
+          from._internal_heartbeat_info());
+    }
+    if (cached_has_bits & 0x00000004u) {
+      _this->_impl_.error_code_ = from._impl_.error_code_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void EnterRoomResponse::CopyFrom(const EnterRoomResponse& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:openfoxwq.EnterRoomResponse)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool EnterRoomResponse::IsInitialized() const {
+  return true;
+}
+
+void EnterRoomResponse::InternalSwap(EnterRoomResponse* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(EnterRoomResponse, _impl_.error_code_)
+      + sizeof(EnterRoomResponse::_impl_.error_code_)
+      - PROTOBUF_FIELD_OFFSET(EnterRoomResponse, _impl_.room_id_)>(
+          reinterpret_cast<char*>(&_impl_.room_id_),
+          reinterpret_cast<char*>(&other->_impl_.room_id_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata EnterRoomResponse::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_proto_2fplay_2eproto_getter, &descriptor_table_proto_2fplay_2eproto_once,
+      file_level_metadata_proto_2fplay_2eproto[53]);
+}
+
+// ===================================================================
+
+class LeaveRoomRequest::_Internal {
+ public:
+  using HasBits = decltype(std::declval<LeaveRoomRequest>()._impl_._has_bits_);
+  static const ::openfoxwq::RoomId& id(const LeaveRoomRequest* msg);
+  static void set_has_id(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
+  }
+};
+
+const ::openfoxwq::RoomId&
+LeaveRoomRequest::_Internal::id(const LeaveRoomRequest* msg) {
+  return *msg->_impl_.id_;
+}
+void LeaveRoomRequest::clear_id() {
+  if (_impl_.id_ != nullptr) _impl_.id_->Clear();
+  _impl_._has_bits_[0] &= ~0x00000001u;
+}
+LeaveRoomRequest::LeaveRoomRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:openfoxwq.LeaveRoomRequest)
+}
+LeaveRoomRequest::LeaveRoomRequest(const LeaveRoomRequest& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  LeaveRoomRequest* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.id_){nullptr}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_id()) {
+    _this->_impl_.id_ = new ::openfoxwq::RoomId(*from._impl_.id_);
+  }
+  // @@protoc_insertion_point(copy_constructor:openfoxwq.LeaveRoomRequest)
+}
+
+inline void LeaveRoomRequest::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.id_){nullptr}
+  };
+}
+
+LeaveRoomRequest::~LeaveRoomRequest() {
+  // @@protoc_insertion_point(destructor:openfoxwq.LeaveRoomRequest)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void LeaveRoomRequest::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.id_;
+}
+
+void LeaveRoomRequest::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void LeaveRoomRequest::Clear() {
+// @@protoc_insertion_point(message_clear_start:openfoxwq.LeaveRoomRequest)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    GOOGLE_DCHECK(_impl_.id_ != nullptr);
+    _impl_.id_->Clear();
+  }
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* LeaveRoomRequest::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // required .openfoxwq.RoomId id = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_id(), ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  _impl_._has_bits_.Or(has_bits);
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* LeaveRoomRequest::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:openfoxwq.LeaveRoomRequest)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  // required .openfoxwq.RoomId id = 1;
+  if (cached_has_bits & 0x00000001u) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::id(this),
+        _Internal::id(this).GetCachedSize(), target, stream);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:openfoxwq.LeaveRoomRequest)
+  return target;
+}
+
+size_t LeaveRoomRequest::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:openfoxwq.LeaveRoomRequest)
+  size_t total_size = 0;
+
+  // required .openfoxwq.RoomId id = 1;
+  if (_internal_has_id()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.id_);
+  }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData LeaveRoomRequest::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    LeaveRoomRequest::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*LeaveRoomRequest::GetClassData() const { return &_class_data_; }
+
+
+void LeaveRoomRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<LeaveRoomRequest*>(&to_msg);
+  auto& from = static_cast<const LeaveRoomRequest&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:openfoxwq.LeaveRoomRequest)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from._internal_has_id()) {
+    _this->_internal_mutable_id()->::openfoxwq::RoomId::MergeFrom(
+        from._internal_id());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void LeaveRoomRequest::CopyFrom(const LeaveRoomRequest& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:openfoxwq.LeaveRoomRequest)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool LeaveRoomRequest::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
+  return true;
+}
+
+void LeaveRoomRequest::InternalSwap(LeaveRoomRequest* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  swap(_impl_.id_, other->_impl_.id_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata LeaveRoomRequest::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_proto_2fplay_2eproto_getter, &descriptor_table_proto_2fplay_2eproto_once,
+      file_level_metadata_proto_2fplay_2eproto[54]);
+}
+
+// ===================================================================
+
+class LeaveRoomResponse::_Internal {
+ public:
+  using HasBits = decltype(std::declval<LeaveRoomResponse>()._impl_._has_bits_);
+  static void set_has_error_code(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static const ::openfoxwq::RoomId& room_id(const LeaveRoomResponse* msg);
+  static void set_has_room_id(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+};
+
+const ::openfoxwq::RoomId&
+LeaveRoomResponse::_Internal::room_id(const LeaveRoomResponse* msg) {
+  return *msg->_impl_.room_id_;
+}
+void LeaveRoomResponse::clear_room_id() {
+  if (_impl_.room_id_ != nullptr) _impl_.room_id_->Clear();
+  _impl_._has_bits_[0] &= ~0x00000001u;
+}
+LeaveRoomResponse::LeaveRoomResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:openfoxwq.LeaveRoomResponse)
+}
+LeaveRoomResponse::LeaveRoomResponse(const LeaveRoomResponse& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  LeaveRoomResponse* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.room_id_){nullptr}
+    , decltype(_impl_.error_code_){}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_room_id()) {
+    _this->_impl_.room_id_ = new ::openfoxwq::RoomId(*from._impl_.room_id_);
+  }
+  _this->_impl_.error_code_ = from._impl_.error_code_;
+  // @@protoc_insertion_point(copy_constructor:openfoxwq.LeaveRoomResponse)
+}
+
+inline void LeaveRoomResponse::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.room_id_){nullptr}
+    , decltype(_impl_.error_code_){int64_t{0}}
+  };
+}
+
+LeaveRoomResponse::~LeaveRoomResponse() {
+  // @@protoc_insertion_point(destructor:openfoxwq.LeaveRoomResponse)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void LeaveRoomResponse::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.room_id_;
+}
+
+void LeaveRoomResponse::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void LeaveRoomResponse::Clear() {
+// @@protoc_insertion_point(message_clear_start:openfoxwq.LeaveRoomResponse)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    GOOGLE_DCHECK(_impl_.room_id_ != nullptr);
+    _impl_.room_id_->Clear();
+  }
+  _impl_.error_code_ = int64_t{0};
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* LeaveRoomResponse::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // optional int64 error_code = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_error_code(&has_bits);
+          _impl_.error_code_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional .openfoxwq.RoomId room_id = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
+          ptr = ctx->ParseMessage(_internal_mutable_room_id(), ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  _impl_._has_bits_.Or(has_bits);
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* LeaveRoomResponse::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:openfoxwq.LeaveRoomResponse)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  // optional int64 error_code = 1;
+  if (cached_has_bits & 0x00000002u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(1, this->_internal_error_code(), target);
+  }
+
+  // optional .openfoxwq.RoomId room_id = 2;
+  if (cached_has_bits & 0x00000001u) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(2, _Internal::room_id(this),
+        _Internal::room_id(this).GetCachedSize(), target, stream);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:openfoxwq.LeaveRoomResponse)
+  return target;
+}
+
+size_t LeaveRoomResponse::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:openfoxwq.LeaveRoomResponse)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    // optional .openfoxwq.RoomId room_id = 2;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+          *_impl_.room_id_);
+    }
+
+    // optional int64 error_code = 1;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_error_code());
+    }
+
+  }
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData LeaveRoomResponse::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    LeaveRoomResponse::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*LeaveRoomResponse::GetClassData() const { return &_class_data_; }
+
+
+void LeaveRoomResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<LeaveRoomResponse*>(&to_msg);
+  auto& from = static_cast<const LeaveRoomResponse&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:openfoxwq.LeaveRoomResponse)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_mutable_room_id()->::openfoxwq::RoomId::MergeFrom(
+          from._internal_room_id());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_impl_.error_code_ = from._impl_.error_code_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void LeaveRoomResponse::CopyFrom(const LeaveRoomResponse& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:openfoxwq.LeaveRoomResponse)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool LeaveRoomResponse::IsInitialized() const {
+  return true;
+}
+
+void LeaveRoomResponse::InternalSwap(LeaveRoomResponse* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(LeaveRoomResponse, _impl_.error_code_)
+      + sizeof(LeaveRoomResponse::_impl_.error_code_)
+      - PROTOBUF_FIELD_OFFSET(LeaveRoomResponse, _impl_.room_id_)>(
+          reinterpret_cast<char*>(&_impl_.room_id_),
+          reinterpret_cast<char*>(&other->_impl_.room_id_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata LeaveRoomResponse::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_proto_2fplay_2eproto_getter, &descriptor_table_proto_2fplay_2eproto_once,
+      file_level_metadata_proto_2fplay_2eproto[55]);
+}
+
+// ===================================================================
+
+class ListRoomParticipantsRequest::_Internal {
+ public:
+  using HasBits = decltype(std::declval<ListRoomParticipantsRequest>()._impl_._has_bits_);
+  static const ::openfoxwq::RoomId& id(const ListRoomParticipantsRequest* msg);
+  static void set_has_id(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static void set_has_player_id_1(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static void set_has_player_id_2(HasBits* has_bits) {
+    (*has_bits)[0] |= 4u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000007) ^ 0x00000007) != 0;
+  }
+};
+
+const ::openfoxwq::RoomId&
+ListRoomParticipantsRequest::_Internal::id(const ListRoomParticipantsRequest* msg) {
+  return *msg->_impl_.id_;
+}
+void ListRoomParticipantsRequest::clear_id() {
+  if (_impl_.id_ != nullptr) _impl_.id_->Clear();
+  _impl_._has_bits_[0] &= ~0x00000001u;
+}
+ListRoomParticipantsRequest::ListRoomParticipantsRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:openfoxwq.ListRoomParticipantsRequest)
+}
+ListRoomParticipantsRequest::ListRoomParticipantsRequest(const ListRoomParticipantsRequest& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  ListRoomParticipantsRequest* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.id_){nullptr}
+    , decltype(_impl_.player_id_1_){}
+    , decltype(_impl_.player_id_2_){}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_id()) {
+    _this->_impl_.id_ = new ::openfoxwq::RoomId(*from._impl_.id_);
+  }
+  ::memcpy(&_impl_.player_id_1_, &from._impl_.player_id_1_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.player_id_2_) -
+    reinterpret_cast<char*>(&_impl_.player_id_1_)) + sizeof(_impl_.player_id_2_));
+  // @@protoc_insertion_point(copy_constructor:openfoxwq.ListRoomParticipantsRequest)
+}
+
+inline void ListRoomParticipantsRequest::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.id_){nullptr}
+    , decltype(_impl_.player_id_1_){int64_t{0}}
+    , decltype(_impl_.player_id_2_){int64_t{0}}
+  };
+}
+
+ListRoomParticipantsRequest::~ListRoomParticipantsRequest() {
+  // @@protoc_insertion_point(destructor:openfoxwq.ListRoomParticipantsRequest)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void ListRoomParticipantsRequest::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.id_;
+}
+
+void ListRoomParticipantsRequest::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void ListRoomParticipantsRequest::Clear() {
+// @@protoc_insertion_point(message_clear_start:openfoxwq.ListRoomParticipantsRequest)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    GOOGLE_DCHECK(_impl_.id_ != nullptr);
+    _impl_.id_->Clear();
+  }
+  if (cached_has_bits & 0x00000006u) {
+    ::memset(&_impl_.player_id_1_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&_impl_.player_id_2_) -
+        reinterpret_cast<char*>(&_impl_.player_id_1_)) + sizeof(_impl_.player_id_2_));
+  }
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* ListRoomParticipantsRequest::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // required .openfoxwq.RoomId id = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_id(), ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // required int64 player_id_1 = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          _Internal::set_has_player_id_1(&has_bits);
+          _impl_.player_id_1_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // required int64 player_id_2 = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
+          _Internal::set_has_player_id_2(&has_bits);
+          _impl_.player_id_2_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  _impl_._has_bits_.Or(has_bits);
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* ListRoomParticipantsRequest::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:openfoxwq.ListRoomParticipantsRequest)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  // required .openfoxwq.RoomId id = 1;
+  if (cached_has_bits & 0x00000001u) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::id(this),
+        _Internal::id(this).GetCachedSize(), target, stream);
+  }
+
+  // required int64 player_id_1 = 2;
+  if (cached_has_bits & 0x00000002u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(2, this->_internal_player_id_1(), target);
+  }
+
+  // required int64 player_id_2 = 3;
+  if (cached_has_bits & 0x00000004u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(3, this->_internal_player_id_2(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:openfoxwq.ListRoomParticipantsRequest)
+  return target;
+}
+
+size_t ListRoomParticipantsRequest::RequiredFieldsByteSizeFallback() const {
+// @@protoc_insertion_point(required_fields_byte_size_fallback_start:openfoxwq.ListRoomParticipantsRequest)
+  size_t total_size = 0;
+
+  if (_internal_has_id()) {
+    // required .openfoxwq.RoomId id = 1;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.id_);
+  }
+
+  if (_internal_has_player_id_1()) {
+    // required int64 player_id_1 = 2;
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_player_id_1());
+  }
+
+  if (_internal_has_player_id_2()) {
+    // required int64 player_id_2 = 3;
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_player_id_2());
+  }
+
+  return total_size;
+}
+size_t ListRoomParticipantsRequest::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:openfoxwq.ListRoomParticipantsRequest)
+  size_t total_size = 0;
+
+  if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
+    // required .openfoxwq.RoomId id = 1;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.id_);
+
+    // required int64 player_id_1 = 2;
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_player_id_1());
+
+    // required int64 player_id_2 = 3;
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_player_id_2());
+
+  } else {
+    total_size += RequiredFieldsByteSizeFallback();
+  }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData ListRoomParticipantsRequest::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    ListRoomParticipantsRequest::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ListRoomParticipantsRequest::GetClassData() const { return &_class_data_; }
+
+
+void ListRoomParticipantsRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<ListRoomParticipantsRequest*>(&to_msg);
+  auto& from = static_cast<const ListRoomParticipantsRequest&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:openfoxwq.ListRoomParticipantsRequest)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000007u) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_mutable_id()->::openfoxwq::RoomId::MergeFrom(
+          from._internal_id());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_impl_.player_id_1_ = from._impl_.player_id_1_;
+    }
+    if (cached_has_bits & 0x00000004u) {
+      _this->_impl_.player_id_2_ = from._impl_.player_id_2_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void ListRoomParticipantsRequest::CopyFrom(const ListRoomParticipantsRequest& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:openfoxwq.ListRoomParticipantsRequest)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool ListRoomParticipantsRequest::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
+  return true;
+}
+
+void ListRoomParticipantsRequest::InternalSwap(ListRoomParticipantsRequest* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(ListRoomParticipantsRequest, _impl_.player_id_2_)
+      + sizeof(ListRoomParticipantsRequest::_impl_.player_id_2_)
+      - PROTOBUF_FIELD_OFFSET(ListRoomParticipantsRequest, _impl_.id_)>(
+          reinterpret_cast<char*>(&_impl_.id_),
+          reinterpret_cast<char*>(&other->_impl_.id_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata ListRoomParticipantsRequest::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_proto_2fplay_2eproto_getter, &descriptor_table_proto_2fplay_2eproto_once,
+      file_level_metadata_proto_2fplay_2eproto[56]);
+}
+
+// ===================================================================
+
+class ListRoomParticipantsResponse_RoomParticipantInfo::_Internal {
+ public:
+  using HasBits = decltype(std::declval<ListRoomParticipantsResponse_RoomParticipantInfo>()._impl_._has_bits_);
+  static void set_has_player_id(HasBits* has_bits) {
+    (*has_bits)[0] |= 4u;
+  }
+  static void set_has_name(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static void set_has_name_alt(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static void set_has_rank(HasBits* has_bits) {
+    (*has_bits)[0] |= 32u;
+  }
+  static void set_has_wins(HasBits* has_bits) {
+    (*has_bits)[0] |= 8u;
+  }
+  static void set_has_losses(HasBits* has_bits) {
+    (*has_bits)[0] |= 16u;
+  }
+  static void set_has_country(HasBits* has_bits) {
+    (*has_bits)[0] |= 64u;
+  }
+};
+
+ListRoomParticipantsResponse_RoomParticipantInfo::ListRoomParticipantsResponse_RoomParticipantInfo(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:openfoxwq.ListRoomParticipantsResponse.RoomParticipantInfo)
+}
+ListRoomParticipantsResponse_RoomParticipantInfo::ListRoomParticipantsResponse_RoomParticipantInfo(const ListRoomParticipantsResponse_RoomParticipantInfo& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  ListRoomParticipantsResponse_RoomParticipantInfo* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.name_){}
+    , decltype(_impl_.name_alt_){}
+    , decltype(_impl_.player_id_){}
+    , decltype(_impl_.wins_){}
+    , decltype(_impl_.losses_){}
+    , decltype(_impl_.rank_){}
+    , decltype(_impl_.country_){}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _impl_.name_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.name_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (from._internal_has_name()) {
+    _this->_impl_.name_.Set(from._internal_name(), 
+      _this->GetArenaForAllocation());
+  }
+  _impl_.name_alt_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.name_alt_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (from._internal_has_name_alt()) {
+    _this->_impl_.name_alt_.Set(from._internal_name_alt(), 
+      _this->GetArenaForAllocation());
+  }
+  ::memcpy(&_impl_.player_id_, &from._impl_.player_id_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.country_) -
+    reinterpret_cast<char*>(&_impl_.player_id_)) + sizeof(_impl_.country_));
+  // @@protoc_insertion_point(copy_constructor:openfoxwq.ListRoomParticipantsResponse.RoomParticipantInfo)
+}
+
+inline void ListRoomParticipantsResponse_RoomParticipantInfo::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.name_){}
+    , decltype(_impl_.name_alt_){}
+    , decltype(_impl_.player_id_){int64_t{0}}
+    , decltype(_impl_.wins_){int64_t{0}}
+    , decltype(_impl_.losses_){int64_t{0}}
+    , decltype(_impl_.rank_){0}
+    , decltype(_impl_.country_){0}
+  };
+  _impl_.name_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.name_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  _impl_.name_alt_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.name_alt_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+}
+
+ListRoomParticipantsResponse_RoomParticipantInfo::~ListRoomParticipantsResponse_RoomParticipantInfo() {
+  // @@protoc_insertion_point(destructor:openfoxwq.ListRoomParticipantsResponse.RoomParticipantInfo)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void ListRoomParticipantsResponse_RoomParticipantInfo::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.name_.Destroy();
+  _impl_.name_alt_.Destroy();
+}
+
+void ListRoomParticipantsResponse_RoomParticipantInfo::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void ListRoomParticipantsResponse_RoomParticipantInfo::Clear() {
+// @@protoc_insertion_point(message_clear_start:openfoxwq.ListRoomParticipantsResponse.RoomParticipantInfo)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      _impl_.name_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _impl_.name_alt_.ClearNonDefaultToEmpty();
+    }
+  }
+  if (cached_has_bits & 0x0000007cu) {
+    ::memset(&_impl_.player_id_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&_impl_.country_) -
+        reinterpret_cast<char*>(&_impl_.player_id_)) + sizeof(_impl_.country_));
+  }
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* ListRoomParticipantsResponse_RoomParticipantInfo::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // optional int64 player_id = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_player_id(&has_bits);
+          _impl_.player_id_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional string name = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
+          auto str = _internal_mutable_name();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+          #ifndef NDEBUG
+          ::_pbi::VerifyUTF8(str, "openfoxwq.ListRoomParticipantsResponse.RoomParticipantInfo.name");
+          #endif  // !NDEBUG
+        } else
+          goto handle_unusual;
+        continue;
+      // optional string name_alt = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
+          auto str = _internal_mutable_name_alt();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+          #ifndef NDEBUG
+          ::_pbi::VerifyUTF8(str, "openfoxwq.ListRoomParticipantsResponse.RoomParticipantInfo.name_alt");
+          #endif  // !NDEBUG
+        } else
+          goto handle_unusual;
+        continue;
+      // optional .openfoxwq.Rank rank = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+          if (PROTOBUF_PREDICT_TRUE(::openfoxwq::Rank_IsValid(val))) {
+            _internal_set_rank(static_cast<::openfoxwq::Rank>(val));
+          } else {
+            ::PROTOBUF_NAMESPACE_ID::internal::WriteVarint(4, val, mutable_unknown_fields());
+          }
+        } else
+          goto handle_unusual;
+        continue;
+      // optional int64 wins = 5;
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
+          _Internal::set_has_wins(&has_bits);
+          _impl_.wins_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional int64 losses = 6;
+      case 6:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 48)) {
+          _Internal::set_has_losses(&has_bits);
+          _impl_.losses_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional .openfoxwq.Country country = 9;
+      case 9:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 72)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+          if (PROTOBUF_PREDICT_TRUE(::openfoxwq::Country_IsValid(val))) {
+            _internal_set_country(static_cast<::openfoxwq::Country>(val));
+          } else {
+            ::PROTOBUF_NAMESPACE_ID::internal::WriteVarint(9, val, mutable_unknown_fields());
+          }
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  _impl_._has_bits_.Or(has_bits);
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* ListRoomParticipantsResponse_RoomParticipantInfo::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:openfoxwq.ListRoomParticipantsResponse.RoomParticipantInfo)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  // optional int64 player_id = 1;
+  if (cached_has_bits & 0x00000004u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(1, this->_internal_player_id(), target);
+  }
+
+  // optional string name = 2;
+  if (cached_has_bits & 0x00000001u) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->_internal_name().data(), static_cast<int>(this->_internal_name().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
+      "openfoxwq.ListRoomParticipantsResponse.RoomParticipantInfo.name");
+    target = stream->WriteStringMaybeAliased(
+        2, this->_internal_name(), target);
+  }
+
+  // optional string name_alt = 3;
+  if (cached_has_bits & 0x00000002u) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->_internal_name_alt().data(), static_cast<int>(this->_internal_name_alt().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
+      "openfoxwq.ListRoomParticipantsResponse.RoomParticipantInfo.name_alt");
+    target = stream->WriteStringMaybeAliased(
+        3, this->_internal_name_alt(), target);
+  }
+
+  // optional .openfoxwq.Rank rank = 4;
+  if (cached_has_bits & 0x00000020u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      4, this->_internal_rank(), target);
+  }
+
+  // optional int64 wins = 5;
+  if (cached_has_bits & 0x00000008u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(5, this->_internal_wins(), target);
+  }
+
+  // optional int64 losses = 6;
+  if (cached_has_bits & 0x00000010u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(6, this->_internal_losses(), target);
+  }
+
+  // optional .openfoxwq.Country country = 9;
+  if (cached_has_bits & 0x00000040u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      9, this->_internal_country(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:openfoxwq.ListRoomParticipantsResponse.RoomParticipantInfo)
+  return target;
+}
+
+size_t ListRoomParticipantsResponse_RoomParticipantInfo::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:openfoxwq.ListRoomParticipantsResponse.RoomParticipantInfo)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x0000007fu) {
+    // optional string name = 2;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+          this->_internal_name());
+    }
+
+    // optional string name_alt = 3;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+          this->_internal_name_alt());
+    }
+
+    // optional int64 player_id = 1;
+    if (cached_has_bits & 0x00000004u) {
+      total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_player_id());
+    }
+
+    // optional int64 wins = 5;
+    if (cached_has_bits & 0x00000008u) {
+      total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_wins());
+    }
+
+    // optional int64 losses = 6;
+    if (cached_has_bits & 0x00000010u) {
+      total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_losses());
+    }
+
+    // optional .openfoxwq.Rank rank = 4;
+    if (cached_has_bits & 0x00000020u) {
+      total_size += 1 +
+        ::_pbi::WireFormatLite::EnumSize(this->_internal_rank());
+    }
+
+    // optional .openfoxwq.Country country = 9;
+    if (cached_has_bits & 0x00000040u) {
+      total_size += 1 +
+        ::_pbi::WireFormatLite::EnumSize(this->_internal_country());
+    }
+
+  }
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData ListRoomParticipantsResponse_RoomParticipantInfo::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    ListRoomParticipantsResponse_RoomParticipantInfo::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ListRoomParticipantsResponse_RoomParticipantInfo::GetClassData() const { return &_class_data_; }
+
+
+void ListRoomParticipantsResponse_RoomParticipantInfo::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<ListRoomParticipantsResponse_RoomParticipantInfo*>(&to_msg);
+  auto& from = static_cast<const ListRoomParticipantsResponse_RoomParticipantInfo&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:openfoxwq.ListRoomParticipantsResponse.RoomParticipantInfo)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x0000007fu) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_set_name(from._internal_name());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_internal_set_name_alt(from._internal_name_alt());
+    }
+    if (cached_has_bits & 0x00000004u) {
+      _this->_impl_.player_id_ = from._impl_.player_id_;
+    }
+    if (cached_has_bits & 0x00000008u) {
+      _this->_impl_.wins_ = from._impl_.wins_;
+    }
+    if (cached_has_bits & 0x00000010u) {
+      _this->_impl_.losses_ = from._impl_.losses_;
+    }
+    if (cached_has_bits & 0x00000020u) {
+      _this->_impl_.rank_ = from._impl_.rank_;
+    }
+    if (cached_has_bits & 0x00000040u) {
+      _this->_impl_.country_ = from._impl_.country_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void ListRoomParticipantsResponse_RoomParticipantInfo::CopyFrom(const ListRoomParticipantsResponse_RoomParticipantInfo& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:openfoxwq.ListRoomParticipantsResponse.RoomParticipantInfo)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool ListRoomParticipantsResponse_RoomParticipantInfo::IsInitialized() const {
+  return true;
+}
+
+void ListRoomParticipantsResponse_RoomParticipantInfo::InternalSwap(ListRoomParticipantsResponse_RoomParticipantInfo* other) {
+  using std::swap;
+  auto* lhs_arena = GetArenaForAllocation();
+  auto* rhs_arena = other->GetArenaForAllocation();
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.name_, lhs_arena,
+      &other->_impl_.name_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.name_alt_, lhs_arena,
+      &other->_impl_.name_alt_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(ListRoomParticipantsResponse_RoomParticipantInfo, _impl_.country_)
+      + sizeof(ListRoomParticipantsResponse_RoomParticipantInfo::_impl_.country_)
+      - PROTOBUF_FIELD_OFFSET(ListRoomParticipantsResponse_RoomParticipantInfo, _impl_.player_id_)>(
+          reinterpret_cast<char*>(&_impl_.player_id_),
+          reinterpret_cast<char*>(&other->_impl_.player_id_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata ListRoomParticipantsResponse_RoomParticipantInfo::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_proto_2fplay_2eproto_getter, &descriptor_table_proto_2fplay_2eproto_once,
+      file_level_metadata_proto_2fplay_2eproto[57]);
+}
+
+// ===================================================================
+
+class ListRoomParticipantsResponse::_Internal {
+ public:
+  using HasBits = decltype(std::declval<ListRoomParticipantsResponse>()._impl_._has_bits_);
+  static void set_has_error_code(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static const ::openfoxwq::RoomId& id(const ListRoomParticipantsResponse* msg);
+  static void set_has_id(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static void set_has_participant_count(HasBits* has_bits) {
+    (*has_bits)[0] |= 4u;
+  }
+};
+
+const ::openfoxwq::RoomId&
+ListRoomParticipantsResponse::_Internal::id(const ListRoomParticipantsResponse* msg) {
+  return *msg->_impl_.id_;
+}
+void ListRoomParticipantsResponse::clear_id() {
+  if (_impl_.id_ != nullptr) _impl_.id_->Clear();
+  _impl_._has_bits_[0] &= ~0x00000001u;
+}
+ListRoomParticipantsResponse::ListRoomParticipantsResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:openfoxwq.ListRoomParticipantsResponse)
+}
+ListRoomParticipantsResponse::ListRoomParticipantsResponse(const ListRoomParticipantsResponse& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  ListRoomParticipantsResponse* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.participants_){from._impl_.participants_}
+    , decltype(_impl_.id_){nullptr}
+    , decltype(_impl_.error_code_){}
+    , decltype(_impl_.participant_count_){}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_id()) {
+    _this->_impl_.id_ = new ::openfoxwq::RoomId(*from._impl_.id_);
+  }
+  ::memcpy(&_impl_.error_code_, &from._impl_.error_code_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.participant_count_) -
+    reinterpret_cast<char*>(&_impl_.error_code_)) + sizeof(_impl_.participant_count_));
+  // @@protoc_insertion_point(copy_constructor:openfoxwq.ListRoomParticipantsResponse)
+}
+
+inline void ListRoomParticipantsResponse::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.participants_){arena}
+    , decltype(_impl_.id_){nullptr}
+    , decltype(_impl_.error_code_){int64_t{0}}
+    , decltype(_impl_.participant_count_){int64_t{0}}
+  };
+}
+
+ListRoomParticipantsResponse::~ListRoomParticipantsResponse() {
+  // @@protoc_insertion_point(destructor:openfoxwq.ListRoomParticipantsResponse)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void ListRoomParticipantsResponse::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.participants_.~RepeatedPtrField();
+  if (this != internal_default_instance()) delete _impl_.id_;
+}
+
+void ListRoomParticipantsResponse::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void ListRoomParticipantsResponse::Clear() {
+// @@protoc_insertion_point(message_clear_start:openfoxwq.ListRoomParticipantsResponse)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _impl_.participants_.Clear();
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    GOOGLE_DCHECK(_impl_.id_ != nullptr);
+    _impl_.id_->Clear();
+  }
+  if (cached_has_bits & 0x00000006u) {
+    ::memset(&_impl_.error_code_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&_impl_.participant_count_) -
+        reinterpret_cast<char*>(&_impl_.error_code_)) + sizeof(_impl_.participant_count_));
+  }
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* ListRoomParticipantsResponse::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // optional int64 error_code = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_error_code(&has_bits);
+          _impl_.error_code_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional .openfoxwq.RoomId id = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
+          ptr = ctx->ParseMessage(_internal_mutable_id(), ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // repeated .openfoxwq.ListRoomParticipantsResponse.RoomParticipantInfo participants = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            ptr = ctx->ParseMessage(_internal_add_participants(), ptr);
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<26>(ptr));
+        } else
+          goto handle_unusual;
+        continue;
+      // optional int64 participant_count = 5;
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
+          _Internal::set_has_participant_count(&has_bits);
+          _impl_.participant_count_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  _impl_._has_bits_.Or(has_bits);
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* ListRoomParticipantsResponse::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:openfoxwq.ListRoomParticipantsResponse)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  // optional int64 error_code = 1;
+  if (cached_has_bits & 0x00000002u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(1, this->_internal_error_code(), target);
+  }
+
+  // optional .openfoxwq.RoomId id = 2;
+  if (cached_has_bits & 0x00000001u) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(2, _Internal::id(this),
+        _Internal::id(this).GetCachedSize(), target, stream);
+  }
+
+  // repeated .openfoxwq.ListRoomParticipantsResponse.RoomParticipantInfo participants = 3;
+  for (unsigned i = 0,
+      n = static_cast<unsigned>(this->_internal_participants_size()); i < n; i++) {
+    const auto& repfield = this->_internal_participants(i);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+        InternalWriteMessage(3, repfield, repfield.GetCachedSize(), target, stream);
+  }
+
+  // optional int64 participant_count = 5;
+  if (cached_has_bits & 0x00000004u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(5, this->_internal_participant_count(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:openfoxwq.ListRoomParticipantsResponse)
+  return target;
+}
+
+size_t ListRoomParticipantsResponse::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:openfoxwq.ListRoomParticipantsResponse)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // repeated .openfoxwq.ListRoomParticipantsResponse.RoomParticipantInfo participants = 3;
+  total_size += 1UL * this->_internal_participants_size();
+  for (const auto& msg : this->_impl_.participants_) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
+  }
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000007u) {
+    // optional .openfoxwq.RoomId id = 2;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+          *_impl_.id_);
+    }
+
+    // optional int64 error_code = 1;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_error_code());
+    }
+
+    // optional int64 participant_count = 5;
+    if (cached_has_bits & 0x00000004u) {
+      total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_participant_count());
+    }
+
+  }
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData ListRoomParticipantsResponse::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    ListRoomParticipantsResponse::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ListRoomParticipantsResponse::GetClassData() const { return &_class_data_; }
+
+
+void ListRoomParticipantsResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<ListRoomParticipantsResponse*>(&to_msg);
+  auto& from = static_cast<const ListRoomParticipantsResponse&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:openfoxwq.ListRoomParticipantsResponse)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  _this->_impl_.participants_.MergeFrom(from._impl_.participants_);
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000007u) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_mutable_id()->::openfoxwq::RoomId::MergeFrom(
+          from._internal_id());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_impl_.error_code_ = from._impl_.error_code_;
+    }
+    if (cached_has_bits & 0x00000004u) {
+      _this->_impl_.participant_count_ = from._impl_.participant_count_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void ListRoomParticipantsResponse::CopyFrom(const ListRoomParticipantsResponse& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:openfoxwq.ListRoomParticipantsResponse)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool ListRoomParticipantsResponse::IsInitialized() const {
+  return true;
+}
+
+void ListRoomParticipantsResponse::InternalSwap(ListRoomParticipantsResponse* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  _impl_.participants_.InternalSwap(&other->_impl_.participants_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(ListRoomParticipantsResponse, _impl_.participant_count_)
+      + sizeof(ListRoomParticipantsResponse::_impl_.participant_count_)
+      - PROTOBUF_FIELD_OFFSET(ListRoomParticipantsResponse, _impl_.id_)>(
+          reinterpret_cast<char*>(&_impl_.id_),
+          reinterpret_cast<char*>(&other->_impl_.id_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata ListRoomParticipantsResponse::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_proto_2fplay_2eproto_getter, &descriptor_table_proto_2fplay_2eproto_once,
+      file_level_metadata_proto_2fplay_2eproto[58]);
+}
+
+// ===================================================================
+
+class LastTurnInfo::_Internal {
+ public:
+  using HasBits = decltype(std::declval<LastTurnInfo>()._impl_._has_bits_);
+  static void set_has_move_count(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+};
+
+LastTurnInfo::LastTurnInfo(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:openfoxwq.LastTurnInfo)
+}
+LastTurnInfo::LastTurnInfo(const LastTurnInfo& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  LastTurnInfo* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.move_count_){}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_impl_.move_count_ = from._impl_.move_count_;
+  // @@protoc_insertion_point(copy_constructor:openfoxwq.LastTurnInfo)
+}
+
+inline void LastTurnInfo::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.move_count_){int64_t{0}}
+  };
+}
+
+LastTurnInfo::~LastTurnInfo() {
+  // @@protoc_insertion_point(destructor:openfoxwq.LastTurnInfo)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void LastTurnInfo::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+}
+
+void LastTurnInfo::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void LastTurnInfo::Clear() {
+// @@protoc_insertion_point(message_clear_start:openfoxwq.LastTurnInfo)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _impl_.move_count_ = int64_t{0};
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* LastTurnInfo::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // optional int64 move_count = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_move_count(&has_bits);
+          _impl_.move_count_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  _impl_._has_bits_.Or(has_bits);
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* LastTurnInfo::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:openfoxwq.LastTurnInfo)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  // optional int64 move_count = 1;
+  if (cached_has_bits & 0x00000001u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(1, this->_internal_move_count(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:openfoxwq.LastTurnInfo)
+  return target;
+}
+
+size_t LastTurnInfo::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:openfoxwq.LastTurnInfo)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // optional int64 move_count = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_move_count());
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData LastTurnInfo::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    LastTurnInfo::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*LastTurnInfo::GetClassData() const { return &_class_data_; }
+
+
+void LastTurnInfo::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<LastTurnInfo*>(&to_msg);
+  auto& from = static_cast<const LastTurnInfo&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:openfoxwq.LastTurnInfo)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from._internal_has_move_count()) {
+    _this->_internal_set_move_count(from._internal_move_count());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void LastTurnInfo::CopyFrom(const LastTurnInfo& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:openfoxwq.LastTurnInfo)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool LastTurnInfo::IsInitialized() const {
+  return true;
+}
+
+void LastTurnInfo::InternalSwap(LastTurnInfo* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  swap(_impl_.move_count_, other->_impl_.move_count_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata LastTurnInfo::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_proto_2fplay_2eproto_getter, &descriptor_table_proto_2fplay_2eproto_once,
+      file_level_metadata_proto_2fplay_2eproto[59]);
+}
+
+// ===================================================================
+
+class MoveRequest::_Internal {
+ public:
+  using HasBits = decltype(std::declval<MoveRequest>()._impl_._has_bits_);
+  static void set_has_x(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static void set_has_y(HasBits* has_bits) {
+    (*has_bits)[0] |= 4u;
+  }
+  static void set_has_col(HasBits* has_bits) {
+    (*has_bits)[0] |= 8u;
+  }
+  static const ::openfoxwq::LastTurnInfo& last_turn(const MoveRequest* msg);
+  static void set_has_last_turn(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x0000000f) ^ 0x0000000f) != 0;
+  }
+};
+
+const ::openfoxwq::LastTurnInfo&
+MoveRequest::_Internal::last_turn(const MoveRequest* msg) {
+  return *msg->_impl_.last_turn_;
+}
+MoveRequest::MoveRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:openfoxwq.MoveRequest)
+}
+MoveRequest::MoveRequest(const MoveRequest& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  MoveRequest* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.last_turn_){nullptr}
+    , decltype(_impl_.x_){}
+    , decltype(_impl_.y_){}
+    , decltype(_impl_.col_){}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_last_turn()) {
+    _this->_impl_.last_turn_ = new ::openfoxwq::LastTurnInfo(*from._impl_.last_turn_);
+  }
+  ::memcpy(&_impl_.x_, &from._impl_.x_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.col_) -
+    reinterpret_cast<char*>(&_impl_.x_)) + sizeof(_impl_.col_));
+  // @@protoc_insertion_point(copy_constructor:openfoxwq.MoveRequest)
+}
+
+inline void MoveRequest::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.last_turn_){nullptr}
+    , decltype(_impl_.x_){int64_t{0}}
+    , decltype(_impl_.y_){int64_t{0}}
+    , decltype(_impl_.col_){0}
+  };
+}
+
+MoveRequest::~MoveRequest() {
+  // @@protoc_insertion_point(destructor:openfoxwq.MoveRequest)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void MoveRequest::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.last_turn_;
+}
+
+void MoveRequest::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void MoveRequest::Clear() {
+// @@protoc_insertion_point(message_clear_start:openfoxwq.MoveRequest)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    GOOGLE_DCHECK(_impl_.last_turn_ != nullptr);
+    _impl_.last_turn_->Clear();
+  }
+  if (cached_has_bits & 0x0000000eu) {
+    ::memset(&_impl_.x_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&_impl_.col_) -
+        reinterpret_cast<char*>(&_impl_.x_)) + sizeof(_impl_.col_));
+  }
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* MoveRequest::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // required int64 x = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_x(&has_bits);
+          _impl_.x_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // required int64 y = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          _Internal::set_has_y(&has_bits);
+          _impl_.y_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // required .openfoxwq.Color col = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+          if (PROTOBUF_PREDICT_TRUE(::openfoxwq::Color_IsValid(val))) {
+            _internal_set_col(static_cast<::openfoxwq::Color>(val));
+          } else {
+            ::PROTOBUF_NAMESPACE_ID::internal::WriteVarint(3, val, mutable_unknown_fields());
+          }
+        } else
+          goto handle_unusual;
+        continue;
+      // required .openfoxwq.LastTurnInfo last_turn = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
+          ptr = ctx->ParseMessage(_internal_mutable_last_turn(), ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  _impl_._has_bits_.Or(has_bits);
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* MoveRequest::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:openfoxwq.MoveRequest)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  // required int64 x = 1;
+  if (cached_has_bits & 0x00000002u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(1, this->_internal_x(), target);
+  }
+
+  // required int64 y = 2;
+  if (cached_has_bits & 0x00000004u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(2, this->_internal_y(), target);
+  }
+
+  // required .openfoxwq.Color col = 3;
+  if (cached_has_bits & 0x00000008u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      3, this->_internal_col(), target);
+  }
+
+  // required .openfoxwq.LastTurnInfo last_turn = 4;
+  if (cached_has_bits & 0x00000001u) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(4, _Internal::last_turn(this),
+        _Internal::last_turn(this).GetCachedSize(), target, stream);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:openfoxwq.MoveRequest)
+  return target;
+}
+
+size_t MoveRequest::RequiredFieldsByteSizeFallback() const {
+// @@protoc_insertion_point(required_fields_byte_size_fallback_start:openfoxwq.MoveRequest)
+  size_t total_size = 0;
+
+  if (_internal_has_last_turn()) {
+    // required .openfoxwq.LastTurnInfo last_turn = 4;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.last_turn_);
+  }
+
+  if (_internal_has_x()) {
+    // required int64 x = 1;
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_x());
+  }
+
+  if (_internal_has_y()) {
+    // required int64 y = 2;
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_y());
+  }
+
+  if (_internal_has_col()) {
+    // required .openfoxwq.Color col = 3;
+    total_size += 1 +
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_col());
+  }
+
+  return total_size;
+}
+size_t MoveRequest::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:openfoxwq.MoveRequest)
+  size_t total_size = 0;
+
+  if (((_impl_._has_bits_[0] & 0x0000000f) ^ 0x0000000f) == 0) {  // All required fields are present.
+    // required .openfoxwq.LastTurnInfo last_turn = 4;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.last_turn_);
+
+    // required int64 x = 1;
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_x());
+
+    // required int64 y = 2;
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_y());
+
+    // required .openfoxwq.Color col = 3;
+    total_size += 1 +
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_col());
+
+  } else {
+    total_size += RequiredFieldsByteSizeFallback();
+  }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData MoveRequest::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    MoveRequest::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*MoveRequest::GetClassData() const { return &_class_data_; }
+
+
+void MoveRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<MoveRequest*>(&to_msg);
+  auto& from = static_cast<const MoveRequest&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:openfoxwq.MoveRequest)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x0000000fu) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_mutable_last_turn()->::openfoxwq::LastTurnInfo::MergeFrom(
+          from._internal_last_turn());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_impl_.x_ = from._impl_.x_;
+    }
+    if (cached_has_bits & 0x00000004u) {
+      _this->_impl_.y_ = from._impl_.y_;
+    }
+    if (cached_has_bits & 0x00000008u) {
+      _this->_impl_.col_ = from._impl_.col_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void MoveRequest::CopyFrom(const MoveRequest& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:openfoxwq.MoveRequest)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool MoveRequest::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
+  return true;
+}
+
+void MoveRequest::InternalSwap(MoveRequest* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(MoveRequest, _impl_.col_)
+      + sizeof(MoveRequest::_impl_.col_)
+      - PROTOBUF_FIELD_OFFSET(MoveRequest, _impl_.last_turn_)>(
+          reinterpret_cast<char*>(&_impl_.last_turn_),
+          reinterpret_cast<char*>(&other->_impl_.last_turn_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata MoveRequest::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_proto_2fplay_2eproto_getter, &descriptor_table_proto_2fplay_2eproto_once,
+      file_level_metadata_proto_2fplay_2eproto[60]);
+}
+
+// ===================================================================
+
+class MoveResponse::_Internal {
+ public:
+  using HasBits = decltype(std::declval<MoveResponse>()._impl_._has_bits_);
+  static void set_has_error_code(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+};
+
+MoveResponse::MoveResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:openfoxwq.MoveResponse)
+}
+MoveResponse::MoveResponse(const MoveResponse& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  MoveResponse* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.error_code_){}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_impl_.error_code_ = from._impl_.error_code_;
+  // @@protoc_insertion_point(copy_constructor:openfoxwq.MoveResponse)
+}
+
+inline void MoveResponse::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.error_code_){int64_t{0}}
+  };
+}
+
+MoveResponse::~MoveResponse() {
+  // @@protoc_insertion_point(destructor:openfoxwq.MoveResponse)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void MoveResponse::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+}
+
+void MoveResponse::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void MoveResponse::Clear() {
+// @@protoc_insertion_point(message_clear_start:openfoxwq.MoveResponse)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _impl_.error_code_ = int64_t{0};
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* MoveResponse::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // optional int64 error_code = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_error_code(&has_bits);
+          _impl_.error_code_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  _impl_._has_bits_.Or(has_bits);
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* MoveResponse::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:openfoxwq.MoveResponse)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  // optional int64 error_code = 1;
+  if (cached_has_bits & 0x00000001u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(1, this->_internal_error_code(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:openfoxwq.MoveResponse)
+  return target;
+}
+
+size_t MoveResponse::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:openfoxwq.MoveResponse)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // optional int64 error_code = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_error_code());
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData MoveResponse::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    MoveResponse::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*MoveResponse::GetClassData() const { return &_class_data_; }
+
+
+void MoveResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<MoveResponse*>(&to_msg);
+  auto& from = static_cast<const MoveResponse&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:openfoxwq.MoveResponse)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from._internal_has_error_code()) {
+    _this->_internal_set_error_code(from._internal_error_code());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void MoveResponse::CopyFrom(const MoveResponse& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:openfoxwq.MoveResponse)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool MoveResponse::IsInitialized() const {
+  return true;
+}
+
+void MoveResponse::InternalSwap(MoveResponse* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  swap(_impl_.error_code_, other->_impl_.error_code_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata MoveResponse::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_proto_2fplay_2eproto_getter, &descriptor_table_proto_2fplay_2eproto_once,
+      file_level_metadata_proto_2fplay_2eproto[61]);
+}
+
+// ===================================================================
+
+class PassRequest::_Internal {
+ public:
+  using HasBits = decltype(std::declval<PassRequest>()._impl_._has_bits_);
+  static const ::openfoxwq::LastTurnInfo& last_turn(const PassRequest* msg);
+  static void set_has_last_turn(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
+  }
+};
+
+const ::openfoxwq::LastTurnInfo&
+PassRequest::_Internal::last_turn(const PassRequest* msg) {
+  return *msg->_impl_.last_turn_;
+}
+PassRequest::PassRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:openfoxwq.PassRequest)
+}
+PassRequest::PassRequest(const PassRequest& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  PassRequest* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.last_turn_){nullptr}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_last_turn()) {
+    _this->_impl_.last_turn_ = new ::openfoxwq::LastTurnInfo(*from._impl_.last_turn_);
+  }
+  // @@protoc_insertion_point(copy_constructor:openfoxwq.PassRequest)
+}
+
+inline void PassRequest::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.last_turn_){nullptr}
+  };
+}
+
+PassRequest::~PassRequest() {
+  // @@protoc_insertion_point(destructor:openfoxwq.PassRequest)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void PassRequest::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.last_turn_;
+}
+
+void PassRequest::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void PassRequest::Clear() {
+// @@protoc_insertion_point(message_clear_start:openfoxwq.PassRequest)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    GOOGLE_DCHECK(_impl_.last_turn_ != nullptr);
+    _impl_.last_turn_->Clear();
+  }
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* PassRequest::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // required .openfoxwq.LastTurnInfo last_turn = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_last_turn(), ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  _impl_._has_bits_.Or(has_bits);
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* PassRequest::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:openfoxwq.PassRequest)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  // required .openfoxwq.LastTurnInfo last_turn = 1;
+  if (cached_has_bits & 0x00000001u) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::last_turn(this),
+        _Internal::last_turn(this).GetCachedSize(), target, stream);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:openfoxwq.PassRequest)
+  return target;
+}
+
+size_t PassRequest::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:openfoxwq.PassRequest)
+  size_t total_size = 0;
+
+  // required .openfoxwq.LastTurnInfo last_turn = 1;
+  if (_internal_has_last_turn()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.last_turn_);
+  }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData PassRequest::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    PassRequest::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*PassRequest::GetClassData() const { return &_class_data_; }
+
+
+void PassRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<PassRequest*>(&to_msg);
+  auto& from = static_cast<const PassRequest&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:openfoxwq.PassRequest)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from._internal_has_last_turn()) {
+    _this->_internal_mutable_last_turn()->::openfoxwq::LastTurnInfo::MergeFrom(
+        from._internal_last_turn());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void PassRequest::CopyFrom(const PassRequest& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:openfoxwq.PassRequest)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool PassRequest::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
+  return true;
+}
+
+void PassRequest::InternalSwap(PassRequest* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  swap(_impl_.last_turn_, other->_impl_.last_turn_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata PassRequest::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_proto_2fplay_2eproto_getter, &descriptor_table_proto_2fplay_2eproto_once,
+      file_level_metadata_proto_2fplay_2eproto[62]);
+}
+
+// ===================================================================
+
+class PassResponse::_Internal {
+ public:
+  using HasBits = decltype(std::declval<PassResponse>()._impl_._has_bits_);
+  static void set_has_error_code(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+};
+
+PassResponse::PassResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:openfoxwq.PassResponse)
+}
+PassResponse::PassResponse(const PassResponse& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  PassResponse* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.error_code_){}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_impl_.error_code_ = from._impl_.error_code_;
+  // @@protoc_insertion_point(copy_constructor:openfoxwq.PassResponse)
+}
+
+inline void PassResponse::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.error_code_){int64_t{0}}
+  };
+}
+
+PassResponse::~PassResponse() {
+  // @@protoc_insertion_point(destructor:openfoxwq.PassResponse)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void PassResponse::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+}
+
+void PassResponse::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void PassResponse::Clear() {
+// @@protoc_insertion_point(message_clear_start:openfoxwq.PassResponse)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _impl_.error_code_ = int64_t{0};
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* PassResponse::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // optional int64 error_code = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_error_code(&has_bits);
+          _impl_.error_code_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  _impl_._has_bits_.Or(has_bits);
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* PassResponse::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:openfoxwq.PassResponse)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  // optional int64 error_code = 1;
+  if (cached_has_bits & 0x00000001u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(1, this->_internal_error_code(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:openfoxwq.PassResponse)
+  return target;
+}
+
+size_t PassResponse::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:openfoxwq.PassResponse)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // optional int64 error_code = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_error_code());
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData PassResponse::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    PassResponse::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*PassResponse::GetClassData() const { return &_class_data_; }
+
+
+void PassResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<PassResponse*>(&to_msg);
+  auto& from = static_cast<const PassResponse&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:openfoxwq.PassResponse)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from._internal_has_error_code()) {
+    _this->_internal_set_error_code(from._internal_error_code());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void PassResponse::CopyFrom(const PassResponse& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:openfoxwq.PassResponse)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool PassResponse::IsInitialized() const {
+  return true;
+}
+
+void PassResponse::InternalSwap(PassResponse* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  swap(_impl_.error_code_, other->_impl_.error_code_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata PassResponse::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_proto_2fplay_2eproto_getter, &descriptor_table_proto_2fplay_2eproto_once,
+      file_level_metadata_proto_2fplay_2eproto[63]);
+}
+
+// ===================================================================
+
+class SyncMatchTimeRequest::_Internal {
+ public:
+  using HasBits = decltype(std::declval<SyncMatchTimeRequest>()._impl_._has_bits_);
+  static void set_has_ts(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
+  }
+};
+
+SyncMatchTimeRequest::SyncMatchTimeRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:openfoxwq.SyncMatchTimeRequest)
+}
+SyncMatchTimeRequest::SyncMatchTimeRequest(const SyncMatchTimeRequest& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  SyncMatchTimeRequest* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.ts_){}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_impl_.ts_ = from._impl_.ts_;
+  // @@protoc_insertion_point(copy_constructor:openfoxwq.SyncMatchTimeRequest)
+}
+
+inline void SyncMatchTimeRequest::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.ts_){int64_t{0}}
+  };
+}
+
+SyncMatchTimeRequest::~SyncMatchTimeRequest() {
+  // @@protoc_insertion_point(destructor:openfoxwq.SyncMatchTimeRequest)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void SyncMatchTimeRequest::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+}
+
+void SyncMatchTimeRequest::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void SyncMatchTimeRequest::Clear() {
+// @@protoc_insertion_point(message_clear_start:openfoxwq.SyncMatchTimeRequest)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _impl_.ts_ = int64_t{0};
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* SyncMatchTimeRequest::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // required int64 ts = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_ts(&has_bits);
+          _impl_.ts_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  _impl_._has_bits_.Or(has_bits);
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* SyncMatchTimeRequest::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:openfoxwq.SyncMatchTimeRequest)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  // required int64 ts = 1;
+  if (cached_has_bits & 0x00000001u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(1, this->_internal_ts(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:openfoxwq.SyncMatchTimeRequest)
+  return target;
+}
+
+size_t SyncMatchTimeRequest::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:openfoxwq.SyncMatchTimeRequest)
+  size_t total_size = 0;
+
+  // required int64 ts = 1;
+  if (_internal_has_ts()) {
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_ts());
+  }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData SyncMatchTimeRequest::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    SyncMatchTimeRequest::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*SyncMatchTimeRequest::GetClassData() const { return &_class_data_; }
+
+
+void SyncMatchTimeRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<SyncMatchTimeRequest*>(&to_msg);
+  auto& from = static_cast<const SyncMatchTimeRequest&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:openfoxwq.SyncMatchTimeRequest)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from._internal_has_ts()) {
+    _this->_internal_set_ts(from._internal_ts());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void SyncMatchTimeRequest::CopyFrom(const SyncMatchTimeRequest& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:openfoxwq.SyncMatchTimeRequest)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool SyncMatchTimeRequest::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
+  return true;
+}
+
+void SyncMatchTimeRequest::InternalSwap(SyncMatchTimeRequest* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  swap(_impl_.ts_, other->_impl_.ts_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata SyncMatchTimeRequest::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_proto_2fplay_2eproto_getter, &descriptor_table_proto_2fplay_2eproto_once,
+      file_level_metadata_proto_2fplay_2eproto[64]);
+}
+
+// ===================================================================
+
+class SyncMatchTimeResponse_ElapsedInfo::_Internal {
+ public:
+  using HasBits = decltype(std::declval<SyncMatchTimeResponse_ElapsedInfo>()._impl_._has_bits_);
+  static void set_has_time_elapsed_sec(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+};
+
+SyncMatchTimeResponse_ElapsedInfo::SyncMatchTimeResponse_ElapsedInfo(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:openfoxwq.SyncMatchTimeResponse.ElapsedInfo)
+}
+SyncMatchTimeResponse_ElapsedInfo::SyncMatchTimeResponse_ElapsedInfo(const SyncMatchTimeResponse_ElapsedInfo& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  SyncMatchTimeResponse_ElapsedInfo* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.time_elapsed_sec_){}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_impl_.time_elapsed_sec_ = from._impl_.time_elapsed_sec_;
+  // @@protoc_insertion_point(copy_constructor:openfoxwq.SyncMatchTimeResponse.ElapsedInfo)
+}
+
+inline void SyncMatchTimeResponse_ElapsedInfo::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.time_elapsed_sec_){int64_t{0}}
+  };
+}
+
+SyncMatchTimeResponse_ElapsedInfo::~SyncMatchTimeResponse_ElapsedInfo() {
+  // @@protoc_insertion_point(destructor:openfoxwq.SyncMatchTimeResponse.ElapsedInfo)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void SyncMatchTimeResponse_ElapsedInfo::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+}
+
+void SyncMatchTimeResponse_ElapsedInfo::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void SyncMatchTimeResponse_ElapsedInfo::Clear() {
+// @@protoc_insertion_point(message_clear_start:openfoxwq.SyncMatchTimeResponse.ElapsedInfo)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _impl_.time_elapsed_sec_ = int64_t{0};
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* SyncMatchTimeResponse_ElapsedInfo::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // optional int64 time_elapsed_sec = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_time_elapsed_sec(&has_bits);
+          _impl_.time_elapsed_sec_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  _impl_._has_bits_.Or(has_bits);
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* SyncMatchTimeResponse_ElapsedInfo::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:openfoxwq.SyncMatchTimeResponse.ElapsedInfo)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  // optional int64 time_elapsed_sec = 1;
+  if (cached_has_bits & 0x00000001u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(1, this->_internal_time_elapsed_sec(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:openfoxwq.SyncMatchTimeResponse.ElapsedInfo)
+  return target;
+}
+
+size_t SyncMatchTimeResponse_ElapsedInfo::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:openfoxwq.SyncMatchTimeResponse.ElapsedInfo)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // optional int64 time_elapsed_sec = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_time_elapsed_sec());
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData SyncMatchTimeResponse_ElapsedInfo::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    SyncMatchTimeResponse_ElapsedInfo::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*SyncMatchTimeResponse_ElapsedInfo::GetClassData() const { return &_class_data_; }
+
+
+void SyncMatchTimeResponse_ElapsedInfo::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<SyncMatchTimeResponse_ElapsedInfo*>(&to_msg);
+  auto& from = static_cast<const SyncMatchTimeResponse_ElapsedInfo&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:openfoxwq.SyncMatchTimeResponse.ElapsedInfo)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from._internal_has_time_elapsed_sec()) {
+    _this->_internal_set_time_elapsed_sec(from._internal_time_elapsed_sec());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void SyncMatchTimeResponse_ElapsedInfo::CopyFrom(const SyncMatchTimeResponse_ElapsedInfo& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:openfoxwq.SyncMatchTimeResponse.ElapsedInfo)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool SyncMatchTimeResponse_ElapsedInfo::IsInitialized() const {
+  return true;
+}
+
+void SyncMatchTimeResponse_ElapsedInfo::InternalSwap(SyncMatchTimeResponse_ElapsedInfo* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  swap(_impl_.time_elapsed_sec_, other->_impl_.time_elapsed_sec_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata SyncMatchTimeResponse_ElapsedInfo::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_proto_2fplay_2eproto_getter, &descriptor_table_proto_2fplay_2eproto_once,
+      file_level_metadata_proto_2fplay_2eproto[65]);
+}
+
+// ===================================================================
+
+class SyncMatchTimeResponse::_Internal {
+ public:
+  using HasBits = decltype(std::declval<SyncMatchTimeResponse>()._impl_._has_bits_);
+  static void set_has_ts(HasBits* has_bits) {
+    (*has_bits)[0] |= 4u;
+  }
+  static void set_has_server_ts(HasBits* has_bits) {
+    (*has_bits)[0] |= 8u;
+  }
+  static const ::openfoxwq::SyncMatchTimeResponse_ElapsedInfo& elapsed_info(const SyncMatchTimeResponse* msg);
+  static void set_has_elapsed_info(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static const ::openfoxwq::RoomId& room_id(const SyncMatchTimeResponse* msg);
+  static void set_has_room_id(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000004) ^ 0x00000004) != 0;
+  }
+};
+
+const ::openfoxwq::SyncMatchTimeResponse_ElapsedInfo&
+SyncMatchTimeResponse::_Internal::elapsed_info(const SyncMatchTimeResponse* msg) {
+  return *msg->_impl_.elapsed_info_;
+}
+const ::openfoxwq::RoomId&
+SyncMatchTimeResponse::_Internal::room_id(const SyncMatchTimeResponse* msg) {
+  return *msg->_impl_.room_id_;
+}
+void SyncMatchTimeResponse::clear_room_id() {
+  if (_impl_.room_id_ != nullptr) _impl_.room_id_->Clear();
+  _impl_._has_bits_[0] &= ~0x00000002u;
+}
+SyncMatchTimeResponse::SyncMatchTimeResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:openfoxwq.SyncMatchTimeResponse)
+}
+SyncMatchTimeResponse::SyncMatchTimeResponse(const SyncMatchTimeResponse& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  SyncMatchTimeResponse* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.elapsed_info_){nullptr}
+    , decltype(_impl_.room_id_){nullptr}
+    , decltype(_impl_.ts_){}
+    , decltype(_impl_.server_ts_){}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_elapsed_info()) {
+    _this->_impl_.elapsed_info_ = new ::openfoxwq::SyncMatchTimeResponse_ElapsedInfo(*from._impl_.elapsed_info_);
+  }
+  if (from._internal_has_room_id()) {
+    _this->_impl_.room_id_ = new ::openfoxwq::RoomId(*from._impl_.room_id_);
+  }
+  ::memcpy(&_impl_.ts_, &from._impl_.ts_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.server_ts_) -
+    reinterpret_cast<char*>(&_impl_.ts_)) + sizeof(_impl_.server_ts_));
+  // @@protoc_insertion_point(copy_constructor:openfoxwq.SyncMatchTimeResponse)
+}
+
+inline void SyncMatchTimeResponse::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.elapsed_info_){nullptr}
+    , decltype(_impl_.room_id_){nullptr}
+    , decltype(_impl_.ts_){int64_t{0}}
+    , decltype(_impl_.server_ts_){int64_t{0}}
+  };
+}
+
+SyncMatchTimeResponse::~SyncMatchTimeResponse() {
+  // @@protoc_insertion_point(destructor:openfoxwq.SyncMatchTimeResponse)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void SyncMatchTimeResponse::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.elapsed_info_;
+  if (this != internal_default_instance()) delete _impl_.room_id_;
+}
+
+void SyncMatchTimeResponse::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void SyncMatchTimeResponse::Clear() {
+// @@protoc_insertion_point(message_clear_start:openfoxwq.SyncMatchTimeResponse)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      GOOGLE_DCHECK(_impl_.elapsed_info_ != nullptr);
+      _impl_.elapsed_info_->Clear();
+    }
+    if (cached_has_bits & 0x00000002u) {
+      GOOGLE_DCHECK(_impl_.room_id_ != nullptr);
+      _impl_.room_id_->Clear();
+    }
+  }
+  if (cached_has_bits & 0x0000000cu) {
+    ::memset(&_impl_.ts_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&_impl_.server_ts_) -
+        reinterpret_cast<char*>(&_impl_.ts_)) + sizeof(_impl_.server_ts_));
+  }
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* SyncMatchTimeResponse::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // required int64 ts = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_ts(&has_bits);
+          _impl_.ts_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional int64 server_ts = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          _Internal::set_has_server_ts(&has_bits);
+          _impl_.server_ts_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional .openfoxwq.SyncMatchTimeResponse.ElapsedInfo elapsed_info = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
+          ptr = ctx->ParseMessage(_internal_mutable_elapsed_info(), ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional .openfoxwq.RoomId room_id = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
+          ptr = ctx->ParseMessage(_internal_mutable_room_id(), ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  _impl_._has_bits_.Or(has_bits);
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* SyncMatchTimeResponse::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:openfoxwq.SyncMatchTimeResponse)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  // required int64 ts = 1;
+  if (cached_has_bits & 0x00000004u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(1, this->_internal_ts(), target);
+  }
+
+  // optional int64 server_ts = 2;
+  if (cached_has_bits & 0x00000008u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(2, this->_internal_server_ts(), target);
+  }
+
+  // optional .openfoxwq.SyncMatchTimeResponse.ElapsedInfo elapsed_info = 3;
+  if (cached_has_bits & 0x00000001u) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(3, _Internal::elapsed_info(this),
+        _Internal::elapsed_info(this).GetCachedSize(), target, stream);
+  }
+
+  // optional .openfoxwq.RoomId room_id = 4;
+  if (cached_has_bits & 0x00000002u) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(4, _Internal::room_id(this),
+        _Internal::room_id(this).GetCachedSize(), target, stream);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:openfoxwq.SyncMatchTimeResponse)
+  return target;
+}
+
+size_t SyncMatchTimeResponse::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:openfoxwq.SyncMatchTimeResponse)
+  size_t total_size = 0;
+
+  // required int64 ts = 1;
+  if (_internal_has_ts()) {
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_ts());
+  }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    // optional .openfoxwq.SyncMatchTimeResponse.ElapsedInfo elapsed_info = 3;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+          *_impl_.elapsed_info_);
+    }
+
+    // optional .openfoxwq.RoomId room_id = 4;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+          *_impl_.room_id_);
+    }
+
+  }
+  // optional int64 server_ts = 2;
+  if (cached_has_bits & 0x00000008u) {
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_server_ts());
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData SyncMatchTimeResponse::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    SyncMatchTimeResponse::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*SyncMatchTimeResponse::GetClassData() const { return &_class_data_; }
+
+
+void SyncMatchTimeResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<SyncMatchTimeResponse*>(&to_msg);
+  auto& from = static_cast<const SyncMatchTimeResponse&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:openfoxwq.SyncMatchTimeResponse)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x0000000fu) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_mutable_elapsed_info()->::openfoxwq::SyncMatchTimeResponse_ElapsedInfo::MergeFrom(
+          from._internal_elapsed_info());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_internal_mutable_room_id()->::openfoxwq::RoomId::MergeFrom(
+          from._internal_room_id());
+    }
+    if (cached_has_bits & 0x00000004u) {
+      _this->_impl_.ts_ = from._impl_.ts_;
+    }
+    if (cached_has_bits & 0x00000008u) {
+      _this->_impl_.server_ts_ = from._impl_.server_ts_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void SyncMatchTimeResponse::CopyFrom(const SyncMatchTimeResponse& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:openfoxwq.SyncMatchTimeResponse)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool SyncMatchTimeResponse::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
+  return true;
+}
+
+void SyncMatchTimeResponse::InternalSwap(SyncMatchTimeResponse* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(SyncMatchTimeResponse, _impl_.server_ts_)
+      + sizeof(SyncMatchTimeResponse::_impl_.server_ts_)
+      - PROTOBUF_FIELD_OFFSET(SyncMatchTimeResponse, _impl_.elapsed_info_)>(
+          reinterpret_cast<char*>(&_impl_.elapsed_info_),
+          reinterpret_cast<char*>(&other->_impl_.elapsed_info_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata SyncMatchTimeResponse::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_proto_2fplay_2eproto_getter, &descriptor_table_proto_2fplay_2eproto_once,
+      file_level_metadata_proto_2fplay_2eproto[66]);
+}
+
+// ===================================================================
+
+class MatchPlayerTimeState::_Internal {
+ public:
+  using HasBits = decltype(std::declval<MatchPlayerTimeState>()._impl_._has_bits_);
+  static void set_has_unknown_field_1(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static void set_has_main_time_left_sec(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static void set_has_byoyomi_periods_left(HasBits* has_bits) {
+    (*has_bits)[0] |= 4u;
+  }
+  static void set_has_byoyomi_duration_sec(HasBits* has_bits) {
+    (*has_bits)[0] |= 8u;
+  }
+  static void set_has_player_id(HasBits* has_bits) {
+    (*has_bits)[0] |= 16u;
+  }
+  static void set_has_disconnected_time_left_sec(HasBits* has_bits) {
+    (*has_bits)[0] |= 32u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000016) ^ 0x00000016) != 0;
+  }
+};
+
+MatchPlayerTimeState::MatchPlayerTimeState(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:openfoxwq.MatchPlayerTimeState)
+}
+MatchPlayerTimeState::MatchPlayerTimeState(const MatchPlayerTimeState& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  MatchPlayerTimeState* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.unknown_field_1_){}
+    , decltype(_impl_.main_time_left_sec_){}
+    , decltype(_impl_.byoyomi_periods_left_){}
+    , decltype(_impl_.byoyomi_duration_sec_){}
+    , decltype(_impl_.player_id_){}
+    , decltype(_impl_.disconnected_time_left_sec_){}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::memcpy(&_impl_.unknown_field_1_, &from._impl_.unknown_field_1_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.disconnected_time_left_sec_) -
+    reinterpret_cast<char*>(&_impl_.unknown_field_1_)) + sizeof(_impl_.disconnected_time_left_sec_));
+  // @@protoc_insertion_point(copy_constructor:openfoxwq.MatchPlayerTimeState)
+}
+
+inline void MatchPlayerTimeState::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.unknown_field_1_){int64_t{0}}
+    , decltype(_impl_.main_time_left_sec_){int64_t{0}}
+    , decltype(_impl_.byoyomi_periods_left_){int64_t{0}}
+    , decltype(_impl_.byoyomi_duration_sec_){int64_t{0}}
+    , decltype(_impl_.player_id_){int64_t{0}}
+    , decltype(_impl_.disconnected_time_left_sec_){int64_t{0}}
+  };
+}
+
+MatchPlayerTimeState::~MatchPlayerTimeState() {
+  // @@protoc_insertion_point(destructor:openfoxwq.MatchPlayerTimeState)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void MatchPlayerTimeState::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+}
+
+void MatchPlayerTimeState::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void MatchPlayerTimeState::Clear() {
+// @@protoc_insertion_point(message_clear_start:openfoxwq.MatchPlayerTimeState)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x0000003fu) {
+    ::memset(&_impl_.unknown_field_1_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&_impl_.disconnected_time_left_sec_) -
+        reinterpret_cast<char*>(&_impl_.unknown_field_1_)) + sizeof(_impl_.disconnected_time_left_sec_));
+  }
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* MatchPlayerTimeState::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // optional int64 unknown_field_1 = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_unknown_field_1(&has_bits);
+          _impl_.unknown_field_1_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // required int64 main_time_left_sec = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          _Internal::set_has_main_time_left_sec(&has_bits);
+          _impl_.main_time_left_sec_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // required int64 byoyomi_periods_left = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
+          _Internal::set_has_byoyomi_periods_left(&has_bits);
+          _impl_.byoyomi_periods_left_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional int64 byoyomi_duration_sec = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
+          _Internal::set_has_byoyomi_duration_sec(&has_bits);
+          _impl_.byoyomi_duration_sec_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // required int64 player_id = 5;
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
+          _Internal::set_has_player_id(&has_bits);
+          _impl_.player_id_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional int64 disconnected_time_left_sec = 6;
+      case 6:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 48)) {
+          _Internal::set_has_disconnected_time_left_sec(&has_bits);
+          _impl_.disconnected_time_left_sec_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  _impl_._has_bits_.Or(has_bits);
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* MatchPlayerTimeState::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:openfoxwq.MatchPlayerTimeState)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  // optional int64 unknown_field_1 = 1;
+  if (cached_has_bits & 0x00000001u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(1, this->_internal_unknown_field_1(), target);
+  }
+
+  // required int64 main_time_left_sec = 2;
+  if (cached_has_bits & 0x00000002u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(2, this->_internal_main_time_left_sec(), target);
+  }
+
+  // required int64 byoyomi_periods_left = 3;
+  if (cached_has_bits & 0x00000004u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(3, this->_internal_byoyomi_periods_left(), target);
+  }
+
+  // optional int64 byoyomi_duration_sec = 4;
+  if (cached_has_bits & 0x00000008u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(4, this->_internal_byoyomi_duration_sec(), target);
+  }
+
+  // required int64 player_id = 5;
+  if (cached_has_bits & 0x00000010u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(5, this->_internal_player_id(), target);
+  }
+
+  // optional int64 disconnected_time_left_sec = 6;
+  if (cached_has_bits & 0x00000020u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(6, this->_internal_disconnected_time_left_sec(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:openfoxwq.MatchPlayerTimeState)
+  return target;
+}
+
+size_t MatchPlayerTimeState::RequiredFieldsByteSizeFallback() const {
+// @@protoc_insertion_point(required_fields_byte_size_fallback_start:openfoxwq.MatchPlayerTimeState)
+  size_t total_size = 0;
+
+  if (_internal_has_main_time_left_sec()) {
+    // required int64 main_time_left_sec = 2;
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_main_time_left_sec());
+  }
+
+  if (_internal_has_byoyomi_periods_left()) {
+    // required int64 byoyomi_periods_left = 3;
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_byoyomi_periods_left());
+  }
+
+  if (_internal_has_player_id()) {
+    // required int64 player_id = 5;
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_player_id());
+  }
+
+  return total_size;
+}
+size_t MatchPlayerTimeState::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:openfoxwq.MatchPlayerTimeState)
+  size_t total_size = 0;
+
+  if (((_impl_._has_bits_[0] & 0x00000016) ^ 0x00000016) == 0) {  // All required fields are present.
+    // required int64 main_time_left_sec = 2;
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_main_time_left_sec());
+
+    // required int64 byoyomi_periods_left = 3;
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_byoyomi_periods_left());
+
+    // required int64 player_id = 5;
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_player_id());
+
+  } else {
+    total_size += RequiredFieldsByteSizeFallback();
+  }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // optional int64 unknown_field_1 = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_unknown_field_1());
+  }
+
+  // optional int64 byoyomi_duration_sec = 4;
+  if (cached_has_bits & 0x00000008u) {
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_byoyomi_duration_sec());
+  }
+
+  // optional int64 disconnected_time_left_sec = 6;
+  if (cached_has_bits & 0x00000020u) {
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_disconnected_time_left_sec());
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData MatchPlayerTimeState::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    MatchPlayerTimeState::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*MatchPlayerTimeState::GetClassData() const { return &_class_data_; }
+
+
+void MatchPlayerTimeState::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<MatchPlayerTimeState*>(&to_msg);
+  auto& from = static_cast<const MatchPlayerTimeState&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:openfoxwq.MatchPlayerTimeState)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x0000003fu) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_impl_.unknown_field_1_ = from._impl_.unknown_field_1_;
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_impl_.main_time_left_sec_ = from._impl_.main_time_left_sec_;
+    }
+    if (cached_has_bits & 0x00000004u) {
+      _this->_impl_.byoyomi_periods_left_ = from._impl_.byoyomi_periods_left_;
+    }
+    if (cached_has_bits & 0x00000008u) {
+      _this->_impl_.byoyomi_duration_sec_ = from._impl_.byoyomi_duration_sec_;
+    }
+    if (cached_has_bits & 0x00000010u) {
+      _this->_impl_.player_id_ = from._impl_.player_id_;
+    }
+    if (cached_has_bits & 0x00000020u) {
+      _this->_impl_.disconnected_time_left_sec_ = from._impl_.disconnected_time_left_sec_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void MatchPlayerTimeState::CopyFrom(const MatchPlayerTimeState& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:openfoxwq.MatchPlayerTimeState)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool MatchPlayerTimeState::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
+  return true;
+}
+
+void MatchPlayerTimeState::InternalSwap(MatchPlayerTimeState* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(MatchPlayerTimeState, _impl_.disconnected_time_left_sec_)
+      + sizeof(MatchPlayerTimeState::_impl_.disconnected_time_left_sec_)
+      - PROTOBUF_FIELD_OFFSET(MatchPlayerTimeState, _impl_.unknown_field_1_)>(
+          reinterpret_cast<char*>(&_impl_.unknown_field_1_),
+          reinterpret_cast<char*>(&other->_impl_.unknown_field_1_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata MatchPlayerTimeState::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_proto_2fplay_2eproto_getter, &descriptor_table_proto_2fplay_2eproto_once,
+      file_level_metadata_proto_2fplay_2eproto[67]);
+}
+
+// ===================================================================
+
+class NextMoveEvent::_Internal {
+ public:
+  using HasBits = decltype(std::declval<NextMoveEvent>()._impl_._has_bits_);
+  static void set_has_x(HasBits* has_bits) {
+    (*has_bits)[0] |= 4u;
+  }
+  static void set_has_y(HasBits* has_bits) {
+    (*has_bits)[0] |= 8u;
+  }
+  static void set_has_col(HasBits* has_bits) {
+    (*has_bits)[0] |= 64u;
+  }
+  static const ::openfoxwq::MatchPlayerTimeState& time_state(const NextMoveEvent* msg);
+  static void set_has_time_state(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static const ::openfoxwq::LastTurnInfo& last_turn(const NextMoveEvent* msg);
+  static void set_has_last_turn(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static void set_has_player_id(HasBits* has_bits) {
+    (*has_bits)[0] |= 16u;
+  }
+  static void set_has_ts(HasBits* has_bits) {
+    (*has_bits)[0] |= 32u;
+  }
+};
+
+const ::openfoxwq::MatchPlayerTimeState&
+NextMoveEvent::_Internal::time_state(const NextMoveEvent* msg) {
+  return *msg->_impl_.time_state_;
+}
+const ::openfoxwq::LastTurnInfo&
+NextMoveEvent::_Internal::last_turn(const NextMoveEvent* msg) {
+  return *msg->_impl_.last_turn_;
+}
+NextMoveEvent::NextMoveEvent(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:openfoxwq.NextMoveEvent)
+}
+NextMoveEvent::NextMoveEvent(const NextMoveEvent& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  NextMoveEvent* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.time_state_){nullptr}
+    , decltype(_impl_.last_turn_){nullptr}
+    , decltype(_impl_.x_){}
+    , decltype(_impl_.y_){}
+    , decltype(_impl_.player_id_){}
+    , decltype(_impl_.ts_){}
+    , decltype(_impl_.col_){}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_time_state()) {
+    _this->_impl_.time_state_ = new ::openfoxwq::MatchPlayerTimeState(*from._impl_.time_state_);
+  }
+  if (from._internal_has_last_turn()) {
+    _this->_impl_.last_turn_ = new ::openfoxwq::LastTurnInfo(*from._impl_.last_turn_);
+  }
+  ::memcpy(&_impl_.x_, &from._impl_.x_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.col_) -
+    reinterpret_cast<char*>(&_impl_.x_)) + sizeof(_impl_.col_));
+  // @@protoc_insertion_point(copy_constructor:openfoxwq.NextMoveEvent)
+}
+
+inline void NextMoveEvent::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.time_state_){nullptr}
+    , decltype(_impl_.last_turn_){nullptr}
+    , decltype(_impl_.x_){int64_t{0}}
+    , decltype(_impl_.y_){int64_t{0}}
+    , decltype(_impl_.player_id_){int64_t{0}}
+    , decltype(_impl_.ts_){int64_t{0}}
+    , decltype(_impl_.col_){0}
+  };
+}
+
+NextMoveEvent::~NextMoveEvent() {
+  // @@protoc_insertion_point(destructor:openfoxwq.NextMoveEvent)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void NextMoveEvent::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.time_state_;
+  if (this != internal_default_instance()) delete _impl_.last_turn_;
+}
+
+void NextMoveEvent::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void NextMoveEvent::Clear() {
+// @@protoc_insertion_point(message_clear_start:openfoxwq.NextMoveEvent)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      GOOGLE_DCHECK(_impl_.time_state_ != nullptr);
+      _impl_.time_state_->Clear();
+    }
+    if (cached_has_bits & 0x00000002u) {
+      GOOGLE_DCHECK(_impl_.last_turn_ != nullptr);
+      _impl_.last_turn_->Clear();
+    }
+  }
+  if (cached_has_bits & 0x0000007cu) {
+    ::memset(&_impl_.x_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&_impl_.col_) -
+        reinterpret_cast<char*>(&_impl_.x_)) + sizeof(_impl_.col_));
+  }
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* NextMoveEvent::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // optional int64 x = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_x(&has_bits);
+          _impl_.x_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional int64 y = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          _Internal::set_has_y(&has_bits);
+          _impl_.y_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional .openfoxwq.Color col = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+          if (PROTOBUF_PREDICT_TRUE(::openfoxwq::Color_IsValid(val))) {
+            _internal_set_col(static_cast<::openfoxwq::Color>(val));
+          } else {
+            ::PROTOBUF_NAMESPACE_ID::internal::WriteVarint(3, val, mutable_unknown_fields());
+          }
+        } else
+          goto handle_unusual;
+        continue;
+      // optional .openfoxwq.MatchPlayerTimeState time_state = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
+          ptr = ctx->ParseMessage(_internal_mutable_time_state(), ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional .openfoxwq.LastTurnInfo last_turn = 5;
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
+          ptr = ctx->ParseMessage(_internal_mutable_last_turn(), ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional int64 player_id = 6;
+      case 6:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 48)) {
+          _Internal::set_has_player_id(&has_bits);
+          _impl_.player_id_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional int64 ts = 7;
+      case 7:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 56)) {
+          _Internal::set_has_ts(&has_bits);
+          _impl_.ts_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  _impl_._has_bits_.Or(has_bits);
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* NextMoveEvent::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:openfoxwq.NextMoveEvent)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  // optional int64 x = 1;
+  if (cached_has_bits & 0x00000004u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(1, this->_internal_x(), target);
+  }
+
+  // optional int64 y = 2;
+  if (cached_has_bits & 0x00000008u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(2, this->_internal_y(), target);
+  }
+
+  // optional .openfoxwq.Color col = 3;
+  if (cached_has_bits & 0x00000040u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      3, this->_internal_col(), target);
+  }
+
+  // optional .openfoxwq.MatchPlayerTimeState time_state = 4;
+  if (cached_has_bits & 0x00000001u) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(4, _Internal::time_state(this),
+        _Internal::time_state(this).GetCachedSize(), target, stream);
+  }
+
+  // optional .openfoxwq.LastTurnInfo last_turn = 5;
+  if (cached_has_bits & 0x00000002u) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(5, _Internal::last_turn(this),
+        _Internal::last_turn(this).GetCachedSize(), target, stream);
+  }
+
+  // optional int64 player_id = 6;
+  if (cached_has_bits & 0x00000010u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(6, this->_internal_player_id(), target);
+  }
+
+  // optional int64 ts = 7;
+  if (cached_has_bits & 0x00000020u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(7, this->_internal_ts(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:openfoxwq.NextMoveEvent)
+  return target;
+}
+
+size_t NextMoveEvent::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:openfoxwq.NextMoveEvent)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x0000007fu) {
+    // optional .openfoxwq.MatchPlayerTimeState time_state = 4;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+          *_impl_.time_state_);
+    }
+
+    // optional .openfoxwq.LastTurnInfo last_turn = 5;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+          *_impl_.last_turn_);
+    }
+
+    // optional int64 x = 1;
+    if (cached_has_bits & 0x00000004u) {
+      total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_x());
+    }
+
+    // optional int64 y = 2;
+    if (cached_has_bits & 0x00000008u) {
+      total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_y());
+    }
+
+    // optional int64 player_id = 6;
+    if (cached_has_bits & 0x00000010u) {
+      total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_player_id());
+    }
+
+    // optional int64 ts = 7;
+    if (cached_has_bits & 0x00000020u) {
+      total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_ts());
+    }
+
+    // optional .openfoxwq.Color col = 3;
+    if (cached_has_bits & 0x00000040u) {
+      total_size += 1 +
+        ::_pbi::WireFormatLite::EnumSize(this->_internal_col());
+    }
+
+  }
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData NextMoveEvent::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    NextMoveEvent::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*NextMoveEvent::GetClassData() const { return &_class_data_; }
+
+
+void NextMoveEvent::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<NextMoveEvent*>(&to_msg);
+  auto& from = static_cast<const NextMoveEvent&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:openfoxwq.NextMoveEvent)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x0000007fu) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_mutable_time_state()->::openfoxwq::MatchPlayerTimeState::MergeFrom(
+          from._internal_time_state());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_internal_mutable_last_turn()->::openfoxwq::LastTurnInfo::MergeFrom(
+          from._internal_last_turn());
+    }
+    if (cached_has_bits & 0x00000004u) {
+      _this->_impl_.x_ = from._impl_.x_;
+    }
+    if (cached_has_bits & 0x00000008u) {
+      _this->_impl_.y_ = from._impl_.y_;
+    }
+    if (cached_has_bits & 0x00000010u) {
+      _this->_impl_.player_id_ = from._impl_.player_id_;
+    }
+    if (cached_has_bits & 0x00000020u) {
+      _this->_impl_.ts_ = from._impl_.ts_;
+    }
+    if (cached_has_bits & 0x00000040u) {
+      _this->_impl_.col_ = from._impl_.col_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void NextMoveEvent::CopyFrom(const NextMoveEvent& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:openfoxwq.NextMoveEvent)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool NextMoveEvent::IsInitialized() const {
+  if (_internal_has_time_state()) {
+    if (!_impl_.time_state_->IsInitialized()) return false;
+  }
+  return true;
+}
+
+void NextMoveEvent::InternalSwap(NextMoveEvent* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(NextMoveEvent, _impl_.col_)
+      + sizeof(NextMoveEvent::_impl_.col_)
+      - PROTOBUF_FIELD_OFFSET(NextMoveEvent, _impl_.time_state_)>(
+          reinterpret_cast<char*>(&_impl_.time_state_),
+          reinterpret_cast<char*>(&other->_impl_.time_state_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata NextMoveEvent::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_proto_2fplay_2eproto_getter, &descriptor_table_proto_2fplay_2eproto_once,
+      file_level_metadata_proto_2fplay_2eproto[68]);
+}
+
+// ===================================================================
+
+class PassEvent::_Internal {
+ public:
+  using HasBits = decltype(std::declval<PassEvent>()._impl_._has_bits_);
+  static const ::openfoxwq::MatchPlayerTimeState& time_state(const PassEvent* msg);
+  static void set_has_time_state(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static const ::openfoxwq::LastTurnInfo& last_turn(const PassEvent* msg);
+  static void set_has_last_turn(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static void set_has_player_id(HasBits* has_bits) {
+    (*has_bits)[0] |= 4u;
+  }
+  static void set_has_unknown_field_4(HasBits* has_bits) {
+    (*has_bits)[0] |= 8u;
+  }
+};
+
+const ::openfoxwq::MatchPlayerTimeState&
+PassEvent::_Internal::time_state(const PassEvent* msg) {
+  return *msg->_impl_.time_state_;
+}
+const ::openfoxwq::LastTurnInfo&
+PassEvent::_Internal::last_turn(const PassEvent* msg) {
+  return *msg->_impl_.last_turn_;
+}
+PassEvent::PassEvent(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:openfoxwq.PassEvent)
+}
+PassEvent::PassEvent(const PassEvent& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  PassEvent* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.time_state_){nullptr}
+    , decltype(_impl_.last_turn_){nullptr}
+    , decltype(_impl_.player_id_){}
+    , decltype(_impl_.unknown_field_4_){}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_time_state()) {
+    _this->_impl_.time_state_ = new ::openfoxwq::MatchPlayerTimeState(*from._impl_.time_state_);
+  }
+  if (from._internal_has_last_turn()) {
+    _this->_impl_.last_turn_ = new ::openfoxwq::LastTurnInfo(*from._impl_.last_turn_);
+  }
+  ::memcpy(&_impl_.player_id_, &from._impl_.player_id_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.unknown_field_4_) -
+    reinterpret_cast<char*>(&_impl_.player_id_)) + sizeof(_impl_.unknown_field_4_));
+  // @@protoc_insertion_point(copy_constructor:openfoxwq.PassEvent)
+}
+
+inline void PassEvent::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.time_state_){nullptr}
+    , decltype(_impl_.last_turn_){nullptr}
+    , decltype(_impl_.player_id_){int64_t{0}}
+    , decltype(_impl_.unknown_field_4_){int64_t{0}}
+  };
+}
+
+PassEvent::~PassEvent() {
+  // @@protoc_insertion_point(destructor:openfoxwq.PassEvent)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void PassEvent::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.time_state_;
+  if (this != internal_default_instance()) delete _impl_.last_turn_;
+}
+
+void PassEvent::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void PassEvent::Clear() {
+// @@protoc_insertion_point(message_clear_start:openfoxwq.PassEvent)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      GOOGLE_DCHECK(_impl_.time_state_ != nullptr);
+      _impl_.time_state_->Clear();
+    }
+    if (cached_has_bits & 0x00000002u) {
+      GOOGLE_DCHECK(_impl_.last_turn_ != nullptr);
+      _impl_.last_turn_->Clear();
+    }
+  }
+  if (cached_has_bits & 0x0000000cu) {
+    ::memset(&_impl_.player_id_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&_impl_.unknown_field_4_) -
+        reinterpret_cast<char*>(&_impl_.player_id_)) + sizeof(_impl_.unknown_field_4_));
+  }
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* PassEvent::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // optional .openfoxwq.MatchPlayerTimeState time_state = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_time_state(), ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional .openfoxwq.LastTurnInfo last_turn = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
+          ptr = ctx->ParseMessage(_internal_mutable_last_turn(), ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional int64 player_id = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
+          _Internal::set_has_player_id(&has_bits);
+          _impl_.player_id_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional int64 unknown_field_4 = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
+          _Internal::set_has_unknown_field_4(&has_bits);
+          _impl_.unknown_field_4_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  _impl_._has_bits_.Or(has_bits);
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* PassEvent::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:openfoxwq.PassEvent)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  // optional .openfoxwq.MatchPlayerTimeState time_state = 1;
+  if (cached_has_bits & 0x00000001u) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::time_state(this),
+        _Internal::time_state(this).GetCachedSize(), target, stream);
+  }
+
+  // optional .openfoxwq.LastTurnInfo last_turn = 2;
+  if (cached_has_bits & 0x00000002u) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(2, _Internal::last_turn(this),
+        _Internal::last_turn(this).GetCachedSize(), target, stream);
+  }
+
+  // optional int64 player_id = 3;
+  if (cached_has_bits & 0x00000004u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(3, this->_internal_player_id(), target);
+  }
+
+  // optional int64 unknown_field_4 = 4;
+  if (cached_has_bits & 0x00000008u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(4, this->_internal_unknown_field_4(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:openfoxwq.PassEvent)
+  return target;
+}
+
+size_t PassEvent::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:openfoxwq.PassEvent)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x0000000fu) {
+    // optional .openfoxwq.MatchPlayerTimeState time_state = 1;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+          *_impl_.time_state_);
+    }
+
+    // optional .openfoxwq.LastTurnInfo last_turn = 2;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+          *_impl_.last_turn_);
+    }
+
+    // optional int64 player_id = 3;
+    if (cached_has_bits & 0x00000004u) {
+      total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_player_id());
+    }
+
+    // optional int64 unknown_field_4 = 4;
+    if (cached_has_bits & 0x00000008u) {
+      total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_unknown_field_4());
+    }
+
+  }
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData PassEvent::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    PassEvent::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*PassEvent::GetClassData() const { return &_class_data_; }
+
+
+void PassEvent::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<PassEvent*>(&to_msg);
+  auto& from = static_cast<const PassEvent&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:openfoxwq.PassEvent)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x0000000fu) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_mutable_time_state()->::openfoxwq::MatchPlayerTimeState::MergeFrom(
+          from._internal_time_state());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_internal_mutable_last_turn()->::openfoxwq::LastTurnInfo::MergeFrom(
+          from._internal_last_turn());
+    }
+    if (cached_has_bits & 0x00000004u) {
+      _this->_impl_.player_id_ = from._impl_.player_id_;
+    }
+    if (cached_has_bits & 0x00000008u) {
+      _this->_impl_.unknown_field_4_ = from._impl_.unknown_field_4_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void PassEvent::CopyFrom(const PassEvent& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:openfoxwq.PassEvent)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool PassEvent::IsInitialized() const {
+  if (_internal_has_time_state()) {
+    if (!_impl_.time_state_->IsInitialized()) return false;
+  }
+  return true;
+}
+
+void PassEvent::InternalSwap(PassEvent* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(PassEvent, _impl_.unknown_field_4_)
+      + sizeof(PassEvent::_impl_.unknown_field_4_)
+      - PROTOBUF_FIELD_OFFSET(PassEvent, _impl_.time_state_)>(
+          reinterpret_cast<char*>(&_impl_.time_state_),
+          reinterpret_cast<char*>(&other->_impl_.time_state_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata PassEvent::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_proto_2fplay_2eproto_getter, &descriptor_table_proto_2fplay_2eproto_once,
+      file_level_metadata_proto_2fplay_2eproto[69]);
+}
+
+// ===================================================================
+
+class CountdownEvent::_Internal {
+ public:
+  using HasBits = decltype(std::declval<CountdownEvent>()._impl_._has_bits_);
+  static void set_has_unknown_field_1(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static void set_has_main_time_left_sec(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static void set_has_byoyomi_periods_left(HasBits* has_bits) {
+    (*has_bits)[0] |= 4u;
+  }
+  static void set_has_byoyomi_time_left_sec(HasBits* has_bits) {
+    (*has_bits)[0] |= 8u;
+  }
+  static void set_has_player_id(HasBits* has_bits) {
+    (*has_bits)[0] |= 16u;
+  }
+  static void set_has_unknown_field_6(HasBits* has_bits) {
+    (*has_bits)[0] |= 32u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000016) ^ 0x00000016) != 0;
+  }
+};
+
+CountdownEvent::CountdownEvent(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:openfoxwq.CountdownEvent)
+}
+CountdownEvent::CountdownEvent(const CountdownEvent& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  CountdownEvent* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.unknown_field_1_){}
+    , decltype(_impl_.main_time_left_sec_){}
+    , decltype(_impl_.byoyomi_periods_left_){}
+    , decltype(_impl_.byoyomi_time_left_sec_){}
+    , decltype(_impl_.player_id_){}
+    , decltype(_impl_.unknown_field_6_){}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::memcpy(&_impl_.unknown_field_1_, &from._impl_.unknown_field_1_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.unknown_field_6_) -
+    reinterpret_cast<char*>(&_impl_.unknown_field_1_)) + sizeof(_impl_.unknown_field_6_));
+  // @@protoc_insertion_point(copy_constructor:openfoxwq.CountdownEvent)
+}
+
+inline void CountdownEvent::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.unknown_field_1_){int64_t{0}}
+    , decltype(_impl_.main_time_left_sec_){int64_t{0}}
+    , decltype(_impl_.byoyomi_periods_left_){int64_t{0}}
+    , decltype(_impl_.byoyomi_time_left_sec_){int64_t{0}}
+    , decltype(_impl_.player_id_){int64_t{0}}
+    , decltype(_impl_.unknown_field_6_){int64_t{0}}
+  };
+}
+
+CountdownEvent::~CountdownEvent() {
+  // @@protoc_insertion_point(destructor:openfoxwq.CountdownEvent)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void CountdownEvent::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+}
+
+void CountdownEvent::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void CountdownEvent::Clear() {
+// @@protoc_insertion_point(message_clear_start:openfoxwq.CountdownEvent)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x0000003fu) {
+    ::memset(&_impl_.unknown_field_1_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&_impl_.unknown_field_6_) -
+        reinterpret_cast<char*>(&_impl_.unknown_field_1_)) + sizeof(_impl_.unknown_field_6_));
+  }
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* CountdownEvent::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // optional int64 unknown_field_1 = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_unknown_field_1(&has_bits);
+          _impl_.unknown_field_1_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // required int64 main_time_left_sec = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          _Internal::set_has_main_time_left_sec(&has_bits);
+          _impl_.main_time_left_sec_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // required int64 byoyomi_periods_left = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
+          _Internal::set_has_byoyomi_periods_left(&has_bits);
+          _impl_.byoyomi_periods_left_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional int64 byoyomi_time_left_sec = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
+          _Internal::set_has_byoyomi_time_left_sec(&has_bits);
+          _impl_.byoyomi_time_left_sec_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // required int64 player_id = 5;
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
+          _Internal::set_has_player_id(&has_bits);
+          _impl_.player_id_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional int64 unknown_field_6 = 6;
+      case 6:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 48)) {
+          _Internal::set_has_unknown_field_6(&has_bits);
+          _impl_.unknown_field_6_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  _impl_._has_bits_.Or(has_bits);
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* CountdownEvent::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:openfoxwq.CountdownEvent)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  // optional int64 unknown_field_1 = 1;
+  if (cached_has_bits & 0x00000001u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(1, this->_internal_unknown_field_1(), target);
+  }
+
+  // required int64 main_time_left_sec = 2;
+  if (cached_has_bits & 0x00000002u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(2, this->_internal_main_time_left_sec(), target);
+  }
+
+  // required int64 byoyomi_periods_left = 3;
+  if (cached_has_bits & 0x00000004u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(3, this->_internal_byoyomi_periods_left(), target);
+  }
+
+  // optional int64 byoyomi_time_left_sec = 4;
+  if (cached_has_bits & 0x00000008u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(4, this->_internal_byoyomi_time_left_sec(), target);
+  }
+
+  // required int64 player_id = 5;
+  if (cached_has_bits & 0x00000010u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(5, this->_internal_player_id(), target);
+  }
+
+  // optional int64 unknown_field_6 = 6;
+  if (cached_has_bits & 0x00000020u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(6, this->_internal_unknown_field_6(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:openfoxwq.CountdownEvent)
+  return target;
+}
+
+size_t CountdownEvent::RequiredFieldsByteSizeFallback() const {
+// @@protoc_insertion_point(required_fields_byte_size_fallback_start:openfoxwq.CountdownEvent)
+  size_t total_size = 0;
+
+  if (_internal_has_main_time_left_sec()) {
+    // required int64 main_time_left_sec = 2;
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_main_time_left_sec());
+  }
+
+  if (_internal_has_byoyomi_periods_left()) {
+    // required int64 byoyomi_periods_left = 3;
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_byoyomi_periods_left());
+  }
+
+  if (_internal_has_player_id()) {
+    // required int64 player_id = 5;
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_player_id());
+  }
+
+  return total_size;
+}
+size_t CountdownEvent::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:openfoxwq.CountdownEvent)
+  size_t total_size = 0;
+
+  if (((_impl_._has_bits_[0] & 0x00000016) ^ 0x00000016) == 0) {  // All required fields are present.
+    // required int64 main_time_left_sec = 2;
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_main_time_left_sec());
+
+    // required int64 byoyomi_periods_left = 3;
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_byoyomi_periods_left());
+
+    // required int64 player_id = 5;
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_player_id());
+
+  } else {
+    total_size += RequiredFieldsByteSizeFallback();
+  }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // optional int64 unknown_field_1 = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_unknown_field_1());
+  }
+
+  // optional int64 byoyomi_time_left_sec = 4;
+  if (cached_has_bits & 0x00000008u) {
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_byoyomi_time_left_sec());
+  }
+
+  // optional int64 unknown_field_6 = 6;
+  if (cached_has_bits & 0x00000020u) {
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_unknown_field_6());
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData CountdownEvent::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    CountdownEvent::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*CountdownEvent::GetClassData() const { return &_class_data_; }
+
+
+void CountdownEvent::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<CountdownEvent*>(&to_msg);
+  auto& from = static_cast<const CountdownEvent&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:openfoxwq.CountdownEvent)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x0000003fu) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_impl_.unknown_field_1_ = from._impl_.unknown_field_1_;
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_impl_.main_time_left_sec_ = from._impl_.main_time_left_sec_;
+    }
+    if (cached_has_bits & 0x00000004u) {
+      _this->_impl_.byoyomi_periods_left_ = from._impl_.byoyomi_periods_left_;
+    }
+    if (cached_has_bits & 0x00000008u) {
+      _this->_impl_.byoyomi_time_left_sec_ = from._impl_.byoyomi_time_left_sec_;
+    }
+    if (cached_has_bits & 0x00000010u) {
+      _this->_impl_.player_id_ = from._impl_.player_id_;
+    }
+    if (cached_has_bits & 0x00000020u) {
+      _this->_impl_.unknown_field_6_ = from._impl_.unknown_field_6_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void CountdownEvent::CopyFrom(const CountdownEvent& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:openfoxwq.CountdownEvent)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool CountdownEvent::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
+  return true;
+}
+
+void CountdownEvent::InternalSwap(CountdownEvent* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(CountdownEvent, _impl_.unknown_field_6_)
+      + sizeof(CountdownEvent::_impl_.unknown_field_6_)
+      - PROTOBUF_FIELD_OFFSET(CountdownEvent, _impl_.unknown_field_1_)>(
+          reinterpret_cast<char*>(&_impl_.unknown_field_1_),
+          reinterpret_cast<char*>(&other->_impl_.unknown_field_1_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata CountdownEvent::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_proto_2fplay_2eproto_getter, &descriptor_table_proto_2fplay_2eproto_once,
+      file_level_metadata_proto_2fplay_2eproto[70]);
+}
+
+// ===================================================================
+
+class ResumeCountdownEvent::_Internal {
+ public:
+  using HasBits = decltype(std::declval<ResumeCountdownEvent>()._impl_._has_bits_);
+  static void set_has_unknown_field_1(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static const ::openfoxwq::CountdownEvent& countdown(const ResumeCountdownEvent* msg);
+  static void set_has_countdown(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
+  }
+};
+
+const ::openfoxwq::CountdownEvent&
+ResumeCountdownEvent::_Internal::countdown(const ResumeCountdownEvent* msg) {
+  return *msg->_impl_.countdown_;
+}
+ResumeCountdownEvent::ResumeCountdownEvent(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:openfoxwq.ResumeCountdownEvent)
+}
+ResumeCountdownEvent::ResumeCountdownEvent(const ResumeCountdownEvent& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  ResumeCountdownEvent* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.countdown_){nullptr}
+    , decltype(_impl_.unknown_field_1_){}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_countdown()) {
+    _this->_impl_.countdown_ = new ::openfoxwq::CountdownEvent(*from._impl_.countdown_);
+  }
+  _this->_impl_.unknown_field_1_ = from._impl_.unknown_field_1_;
+  // @@protoc_insertion_point(copy_constructor:openfoxwq.ResumeCountdownEvent)
+}
+
+inline void ResumeCountdownEvent::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.countdown_){nullptr}
+    , decltype(_impl_.unknown_field_1_){int64_t{0}}
+  };
+}
+
+ResumeCountdownEvent::~ResumeCountdownEvent() {
+  // @@protoc_insertion_point(destructor:openfoxwq.ResumeCountdownEvent)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void ResumeCountdownEvent::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.countdown_;
+}
+
+void ResumeCountdownEvent::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void ResumeCountdownEvent::Clear() {
+// @@protoc_insertion_point(message_clear_start:openfoxwq.ResumeCountdownEvent)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    GOOGLE_DCHECK(_impl_.countdown_ != nullptr);
+    _impl_.countdown_->Clear();
+  }
+  _impl_.unknown_field_1_ = int64_t{0};
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* ResumeCountdownEvent::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // optional int64 unknown_field_1 = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_unknown_field_1(&has_bits);
+          _impl_.unknown_field_1_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // required .openfoxwq.CountdownEvent countdown = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
+          ptr = ctx->ParseMessage(_internal_mutable_countdown(), ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  _impl_._has_bits_.Or(has_bits);
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* ResumeCountdownEvent::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:openfoxwq.ResumeCountdownEvent)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  // optional int64 unknown_field_1 = 1;
+  if (cached_has_bits & 0x00000002u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(1, this->_internal_unknown_field_1(), target);
+  }
+
+  // required .openfoxwq.CountdownEvent countdown = 2;
+  if (cached_has_bits & 0x00000001u) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(2, _Internal::countdown(this),
+        _Internal::countdown(this).GetCachedSize(), target, stream);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:openfoxwq.ResumeCountdownEvent)
+  return target;
+}
+
+size_t ResumeCountdownEvent::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:openfoxwq.ResumeCountdownEvent)
+  size_t total_size = 0;
+
+  // required .openfoxwq.CountdownEvent countdown = 2;
+  if (_internal_has_countdown()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.countdown_);
+  }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // optional int64 unknown_field_1 = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000002u) {
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_unknown_field_1());
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData ResumeCountdownEvent::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    ResumeCountdownEvent::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ResumeCountdownEvent::GetClassData() const { return &_class_data_; }
+
+
+void ResumeCountdownEvent::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<ResumeCountdownEvent*>(&to_msg);
+  auto& from = static_cast<const ResumeCountdownEvent&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:openfoxwq.ResumeCountdownEvent)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_mutable_countdown()->::openfoxwq::CountdownEvent::MergeFrom(
+          from._internal_countdown());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_impl_.unknown_field_1_ = from._impl_.unknown_field_1_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void ResumeCountdownEvent::CopyFrom(const ResumeCountdownEvent& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:openfoxwq.ResumeCountdownEvent)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool ResumeCountdownEvent::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
+  if (_internal_has_countdown()) {
+    if (!_impl_.countdown_->IsInitialized()) return false;
+  }
+  return true;
+}
+
+void ResumeCountdownEvent::InternalSwap(ResumeCountdownEvent* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(ResumeCountdownEvent, _impl_.unknown_field_1_)
+      + sizeof(ResumeCountdownEvent::_impl_.unknown_field_1_)
+      - PROTOBUF_FIELD_OFFSET(ResumeCountdownEvent, _impl_.countdown_)>(
+          reinterpret_cast<char*>(&_impl_.countdown_),
+          reinterpret_cast<char*>(&other->_impl_.countdown_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata ResumeCountdownEvent::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_proto_2fplay_2eproto_getter, &descriptor_table_proto_2fplay_2eproto_once,
+      file_level_metadata_proto_2fplay_2eproto[71]);
+}
+
+// ===================================================================
+
+class RequestCountingRequest::_Internal {
+ public:
+  using HasBits = decltype(std::declval<RequestCountingRequest>()._impl_._has_bits_);
+  static void set_has_unknown_field_1(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+};
+
+RequestCountingRequest::RequestCountingRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:openfoxwq.RequestCountingRequest)
+}
+RequestCountingRequest::RequestCountingRequest(const RequestCountingRequest& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  RequestCountingRequest* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.unknown_field_1_){}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_impl_.unknown_field_1_ = from._impl_.unknown_field_1_;
+  // @@protoc_insertion_point(copy_constructor:openfoxwq.RequestCountingRequest)
+}
+
+inline void RequestCountingRequest::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.unknown_field_1_){int64_t{0}}
+  };
+}
+
+RequestCountingRequest::~RequestCountingRequest() {
+  // @@protoc_insertion_point(destructor:openfoxwq.RequestCountingRequest)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void RequestCountingRequest::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+}
+
+void RequestCountingRequest::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void RequestCountingRequest::Clear() {
+// @@protoc_insertion_point(message_clear_start:openfoxwq.RequestCountingRequest)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _impl_.unknown_field_1_ = int64_t{0};
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* RequestCountingRequest::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // optional int64 unknown_field_1 = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_unknown_field_1(&has_bits);
+          _impl_.unknown_field_1_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  _impl_._has_bits_.Or(has_bits);
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* RequestCountingRequest::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:openfoxwq.RequestCountingRequest)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  // optional int64 unknown_field_1 = 1;
+  if (cached_has_bits & 0x00000001u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(1, this->_internal_unknown_field_1(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:openfoxwq.RequestCountingRequest)
+  return target;
+}
+
+size_t RequestCountingRequest::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:openfoxwq.RequestCountingRequest)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // optional int64 unknown_field_1 = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_unknown_field_1());
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData RequestCountingRequest::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    RequestCountingRequest::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*RequestCountingRequest::GetClassData() const { return &_class_data_; }
+
+
+void RequestCountingRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<RequestCountingRequest*>(&to_msg);
+  auto& from = static_cast<const RequestCountingRequest&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:openfoxwq.RequestCountingRequest)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from._internal_has_unknown_field_1()) {
+    _this->_internal_set_unknown_field_1(from._internal_unknown_field_1());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void RequestCountingRequest::CopyFrom(const RequestCountingRequest& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:openfoxwq.RequestCountingRequest)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool RequestCountingRequest::IsInitialized() const {
+  return true;
+}
+
+void RequestCountingRequest::InternalSwap(RequestCountingRequest* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  swap(_impl_.unknown_field_1_, other->_impl_.unknown_field_1_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata RequestCountingRequest::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_proto_2fplay_2eproto_getter, &descriptor_table_proto_2fplay_2eproto_once,
+      file_level_metadata_proto_2fplay_2eproto[72]);
+}
+
+// ===================================================================
+
+class RequestCountingResponse::_Internal {
+ public:
+  using HasBits = decltype(std::declval<RequestCountingResponse>()._impl_._has_bits_);
+  static void set_has_error_code(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+};
+
+RequestCountingResponse::RequestCountingResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:openfoxwq.RequestCountingResponse)
+}
+RequestCountingResponse::RequestCountingResponse(const RequestCountingResponse& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  RequestCountingResponse* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.error_code_){}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_impl_.error_code_ = from._impl_.error_code_;
+  // @@protoc_insertion_point(copy_constructor:openfoxwq.RequestCountingResponse)
+}
+
+inline void RequestCountingResponse::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.error_code_){int64_t{0}}
+  };
+}
+
+RequestCountingResponse::~RequestCountingResponse() {
+  // @@protoc_insertion_point(destructor:openfoxwq.RequestCountingResponse)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void RequestCountingResponse::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+}
+
+void RequestCountingResponse::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void RequestCountingResponse::Clear() {
+// @@protoc_insertion_point(message_clear_start:openfoxwq.RequestCountingResponse)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _impl_.error_code_ = int64_t{0};
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* RequestCountingResponse::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // optional int64 error_code = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_error_code(&has_bits);
+          _impl_.error_code_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  _impl_._has_bits_.Or(has_bits);
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* RequestCountingResponse::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:openfoxwq.RequestCountingResponse)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  // optional int64 error_code = 1;
+  if (cached_has_bits & 0x00000001u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(1, this->_internal_error_code(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:openfoxwq.RequestCountingResponse)
+  return target;
+}
+
+size_t RequestCountingResponse::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:openfoxwq.RequestCountingResponse)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // optional int64 error_code = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_error_code());
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData RequestCountingResponse::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    RequestCountingResponse::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*RequestCountingResponse::GetClassData() const { return &_class_data_; }
+
+
+void RequestCountingResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<RequestCountingResponse*>(&to_msg);
+  auto& from = static_cast<const RequestCountingResponse&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:openfoxwq.RequestCountingResponse)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from._internal_has_error_code()) {
+    _this->_internal_set_error_code(from._internal_error_code());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void RequestCountingResponse::CopyFrom(const RequestCountingResponse& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:openfoxwq.RequestCountingResponse)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool RequestCountingResponse::IsInitialized() const {
+  return true;
+}
+
+void RequestCountingResponse::InternalSwap(RequestCountingResponse* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  swap(_impl_.error_code_, other->_impl_.error_code_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata RequestCountingResponse::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_proto_2fplay_2eproto_getter, &descriptor_table_proto_2fplay_2eproto_once,
+      file_level_metadata_proto_2fplay_2eproto[73]);
+}
+
+// ===================================================================
+
+class SendCountingDecisionResponse::_Internal {
+ public:
+  using HasBits = decltype(std::declval<SendCountingDecisionResponse>()._impl_._has_bits_);
+  static void set_has_error_code(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+};
+
+SendCountingDecisionResponse::SendCountingDecisionResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:openfoxwq.SendCountingDecisionResponse)
+}
+SendCountingDecisionResponse::SendCountingDecisionResponse(const SendCountingDecisionResponse& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  SendCountingDecisionResponse* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.error_code_){}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_impl_.error_code_ = from._impl_.error_code_;
+  // @@protoc_insertion_point(copy_constructor:openfoxwq.SendCountingDecisionResponse)
+}
+
+inline void SendCountingDecisionResponse::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.error_code_){int64_t{0}}
+  };
+}
+
+SendCountingDecisionResponse::~SendCountingDecisionResponse() {
+  // @@protoc_insertion_point(destructor:openfoxwq.SendCountingDecisionResponse)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void SendCountingDecisionResponse::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+}
+
+void SendCountingDecisionResponse::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void SendCountingDecisionResponse::Clear() {
+// @@protoc_insertion_point(message_clear_start:openfoxwq.SendCountingDecisionResponse)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _impl_.error_code_ = int64_t{0};
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* SendCountingDecisionResponse::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // optional int64 error_code = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_error_code(&has_bits);
+          _impl_.error_code_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  _impl_._has_bits_.Or(has_bits);
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* SendCountingDecisionResponse::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:openfoxwq.SendCountingDecisionResponse)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  // optional int64 error_code = 1;
+  if (cached_has_bits & 0x00000001u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(1, this->_internal_error_code(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:openfoxwq.SendCountingDecisionResponse)
+  return target;
+}
+
+size_t SendCountingDecisionResponse::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:openfoxwq.SendCountingDecisionResponse)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // optional int64 error_code = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_error_code());
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData SendCountingDecisionResponse::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    SendCountingDecisionResponse::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*SendCountingDecisionResponse::GetClassData() const { return &_class_data_; }
+
+
+void SendCountingDecisionResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<SendCountingDecisionResponse*>(&to_msg);
+  auto& from = static_cast<const SendCountingDecisionResponse&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:openfoxwq.SendCountingDecisionResponse)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from._internal_has_error_code()) {
+    _this->_internal_set_error_code(from._internal_error_code());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void SendCountingDecisionResponse::CopyFrom(const SendCountingDecisionResponse& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:openfoxwq.SendCountingDecisionResponse)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool SendCountingDecisionResponse::IsInitialized() const {
+  return true;
+}
+
+void SendCountingDecisionResponse::InternalSwap(SendCountingDecisionResponse* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  swap(_impl_.error_code_, other->_impl_.error_code_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata SendCountingDecisionResponse::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_proto_2fplay_2eproto_getter, &descriptor_table_proto_2fplay_2eproto_once,
+      file_level_metadata_proto_2fplay_2eproto[74]);
+}
+
+// ===================================================================
+
+class CountingDecision::_Internal {
+ public:
+  using HasBits = decltype(std::declval<CountingDecision>()._impl_._has_bits_);
+  static void set_has_agree(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static void set_has_stage(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
+  }
+};
+
+CountingDecision::CountingDecision(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:openfoxwq.CountingDecision)
+}
+CountingDecision::CountingDecision(const CountingDecision& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  CountingDecision* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.agree_){}
+    , decltype(_impl_.stage_){}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::memcpy(&_impl_.agree_, &from._impl_.agree_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.stage_) -
+    reinterpret_cast<char*>(&_impl_.agree_)) + sizeof(_impl_.stage_));
+  // @@protoc_insertion_point(copy_constructor:openfoxwq.CountingDecision)
+}
+
+inline void CountingDecision::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.agree_){false}
+    , decltype(_impl_.stage_){0}
+  };
+}
+
+CountingDecision::~CountingDecision() {
+  // @@protoc_insertion_point(destructor:openfoxwq.CountingDecision)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void CountingDecision::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+}
+
+void CountingDecision::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void CountingDecision::Clear() {
+// @@protoc_insertion_point(message_clear_start:openfoxwq.CountingDecision)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    ::memset(&_impl_.agree_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&_impl_.stage_) -
+        reinterpret_cast<char*>(&_impl_.agree_)) + sizeof(_impl_.stage_));
+  }
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* CountingDecision::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // required bool agree = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_agree(&has_bits);
+          _impl_.agree_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // required .openfoxwq.CountingStage stage = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+          if (PROTOBUF_PREDICT_TRUE(::openfoxwq::CountingStage_IsValid(val))) {
+            _internal_set_stage(static_cast<::openfoxwq::CountingStage>(val));
+          } else {
+            ::PROTOBUF_NAMESPACE_ID::internal::WriteVarint(2, val, mutable_unknown_fields());
+          }
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  _impl_._has_bits_.Or(has_bits);
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* CountingDecision::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:openfoxwq.CountingDecision)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  // required bool agree = 1;
+  if (cached_has_bits & 0x00000001u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_agree(), target);
+  }
+
+  // required .openfoxwq.CountingStage stage = 2;
+  if (cached_has_bits & 0x00000002u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      2, this->_internal_stage(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:openfoxwq.CountingDecision)
+  return target;
+}
+
+size_t CountingDecision::RequiredFieldsByteSizeFallback() const {
+// @@protoc_insertion_point(required_fields_byte_size_fallback_start:openfoxwq.CountingDecision)
+  size_t total_size = 0;
+
+  if (_internal_has_agree()) {
+    // required bool agree = 1;
+    total_size += 1 + 1;
+  }
+
+  if (_internal_has_stage()) {
+    // required .openfoxwq.CountingStage stage = 2;
+    total_size += 1 +
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_stage());
+  }
+
+  return total_size;
+}
+size_t CountingDecision::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:openfoxwq.CountingDecision)
+  size_t total_size = 0;
+
+  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
+    // required bool agree = 1;
+    total_size += 1 + 1;
+
+    // required .openfoxwq.CountingStage stage = 2;
+    total_size += 1 +
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_stage());
+
+  } else {
+    total_size += RequiredFieldsByteSizeFallback();
+  }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData CountingDecision::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    CountingDecision::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*CountingDecision::GetClassData() const { return &_class_data_; }
+
+
+void CountingDecision::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<CountingDecision*>(&to_msg);
+  auto& from = static_cast<const CountingDecision&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:openfoxwq.CountingDecision)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_impl_.agree_ = from._impl_.agree_;
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_impl_.stage_ = from._impl_.stage_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void CountingDecision::CopyFrom(const CountingDecision& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:openfoxwq.CountingDecision)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool CountingDecision::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
+  return true;
+}
+
+void CountingDecision::InternalSwap(CountingDecision* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(CountingDecision, _impl_.stage_)
+      + sizeof(CountingDecision::_impl_.stage_)
+      - PROTOBUF_FIELD_OFFSET(CountingDecision, _impl_.agree_)>(
+          reinterpret_cast<char*>(&_impl_.agree_),
+          reinterpret_cast<char*>(&other->_impl_.agree_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata CountingDecision::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_proto_2fplay_2eproto_getter, &descriptor_table_proto_2fplay_2eproto_once,
+      file_level_metadata_proto_2fplay_2eproto[75]);
+}
+
+// ===================================================================
+
+class CountingEvent::_Internal {
+ public:
+  using HasBits = decltype(std::declval<CountingEvent>()._impl_._has_bits_);
+  static void set_has_unknown_field_1(HasBits* has_bits) {
+    (*has_bits)[0] |= 4u;
+  }
+  static void set_has_stage(HasBits* has_bits) {
+    (*has_bits)[0] |= 8u;
+  }
+  static void set_has_unknown_field_4(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static void set_has_ownership(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static void set_has_unknown_field_6(HasBits* has_bits) {
+    (*has_bits)[0] |= 16u;
+  }
+  static void set_has_winner(HasBits* has_bits) {
+    (*has_bits)[0] |= 64u;
+  }
+  static void set_has_score_lead(HasBits* has_bits) {
+    (*has_bits)[0] |= 128u;
+  }
+  static void set_has_time_left(HasBits* has_bits) {
+    (*has_bits)[0] |= 32u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000028) ^ 0x00000028) != 0;
+  }
+};
+
+CountingEvent::CountingEvent(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:openfoxwq.CountingEvent)
+}
+CountingEvent::CountingEvent(const CountingEvent& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  CountingEvent* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.unknown_field_4_){}
+    , decltype(_impl_.ownership_){}
+    , decltype(_impl_.unknown_field_1_){}
+    , decltype(_impl_.stage_){}
+    , decltype(_impl_.unknown_field_6_){}
+    , decltype(_impl_.time_left_){}
+    , decltype(_impl_.winner_){}
+    , decltype(_impl_.score_lead_){}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _impl_.unknown_field_4_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.unknown_field_4_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (from._internal_has_unknown_field_4()) {
+    _this->_impl_.unknown_field_4_.Set(from._internal_unknown_field_4(), 
+      _this->GetArenaForAllocation());
+  }
+  _impl_.ownership_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.ownership_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (from._internal_has_ownership()) {
+    _this->_impl_.ownership_.Set(from._internal_ownership(), 
+      _this->GetArenaForAllocation());
+  }
+  ::memcpy(&_impl_.unknown_field_1_, &from._impl_.unknown_field_1_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.score_lead_) -
+    reinterpret_cast<char*>(&_impl_.unknown_field_1_)) + sizeof(_impl_.score_lead_));
+  // @@protoc_insertion_point(copy_constructor:openfoxwq.CountingEvent)
+}
+
+inline void CountingEvent::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.unknown_field_4_){}
+    , decltype(_impl_.ownership_){}
+    , decltype(_impl_.unknown_field_1_){int64_t{0}}
+    , decltype(_impl_.stage_){0}
+    , decltype(_impl_.unknown_field_6_){0}
+    , decltype(_impl_.time_left_){int64_t{0}}
+    , decltype(_impl_.winner_){0}
+    , decltype(_impl_.score_lead_){0}
+  };
+  _impl_.unknown_field_4_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.unknown_field_4_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  _impl_.ownership_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.ownership_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+}
+
+CountingEvent::~CountingEvent() {
+  // @@protoc_insertion_point(destructor:openfoxwq.CountingEvent)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void CountingEvent::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.unknown_field_4_.Destroy();
+  _impl_.ownership_.Destroy();
+}
+
+void CountingEvent::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void CountingEvent::Clear() {
+// @@protoc_insertion_point(message_clear_start:openfoxwq.CountingEvent)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      _impl_.unknown_field_4_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _impl_.ownership_.ClearNonDefaultToEmpty();
+    }
+  }
+  if (cached_has_bits & 0x000000fcu) {
+    ::memset(&_impl_.unknown_field_1_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&_impl_.score_lead_) -
+        reinterpret_cast<char*>(&_impl_.unknown_field_1_)) + sizeof(_impl_.score_lead_));
+  }
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* CountingEvent::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // optional int64 unknown_field_1 = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_unknown_field_1(&has_bits);
+          _impl_.unknown_field_1_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // required .openfoxwq.CountingStage stage = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+          if (PROTOBUF_PREDICT_TRUE(::openfoxwq::CountingStage_IsValid(val))) {
+            _internal_set_stage(static_cast<::openfoxwq::CountingStage>(val));
+          } else {
+            ::PROTOBUF_NAMESPACE_ID::internal::WriteVarint(2, val, mutable_unknown_fields());
+          }
+        } else
+          goto handle_unusual;
+        continue;
+      // optional bytes unknown_field_4 = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
+          auto str = _internal_mutable_unknown_field_4();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional string ownership = 5;
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
+          auto str = _internal_mutable_ownership();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+          #ifndef NDEBUG
+          ::_pbi::VerifyUTF8(str, "openfoxwq.CountingEvent.ownership");
+          #endif  // !NDEBUG
+        } else
+          goto handle_unusual;
+        continue;
+      // optional float unknown_field_6 = 6;
+      case 6:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 53)) {
+          _Internal::set_has_unknown_field_6(&has_bits);
+          _impl_.unknown_field_6_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
+          ptr += sizeof(float);
+        } else
+          goto handle_unusual;
+        continue;
+      // required int64 time_left = 7;
+      case 7:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 56)) {
+          _Internal::set_has_time_left(&has_bits);
+          _impl_.time_left_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional .openfoxwq.Color winner = 8;
+      case 8:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 64)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+          if (PROTOBUF_PREDICT_TRUE(::openfoxwq::Color_IsValid(val))) {
+            _internal_set_winner(static_cast<::openfoxwq::Color>(val));
+          } else {
+            ::PROTOBUF_NAMESPACE_ID::internal::WriteVarint(8, val, mutable_unknown_fields());
+          }
+        } else
+          goto handle_unusual;
+        continue;
+      // optional float score_lead = 9;
+      case 9:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 77)) {
+          _Internal::set_has_score_lead(&has_bits);
+          _impl_.score_lead_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
+          ptr += sizeof(float);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  _impl_._has_bits_.Or(has_bits);
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* CountingEvent::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:openfoxwq.CountingEvent)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  // optional int64 unknown_field_1 = 1;
+  if (cached_has_bits & 0x00000004u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(1, this->_internal_unknown_field_1(), target);
+  }
+
+  // required .openfoxwq.CountingStage stage = 2;
+  if (cached_has_bits & 0x00000008u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      2, this->_internal_stage(), target);
+  }
+
+  // optional bytes unknown_field_4 = 4;
+  if (cached_has_bits & 0x00000001u) {
+    target = stream->WriteBytesMaybeAliased(
+        4, this->_internal_unknown_field_4(), target);
+  }
+
+  // optional string ownership = 5;
+  if (cached_has_bits & 0x00000002u) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->_internal_ownership().data(), static_cast<int>(this->_internal_ownership().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
+      "openfoxwq.CountingEvent.ownership");
+    target = stream->WriteStringMaybeAliased(
+        5, this->_internal_ownership(), target);
+  }
+
+  // optional float unknown_field_6 = 6;
+  if (cached_has_bits & 0x00000010u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteFloatToArray(6, this->_internal_unknown_field_6(), target);
+  }
+
+  // required int64 time_left = 7;
+  if (cached_has_bits & 0x00000020u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(7, this->_internal_time_left(), target);
+  }
+
+  // optional .openfoxwq.Color winner = 8;
+  if (cached_has_bits & 0x00000040u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      8, this->_internal_winner(), target);
+  }
+
+  // optional float score_lead = 9;
+  if (cached_has_bits & 0x00000080u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteFloatToArray(9, this->_internal_score_lead(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:openfoxwq.CountingEvent)
+  return target;
+}
+
+size_t CountingEvent::RequiredFieldsByteSizeFallback() const {
+// @@protoc_insertion_point(required_fields_byte_size_fallback_start:openfoxwq.CountingEvent)
+  size_t total_size = 0;
+
+  if (_internal_has_stage()) {
+    // required .openfoxwq.CountingStage stage = 2;
+    total_size += 1 +
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_stage());
+  }
+
+  if (_internal_has_time_left()) {
+    // required int64 time_left = 7;
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_time_left());
+  }
+
+  return total_size;
+}
+size_t CountingEvent::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:openfoxwq.CountingEvent)
+  size_t total_size = 0;
+
+  if (((_impl_._has_bits_[0] & 0x00000028) ^ 0x00000028) == 0) {  // All required fields are present.
+    // required .openfoxwq.CountingStage stage = 2;
+    total_size += 1 +
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_stage());
+
+    // required int64 time_left = 7;
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_time_left());
+
+  } else {
+    total_size += RequiredFieldsByteSizeFallback();
+  }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000007u) {
+    // optional bytes unknown_field_4 = 4;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+          this->_internal_unknown_field_4());
+    }
+
+    // optional string ownership = 5;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+          this->_internal_ownership());
+    }
+
+    // optional int64 unknown_field_1 = 1;
+    if (cached_has_bits & 0x00000004u) {
+      total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_unknown_field_1());
+    }
+
+  }
+  // optional float unknown_field_6 = 6;
+  if (cached_has_bits & 0x00000010u) {
+    total_size += 1 + 4;
+  }
+
+  if (cached_has_bits & 0x000000c0u) {
+    // optional .openfoxwq.Color winner = 8;
+    if (cached_has_bits & 0x00000040u) {
+      total_size += 1 +
+        ::_pbi::WireFormatLite::EnumSize(this->_internal_winner());
+    }
+
+    // optional float score_lead = 9;
+    if (cached_has_bits & 0x00000080u) {
+      total_size += 1 + 4;
+    }
+
+  }
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData CountingEvent::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    CountingEvent::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*CountingEvent::GetClassData() const { return &_class_data_; }
+
+
+void CountingEvent::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<CountingEvent*>(&to_msg);
+  auto& from = static_cast<const CountingEvent&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:openfoxwq.CountingEvent)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x000000ffu) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_set_unknown_field_4(from._internal_unknown_field_4());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_internal_set_ownership(from._internal_ownership());
+    }
+    if (cached_has_bits & 0x00000004u) {
+      _this->_impl_.unknown_field_1_ = from._impl_.unknown_field_1_;
+    }
+    if (cached_has_bits & 0x00000008u) {
+      _this->_impl_.stage_ = from._impl_.stage_;
+    }
+    if (cached_has_bits & 0x00000010u) {
+      _this->_impl_.unknown_field_6_ = from._impl_.unknown_field_6_;
+    }
+    if (cached_has_bits & 0x00000020u) {
+      _this->_impl_.time_left_ = from._impl_.time_left_;
+    }
+    if (cached_has_bits & 0x00000040u) {
+      _this->_impl_.winner_ = from._impl_.winner_;
+    }
+    if (cached_has_bits & 0x00000080u) {
+      _this->_impl_.score_lead_ = from._impl_.score_lead_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void CountingEvent::CopyFrom(const CountingEvent& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:openfoxwq.CountingEvent)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool CountingEvent::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
+  return true;
+}
+
+void CountingEvent::InternalSwap(CountingEvent* other) {
+  using std::swap;
+  auto* lhs_arena = GetArenaForAllocation();
+  auto* rhs_arena = other->GetArenaForAllocation();
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.unknown_field_4_, lhs_arena,
+      &other->_impl_.unknown_field_4_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.ownership_, lhs_arena,
+      &other->_impl_.ownership_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(CountingEvent, _impl_.score_lead_)
+      + sizeof(CountingEvent::_impl_.score_lead_)
+      - PROTOBUF_FIELD_OFFSET(CountingEvent, _impl_.unknown_field_1_)>(
+          reinterpret_cast<char*>(&_impl_.unknown_field_1_),
+          reinterpret_cast<char*>(&other->_impl_.unknown_field_1_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata CountingEvent::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_proto_2fplay_2eproto_getter, &descriptor_table_proto_2fplay_2eproto_once,
+      file_level_metadata_proto_2fplay_2eproto[76]);
+}
+
+// ===================================================================
+
+class ResignRequest::_Internal {
+ public:
+  using HasBits = decltype(std::declval<ResignRequest>()._impl_._has_bits_);
+  static void set_has_unknown_field_1(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+};
+
+ResignRequest::ResignRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:openfoxwq.ResignRequest)
+}
+ResignRequest::ResignRequest(const ResignRequest& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  ResignRequest* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.unknown_field_1_){}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_impl_.unknown_field_1_ = from._impl_.unknown_field_1_;
+  // @@protoc_insertion_point(copy_constructor:openfoxwq.ResignRequest)
+}
+
+inline void ResignRequest::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.unknown_field_1_){int64_t{0}}
+  };
+}
+
+ResignRequest::~ResignRequest() {
+  // @@protoc_insertion_point(destructor:openfoxwq.ResignRequest)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void ResignRequest::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+}
+
+void ResignRequest::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void ResignRequest::Clear() {
+// @@protoc_insertion_point(message_clear_start:openfoxwq.ResignRequest)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _impl_.unknown_field_1_ = int64_t{0};
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* ResignRequest::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // optional int64 unknown_field_1 = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_unknown_field_1(&has_bits);
+          _impl_.unknown_field_1_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  _impl_._has_bits_.Or(has_bits);
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* ResignRequest::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:openfoxwq.ResignRequest)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  // optional int64 unknown_field_1 = 1;
+  if (cached_has_bits & 0x00000001u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(1, this->_internal_unknown_field_1(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:openfoxwq.ResignRequest)
+  return target;
+}
+
+size_t ResignRequest::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:openfoxwq.ResignRequest)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // optional int64 unknown_field_1 = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_unknown_field_1());
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData ResignRequest::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    ResignRequest::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ResignRequest::GetClassData() const { return &_class_data_; }
+
+
+void ResignRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<ResignRequest*>(&to_msg);
+  auto& from = static_cast<const ResignRequest&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:openfoxwq.ResignRequest)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from._internal_has_unknown_field_1()) {
+    _this->_internal_set_unknown_field_1(from._internal_unknown_field_1());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void ResignRequest::CopyFrom(const ResignRequest& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:openfoxwq.ResignRequest)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool ResignRequest::IsInitialized() const {
+  return true;
+}
+
+void ResignRequest::InternalSwap(ResignRequest* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  swap(_impl_.unknown_field_1_, other->_impl_.unknown_field_1_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata ResignRequest::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_proto_2fplay_2eproto_getter, &descriptor_table_proto_2fplay_2eproto_once,
+      file_level_metadata_proto_2fplay_2eproto[77]);
+}
+
+// ===================================================================
+
+class ResignResponse::_Internal {
+ public:
+  using HasBits = decltype(std::declval<ResignResponse>()._impl_._has_bits_);
+  static void set_has_unknown_field_1(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+};
+
+ResignResponse::ResignResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:openfoxwq.ResignResponse)
+}
+ResignResponse::ResignResponse(const ResignResponse& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  ResignResponse* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.unknown_field_1_){}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_impl_.unknown_field_1_ = from._impl_.unknown_field_1_;
+  // @@protoc_insertion_point(copy_constructor:openfoxwq.ResignResponse)
+}
+
+inline void ResignResponse::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.unknown_field_1_){int64_t{0}}
+  };
+}
+
+ResignResponse::~ResignResponse() {
+  // @@protoc_insertion_point(destructor:openfoxwq.ResignResponse)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void ResignResponse::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+}
+
+void ResignResponse::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void ResignResponse::Clear() {
+// @@protoc_insertion_point(message_clear_start:openfoxwq.ResignResponse)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _impl_.unknown_field_1_ = int64_t{0};
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* ResignResponse::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // optional int64 unknown_field_1 = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_unknown_field_1(&has_bits);
+          _impl_.unknown_field_1_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  _impl_._has_bits_.Or(has_bits);
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* ResignResponse::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:openfoxwq.ResignResponse)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  // optional int64 unknown_field_1 = 1;
+  if (cached_has_bits & 0x00000001u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(1, this->_internal_unknown_field_1(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:openfoxwq.ResignResponse)
+  return target;
+}
+
+size_t ResignResponse::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:openfoxwq.ResignResponse)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // optional int64 unknown_field_1 = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_unknown_field_1());
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData ResignResponse::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    ResignResponse::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ResignResponse::GetClassData() const { return &_class_data_; }
+
+
+void ResignResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<ResignResponse*>(&to_msg);
+  auto& from = static_cast<const ResignResponse&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:openfoxwq.ResignResponse)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from._internal_has_unknown_field_1()) {
+    _this->_internal_set_unknown_field_1(from._internal_unknown_field_1());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void ResignResponse::CopyFrom(const ResignResponse& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:openfoxwq.ResignResponse)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool ResignResponse::IsInitialized() const {
+  return true;
+}
+
+void ResignResponse::InternalSwap(ResignResponse* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  swap(_impl_.unknown_field_1_, other->_impl_.unknown_field_1_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata ResignResponse::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_proto_2fplay_2eproto_getter, &descriptor_table_proto_2fplay_2eproto_once,
+      file_level_metadata_proto_2fplay_2eproto[78]);
+}
+
+// ===================================================================
+
+class GameResultEvent::_Internal {
+ public:
+  using HasBits = decltype(std::declval<GameResultEvent>()._impl_._has_bits_);
+  static void set_has_unknown_field_1(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static void set_has_winner(HasBits* has_bits) {
+    (*has_bits)[0] |= 128u;
+  }
+  static void set_has_score_lead(HasBits* has_bits) {
+    (*has_bits)[0] |= 4u;
+  }
+  static void set_has_unknown_field_4(HasBits* has_bits) {
+    (*has_bits)[0] |= 8u;
+  }
+  static void set_has_message(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static void set_has_ts_10(HasBits* has_bits) {
+    (*has_bits)[0] |= 16u;
+  }
+  static void set_has_ts_12(HasBits* has_bits) {
+    (*has_bits)[0] |= 32u;
+  }
+  static void set_has_ts_13(HasBits* has_bits) {
+    (*has_bits)[0] |= 64u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000084) ^ 0x00000084) != 0;
+  }
+};
+
+GameResultEvent::GameResultEvent(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:openfoxwq.GameResultEvent)
+}
+GameResultEvent::GameResultEvent(const GameResultEvent& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  GameResultEvent* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.message_){}
+    , decltype(_impl_.unknown_field_1_){}
+    , decltype(_impl_.score_lead_){}
+    , decltype(_impl_.unknown_field_4_){}
+    , decltype(_impl_.ts_10_){}
+    , decltype(_impl_.ts_12_){}
+    , decltype(_impl_.ts_13_){}
+    , decltype(_impl_.winner_){}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _impl_.message_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.message_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (from._internal_has_message()) {
+    _this->_impl_.message_.Set(from._internal_message(), 
+      _this->GetArenaForAllocation());
+  }
+  ::memcpy(&_impl_.unknown_field_1_, &from._impl_.unknown_field_1_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.winner_) -
+    reinterpret_cast<char*>(&_impl_.unknown_field_1_)) + sizeof(_impl_.winner_));
+  // @@protoc_insertion_point(copy_constructor:openfoxwq.GameResultEvent)
+}
+
+inline void GameResultEvent::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.message_){}
+    , decltype(_impl_.unknown_field_1_){int64_t{0}}
+    , decltype(_impl_.score_lead_){int64_t{0}}
+    , decltype(_impl_.unknown_field_4_){int64_t{0}}
+    , decltype(_impl_.ts_10_){int64_t{0}}
+    , decltype(_impl_.ts_12_){int64_t{0}}
+    , decltype(_impl_.ts_13_){int64_t{0}}
+    , decltype(_impl_.winner_){0}
+  };
+  _impl_.message_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.message_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+}
+
+GameResultEvent::~GameResultEvent() {
+  // @@protoc_insertion_point(destructor:openfoxwq.GameResultEvent)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void GameResultEvent::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.message_.Destroy();
+}
+
+void GameResultEvent::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void GameResultEvent::Clear() {
+// @@protoc_insertion_point(message_clear_start:openfoxwq.GameResultEvent)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    _impl_.message_.ClearNonDefaultToEmpty();
+  }
+  if (cached_has_bits & 0x000000feu) {
+    ::memset(&_impl_.unknown_field_1_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&_impl_.winner_) -
+        reinterpret_cast<char*>(&_impl_.unknown_field_1_)) + sizeof(_impl_.winner_));
+  }
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* GameResultEvent::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // optional int64 unknown_field_1 = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_unknown_field_1(&has_bits);
+          _impl_.unknown_field_1_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // required .openfoxwq.Color winner = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+          if (PROTOBUF_PREDICT_TRUE(::openfoxwq::Color_IsValid(val))) {
+            _internal_set_winner(static_cast<::openfoxwq::Color>(val));
+          } else {
+            ::PROTOBUF_NAMESPACE_ID::internal::WriteVarint(2, val, mutable_unknown_fields());
+          }
+        } else
+          goto handle_unusual;
+        continue;
+      // required int64 score_lead = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
+          _Internal::set_has_score_lead(&has_bits);
+          _impl_.score_lead_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional int64 unknown_field_4 = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
+          _Internal::set_has_unknown_field_4(&has_bits);
+          _impl_.unknown_field_4_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional string message = 5;
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
+          auto str = _internal_mutable_message();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+          #ifndef NDEBUG
+          ::_pbi::VerifyUTF8(str, "openfoxwq.GameResultEvent.message");
+          #endif  // !NDEBUG
+        } else
+          goto handle_unusual;
+        continue;
+      // optional int64 ts_10 = 10;
+      case 10:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 80)) {
+          _Internal::set_has_ts_10(&has_bits);
+          _impl_.ts_10_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional int64 ts_12 = 12;
+      case 12:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 96)) {
+          _Internal::set_has_ts_12(&has_bits);
+          _impl_.ts_12_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional int64 ts_13 = 13;
+      case 13:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 104)) {
+          _Internal::set_has_ts_13(&has_bits);
+          _impl_.ts_13_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  _impl_._has_bits_.Or(has_bits);
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* GameResultEvent::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:openfoxwq.GameResultEvent)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  // optional int64 unknown_field_1 = 1;
+  if (cached_has_bits & 0x00000002u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(1, this->_internal_unknown_field_1(), target);
+  }
+
+  // required .openfoxwq.Color winner = 2;
+  if (cached_has_bits & 0x00000080u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      2, this->_internal_winner(), target);
+  }
+
+  // required int64 score_lead = 3;
+  if (cached_has_bits & 0x00000004u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(3, this->_internal_score_lead(), target);
+  }
+
+  // optional int64 unknown_field_4 = 4;
+  if (cached_has_bits & 0x00000008u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(4, this->_internal_unknown_field_4(), target);
+  }
+
+  // optional string message = 5;
+  if (cached_has_bits & 0x00000001u) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->_internal_message().data(), static_cast<int>(this->_internal_message().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
+      "openfoxwq.GameResultEvent.message");
+    target = stream->WriteStringMaybeAliased(
+        5, this->_internal_message(), target);
+  }
+
+  // optional int64 ts_10 = 10;
+  if (cached_has_bits & 0x00000010u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(10, this->_internal_ts_10(), target);
+  }
+
+  // optional int64 ts_12 = 12;
+  if (cached_has_bits & 0x00000020u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(12, this->_internal_ts_12(), target);
+  }
+
+  // optional int64 ts_13 = 13;
+  if (cached_has_bits & 0x00000040u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(13, this->_internal_ts_13(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:openfoxwq.GameResultEvent)
+  return target;
+}
+
+size_t GameResultEvent::RequiredFieldsByteSizeFallback() const {
+// @@protoc_insertion_point(required_fields_byte_size_fallback_start:openfoxwq.GameResultEvent)
+  size_t total_size = 0;
+
+  if (_internal_has_score_lead()) {
+    // required int64 score_lead = 3;
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_score_lead());
+  }
+
+  if (_internal_has_winner()) {
+    // required .openfoxwq.Color winner = 2;
+    total_size += 1 +
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_winner());
+  }
+
+  return total_size;
+}
+size_t GameResultEvent::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:openfoxwq.GameResultEvent)
+  size_t total_size = 0;
+
+  if (((_impl_._has_bits_[0] & 0x00000084) ^ 0x00000084) == 0) {  // All required fields are present.
+    // required int64 score_lead = 3;
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_score_lead());
+
+    // required .openfoxwq.Color winner = 2;
+    total_size += 1 +
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_winner());
+
+  } else {
+    total_size += RequiredFieldsByteSizeFallback();
+  }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    // optional string message = 5;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+          this->_internal_message());
+    }
+
+    // optional int64 unknown_field_1 = 1;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_unknown_field_1());
+    }
+
+  }
+  if (cached_has_bits & 0x00000078u) {
+    // optional int64 unknown_field_4 = 4;
+    if (cached_has_bits & 0x00000008u) {
+      total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_unknown_field_4());
+    }
+
+    // optional int64 ts_10 = 10;
+    if (cached_has_bits & 0x00000010u) {
+      total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_ts_10());
+    }
+
+    // optional int64 ts_12 = 12;
+    if (cached_has_bits & 0x00000020u) {
+      total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_ts_12());
+    }
+
+    // optional int64 ts_13 = 13;
+    if (cached_has_bits & 0x00000040u) {
+      total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_ts_13());
+    }
+
+  }
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData GameResultEvent::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    GameResultEvent::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GameResultEvent::GetClassData() const { return &_class_data_; }
+
+
+void GameResultEvent::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<GameResultEvent*>(&to_msg);
+  auto& from = static_cast<const GameResultEvent&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:openfoxwq.GameResultEvent)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x000000ffu) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_set_message(from._internal_message());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_impl_.unknown_field_1_ = from._impl_.unknown_field_1_;
+    }
+    if (cached_has_bits & 0x00000004u) {
+      _this->_impl_.score_lead_ = from._impl_.score_lead_;
+    }
+    if (cached_has_bits & 0x00000008u) {
+      _this->_impl_.unknown_field_4_ = from._impl_.unknown_field_4_;
+    }
+    if (cached_has_bits & 0x00000010u) {
+      _this->_impl_.ts_10_ = from._impl_.ts_10_;
+    }
+    if (cached_has_bits & 0x00000020u) {
+      _this->_impl_.ts_12_ = from._impl_.ts_12_;
+    }
+    if (cached_has_bits & 0x00000040u) {
+      _this->_impl_.ts_13_ = from._impl_.ts_13_;
+    }
+    if (cached_has_bits & 0x00000080u) {
+      _this->_impl_.winner_ = from._impl_.winner_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void GameResultEvent::CopyFrom(const GameResultEvent& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:openfoxwq.GameResultEvent)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool GameResultEvent::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
+  return true;
+}
+
+void GameResultEvent::InternalSwap(GameResultEvent* other) {
+  using std::swap;
+  auto* lhs_arena = GetArenaForAllocation();
+  auto* rhs_arena = other->GetArenaForAllocation();
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.message_, lhs_arena,
+      &other->_impl_.message_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(GameResultEvent, _impl_.winner_)
+      + sizeof(GameResultEvent::_impl_.winner_)
+      - PROTOBUF_FIELD_OFFSET(GameResultEvent, _impl_.unknown_field_1_)>(
+          reinterpret_cast<char*>(&_impl_.unknown_field_1_),
+          reinterpret_cast<char*>(&other->_impl_.unknown_field_1_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata GameResultEvent::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_proto_2fplay_2eproto_getter, &descriptor_table_proto_2fplay_2eproto_once,
+      file_level_metadata_proto_2fplay_2eproto[79]);
 }
 
 // @@protoc_insertion_point(namespace_scope)
@@ -5272,6 +25434,46 @@ template<> PROTOBUF_NOINLINE ::openfoxwq::GetPlayerInfoResponse_RegisterInfo*
 Arena::CreateMaybeMessage< ::openfoxwq::GetPlayerInfoResponse_RegisterInfo >(Arena* arena) {
   return Arena::CreateMessageInternal< ::openfoxwq::GetPlayerInfoResponse_RegisterInfo >(arena);
 }
+template<> PROTOBUF_NOINLINE ::openfoxwq::GetPlayerInfoResponse_RecentRecord_Unknown1*
+Arena::CreateMaybeMessage< ::openfoxwq::GetPlayerInfoResponse_RecentRecord_Unknown1 >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::openfoxwq::GetPlayerInfoResponse_RecentRecord_Unknown1 >(arena);
+}
+template<> PROTOBUF_NOINLINE ::openfoxwq::GetPlayerInfoResponse_RecentRecord*
+Arena::CreateMaybeMessage< ::openfoxwq::GetPlayerInfoResponse_RecentRecord >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::openfoxwq::GetPlayerInfoResponse_RecentRecord >(arena);
+}
+template<> PROTOBUF_NOINLINE ::openfoxwq::GetPlayerInfoResponse_OverallResults*
+Arena::CreateMaybeMessage< ::openfoxwq::GetPlayerInfoResponse_OverallResults >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::openfoxwq::GetPlayerInfoResponse_OverallResults >(arena);
+}
+template<> PROTOBUF_NOINLINE ::openfoxwq::GetPlayerInfoResponse_ProInfo*
+Arena::CreateMaybeMessage< ::openfoxwq::GetPlayerInfoResponse_ProInfo >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::openfoxwq::GetPlayerInfoResponse_ProInfo >(arena);
+}
+template<> PROTOBUF_NOINLINE ::openfoxwq::GetPlayerInfoResponse_PerformanceRecord*
+Arena::CreateMaybeMessage< ::openfoxwq::GetPlayerInfoResponse_PerformanceRecord >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::openfoxwq::GetPlayerInfoResponse_PerformanceRecord >(arena);
+}
+template<> PROTOBUF_NOINLINE ::openfoxwq::GetPlayerInfoResponse_Results*
+Arena::CreateMaybeMessage< ::openfoxwq::GetPlayerInfoResponse_Results >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::openfoxwq::GetPlayerInfoResponse_Results >(arena);
+}
+template<> PROTOBUF_NOINLINE ::openfoxwq::GetPlayerInfoResponse_Rooms_Room_ShortPlayerInfo*
+Arena::CreateMaybeMessage< ::openfoxwq::GetPlayerInfoResponse_Rooms_Room_ShortPlayerInfo >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::openfoxwq::GetPlayerInfoResponse_Rooms_Room_ShortPlayerInfo >(arena);
+}
+template<> PROTOBUF_NOINLINE ::openfoxwq::GetPlayerInfoResponse_Rooms_Room*
+Arena::CreateMaybeMessage< ::openfoxwq::GetPlayerInfoResponse_Rooms_Room >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::openfoxwq::GetPlayerInfoResponse_Rooms_Room >(arena);
+}
+template<> PROTOBUF_NOINLINE ::openfoxwq::GetPlayerInfoResponse_Rooms*
+Arena::CreateMaybeMessage< ::openfoxwq::GetPlayerInfoResponse_Rooms >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::openfoxwq::GetPlayerInfoResponse_Rooms >(arena);
+}
+template<> PROTOBUF_NOINLINE ::openfoxwq::GetPlayerInfoResponse_AdditionalInfo*
+Arena::CreateMaybeMessage< ::openfoxwq::GetPlayerInfoResponse_AdditionalInfo >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::openfoxwq::GetPlayerInfoResponse_AdditionalInfo >(arena);
+}
 template<> PROTOBUF_NOINLINE ::openfoxwq::GetPlayerInfoResponse*
 Arena::CreateMaybeMessage< ::openfoxwq::GetPlayerInfoResponse >(Arena* arena) {
   return Arena::CreateMessageInternal< ::openfoxwq::GetPlayerInfoResponse >(arena);
@@ -5300,9 +25502,17 @@ template<> PROTOBUF_NOINLINE ::openfoxwq::PlayerStateEvent*
 Arena::CreateMaybeMessage< ::openfoxwq::PlayerStateEvent >(Arena* arena) {
   return Arena::CreateMessageInternal< ::openfoxwq::PlayerStateEvent >(arena);
 }
-template<> PROTOBUF_NOINLINE ::openfoxwq::UnknownPlayerEvent1*
-Arena::CreateMaybeMessage< ::openfoxwq::UnknownPlayerEvent1 >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::openfoxwq::UnknownPlayerEvent1 >(arena);
+template<> PROTOBUF_NOINLINE ::openfoxwq::PlayerOnlineCountEvent*
+Arena::CreateMaybeMessage< ::openfoxwq::PlayerOnlineCountEvent >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::openfoxwq::PlayerOnlineCountEvent >(arena);
+}
+template<> PROTOBUF_NOINLINE ::openfoxwq::PlayerOnlineEvent*
+Arena::CreateMaybeMessage< ::openfoxwq::PlayerOnlineEvent >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::openfoxwq::PlayerOnlineEvent >(arena);
+}
+template<> PROTOBUF_NOINLINE ::openfoxwq::PlayerOfflineEvent*
+Arena::CreateMaybeMessage< ::openfoxwq::PlayerOfflineEvent >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::openfoxwq::PlayerOfflineEvent >(arena);
 }
 template<> PROTOBUF_NOINLINE ::openfoxwq::UnknownPlayRequest1_UnknownPlayRequest1Nested1*
 Arena::CreateMaybeMessage< ::openfoxwq::UnknownPlayRequest1_UnknownPlayRequest1Nested1 >(Arena* arena) {
@@ -5315,6 +25525,210 @@ Arena::CreateMaybeMessage< ::openfoxwq::UnknownPlayRequest1 >(Arena* arena) {
 template<> PROTOBUF_NOINLINE ::openfoxwq::UnknownPlayResponse1*
 Arena::CreateMaybeMessage< ::openfoxwq::UnknownPlayResponse1 >(Arena* arena) {
   return Arena::CreateMessageInternal< ::openfoxwq::UnknownPlayResponse1 >(arena);
+}
+template<> PROTOBUF_NOINLINE ::openfoxwq::GetRoomInfoRequest*
+Arena::CreateMaybeMessage< ::openfoxwq::GetRoomInfoRequest >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::openfoxwq::GetRoomInfoRequest >(arena);
+}
+template<> PROTOBUF_NOINLINE ::openfoxwq::GetRoomInfoResponse_Unknown2*
+Arena::CreateMaybeMessage< ::openfoxwq::GetRoomInfoResponse_Unknown2 >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::openfoxwq::GetRoomInfoResponse_Unknown2 >(arena);
+}
+template<> PROTOBUF_NOINLINE ::openfoxwq::GetRoomInfoResponse_PlayerEntry*
+Arena::CreateMaybeMessage< ::openfoxwq::GetRoomInfoResponse_PlayerEntry >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::openfoxwq::GetRoomInfoResponse_PlayerEntry >(arena);
+}
+template<> PROTOBUF_NOINLINE ::openfoxwq::GetRoomInfoResponse_RoomSettings*
+Arena::CreateMaybeMessage< ::openfoxwq::GetRoomInfoResponse_RoomSettings >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::openfoxwq::GetRoomInfoResponse_RoomSettings >(arena);
+}
+template<> PROTOBUF_NOINLINE ::openfoxwq::GetRoomInfoResponse_Unknown5*
+Arena::CreateMaybeMessage< ::openfoxwq::GetRoomInfoResponse_Unknown5 >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::openfoxwq::GetRoomInfoResponse_Unknown5 >(arena);
+}
+template<> PROTOBUF_NOINLINE ::openfoxwq::GetRoomInfoResponse_RoomInfo*
+Arena::CreateMaybeMessage< ::openfoxwq::GetRoomInfoResponse_RoomInfo >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::openfoxwq::GetRoomInfoResponse_RoomInfo >(arena);
+}
+template<> PROTOBUF_NOINLINE ::openfoxwq::GetRoomInfoResponse*
+Arena::CreateMaybeMessage< ::openfoxwq::GetRoomInfoResponse >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::openfoxwq::GetRoomInfoResponse >(arena);
+}
+template<> PROTOBUF_NOINLINE ::openfoxwq::GetAutomatchStatsRequest*
+Arena::CreateMaybeMessage< ::openfoxwq::GetAutomatchStatsRequest >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::openfoxwq::GetAutomatchStatsRequest >(arena);
+}
+template<> PROTOBUF_NOINLINE ::openfoxwq::GetAutomatchStatsResponse_PopulationEntry_DoNotUse*
+Arena::CreateMaybeMessage< ::openfoxwq::GetAutomatchStatsResponse_PopulationEntry_DoNotUse >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::openfoxwq::GetAutomatchStatsResponse_PopulationEntry_DoNotUse >(arena);
+}
+template<> PROTOBUF_NOINLINE ::openfoxwq::GetAutomatchStatsResponse*
+Arena::CreateMaybeMessage< ::openfoxwq::GetAutomatchStatsResponse >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::openfoxwq::GetAutomatchStatsResponse >(arena);
+}
+template<> PROTOBUF_NOINLINE ::openfoxwq::StartAutomatchRequest*
+Arena::CreateMaybeMessage< ::openfoxwq::StartAutomatchRequest >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::openfoxwq::StartAutomatchRequest >(arena);
+}
+template<> PROTOBUF_NOINLINE ::openfoxwq::StartAutomatchResponse*
+Arena::CreateMaybeMessage< ::openfoxwq::StartAutomatchResponse >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::openfoxwq::StartAutomatchResponse >(arena);
+}
+template<> PROTOBUF_NOINLINE ::openfoxwq::StopAutomatchRequest*
+Arena::CreateMaybeMessage< ::openfoxwq::StopAutomatchRequest >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::openfoxwq::StopAutomatchRequest >(arena);
+}
+template<> PROTOBUF_NOINLINE ::openfoxwq::StopAutomatchResponse*
+Arena::CreateMaybeMessage< ::openfoxwq::StopAutomatchResponse >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::openfoxwq::StopAutomatchResponse >(arena);
+}
+template<> PROTOBUF_NOINLINE ::openfoxwq::AutomatchFoundEvent_RoomParticipant*
+Arena::CreateMaybeMessage< ::openfoxwq::AutomatchFoundEvent_RoomParticipant >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::openfoxwq::AutomatchFoundEvent_RoomParticipant >(arena);
+}
+template<> PROTOBUF_NOINLINE ::openfoxwq::AutomatchFoundEvent*
+Arena::CreateMaybeMessage< ::openfoxwq::AutomatchFoundEvent >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::openfoxwq::AutomatchFoundEvent >(arena);
+}
+template<> PROTOBUF_NOINLINE ::openfoxwq::AcceptMatchRequest*
+Arena::CreateMaybeMessage< ::openfoxwq::AcceptMatchRequest >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::openfoxwq::AcceptMatchRequest >(arena);
+}
+template<> PROTOBUF_NOINLINE ::openfoxwq::AcceptMatchResponse*
+Arena::CreateMaybeMessage< ::openfoxwq::AcceptMatchResponse >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::openfoxwq::AcceptMatchResponse >(arena);
+}
+template<> PROTOBUF_NOINLINE ::openfoxwq::MatchStartEvent_MatchInfo*
+Arena::CreateMaybeMessage< ::openfoxwq::MatchStartEvent_MatchInfo >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::openfoxwq::MatchStartEvent_MatchInfo >(arena);
+}
+template<> PROTOBUF_NOINLINE ::openfoxwq::MatchStartEvent_MatchPlayerInfo*
+Arena::CreateMaybeMessage< ::openfoxwq::MatchStartEvent_MatchPlayerInfo >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::openfoxwq::MatchStartEvent_MatchPlayerInfo >(arena);
+}
+template<> PROTOBUF_NOINLINE ::openfoxwq::MatchStartEvent_AutomatchPreset*
+Arena::CreateMaybeMessage< ::openfoxwq::MatchStartEvent_AutomatchPreset >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::openfoxwq::MatchStartEvent_AutomatchPreset >(arena);
+}
+template<> PROTOBUF_NOINLINE ::openfoxwq::MatchStartEvent*
+Arena::CreateMaybeMessage< ::openfoxwq::MatchStartEvent >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::openfoxwq::MatchStartEvent >(arena);
+}
+template<> PROTOBUF_NOINLINE ::openfoxwq::HeartbeatInfo*
+Arena::CreateMaybeMessage< ::openfoxwq::HeartbeatInfo >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::openfoxwq::HeartbeatInfo >(arena);
+}
+template<> PROTOBUF_NOINLINE ::openfoxwq::EnterRoomRequest*
+Arena::CreateMaybeMessage< ::openfoxwq::EnterRoomRequest >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::openfoxwq::EnterRoomRequest >(arena);
+}
+template<> PROTOBUF_NOINLINE ::openfoxwq::EnterRoomResponse*
+Arena::CreateMaybeMessage< ::openfoxwq::EnterRoomResponse >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::openfoxwq::EnterRoomResponse >(arena);
+}
+template<> PROTOBUF_NOINLINE ::openfoxwq::LeaveRoomRequest*
+Arena::CreateMaybeMessage< ::openfoxwq::LeaveRoomRequest >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::openfoxwq::LeaveRoomRequest >(arena);
+}
+template<> PROTOBUF_NOINLINE ::openfoxwq::LeaveRoomResponse*
+Arena::CreateMaybeMessage< ::openfoxwq::LeaveRoomResponse >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::openfoxwq::LeaveRoomResponse >(arena);
+}
+template<> PROTOBUF_NOINLINE ::openfoxwq::ListRoomParticipantsRequest*
+Arena::CreateMaybeMessage< ::openfoxwq::ListRoomParticipantsRequest >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::openfoxwq::ListRoomParticipantsRequest >(arena);
+}
+template<> PROTOBUF_NOINLINE ::openfoxwq::ListRoomParticipantsResponse_RoomParticipantInfo*
+Arena::CreateMaybeMessage< ::openfoxwq::ListRoomParticipantsResponse_RoomParticipantInfo >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::openfoxwq::ListRoomParticipantsResponse_RoomParticipantInfo >(arena);
+}
+template<> PROTOBUF_NOINLINE ::openfoxwq::ListRoomParticipantsResponse*
+Arena::CreateMaybeMessage< ::openfoxwq::ListRoomParticipantsResponse >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::openfoxwq::ListRoomParticipantsResponse >(arena);
+}
+template<> PROTOBUF_NOINLINE ::openfoxwq::LastTurnInfo*
+Arena::CreateMaybeMessage< ::openfoxwq::LastTurnInfo >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::openfoxwq::LastTurnInfo >(arena);
+}
+template<> PROTOBUF_NOINLINE ::openfoxwq::MoveRequest*
+Arena::CreateMaybeMessage< ::openfoxwq::MoveRequest >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::openfoxwq::MoveRequest >(arena);
+}
+template<> PROTOBUF_NOINLINE ::openfoxwq::MoveResponse*
+Arena::CreateMaybeMessage< ::openfoxwq::MoveResponse >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::openfoxwq::MoveResponse >(arena);
+}
+template<> PROTOBUF_NOINLINE ::openfoxwq::PassRequest*
+Arena::CreateMaybeMessage< ::openfoxwq::PassRequest >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::openfoxwq::PassRequest >(arena);
+}
+template<> PROTOBUF_NOINLINE ::openfoxwq::PassResponse*
+Arena::CreateMaybeMessage< ::openfoxwq::PassResponse >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::openfoxwq::PassResponse >(arena);
+}
+template<> PROTOBUF_NOINLINE ::openfoxwq::SyncMatchTimeRequest*
+Arena::CreateMaybeMessage< ::openfoxwq::SyncMatchTimeRequest >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::openfoxwq::SyncMatchTimeRequest >(arena);
+}
+template<> PROTOBUF_NOINLINE ::openfoxwq::SyncMatchTimeResponse_ElapsedInfo*
+Arena::CreateMaybeMessage< ::openfoxwq::SyncMatchTimeResponse_ElapsedInfo >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::openfoxwq::SyncMatchTimeResponse_ElapsedInfo >(arena);
+}
+template<> PROTOBUF_NOINLINE ::openfoxwq::SyncMatchTimeResponse*
+Arena::CreateMaybeMessage< ::openfoxwq::SyncMatchTimeResponse >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::openfoxwq::SyncMatchTimeResponse >(arena);
+}
+template<> PROTOBUF_NOINLINE ::openfoxwq::MatchPlayerTimeState*
+Arena::CreateMaybeMessage< ::openfoxwq::MatchPlayerTimeState >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::openfoxwq::MatchPlayerTimeState >(arena);
+}
+template<> PROTOBUF_NOINLINE ::openfoxwq::NextMoveEvent*
+Arena::CreateMaybeMessage< ::openfoxwq::NextMoveEvent >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::openfoxwq::NextMoveEvent >(arena);
+}
+template<> PROTOBUF_NOINLINE ::openfoxwq::PassEvent*
+Arena::CreateMaybeMessage< ::openfoxwq::PassEvent >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::openfoxwq::PassEvent >(arena);
+}
+template<> PROTOBUF_NOINLINE ::openfoxwq::CountdownEvent*
+Arena::CreateMaybeMessage< ::openfoxwq::CountdownEvent >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::openfoxwq::CountdownEvent >(arena);
+}
+template<> PROTOBUF_NOINLINE ::openfoxwq::ResumeCountdownEvent*
+Arena::CreateMaybeMessage< ::openfoxwq::ResumeCountdownEvent >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::openfoxwq::ResumeCountdownEvent >(arena);
+}
+template<> PROTOBUF_NOINLINE ::openfoxwq::RequestCountingRequest*
+Arena::CreateMaybeMessage< ::openfoxwq::RequestCountingRequest >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::openfoxwq::RequestCountingRequest >(arena);
+}
+template<> PROTOBUF_NOINLINE ::openfoxwq::RequestCountingResponse*
+Arena::CreateMaybeMessage< ::openfoxwq::RequestCountingResponse >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::openfoxwq::RequestCountingResponse >(arena);
+}
+template<> PROTOBUF_NOINLINE ::openfoxwq::SendCountingDecisionResponse*
+Arena::CreateMaybeMessage< ::openfoxwq::SendCountingDecisionResponse >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::openfoxwq::SendCountingDecisionResponse >(arena);
+}
+template<> PROTOBUF_NOINLINE ::openfoxwq::CountingDecision*
+Arena::CreateMaybeMessage< ::openfoxwq::CountingDecision >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::openfoxwq::CountingDecision >(arena);
+}
+template<> PROTOBUF_NOINLINE ::openfoxwq::CountingEvent*
+Arena::CreateMaybeMessage< ::openfoxwq::CountingEvent >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::openfoxwq::CountingEvent >(arena);
+}
+template<> PROTOBUF_NOINLINE ::openfoxwq::ResignRequest*
+Arena::CreateMaybeMessage< ::openfoxwq::ResignRequest >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::openfoxwq::ResignRequest >(arena);
+}
+template<> PROTOBUF_NOINLINE ::openfoxwq::ResignResponse*
+Arena::CreateMaybeMessage< ::openfoxwq::ResignResponse >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::openfoxwq::ResignResponse >(arena);
+}
+template<> PROTOBUF_NOINLINE ::openfoxwq::GameResultEvent*
+Arena::CreateMaybeMessage< ::openfoxwq::GameResultEvent >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::openfoxwq::GameResultEvent >(arena);
 }
 PROTOBUF_NAMESPACE_CLOSE
 

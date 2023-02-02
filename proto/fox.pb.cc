@@ -129,8 +129,8 @@ const char descriptor_table_protodef_proto_2ffox_2eproto[] PROTOBUF_SECTION_VARI
   "e_presets_json\030\n \002(\t\022\021\n\tlogin_msg\030\r \002(\t\022"
   "\021\n\tlogin_url\030\016 \002(\t2\\\n\003Fox\022U\n\nGetNavInfo\022"
   "\034.openfoxwq.GetNavInfoRequest\032\035.openfoxw"
-  "q.GetNavInfoResponse\"\n\202\265\030\006\010\350\007\020\351\007B%Z#gith"
-  "ub.com/ale64bit/openfoxwq/proto"
+  "q.GetNavInfoResponse\"\n\202\265\030\006\010\350\007\020\351\007B&Z$gith"
+  "ub.com/openfoxwq/openfoxwq/proto"
   ;
 static const ::_pbi::DescriptorTable* const descriptor_table_proto_2ffox_2eproto_deps[2] = {
   &::descriptor_table_proto_2fcommon_2eproto,
@@ -138,7 +138,7 @@ static const ::_pbi::DescriptorTable* const descriptor_table_proto_2ffox_2eproto
 };
 static ::_pbi::once_flag descriptor_table_proto_2ffox_2eproto_once;
 const ::_pbi::DescriptorTable descriptor_table_proto_2ffox_2eproto = {
-    false, false, 591, descriptor_table_protodef_proto_2ffox_2eproto,
+    false, false, 592, descriptor_table_protodef_proto_2ffox_2eproto,
     "proto/fox.proto",
     &descriptor_table_proto_2ffox_2eproto_once, descriptor_table_proto_2ffox_2eproto_deps, 2, 2,
     schemas, file_default_instances, TableStruct_proto_2ffox_2eproto::offsets,

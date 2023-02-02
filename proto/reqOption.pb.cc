@@ -134,15 +134,15 @@ const char descriptor_table_protodef_proto_2freqOption_2eproto[] PROTOBUF_SECTIO
   "\030\t \001(\003\022\030\n\020unknown_field_12\030\014 \001(\003\022\030\n\020unkn"
   "own_field_13\030\r \001(\t\022\030\n\020unknown_field_15\030\017"
   " \001(\003:H\n\007msg_tag\022\036.google.protobuf.Method"
-  "Options\030\320\206\003 \001(\0132\025.openfoxwq.MessageTagB%"
-  "Z#github.com/ale64bit/openfoxwq/proto"
+  "Options\030\320\206\003 \001(\0132\025.openfoxwq.MessageTagB&"
+  "Z$github.com/openfoxwq/openfoxwq/proto"
   ;
 static const ::_pbi::DescriptorTable* const descriptor_table_proto_2freqOption_2eproto_deps[1] = {
   &::descriptor_table_google_2fprotobuf_2fdescriptor_2eproto,
 };
 static ::_pbi::once_flag descriptor_table_proto_2freqOption_2eproto_once;
 const ::_pbi::DescriptorTable descriptor_table_proto_2freqOption_2eproto = {
-    false, false, 557, descriptor_table_protodef_proto_2freqOption_2eproto,
+    false, false, 558, descriptor_table_protodef_proto_2freqOption_2eproto,
     "proto/reqOption.proto",
     &descriptor_table_proto_2freqOption_2eproto_once, descriptor_table_proto_2freqOption_2eproto_deps, 1, 2,
     schemas, file_default_instances, TableStruct_proto_2freqOption_2eproto::offsets,

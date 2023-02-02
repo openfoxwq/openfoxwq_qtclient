@@ -5,38 +5,44 @@
 #include <QPainter>
 #include <QDebug>
 
+static openfoxwq::Color nextCol(openfoxwq::Color cur) {
+    switch (cur) {
+    case openfoxwq::Color::COL_NONE: return openfoxwq::Color::COL_NONE;
+    case openfoxwq::Color::COL_BLACK: return openfoxwq::Color::COL_WHITE;
+    case openfoxwq::Color::COL_WHITE: return openfoxwq::Color::COL_BLACK;
+    }
+}
+
 BoardWidget::BoardWidget(QWidget *parent, int boardSize) : QWidget(parent),
     ui(new Ui::BoardWidget),
-    boardSize(boardSize)
+    m_boardSize(boardSize)
 {
     ui->setupUi(this);
 
-    placeStoneSound.setSource(QUrl::fromLocalFile(":/assets/stone.wav"));
-    captureSound.setSource(QUrl::fromLocalFile(":/assets/capture0.wav"));
-
     setStyleSheet("{ background-image: url(:/assets/badukpan4_mirrored.png) }");
 
-    pointButtons.resize(boardSize);
+    pointButtons.resize(m_boardSize);
 
-    for (int i = 0; i < boardSize; ++i) {
-        pointButtons[i].resize(boardSize);
-        for (int j = 0; j < boardSize; ++j) {
+    for (int i = 0; i < m_boardSize; ++i) {
+        pointButtons[i].resize(m_boardSize);
+        for (int j = 0; j < m_boardSize; ++j) {
             BoardButton *btn = new BoardButton(this);
-            btn->setState(PointState::kEmpty);
+            btn->setState(openfoxwq::Color::COL_NONE);
             btn->setIconSize(QSize(BoardButton::kCellSize, BoardButton::kCellSize));
             const auto [x,y] = BoardButton::pointCoord(i,j);
             btn->setGeometry(x-BoardButton::kCellHalfSize, y-BoardButton::kCellHalfSize, BoardButton::kCellSize, BoardButton::kCellSize);
             btn->setHoveredColor(Qt::black);
 
-            connect(btn, &BoardButton::pressed, this, [=](){ emit pointClicked(i, j); });
+            connect(btn, &BoardButton::pressed, this, [=](){ emit pointClicked(i, j, nextCol(m_lastState)); });
             connect(btn, &BoardButton::pointHover, this, [=]() {
-                pointButtons[i][j]->setHoveredColor(m_lastState == PointState::kBlack ? Qt::white : Qt::black);
+                pointButtons[i][j]->setHoveredColor(m_lastState == openfoxwq::Color::COL_BLACK ? Qt::white : Qt::black);
             });
 
             pointButtons[i][j] = btn;
         }
     }
 }
+
 
 BoardWidget::~BoardWidget() {
     delete ui;
@@ -53,15 +59,23 @@ void BoardWidget::paintEvent(QPaintEvent *)
     drawBoardLines(p);
 }
 
-PointState BoardWidget::getExtendedState(int r, int c, const QMap<Point, PointState> &additionalPoints) {
+openfoxwq::Color BoardWidget::turn() const {
+    return nextCol(m_lastState);
+}
+
+void BoardWidget::toggleTurn() {
+    m_lastState = nextCol(m_lastState);
+}
+
+openfoxwq::Color BoardWidget::getExtendedState(int r, int c, const QMap<Point, openfoxwq::Color> &additionalPoints) {
     auto it = additionalPoints.find({r,c});
     if (it != additionalPoints.end())
         return it.value();
     return pointButtons[r][c]->getState();
 }
 
-void BoardWidget::collectGroup(PointState col, int r, int c, Group &group, PointSet& used, const QMap<Point, PointState> &additionalPoints) {
-    if (0 <= r && r < boardSize && 0 <= c && c < boardSize && getExtendedState(r, c, additionalPoints) == col && !used.contains({r,c})) {
+void BoardWidget::collectGroup(openfoxwq::Color col, int r, int c, Group &group, PointSet& used, const QMap<Point, openfoxwq::Color> &additionalPoints) {
+    if (0 <= r && r < m_boardSize && 0 <= c && c < m_boardSize && getExtendedState(r, c, additionalPoints) == col && !used.contains({r,c})) {
         used.insert({r, c});
         group.push_back({r,c});
         collectGroup(col, r+1, c, group, used, additionalPoints);
@@ -71,13 +85,13 @@ void BoardWidget::collectGroup(PointState col, int r, int c, Group &group, Point
     }
 }
 
-QMap<PointState, QVector<BoardWidget::Group>> BoardWidget::computeDeadGroups(const QMap<Point, PointState> &additionalPoints) {
-    QMap<PointState, QVector<Group>> deadGroups;
+QMap<openfoxwq::Color, QVector<BoardWidget::Group>> BoardWidget::computeDeadGroups(const QMap<Point, openfoxwq::Color> &additionalPoints) {
+    QMap<openfoxwq::Color, QVector<Group>> deadGroups;
     PointSet used;
-    for (int i = 0; i < boardSize; ++i) {
-        for (int j = 0; j < boardSize; ++j) {
-            PointState col = getExtendedState(i, j, additionalPoints);
-            if (col != PointState::kEmpty && !used.contains({i,j})) {
+    for (int i = 0; i < m_boardSize; ++i) {
+        for (int j = 0; j < m_boardSize; ++j) {
+            openfoxwq::Color col = getExtendedState(i, j, additionalPoints);
+            if (col != openfoxwq::Color::COL_NONE && !used.contains({i,j})) {
                 Group group;
                 collectGroup(col, i, j, group, used, additionalPoints);
 
@@ -88,7 +102,7 @@ QMap<PointState, QVector<BoardWidget::Group>> BoardWidget::computeDeadGroups(con
                             if ((dr == 0) == (dc == 0)) continue;
                             const int nr = r + dr;
                             const int nc = c + dc;
-                            if (0 <= nr && nr < boardSize && 0 <= nc && nc < boardSize && getExtendedState(nr, nc, additionalPoints) == PointState::kEmpty) {
+                            if (0 <= nr && nr < m_boardSize && 0 <= nc && nc < m_boardSize && getExtendedState(nr, nc, additionalPoints) == openfoxwq::Color::COL_NONE) {
                                 hasLiberties = true;
                                 break;
                             }
@@ -105,36 +119,64 @@ QMap<PointState, QVector<BoardWidget::Group>> BoardWidget::computeDeadGroups(con
     return deadGroups;
 }
 
-bool BoardWidget::movePiece(int r, int c, PointState state) {
-    if (state == PointState::kEmpty || pointButtons[r][c]->getState() != PointState::kEmpty) {
+static QChar col2char(openfoxwq::Color col) {
+    switch (col) {
+    case openfoxwq::Color::COL_NONE: return '0';
+    case openfoxwq::Color::COL_BLACK: return '1';
+    case openfoxwq::Color::COL_WHITE: return '2';
+    }
+}
+
+bool BoardWidget::movePiece(int r, int c, openfoxwq::Color state, int *captureCount) {
+    if (state == openfoxwq::Color::COL_NONE || pointButtons[r][c]->getState() != openfoxwq::Color::COL_NONE) {
         return false;
     }
 
-    QMap<Point, PointState> additionalPoints;
+    QMap<Point, openfoxwq::Color> additionalPoints;
     additionalPoints[{r,c}] = state;
     const auto deadGroups = computeDeadGroups(additionalPoints);
 
     // Check suicide
-    const bool hasBlackDeadGroups = !deadGroups[PointState::kBlack].isEmpty();
-    const bool hasWhiteDeadGroups = !deadGroups[PointState::kWhite].isEmpty();
-    if (state == PointState::kBlack && hasBlackDeadGroups && !hasWhiteDeadGroups)
+    const bool hasBlackDeadGroups = !deadGroups[openfoxwq::Color::COL_BLACK].isEmpty();
+    const bool hasWhiteDeadGroups = !deadGroups[openfoxwq::Color::COL_WHITE].isEmpty();
+    if (state == openfoxwq::Color::COL_BLACK && hasBlackDeadGroups && !hasWhiteDeadGroups)
         return false;
-    if (state == PointState::kWhite && hasWhiteDeadGroups && !hasBlackDeadGroups)
+    if (state == openfoxwq::Color::COL_WHITE && hasWhiteDeadGroups && !hasBlackDeadGroups)
         return false;
 
-    // Make the move
-    const bool hasCaptures = hasBlackDeadGroups || hasWhiteDeadGroups;
+    const QVector<Group> &capturedGroups = deadGroups[state == openfoxwq::Color::COL_BLACK ? openfoxwq::Color::COL_WHITE : openfoxwq::Color::COL_BLACK];
 
-    if (m_soundEnabled) {
-        if (hasCaptures) captureSound.play();
-        else placeStoneSound.play();
+    // Check previous positions
+    QString stateKey(m_boardSize * m_boardSize, col2char(openfoxwq::Color::COL_NONE));
+    for (int i = 0; i < m_boardSize; ++i) {
+        for (int j = 0; j < m_boardSize; ++j) {
+            stateKey[i*m_boardSize+j] = col2char(pointButtons[i][j]->getState());
+        }
     }
-
-    pointButtons[r][c]->setState(state);
-    const QVector<Group> &capturedGroups = deadGroups[state == PointState::kBlack ? PointState::kWhite : PointState::kBlack];
+    stateKey[r*m_boardSize+c] = col2char(state);
     for (const auto &group : qAsConst(capturedGroups)) {
         for (const auto &[i, j] : qAsConst(group)) {
-            pointButtons[i][j]->setState(PointState::kEmpty);
+            stateKey[i*m_boardSize + j] = col2char(openfoxwq::Color::COL_NONE);
+        }
+    }
+    if (m_previousPositions.contains(stateKey)) {
+        return false;
+    }
+    m_previousPositions.insert(stateKey);
+
+    // Count captures if requested
+    if (captureCount != nullptr) {
+        *captureCount = 0;
+        for (const auto &group : qAsConst(capturedGroups)) {
+            *captureCount += group.size();
+        }
+    }
+
+    // Make the move
+    pointButtons[r][c]->setState(state);
+    for (const auto &group : qAsConst(capturedGroups)) {
+        for (const auto &[i, j] : qAsConst(group)) {
+            pointButtons[i][j]->setState(openfoxwq::Color::COL_NONE);
         }
     }
 
@@ -147,7 +189,7 @@ bool BoardWidget::movePiece(int r, int c, PointState state) {
     m_lastPoint = {r, c};
     pointButtons[r][c]->setAnnotation(Annotation{
         AnnotationType::kQuarterTriangle,
-        state == PointState::kBlack ? Qt::white : Qt::black,
+        state == openfoxwq::Color::COL_BLACK ? Qt::white : Qt::black,
         "",
     });
     return true;
@@ -157,7 +199,7 @@ void BoardWidget::setAnnotation(int r, int c, Annotation annotation) {
     pointButtons[r][c]->setAnnotation(annotation);
 }
 
-PointState BoardWidget::getPoint(int r, int c) const {
+openfoxwq::Color BoardWidget::getPoint(int r, int c) const {
     return pointButtons[r][c]->getState();
 }
 
@@ -171,20 +213,24 @@ void BoardWidget::setInteractive(bool newInteractive)
     m_interactive = newInteractive;
 }
 
+void BoardWidget::toggleInteractive() {
+    m_interactive = !m_interactive;
+}
+
 void BoardWidget::drawBoardLines(QPainter& p) {
     p.setPen(Qt::black);
 
     // Horizontal lines
-    for (int i = 0; i < boardSize; i++) {
+    for (int i = 0; i < m_boardSize; i++) {
         const auto [x1, y1] = BoardButton::pointCoord(i, 0);
-        const auto [x2, y2] = BoardButton::pointCoord(i, boardSize-1);
+        const auto [x2, y2] = BoardButton::pointCoord(i, m_boardSize-1);
         p.drawLine(x1,y1,x2,y2);
     }
 
     // Vertical lines
-    for (int i = 0; i < boardSize; i++) {
+    for (int i = 0; i < m_boardSize; i++) {
         const auto [x1, y1] = BoardButton::pointCoord(0, i);
-        const auto [x2, y2] = BoardButton::pointCoord(boardSize-1, i);
+        const auto [x2, y2] = BoardButton::pointCoord(m_boardSize-1, i);
         p.drawLine(x1,y1,x2,y2);
     }
 
@@ -192,7 +238,7 @@ void BoardWidget::drawBoardLines(QPainter& p) {
     {
         const auto offset = 1;
         const auto [x1, y1] = BoardButton::pointCoord(0, 0);
-        const auto size = (boardSize-1) * BoardButton::kCellSize + 2*offset;
+        const auto size = (m_boardSize-1) * BoardButton::kCellSize + 2*offset;
         p.drawRect(x1-offset,y1-offset,size,size);
     }
 
@@ -208,13 +254,9 @@ void BoardWidget::drawBoardLines(QPainter& p) {
     }
 }
 
-void BoardWidget::setSound(bool value) {
-    m_soundEnabled = value;
-}
-
 void BoardWidget::clearAnnotations() {
-    for (int i = 0; i < boardSize; ++i) {
-        for (int j = 0; j < boardSize; ++j) {
+    for (int i = 0; i < m_boardSize; ++i) {
+        for (int j = 0; j < m_boardSize; ++j) {
             pointButtons[i][j]->clearAnnotation();
         }
     }

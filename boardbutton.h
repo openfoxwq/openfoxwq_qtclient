@@ -4,11 +4,7 @@
 #include <QPushButton>
 #include <QIcon>
 
-enum class PointState {
-    kEmpty = 0,
-    kBlack = 1,
-    kWhite = 2,
-};
+#include <proto/common.pb.h>
 
 enum class AnnotationType {
     kNone,
@@ -48,11 +44,11 @@ public:
 
     void paintEvent(QPaintEvent *) override;
 
-    void setState(PointState state);
+    void setState(openfoxwq::Color state);
     void setAnnotation(const Annotation &newAnnotation);
     void clearAnnotation();
 
-    PointState getState() const;
+    openfoxwq::Color getState() const;
 
     void setHoveredColor(const QColor &newHoveredColor);
 
@@ -63,7 +59,7 @@ protected:
     void mouseMoveEvent(QMouseEvent *event) override;
 
 private:
-    PointState m_state;
+    openfoxwq::Color m_state;
     Annotation m_annotation;
     QColor m_hoveredColor;
 

@@ -23,7 +23,7 @@ QPoint BoardButton::quarterTrianglePoints[3] = {
 
 BoardButton::BoardButton(QWidget* parent) :
     QPushButton(parent),
-    m_state(PointState::kEmpty),
+    m_state(openfoxwq::Color::COL_NONE),
     m_annotation(Annotation{}),
     m_hoveredColor(Qt::transparent)
 {
@@ -36,22 +36,22 @@ BoardButton::BoardButton(QWidget* parent) :
     setAttribute(Qt::WA_Hover, true);
 }
 
-void BoardButton::setState(PointState state) {
+void BoardButton::setState(openfoxwq::Color state) {
     m_state = state;
     switch (m_state) {
-    case PointState::kEmpty:
+    case openfoxwq::Color::COL_NONE:
         setIcon(QIcon());
         break;
-    case PointState::kBlack:
+    case openfoxwq::Color::COL_BLACK:
         setIcon(blackStoneIcon());
         break;
-    case PointState::kWhite:
+    case openfoxwq::Color::COL_WHITE:
         setIcon(whiteStoneIcon());
         break;
     }
 }
 
-PointState BoardButton::getState() const {
+openfoxwq::Color BoardButton::getState() const {
     return m_state;
 }
 
@@ -94,7 +94,7 @@ void BoardButton::drawAnnotation(QPainter& p, const Annotation& annotation) {
         p.drawConvexPolygon(quarterTrianglePoints, 3);
         break;
     case AnnotationType::kSmallSquare:
-        p.drawRect(kCellSize/4, kCellSize/4, kCellHalfSize, kCellHalfSize);
+        p.drawRect(kCellSize/4 + 2, kCellSize/4 + 2, kCellHalfSize - 4, kCellHalfSize - 4);
         break;
     case AnnotationType::kTriangle:
         // TODO implement

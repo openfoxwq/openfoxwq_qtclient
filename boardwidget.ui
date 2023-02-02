@@ -32,9 +32,8 @@
    <string>board</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">QWidget#BoardWidget {
-    background-image: url(:/assets/badukpan4_mirrored.png);
-}</string>
+   <string notr="true">background-image: url(:/assets/badukpan4_mirrored.png);
+</string>
   </property>
  </widget>
  <resources/>

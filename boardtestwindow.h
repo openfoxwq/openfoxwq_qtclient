@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include <boardbutton.h>
+#include <proto/common.pb.h>
 
 namespace Ui {
 class BoardTestWindow;
@@ -18,7 +19,6 @@ public:
 
 private:
     Ui::BoardTestWindow *ui;
-    PointState m_curState = PointState::kBlack;
 };
 
 #endif // BOARDTESTWINDOW_H

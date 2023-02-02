@@ -59,12 +59,20 @@ extern LoginRequestDefaultTypeInternal _LoginRequest_default_instance_;
 class LoginResponse;
 struct LoginResponseDefaultTypeInternal;
 extern LoginResponseDefaultTypeInternal _LoginResponse_default_instance_;
+class LoginResponse_AllResults;
+struct LoginResponse_AllResultsDefaultTypeInternal;
+extern LoginResponse_AllResultsDefaultTypeInternal _LoginResponse_AllResults_default_instance_;
+class LoginResponse_Results;
+struct LoginResponse_ResultsDefaultTypeInternal;
+extern LoginResponse_ResultsDefaultTypeInternal _LoginResponse_Results_default_instance_;
 }  // namespace openfoxwq
 PROTOBUF_NAMESPACE_OPEN
 template<> ::openfoxwq::ListServersRequest* Arena::CreateMaybeMessage<::openfoxwq::ListServersRequest>(Arena*);
 template<> ::openfoxwq::ListServersResponse* Arena::CreateMaybeMessage<::openfoxwq::ListServersResponse>(Arena*);
 template<> ::openfoxwq::LoginRequest* Arena::CreateMaybeMessage<::openfoxwq::LoginRequest>(Arena*);
 template<> ::openfoxwq::LoginResponse* Arena::CreateMaybeMessage<::openfoxwq::LoginResponse>(Arena*);
+template<> ::openfoxwq::LoginResponse_AllResults* Arena::CreateMaybeMessage<::openfoxwq::LoginResponse_AllResults>(Arena*);
+template<> ::openfoxwq::LoginResponse_Results* Arena::CreateMaybeMessage<::openfoxwq::LoginResponse_Results>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
 namespace openfoxwq {
 
@@ -360,7 +368,7 @@ class ListServersResponse final :
   enum : int {
     kServerInfoFieldNumber = 3,
   };
-  // required .openfoxwq.LobbySvrInfo server_info = 3;
+  // optional .openfoxwq.LobbySvrInfo server_info = 3;
   bool has_server_info() const;
   private:
   bool _internal_has_server_info() const;
@@ -526,7 +534,7 @@ class LoginRequest final :
     kUserFieldNumber = 1,
     kAppFieldNumber = 2,
     kPasswordHashFieldNumber = 3,
-    kUnknownField7FieldNumber = 7,
+    kMacAddressFieldNumber = 7,
     kUnknownField4FieldNumber = 4,
     kClientVersionFieldNumber = 5,
   };
@@ -584,22 +592,22 @@ class LoginRequest final :
   std::string* _internal_mutable_password_hash();
   public:
 
-  // optional string unknown_field_7 = 7;
-  bool has_unknown_field_7() const;
+  // required string mac_address = 7;
+  bool has_mac_address() const;
   private:
-  bool _internal_has_unknown_field_7() const;
+  bool _internal_has_mac_address() const;
   public:
-  void clear_unknown_field_7();
-  const std::string& unknown_field_7() const;
+  void clear_mac_address();
+  const std::string& mac_address() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_unknown_field_7(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_unknown_field_7();
-  PROTOBUF_NODISCARD std::string* release_unknown_field_7();
-  void set_allocated_unknown_field_7(std::string* unknown_field_7);
+  void set_mac_address(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_mac_address();
+  PROTOBUF_NODISCARD std::string* release_mac_address();
+  void set_allocated_mac_address(std::string* mac_address);
   private:
-  const std::string& _internal_unknown_field_7() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_unknown_field_7(const std::string& value);
-  std::string* _internal_mutable_unknown_field_7();
+  const std::string& _internal_mac_address() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_mac_address(const std::string& value);
+  std::string* _internal_mutable_mac_address();
   public:
 
   // optional int64 unknown_field_4 = 4;
@@ -644,9 +652,419 @@ class LoginRequest final :
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr user_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr app_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr password_hash_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr unknown_field_7_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr mac_address_;
     int64_t unknown_field_4_;
     int64_t client_version_;
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_proto_2fnav_2eproto;
+};
+// -------------------------------------------------------------------
+
+class LoginResponse_Results final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:openfoxwq.LoginResponse.Results) */ {
+ public:
+  inline LoginResponse_Results() : LoginResponse_Results(nullptr) {}
+  ~LoginResponse_Results() override;
+  explicit PROTOBUF_CONSTEXPR LoginResponse_Results(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  LoginResponse_Results(const LoginResponse_Results& from);
+  LoginResponse_Results(LoginResponse_Results&& from) noexcept
+    : LoginResponse_Results() {
+    *this = ::std::move(from);
+  }
+
+  inline LoginResponse_Results& operator=(const LoginResponse_Results& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline LoginResponse_Results& operator=(LoginResponse_Results&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetOwningArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
+  }
+  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const LoginResponse_Results& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const LoginResponse_Results* internal_default_instance() {
+    return reinterpret_cast<const LoginResponse_Results*>(
+               &_LoginResponse_Results_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    3;
+
+  friend void swap(LoginResponse_Results& a, LoginResponse_Results& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(LoginResponse_Results* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() != nullptr &&
+        GetOwningArena() == other->GetOwningArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() == other->GetOwningArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(LoginResponse_Results* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  LoginResponse_Results* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<LoginResponse_Results>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const LoginResponse_Results& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const LoginResponse_Results& from) {
+    LoginResponse_Results::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  uint8_t* _InternalSerialize(
+      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
+
+  private:
+  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(LoginResponse_Results* other);
+
+  private:
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "openfoxwq.LoginResponse.Results";
+  }
+  protected:
+  explicit LoginResponse_Results(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kWinsFieldNumber = 1,
+    kLossesFieldNumber = 2,
+    kDrawsFieldNumber = 3,
+  };
+  // optional int64 wins = 1;
+  bool has_wins() const;
+  private:
+  bool _internal_has_wins() const;
+  public:
+  void clear_wins();
+  int64_t wins() const;
+  void set_wins(int64_t value);
+  private:
+  int64_t _internal_wins() const;
+  void _internal_set_wins(int64_t value);
+  public:
+
+  // optional int64 losses = 2;
+  bool has_losses() const;
+  private:
+  bool _internal_has_losses() const;
+  public:
+  void clear_losses();
+  int64_t losses() const;
+  void set_losses(int64_t value);
+  private:
+  int64_t _internal_losses() const;
+  void _internal_set_losses(int64_t value);
+  public:
+
+  // optional int64 draws = 3;
+  bool has_draws() const;
+  private:
+  bool _internal_has_draws() const;
+  public:
+  void clear_draws();
+  int64_t draws() const;
+  void set_draws(int64_t value);
+  private:
+  int64_t _internal_draws() const;
+  void _internal_set_draws(int64_t value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:openfoxwq.LoginResponse.Results)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    int64_t wins_;
+    int64_t losses_;
+    int64_t draws_;
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_proto_2fnav_2eproto;
+};
+// -------------------------------------------------------------------
+
+class LoginResponse_AllResults final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:openfoxwq.LoginResponse.AllResults) */ {
+ public:
+  inline LoginResponse_AllResults() : LoginResponse_AllResults(nullptr) {}
+  ~LoginResponse_AllResults() override;
+  explicit PROTOBUF_CONSTEXPR LoginResponse_AllResults(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  LoginResponse_AllResults(const LoginResponse_AllResults& from);
+  LoginResponse_AllResults(LoginResponse_AllResults&& from) noexcept
+    : LoginResponse_AllResults() {
+    *this = ::std::move(from);
+  }
+
+  inline LoginResponse_AllResults& operator=(const LoginResponse_AllResults& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline LoginResponse_AllResults& operator=(LoginResponse_AllResults&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetOwningArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
+  }
+  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const LoginResponse_AllResults& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const LoginResponse_AllResults* internal_default_instance() {
+    return reinterpret_cast<const LoginResponse_AllResults*>(
+               &_LoginResponse_AllResults_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    4;
+
+  friend void swap(LoginResponse_AllResults& a, LoginResponse_AllResults& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(LoginResponse_AllResults* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() != nullptr &&
+        GetOwningArena() == other->GetOwningArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() == other->GetOwningArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(LoginResponse_AllResults* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  LoginResponse_AllResults* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<LoginResponse_AllResults>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const LoginResponse_AllResults& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const LoginResponse_AllResults& from) {
+    LoginResponse_AllResults::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  uint8_t* _InternalSerialize(
+      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
+
+  private:
+  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(LoginResponse_AllResults* other);
+
+  private:
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "openfoxwq.LoginResponse.AllResults";
+  }
+  protected:
+  explicit LoginResponse_AllResults(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kCurrentFieldNumber = 9,
+    kRankedFieldNumber = 10,
+    kFreeFieldNumber = 11,
+    kPlayerIdFieldNumber = 1,
+  };
+  // optional .openfoxwq.LoginResponse.Results current = 9;
+  bool has_current() const;
+  private:
+  bool _internal_has_current() const;
+  public:
+  void clear_current();
+  const ::openfoxwq::LoginResponse_Results& current() const;
+  PROTOBUF_NODISCARD ::openfoxwq::LoginResponse_Results* release_current();
+  ::openfoxwq::LoginResponse_Results* mutable_current();
+  void set_allocated_current(::openfoxwq::LoginResponse_Results* current);
+  private:
+  const ::openfoxwq::LoginResponse_Results& _internal_current() const;
+  ::openfoxwq::LoginResponse_Results* _internal_mutable_current();
+  public:
+  void unsafe_arena_set_allocated_current(
+      ::openfoxwq::LoginResponse_Results* current);
+  ::openfoxwq::LoginResponse_Results* unsafe_arena_release_current();
+
+  // optional .openfoxwq.LoginResponse.Results ranked = 10;
+  bool has_ranked() const;
+  private:
+  bool _internal_has_ranked() const;
+  public:
+  void clear_ranked();
+  const ::openfoxwq::LoginResponse_Results& ranked() const;
+  PROTOBUF_NODISCARD ::openfoxwq::LoginResponse_Results* release_ranked();
+  ::openfoxwq::LoginResponse_Results* mutable_ranked();
+  void set_allocated_ranked(::openfoxwq::LoginResponse_Results* ranked);
+  private:
+  const ::openfoxwq::LoginResponse_Results& _internal_ranked() const;
+  ::openfoxwq::LoginResponse_Results* _internal_mutable_ranked();
+  public:
+  void unsafe_arena_set_allocated_ranked(
+      ::openfoxwq::LoginResponse_Results* ranked);
+  ::openfoxwq::LoginResponse_Results* unsafe_arena_release_ranked();
+
+  // optional .openfoxwq.LoginResponse.Results free = 11;
+  bool has_free() const;
+  private:
+  bool _internal_has_free() const;
+  public:
+  void clear_free();
+  const ::openfoxwq::LoginResponse_Results& free() const;
+  PROTOBUF_NODISCARD ::openfoxwq::LoginResponse_Results* release_free();
+  ::openfoxwq::LoginResponse_Results* mutable_free();
+  void set_allocated_free(::openfoxwq::LoginResponse_Results* free);
+  private:
+  const ::openfoxwq::LoginResponse_Results& _internal_free() const;
+  ::openfoxwq::LoginResponse_Results* _internal_mutable_free();
+  public:
+  void unsafe_arena_set_allocated_free(
+      ::openfoxwq::LoginResponse_Results* free);
+  ::openfoxwq::LoginResponse_Results* unsafe_arena_release_free();
+
+  // optional int64 player_id = 1;
+  bool has_player_id() const;
+  private:
+  bool _internal_has_player_id() const;
+  public:
+  void clear_player_id();
+  int64_t player_id() const;
+  void set_player_id(int64_t value);
+  private:
+  int64_t _internal_player_id() const;
+  void _internal_set_player_id(int64_t value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:openfoxwq.LoginResponse.AllResults)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::openfoxwq::LoginResponse_Results* current_;
+    ::openfoxwq::LoginResponse_Results* ranked_;
+    ::openfoxwq::LoginResponse_Results* free_;
+    int64_t player_id_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_proto_2fnav_2eproto;
@@ -708,7 +1126,7 @@ class LoginResponse final :
                &_LoginResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    3;
+    5;
 
   friend void swap(LoginResponse& a, LoginResponse& b) {
     a.Swap(&b);
@@ -778,6 +1196,9 @@ class LoginResponse final :
 
   // nested types ----------------------------------------------------
 
+  typedef LoginResponse_Results Results;
+  typedef LoginResponse_AllResults AllResults;
+
   // accessors -------------------------------------------------------
 
   enum : int {
@@ -785,10 +1206,10 @@ class LoginResponse final :
     kToken2FieldNumber = 10,
     kBindUrlFieldNumber = 24,
     kPlayerInfoFieldNumber = 3,
-    kExtraPlayerInfoFieldNumber = 4,
+    kResultsFieldNumber = 4,
     kPlayerIdFieldNumber = 2,
   };
-  // required string token1 = 8;
+  // required bytes token1 = 8;
   bool has_token1() const;
   private:
   bool _internal_has_token1() const;
@@ -806,7 +1227,7 @@ class LoginResponse final :
   std::string* _internal_mutable_token1();
   public:
 
-  // required string token2 = 10;
+  // required bytes token2 = 10;
   bool has_token2() const;
   private:
   bool _internal_has_token2() const;
@@ -860,23 +1281,23 @@ class LoginResponse final :
       ::openfoxwq::PlayerInfo* player_info);
   ::openfoxwq::PlayerInfo* unsafe_arena_release_player_info();
 
-  // required .openfoxwq.ExtraPlayerInfo extra_player_info = 4;
-  bool has_extra_player_info() const;
+  // required .openfoxwq.LoginResponse.AllResults results = 4;
+  bool has_results() const;
   private:
-  bool _internal_has_extra_player_info() const;
+  bool _internal_has_results() const;
   public:
-  void clear_extra_player_info();
-  const ::openfoxwq::ExtraPlayerInfo& extra_player_info() const;
-  PROTOBUF_NODISCARD ::openfoxwq::ExtraPlayerInfo* release_extra_player_info();
-  ::openfoxwq::ExtraPlayerInfo* mutable_extra_player_info();
-  void set_allocated_extra_player_info(::openfoxwq::ExtraPlayerInfo* extra_player_info);
+  void clear_results();
+  const ::openfoxwq::LoginResponse_AllResults& results() const;
+  PROTOBUF_NODISCARD ::openfoxwq::LoginResponse_AllResults* release_results();
+  ::openfoxwq::LoginResponse_AllResults* mutable_results();
+  void set_allocated_results(::openfoxwq::LoginResponse_AllResults* results);
   private:
-  const ::openfoxwq::ExtraPlayerInfo& _internal_extra_player_info() const;
-  ::openfoxwq::ExtraPlayerInfo* _internal_mutable_extra_player_info();
+  const ::openfoxwq::LoginResponse_AllResults& _internal_results() const;
+  ::openfoxwq::LoginResponse_AllResults* _internal_mutable_results();
   public:
-  void unsafe_arena_set_allocated_extra_player_info(
-      ::openfoxwq::ExtraPlayerInfo* extra_player_info);
-  ::openfoxwq::ExtraPlayerInfo* unsafe_arena_release_extra_player_info();
+  void unsafe_arena_set_allocated_results(
+      ::openfoxwq::LoginResponse_AllResults* results);
+  ::openfoxwq::LoginResponse_AllResults* unsafe_arena_release_results();
 
   // required int64 player_id = 2;
   bool has_player_id() const;
@@ -908,7 +1329,7 @@ class LoginResponse final :
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr token2_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr bind_url_;
     ::openfoxwq::PlayerInfo* player_info_;
-    ::openfoxwq::ExtraPlayerInfo* extra_player_info_;
+    ::openfoxwq::LoginResponse_AllResults* results_;
     int64_t player_id_;
   };
   union { Impl_ _impl_; };
@@ -957,7 +1378,7 @@ inline void ListServersRequest::set_player_id(int64_t value) {
 
 // ListServersResponse
 
-// required .openfoxwq.LobbySvrInfo server_info = 3;
+// optional .openfoxwq.LobbySvrInfo server_info = 3;
 inline bool ListServersResponse::_internal_has_server_info() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   PROTOBUF_ASSUME(!value || _impl_.server_info_ != nullptr);
@@ -1280,6 +1701,74 @@ inline void LoginRequest::set_client_version(int64_t value) {
   // @@protoc_insertion_point(field_set:openfoxwq.LoginRequest.client_version)
 }
 
+// required string mac_address = 7;
+inline bool LoginRequest::_internal_has_mac_address() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
+  return value;
+}
+inline bool LoginRequest::has_mac_address() const {
+  return _internal_has_mac_address();
+}
+inline void LoginRequest::clear_mac_address() {
+  _impl_.mac_address_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000008u;
+}
+inline const std::string& LoginRequest::mac_address() const {
+  // @@protoc_insertion_point(field_get:openfoxwq.LoginRequest.mac_address)
+  return _internal_mac_address();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void LoginRequest::set_mac_address(ArgT0&& arg0, ArgT... args) {
+ _impl_._has_bits_[0] |= 0x00000008u;
+ _impl_.mac_address_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:openfoxwq.LoginRequest.mac_address)
+}
+inline std::string* LoginRequest::mutable_mac_address() {
+  std::string* _s = _internal_mutable_mac_address();
+  // @@protoc_insertion_point(field_mutable:openfoxwq.LoginRequest.mac_address)
+  return _s;
+}
+inline const std::string& LoginRequest::_internal_mac_address() const {
+  return _impl_.mac_address_.Get();
+}
+inline void LoginRequest::_internal_set_mac_address(const std::string& value) {
+  _impl_._has_bits_[0] |= 0x00000008u;
+  _impl_.mac_address_.Set(value, GetArenaForAllocation());
+}
+inline std::string* LoginRequest::_internal_mutable_mac_address() {
+  _impl_._has_bits_[0] |= 0x00000008u;
+  return _impl_.mac_address_.Mutable(GetArenaForAllocation());
+}
+inline std::string* LoginRequest::release_mac_address() {
+  // @@protoc_insertion_point(field_release:openfoxwq.LoginRequest.mac_address)
+  if (!_internal_has_mac_address()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000008u;
+  auto* p = _impl_.mac_address_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.mac_address_.IsDefault()) {
+    _impl_.mac_address_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void LoginRequest::set_allocated_mac_address(std::string* mac_address) {
+  if (mac_address != nullptr) {
+    _impl_._has_bits_[0] |= 0x00000008u;
+  } else {
+    _impl_._has_bits_[0] &= ~0x00000008u;
+  }
+  _impl_.mac_address_.SetAllocated(mac_address, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.mac_address_.IsDefault()) {
+    _impl_.mac_address_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:openfoxwq.LoginRequest.mac_address)
+}
+
 // optional int64 unknown_field_4 = 4;
 inline bool LoginRequest::_internal_has_unknown_field_4() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
@@ -1308,72 +1797,394 @@ inline void LoginRequest::set_unknown_field_4(int64_t value) {
   // @@protoc_insertion_point(field_set:openfoxwq.LoginRequest.unknown_field_4)
 }
 
-// optional string unknown_field_7 = 7;
-inline bool LoginRequest::_internal_has_unknown_field_7() const {
+// -------------------------------------------------------------------
+
+// LoginResponse_Results
+
+// optional int64 wins = 1;
+inline bool LoginResponse_Results::_internal_has_wins() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool LoginResponse_Results::has_wins() const {
+  return _internal_has_wins();
+}
+inline void LoginResponse_Results::clear_wins() {
+  _impl_.wins_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000001u;
+}
+inline int64_t LoginResponse_Results::_internal_wins() const {
+  return _impl_.wins_;
+}
+inline int64_t LoginResponse_Results::wins() const {
+  // @@protoc_insertion_point(field_get:openfoxwq.LoginResponse.Results.wins)
+  return _internal_wins();
+}
+inline void LoginResponse_Results::_internal_set_wins(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000001u;
+  _impl_.wins_ = value;
+}
+inline void LoginResponse_Results::set_wins(int64_t value) {
+  _internal_set_wins(value);
+  // @@protoc_insertion_point(field_set:openfoxwq.LoginResponse.Results.wins)
+}
+
+// optional int64 losses = 2;
+inline bool LoginResponse_Results::_internal_has_losses() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool LoginResponse_Results::has_losses() const {
+  return _internal_has_losses();
+}
+inline void LoginResponse_Results::clear_losses() {
+  _impl_.losses_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000002u;
+}
+inline int64_t LoginResponse_Results::_internal_losses() const {
+  return _impl_.losses_;
+}
+inline int64_t LoginResponse_Results::losses() const {
+  // @@protoc_insertion_point(field_get:openfoxwq.LoginResponse.Results.losses)
+  return _internal_losses();
+}
+inline void LoginResponse_Results::_internal_set_losses(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000002u;
+  _impl_.losses_ = value;
+}
+inline void LoginResponse_Results::set_losses(int64_t value) {
+  _internal_set_losses(value);
+  // @@protoc_insertion_point(field_set:openfoxwq.LoginResponse.Results.losses)
+}
+
+// optional int64 draws = 3;
+inline bool LoginResponse_Results::_internal_has_draws() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool LoginResponse_Results::has_draws() const {
+  return _internal_has_draws();
+}
+inline void LoginResponse_Results::clear_draws() {
+  _impl_.draws_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000004u;
+}
+inline int64_t LoginResponse_Results::_internal_draws() const {
+  return _impl_.draws_;
+}
+inline int64_t LoginResponse_Results::draws() const {
+  // @@protoc_insertion_point(field_get:openfoxwq.LoginResponse.Results.draws)
+  return _internal_draws();
+}
+inline void LoginResponse_Results::_internal_set_draws(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000004u;
+  _impl_.draws_ = value;
+}
+inline void LoginResponse_Results::set_draws(int64_t value) {
+  _internal_set_draws(value);
+  // @@protoc_insertion_point(field_set:openfoxwq.LoginResponse.Results.draws)
+}
+
+// -------------------------------------------------------------------
+
+// LoginResponse_AllResults
+
+// optional int64 player_id = 1;
+inline bool LoginResponse_AllResults::_internal_has_player_id() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
 }
-inline bool LoginRequest::has_unknown_field_7() const {
-  return _internal_has_unknown_field_7();
+inline bool LoginResponse_AllResults::has_player_id() const {
+  return _internal_has_player_id();
 }
-inline void LoginRequest::clear_unknown_field_7() {
-  _impl_.unknown_field_7_.ClearToEmpty();
+inline void LoginResponse_AllResults::clear_player_id() {
+  _impl_.player_id_ = int64_t{0};
   _impl_._has_bits_[0] &= ~0x00000008u;
 }
-inline const std::string& LoginRequest::unknown_field_7() const {
-  // @@protoc_insertion_point(field_get:openfoxwq.LoginRequest.unknown_field_7)
-  return _internal_unknown_field_7();
+inline int64_t LoginResponse_AllResults::_internal_player_id() const {
+  return _impl_.player_id_;
 }
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void LoginRequest::set_unknown_field_7(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000008u;
- _impl_.unknown_field_7_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:openfoxwq.LoginRequest.unknown_field_7)
+inline int64_t LoginResponse_AllResults::player_id() const {
+  // @@protoc_insertion_point(field_get:openfoxwq.LoginResponse.AllResults.player_id)
+  return _internal_player_id();
 }
-inline std::string* LoginRequest::mutable_unknown_field_7() {
-  std::string* _s = _internal_mutable_unknown_field_7();
-  // @@protoc_insertion_point(field_mutable:openfoxwq.LoginRequest.unknown_field_7)
-  return _s;
-}
-inline const std::string& LoginRequest::_internal_unknown_field_7() const {
-  return _impl_.unknown_field_7_.Get();
-}
-inline void LoginRequest::_internal_set_unknown_field_7(const std::string& value) {
+inline void LoginResponse_AllResults::_internal_set_player_id(int64_t value) {
   _impl_._has_bits_[0] |= 0x00000008u;
-  _impl_.unknown_field_7_.Set(value, GetArenaForAllocation());
+  _impl_.player_id_ = value;
 }
-inline std::string* LoginRequest::_internal_mutable_unknown_field_7() {
-  _impl_._has_bits_[0] |= 0x00000008u;
-  return _impl_.unknown_field_7_.Mutable(GetArenaForAllocation());
+inline void LoginResponse_AllResults::set_player_id(int64_t value) {
+  _internal_set_player_id(value);
+  // @@protoc_insertion_point(field_set:openfoxwq.LoginResponse.AllResults.player_id)
 }
-inline std::string* LoginRequest::release_unknown_field_7() {
-  // @@protoc_insertion_point(field_release:openfoxwq.LoginRequest.unknown_field_7)
-  if (!_internal_has_unknown_field_7()) {
-    return nullptr;
+
+// optional .openfoxwq.LoginResponse.Results current = 9;
+inline bool LoginResponse_AllResults::_internal_has_current() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  PROTOBUF_ASSUME(!value || _impl_.current_ != nullptr);
+  return value;
+}
+inline bool LoginResponse_AllResults::has_current() const {
+  return _internal_has_current();
+}
+inline void LoginResponse_AllResults::clear_current() {
+  if (_impl_.current_ != nullptr) _impl_.current_->Clear();
+  _impl_._has_bits_[0] &= ~0x00000001u;
+}
+inline const ::openfoxwq::LoginResponse_Results& LoginResponse_AllResults::_internal_current() const {
+  const ::openfoxwq::LoginResponse_Results* p = _impl_.current_;
+  return p != nullptr ? *p : reinterpret_cast<const ::openfoxwq::LoginResponse_Results&>(
+      ::openfoxwq::_LoginResponse_Results_default_instance_);
+}
+inline const ::openfoxwq::LoginResponse_Results& LoginResponse_AllResults::current() const {
+  // @@protoc_insertion_point(field_get:openfoxwq.LoginResponse.AllResults.current)
+  return _internal_current();
+}
+inline void LoginResponse_AllResults::unsafe_arena_set_allocated_current(
+    ::openfoxwq::LoginResponse_Results* current) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.current_);
   }
-  _impl_._has_bits_[0] &= ~0x00000008u;
-  auto* p = _impl_.unknown_field_7_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.unknown_field_7_.IsDefault()) {
-    _impl_.unknown_field_7_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
-}
-inline void LoginRequest::set_allocated_unknown_field_7(std::string* unknown_field_7) {
-  if (unknown_field_7 != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000008u;
+  _impl_.current_ = current;
+  if (current) {
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    _impl_._has_bits_[0] &= ~0x00000008u;
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.unknown_field_7_.SetAllocated(unknown_field_7, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.unknown_field_7_.IsDefault()) {
-    _impl_.unknown_field_7_.Set("", GetArenaForAllocation());
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:openfoxwq.LoginResponse.AllResults.current)
+}
+inline ::openfoxwq::LoginResponse_Results* LoginResponse_AllResults::release_current() {
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  ::openfoxwq::LoginResponse_Results* temp = _impl_.current_;
+  _impl_.current_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
   }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:openfoxwq.LoginRequest.unknown_field_7)
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::openfoxwq::LoginResponse_Results* LoginResponse_AllResults::unsafe_arena_release_current() {
+  // @@protoc_insertion_point(field_release:openfoxwq.LoginResponse.AllResults.current)
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  ::openfoxwq::LoginResponse_Results* temp = _impl_.current_;
+  _impl_.current_ = nullptr;
+  return temp;
+}
+inline ::openfoxwq::LoginResponse_Results* LoginResponse_AllResults::_internal_mutable_current() {
+  _impl_._has_bits_[0] |= 0x00000001u;
+  if (_impl_.current_ == nullptr) {
+    auto* p = CreateMaybeMessage<::openfoxwq::LoginResponse_Results>(GetArenaForAllocation());
+    _impl_.current_ = p;
+  }
+  return _impl_.current_;
+}
+inline ::openfoxwq::LoginResponse_Results* LoginResponse_AllResults::mutable_current() {
+  ::openfoxwq::LoginResponse_Results* _msg = _internal_mutable_current();
+  // @@protoc_insertion_point(field_mutable:openfoxwq.LoginResponse.AllResults.current)
+  return _msg;
+}
+inline void LoginResponse_AllResults::set_allocated_current(::openfoxwq::LoginResponse_Results* current) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete _impl_.current_;
+  }
+  if (current) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(current);
+    if (message_arena != submessage_arena) {
+      current = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, current, submessage_arena);
+    }
+    _impl_._has_bits_[0] |= 0x00000001u;
+  } else {
+    _impl_._has_bits_[0] &= ~0x00000001u;
+  }
+  _impl_.current_ = current;
+  // @@protoc_insertion_point(field_set_allocated:openfoxwq.LoginResponse.AllResults.current)
+}
+
+// optional .openfoxwq.LoginResponse.Results ranked = 10;
+inline bool LoginResponse_AllResults::_internal_has_ranked() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  PROTOBUF_ASSUME(!value || _impl_.ranked_ != nullptr);
+  return value;
+}
+inline bool LoginResponse_AllResults::has_ranked() const {
+  return _internal_has_ranked();
+}
+inline void LoginResponse_AllResults::clear_ranked() {
+  if (_impl_.ranked_ != nullptr) _impl_.ranked_->Clear();
+  _impl_._has_bits_[0] &= ~0x00000002u;
+}
+inline const ::openfoxwq::LoginResponse_Results& LoginResponse_AllResults::_internal_ranked() const {
+  const ::openfoxwq::LoginResponse_Results* p = _impl_.ranked_;
+  return p != nullptr ? *p : reinterpret_cast<const ::openfoxwq::LoginResponse_Results&>(
+      ::openfoxwq::_LoginResponse_Results_default_instance_);
+}
+inline const ::openfoxwq::LoginResponse_Results& LoginResponse_AllResults::ranked() const {
+  // @@protoc_insertion_point(field_get:openfoxwq.LoginResponse.AllResults.ranked)
+  return _internal_ranked();
+}
+inline void LoginResponse_AllResults::unsafe_arena_set_allocated_ranked(
+    ::openfoxwq::LoginResponse_Results* ranked) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.ranked_);
+  }
+  _impl_.ranked_ = ranked;
+  if (ranked) {
+    _impl_._has_bits_[0] |= 0x00000002u;
+  } else {
+    _impl_._has_bits_[0] &= ~0x00000002u;
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:openfoxwq.LoginResponse.AllResults.ranked)
+}
+inline ::openfoxwq::LoginResponse_Results* LoginResponse_AllResults::release_ranked() {
+  _impl_._has_bits_[0] &= ~0x00000002u;
+  ::openfoxwq::LoginResponse_Results* temp = _impl_.ranked_;
+  _impl_.ranked_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::openfoxwq::LoginResponse_Results* LoginResponse_AllResults::unsafe_arena_release_ranked() {
+  // @@protoc_insertion_point(field_release:openfoxwq.LoginResponse.AllResults.ranked)
+  _impl_._has_bits_[0] &= ~0x00000002u;
+  ::openfoxwq::LoginResponse_Results* temp = _impl_.ranked_;
+  _impl_.ranked_ = nullptr;
+  return temp;
+}
+inline ::openfoxwq::LoginResponse_Results* LoginResponse_AllResults::_internal_mutable_ranked() {
+  _impl_._has_bits_[0] |= 0x00000002u;
+  if (_impl_.ranked_ == nullptr) {
+    auto* p = CreateMaybeMessage<::openfoxwq::LoginResponse_Results>(GetArenaForAllocation());
+    _impl_.ranked_ = p;
+  }
+  return _impl_.ranked_;
+}
+inline ::openfoxwq::LoginResponse_Results* LoginResponse_AllResults::mutable_ranked() {
+  ::openfoxwq::LoginResponse_Results* _msg = _internal_mutable_ranked();
+  // @@protoc_insertion_point(field_mutable:openfoxwq.LoginResponse.AllResults.ranked)
+  return _msg;
+}
+inline void LoginResponse_AllResults::set_allocated_ranked(::openfoxwq::LoginResponse_Results* ranked) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete _impl_.ranked_;
+  }
+  if (ranked) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(ranked);
+    if (message_arena != submessage_arena) {
+      ranked = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, ranked, submessage_arena);
+    }
+    _impl_._has_bits_[0] |= 0x00000002u;
+  } else {
+    _impl_._has_bits_[0] &= ~0x00000002u;
+  }
+  _impl_.ranked_ = ranked;
+  // @@protoc_insertion_point(field_set_allocated:openfoxwq.LoginResponse.AllResults.ranked)
+}
+
+// optional .openfoxwq.LoginResponse.Results free = 11;
+inline bool LoginResponse_AllResults::_internal_has_free() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  PROTOBUF_ASSUME(!value || _impl_.free_ != nullptr);
+  return value;
+}
+inline bool LoginResponse_AllResults::has_free() const {
+  return _internal_has_free();
+}
+inline void LoginResponse_AllResults::clear_free() {
+  if (_impl_.free_ != nullptr) _impl_.free_->Clear();
+  _impl_._has_bits_[0] &= ~0x00000004u;
+}
+inline const ::openfoxwq::LoginResponse_Results& LoginResponse_AllResults::_internal_free() const {
+  const ::openfoxwq::LoginResponse_Results* p = _impl_.free_;
+  return p != nullptr ? *p : reinterpret_cast<const ::openfoxwq::LoginResponse_Results&>(
+      ::openfoxwq::_LoginResponse_Results_default_instance_);
+}
+inline const ::openfoxwq::LoginResponse_Results& LoginResponse_AllResults::free() const {
+  // @@protoc_insertion_point(field_get:openfoxwq.LoginResponse.AllResults.free)
+  return _internal_free();
+}
+inline void LoginResponse_AllResults::unsafe_arena_set_allocated_free(
+    ::openfoxwq::LoginResponse_Results* free) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.free_);
+  }
+  _impl_.free_ = free;
+  if (free) {
+    _impl_._has_bits_[0] |= 0x00000004u;
+  } else {
+    _impl_._has_bits_[0] &= ~0x00000004u;
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:openfoxwq.LoginResponse.AllResults.free)
+}
+inline ::openfoxwq::LoginResponse_Results* LoginResponse_AllResults::release_free() {
+  _impl_._has_bits_[0] &= ~0x00000004u;
+  ::openfoxwq::LoginResponse_Results* temp = _impl_.free_;
+  _impl_.free_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::openfoxwq::LoginResponse_Results* LoginResponse_AllResults::unsafe_arena_release_free() {
+  // @@protoc_insertion_point(field_release:openfoxwq.LoginResponse.AllResults.free)
+  _impl_._has_bits_[0] &= ~0x00000004u;
+  ::openfoxwq::LoginResponse_Results* temp = _impl_.free_;
+  _impl_.free_ = nullptr;
+  return temp;
+}
+inline ::openfoxwq::LoginResponse_Results* LoginResponse_AllResults::_internal_mutable_free() {
+  _impl_._has_bits_[0] |= 0x00000004u;
+  if (_impl_.free_ == nullptr) {
+    auto* p = CreateMaybeMessage<::openfoxwq::LoginResponse_Results>(GetArenaForAllocation());
+    _impl_.free_ = p;
+  }
+  return _impl_.free_;
+}
+inline ::openfoxwq::LoginResponse_Results* LoginResponse_AllResults::mutable_free() {
+  ::openfoxwq::LoginResponse_Results* _msg = _internal_mutable_free();
+  // @@protoc_insertion_point(field_mutable:openfoxwq.LoginResponse.AllResults.free)
+  return _msg;
+}
+inline void LoginResponse_AllResults::set_allocated_free(::openfoxwq::LoginResponse_Results* free) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete _impl_.free_;
+  }
+  if (free) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(free);
+    if (message_arena != submessage_arena) {
+      free = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, free, submessage_arena);
+    }
+    _impl_._has_bits_[0] |= 0x00000004u;
+  } else {
+    _impl_._has_bits_[0] &= ~0x00000004u;
+  }
+  _impl_.free_ = free;
+  // @@protoc_insertion_point(field_set_allocated:openfoxwq.LoginResponse.AllResults.free)
 }
 
 // -------------------------------------------------------------------
@@ -1495,41 +2306,45 @@ inline void LoginResponse::set_allocated_player_info(::openfoxwq::PlayerInfo* pl
   // @@protoc_insertion_point(field_set_allocated:openfoxwq.LoginResponse.player_info)
 }
 
-// required .openfoxwq.ExtraPlayerInfo extra_player_info = 4;
-inline bool LoginResponse::_internal_has_extra_player_info() const {
+// required .openfoxwq.LoginResponse.AllResults results = 4;
+inline bool LoginResponse::_internal_has_results() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.extra_player_info_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.results_ != nullptr);
   return value;
 }
-inline bool LoginResponse::has_extra_player_info() const {
-  return _internal_has_extra_player_info();
+inline bool LoginResponse::has_results() const {
+  return _internal_has_results();
 }
-inline const ::openfoxwq::ExtraPlayerInfo& LoginResponse::_internal_extra_player_info() const {
-  const ::openfoxwq::ExtraPlayerInfo* p = _impl_.extra_player_info_;
-  return p != nullptr ? *p : reinterpret_cast<const ::openfoxwq::ExtraPlayerInfo&>(
-      ::openfoxwq::_ExtraPlayerInfo_default_instance_);
+inline void LoginResponse::clear_results() {
+  if (_impl_.results_ != nullptr) _impl_.results_->Clear();
+  _impl_._has_bits_[0] &= ~0x00000010u;
 }
-inline const ::openfoxwq::ExtraPlayerInfo& LoginResponse::extra_player_info() const {
-  // @@protoc_insertion_point(field_get:openfoxwq.LoginResponse.extra_player_info)
-  return _internal_extra_player_info();
+inline const ::openfoxwq::LoginResponse_AllResults& LoginResponse::_internal_results() const {
+  const ::openfoxwq::LoginResponse_AllResults* p = _impl_.results_;
+  return p != nullptr ? *p : reinterpret_cast<const ::openfoxwq::LoginResponse_AllResults&>(
+      ::openfoxwq::_LoginResponse_AllResults_default_instance_);
 }
-inline void LoginResponse::unsafe_arena_set_allocated_extra_player_info(
-    ::openfoxwq::ExtraPlayerInfo* extra_player_info) {
+inline const ::openfoxwq::LoginResponse_AllResults& LoginResponse::results() const {
+  // @@protoc_insertion_point(field_get:openfoxwq.LoginResponse.results)
+  return _internal_results();
+}
+inline void LoginResponse::unsafe_arena_set_allocated_results(
+    ::openfoxwq::LoginResponse_AllResults* results) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.extra_player_info_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.results_);
   }
-  _impl_.extra_player_info_ = extra_player_info;
-  if (extra_player_info) {
+  _impl_.results_ = results;
+  if (results) {
     _impl_._has_bits_[0] |= 0x00000010u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000010u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:openfoxwq.LoginResponse.extra_player_info)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:openfoxwq.LoginResponse.results)
 }
-inline ::openfoxwq::ExtraPlayerInfo* LoginResponse::release_extra_player_info() {
+inline ::openfoxwq::LoginResponse_AllResults* LoginResponse::release_results() {
   _impl_._has_bits_[0] &= ~0x00000010u;
-  ::openfoxwq::ExtraPlayerInfo* temp = _impl_.extra_player_info_;
-  _impl_.extra_player_info_ = nullptr;
+  ::openfoxwq::LoginResponse_AllResults* temp = _impl_.results_;
+  _impl_.results_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -1541,48 +2356,47 @@ inline ::openfoxwq::ExtraPlayerInfo* LoginResponse::release_extra_player_info() 
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::openfoxwq::ExtraPlayerInfo* LoginResponse::unsafe_arena_release_extra_player_info() {
-  // @@protoc_insertion_point(field_release:openfoxwq.LoginResponse.extra_player_info)
+inline ::openfoxwq::LoginResponse_AllResults* LoginResponse::unsafe_arena_release_results() {
+  // @@protoc_insertion_point(field_release:openfoxwq.LoginResponse.results)
   _impl_._has_bits_[0] &= ~0x00000010u;
-  ::openfoxwq::ExtraPlayerInfo* temp = _impl_.extra_player_info_;
-  _impl_.extra_player_info_ = nullptr;
+  ::openfoxwq::LoginResponse_AllResults* temp = _impl_.results_;
+  _impl_.results_ = nullptr;
   return temp;
 }
-inline ::openfoxwq::ExtraPlayerInfo* LoginResponse::_internal_mutable_extra_player_info() {
+inline ::openfoxwq::LoginResponse_AllResults* LoginResponse::_internal_mutable_results() {
   _impl_._has_bits_[0] |= 0x00000010u;
-  if (_impl_.extra_player_info_ == nullptr) {
-    auto* p = CreateMaybeMessage<::openfoxwq::ExtraPlayerInfo>(GetArenaForAllocation());
-    _impl_.extra_player_info_ = p;
+  if (_impl_.results_ == nullptr) {
+    auto* p = CreateMaybeMessage<::openfoxwq::LoginResponse_AllResults>(GetArenaForAllocation());
+    _impl_.results_ = p;
   }
-  return _impl_.extra_player_info_;
+  return _impl_.results_;
 }
-inline ::openfoxwq::ExtraPlayerInfo* LoginResponse::mutable_extra_player_info() {
-  ::openfoxwq::ExtraPlayerInfo* _msg = _internal_mutable_extra_player_info();
-  // @@protoc_insertion_point(field_mutable:openfoxwq.LoginResponse.extra_player_info)
+inline ::openfoxwq::LoginResponse_AllResults* LoginResponse::mutable_results() {
+  ::openfoxwq::LoginResponse_AllResults* _msg = _internal_mutable_results();
+  // @@protoc_insertion_point(field_mutable:openfoxwq.LoginResponse.results)
   return _msg;
 }
-inline void LoginResponse::set_allocated_extra_player_info(::openfoxwq::ExtraPlayerInfo* extra_player_info) {
+inline void LoginResponse::set_allocated_results(::openfoxwq::LoginResponse_AllResults* results) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.extra_player_info_);
+    delete _impl_.results_;
   }
-  if (extra_player_info) {
+  if (results) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(extra_player_info));
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(results);
     if (message_arena != submessage_arena) {
-      extra_player_info = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, extra_player_info, submessage_arena);
+      results = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, results, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000010u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000010u;
   }
-  _impl_.extra_player_info_ = extra_player_info;
-  // @@protoc_insertion_point(field_set_allocated:openfoxwq.LoginResponse.extra_player_info)
+  _impl_.results_ = results;
+  // @@protoc_insertion_point(field_set_allocated:openfoxwq.LoginResponse.results)
 }
 
-// required string token1 = 8;
+// required bytes token1 = 8;
 inline bool LoginResponse::_internal_has_token1() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1602,7 +2416,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void LoginResponse::set_token1(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.token1_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.token1_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:openfoxwq.LoginResponse.token1)
 }
 inline std::string* LoginResponse::mutable_token1() {
@@ -1650,7 +2464,7 @@ inline void LoginResponse::set_allocated_token1(std::string* token1) {
   // @@protoc_insertion_point(field_set_allocated:openfoxwq.LoginResponse.token1)
 }
 
-// required string token2 = 10;
+// required bytes token2 = 10;
 inline bool LoginResponse::_internal_has_token2() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -1670,7 +2484,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void LoginResponse::set_token2(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.token2_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.token2_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:openfoxwq.LoginResponse.token2)
 }
 inline std::string* LoginResponse::mutable_token2() {
@@ -1789,6 +2603,10 @@ inline void LoginResponse::set_allocated_bind_url(std::string* bind_url) {
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------

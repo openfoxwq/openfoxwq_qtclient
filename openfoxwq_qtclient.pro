@@ -9,20 +9,19 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    automatchpreset.cpp \
     boardbutton.cpp \
     boardtestwindow.cpp \
     boardwidget.cpp \
-    broadcastroommodel.cpp \
-    enterroommsg.cpp \
-    getinitdatamsg.cpp \
-    leaveroommsg.cpp \
-    loginmsg.cpp \
+    broadcastmodel.cpp \
+    broadcastroomtab.cpp \
     main.cpp \
     loginwindow.cpp \
     mainwindow.cpp \
     matchcardwidget.cpp \
-    matchtab.cpp \
+    matchroomtab.cpp \
     modelutils.cpp \
+    playerinfodialog.cpp \
     playermodel.cpp \
     proto/broadcast.pb.cc \
     proto/common.pb.cc \
@@ -30,24 +29,26 @@ SOURCES += \
     proto/nav.pb.cc \
     proto/play.pb.cc \
     proto/reqOption.pb.cc \
-    rank.cpp \
+    proto/ws.pb.cc \
+    roomtab.cpp \
+    soundfx.cpp \
     stringutils.cpp \
-    timecontrolwidget.cpp
+    timecontrolwidget.cpp \
+    timeddecisiondialog.cpp
 
 HEADERS += \
+    automatchpreset.h \
     boardbutton.h \
     boardtestwindow.h \
     boardwidget.h \
-    broadcastroommodel.h \
-    enterroommsg.h \
-    getinitdatamsg.h \
-    leaveroommsg.h \
-    loginmsg.h \
+    broadcastmodel.h \
+    broadcastroomtab.h \
     loginwindow.h \
     mainwindow.h \
     matchcardwidget.h \
-    matchtab.h \
+    matchroomtab.h \
     modelutils.h \
+    playerinfodialog.h \
     playermodel.h \
     proto/broadcast.pb.h \
     proto/common.pb.h \
@@ -55,9 +56,12 @@ HEADERS += \
     proto/nav.pb.h \
     proto/play.pb.h \
     proto/reqOption.pb.h \
-    rank.h \
+    proto/ws.pb.h \
+    roomtab.h \
+    soundfx.h \
     stringutils.h \
-    timecontrolwidget.h
+    timecontrolwidget.h \
+    timeddecisiondialog.h
 
 FORMS += \
     boardtestwindow.ui \
@@ -65,10 +69,11 @@ FORMS += \
     loginwindow.ui \
     mainwindow.ui \
     matchcardwidget.ui \
-    matchtab.ui \
-    timecontrolwidget.ui
+    playerinfodialog.ui \
+    roomtab.ui \
+    timecontrolwidget.ui \
+    timeddecisiondialog.ui
 
-# How to find this in all systems?
 INCLUDEPATH += /usr/local/include
 LIBS += /usr/local/lib/libprotobuf.a
 
@@ -79,3 +84,6 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 RESOURCES += \
     resources.qrc
+
+DISTFILES += \
+    README.md

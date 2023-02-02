@@ -3,8 +3,9 @@
 
 #include <QWidget>
 #include <QIcon>
-#include <QSoundEffect>
+#include <QSet>
 #include <boardbutton.h>
+#include <proto/common.pb.h>
 
 namespace Ui {
 class BoardWidget;
@@ -18,29 +19,31 @@ public:
     explicit BoardWidget(QWidget *parent = nullptr, int boardSize = 19);
     ~BoardWidget();
 
+    int boardSize() const { return m_boardSize; }
     void paintEvent(QPaintEvent *) override;
-    bool movePiece(int r, int c, PointState state);
+    bool movePiece(int r, int c, openfoxwq::Color state, int *captureCount = nullptr);
+    openfoxwq::Color turn() const;
+    void toggleTurn();
     void setAnnotation(int r, int c, Annotation);
-    PointState getPoint(int r, int c) const;
+    openfoxwq::Color getPoint(int r, int c) const;
     void clearAnnotations();
 
     bool interactive() const;
     void setInteractive(bool newInteractive);
-    void setSound(bool value);
+    void toggleInteractive();
 
 signals:
-    void pointClicked(int r, int c);
+    void pointClicked(int r, int c, openfoxwq::Color state);
 
 private:
     Ui::BoardWidget *ui;
-    const int boardSize;
+    const int m_boardSize;
     QIcon blackStone, whiteStone;
-    QSoundEffect placeStoneSound, captureSound;
     QVector<QVector<BoardButton*>> pointButtons;
     bool m_interactive = false;
-    bool m_soundEnabled = false;
     QPair<int, int> m_lastPoint = {-1, -1};
-    PointState m_lastState = PointState::kWhite;
+    openfoxwq::Color m_lastState = openfoxwq::Color::COL_WHITE;
+    QSet<QString> m_previousPositions;
 
     void drawBoardLines(QPainter&);
 
@@ -48,9 +51,9 @@ private:
     using Group = QVector<Point>;
     using PointSet = QSet<Point>;
 
-    PointState getExtendedState(int r, int c, const QMap<Point, PointState> &additionalPoints);
-    void collectGroup(PointState col, int r, int c, Group& group, PointSet& used, const QMap<Point, PointState> &additionalPoints);
-    QMap<PointState, QVector<Group>> computeDeadGroups(const QMap<Point, PointState> &additionalPoints);
+    openfoxwq::Color getExtendedState(int r, int c, const QMap<Point, openfoxwq::Color> &additionalPoints);
+    void collectGroup(openfoxwq::Color col, int r, int c, Group& group, PointSet& used, const QMap<Point, openfoxwq::Color> &additionalPoints);
+    QMap<openfoxwq::Color, QVector<Group>> computeDeadGroups(const QMap<Point, openfoxwq::Color> &additionalPoints);
 };
 
 #endif // BOARDWIDGET_H

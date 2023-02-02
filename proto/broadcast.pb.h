@@ -49,54 +49,51 @@ struct TableStruct_proto_2fbroadcast_2eproto {
 };
 extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_proto_2fbroadcast_2eproto;
 namespace openfoxwq {
-class EnterRoomRequest;
-struct EnterRoomRequestDefaultTypeInternal;
-extern EnterRoomRequestDefaultTypeInternal _EnterRoomRequest_default_instance_;
-class EnterRoomResponse;
-struct EnterRoomResponseDefaultTypeInternal;
-extern EnterRoomResponseDefaultTypeInternal _EnterRoomResponse_default_instance_;
+class BroadcastGameResultEvent;
+struct BroadcastGameResultEventDefaultTypeInternal;
+extern BroadcastGameResultEventDefaultTypeInternal _BroadcastGameResultEvent_default_instance_;
+class BroadcastMoveEvent;
+struct BroadcastMoveEventDefaultTypeInternal;
+extern BroadcastMoveEventDefaultTypeInternal _BroadcastMoveEvent_default_instance_;
+class BroadcastSettingEvent;
+struct BroadcastSettingEventDefaultTypeInternal;
+extern BroadcastSettingEventDefaultTypeInternal _BroadcastSettingEvent_default_instance_;
+class BroadcastStateEvent;
+struct BroadcastStateEventDefaultTypeInternal;
+extern BroadcastStateEventDefaultTypeInternal _BroadcastStateEvent_default_instance_;
+class BroadcastStateEvent_BroadcastState;
+struct BroadcastStateEvent_BroadcastStateDefaultTypeInternal;
+extern BroadcastStateEvent_BroadcastStateDefaultTypeInternal _BroadcastStateEvent_BroadcastState_default_instance_;
+class BroadcastTimeControlEvent;
+struct BroadcastTimeControlEventDefaultTypeInternal;
+extern BroadcastTimeControlEventDefaultTypeInternal _BroadcastTimeControlEvent_default_instance_;
+class EnterBroadcastRequest;
+struct EnterBroadcastRequestDefaultTypeInternal;
+extern EnterBroadcastRequestDefaultTypeInternal _EnterBroadcastRequest_default_instance_;
+class EnterBroadcastResponse;
+struct EnterBroadcastResponseDefaultTypeInternal;
+extern EnterBroadcastResponseDefaultTypeInternal _EnterBroadcastResponse_default_instance_;
 class HeartbeatRequest;
 struct HeartbeatRequestDefaultTypeInternal;
 extern HeartbeatRequestDefaultTypeInternal _HeartbeatRequest_default_instance_;
-class LeaveRoomRequest;
-struct LeaveRoomRequestDefaultTypeInternal;
-extern LeaveRoomRequestDefaultTypeInternal _LeaveRoomRequest_default_instance_;
-class LeaveRoomResponse;
-struct LeaveRoomResponseDefaultTypeInternal;
-extern LeaveRoomResponseDefaultTypeInternal _LeaveRoomResponse_default_instance_;
-class ListRoomsRequest;
-struct ListRoomsRequestDefaultTypeInternal;
-extern ListRoomsRequestDefaultTypeInternal _ListRoomsRequest_default_instance_;
-class ListRoomsResponse;
-struct ListRoomsResponseDefaultTypeInternal;
-extern ListRoomsResponseDefaultTypeInternal _ListRoomsResponse_default_instance_;
+class LeaveBroadcastRequest;
+struct LeaveBroadcastRequestDefaultTypeInternal;
+extern LeaveBroadcastRequestDefaultTypeInternal _LeaveBroadcastRequest_default_instance_;
+class LeaveBroadcastResponse;
+struct LeaveBroadcastResponseDefaultTypeInternal;
+extern LeaveBroadcastResponseDefaultTypeInternal _LeaveBroadcastResponse_default_instance_;
+class ListBroadcastsRequest;
+struct ListBroadcastsRequestDefaultTypeInternal;
+extern ListBroadcastsRequestDefaultTypeInternal _ListBroadcastsRequest_default_instance_;
+class ListBroadcastsResponse;
+struct ListBroadcastsResponseDefaultTypeInternal;
+extern ListBroadcastsResponseDefaultTypeInternal _ListBroadcastsResponse_default_instance_;
 class LoginBroadcastServerRequest;
 struct LoginBroadcastServerRequestDefaultTypeInternal;
 extern LoginBroadcastServerRequestDefaultTypeInternal _LoginBroadcastServerRequest_default_instance_;
 class LoginBroadcastServerResponse;
 struct LoginBroadcastServerResponseDefaultTypeInternal;
 extern LoginBroadcastServerResponseDefaultTypeInternal _LoginBroadcastServerResponse_default_instance_;
-class RoomConfigEvent;
-struct RoomConfigEventDefaultTypeInternal;
-extern RoomConfigEventDefaultTypeInternal _RoomConfigEvent_default_instance_;
-class RoomConfigEvent_RoomConfig;
-struct RoomConfigEvent_RoomConfigDefaultTypeInternal;
-extern RoomConfigEvent_RoomConfigDefaultTypeInternal _RoomConfigEvent_RoomConfig_default_instance_;
-class RoomGameResultEvent;
-struct RoomGameResultEventDefaultTypeInternal;
-extern RoomGameResultEventDefaultTypeInternal _RoomGameResultEvent_default_instance_;
-class RoomMoveEvent;
-struct RoomMoveEventDefaultTypeInternal;
-extern RoomMoveEventDefaultTypeInternal _RoomMoveEvent_default_instance_;
-class RoomStateEvent;
-struct RoomStateEventDefaultTypeInternal;
-extern RoomStateEventDefaultTypeInternal _RoomStateEvent_default_instance_;
-class RoomStateEvent_RoomState;
-struct RoomStateEvent_RoomStateDefaultTypeInternal;
-extern RoomStateEvent_RoomStateDefaultTypeInternal _RoomStateEvent_RoomState_default_instance_;
-class RoomTimeControlEvent;
-struct RoomTimeControlEventDefaultTypeInternal;
-extern RoomTimeControlEventDefaultTypeInternal _RoomTimeControlEvent_default_instance_;
 class UnknownRequest1;
 struct UnknownRequest1DefaultTypeInternal;
 extern UnknownRequest1DefaultTypeInternal _UnknownRequest1_default_instance_;
@@ -132,22 +129,21 @@ struct UnknownResponse8DefaultTypeInternal;
 extern UnknownResponse8DefaultTypeInternal _UnknownResponse8_default_instance_;
 }  // namespace openfoxwq
 PROTOBUF_NAMESPACE_OPEN
-template<> ::openfoxwq::EnterRoomRequest* Arena::CreateMaybeMessage<::openfoxwq::EnterRoomRequest>(Arena*);
-template<> ::openfoxwq::EnterRoomResponse* Arena::CreateMaybeMessage<::openfoxwq::EnterRoomResponse>(Arena*);
+template<> ::openfoxwq::BroadcastGameResultEvent* Arena::CreateMaybeMessage<::openfoxwq::BroadcastGameResultEvent>(Arena*);
+template<> ::openfoxwq::BroadcastMoveEvent* Arena::CreateMaybeMessage<::openfoxwq::BroadcastMoveEvent>(Arena*);
+template<> ::openfoxwq::BroadcastSettingEvent* Arena::CreateMaybeMessage<::openfoxwq::BroadcastSettingEvent>(Arena*);
+template<> ::openfoxwq::BroadcastStateEvent* Arena::CreateMaybeMessage<::openfoxwq::BroadcastStateEvent>(Arena*);
+template<> ::openfoxwq::BroadcastStateEvent_BroadcastState* Arena::CreateMaybeMessage<::openfoxwq::BroadcastStateEvent_BroadcastState>(Arena*);
+template<> ::openfoxwq::BroadcastTimeControlEvent* Arena::CreateMaybeMessage<::openfoxwq::BroadcastTimeControlEvent>(Arena*);
+template<> ::openfoxwq::EnterBroadcastRequest* Arena::CreateMaybeMessage<::openfoxwq::EnterBroadcastRequest>(Arena*);
+template<> ::openfoxwq::EnterBroadcastResponse* Arena::CreateMaybeMessage<::openfoxwq::EnterBroadcastResponse>(Arena*);
 template<> ::openfoxwq::HeartbeatRequest* Arena::CreateMaybeMessage<::openfoxwq::HeartbeatRequest>(Arena*);
-template<> ::openfoxwq::LeaveRoomRequest* Arena::CreateMaybeMessage<::openfoxwq::LeaveRoomRequest>(Arena*);
-template<> ::openfoxwq::LeaveRoomResponse* Arena::CreateMaybeMessage<::openfoxwq::LeaveRoomResponse>(Arena*);
-template<> ::openfoxwq::ListRoomsRequest* Arena::CreateMaybeMessage<::openfoxwq::ListRoomsRequest>(Arena*);
-template<> ::openfoxwq::ListRoomsResponse* Arena::CreateMaybeMessage<::openfoxwq::ListRoomsResponse>(Arena*);
+template<> ::openfoxwq::LeaveBroadcastRequest* Arena::CreateMaybeMessage<::openfoxwq::LeaveBroadcastRequest>(Arena*);
+template<> ::openfoxwq::LeaveBroadcastResponse* Arena::CreateMaybeMessage<::openfoxwq::LeaveBroadcastResponse>(Arena*);
+template<> ::openfoxwq::ListBroadcastsRequest* Arena::CreateMaybeMessage<::openfoxwq::ListBroadcastsRequest>(Arena*);
+template<> ::openfoxwq::ListBroadcastsResponse* Arena::CreateMaybeMessage<::openfoxwq::ListBroadcastsResponse>(Arena*);
 template<> ::openfoxwq::LoginBroadcastServerRequest* Arena::CreateMaybeMessage<::openfoxwq::LoginBroadcastServerRequest>(Arena*);
 template<> ::openfoxwq::LoginBroadcastServerResponse* Arena::CreateMaybeMessage<::openfoxwq::LoginBroadcastServerResponse>(Arena*);
-template<> ::openfoxwq::RoomConfigEvent* Arena::CreateMaybeMessage<::openfoxwq::RoomConfigEvent>(Arena*);
-template<> ::openfoxwq::RoomConfigEvent_RoomConfig* Arena::CreateMaybeMessage<::openfoxwq::RoomConfigEvent_RoomConfig>(Arena*);
-template<> ::openfoxwq::RoomGameResultEvent* Arena::CreateMaybeMessage<::openfoxwq::RoomGameResultEvent>(Arena*);
-template<> ::openfoxwq::RoomMoveEvent* Arena::CreateMaybeMessage<::openfoxwq::RoomMoveEvent>(Arena*);
-template<> ::openfoxwq::RoomStateEvent* Arena::CreateMaybeMessage<::openfoxwq::RoomStateEvent>(Arena*);
-template<> ::openfoxwq::RoomStateEvent_RoomState* Arena::CreateMaybeMessage<::openfoxwq::RoomStateEvent_RoomState>(Arena*);
-template<> ::openfoxwq::RoomTimeControlEvent* Arena::CreateMaybeMessage<::openfoxwq::RoomTimeControlEvent>(Arena*);
 template<> ::openfoxwq::UnknownRequest1* Arena::CreateMaybeMessage<::openfoxwq::UnknownRequest1>(Arena*);
 template<> ::openfoxwq::UnknownRequest2* Arena::CreateMaybeMessage<::openfoxwq::UnknownRequest2>(Arena*);
 template<> ::openfoxwq::UnknownRequest3* Arena::CreateMaybeMessage<::openfoxwq::UnknownRequest3>(Arena*);
@@ -292,7 +288,7 @@ class LoginBroadcastServerRequest final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kUnknownField4FieldNumber = 4,
+    kMacAddressFieldNumber = 4,
     kTokenFieldNumber = 5,
     kPlayerIdFieldNumber = 1,
     kVersionFieldNumber = 2,
@@ -300,25 +296,25 @@ class LoginBroadcastServerRequest final :
     kUnknownField6FieldNumber = 6,
     kUnknownField7FieldNumber = 7,
   };
-  // required string unknown_field_4 = 4;
-  bool has_unknown_field_4() const;
+  // required string mac_address = 4;
+  bool has_mac_address() const;
   private:
-  bool _internal_has_unknown_field_4() const;
+  bool _internal_has_mac_address() const;
   public:
-  void clear_unknown_field_4();
-  const std::string& unknown_field_4() const;
+  void clear_mac_address();
+  const std::string& mac_address() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_unknown_field_4(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_unknown_field_4();
-  PROTOBUF_NODISCARD std::string* release_unknown_field_4();
-  void set_allocated_unknown_field_4(std::string* unknown_field_4);
+  void set_mac_address(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_mac_address();
+  PROTOBUF_NODISCARD std::string* release_mac_address();
+  void set_allocated_mac_address(std::string* mac_address);
   private:
-  const std::string& _internal_unknown_field_4() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_unknown_field_4(const std::string& value);
-  std::string* _internal_mutable_unknown_field_4();
+  const std::string& _internal_mac_address() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_mac_address(const std::string& value);
+  std::string* _internal_mutable_mac_address();
   public:
 
-  // required string token = 5;
+  // required bytes token = 5;
   bool has_token() const;
   private:
   bool _internal_has_token() const;
@@ -414,7 +410,7 @@ class LoginBroadcastServerRequest final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr unknown_field_4_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr mac_address_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr token_;
     int64_t player_id_;
     int64_t version_;
@@ -622,24 +618,24 @@ class LoginBroadcastServerResponse final :
 };
 // -------------------------------------------------------------------
 
-class ListRoomsRequest final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:openfoxwq.ListRoomsRequest) */ {
+class ListBroadcastsRequest final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:openfoxwq.ListBroadcastsRequest) */ {
  public:
-  inline ListRoomsRequest() : ListRoomsRequest(nullptr) {}
-  ~ListRoomsRequest() override;
-  explicit PROTOBUF_CONSTEXPR ListRoomsRequest(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline ListBroadcastsRequest() : ListBroadcastsRequest(nullptr) {}
+  ~ListBroadcastsRequest() override;
+  explicit PROTOBUF_CONSTEXPR ListBroadcastsRequest(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  ListRoomsRequest(const ListRoomsRequest& from);
-  ListRoomsRequest(ListRoomsRequest&& from) noexcept
-    : ListRoomsRequest() {
+  ListBroadcastsRequest(const ListBroadcastsRequest& from);
+  ListBroadcastsRequest(ListBroadcastsRequest&& from) noexcept
+    : ListBroadcastsRequest() {
     *this = ::std::move(from);
   }
 
-  inline ListRoomsRequest& operator=(const ListRoomsRequest& from) {
+  inline ListBroadcastsRequest& operator=(const ListBroadcastsRequest& from) {
     CopyFrom(from);
     return *this;
   }
-  inline ListRoomsRequest& operator=(ListRoomsRequest&& from) noexcept {
+  inline ListBroadcastsRequest& operator=(ListBroadcastsRequest&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -669,20 +665,20 @@ class ListRoomsRequest final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const ListRoomsRequest& default_instance() {
+  static const ListBroadcastsRequest& default_instance() {
     return *internal_default_instance();
   }
-  static inline const ListRoomsRequest* internal_default_instance() {
-    return reinterpret_cast<const ListRoomsRequest*>(
-               &_ListRoomsRequest_default_instance_);
+  static inline const ListBroadcastsRequest* internal_default_instance() {
+    return reinterpret_cast<const ListBroadcastsRequest*>(
+               &_ListBroadcastsRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     2;
 
-  friend void swap(ListRoomsRequest& a, ListRoomsRequest& b) {
+  friend void swap(ListBroadcastsRequest& a, ListBroadcastsRequest& b) {
     a.Swap(&b);
   }
-  inline void Swap(ListRoomsRequest* other) {
+  inline void Swap(ListBroadcastsRequest* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -695,7 +691,7 @@ class ListRoomsRequest final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(ListRoomsRequest* other) {
+  void UnsafeArenaSwap(ListBroadcastsRequest* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -703,14 +699,14 @@ class ListRoomsRequest final :
 
   // implements Message ----------------------------------------------
 
-  ListRoomsRequest* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<ListRoomsRequest>(arena);
+  ListBroadcastsRequest* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<ListBroadcastsRequest>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const ListRoomsRequest& from);
+  void CopyFrom(const ListBroadcastsRequest& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const ListRoomsRequest& from) {
-    ListRoomsRequest::MergeImpl(*this, from);
+  void MergeFrom( const ListBroadcastsRequest& from) {
+    ListBroadcastsRequest::MergeImpl(*this, from);
   }
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
@@ -728,15 +724,15 @@ class ListRoomsRequest final :
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(ListRoomsRequest* other);
+  void InternalSwap(ListBroadcastsRequest* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "openfoxwq.ListRoomsRequest";
+    return "openfoxwq.ListBroadcastsRequest";
   }
   protected:
-  explicit ListRoomsRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit ListBroadcastsRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   public:
 
@@ -793,7 +789,7 @@ class ListRoomsRequest final :
   void _internal_set_unknown_field_3(int64_t value);
   public:
 
-  // @@protoc_insertion_point(class_scope:openfoxwq.ListRoomsRequest)
+  // @@protoc_insertion_point(class_scope:openfoxwq.ListBroadcastsRequest)
  private:
   class _Internal;
 
@@ -812,24 +808,24 @@ class ListRoomsRequest final :
 };
 // -------------------------------------------------------------------
 
-class ListRoomsResponse final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:openfoxwq.ListRoomsResponse) */ {
+class ListBroadcastsResponse final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:openfoxwq.ListBroadcastsResponse) */ {
  public:
-  inline ListRoomsResponse() : ListRoomsResponse(nullptr) {}
-  ~ListRoomsResponse() override;
-  explicit PROTOBUF_CONSTEXPR ListRoomsResponse(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline ListBroadcastsResponse() : ListBroadcastsResponse(nullptr) {}
+  ~ListBroadcastsResponse() override;
+  explicit PROTOBUF_CONSTEXPR ListBroadcastsResponse(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  ListRoomsResponse(const ListRoomsResponse& from);
-  ListRoomsResponse(ListRoomsResponse&& from) noexcept
-    : ListRoomsResponse() {
+  ListBroadcastsResponse(const ListBroadcastsResponse& from);
+  ListBroadcastsResponse(ListBroadcastsResponse&& from) noexcept
+    : ListBroadcastsResponse() {
     *this = ::std::move(from);
   }
 
-  inline ListRoomsResponse& operator=(const ListRoomsResponse& from) {
+  inline ListBroadcastsResponse& operator=(const ListBroadcastsResponse& from) {
     CopyFrom(from);
     return *this;
   }
-  inline ListRoomsResponse& operator=(ListRoomsResponse&& from) noexcept {
+  inline ListBroadcastsResponse& operator=(ListBroadcastsResponse&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -859,20 +855,20 @@ class ListRoomsResponse final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const ListRoomsResponse& default_instance() {
+  static const ListBroadcastsResponse& default_instance() {
     return *internal_default_instance();
   }
-  static inline const ListRoomsResponse* internal_default_instance() {
-    return reinterpret_cast<const ListRoomsResponse*>(
-               &_ListRoomsResponse_default_instance_);
+  static inline const ListBroadcastsResponse* internal_default_instance() {
+    return reinterpret_cast<const ListBroadcastsResponse*>(
+               &_ListBroadcastsResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     3;
 
-  friend void swap(ListRoomsResponse& a, ListRoomsResponse& b) {
+  friend void swap(ListBroadcastsResponse& a, ListBroadcastsResponse& b) {
     a.Swap(&b);
   }
-  inline void Swap(ListRoomsResponse* other) {
+  inline void Swap(ListBroadcastsResponse* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -885,7 +881,7 @@ class ListRoomsResponse final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(ListRoomsResponse* other) {
+  void UnsafeArenaSwap(ListBroadcastsResponse* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -893,14 +889,14 @@ class ListRoomsResponse final :
 
   // implements Message ----------------------------------------------
 
-  ListRoomsResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<ListRoomsResponse>(arena);
+  ListBroadcastsResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<ListBroadcastsResponse>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const ListRoomsResponse& from);
+  void CopyFrom(const ListBroadcastsResponse& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const ListRoomsResponse& from) {
-    ListRoomsResponse::MergeImpl(*this, from);
+  void MergeFrom( const ListBroadcastsResponse& from) {
+    ListBroadcastsResponse::MergeImpl(*this, from);
   }
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
@@ -918,15 +914,15 @@ class ListRoomsResponse final :
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(ListRoomsResponse* other);
+  void InternalSwap(ListBroadcastsResponse* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "openfoxwq.ListRoomsResponse";
+    return "openfoxwq.ListBroadcastsResponse";
   }
   protected:
-  explicit ListRoomsResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit ListBroadcastsResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   public:
 
@@ -940,28 +936,28 @@ class ListRoomsResponse final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kRoomInfoFieldNumber = 3,
+    kBroadcastsFieldNumber = 3,
     kUnknownField1FieldNumber = 1,
     kPageIndexFieldNumber = 4,
     kPageCountFieldNumber = 5,
   };
-  // repeated .openfoxwq.BroadcastRoomInfo room_info = 3;
-  int room_info_size() const;
+  // repeated .openfoxwq.BroadcastInfo broadcasts = 3;
+  int broadcasts_size() const;
   private:
-  int _internal_room_info_size() const;
+  int _internal_broadcasts_size() const;
   public:
-  void clear_room_info();
-  ::openfoxwq::BroadcastRoomInfo* mutable_room_info(int index);
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::openfoxwq::BroadcastRoomInfo >*
-      mutable_room_info();
+  void clear_broadcasts();
+  ::openfoxwq::BroadcastInfo* mutable_broadcasts(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::openfoxwq::BroadcastInfo >*
+      mutable_broadcasts();
   private:
-  const ::openfoxwq::BroadcastRoomInfo& _internal_room_info(int index) const;
-  ::openfoxwq::BroadcastRoomInfo* _internal_add_room_info();
+  const ::openfoxwq::BroadcastInfo& _internal_broadcasts(int index) const;
+  ::openfoxwq::BroadcastInfo* _internal_add_broadcasts();
   public:
-  const ::openfoxwq::BroadcastRoomInfo& room_info(int index) const;
-  ::openfoxwq::BroadcastRoomInfo* add_room_info();
-  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::openfoxwq::BroadcastRoomInfo >&
-      room_info() const;
+  const ::openfoxwq::BroadcastInfo& broadcasts(int index) const;
+  ::openfoxwq::BroadcastInfo* add_broadcasts();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::openfoxwq::BroadcastInfo >&
+      broadcasts() const;
 
   // optional int64 unknown_field_1 = 1;
   bool has_unknown_field_1() const;
@@ -1002,7 +998,7 @@ class ListRoomsResponse final :
   void _internal_set_page_count(int64_t value);
   public:
 
-  // @@protoc_insertion_point(class_scope:openfoxwq.ListRoomsResponse)
+  // @@protoc_insertion_point(class_scope:openfoxwq.ListBroadcastsResponse)
  private:
   class _Internal;
 
@@ -1012,7 +1008,7 @@ class ListRoomsResponse final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::openfoxwq::BroadcastRoomInfo > room_info_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::openfoxwq::BroadcastInfo > broadcasts_;
     int64_t unknown_field_1_;
     int64_t page_index_;
     int64_t page_count_;
@@ -1022,24 +1018,24 @@ class ListRoomsResponse final :
 };
 // -------------------------------------------------------------------
 
-class EnterRoomRequest final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:openfoxwq.EnterRoomRequest) */ {
+class EnterBroadcastRequest final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:openfoxwq.EnterBroadcastRequest) */ {
  public:
-  inline EnterRoomRequest() : EnterRoomRequest(nullptr) {}
-  ~EnterRoomRequest() override;
-  explicit PROTOBUF_CONSTEXPR EnterRoomRequest(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline EnterBroadcastRequest() : EnterBroadcastRequest(nullptr) {}
+  ~EnterBroadcastRequest() override;
+  explicit PROTOBUF_CONSTEXPR EnterBroadcastRequest(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  EnterRoomRequest(const EnterRoomRequest& from);
-  EnterRoomRequest(EnterRoomRequest&& from) noexcept
-    : EnterRoomRequest() {
+  EnterBroadcastRequest(const EnterBroadcastRequest& from);
+  EnterBroadcastRequest(EnterBroadcastRequest&& from) noexcept
+    : EnterBroadcastRequest() {
     *this = ::std::move(from);
   }
 
-  inline EnterRoomRequest& operator=(const EnterRoomRequest& from) {
+  inline EnterBroadcastRequest& operator=(const EnterBroadcastRequest& from) {
     CopyFrom(from);
     return *this;
   }
-  inline EnterRoomRequest& operator=(EnterRoomRequest&& from) noexcept {
+  inline EnterBroadcastRequest& operator=(EnterBroadcastRequest&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -1069,20 +1065,20 @@ class EnterRoomRequest final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const EnterRoomRequest& default_instance() {
+  static const EnterBroadcastRequest& default_instance() {
     return *internal_default_instance();
   }
-  static inline const EnterRoomRequest* internal_default_instance() {
-    return reinterpret_cast<const EnterRoomRequest*>(
-               &_EnterRoomRequest_default_instance_);
+  static inline const EnterBroadcastRequest* internal_default_instance() {
+    return reinterpret_cast<const EnterBroadcastRequest*>(
+               &_EnterBroadcastRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     4;
 
-  friend void swap(EnterRoomRequest& a, EnterRoomRequest& b) {
+  friend void swap(EnterBroadcastRequest& a, EnterBroadcastRequest& b) {
     a.Swap(&b);
   }
-  inline void Swap(EnterRoomRequest* other) {
+  inline void Swap(EnterBroadcastRequest* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -1095,7 +1091,7 @@ class EnterRoomRequest final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(EnterRoomRequest* other) {
+  void UnsafeArenaSwap(EnterBroadcastRequest* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -1103,14 +1099,14 @@ class EnterRoomRequest final :
 
   // implements Message ----------------------------------------------
 
-  EnterRoomRequest* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<EnterRoomRequest>(arena);
+  EnterBroadcastRequest* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<EnterBroadcastRequest>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const EnterRoomRequest& from);
+  void CopyFrom(const EnterBroadcastRequest& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const EnterRoomRequest& from) {
-    EnterRoomRequest::MergeImpl(*this, from);
+  void MergeFrom( const EnterBroadcastRequest& from) {
+    EnterBroadcastRequest::MergeImpl(*this, from);
   }
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
@@ -1128,15 +1124,15 @@ class EnterRoomRequest final :
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(EnterRoomRequest* other);
+  void InternalSwap(EnterBroadcastRequest* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "openfoxwq.EnterRoomRequest";
+    return "openfoxwq.EnterBroadcastRequest";
   }
   protected:
-  explicit EnterRoomRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit EnterBroadcastRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   public:
 
@@ -1151,7 +1147,7 @@ class EnterRoomRequest final :
 
   enum : int {
     kPlayerIdFieldNumber = 1,
-    kRoomIdFieldNumber = 2,
+    kBroadcastIdFieldNumber = 2,
   };
   // required int64 player_id = 1;
   bool has_player_id() const;
@@ -1166,20 +1162,20 @@ class EnterRoomRequest final :
   void _internal_set_player_id(int64_t value);
   public:
 
-  // required int64 room_id = 2;
-  bool has_room_id() const;
+  // required int64 broadcast_id = 2;
+  bool has_broadcast_id() const;
   private:
-  bool _internal_has_room_id() const;
+  bool _internal_has_broadcast_id() const;
   public:
-  void clear_room_id();
-  int64_t room_id() const;
-  void set_room_id(int64_t value);
+  void clear_broadcast_id();
+  int64_t broadcast_id() const;
+  void set_broadcast_id(int64_t value);
   private:
-  int64_t _internal_room_id() const;
-  void _internal_set_room_id(int64_t value);
+  int64_t _internal_broadcast_id() const;
+  void _internal_set_broadcast_id(int64_t value);
   public:
 
-  // @@protoc_insertion_point(class_scope:openfoxwq.EnterRoomRequest)
+  // @@protoc_insertion_point(class_scope:openfoxwq.EnterBroadcastRequest)
  private:
   class _Internal;
 
@@ -1193,31 +1189,31 @@ class EnterRoomRequest final :
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     int64_t player_id_;
-    int64_t room_id_;
+    int64_t broadcast_id_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_proto_2fbroadcast_2eproto;
 };
 // -------------------------------------------------------------------
 
-class EnterRoomResponse final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:openfoxwq.EnterRoomResponse) */ {
+class EnterBroadcastResponse final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:openfoxwq.EnterBroadcastResponse) */ {
  public:
-  inline EnterRoomResponse() : EnterRoomResponse(nullptr) {}
-  ~EnterRoomResponse() override;
-  explicit PROTOBUF_CONSTEXPR EnterRoomResponse(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline EnterBroadcastResponse() : EnterBroadcastResponse(nullptr) {}
+  ~EnterBroadcastResponse() override;
+  explicit PROTOBUF_CONSTEXPR EnterBroadcastResponse(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  EnterRoomResponse(const EnterRoomResponse& from);
-  EnterRoomResponse(EnterRoomResponse&& from) noexcept
-    : EnterRoomResponse() {
+  EnterBroadcastResponse(const EnterBroadcastResponse& from);
+  EnterBroadcastResponse(EnterBroadcastResponse&& from) noexcept
+    : EnterBroadcastResponse() {
     *this = ::std::move(from);
   }
 
-  inline EnterRoomResponse& operator=(const EnterRoomResponse& from) {
+  inline EnterBroadcastResponse& operator=(const EnterBroadcastResponse& from) {
     CopyFrom(from);
     return *this;
   }
-  inline EnterRoomResponse& operator=(EnterRoomResponse&& from) noexcept {
+  inline EnterBroadcastResponse& operator=(EnterBroadcastResponse&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -1247,20 +1243,20 @@ class EnterRoomResponse final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const EnterRoomResponse& default_instance() {
+  static const EnterBroadcastResponse& default_instance() {
     return *internal_default_instance();
   }
-  static inline const EnterRoomResponse* internal_default_instance() {
-    return reinterpret_cast<const EnterRoomResponse*>(
-               &_EnterRoomResponse_default_instance_);
+  static inline const EnterBroadcastResponse* internal_default_instance() {
+    return reinterpret_cast<const EnterBroadcastResponse*>(
+               &_EnterBroadcastResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     5;
 
-  friend void swap(EnterRoomResponse& a, EnterRoomResponse& b) {
+  friend void swap(EnterBroadcastResponse& a, EnterBroadcastResponse& b) {
     a.Swap(&b);
   }
-  inline void Swap(EnterRoomResponse* other) {
+  inline void Swap(EnterBroadcastResponse* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -1273,7 +1269,7 @@ class EnterRoomResponse final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(EnterRoomResponse* other) {
+  void UnsafeArenaSwap(EnterBroadcastResponse* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -1281,14 +1277,14 @@ class EnterRoomResponse final :
 
   // implements Message ----------------------------------------------
 
-  EnterRoomResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<EnterRoomResponse>(arena);
+  EnterBroadcastResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<EnterBroadcastResponse>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const EnterRoomResponse& from);
+  void CopyFrom(const EnterBroadcastResponse& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const EnterRoomResponse& from) {
-    EnterRoomResponse::MergeImpl(*this, from);
+  void MergeFrom( const EnterBroadcastResponse& from) {
+    EnterBroadcastResponse::MergeImpl(*this, from);
   }
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
@@ -1306,15 +1302,15 @@ class EnterRoomResponse final :
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(EnterRoomResponse* other);
+  void InternalSwap(EnterBroadcastResponse* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "openfoxwq.EnterRoomResponse";
+    return "openfoxwq.EnterBroadcastResponse";
   }
   protected:
-  explicit EnterRoomResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit EnterBroadcastResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   public:
 
@@ -1330,7 +1326,7 @@ class EnterRoomResponse final :
   enum : int {
     kUnknownField1FieldNumber = 1,
     kPlayerIdFieldNumber = 2,
-    kRoomIdFieldNumber = 3,
+    kBroadcastIdFieldNumber = 3,
   };
   // optional int64 unknown_field_1 = 1;
   bool has_unknown_field_1() const;
@@ -1358,20 +1354,20 @@ class EnterRoomResponse final :
   void _internal_set_player_id(int64_t value);
   public:
 
-  // required int64 room_id = 3;
-  bool has_room_id() const;
+  // required int64 broadcast_id = 3;
+  bool has_broadcast_id() const;
   private:
-  bool _internal_has_room_id() const;
+  bool _internal_has_broadcast_id() const;
   public:
-  void clear_room_id();
-  int64_t room_id() const;
-  void set_room_id(int64_t value);
+  void clear_broadcast_id();
+  int64_t broadcast_id() const;
+  void set_broadcast_id(int64_t value);
   private:
-  int64_t _internal_room_id() const;
-  void _internal_set_room_id(int64_t value);
+  int64_t _internal_broadcast_id() const;
+  void _internal_set_broadcast_id(int64_t value);
   public:
 
-  // @@protoc_insertion_point(class_scope:openfoxwq.EnterRoomResponse)
+  // @@protoc_insertion_point(class_scope:openfoxwq.EnterBroadcastResponse)
  private:
   class _Internal;
 
@@ -1386,31 +1382,31 @@ class EnterRoomResponse final :
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     int64_t unknown_field_1_;
     int64_t player_id_;
-    int64_t room_id_;
+    int64_t broadcast_id_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_proto_2fbroadcast_2eproto;
 };
 // -------------------------------------------------------------------
 
-class LeaveRoomRequest final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:openfoxwq.LeaveRoomRequest) */ {
+class LeaveBroadcastRequest final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:openfoxwq.LeaveBroadcastRequest) */ {
  public:
-  inline LeaveRoomRequest() : LeaveRoomRequest(nullptr) {}
-  ~LeaveRoomRequest() override;
-  explicit PROTOBUF_CONSTEXPR LeaveRoomRequest(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline LeaveBroadcastRequest() : LeaveBroadcastRequest(nullptr) {}
+  ~LeaveBroadcastRequest() override;
+  explicit PROTOBUF_CONSTEXPR LeaveBroadcastRequest(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  LeaveRoomRequest(const LeaveRoomRequest& from);
-  LeaveRoomRequest(LeaveRoomRequest&& from) noexcept
-    : LeaveRoomRequest() {
+  LeaveBroadcastRequest(const LeaveBroadcastRequest& from);
+  LeaveBroadcastRequest(LeaveBroadcastRequest&& from) noexcept
+    : LeaveBroadcastRequest() {
     *this = ::std::move(from);
   }
 
-  inline LeaveRoomRequest& operator=(const LeaveRoomRequest& from) {
+  inline LeaveBroadcastRequest& operator=(const LeaveBroadcastRequest& from) {
     CopyFrom(from);
     return *this;
   }
-  inline LeaveRoomRequest& operator=(LeaveRoomRequest&& from) noexcept {
+  inline LeaveBroadcastRequest& operator=(LeaveBroadcastRequest&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -1440,20 +1436,20 @@ class LeaveRoomRequest final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const LeaveRoomRequest& default_instance() {
+  static const LeaveBroadcastRequest& default_instance() {
     return *internal_default_instance();
   }
-  static inline const LeaveRoomRequest* internal_default_instance() {
-    return reinterpret_cast<const LeaveRoomRequest*>(
-               &_LeaveRoomRequest_default_instance_);
+  static inline const LeaveBroadcastRequest* internal_default_instance() {
+    return reinterpret_cast<const LeaveBroadcastRequest*>(
+               &_LeaveBroadcastRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     6;
 
-  friend void swap(LeaveRoomRequest& a, LeaveRoomRequest& b) {
+  friend void swap(LeaveBroadcastRequest& a, LeaveBroadcastRequest& b) {
     a.Swap(&b);
   }
-  inline void Swap(LeaveRoomRequest* other) {
+  inline void Swap(LeaveBroadcastRequest* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -1466,7 +1462,7 @@ class LeaveRoomRequest final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(LeaveRoomRequest* other) {
+  void UnsafeArenaSwap(LeaveBroadcastRequest* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -1474,14 +1470,14 @@ class LeaveRoomRequest final :
 
   // implements Message ----------------------------------------------
 
-  LeaveRoomRequest* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<LeaveRoomRequest>(arena);
+  LeaveBroadcastRequest* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<LeaveBroadcastRequest>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const LeaveRoomRequest& from);
+  void CopyFrom(const LeaveBroadcastRequest& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const LeaveRoomRequest& from) {
-    LeaveRoomRequest::MergeImpl(*this, from);
+  void MergeFrom( const LeaveBroadcastRequest& from) {
+    LeaveBroadcastRequest::MergeImpl(*this, from);
   }
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
@@ -1499,15 +1495,15 @@ class LeaveRoomRequest final :
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(LeaveRoomRequest* other);
+  void InternalSwap(LeaveBroadcastRequest* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "openfoxwq.LeaveRoomRequest";
+    return "openfoxwq.LeaveBroadcastRequest";
   }
   protected:
-  explicit LeaveRoomRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit LeaveBroadcastRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   public:
 
@@ -1522,7 +1518,7 @@ class LeaveRoomRequest final :
 
   enum : int {
     kPlayerIdFieldNumber = 1,
-    kRoomIdFieldNumber = 2,
+    kBroadcastIdFieldNumber = 2,
   };
   // required int64 player_id = 1;
   bool has_player_id() const;
@@ -1537,20 +1533,20 @@ class LeaveRoomRequest final :
   void _internal_set_player_id(int64_t value);
   public:
 
-  // required int64 room_id = 2;
-  bool has_room_id() const;
+  // required int64 broadcast_id = 2;
+  bool has_broadcast_id() const;
   private:
-  bool _internal_has_room_id() const;
+  bool _internal_has_broadcast_id() const;
   public:
-  void clear_room_id();
-  int64_t room_id() const;
-  void set_room_id(int64_t value);
+  void clear_broadcast_id();
+  int64_t broadcast_id() const;
+  void set_broadcast_id(int64_t value);
   private:
-  int64_t _internal_room_id() const;
-  void _internal_set_room_id(int64_t value);
+  int64_t _internal_broadcast_id() const;
+  void _internal_set_broadcast_id(int64_t value);
   public:
 
-  // @@protoc_insertion_point(class_scope:openfoxwq.LeaveRoomRequest)
+  // @@protoc_insertion_point(class_scope:openfoxwq.LeaveBroadcastRequest)
  private:
   class _Internal;
 
@@ -1564,31 +1560,31 @@ class LeaveRoomRequest final :
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     int64_t player_id_;
-    int64_t room_id_;
+    int64_t broadcast_id_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_proto_2fbroadcast_2eproto;
 };
 // -------------------------------------------------------------------
 
-class LeaveRoomResponse final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:openfoxwq.LeaveRoomResponse) */ {
+class LeaveBroadcastResponse final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:openfoxwq.LeaveBroadcastResponse) */ {
  public:
-  inline LeaveRoomResponse() : LeaveRoomResponse(nullptr) {}
-  ~LeaveRoomResponse() override;
-  explicit PROTOBUF_CONSTEXPR LeaveRoomResponse(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline LeaveBroadcastResponse() : LeaveBroadcastResponse(nullptr) {}
+  ~LeaveBroadcastResponse() override;
+  explicit PROTOBUF_CONSTEXPR LeaveBroadcastResponse(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  LeaveRoomResponse(const LeaveRoomResponse& from);
-  LeaveRoomResponse(LeaveRoomResponse&& from) noexcept
-    : LeaveRoomResponse() {
+  LeaveBroadcastResponse(const LeaveBroadcastResponse& from);
+  LeaveBroadcastResponse(LeaveBroadcastResponse&& from) noexcept
+    : LeaveBroadcastResponse() {
     *this = ::std::move(from);
   }
 
-  inline LeaveRoomResponse& operator=(const LeaveRoomResponse& from) {
+  inline LeaveBroadcastResponse& operator=(const LeaveBroadcastResponse& from) {
     CopyFrom(from);
     return *this;
   }
-  inline LeaveRoomResponse& operator=(LeaveRoomResponse&& from) noexcept {
+  inline LeaveBroadcastResponse& operator=(LeaveBroadcastResponse&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -1618,20 +1614,20 @@ class LeaveRoomResponse final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const LeaveRoomResponse& default_instance() {
+  static const LeaveBroadcastResponse& default_instance() {
     return *internal_default_instance();
   }
-  static inline const LeaveRoomResponse* internal_default_instance() {
-    return reinterpret_cast<const LeaveRoomResponse*>(
-               &_LeaveRoomResponse_default_instance_);
+  static inline const LeaveBroadcastResponse* internal_default_instance() {
+    return reinterpret_cast<const LeaveBroadcastResponse*>(
+               &_LeaveBroadcastResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     7;
 
-  friend void swap(LeaveRoomResponse& a, LeaveRoomResponse& b) {
+  friend void swap(LeaveBroadcastResponse& a, LeaveBroadcastResponse& b) {
     a.Swap(&b);
   }
-  inline void Swap(LeaveRoomResponse* other) {
+  inline void Swap(LeaveBroadcastResponse* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -1644,7 +1640,7 @@ class LeaveRoomResponse final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(LeaveRoomResponse* other) {
+  void UnsafeArenaSwap(LeaveBroadcastResponse* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -1652,14 +1648,14 @@ class LeaveRoomResponse final :
 
   // implements Message ----------------------------------------------
 
-  LeaveRoomResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<LeaveRoomResponse>(arena);
+  LeaveBroadcastResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<LeaveBroadcastResponse>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const LeaveRoomResponse& from);
+  void CopyFrom(const LeaveBroadcastResponse& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const LeaveRoomResponse& from) {
-    LeaveRoomResponse::MergeImpl(*this, from);
+  void MergeFrom( const LeaveBroadcastResponse& from) {
+    LeaveBroadcastResponse::MergeImpl(*this, from);
   }
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
@@ -1677,15 +1673,15 @@ class LeaveRoomResponse final :
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(LeaveRoomResponse* other);
+  void InternalSwap(LeaveBroadcastResponse* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "openfoxwq.LeaveRoomResponse";
+    return "openfoxwq.LeaveBroadcastResponse";
   }
   protected:
-  explicit LeaveRoomResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit LeaveBroadcastResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   public:
 
@@ -1701,7 +1697,7 @@ class LeaveRoomResponse final :
   enum : int {
     kUnknownField1FieldNumber = 1,
     kPlayerIdFieldNumber = 2,
-    kRoomIdFieldNumber = 3,
+    kBroadcastIdFieldNumber = 3,
   };
   // optional int64 unknown_field_1 = 1;
   bool has_unknown_field_1() const;
@@ -1729,20 +1725,20 @@ class LeaveRoomResponse final :
   void _internal_set_player_id(int64_t value);
   public:
 
-  // required int64 room_id = 3;
-  bool has_room_id() const;
+  // required int64 broadcast_id = 3;
+  bool has_broadcast_id() const;
   private:
-  bool _internal_has_room_id() const;
+  bool _internal_has_broadcast_id() const;
   public:
-  void clear_room_id();
-  int64_t room_id() const;
-  void set_room_id(int64_t value);
+  void clear_broadcast_id();
+  int64_t broadcast_id() const;
+  void set_broadcast_id(int64_t value);
   private:
-  int64_t _internal_room_id() const;
-  void _internal_set_room_id(int64_t value);
+  int64_t _internal_broadcast_id() const;
+  void _internal_set_broadcast_id(int64_t value);
   public:
 
-  // @@protoc_insertion_point(class_scope:openfoxwq.LeaveRoomResponse)
+  // @@protoc_insertion_point(class_scope:openfoxwq.LeaveBroadcastResponse)
  private:
   class _Internal;
 
@@ -1757,7 +1753,7 @@ class LeaveRoomResponse final :
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     int64_t unknown_field_1_;
     int64_t player_id_;
-    int64_t room_id_;
+    int64_t broadcast_id_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_proto_2fbroadcast_2eproto;
@@ -1889,24 +1885,24 @@ class HeartbeatRequest final :
 };
 // -------------------------------------------------------------------
 
-class RoomConfigEvent_RoomConfig final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:openfoxwq.RoomConfigEvent.RoomConfig) */ {
+class BroadcastSettingEvent final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:openfoxwq.BroadcastSettingEvent) */ {
  public:
-  inline RoomConfigEvent_RoomConfig() : RoomConfigEvent_RoomConfig(nullptr) {}
-  ~RoomConfigEvent_RoomConfig() override;
-  explicit PROTOBUF_CONSTEXPR RoomConfigEvent_RoomConfig(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline BroadcastSettingEvent() : BroadcastSettingEvent(nullptr) {}
+  ~BroadcastSettingEvent() override;
+  explicit PROTOBUF_CONSTEXPR BroadcastSettingEvent(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  RoomConfigEvent_RoomConfig(const RoomConfigEvent_RoomConfig& from);
-  RoomConfigEvent_RoomConfig(RoomConfigEvent_RoomConfig&& from) noexcept
-    : RoomConfigEvent_RoomConfig() {
+  BroadcastSettingEvent(const BroadcastSettingEvent& from);
+  BroadcastSettingEvent(BroadcastSettingEvent&& from) noexcept
+    : BroadcastSettingEvent() {
     *this = ::std::move(from);
   }
 
-  inline RoomConfigEvent_RoomConfig& operator=(const RoomConfigEvent_RoomConfig& from) {
+  inline BroadcastSettingEvent& operator=(const BroadcastSettingEvent& from) {
     CopyFrom(from);
     return *this;
   }
-  inline RoomConfigEvent_RoomConfig& operator=(RoomConfigEvent_RoomConfig&& from) noexcept {
+  inline BroadcastSettingEvent& operator=(BroadcastSettingEvent&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -1936,20 +1932,20 @@ class RoomConfigEvent_RoomConfig final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const RoomConfigEvent_RoomConfig& default_instance() {
+  static const BroadcastSettingEvent& default_instance() {
     return *internal_default_instance();
   }
-  static inline const RoomConfigEvent_RoomConfig* internal_default_instance() {
-    return reinterpret_cast<const RoomConfigEvent_RoomConfig*>(
-               &_RoomConfigEvent_RoomConfig_default_instance_);
+  static inline const BroadcastSettingEvent* internal_default_instance() {
+    return reinterpret_cast<const BroadcastSettingEvent*>(
+               &_BroadcastSettingEvent_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     9;
 
-  friend void swap(RoomConfigEvent_RoomConfig& a, RoomConfigEvent_RoomConfig& b) {
+  friend void swap(BroadcastSettingEvent& a, BroadcastSettingEvent& b) {
     a.Swap(&b);
   }
-  inline void Swap(RoomConfigEvent_RoomConfig* other) {
+  inline void Swap(BroadcastSettingEvent* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -1962,7 +1958,7 @@ class RoomConfigEvent_RoomConfig final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(RoomConfigEvent_RoomConfig* other) {
+  void UnsafeArenaSwap(BroadcastSettingEvent* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -1970,14 +1966,14 @@ class RoomConfigEvent_RoomConfig final :
 
   // implements Message ----------------------------------------------
 
-  RoomConfigEvent_RoomConfig* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<RoomConfigEvent_RoomConfig>(arena);
+  BroadcastSettingEvent* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<BroadcastSettingEvent>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const RoomConfigEvent_RoomConfig& from);
+  void CopyFrom(const BroadcastSettingEvent& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const RoomConfigEvent_RoomConfig& from) {
-    RoomConfigEvent_RoomConfig::MergeImpl(*this, from);
+  void MergeFrom( const BroadcastSettingEvent& from) {
+    BroadcastSettingEvent::MergeImpl(*this, from);
   }
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
@@ -1995,15 +1991,15 @@ class RoomConfigEvent_RoomConfig final :
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(RoomConfigEvent_RoomConfig* other);
+  void InternalSwap(BroadcastSettingEvent* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "openfoxwq.RoomConfigEvent.RoomConfig";
+    return "openfoxwq.BroadcastSettingEvent";
   }
   protected:
-  explicit RoomConfigEvent_RoomConfig(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit BroadcastSettingEvent(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   public:
 
@@ -2017,314 +2013,29 @@ class RoomConfigEvent_RoomConfig final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kPlayerIdFirstFieldNumber = 1,
-    kPlayerIdSecondFieldNumber = 2,
-    kHandicapFieldNumber = 4,
-    kKomiFieldNumber = 5,
-    kMainTimeSecFieldNumber = 7,
-    kByoyomiTimeSecFieldNumber = 8,
-    kByoyomiPeriodsFieldNumber = 9,
-    kBoardSizeFieldNumber = 16,
-    kChineseRulesFieldNumber = 10,
-  };
-  // required int64 player_id_first = 1;
-  bool has_player_id_first() const;
-  private:
-  bool _internal_has_player_id_first() const;
-  public:
-  void clear_player_id_first();
-  int64_t player_id_first() const;
-  void set_player_id_first(int64_t value);
-  private:
-  int64_t _internal_player_id_first() const;
-  void _internal_set_player_id_first(int64_t value);
-  public:
-
-  // required int64 player_id_second = 2;
-  bool has_player_id_second() const;
-  private:
-  bool _internal_has_player_id_second() const;
-  public:
-  void clear_player_id_second();
-  int64_t player_id_second() const;
-  void set_player_id_second(int64_t value);
-  private:
-  int64_t _internal_player_id_second() const;
-  void _internal_set_player_id_second(int64_t value);
-  public:
-
-  // optional int64 handicap = 4;
-  bool has_handicap() const;
-  private:
-  bool _internal_has_handicap() const;
-  public:
-  void clear_handicap();
-  int64_t handicap() const;
-  void set_handicap(int64_t value);
-  private:
-  int64_t _internal_handicap() const;
-  void _internal_set_handicap(int64_t value);
-  public:
-
-  // optional int64 komi = 5;
-  bool has_komi() const;
-  private:
-  bool _internal_has_komi() const;
-  public:
-  void clear_komi();
-  int64_t komi() const;
-  void set_komi(int64_t value);
-  private:
-  int64_t _internal_komi() const;
-  void _internal_set_komi(int64_t value);
-  public:
-
-  // required int64 main_time_sec = 7;
-  bool has_main_time_sec() const;
-  private:
-  bool _internal_has_main_time_sec() const;
-  public:
-  void clear_main_time_sec();
-  int64_t main_time_sec() const;
-  void set_main_time_sec(int64_t value);
-  private:
-  int64_t _internal_main_time_sec() const;
-  void _internal_set_main_time_sec(int64_t value);
-  public:
-
-  // required int64 byoyomi_time_sec = 8;
-  bool has_byoyomi_time_sec() const;
-  private:
-  bool _internal_has_byoyomi_time_sec() const;
-  public:
-  void clear_byoyomi_time_sec();
-  int64_t byoyomi_time_sec() const;
-  void set_byoyomi_time_sec(int64_t value);
-  private:
-  int64_t _internal_byoyomi_time_sec() const;
-  void _internal_set_byoyomi_time_sec(int64_t value);
-  public:
-
-  // required int64 byoyomi_periods = 9;
-  bool has_byoyomi_periods() const;
-  private:
-  bool _internal_has_byoyomi_periods() const;
-  public:
-  void clear_byoyomi_periods();
-  int64_t byoyomi_periods() const;
-  void set_byoyomi_periods(int64_t value);
-  private:
-  int64_t _internal_byoyomi_periods() const;
-  void _internal_set_byoyomi_periods(int64_t value);
-  public:
-
-  // required int64 board_size = 16;
-  bool has_board_size() const;
-  private:
-  bool _internal_has_board_size() const;
-  public:
-  void clear_board_size();
-  int64_t board_size() const;
-  void set_board_size(int64_t value);
-  private:
-  int64_t _internal_board_size() const;
-  void _internal_set_board_size(int64_t value);
-  public:
-
-  // optional bool chinese_rules = 10;
-  bool has_chinese_rules() const;
-  private:
-  bool _internal_has_chinese_rules() const;
-  public:
-  void clear_chinese_rules();
-  bool chinese_rules() const;
-  void set_chinese_rules(bool value);
-  private:
-  bool _internal_chinese_rules() const;
-  void _internal_set_chinese_rules(bool value);
-  public:
-
-  // @@protoc_insertion_point(class_scope:openfoxwq.RoomConfigEvent.RoomConfig)
- private:
-  class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
-  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
-  typedef void InternalArenaConstructable_;
-  typedef void DestructorSkippable_;
-  struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    int64_t player_id_first_;
-    int64_t player_id_second_;
-    int64_t handicap_;
-    int64_t komi_;
-    int64_t main_time_sec_;
-    int64_t byoyomi_time_sec_;
-    int64_t byoyomi_periods_;
-    int64_t board_size_;
-    bool chinese_rules_;
-  };
-  union { Impl_ _impl_; };
-  friend struct ::TableStruct_proto_2fbroadcast_2eproto;
-};
-// -------------------------------------------------------------------
-
-class RoomConfigEvent final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:openfoxwq.RoomConfigEvent) */ {
- public:
-  inline RoomConfigEvent() : RoomConfigEvent(nullptr) {}
-  ~RoomConfigEvent() override;
-  explicit PROTOBUF_CONSTEXPR RoomConfigEvent(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
-
-  RoomConfigEvent(const RoomConfigEvent& from);
-  RoomConfigEvent(RoomConfigEvent&& from) noexcept
-    : RoomConfigEvent() {
-    *this = ::std::move(from);
-  }
-
-  inline RoomConfigEvent& operator=(const RoomConfigEvent& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  inline RoomConfigEvent& operator=(RoomConfigEvent&& from) noexcept {
-    if (this == &from) return *this;
-    if (GetOwningArena() == from.GetOwningArena()
-  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
-        && GetOwningArena() != nullptr
-  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
-    ) {
-      InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-
-  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
-  }
-  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
-  }
-
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
-  static const RoomConfigEvent& default_instance() {
-    return *internal_default_instance();
-  }
-  static inline const RoomConfigEvent* internal_default_instance() {
-    return reinterpret_cast<const RoomConfigEvent*>(
-               &_RoomConfigEvent_default_instance_);
-  }
-  static constexpr int kIndexInFileMessages =
-    10;
-
-  friend void swap(RoomConfigEvent& a, RoomConfigEvent& b) {
-    a.Swap(&b);
-  }
-  inline void Swap(RoomConfigEvent* other) {
-    if (other == this) return;
-  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
-    if (GetOwningArena() != nullptr &&
-        GetOwningArena() == other->GetOwningArena()) {
-   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
-    if (GetOwningArena() == other->GetOwningArena()) {
-  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
-      InternalSwap(other);
-    } else {
-      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
-    }
-  }
-  void UnsafeArenaSwap(RoomConfigEvent* other) {
-    if (other == this) return;
-    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
-    InternalSwap(other);
-  }
-
-  // implements Message ----------------------------------------------
-
-  RoomConfigEvent* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<RoomConfigEvent>(arena);
-  }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const RoomConfigEvent& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const RoomConfigEvent& from) {
-    RoomConfigEvent::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  uint8_t* _InternalSerialize(
-      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
-  void SharedDtor();
-  void SetCachedSize(int size) const final;
-  void InternalSwap(RoomConfigEvent* other);
-
-  private:
-  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
-  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "openfoxwq.RoomConfigEvent";
-  }
-  protected:
-  explicit RoomConfigEvent(::PROTOBUF_NAMESPACE_ID::Arena* arena,
-                       bool is_message_owned = false);
-  public:
-
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
-
-  // nested types ----------------------------------------------------
-
-  typedef RoomConfigEvent_RoomConfig RoomConfig;
-
-  // accessors -------------------------------------------------------
-
-  enum : int {
-    kConfigFieldNumber = 6,
+    kMatchSettingsFieldNumber = 6,
     kPlayerIdFieldNumber = 2,
-    kRoomIdFieldNumber = 3,
+    kBroadcastIdFieldNumber = 3,
     kPlayerIdBlackFieldNumber = 4,
     kPlayerIdWhiteFieldNumber = 5,
   };
-  // optional .openfoxwq.RoomConfigEvent.RoomConfig config = 6;
-  bool has_config() const;
+  // optional .openfoxwq.MatchSettings match_settings = 6;
+  bool has_match_settings() const;
   private:
-  bool _internal_has_config() const;
+  bool _internal_has_match_settings() const;
   public:
-  void clear_config();
-  const ::openfoxwq::RoomConfigEvent_RoomConfig& config() const;
-  PROTOBUF_NODISCARD ::openfoxwq::RoomConfigEvent_RoomConfig* release_config();
-  ::openfoxwq::RoomConfigEvent_RoomConfig* mutable_config();
-  void set_allocated_config(::openfoxwq::RoomConfigEvent_RoomConfig* config);
+  void clear_match_settings();
+  const ::openfoxwq::MatchSettings& match_settings() const;
+  PROTOBUF_NODISCARD ::openfoxwq::MatchSettings* release_match_settings();
+  ::openfoxwq::MatchSettings* mutable_match_settings();
+  void set_allocated_match_settings(::openfoxwq::MatchSettings* match_settings);
   private:
-  const ::openfoxwq::RoomConfigEvent_RoomConfig& _internal_config() const;
-  ::openfoxwq::RoomConfigEvent_RoomConfig* _internal_mutable_config();
+  const ::openfoxwq::MatchSettings& _internal_match_settings() const;
+  ::openfoxwq::MatchSettings* _internal_mutable_match_settings();
   public:
-  void unsafe_arena_set_allocated_config(
-      ::openfoxwq::RoomConfigEvent_RoomConfig* config);
-  ::openfoxwq::RoomConfigEvent_RoomConfig* unsafe_arena_release_config();
+  void unsafe_arena_set_allocated_match_settings(
+      ::openfoxwq::MatchSettings* match_settings);
+  ::openfoxwq::MatchSettings* unsafe_arena_release_match_settings();
 
   // required int64 player_id = 2;
   bool has_player_id() const;
@@ -2339,17 +2050,17 @@ class RoomConfigEvent final :
   void _internal_set_player_id(int64_t value);
   public:
 
-  // required int64 room_id = 3;
-  bool has_room_id() const;
+  // required int64 broadcast_id = 3;
+  bool has_broadcast_id() const;
   private:
-  bool _internal_has_room_id() const;
+  bool _internal_has_broadcast_id() const;
   public:
-  void clear_room_id();
-  int64_t room_id() const;
-  void set_room_id(int64_t value);
+  void clear_broadcast_id();
+  int64_t broadcast_id() const;
+  void set_broadcast_id(int64_t value);
   private:
-  int64_t _internal_room_id() const;
-  void _internal_set_room_id(int64_t value);
+  int64_t _internal_broadcast_id() const;
+  void _internal_set_broadcast_id(int64_t value);
   public:
 
   // optional int64 player_id_black = 4;
@@ -2378,7 +2089,7 @@ class RoomConfigEvent final :
   void _internal_set_player_id_white(int64_t value);
   public:
 
-  // @@protoc_insertion_point(class_scope:openfoxwq.RoomConfigEvent)
+  // @@protoc_insertion_point(class_scope:openfoxwq.BroadcastSettingEvent)
  private:
   class _Internal;
 
@@ -2391,9 +2102,9 @@ class RoomConfigEvent final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::openfoxwq::RoomConfigEvent_RoomConfig* config_;
+    ::openfoxwq::MatchSettings* match_settings_;
     int64_t player_id_;
-    int64_t room_id_;
+    int64_t broadcast_id_;
     int64_t player_id_black_;
     int64_t player_id_white_;
   };
@@ -2402,24 +2113,24 @@ class RoomConfigEvent final :
 };
 // -------------------------------------------------------------------
 
-class RoomStateEvent_RoomState final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:openfoxwq.RoomStateEvent.RoomState) */ {
+class BroadcastStateEvent_BroadcastState final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:openfoxwq.BroadcastStateEvent.BroadcastState) */ {
  public:
-  inline RoomStateEvent_RoomState() : RoomStateEvent_RoomState(nullptr) {}
-  ~RoomStateEvent_RoomState() override;
-  explicit PROTOBUF_CONSTEXPR RoomStateEvent_RoomState(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline BroadcastStateEvent_BroadcastState() : BroadcastStateEvent_BroadcastState(nullptr) {}
+  ~BroadcastStateEvent_BroadcastState() override;
+  explicit PROTOBUF_CONSTEXPR BroadcastStateEvent_BroadcastState(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  RoomStateEvent_RoomState(const RoomStateEvent_RoomState& from);
-  RoomStateEvent_RoomState(RoomStateEvent_RoomState&& from) noexcept
-    : RoomStateEvent_RoomState() {
+  BroadcastStateEvent_BroadcastState(const BroadcastStateEvent_BroadcastState& from);
+  BroadcastStateEvent_BroadcastState(BroadcastStateEvent_BroadcastState&& from) noexcept
+    : BroadcastStateEvent_BroadcastState() {
     *this = ::std::move(from);
   }
 
-  inline RoomStateEvent_RoomState& operator=(const RoomStateEvent_RoomState& from) {
+  inline BroadcastStateEvent_BroadcastState& operator=(const BroadcastStateEvent_BroadcastState& from) {
     CopyFrom(from);
     return *this;
   }
-  inline RoomStateEvent_RoomState& operator=(RoomStateEvent_RoomState&& from) noexcept {
+  inline BroadcastStateEvent_BroadcastState& operator=(BroadcastStateEvent_BroadcastState&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -2449,20 +2160,20 @@ class RoomStateEvent_RoomState final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const RoomStateEvent_RoomState& default_instance() {
+  static const BroadcastStateEvent_BroadcastState& default_instance() {
     return *internal_default_instance();
   }
-  static inline const RoomStateEvent_RoomState* internal_default_instance() {
-    return reinterpret_cast<const RoomStateEvent_RoomState*>(
-               &_RoomStateEvent_RoomState_default_instance_);
+  static inline const BroadcastStateEvent_BroadcastState* internal_default_instance() {
+    return reinterpret_cast<const BroadcastStateEvent_BroadcastState*>(
+               &_BroadcastStateEvent_BroadcastState_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    11;
+    10;
 
-  friend void swap(RoomStateEvent_RoomState& a, RoomStateEvent_RoomState& b) {
+  friend void swap(BroadcastStateEvent_BroadcastState& a, BroadcastStateEvent_BroadcastState& b) {
     a.Swap(&b);
   }
-  inline void Swap(RoomStateEvent_RoomState* other) {
+  inline void Swap(BroadcastStateEvent_BroadcastState* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -2475,7 +2186,7 @@ class RoomStateEvent_RoomState final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(RoomStateEvent_RoomState* other) {
+  void UnsafeArenaSwap(BroadcastStateEvent_BroadcastState* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -2483,14 +2194,14 @@ class RoomStateEvent_RoomState final :
 
   // implements Message ----------------------------------------------
 
-  RoomStateEvent_RoomState* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<RoomStateEvent_RoomState>(arena);
+  BroadcastStateEvent_BroadcastState* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<BroadcastStateEvent_BroadcastState>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const RoomStateEvent_RoomState& from);
+  void CopyFrom(const BroadcastStateEvent_BroadcastState& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const RoomStateEvent_RoomState& from) {
-    RoomStateEvent_RoomState::MergeImpl(*this, from);
+  void MergeFrom( const BroadcastStateEvent_BroadcastState& from) {
+    BroadcastStateEvent_BroadcastState::MergeImpl(*this, from);
   }
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
@@ -2508,15 +2219,15 @@ class RoomStateEvent_RoomState final :
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(RoomStateEvent_RoomState* other);
+  void InternalSwap(BroadcastStateEvent_BroadcastState* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "openfoxwq.RoomStateEvent.RoomState";
+    return "openfoxwq.BroadcastStateEvent.BroadcastState";
   }
   protected:
-  explicit RoomStateEvent_RoomState(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit BroadcastStateEvent_BroadcastState(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   public:
 
@@ -2582,7 +2293,7 @@ class RoomStateEvent_RoomState final :
   void _internal_set_unknown_field_3(int64_t value);
   public:
 
-  // @@protoc_insertion_point(class_scope:openfoxwq.RoomStateEvent.RoomState)
+  // @@protoc_insertion_point(class_scope:openfoxwq.BroadcastStateEvent.BroadcastState)
  private:
   class _Internal;
 
@@ -2601,24 +2312,24 @@ class RoomStateEvent_RoomState final :
 };
 // -------------------------------------------------------------------
 
-class RoomStateEvent final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:openfoxwq.RoomStateEvent) */ {
+class BroadcastStateEvent final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:openfoxwq.BroadcastStateEvent) */ {
  public:
-  inline RoomStateEvent() : RoomStateEvent(nullptr) {}
-  ~RoomStateEvent() override;
-  explicit PROTOBUF_CONSTEXPR RoomStateEvent(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline BroadcastStateEvent() : BroadcastStateEvent(nullptr) {}
+  ~BroadcastStateEvent() override;
+  explicit PROTOBUF_CONSTEXPR BroadcastStateEvent(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  RoomStateEvent(const RoomStateEvent& from);
-  RoomStateEvent(RoomStateEvent&& from) noexcept
-    : RoomStateEvent() {
+  BroadcastStateEvent(const BroadcastStateEvent& from);
+  BroadcastStateEvent(BroadcastStateEvent&& from) noexcept
+    : BroadcastStateEvent() {
     *this = ::std::move(from);
   }
 
-  inline RoomStateEvent& operator=(const RoomStateEvent& from) {
+  inline BroadcastStateEvent& operator=(const BroadcastStateEvent& from) {
     CopyFrom(from);
     return *this;
   }
-  inline RoomStateEvent& operator=(RoomStateEvent&& from) noexcept {
+  inline BroadcastStateEvent& operator=(BroadcastStateEvent&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -2648,20 +2359,20 @@ class RoomStateEvent final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const RoomStateEvent& default_instance() {
+  static const BroadcastStateEvent& default_instance() {
     return *internal_default_instance();
   }
-  static inline const RoomStateEvent* internal_default_instance() {
-    return reinterpret_cast<const RoomStateEvent*>(
-               &_RoomStateEvent_default_instance_);
+  static inline const BroadcastStateEvent* internal_default_instance() {
+    return reinterpret_cast<const BroadcastStateEvent*>(
+               &_BroadcastStateEvent_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    12;
+    11;
 
-  friend void swap(RoomStateEvent& a, RoomStateEvent& b) {
+  friend void swap(BroadcastStateEvent& a, BroadcastStateEvent& b) {
     a.Swap(&b);
   }
-  inline void Swap(RoomStateEvent* other) {
+  inline void Swap(BroadcastStateEvent* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -2674,7 +2385,7 @@ class RoomStateEvent final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(RoomStateEvent* other) {
+  void UnsafeArenaSwap(BroadcastStateEvent* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -2682,14 +2393,14 @@ class RoomStateEvent final :
 
   // implements Message ----------------------------------------------
 
-  RoomStateEvent* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<RoomStateEvent>(arena);
+  BroadcastStateEvent* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<BroadcastStateEvent>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const RoomStateEvent& from);
+  void CopyFrom(const BroadcastStateEvent& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const RoomStateEvent& from) {
-    RoomStateEvent::MergeImpl(*this, from);
+  void MergeFrom( const BroadcastStateEvent& from) {
+    BroadcastStateEvent::MergeImpl(*this, from);
   }
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
@@ -2707,15 +2418,15 @@ class RoomStateEvent final :
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(RoomStateEvent* other);
+  void InternalSwap(BroadcastStateEvent* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "openfoxwq.RoomStateEvent";
+    return "openfoxwq.BroadcastStateEvent";
   }
   protected:
-  explicit RoomStateEvent(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit BroadcastStateEvent(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   public:
 
@@ -2726,33 +2437,33 @@ class RoomStateEvent final :
 
   // nested types ----------------------------------------------------
 
-  typedef RoomStateEvent_RoomState RoomState;
+  typedef BroadcastStateEvent_BroadcastState BroadcastState;
 
   // accessors -------------------------------------------------------
 
   enum : int {
     kStateFieldNumber = 4,
     kPlayerIdFieldNumber = 2,
-    kRoomIdFieldNumber = 3,
+    kBroadcastIdFieldNumber = 3,
     kMoveCountFieldNumber = 6,
   };
-  // optional .openfoxwq.RoomStateEvent.RoomState state = 4;
+  // optional .openfoxwq.BroadcastStateEvent.BroadcastState state = 4;
   bool has_state() const;
   private:
   bool _internal_has_state() const;
   public:
   void clear_state();
-  const ::openfoxwq::RoomStateEvent_RoomState& state() const;
-  PROTOBUF_NODISCARD ::openfoxwq::RoomStateEvent_RoomState* release_state();
-  ::openfoxwq::RoomStateEvent_RoomState* mutable_state();
-  void set_allocated_state(::openfoxwq::RoomStateEvent_RoomState* state);
+  const ::openfoxwq::BroadcastStateEvent_BroadcastState& state() const;
+  PROTOBUF_NODISCARD ::openfoxwq::BroadcastStateEvent_BroadcastState* release_state();
+  ::openfoxwq::BroadcastStateEvent_BroadcastState* mutable_state();
+  void set_allocated_state(::openfoxwq::BroadcastStateEvent_BroadcastState* state);
   private:
-  const ::openfoxwq::RoomStateEvent_RoomState& _internal_state() const;
-  ::openfoxwq::RoomStateEvent_RoomState* _internal_mutable_state();
+  const ::openfoxwq::BroadcastStateEvent_BroadcastState& _internal_state() const;
+  ::openfoxwq::BroadcastStateEvent_BroadcastState* _internal_mutable_state();
   public:
   void unsafe_arena_set_allocated_state(
-      ::openfoxwq::RoomStateEvent_RoomState* state);
-  ::openfoxwq::RoomStateEvent_RoomState* unsafe_arena_release_state();
+      ::openfoxwq::BroadcastStateEvent_BroadcastState* state);
+  ::openfoxwq::BroadcastStateEvent_BroadcastState* unsafe_arena_release_state();
 
   // required int64 player_id = 2;
   bool has_player_id() const;
@@ -2767,17 +2478,17 @@ class RoomStateEvent final :
   void _internal_set_player_id(int64_t value);
   public:
 
-  // required int64 room_id = 3;
-  bool has_room_id() const;
+  // required int64 broadcast_id = 3;
+  bool has_broadcast_id() const;
   private:
-  bool _internal_has_room_id() const;
+  bool _internal_has_broadcast_id() const;
   public:
-  void clear_room_id();
-  int64_t room_id() const;
-  void set_room_id(int64_t value);
+  void clear_broadcast_id();
+  int64_t broadcast_id() const;
+  void set_broadcast_id(int64_t value);
   private:
-  int64_t _internal_room_id() const;
-  void _internal_set_room_id(int64_t value);
+  int64_t _internal_broadcast_id() const;
+  void _internal_set_broadcast_id(int64_t value);
   public:
 
   // optional int64 move_count = 6;
@@ -2793,7 +2504,7 @@ class RoomStateEvent final :
   void _internal_set_move_count(int64_t value);
   public:
 
-  // @@protoc_insertion_point(class_scope:openfoxwq.RoomStateEvent)
+  // @@protoc_insertion_point(class_scope:openfoxwq.BroadcastStateEvent)
  private:
   class _Internal;
 
@@ -2806,9 +2517,9 @@ class RoomStateEvent final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::openfoxwq::RoomStateEvent_RoomState* state_;
+    ::openfoxwq::BroadcastStateEvent_BroadcastState* state_;
     int64_t player_id_;
-    int64_t room_id_;
+    int64_t broadcast_id_;
     int64_t move_count_;
   };
   union { Impl_ _impl_; };
@@ -2816,24 +2527,24 @@ class RoomStateEvent final :
 };
 // -------------------------------------------------------------------
 
-class RoomMoveEvent final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:openfoxwq.RoomMoveEvent) */ {
+class BroadcastMoveEvent final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:openfoxwq.BroadcastMoveEvent) */ {
  public:
-  inline RoomMoveEvent() : RoomMoveEvent(nullptr) {}
-  ~RoomMoveEvent() override;
-  explicit PROTOBUF_CONSTEXPR RoomMoveEvent(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline BroadcastMoveEvent() : BroadcastMoveEvent(nullptr) {}
+  ~BroadcastMoveEvent() override;
+  explicit PROTOBUF_CONSTEXPR BroadcastMoveEvent(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  RoomMoveEvent(const RoomMoveEvent& from);
-  RoomMoveEvent(RoomMoveEvent&& from) noexcept
-    : RoomMoveEvent() {
+  BroadcastMoveEvent(const BroadcastMoveEvent& from);
+  BroadcastMoveEvent(BroadcastMoveEvent&& from) noexcept
+    : BroadcastMoveEvent() {
     *this = ::std::move(from);
   }
 
-  inline RoomMoveEvent& operator=(const RoomMoveEvent& from) {
+  inline BroadcastMoveEvent& operator=(const BroadcastMoveEvent& from) {
     CopyFrom(from);
     return *this;
   }
-  inline RoomMoveEvent& operator=(RoomMoveEvent&& from) noexcept {
+  inline BroadcastMoveEvent& operator=(BroadcastMoveEvent&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -2863,20 +2574,20 @@ class RoomMoveEvent final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const RoomMoveEvent& default_instance() {
+  static const BroadcastMoveEvent& default_instance() {
     return *internal_default_instance();
   }
-  static inline const RoomMoveEvent* internal_default_instance() {
-    return reinterpret_cast<const RoomMoveEvent*>(
-               &_RoomMoveEvent_default_instance_);
+  static inline const BroadcastMoveEvent* internal_default_instance() {
+    return reinterpret_cast<const BroadcastMoveEvent*>(
+               &_BroadcastMoveEvent_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    13;
+    12;
 
-  friend void swap(RoomMoveEvent& a, RoomMoveEvent& b) {
+  friend void swap(BroadcastMoveEvent& a, BroadcastMoveEvent& b) {
     a.Swap(&b);
   }
-  inline void Swap(RoomMoveEvent* other) {
+  inline void Swap(BroadcastMoveEvent* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -2889,7 +2600,7 @@ class RoomMoveEvent final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(RoomMoveEvent* other) {
+  void UnsafeArenaSwap(BroadcastMoveEvent* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -2897,14 +2608,14 @@ class RoomMoveEvent final :
 
   // implements Message ----------------------------------------------
 
-  RoomMoveEvent* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<RoomMoveEvent>(arena);
+  BroadcastMoveEvent* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<BroadcastMoveEvent>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const RoomMoveEvent& from);
+  void CopyFrom(const BroadcastMoveEvent& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const RoomMoveEvent& from) {
-    RoomMoveEvent::MergeImpl(*this, from);
+  void MergeFrom( const BroadcastMoveEvent& from) {
+    BroadcastMoveEvent::MergeImpl(*this, from);
   }
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
@@ -2922,15 +2633,15 @@ class RoomMoveEvent final :
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(RoomMoveEvent* other);
+  void InternalSwap(BroadcastMoveEvent* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "openfoxwq.RoomMoveEvent";
+    return "openfoxwq.BroadcastMoveEvent";
   }
   protected:
-  explicit RoomMoveEvent(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit BroadcastMoveEvent(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   public:
 
@@ -2945,7 +2656,7 @@ class RoomMoveEvent final :
 
   enum : int {
     kPlayerIdFieldNumber = 2,
-    kRoomIdFieldNumber = 3,
+    kBroadcastIdFieldNumber = 3,
     kEncodedMoveFieldNumber = 4,
     kUnknownField5FieldNumber = 5,
     kTimeLeftFieldNumber = 6,
@@ -2964,17 +2675,17 @@ class RoomMoveEvent final :
   void _internal_set_player_id(int64_t value);
   public:
 
-  // required int64 room_id = 3;
-  bool has_room_id() const;
+  // required int64 broadcast_id = 3;
+  bool has_broadcast_id() const;
   private:
-  bool _internal_has_room_id() const;
+  bool _internal_has_broadcast_id() const;
   public:
-  void clear_room_id();
-  int64_t room_id() const;
-  void set_room_id(int64_t value);
+  void clear_broadcast_id();
+  int64_t broadcast_id() const;
+  void set_broadcast_id(int64_t value);
   private:
-  int64_t _internal_room_id() const;
-  void _internal_set_room_id(int64_t value);
+  int64_t _internal_broadcast_id() const;
+  void _internal_set_broadcast_id(int64_t value);
   public:
 
   // optional int64 encoded_move = 4;
@@ -3029,7 +2740,7 @@ class RoomMoveEvent final :
   void _internal_set_move_number(int64_t value);
   public:
 
-  // @@protoc_insertion_point(class_scope:openfoxwq.RoomMoveEvent)
+  // @@protoc_insertion_point(class_scope:openfoxwq.BroadcastMoveEvent)
  private:
   class _Internal;
 
@@ -3043,7 +2754,7 @@ class RoomMoveEvent final :
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     int64_t player_id_;
-    int64_t room_id_;
+    int64_t broadcast_id_;
     int64_t encoded_move_;
     int64_t unknown_field_5_;
     int64_t time_left_;
@@ -3054,24 +2765,24 @@ class RoomMoveEvent final :
 };
 // -------------------------------------------------------------------
 
-class RoomGameResultEvent final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:openfoxwq.RoomGameResultEvent) */ {
+class BroadcastGameResultEvent final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:openfoxwq.BroadcastGameResultEvent) */ {
  public:
-  inline RoomGameResultEvent() : RoomGameResultEvent(nullptr) {}
-  ~RoomGameResultEvent() override;
-  explicit PROTOBUF_CONSTEXPR RoomGameResultEvent(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline BroadcastGameResultEvent() : BroadcastGameResultEvent(nullptr) {}
+  ~BroadcastGameResultEvent() override;
+  explicit PROTOBUF_CONSTEXPR BroadcastGameResultEvent(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  RoomGameResultEvent(const RoomGameResultEvent& from);
-  RoomGameResultEvent(RoomGameResultEvent&& from) noexcept
-    : RoomGameResultEvent() {
+  BroadcastGameResultEvent(const BroadcastGameResultEvent& from);
+  BroadcastGameResultEvent(BroadcastGameResultEvent&& from) noexcept
+    : BroadcastGameResultEvent() {
     *this = ::std::move(from);
   }
 
-  inline RoomGameResultEvent& operator=(const RoomGameResultEvent& from) {
+  inline BroadcastGameResultEvent& operator=(const BroadcastGameResultEvent& from) {
     CopyFrom(from);
     return *this;
   }
-  inline RoomGameResultEvent& operator=(RoomGameResultEvent&& from) noexcept {
+  inline BroadcastGameResultEvent& operator=(BroadcastGameResultEvent&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -3101,20 +2812,20 @@ class RoomGameResultEvent final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const RoomGameResultEvent& default_instance() {
+  static const BroadcastGameResultEvent& default_instance() {
     return *internal_default_instance();
   }
-  static inline const RoomGameResultEvent* internal_default_instance() {
-    return reinterpret_cast<const RoomGameResultEvent*>(
-               &_RoomGameResultEvent_default_instance_);
+  static inline const BroadcastGameResultEvent* internal_default_instance() {
+    return reinterpret_cast<const BroadcastGameResultEvent*>(
+               &_BroadcastGameResultEvent_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    14;
+    13;
 
-  friend void swap(RoomGameResultEvent& a, RoomGameResultEvent& b) {
+  friend void swap(BroadcastGameResultEvent& a, BroadcastGameResultEvent& b) {
     a.Swap(&b);
   }
-  inline void Swap(RoomGameResultEvent* other) {
+  inline void Swap(BroadcastGameResultEvent* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -3127,7 +2838,7 @@ class RoomGameResultEvent final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(RoomGameResultEvent* other) {
+  void UnsafeArenaSwap(BroadcastGameResultEvent* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -3135,14 +2846,14 @@ class RoomGameResultEvent final :
 
   // implements Message ----------------------------------------------
 
-  RoomGameResultEvent* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<RoomGameResultEvent>(arena);
+  BroadcastGameResultEvent* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<BroadcastGameResultEvent>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const RoomGameResultEvent& from);
+  void CopyFrom(const BroadcastGameResultEvent& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const RoomGameResultEvent& from) {
-    RoomGameResultEvent::MergeImpl(*this, from);
+  void MergeFrom( const BroadcastGameResultEvent& from) {
+    BroadcastGameResultEvent::MergeImpl(*this, from);
   }
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
@@ -3160,15 +2871,15 @@ class RoomGameResultEvent final :
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(RoomGameResultEvent* other);
+  void InternalSwap(BroadcastGameResultEvent* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "openfoxwq.RoomGameResultEvent";
+    return "openfoxwq.BroadcastGameResultEvent";
   }
   protected:
-  explicit RoomGameResultEvent(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit BroadcastGameResultEvent(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   public:
 
@@ -3184,7 +2895,7 @@ class RoomGameResultEvent final :
   enum : int {
     kUnknownField1FieldNumber = 1,
     kUnknownField2FieldNumber = 2,
-    kRoomIdFieldNumber = 3,
+    kBroadcastIdFieldNumber = 3,
     kScoreLeadFieldNumber = 5,
     kWinnerFieldNumber = 4,
   };
@@ -3214,17 +2925,17 @@ class RoomGameResultEvent final :
   void _internal_set_unknown_field_2(int64_t value);
   public:
 
-  // required int64 room_id = 3;
-  bool has_room_id() const;
+  // required int64 broadcast_id = 3;
+  bool has_broadcast_id() const;
   private:
-  bool _internal_has_room_id() const;
+  bool _internal_has_broadcast_id() const;
   public:
-  void clear_room_id();
-  int64_t room_id() const;
-  void set_room_id(int64_t value);
+  void clear_broadcast_id();
+  int64_t broadcast_id() const;
+  void set_broadcast_id(int64_t value);
   private:
-  int64_t _internal_room_id() const;
-  void _internal_set_room_id(int64_t value);
+  int64_t _internal_broadcast_id() const;
+  void _internal_set_broadcast_id(int64_t value);
   public:
 
   // optional int64 score_lead = 5;
@@ -3253,7 +2964,7 @@ class RoomGameResultEvent final :
   void _internal_set_winner(::openfoxwq::Color value);
   public:
 
-  // @@protoc_insertion_point(class_scope:openfoxwq.RoomGameResultEvent)
+  // @@protoc_insertion_point(class_scope:openfoxwq.BroadcastGameResultEvent)
  private:
   class _Internal;
 
@@ -3265,7 +2976,7 @@ class RoomGameResultEvent final :
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     int64_t unknown_field_1_;
     int64_t unknown_field_2_;
-    int64_t room_id_;
+    int64_t broadcast_id_;
     int64_t score_lead_;
     int winner_;
   };
@@ -3274,24 +2985,24 @@ class RoomGameResultEvent final :
 };
 // -------------------------------------------------------------------
 
-class RoomTimeControlEvent final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:openfoxwq.RoomTimeControlEvent) */ {
+class BroadcastTimeControlEvent final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:openfoxwq.BroadcastTimeControlEvent) */ {
  public:
-  inline RoomTimeControlEvent() : RoomTimeControlEvent(nullptr) {}
-  ~RoomTimeControlEvent() override;
-  explicit PROTOBUF_CONSTEXPR RoomTimeControlEvent(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline BroadcastTimeControlEvent() : BroadcastTimeControlEvent(nullptr) {}
+  ~BroadcastTimeControlEvent() override;
+  explicit PROTOBUF_CONSTEXPR BroadcastTimeControlEvent(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  RoomTimeControlEvent(const RoomTimeControlEvent& from);
-  RoomTimeControlEvent(RoomTimeControlEvent&& from) noexcept
-    : RoomTimeControlEvent() {
+  BroadcastTimeControlEvent(const BroadcastTimeControlEvent& from);
+  BroadcastTimeControlEvent(BroadcastTimeControlEvent&& from) noexcept
+    : BroadcastTimeControlEvent() {
     *this = ::std::move(from);
   }
 
-  inline RoomTimeControlEvent& operator=(const RoomTimeControlEvent& from) {
+  inline BroadcastTimeControlEvent& operator=(const BroadcastTimeControlEvent& from) {
     CopyFrom(from);
     return *this;
   }
-  inline RoomTimeControlEvent& operator=(RoomTimeControlEvent&& from) noexcept {
+  inline BroadcastTimeControlEvent& operator=(BroadcastTimeControlEvent&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -3321,20 +3032,20 @@ class RoomTimeControlEvent final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const RoomTimeControlEvent& default_instance() {
+  static const BroadcastTimeControlEvent& default_instance() {
     return *internal_default_instance();
   }
-  static inline const RoomTimeControlEvent* internal_default_instance() {
-    return reinterpret_cast<const RoomTimeControlEvent*>(
-               &_RoomTimeControlEvent_default_instance_);
+  static inline const BroadcastTimeControlEvent* internal_default_instance() {
+    return reinterpret_cast<const BroadcastTimeControlEvent*>(
+               &_BroadcastTimeControlEvent_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    15;
+    14;
 
-  friend void swap(RoomTimeControlEvent& a, RoomTimeControlEvent& b) {
+  friend void swap(BroadcastTimeControlEvent& a, BroadcastTimeControlEvent& b) {
     a.Swap(&b);
   }
-  inline void Swap(RoomTimeControlEvent* other) {
+  inline void Swap(BroadcastTimeControlEvent* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -3347,7 +3058,7 @@ class RoomTimeControlEvent final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(RoomTimeControlEvent* other) {
+  void UnsafeArenaSwap(BroadcastTimeControlEvent* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -3355,14 +3066,14 @@ class RoomTimeControlEvent final :
 
   // implements Message ----------------------------------------------
 
-  RoomTimeControlEvent* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<RoomTimeControlEvent>(arena);
+  BroadcastTimeControlEvent* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<BroadcastTimeControlEvent>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const RoomTimeControlEvent& from);
+  void CopyFrom(const BroadcastTimeControlEvent& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const RoomTimeControlEvent& from) {
-    RoomTimeControlEvent::MergeImpl(*this, from);
+  void MergeFrom( const BroadcastTimeControlEvent& from) {
+    BroadcastTimeControlEvent::MergeImpl(*this, from);
   }
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
@@ -3380,15 +3091,15 @@ class RoomTimeControlEvent final :
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(RoomTimeControlEvent* other);
+  void InternalSwap(BroadcastTimeControlEvent* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "openfoxwq.RoomTimeControlEvent";
+    return "openfoxwq.BroadcastTimeControlEvent";
   }
   protected:
-  explicit RoomTimeControlEvent(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit BroadcastTimeControlEvent(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   public:
 
@@ -3403,7 +3114,7 @@ class RoomTimeControlEvent final :
 
   enum : int {
     kPlayerIdFieldNumber = 2,
-    kRoomIdFieldNumber = 3,
+    kBroadcastIdFieldNumber = 3,
     kUnknownField4FieldNumber = 4,
     kCurrentPeriodFieldNumber = 5,
     kTimeLeftFieldNumber = 6,
@@ -3421,17 +3132,17 @@ class RoomTimeControlEvent final :
   void _internal_set_player_id(int64_t value);
   public:
 
-  // required int64 room_id = 3;
-  bool has_room_id() const;
+  // required int64 broadcast_id = 3;
+  bool has_broadcast_id() const;
   private:
-  bool _internal_has_room_id() const;
+  bool _internal_has_broadcast_id() const;
   public:
-  void clear_room_id();
-  int64_t room_id() const;
-  void set_room_id(int64_t value);
+  void clear_broadcast_id();
+  int64_t broadcast_id() const;
+  void set_broadcast_id(int64_t value);
   private:
-  int64_t _internal_room_id() const;
-  void _internal_set_room_id(int64_t value);
+  int64_t _internal_broadcast_id() const;
+  void _internal_set_broadcast_id(int64_t value);
   public:
 
   // optional int64 unknown_field_4 = 4;
@@ -3473,7 +3184,7 @@ class RoomTimeControlEvent final :
   void _internal_set_time_left(int64_t value);
   public:
 
-  // @@protoc_insertion_point(class_scope:openfoxwq.RoomTimeControlEvent)
+  // @@protoc_insertion_point(class_scope:openfoxwq.BroadcastTimeControlEvent)
  private:
   class _Internal;
 
@@ -3487,7 +3198,7 @@ class RoomTimeControlEvent final :
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     int64_t player_id_;
-    int64_t room_id_;
+    int64_t broadcast_id_;
     int64_t unknown_field_4_;
     int64_t current_period_;
     int64_t time_left_;
@@ -3552,7 +3263,7 @@ class UnknownRequest1 final :
                &_UnknownRequest1_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    16;
+    15;
 
   friend void swap(UnknownRequest1& a, UnknownRequest1& b) {
     a.Swap(&b);
@@ -3730,7 +3441,7 @@ class UnknownRequest2 final :
                &_UnknownRequest2_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    17;
+    16;
 
   friend void swap(UnknownRequest2& a, UnknownRequest2& b) {
     a.Swap(&b);
@@ -3920,7 +3631,7 @@ class UnknownRequest3 final :
                &_UnknownRequest3_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    18;
+    17;
 
   friend void swap(UnknownRequest3& a, UnknownRequest3& b) {
     a.Swap(&b);
@@ -4080,7 +3791,7 @@ class UnknownRequest4 final :
                &_UnknownRequest4_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    19;
+    18;
 
   friend void swap(UnknownRequest4& a, UnknownRequest4& b) {
     a.Swap(&b);
@@ -4270,7 +3981,7 @@ class UnknownRequest5 final :
                &_UnknownRequest5_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    20;
+    19;
 
   friend void swap(UnknownRequest5& a, UnknownRequest5& b) {
     a.Swap(&b);
@@ -4430,7 +4141,7 @@ class UnknownRequest6 final :
                &_UnknownRequest6_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    21;
+    20;
 
   friend void swap(UnknownRequest6& a, UnknownRequest6& b) {
     a.Swap(&b);
@@ -4590,7 +4301,7 @@ class UnknownResponse6 final :
                &_UnknownResponse6_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    22;
+    21;
 
   friend void swap(UnknownResponse6& a, UnknownResponse6& b) {
     a.Swap(&b);
@@ -4765,7 +4476,7 @@ class UnknownRequest7 final :
                &_UnknownRequest7_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    23;
+    22;
 
   friend void swap(UnknownRequest7& a, UnknownRequest7& b) {
     a.Swap(&b);
@@ -4925,7 +4636,7 @@ class UnknownResponse7 final :
                &_UnknownResponse7_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    24;
+    23;
 
   friend void swap(UnknownResponse7& a, UnknownResponse7& b) {
     a.Swap(&b);
@@ -5100,7 +4811,7 @@ class UnknownRequest8 final :
                &_UnknownRequest8_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    25;
+    24;
 
   friend void swap(UnknownRequest8& a, UnknownRequest8& b) {
     a.Swap(&b);
@@ -5260,7 +4971,7 @@ class UnknownResponse8 final :
                &_UnknownResponse8_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    26;
+    25;
 
   friend void swap(UnknownResponse8& a, UnknownResponse8& b) {
     a.Swap(&b);
@@ -5445,7 +5156,75 @@ inline void LoginBroadcastServerRequest::set_version(int64_t value) {
   // @@protoc_insertion_point(field_set:openfoxwq.LoginBroadcastServerRequest.version)
 }
 
-// required string token = 5;
+// required string mac_address = 4;
+inline bool LoginBroadcastServerRequest::_internal_has_mac_address() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool LoginBroadcastServerRequest::has_mac_address() const {
+  return _internal_has_mac_address();
+}
+inline void LoginBroadcastServerRequest::clear_mac_address() {
+  _impl_.mac_address_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
+}
+inline const std::string& LoginBroadcastServerRequest::mac_address() const {
+  // @@protoc_insertion_point(field_get:openfoxwq.LoginBroadcastServerRequest.mac_address)
+  return _internal_mac_address();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void LoginBroadcastServerRequest::set_mac_address(ArgT0&& arg0, ArgT... args) {
+ _impl_._has_bits_[0] |= 0x00000001u;
+ _impl_.mac_address_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:openfoxwq.LoginBroadcastServerRequest.mac_address)
+}
+inline std::string* LoginBroadcastServerRequest::mutable_mac_address() {
+  std::string* _s = _internal_mutable_mac_address();
+  // @@protoc_insertion_point(field_mutable:openfoxwq.LoginBroadcastServerRequest.mac_address)
+  return _s;
+}
+inline const std::string& LoginBroadcastServerRequest::_internal_mac_address() const {
+  return _impl_.mac_address_.Get();
+}
+inline void LoginBroadcastServerRequest::_internal_set_mac_address(const std::string& value) {
+  _impl_._has_bits_[0] |= 0x00000001u;
+  _impl_.mac_address_.Set(value, GetArenaForAllocation());
+}
+inline std::string* LoginBroadcastServerRequest::_internal_mutable_mac_address() {
+  _impl_._has_bits_[0] |= 0x00000001u;
+  return _impl_.mac_address_.Mutable(GetArenaForAllocation());
+}
+inline std::string* LoginBroadcastServerRequest::release_mac_address() {
+  // @@protoc_insertion_point(field_release:openfoxwq.LoginBroadcastServerRequest.mac_address)
+  if (!_internal_has_mac_address()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.mac_address_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.mac_address_.IsDefault()) {
+    _impl_.mac_address_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void LoginBroadcastServerRequest::set_allocated_mac_address(std::string* mac_address) {
+  if (mac_address != nullptr) {
+    _impl_._has_bits_[0] |= 0x00000001u;
+  } else {
+    _impl_._has_bits_[0] &= ~0x00000001u;
+  }
+  _impl_.mac_address_.SetAllocated(mac_address, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.mac_address_.IsDefault()) {
+    _impl_.mac_address_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:openfoxwq.LoginBroadcastServerRequest.mac_address)
+}
+
+// required bytes token = 5;
 inline bool LoginBroadcastServerRequest::_internal_has_token() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -5465,7 +5244,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void LoginBroadcastServerRequest::set_token(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.token_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.token_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:openfoxwq.LoginBroadcastServerRequest.token)
 }
 inline std::string* LoginBroadcastServerRequest::mutable_token() {
@@ -5539,74 +5318,6 @@ inline void LoginBroadcastServerRequest::_internal_set_unknown_field_3(int64_t v
 inline void LoginBroadcastServerRequest::set_unknown_field_3(int64_t value) {
   _internal_set_unknown_field_3(value);
   // @@protoc_insertion_point(field_set:openfoxwq.LoginBroadcastServerRequest.unknown_field_3)
-}
-
-// required string unknown_field_4 = 4;
-inline bool LoginBroadcastServerRequest::_internal_has_unknown_field_4() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool LoginBroadcastServerRequest::has_unknown_field_4() const {
-  return _internal_has_unknown_field_4();
-}
-inline void LoginBroadcastServerRequest::clear_unknown_field_4() {
-  _impl_.unknown_field_4_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
-}
-inline const std::string& LoginBroadcastServerRequest::unknown_field_4() const {
-  // @@protoc_insertion_point(field_get:openfoxwq.LoginBroadcastServerRequest.unknown_field_4)
-  return _internal_unknown_field_4();
-}
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void LoginBroadcastServerRequest::set_unknown_field_4(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.unknown_field_4_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:openfoxwq.LoginBroadcastServerRequest.unknown_field_4)
-}
-inline std::string* LoginBroadcastServerRequest::mutable_unknown_field_4() {
-  std::string* _s = _internal_mutable_unknown_field_4();
-  // @@protoc_insertion_point(field_mutable:openfoxwq.LoginBroadcastServerRequest.unknown_field_4)
-  return _s;
-}
-inline const std::string& LoginBroadcastServerRequest::_internal_unknown_field_4() const {
-  return _impl_.unknown_field_4_.Get();
-}
-inline void LoginBroadcastServerRequest::_internal_set_unknown_field_4(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.unknown_field_4_.Set(value, GetArenaForAllocation());
-}
-inline std::string* LoginBroadcastServerRequest::_internal_mutable_unknown_field_4() {
-  _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.unknown_field_4_.Mutable(GetArenaForAllocation());
-}
-inline std::string* LoginBroadcastServerRequest::release_unknown_field_4() {
-  // @@protoc_insertion_point(field_release:openfoxwq.LoginBroadcastServerRequest.unknown_field_4)
-  if (!_internal_has_unknown_field_4()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.unknown_field_4_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.unknown_field_4_.IsDefault()) {
-    _impl_.unknown_field_4_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
-}
-inline void LoginBroadcastServerRequest::set_allocated_unknown_field_4(std::string* unknown_field_4) {
-  if (unknown_field_4 != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
-  } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
-  }
-  _impl_.unknown_field_4_.SetAllocated(unknown_field_4, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.unknown_field_4_.IsDefault()) {
-    _impl_.unknown_field_4_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:openfoxwq.LoginBroadcastServerRequest.unknown_field_4)
 }
 
 // required int64 unknown_field_6 = 6;
@@ -5795,511 +5506,511 @@ inline void LoginBroadcastServerResponse::set_allocated_unknown_field_3(std::str
 
 // -------------------------------------------------------------------
 
-// ListRoomsRequest
+// ListBroadcastsRequest
 
 // optional int64 player_id = 1;
-inline bool ListRoomsRequest::_internal_has_player_id() const {
+inline bool ListBroadcastsRequest::_internal_has_player_id() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool ListRoomsRequest::has_player_id() const {
+inline bool ListBroadcastsRequest::has_player_id() const {
   return _internal_has_player_id();
 }
-inline void ListRoomsRequest::clear_player_id() {
+inline void ListBroadcastsRequest::clear_player_id() {
   _impl_.player_id_ = int64_t{0};
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline int64_t ListRoomsRequest::_internal_player_id() const {
+inline int64_t ListBroadcastsRequest::_internal_player_id() const {
   return _impl_.player_id_;
 }
-inline int64_t ListRoomsRequest::player_id() const {
-  // @@protoc_insertion_point(field_get:openfoxwq.ListRoomsRequest.player_id)
+inline int64_t ListBroadcastsRequest::player_id() const {
+  // @@protoc_insertion_point(field_get:openfoxwq.ListBroadcastsRequest.player_id)
   return _internal_player_id();
 }
-inline void ListRoomsRequest::_internal_set_player_id(int64_t value) {
+inline void ListBroadcastsRequest::_internal_set_player_id(int64_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.player_id_ = value;
 }
-inline void ListRoomsRequest::set_player_id(int64_t value) {
+inline void ListBroadcastsRequest::set_player_id(int64_t value) {
   _internal_set_player_id(value);
-  // @@protoc_insertion_point(field_set:openfoxwq.ListRoomsRequest.player_id)
+  // @@protoc_insertion_point(field_set:openfoxwq.ListBroadcastsRequest.player_id)
 }
 
 // optional int64 unknown_field_2 = 2;
-inline bool ListRoomsRequest::_internal_has_unknown_field_2() const {
+inline bool ListBroadcastsRequest::_internal_has_unknown_field_2() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool ListRoomsRequest::has_unknown_field_2() const {
+inline bool ListBroadcastsRequest::has_unknown_field_2() const {
   return _internal_has_unknown_field_2();
 }
-inline void ListRoomsRequest::clear_unknown_field_2() {
+inline void ListBroadcastsRequest::clear_unknown_field_2() {
   _impl_.unknown_field_2_ = int64_t{0};
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline int64_t ListRoomsRequest::_internal_unknown_field_2() const {
+inline int64_t ListBroadcastsRequest::_internal_unknown_field_2() const {
   return _impl_.unknown_field_2_;
 }
-inline int64_t ListRoomsRequest::unknown_field_2() const {
-  // @@protoc_insertion_point(field_get:openfoxwq.ListRoomsRequest.unknown_field_2)
+inline int64_t ListBroadcastsRequest::unknown_field_2() const {
+  // @@protoc_insertion_point(field_get:openfoxwq.ListBroadcastsRequest.unknown_field_2)
   return _internal_unknown_field_2();
 }
-inline void ListRoomsRequest::_internal_set_unknown_field_2(int64_t value) {
+inline void ListBroadcastsRequest::_internal_set_unknown_field_2(int64_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.unknown_field_2_ = value;
 }
-inline void ListRoomsRequest::set_unknown_field_2(int64_t value) {
+inline void ListBroadcastsRequest::set_unknown_field_2(int64_t value) {
   _internal_set_unknown_field_2(value);
-  // @@protoc_insertion_point(field_set:openfoxwq.ListRoomsRequest.unknown_field_2)
+  // @@protoc_insertion_point(field_set:openfoxwq.ListBroadcastsRequest.unknown_field_2)
 }
 
 // optional int64 unknown_field_3 = 3;
-inline bool ListRoomsRequest::_internal_has_unknown_field_3() const {
+inline bool ListBroadcastsRequest::_internal_has_unknown_field_3() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool ListRoomsRequest::has_unknown_field_3() const {
+inline bool ListBroadcastsRequest::has_unknown_field_3() const {
   return _internal_has_unknown_field_3();
 }
-inline void ListRoomsRequest::clear_unknown_field_3() {
+inline void ListBroadcastsRequest::clear_unknown_field_3() {
   _impl_.unknown_field_3_ = int64_t{0};
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline int64_t ListRoomsRequest::_internal_unknown_field_3() const {
+inline int64_t ListBroadcastsRequest::_internal_unknown_field_3() const {
   return _impl_.unknown_field_3_;
 }
-inline int64_t ListRoomsRequest::unknown_field_3() const {
-  // @@protoc_insertion_point(field_get:openfoxwq.ListRoomsRequest.unknown_field_3)
+inline int64_t ListBroadcastsRequest::unknown_field_3() const {
+  // @@protoc_insertion_point(field_get:openfoxwq.ListBroadcastsRequest.unknown_field_3)
   return _internal_unknown_field_3();
 }
-inline void ListRoomsRequest::_internal_set_unknown_field_3(int64_t value) {
+inline void ListBroadcastsRequest::_internal_set_unknown_field_3(int64_t value) {
   _impl_._has_bits_[0] |= 0x00000004u;
   _impl_.unknown_field_3_ = value;
 }
-inline void ListRoomsRequest::set_unknown_field_3(int64_t value) {
+inline void ListBroadcastsRequest::set_unknown_field_3(int64_t value) {
   _internal_set_unknown_field_3(value);
-  // @@protoc_insertion_point(field_set:openfoxwq.ListRoomsRequest.unknown_field_3)
+  // @@protoc_insertion_point(field_set:openfoxwq.ListBroadcastsRequest.unknown_field_3)
 }
 
 // -------------------------------------------------------------------
 
-// ListRoomsResponse
+// ListBroadcastsResponse
 
-// repeated .openfoxwq.BroadcastRoomInfo room_info = 3;
-inline int ListRoomsResponse::_internal_room_info_size() const {
-  return _impl_.room_info_.size();
+// repeated .openfoxwq.BroadcastInfo broadcasts = 3;
+inline int ListBroadcastsResponse::_internal_broadcasts_size() const {
+  return _impl_.broadcasts_.size();
 }
-inline int ListRoomsResponse::room_info_size() const {
-  return _internal_room_info_size();
+inline int ListBroadcastsResponse::broadcasts_size() const {
+  return _internal_broadcasts_size();
 }
-inline ::openfoxwq::BroadcastRoomInfo* ListRoomsResponse::mutable_room_info(int index) {
-  // @@protoc_insertion_point(field_mutable:openfoxwq.ListRoomsResponse.room_info)
-  return _impl_.room_info_.Mutable(index);
+inline ::openfoxwq::BroadcastInfo* ListBroadcastsResponse::mutable_broadcasts(int index) {
+  // @@protoc_insertion_point(field_mutable:openfoxwq.ListBroadcastsResponse.broadcasts)
+  return _impl_.broadcasts_.Mutable(index);
 }
-inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::openfoxwq::BroadcastRoomInfo >*
-ListRoomsResponse::mutable_room_info() {
-  // @@protoc_insertion_point(field_mutable_list:openfoxwq.ListRoomsResponse.room_info)
-  return &_impl_.room_info_;
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::openfoxwq::BroadcastInfo >*
+ListBroadcastsResponse::mutable_broadcasts() {
+  // @@protoc_insertion_point(field_mutable_list:openfoxwq.ListBroadcastsResponse.broadcasts)
+  return &_impl_.broadcasts_;
 }
-inline const ::openfoxwq::BroadcastRoomInfo& ListRoomsResponse::_internal_room_info(int index) const {
-  return _impl_.room_info_.Get(index);
+inline const ::openfoxwq::BroadcastInfo& ListBroadcastsResponse::_internal_broadcasts(int index) const {
+  return _impl_.broadcasts_.Get(index);
 }
-inline const ::openfoxwq::BroadcastRoomInfo& ListRoomsResponse::room_info(int index) const {
-  // @@protoc_insertion_point(field_get:openfoxwq.ListRoomsResponse.room_info)
-  return _internal_room_info(index);
+inline const ::openfoxwq::BroadcastInfo& ListBroadcastsResponse::broadcasts(int index) const {
+  // @@protoc_insertion_point(field_get:openfoxwq.ListBroadcastsResponse.broadcasts)
+  return _internal_broadcasts(index);
 }
-inline ::openfoxwq::BroadcastRoomInfo* ListRoomsResponse::_internal_add_room_info() {
-  return _impl_.room_info_.Add();
+inline ::openfoxwq::BroadcastInfo* ListBroadcastsResponse::_internal_add_broadcasts() {
+  return _impl_.broadcasts_.Add();
 }
-inline ::openfoxwq::BroadcastRoomInfo* ListRoomsResponse::add_room_info() {
-  ::openfoxwq::BroadcastRoomInfo* _add = _internal_add_room_info();
-  // @@protoc_insertion_point(field_add:openfoxwq.ListRoomsResponse.room_info)
+inline ::openfoxwq::BroadcastInfo* ListBroadcastsResponse::add_broadcasts() {
+  ::openfoxwq::BroadcastInfo* _add = _internal_add_broadcasts();
+  // @@protoc_insertion_point(field_add:openfoxwq.ListBroadcastsResponse.broadcasts)
   return _add;
 }
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::openfoxwq::BroadcastRoomInfo >&
-ListRoomsResponse::room_info() const {
-  // @@protoc_insertion_point(field_list:openfoxwq.ListRoomsResponse.room_info)
-  return _impl_.room_info_;
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::openfoxwq::BroadcastInfo >&
+ListBroadcastsResponse::broadcasts() const {
+  // @@protoc_insertion_point(field_list:openfoxwq.ListBroadcastsResponse.broadcasts)
+  return _impl_.broadcasts_;
 }
 
 // optional int64 page_index = 4;
-inline bool ListRoomsResponse::_internal_has_page_index() const {
+inline bool ListBroadcastsResponse::_internal_has_page_index() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool ListRoomsResponse::has_page_index() const {
+inline bool ListBroadcastsResponse::has_page_index() const {
   return _internal_has_page_index();
 }
-inline void ListRoomsResponse::clear_page_index() {
+inline void ListBroadcastsResponse::clear_page_index() {
   _impl_.page_index_ = int64_t{0};
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline int64_t ListRoomsResponse::_internal_page_index() const {
+inline int64_t ListBroadcastsResponse::_internal_page_index() const {
   return _impl_.page_index_;
 }
-inline int64_t ListRoomsResponse::page_index() const {
-  // @@protoc_insertion_point(field_get:openfoxwq.ListRoomsResponse.page_index)
+inline int64_t ListBroadcastsResponse::page_index() const {
+  // @@protoc_insertion_point(field_get:openfoxwq.ListBroadcastsResponse.page_index)
   return _internal_page_index();
 }
-inline void ListRoomsResponse::_internal_set_page_index(int64_t value) {
+inline void ListBroadcastsResponse::_internal_set_page_index(int64_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.page_index_ = value;
 }
-inline void ListRoomsResponse::set_page_index(int64_t value) {
+inline void ListBroadcastsResponse::set_page_index(int64_t value) {
   _internal_set_page_index(value);
-  // @@protoc_insertion_point(field_set:openfoxwq.ListRoomsResponse.page_index)
+  // @@protoc_insertion_point(field_set:openfoxwq.ListBroadcastsResponse.page_index)
 }
 
 // optional int64 page_count = 5;
-inline bool ListRoomsResponse::_internal_has_page_count() const {
+inline bool ListBroadcastsResponse::_internal_has_page_count() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool ListRoomsResponse::has_page_count() const {
+inline bool ListBroadcastsResponse::has_page_count() const {
   return _internal_has_page_count();
 }
-inline void ListRoomsResponse::clear_page_count() {
+inline void ListBroadcastsResponse::clear_page_count() {
   _impl_.page_count_ = int64_t{0};
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline int64_t ListRoomsResponse::_internal_page_count() const {
+inline int64_t ListBroadcastsResponse::_internal_page_count() const {
   return _impl_.page_count_;
 }
-inline int64_t ListRoomsResponse::page_count() const {
-  // @@protoc_insertion_point(field_get:openfoxwq.ListRoomsResponse.page_count)
+inline int64_t ListBroadcastsResponse::page_count() const {
+  // @@protoc_insertion_point(field_get:openfoxwq.ListBroadcastsResponse.page_count)
   return _internal_page_count();
 }
-inline void ListRoomsResponse::_internal_set_page_count(int64_t value) {
+inline void ListBroadcastsResponse::_internal_set_page_count(int64_t value) {
   _impl_._has_bits_[0] |= 0x00000004u;
   _impl_.page_count_ = value;
 }
-inline void ListRoomsResponse::set_page_count(int64_t value) {
+inline void ListBroadcastsResponse::set_page_count(int64_t value) {
   _internal_set_page_count(value);
-  // @@protoc_insertion_point(field_set:openfoxwq.ListRoomsResponse.page_count)
+  // @@protoc_insertion_point(field_set:openfoxwq.ListBroadcastsResponse.page_count)
 }
 
 // optional int64 unknown_field_1 = 1;
-inline bool ListRoomsResponse::_internal_has_unknown_field_1() const {
+inline bool ListBroadcastsResponse::_internal_has_unknown_field_1() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool ListRoomsResponse::has_unknown_field_1() const {
+inline bool ListBroadcastsResponse::has_unknown_field_1() const {
   return _internal_has_unknown_field_1();
 }
-inline void ListRoomsResponse::clear_unknown_field_1() {
+inline void ListBroadcastsResponse::clear_unknown_field_1() {
   _impl_.unknown_field_1_ = int64_t{0};
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline int64_t ListRoomsResponse::_internal_unknown_field_1() const {
+inline int64_t ListBroadcastsResponse::_internal_unknown_field_1() const {
   return _impl_.unknown_field_1_;
 }
-inline int64_t ListRoomsResponse::unknown_field_1() const {
-  // @@protoc_insertion_point(field_get:openfoxwq.ListRoomsResponse.unknown_field_1)
+inline int64_t ListBroadcastsResponse::unknown_field_1() const {
+  // @@protoc_insertion_point(field_get:openfoxwq.ListBroadcastsResponse.unknown_field_1)
   return _internal_unknown_field_1();
 }
-inline void ListRoomsResponse::_internal_set_unknown_field_1(int64_t value) {
+inline void ListBroadcastsResponse::_internal_set_unknown_field_1(int64_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.unknown_field_1_ = value;
 }
-inline void ListRoomsResponse::set_unknown_field_1(int64_t value) {
+inline void ListBroadcastsResponse::set_unknown_field_1(int64_t value) {
   _internal_set_unknown_field_1(value);
-  // @@protoc_insertion_point(field_set:openfoxwq.ListRoomsResponse.unknown_field_1)
+  // @@protoc_insertion_point(field_set:openfoxwq.ListBroadcastsResponse.unknown_field_1)
 }
 
 // -------------------------------------------------------------------
 
-// EnterRoomRequest
+// EnterBroadcastRequest
 
 // required int64 player_id = 1;
-inline bool EnterRoomRequest::_internal_has_player_id() const {
+inline bool EnterBroadcastRequest::_internal_has_player_id() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool EnterRoomRequest::has_player_id() const {
+inline bool EnterBroadcastRequest::has_player_id() const {
   return _internal_has_player_id();
 }
-inline void EnterRoomRequest::clear_player_id() {
+inline void EnterBroadcastRequest::clear_player_id() {
   _impl_.player_id_ = int64_t{0};
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline int64_t EnterRoomRequest::_internal_player_id() const {
+inline int64_t EnterBroadcastRequest::_internal_player_id() const {
   return _impl_.player_id_;
 }
-inline int64_t EnterRoomRequest::player_id() const {
-  // @@protoc_insertion_point(field_get:openfoxwq.EnterRoomRequest.player_id)
+inline int64_t EnterBroadcastRequest::player_id() const {
+  // @@protoc_insertion_point(field_get:openfoxwq.EnterBroadcastRequest.player_id)
   return _internal_player_id();
 }
-inline void EnterRoomRequest::_internal_set_player_id(int64_t value) {
+inline void EnterBroadcastRequest::_internal_set_player_id(int64_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.player_id_ = value;
 }
-inline void EnterRoomRequest::set_player_id(int64_t value) {
+inline void EnterBroadcastRequest::set_player_id(int64_t value) {
   _internal_set_player_id(value);
-  // @@protoc_insertion_point(field_set:openfoxwq.EnterRoomRequest.player_id)
+  // @@protoc_insertion_point(field_set:openfoxwq.EnterBroadcastRequest.player_id)
 }
 
-// required int64 room_id = 2;
-inline bool EnterRoomRequest::_internal_has_room_id() const {
+// required int64 broadcast_id = 2;
+inline bool EnterBroadcastRequest::_internal_has_broadcast_id() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool EnterRoomRequest::has_room_id() const {
-  return _internal_has_room_id();
+inline bool EnterBroadcastRequest::has_broadcast_id() const {
+  return _internal_has_broadcast_id();
 }
-inline void EnterRoomRequest::clear_room_id() {
-  _impl_.room_id_ = int64_t{0};
+inline void EnterBroadcastRequest::clear_broadcast_id() {
+  _impl_.broadcast_id_ = int64_t{0};
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline int64_t EnterRoomRequest::_internal_room_id() const {
-  return _impl_.room_id_;
+inline int64_t EnterBroadcastRequest::_internal_broadcast_id() const {
+  return _impl_.broadcast_id_;
 }
-inline int64_t EnterRoomRequest::room_id() const {
-  // @@protoc_insertion_point(field_get:openfoxwq.EnterRoomRequest.room_id)
-  return _internal_room_id();
+inline int64_t EnterBroadcastRequest::broadcast_id() const {
+  // @@protoc_insertion_point(field_get:openfoxwq.EnterBroadcastRequest.broadcast_id)
+  return _internal_broadcast_id();
 }
-inline void EnterRoomRequest::_internal_set_room_id(int64_t value) {
+inline void EnterBroadcastRequest::_internal_set_broadcast_id(int64_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.room_id_ = value;
+  _impl_.broadcast_id_ = value;
 }
-inline void EnterRoomRequest::set_room_id(int64_t value) {
-  _internal_set_room_id(value);
-  // @@protoc_insertion_point(field_set:openfoxwq.EnterRoomRequest.room_id)
+inline void EnterBroadcastRequest::set_broadcast_id(int64_t value) {
+  _internal_set_broadcast_id(value);
+  // @@protoc_insertion_point(field_set:openfoxwq.EnterBroadcastRequest.broadcast_id)
 }
 
 // -------------------------------------------------------------------
 
-// EnterRoomResponse
+// EnterBroadcastResponse
 
 // required int64 player_id = 2;
-inline bool EnterRoomResponse::_internal_has_player_id() const {
+inline bool EnterBroadcastResponse::_internal_has_player_id() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool EnterRoomResponse::has_player_id() const {
+inline bool EnterBroadcastResponse::has_player_id() const {
   return _internal_has_player_id();
 }
-inline void EnterRoomResponse::clear_player_id() {
+inline void EnterBroadcastResponse::clear_player_id() {
   _impl_.player_id_ = int64_t{0};
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline int64_t EnterRoomResponse::_internal_player_id() const {
+inline int64_t EnterBroadcastResponse::_internal_player_id() const {
   return _impl_.player_id_;
 }
-inline int64_t EnterRoomResponse::player_id() const {
-  // @@protoc_insertion_point(field_get:openfoxwq.EnterRoomResponse.player_id)
+inline int64_t EnterBroadcastResponse::player_id() const {
+  // @@protoc_insertion_point(field_get:openfoxwq.EnterBroadcastResponse.player_id)
   return _internal_player_id();
 }
-inline void EnterRoomResponse::_internal_set_player_id(int64_t value) {
+inline void EnterBroadcastResponse::_internal_set_player_id(int64_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.player_id_ = value;
 }
-inline void EnterRoomResponse::set_player_id(int64_t value) {
+inline void EnterBroadcastResponse::set_player_id(int64_t value) {
   _internal_set_player_id(value);
-  // @@protoc_insertion_point(field_set:openfoxwq.EnterRoomResponse.player_id)
+  // @@protoc_insertion_point(field_set:openfoxwq.EnterBroadcastResponse.player_id)
 }
 
-// required int64 room_id = 3;
-inline bool EnterRoomResponse::_internal_has_room_id() const {
+// required int64 broadcast_id = 3;
+inline bool EnterBroadcastResponse::_internal_has_broadcast_id() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool EnterRoomResponse::has_room_id() const {
-  return _internal_has_room_id();
+inline bool EnterBroadcastResponse::has_broadcast_id() const {
+  return _internal_has_broadcast_id();
 }
-inline void EnterRoomResponse::clear_room_id() {
-  _impl_.room_id_ = int64_t{0};
+inline void EnterBroadcastResponse::clear_broadcast_id() {
+  _impl_.broadcast_id_ = int64_t{0};
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline int64_t EnterRoomResponse::_internal_room_id() const {
-  return _impl_.room_id_;
+inline int64_t EnterBroadcastResponse::_internal_broadcast_id() const {
+  return _impl_.broadcast_id_;
 }
-inline int64_t EnterRoomResponse::room_id() const {
-  // @@protoc_insertion_point(field_get:openfoxwq.EnterRoomResponse.room_id)
-  return _internal_room_id();
+inline int64_t EnterBroadcastResponse::broadcast_id() const {
+  // @@protoc_insertion_point(field_get:openfoxwq.EnterBroadcastResponse.broadcast_id)
+  return _internal_broadcast_id();
 }
-inline void EnterRoomResponse::_internal_set_room_id(int64_t value) {
+inline void EnterBroadcastResponse::_internal_set_broadcast_id(int64_t value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.room_id_ = value;
+  _impl_.broadcast_id_ = value;
 }
-inline void EnterRoomResponse::set_room_id(int64_t value) {
-  _internal_set_room_id(value);
-  // @@protoc_insertion_point(field_set:openfoxwq.EnterRoomResponse.room_id)
+inline void EnterBroadcastResponse::set_broadcast_id(int64_t value) {
+  _internal_set_broadcast_id(value);
+  // @@protoc_insertion_point(field_set:openfoxwq.EnterBroadcastResponse.broadcast_id)
 }
 
 // optional int64 unknown_field_1 = 1;
-inline bool EnterRoomResponse::_internal_has_unknown_field_1() const {
+inline bool EnterBroadcastResponse::_internal_has_unknown_field_1() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool EnterRoomResponse::has_unknown_field_1() const {
+inline bool EnterBroadcastResponse::has_unknown_field_1() const {
   return _internal_has_unknown_field_1();
 }
-inline void EnterRoomResponse::clear_unknown_field_1() {
+inline void EnterBroadcastResponse::clear_unknown_field_1() {
   _impl_.unknown_field_1_ = int64_t{0};
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline int64_t EnterRoomResponse::_internal_unknown_field_1() const {
+inline int64_t EnterBroadcastResponse::_internal_unknown_field_1() const {
   return _impl_.unknown_field_1_;
 }
-inline int64_t EnterRoomResponse::unknown_field_1() const {
-  // @@protoc_insertion_point(field_get:openfoxwq.EnterRoomResponse.unknown_field_1)
+inline int64_t EnterBroadcastResponse::unknown_field_1() const {
+  // @@protoc_insertion_point(field_get:openfoxwq.EnterBroadcastResponse.unknown_field_1)
   return _internal_unknown_field_1();
 }
-inline void EnterRoomResponse::_internal_set_unknown_field_1(int64_t value) {
+inline void EnterBroadcastResponse::_internal_set_unknown_field_1(int64_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.unknown_field_1_ = value;
 }
-inline void EnterRoomResponse::set_unknown_field_1(int64_t value) {
+inline void EnterBroadcastResponse::set_unknown_field_1(int64_t value) {
   _internal_set_unknown_field_1(value);
-  // @@protoc_insertion_point(field_set:openfoxwq.EnterRoomResponse.unknown_field_1)
+  // @@protoc_insertion_point(field_set:openfoxwq.EnterBroadcastResponse.unknown_field_1)
 }
 
 // -------------------------------------------------------------------
 
-// LeaveRoomRequest
+// LeaveBroadcastRequest
 
 // required int64 player_id = 1;
-inline bool LeaveRoomRequest::_internal_has_player_id() const {
+inline bool LeaveBroadcastRequest::_internal_has_player_id() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool LeaveRoomRequest::has_player_id() const {
+inline bool LeaveBroadcastRequest::has_player_id() const {
   return _internal_has_player_id();
 }
-inline void LeaveRoomRequest::clear_player_id() {
+inline void LeaveBroadcastRequest::clear_player_id() {
   _impl_.player_id_ = int64_t{0};
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline int64_t LeaveRoomRequest::_internal_player_id() const {
+inline int64_t LeaveBroadcastRequest::_internal_player_id() const {
   return _impl_.player_id_;
 }
-inline int64_t LeaveRoomRequest::player_id() const {
-  // @@protoc_insertion_point(field_get:openfoxwq.LeaveRoomRequest.player_id)
+inline int64_t LeaveBroadcastRequest::player_id() const {
+  // @@protoc_insertion_point(field_get:openfoxwq.LeaveBroadcastRequest.player_id)
   return _internal_player_id();
 }
-inline void LeaveRoomRequest::_internal_set_player_id(int64_t value) {
+inline void LeaveBroadcastRequest::_internal_set_player_id(int64_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.player_id_ = value;
 }
-inline void LeaveRoomRequest::set_player_id(int64_t value) {
+inline void LeaveBroadcastRequest::set_player_id(int64_t value) {
   _internal_set_player_id(value);
-  // @@protoc_insertion_point(field_set:openfoxwq.LeaveRoomRequest.player_id)
+  // @@protoc_insertion_point(field_set:openfoxwq.LeaveBroadcastRequest.player_id)
 }
 
-// required int64 room_id = 2;
-inline bool LeaveRoomRequest::_internal_has_room_id() const {
+// required int64 broadcast_id = 2;
+inline bool LeaveBroadcastRequest::_internal_has_broadcast_id() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool LeaveRoomRequest::has_room_id() const {
-  return _internal_has_room_id();
+inline bool LeaveBroadcastRequest::has_broadcast_id() const {
+  return _internal_has_broadcast_id();
 }
-inline void LeaveRoomRequest::clear_room_id() {
-  _impl_.room_id_ = int64_t{0};
+inline void LeaveBroadcastRequest::clear_broadcast_id() {
+  _impl_.broadcast_id_ = int64_t{0};
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline int64_t LeaveRoomRequest::_internal_room_id() const {
-  return _impl_.room_id_;
+inline int64_t LeaveBroadcastRequest::_internal_broadcast_id() const {
+  return _impl_.broadcast_id_;
 }
-inline int64_t LeaveRoomRequest::room_id() const {
-  // @@protoc_insertion_point(field_get:openfoxwq.LeaveRoomRequest.room_id)
-  return _internal_room_id();
+inline int64_t LeaveBroadcastRequest::broadcast_id() const {
+  // @@protoc_insertion_point(field_get:openfoxwq.LeaveBroadcastRequest.broadcast_id)
+  return _internal_broadcast_id();
 }
-inline void LeaveRoomRequest::_internal_set_room_id(int64_t value) {
+inline void LeaveBroadcastRequest::_internal_set_broadcast_id(int64_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.room_id_ = value;
+  _impl_.broadcast_id_ = value;
 }
-inline void LeaveRoomRequest::set_room_id(int64_t value) {
-  _internal_set_room_id(value);
-  // @@protoc_insertion_point(field_set:openfoxwq.LeaveRoomRequest.room_id)
+inline void LeaveBroadcastRequest::set_broadcast_id(int64_t value) {
+  _internal_set_broadcast_id(value);
+  // @@protoc_insertion_point(field_set:openfoxwq.LeaveBroadcastRequest.broadcast_id)
 }
 
 // -------------------------------------------------------------------
 
-// LeaveRoomResponse
+// LeaveBroadcastResponse
 
 // required int64 player_id = 2;
-inline bool LeaveRoomResponse::_internal_has_player_id() const {
+inline bool LeaveBroadcastResponse::_internal_has_player_id() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool LeaveRoomResponse::has_player_id() const {
+inline bool LeaveBroadcastResponse::has_player_id() const {
   return _internal_has_player_id();
 }
-inline void LeaveRoomResponse::clear_player_id() {
+inline void LeaveBroadcastResponse::clear_player_id() {
   _impl_.player_id_ = int64_t{0};
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline int64_t LeaveRoomResponse::_internal_player_id() const {
+inline int64_t LeaveBroadcastResponse::_internal_player_id() const {
   return _impl_.player_id_;
 }
-inline int64_t LeaveRoomResponse::player_id() const {
-  // @@protoc_insertion_point(field_get:openfoxwq.LeaveRoomResponse.player_id)
+inline int64_t LeaveBroadcastResponse::player_id() const {
+  // @@protoc_insertion_point(field_get:openfoxwq.LeaveBroadcastResponse.player_id)
   return _internal_player_id();
 }
-inline void LeaveRoomResponse::_internal_set_player_id(int64_t value) {
+inline void LeaveBroadcastResponse::_internal_set_player_id(int64_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.player_id_ = value;
 }
-inline void LeaveRoomResponse::set_player_id(int64_t value) {
+inline void LeaveBroadcastResponse::set_player_id(int64_t value) {
   _internal_set_player_id(value);
-  // @@protoc_insertion_point(field_set:openfoxwq.LeaveRoomResponse.player_id)
+  // @@protoc_insertion_point(field_set:openfoxwq.LeaveBroadcastResponse.player_id)
 }
 
-// required int64 room_id = 3;
-inline bool LeaveRoomResponse::_internal_has_room_id() const {
+// required int64 broadcast_id = 3;
+inline bool LeaveBroadcastResponse::_internal_has_broadcast_id() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool LeaveRoomResponse::has_room_id() const {
-  return _internal_has_room_id();
+inline bool LeaveBroadcastResponse::has_broadcast_id() const {
+  return _internal_has_broadcast_id();
 }
-inline void LeaveRoomResponse::clear_room_id() {
-  _impl_.room_id_ = int64_t{0};
+inline void LeaveBroadcastResponse::clear_broadcast_id() {
+  _impl_.broadcast_id_ = int64_t{0};
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline int64_t LeaveRoomResponse::_internal_room_id() const {
-  return _impl_.room_id_;
+inline int64_t LeaveBroadcastResponse::_internal_broadcast_id() const {
+  return _impl_.broadcast_id_;
 }
-inline int64_t LeaveRoomResponse::room_id() const {
-  // @@protoc_insertion_point(field_get:openfoxwq.LeaveRoomResponse.room_id)
-  return _internal_room_id();
+inline int64_t LeaveBroadcastResponse::broadcast_id() const {
+  // @@protoc_insertion_point(field_get:openfoxwq.LeaveBroadcastResponse.broadcast_id)
+  return _internal_broadcast_id();
 }
-inline void LeaveRoomResponse::_internal_set_room_id(int64_t value) {
+inline void LeaveBroadcastResponse::_internal_set_broadcast_id(int64_t value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.room_id_ = value;
+  _impl_.broadcast_id_ = value;
 }
-inline void LeaveRoomResponse::set_room_id(int64_t value) {
-  _internal_set_room_id(value);
-  // @@protoc_insertion_point(field_set:openfoxwq.LeaveRoomResponse.room_id)
+inline void LeaveBroadcastResponse::set_broadcast_id(int64_t value) {
+  _internal_set_broadcast_id(value);
+  // @@protoc_insertion_point(field_set:openfoxwq.LeaveBroadcastResponse.broadcast_id)
 }
 
 // optional int64 unknown_field_1 = 1;
-inline bool LeaveRoomResponse::_internal_has_unknown_field_1() const {
+inline bool LeaveBroadcastResponse::_internal_has_unknown_field_1() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool LeaveRoomResponse::has_unknown_field_1() const {
+inline bool LeaveBroadcastResponse::has_unknown_field_1() const {
   return _internal_has_unknown_field_1();
 }
-inline void LeaveRoomResponse::clear_unknown_field_1() {
+inline void LeaveBroadcastResponse::clear_unknown_field_1() {
   _impl_.unknown_field_1_ = int64_t{0};
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline int64_t LeaveRoomResponse::_internal_unknown_field_1() const {
+inline int64_t LeaveBroadcastResponse::_internal_unknown_field_1() const {
   return _impl_.unknown_field_1_;
 }
-inline int64_t LeaveRoomResponse::unknown_field_1() const {
-  // @@protoc_insertion_point(field_get:openfoxwq.LeaveRoomResponse.unknown_field_1)
+inline int64_t LeaveBroadcastResponse::unknown_field_1() const {
+  // @@protoc_insertion_point(field_get:openfoxwq.LeaveBroadcastResponse.unknown_field_1)
   return _internal_unknown_field_1();
 }
-inline void LeaveRoomResponse::_internal_set_unknown_field_1(int64_t value) {
+inline void LeaveBroadcastResponse::_internal_set_unknown_field_1(int64_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.unknown_field_1_ = value;
 }
-inline void LeaveRoomResponse::set_unknown_field_1(int64_t value) {
+inline void LeaveBroadcastResponse::set_unknown_field_1(int64_t value) {
   _internal_set_unknown_field_1(value);
-  // @@protoc_insertion_point(field_set:openfoxwq.LeaveRoomResponse.unknown_field_1)
+  // @@protoc_insertion_point(field_set:openfoxwq.LeaveBroadcastResponse.unknown_field_1)
 }
 
 // -------------------------------------------------------------------
@@ -6308,415 +6019,155 @@ inline void LeaveRoomResponse::set_unknown_field_1(int64_t value) {
 
 // -------------------------------------------------------------------
 
-// RoomConfigEvent_RoomConfig
-
-// required int64 player_id_first = 1;
-inline bool RoomConfigEvent_RoomConfig::_internal_has_player_id_first() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool RoomConfigEvent_RoomConfig::has_player_id_first() const {
-  return _internal_has_player_id_first();
-}
-inline void RoomConfigEvent_RoomConfig::clear_player_id_first() {
-  _impl_.player_id_first_ = int64_t{0};
-  _impl_._has_bits_[0] &= ~0x00000001u;
-}
-inline int64_t RoomConfigEvent_RoomConfig::_internal_player_id_first() const {
-  return _impl_.player_id_first_;
-}
-inline int64_t RoomConfigEvent_RoomConfig::player_id_first() const {
-  // @@protoc_insertion_point(field_get:openfoxwq.RoomConfigEvent.RoomConfig.player_id_first)
-  return _internal_player_id_first();
-}
-inline void RoomConfigEvent_RoomConfig::_internal_set_player_id_first(int64_t value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.player_id_first_ = value;
-}
-inline void RoomConfigEvent_RoomConfig::set_player_id_first(int64_t value) {
-  _internal_set_player_id_first(value);
-  // @@protoc_insertion_point(field_set:openfoxwq.RoomConfigEvent.RoomConfig.player_id_first)
-}
-
-// required int64 player_id_second = 2;
-inline bool RoomConfigEvent_RoomConfig::_internal_has_player_id_second() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool RoomConfigEvent_RoomConfig::has_player_id_second() const {
-  return _internal_has_player_id_second();
-}
-inline void RoomConfigEvent_RoomConfig::clear_player_id_second() {
-  _impl_.player_id_second_ = int64_t{0};
-  _impl_._has_bits_[0] &= ~0x00000002u;
-}
-inline int64_t RoomConfigEvent_RoomConfig::_internal_player_id_second() const {
-  return _impl_.player_id_second_;
-}
-inline int64_t RoomConfigEvent_RoomConfig::player_id_second() const {
-  // @@protoc_insertion_point(field_get:openfoxwq.RoomConfigEvent.RoomConfig.player_id_second)
-  return _internal_player_id_second();
-}
-inline void RoomConfigEvent_RoomConfig::_internal_set_player_id_second(int64_t value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.player_id_second_ = value;
-}
-inline void RoomConfigEvent_RoomConfig::set_player_id_second(int64_t value) {
-  _internal_set_player_id_second(value);
-  // @@protoc_insertion_point(field_set:openfoxwq.RoomConfigEvent.RoomConfig.player_id_second)
-}
-
-// optional int64 handicap = 4;
-inline bool RoomConfigEvent_RoomConfig::_internal_has_handicap() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
-  return value;
-}
-inline bool RoomConfigEvent_RoomConfig::has_handicap() const {
-  return _internal_has_handicap();
-}
-inline void RoomConfigEvent_RoomConfig::clear_handicap() {
-  _impl_.handicap_ = int64_t{0};
-  _impl_._has_bits_[0] &= ~0x00000004u;
-}
-inline int64_t RoomConfigEvent_RoomConfig::_internal_handicap() const {
-  return _impl_.handicap_;
-}
-inline int64_t RoomConfigEvent_RoomConfig::handicap() const {
-  // @@protoc_insertion_point(field_get:openfoxwq.RoomConfigEvent.RoomConfig.handicap)
-  return _internal_handicap();
-}
-inline void RoomConfigEvent_RoomConfig::_internal_set_handicap(int64_t value) {
-  _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.handicap_ = value;
-}
-inline void RoomConfigEvent_RoomConfig::set_handicap(int64_t value) {
-  _internal_set_handicap(value);
-  // @@protoc_insertion_point(field_set:openfoxwq.RoomConfigEvent.RoomConfig.handicap)
-}
-
-// optional int64 komi = 5;
-inline bool RoomConfigEvent_RoomConfig::_internal_has_komi() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
-  return value;
-}
-inline bool RoomConfigEvent_RoomConfig::has_komi() const {
-  return _internal_has_komi();
-}
-inline void RoomConfigEvent_RoomConfig::clear_komi() {
-  _impl_.komi_ = int64_t{0};
-  _impl_._has_bits_[0] &= ~0x00000008u;
-}
-inline int64_t RoomConfigEvent_RoomConfig::_internal_komi() const {
-  return _impl_.komi_;
-}
-inline int64_t RoomConfigEvent_RoomConfig::komi() const {
-  // @@protoc_insertion_point(field_get:openfoxwq.RoomConfigEvent.RoomConfig.komi)
-  return _internal_komi();
-}
-inline void RoomConfigEvent_RoomConfig::_internal_set_komi(int64_t value) {
-  _impl_._has_bits_[0] |= 0x00000008u;
-  _impl_.komi_ = value;
-}
-inline void RoomConfigEvent_RoomConfig::set_komi(int64_t value) {
-  _internal_set_komi(value);
-  // @@protoc_insertion_point(field_set:openfoxwq.RoomConfigEvent.RoomConfig.komi)
-}
-
-// required int64 main_time_sec = 7;
-inline bool RoomConfigEvent_RoomConfig::_internal_has_main_time_sec() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
-  return value;
-}
-inline bool RoomConfigEvent_RoomConfig::has_main_time_sec() const {
-  return _internal_has_main_time_sec();
-}
-inline void RoomConfigEvent_RoomConfig::clear_main_time_sec() {
-  _impl_.main_time_sec_ = int64_t{0};
-  _impl_._has_bits_[0] &= ~0x00000010u;
-}
-inline int64_t RoomConfigEvent_RoomConfig::_internal_main_time_sec() const {
-  return _impl_.main_time_sec_;
-}
-inline int64_t RoomConfigEvent_RoomConfig::main_time_sec() const {
-  // @@protoc_insertion_point(field_get:openfoxwq.RoomConfigEvent.RoomConfig.main_time_sec)
-  return _internal_main_time_sec();
-}
-inline void RoomConfigEvent_RoomConfig::_internal_set_main_time_sec(int64_t value) {
-  _impl_._has_bits_[0] |= 0x00000010u;
-  _impl_.main_time_sec_ = value;
-}
-inline void RoomConfigEvent_RoomConfig::set_main_time_sec(int64_t value) {
-  _internal_set_main_time_sec(value);
-  // @@protoc_insertion_point(field_set:openfoxwq.RoomConfigEvent.RoomConfig.main_time_sec)
-}
-
-// required int64 byoyomi_time_sec = 8;
-inline bool RoomConfigEvent_RoomConfig::_internal_has_byoyomi_time_sec() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
-  return value;
-}
-inline bool RoomConfigEvent_RoomConfig::has_byoyomi_time_sec() const {
-  return _internal_has_byoyomi_time_sec();
-}
-inline void RoomConfigEvent_RoomConfig::clear_byoyomi_time_sec() {
-  _impl_.byoyomi_time_sec_ = int64_t{0};
-  _impl_._has_bits_[0] &= ~0x00000020u;
-}
-inline int64_t RoomConfigEvent_RoomConfig::_internal_byoyomi_time_sec() const {
-  return _impl_.byoyomi_time_sec_;
-}
-inline int64_t RoomConfigEvent_RoomConfig::byoyomi_time_sec() const {
-  // @@protoc_insertion_point(field_get:openfoxwq.RoomConfigEvent.RoomConfig.byoyomi_time_sec)
-  return _internal_byoyomi_time_sec();
-}
-inline void RoomConfigEvent_RoomConfig::_internal_set_byoyomi_time_sec(int64_t value) {
-  _impl_._has_bits_[0] |= 0x00000020u;
-  _impl_.byoyomi_time_sec_ = value;
-}
-inline void RoomConfigEvent_RoomConfig::set_byoyomi_time_sec(int64_t value) {
-  _internal_set_byoyomi_time_sec(value);
-  // @@protoc_insertion_point(field_set:openfoxwq.RoomConfigEvent.RoomConfig.byoyomi_time_sec)
-}
-
-// required int64 byoyomi_periods = 9;
-inline bool RoomConfigEvent_RoomConfig::_internal_has_byoyomi_periods() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
-  return value;
-}
-inline bool RoomConfigEvent_RoomConfig::has_byoyomi_periods() const {
-  return _internal_has_byoyomi_periods();
-}
-inline void RoomConfigEvent_RoomConfig::clear_byoyomi_periods() {
-  _impl_.byoyomi_periods_ = int64_t{0};
-  _impl_._has_bits_[0] &= ~0x00000040u;
-}
-inline int64_t RoomConfigEvent_RoomConfig::_internal_byoyomi_periods() const {
-  return _impl_.byoyomi_periods_;
-}
-inline int64_t RoomConfigEvent_RoomConfig::byoyomi_periods() const {
-  // @@protoc_insertion_point(field_get:openfoxwq.RoomConfigEvent.RoomConfig.byoyomi_periods)
-  return _internal_byoyomi_periods();
-}
-inline void RoomConfigEvent_RoomConfig::_internal_set_byoyomi_periods(int64_t value) {
-  _impl_._has_bits_[0] |= 0x00000040u;
-  _impl_.byoyomi_periods_ = value;
-}
-inline void RoomConfigEvent_RoomConfig::set_byoyomi_periods(int64_t value) {
-  _internal_set_byoyomi_periods(value);
-  // @@protoc_insertion_point(field_set:openfoxwq.RoomConfigEvent.RoomConfig.byoyomi_periods)
-}
-
-// optional bool chinese_rules = 10;
-inline bool RoomConfigEvent_RoomConfig::_internal_has_chinese_rules() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000100u) != 0;
-  return value;
-}
-inline bool RoomConfigEvent_RoomConfig::has_chinese_rules() const {
-  return _internal_has_chinese_rules();
-}
-inline void RoomConfigEvent_RoomConfig::clear_chinese_rules() {
-  _impl_.chinese_rules_ = false;
-  _impl_._has_bits_[0] &= ~0x00000100u;
-}
-inline bool RoomConfigEvent_RoomConfig::_internal_chinese_rules() const {
-  return _impl_.chinese_rules_;
-}
-inline bool RoomConfigEvent_RoomConfig::chinese_rules() const {
-  // @@protoc_insertion_point(field_get:openfoxwq.RoomConfigEvent.RoomConfig.chinese_rules)
-  return _internal_chinese_rules();
-}
-inline void RoomConfigEvent_RoomConfig::_internal_set_chinese_rules(bool value) {
-  _impl_._has_bits_[0] |= 0x00000100u;
-  _impl_.chinese_rules_ = value;
-}
-inline void RoomConfigEvent_RoomConfig::set_chinese_rules(bool value) {
-  _internal_set_chinese_rules(value);
-  // @@protoc_insertion_point(field_set:openfoxwq.RoomConfigEvent.RoomConfig.chinese_rules)
-}
-
-// required int64 board_size = 16;
-inline bool RoomConfigEvent_RoomConfig::_internal_has_board_size() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
-  return value;
-}
-inline bool RoomConfigEvent_RoomConfig::has_board_size() const {
-  return _internal_has_board_size();
-}
-inline void RoomConfigEvent_RoomConfig::clear_board_size() {
-  _impl_.board_size_ = int64_t{0};
-  _impl_._has_bits_[0] &= ~0x00000080u;
-}
-inline int64_t RoomConfigEvent_RoomConfig::_internal_board_size() const {
-  return _impl_.board_size_;
-}
-inline int64_t RoomConfigEvent_RoomConfig::board_size() const {
-  // @@protoc_insertion_point(field_get:openfoxwq.RoomConfigEvent.RoomConfig.board_size)
-  return _internal_board_size();
-}
-inline void RoomConfigEvent_RoomConfig::_internal_set_board_size(int64_t value) {
-  _impl_._has_bits_[0] |= 0x00000080u;
-  _impl_.board_size_ = value;
-}
-inline void RoomConfigEvent_RoomConfig::set_board_size(int64_t value) {
-  _internal_set_board_size(value);
-  // @@protoc_insertion_point(field_set:openfoxwq.RoomConfigEvent.RoomConfig.board_size)
-}
-
-// -------------------------------------------------------------------
-
-// RoomConfigEvent
+// BroadcastSettingEvent
 
 // required int64 player_id = 2;
-inline bool RoomConfigEvent::_internal_has_player_id() const {
+inline bool BroadcastSettingEvent::_internal_has_player_id() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool RoomConfigEvent::has_player_id() const {
+inline bool BroadcastSettingEvent::has_player_id() const {
   return _internal_has_player_id();
 }
-inline void RoomConfigEvent::clear_player_id() {
+inline void BroadcastSettingEvent::clear_player_id() {
   _impl_.player_id_ = int64_t{0};
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline int64_t RoomConfigEvent::_internal_player_id() const {
+inline int64_t BroadcastSettingEvent::_internal_player_id() const {
   return _impl_.player_id_;
 }
-inline int64_t RoomConfigEvent::player_id() const {
-  // @@protoc_insertion_point(field_get:openfoxwq.RoomConfigEvent.player_id)
+inline int64_t BroadcastSettingEvent::player_id() const {
+  // @@protoc_insertion_point(field_get:openfoxwq.BroadcastSettingEvent.player_id)
   return _internal_player_id();
 }
-inline void RoomConfigEvent::_internal_set_player_id(int64_t value) {
+inline void BroadcastSettingEvent::_internal_set_player_id(int64_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.player_id_ = value;
 }
-inline void RoomConfigEvent::set_player_id(int64_t value) {
+inline void BroadcastSettingEvent::set_player_id(int64_t value) {
   _internal_set_player_id(value);
-  // @@protoc_insertion_point(field_set:openfoxwq.RoomConfigEvent.player_id)
+  // @@protoc_insertion_point(field_set:openfoxwq.BroadcastSettingEvent.player_id)
 }
 
 // optional int64 player_id_black = 4;
-inline bool RoomConfigEvent::_internal_has_player_id_black() const {
+inline bool BroadcastSettingEvent::_internal_has_player_id_black() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
 }
-inline bool RoomConfigEvent::has_player_id_black() const {
+inline bool BroadcastSettingEvent::has_player_id_black() const {
   return _internal_has_player_id_black();
 }
-inline void RoomConfigEvent::clear_player_id_black() {
+inline void BroadcastSettingEvent::clear_player_id_black() {
   _impl_.player_id_black_ = int64_t{0};
   _impl_._has_bits_[0] &= ~0x00000008u;
 }
-inline int64_t RoomConfigEvent::_internal_player_id_black() const {
+inline int64_t BroadcastSettingEvent::_internal_player_id_black() const {
   return _impl_.player_id_black_;
 }
-inline int64_t RoomConfigEvent::player_id_black() const {
-  // @@protoc_insertion_point(field_get:openfoxwq.RoomConfigEvent.player_id_black)
+inline int64_t BroadcastSettingEvent::player_id_black() const {
+  // @@protoc_insertion_point(field_get:openfoxwq.BroadcastSettingEvent.player_id_black)
   return _internal_player_id_black();
 }
-inline void RoomConfigEvent::_internal_set_player_id_black(int64_t value) {
+inline void BroadcastSettingEvent::_internal_set_player_id_black(int64_t value) {
   _impl_._has_bits_[0] |= 0x00000008u;
   _impl_.player_id_black_ = value;
 }
-inline void RoomConfigEvent::set_player_id_black(int64_t value) {
+inline void BroadcastSettingEvent::set_player_id_black(int64_t value) {
   _internal_set_player_id_black(value);
-  // @@protoc_insertion_point(field_set:openfoxwq.RoomConfigEvent.player_id_black)
+  // @@protoc_insertion_point(field_set:openfoxwq.BroadcastSettingEvent.player_id_black)
 }
 
 // optional int64 player_id_white = 5;
-inline bool RoomConfigEvent::_internal_has_player_id_white() const {
+inline bool BroadcastSettingEvent::_internal_has_player_id_white() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
 }
-inline bool RoomConfigEvent::has_player_id_white() const {
+inline bool BroadcastSettingEvent::has_player_id_white() const {
   return _internal_has_player_id_white();
 }
-inline void RoomConfigEvent::clear_player_id_white() {
+inline void BroadcastSettingEvent::clear_player_id_white() {
   _impl_.player_id_white_ = int64_t{0};
   _impl_._has_bits_[0] &= ~0x00000010u;
 }
-inline int64_t RoomConfigEvent::_internal_player_id_white() const {
+inline int64_t BroadcastSettingEvent::_internal_player_id_white() const {
   return _impl_.player_id_white_;
 }
-inline int64_t RoomConfigEvent::player_id_white() const {
-  // @@protoc_insertion_point(field_get:openfoxwq.RoomConfigEvent.player_id_white)
+inline int64_t BroadcastSettingEvent::player_id_white() const {
+  // @@protoc_insertion_point(field_get:openfoxwq.BroadcastSettingEvent.player_id_white)
   return _internal_player_id_white();
 }
-inline void RoomConfigEvent::_internal_set_player_id_white(int64_t value) {
+inline void BroadcastSettingEvent::_internal_set_player_id_white(int64_t value) {
   _impl_._has_bits_[0] |= 0x00000010u;
   _impl_.player_id_white_ = value;
 }
-inline void RoomConfigEvent::set_player_id_white(int64_t value) {
+inline void BroadcastSettingEvent::set_player_id_white(int64_t value) {
   _internal_set_player_id_white(value);
-  // @@protoc_insertion_point(field_set:openfoxwq.RoomConfigEvent.player_id_white)
+  // @@protoc_insertion_point(field_set:openfoxwq.BroadcastSettingEvent.player_id_white)
 }
 
-// required int64 room_id = 3;
-inline bool RoomConfigEvent::_internal_has_room_id() const {
+// required int64 broadcast_id = 3;
+inline bool BroadcastSettingEvent::_internal_has_broadcast_id() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool RoomConfigEvent::has_room_id() const {
-  return _internal_has_room_id();
+inline bool BroadcastSettingEvent::has_broadcast_id() const {
+  return _internal_has_broadcast_id();
 }
-inline void RoomConfigEvent::clear_room_id() {
-  _impl_.room_id_ = int64_t{0};
+inline void BroadcastSettingEvent::clear_broadcast_id() {
+  _impl_.broadcast_id_ = int64_t{0};
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline int64_t RoomConfigEvent::_internal_room_id() const {
-  return _impl_.room_id_;
+inline int64_t BroadcastSettingEvent::_internal_broadcast_id() const {
+  return _impl_.broadcast_id_;
 }
-inline int64_t RoomConfigEvent::room_id() const {
-  // @@protoc_insertion_point(field_get:openfoxwq.RoomConfigEvent.room_id)
-  return _internal_room_id();
+inline int64_t BroadcastSettingEvent::broadcast_id() const {
+  // @@protoc_insertion_point(field_get:openfoxwq.BroadcastSettingEvent.broadcast_id)
+  return _internal_broadcast_id();
 }
-inline void RoomConfigEvent::_internal_set_room_id(int64_t value) {
+inline void BroadcastSettingEvent::_internal_set_broadcast_id(int64_t value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.room_id_ = value;
+  _impl_.broadcast_id_ = value;
 }
-inline void RoomConfigEvent::set_room_id(int64_t value) {
-  _internal_set_room_id(value);
-  // @@protoc_insertion_point(field_set:openfoxwq.RoomConfigEvent.room_id)
+inline void BroadcastSettingEvent::set_broadcast_id(int64_t value) {
+  _internal_set_broadcast_id(value);
+  // @@protoc_insertion_point(field_set:openfoxwq.BroadcastSettingEvent.broadcast_id)
 }
 
-// optional .openfoxwq.RoomConfigEvent.RoomConfig config = 6;
-inline bool RoomConfigEvent::_internal_has_config() const {
+// optional .openfoxwq.MatchSettings match_settings = 6;
+inline bool BroadcastSettingEvent::_internal_has_match_settings() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.config_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.match_settings_ != nullptr);
   return value;
 }
-inline bool RoomConfigEvent::has_config() const {
-  return _internal_has_config();
+inline bool BroadcastSettingEvent::has_match_settings() const {
+  return _internal_has_match_settings();
 }
-inline void RoomConfigEvent::clear_config() {
-  if (_impl_.config_ != nullptr) _impl_.config_->Clear();
-  _impl_._has_bits_[0] &= ~0x00000001u;
+inline const ::openfoxwq::MatchSettings& BroadcastSettingEvent::_internal_match_settings() const {
+  const ::openfoxwq::MatchSettings* p = _impl_.match_settings_;
+  return p != nullptr ? *p : reinterpret_cast<const ::openfoxwq::MatchSettings&>(
+      ::openfoxwq::_MatchSettings_default_instance_);
 }
-inline const ::openfoxwq::RoomConfigEvent_RoomConfig& RoomConfigEvent::_internal_config() const {
-  const ::openfoxwq::RoomConfigEvent_RoomConfig* p = _impl_.config_;
-  return p != nullptr ? *p : reinterpret_cast<const ::openfoxwq::RoomConfigEvent_RoomConfig&>(
-      ::openfoxwq::_RoomConfigEvent_RoomConfig_default_instance_);
+inline const ::openfoxwq::MatchSettings& BroadcastSettingEvent::match_settings() const {
+  // @@protoc_insertion_point(field_get:openfoxwq.BroadcastSettingEvent.match_settings)
+  return _internal_match_settings();
 }
-inline const ::openfoxwq::RoomConfigEvent_RoomConfig& RoomConfigEvent::config() const {
-  // @@protoc_insertion_point(field_get:openfoxwq.RoomConfigEvent.config)
-  return _internal_config();
-}
-inline void RoomConfigEvent::unsafe_arena_set_allocated_config(
-    ::openfoxwq::RoomConfigEvent_RoomConfig* config) {
+inline void BroadcastSettingEvent::unsafe_arena_set_allocated_match_settings(
+    ::openfoxwq::MatchSettings* match_settings) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.config_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.match_settings_);
   }
-  _impl_.config_ = config;
-  if (config) {
+  _impl_.match_settings_ = match_settings;
+  if (match_settings) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:openfoxwq.RoomConfigEvent.config)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:openfoxwq.BroadcastSettingEvent.match_settings)
 }
-inline ::openfoxwq::RoomConfigEvent_RoomConfig* RoomConfigEvent::release_config() {
+inline ::openfoxwq::MatchSettings* BroadcastSettingEvent::release_match_settings() {
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::openfoxwq::RoomConfigEvent_RoomConfig* temp = _impl_.config_;
-  _impl_.config_ = nullptr;
+  ::openfoxwq::MatchSettings* temp = _impl_.match_settings_;
+  _impl_.match_settings_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -6728,237 +6179,238 @@ inline ::openfoxwq::RoomConfigEvent_RoomConfig* RoomConfigEvent::release_config(
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::openfoxwq::RoomConfigEvent_RoomConfig* RoomConfigEvent::unsafe_arena_release_config() {
-  // @@protoc_insertion_point(field_release:openfoxwq.RoomConfigEvent.config)
+inline ::openfoxwq::MatchSettings* BroadcastSettingEvent::unsafe_arena_release_match_settings() {
+  // @@protoc_insertion_point(field_release:openfoxwq.BroadcastSettingEvent.match_settings)
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::openfoxwq::RoomConfigEvent_RoomConfig* temp = _impl_.config_;
-  _impl_.config_ = nullptr;
+  ::openfoxwq::MatchSettings* temp = _impl_.match_settings_;
+  _impl_.match_settings_ = nullptr;
   return temp;
 }
-inline ::openfoxwq::RoomConfigEvent_RoomConfig* RoomConfigEvent::_internal_mutable_config() {
+inline ::openfoxwq::MatchSettings* BroadcastSettingEvent::_internal_mutable_match_settings() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  if (_impl_.config_ == nullptr) {
-    auto* p = CreateMaybeMessage<::openfoxwq::RoomConfigEvent_RoomConfig>(GetArenaForAllocation());
-    _impl_.config_ = p;
+  if (_impl_.match_settings_ == nullptr) {
+    auto* p = CreateMaybeMessage<::openfoxwq::MatchSettings>(GetArenaForAllocation());
+    _impl_.match_settings_ = p;
   }
-  return _impl_.config_;
+  return _impl_.match_settings_;
 }
-inline ::openfoxwq::RoomConfigEvent_RoomConfig* RoomConfigEvent::mutable_config() {
-  ::openfoxwq::RoomConfigEvent_RoomConfig* _msg = _internal_mutable_config();
-  // @@protoc_insertion_point(field_mutable:openfoxwq.RoomConfigEvent.config)
+inline ::openfoxwq::MatchSettings* BroadcastSettingEvent::mutable_match_settings() {
+  ::openfoxwq::MatchSettings* _msg = _internal_mutable_match_settings();
+  // @@protoc_insertion_point(field_mutable:openfoxwq.BroadcastSettingEvent.match_settings)
   return _msg;
 }
-inline void RoomConfigEvent::set_allocated_config(::openfoxwq::RoomConfigEvent_RoomConfig* config) {
+inline void BroadcastSettingEvent::set_allocated_match_settings(::openfoxwq::MatchSettings* match_settings) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete _impl_.config_;
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.match_settings_);
   }
-  if (config) {
+  if (match_settings) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(config);
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(match_settings));
     if (message_arena != submessage_arena) {
-      config = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, config, submessage_arena);
+      match_settings = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, match_settings, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.config_ = config;
-  // @@protoc_insertion_point(field_set_allocated:openfoxwq.RoomConfigEvent.config)
+  _impl_.match_settings_ = match_settings;
+  // @@protoc_insertion_point(field_set_allocated:openfoxwq.BroadcastSettingEvent.match_settings)
 }
 
 // -------------------------------------------------------------------
 
-// RoomStateEvent_RoomState
+// BroadcastStateEvent_BroadcastState
 
 // repeated int64 encoded_moves = 1;
-inline int RoomStateEvent_RoomState::_internal_encoded_moves_size() const {
+inline int BroadcastStateEvent_BroadcastState::_internal_encoded_moves_size() const {
   return _impl_.encoded_moves_.size();
 }
-inline int RoomStateEvent_RoomState::encoded_moves_size() const {
+inline int BroadcastStateEvent_BroadcastState::encoded_moves_size() const {
   return _internal_encoded_moves_size();
 }
-inline void RoomStateEvent_RoomState::clear_encoded_moves() {
+inline void BroadcastStateEvent_BroadcastState::clear_encoded_moves() {
   _impl_.encoded_moves_.Clear();
 }
-inline int64_t RoomStateEvent_RoomState::_internal_encoded_moves(int index) const {
+inline int64_t BroadcastStateEvent_BroadcastState::_internal_encoded_moves(int index) const {
   return _impl_.encoded_moves_.Get(index);
 }
-inline int64_t RoomStateEvent_RoomState::encoded_moves(int index) const {
-  // @@protoc_insertion_point(field_get:openfoxwq.RoomStateEvent.RoomState.encoded_moves)
+inline int64_t BroadcastStateEvent_BroadcastState::encoded_moves(int index) const {
+  // @@protoc_insertion_point(field_get:openfoxwq.BroadcastStateEvent.BroadcastState.encoded_moves)
   return _internal_encoded_moves(index);
 }
-inline void RoomStateEvent_RoomState::set_encoded_moves(int index, int64_t value) {
+inline void BroadcastStateEvent_BroadcastState::set_encoded_moves(int index, int64_t value) {
   _impl_.encoded_moves_.Set(index, value);
-  // @@protoc_insertion_point(field_set:openfoxwq.RoomStateEvent.RoomState.encoded_moves)
+  // @@protoc_insertion_point(field_set:openfoxwq.BroadcastStateEvent.BroadcastState.encoded_moves)
 }
-inline void RoomStateEvent_RoomState::_internal_add_encoded_moves(int64_t value) {
+inline void BroadcastStateEvent_BroadcastState::_internal_add_encoded_moves(int64_t value) {
   _impl_.encoded_moves_.Add(value);
 }
-inline void RoomStateEvent_RoomState::add_encoded_moves(int64_t value) {
+inline void BroadcastStateEvent_BroadcastState::add_encoded_moves(int64_t value) {
   _internal_add_encoded_moves(value);
-  // @@protoc_insertion_point(field_add:openfoxwq.RoomStateEvent.RoomState.encoded_moves)
+  // @@protoc_insertion_point(field_add:openfoxwq.BroadcastStateEvent.BroadcastState.encoded_moves)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< int64_t >&
-RoomStateEvent_RoomState::_internal_encoded_moves() const {
+BroadcastStateEvent_BroadcastState::_internal_encoded_moves() const {
   return _impl_.encoded_moves_;
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< int64_t >&
-RoomStateEvent_RoomState::encoded_moves() const {
-  // @@protoc_insertion_point(field_list:openfoxwq.RoomStateEvent.RoomState.encoded_moves)
+BroadcastStateEvent_BroadcastState::encoded_moves() const {
+  // @@protoc_insertion_point(field_list:openfoxwq.BroadcastStateEvent.BroadcastState.encoded_moves)
   return _internal_encoded_moves();
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< int64_t >*
-RoomStateEvent_RoomState::_internal_mutable_encoded_moves() {
+BroadcastStateEvent_BroadcastState::_internal_mutable_encoded_moves() {
   return &_impl_.encoded_moves_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< int64_t >*
-RoomStateEvent_RoomState::mutable_encoded_moves() {
-  // @@protoc_insertion_point(field_mutable_list:openfoxwq.RoomStateEvent.RoomState.encoded_moves)
+BroadcastStateEvent_BroadcastState::mutable_encoded_moves() {
+  // @@protoc_insertion_point(field_mutable_list:openfoxwq.BroadcastStateEvent.BroadcastState.encoded_moves)
   return _internal_mutable_encoded_moves();
 }
 
 // optional int64 unknown_field_2 = 2;
-inline bool RoomStateEvent_RoomState::_internal_has_unknown_field_2() const {
+inline bool BroadcastStateEvent_BroadcastState::_internal_has_unknown_field_2() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool RoomStateEvent_RoomState::has_unknown_field_2() const {
+inline bool BroadcastStateEvent_BroadcastState::has_unknown_field_2() const {
   return _internal_has_unknown_field_2();
 }
-inline void RoomStateEvent_RoomState::clear_unknown_field_2() {
+inline void BroadcastStateEvent_BroadcastState::clear_unknown_field_2() {
   _impl_.unknown_field_2_ = int64_t{0};
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline int64_t RoomStateEvent_RoomState::_internal_unknown_field_2() const {
+inline int64_t BroadcastStateEvent_BroadcastState::_internal_unknown_field_2() const {
   return _impl_.unknown_field_2_;
 }
-inline int64_t RoomStateEvent_RoomState::unknown_field_2() const {
-  // @@protoc_insertion_point(field_get:openfoxwq.RoomStateEvent.RoomState.unknown_field_2)
+inline int64_t BroadcastStateEvent_BroadcastState::unknown_field_2() const {
+  // @@protoc_insertion_point(field_get:openfoxwq.BroadcastStateEvent.BroadcastState.unknown_field_2)
   return _internal_unknown_field_2();
 }
-inline void RoomStateEvent_RoomState::_internal_set_unknown_field_2(int64_t value) {
+inline void BroadcastStateEvent_BroadcastState::_internal_set_unknown_field_2(int64_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.unknown_field_2_ = value;
 }
-inline void RoomStateEvent_RoomState::set_unknown_field_2(int64_t value) {
+inline void BroadcastStateEvent_BroadcastState::set_unknown_field_2(int64_t value) {
   _internal_set_unknown_field_2(value);
-  // @@protoc_insertion_point(field_set:openfoxwq.RoomStateEvent.RoomState.unknown_field_2)
+  // @@protoc_insertion_point(field_set:openfoxwq.BroadcastStateEvent.BroadcastState.unknown_field_2)
 }
 
 // optional int64 unknown_field_3 = 3;
-inline bool RoomStateEvent_RoomState::_internal_has_unknown_field_3() const {
+inline bool BroadcastStateEvent_BroadcastState::_internal_has_unknown_field_3() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool RoomStateEvent_RoomState::has_unknown_field_3() const {
+inline bool BroadcastStateEvent_BroadcastState::has_unknown_field_3() const {
   return _internal_has_unknown_field_3();
 }
-inline void RoomStateEvent_RoomState::clear_unknown_field_3() {
+inline void BroadcastStateEvent_BroadcastState::clear_unknown_field_3() {
   _impl_.unknown_field_3_ = int64_t{0};
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline int64_t RoomStateEvent_RoomState::_internal_unknown_field_3() const {
+inline int64_t BroadcastStateEvent_BroadcastState::_internal_unknown_field_3() const {
   return _impl_.unknown_field_3_;
 }
-inline int64_t RoomStateEvent_RoomState::unknown_field_3() const {
-  // @@protoc_insertion_point(field_get:openfoxwq.RoomStateEvent.RoomState.unknown_field_3)
+inline int64_t BroadcastStateEvent_BroadcastState::unknown_field_3() const {
+  // @@protoc_insertion_point(field_get:openfoxwq.BroadcastStateEvent.BroadcastState.unknown_field_3)
   return _internal_unknown_field_3();
 }
-inline void RoomStateEvent_RoomState::_internal_set_unknown_field_3(int64_t value) {
+inline void BroadcastStateEvent_BroadcastState::_internal_set_unknown_field_3(int64_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.unknown_field_3_ = value;
 }
-inline void RoomStateEvent_RoomState::set_unknown_field_3(int64_t value) {
+inline void BroadcastStateEvent_BroadcastState::set_unknown_field_3(int64_t value) {
   _internal_set_unknown_field_3(value);
-  // @@protoc_insertion_point(field_set:openfoxwq.RoomStateEvent.RoomState.unknown_field_3)
+  // @@protoc_insertion_point(field_set:openfoxwq.BroadcastStateEvent.BroadcastState.unknown_field_3)
 }
 
 // -------------------------------------------------------------------
 
-// RoomStateEvent
+// BroadcastStateEvent
 
 // required int64 player_id = 2;
-inline bool RoomStateEvent::_internal_has_player_id() const {
+inline bool BroadcastStateEvent::_internal_has_player_id() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool RoomStateEvent::has_player_id() const {
+inline bool BroadcastStateEvent::has_player_id() const {
   return _internal_has_player_id();
 }
-inline void RoomStateEvent::clear_player_id() {
+inline void BroadcastStateEvent::clear_player_id() {
   _impl_.player_id_ = int64_t{0};
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline int64_t RoomStateEvent::_internal_player_id() const {
+inline int64_t BroadcastStateEvent::_internal_player_id() const {
   return _impl_.player_id_;
 }
-inline int64_t RoomStateEvent::player_id() const {
-  // @@protoc_insertion_point(field_get:openfoxwq.RoomStateEvent.player_id)
+inline int64_t BroadcastStateEvent::player_id() const {
+  // @@protoc_insertion_point(field_get:openfoxwq.BroadcastStateEvent.player_id)
   return _internal_player_id();
 }
-inline void RoomStateEvent::_internal_set_player_id(int64_t value) {
+inline void BroadcastStateEvent::_internal_set_player_id(int64_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.player_id_ = value;
 }
-inline void RoomStateEvent::set_player_id(int64_t value) {
+inline void BroadcastStateEvent::set_player_id(int64_t value) {
   _internal_set_player_id(value);
-  // @@protoc_insertion_point(field_set:openfoxwq.RoomStateEvent.player_id)
+  // @@protoc_insertion_point(field_set:openfoxwq.BroadcastStateEvent.player_id)
 }
 
-// required int64 room_id = 3;
-inline bool RoomStateEvent::_internal_has_room_id() const {
+// required int64 broadcast_id = 3;
+inline bool BroadcastStateEvent::_internal_has_broadcast_id() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool RoomStateEvent::has_room_id() const {
-  return _internal_has_room_id();
+inline bool BroadcastStateEvent::has_broadcast_id() const {
+  return _internal_has_broadcast_id();
 }
-inline void RoomStateEvent::clear_room_id() {
-  _impl_.room_id_ = int64_t{0};
+inline void BroadcastStateEvent::clear_broadcast_id() {
+  _impl_.broadcast_id_ = int64_t{0};
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline int64_t RoomStateEvent::_internal_room_id() const {
-  return _impl_.room_id_;
+inline int64_t BroadcastStateEvent::_internal_broadcast_id() const {
+  return _impl_.broadcast_id_;
 }
-inline int64_t RoomStateEvent::room_id() const {
-  // @@protoc_insertion_point(field_get:openfoxwq.RoomStateEvent.room_id)
-  return _internal_room_id();
+inline int64_t BroadcastStateEvent::broadcast_id() const {
+  // @@protoc_insertion_point(field_get:openfoxwq.BroadcastStateEvent.broadcast_id)
+  return _internal_broadcast_id();
 }
-inline void RoomStateEvent::_internal_set_room_id(int64_t value) {
+inline void BroadcastStateEvent::_internal_set_broadcast_id(int64_t value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.room_id_ = value;
+  _impl_.broadcast_id_ = value;
 }
-inline void RoomStateEvent::set_room_id(int64_t value) {
-  _internal_set_room_id(value);
-  // @@protoc_insertion_point(field_set:openfoxwq.RoomStateEvent.room_id)
+inline void BroadcastStateEvent::set_broadcast_id(int64_t value) {
+  _internal_set_broadcast_id(value);
+  // @@protoc_insertion_point(field_set:openfoxwq.BroadcastStateEvent.broadcast_id)
 }
 
-// optional .openfoxwq.RoomStateEvent.RoomState state = 4;
-inline bool RoomStateEvent::_internal_has_state() const {
+// optional .openfoxwq.BroadcastStateEvent.BroadcastState state = 4;
+inline bool BroadcastStateEvent::_internal_has_state() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   PROTOBUF_ASSUME(!value || _impl_.state_ != nullptr);
   return value;
 }
-inline bool RoomStateEvent::has_state() const {
+inline bool BroadcastStateEvent::has_state() const {
   return _internal_has_state();
 }
-inline void RoomStateEvent::clear_state() {
+inline void BroadcastStateEvent::clear_state() {
   if (_impl_.state_ != nullptr) _impl_.state_->Clear();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const ::openfoxwq::RoomStateEvent_RoomState& RoomStateEvent::_internal_state() const {
-  const ::openfoxwq::RoomStateEvent_RoomState* p = _impl_.state_;
-  return p != nullptr ? *p : reinterpret_cast<const ::openfoxwq::RoomStateEvent_RoomState&>(
-      ::openfoxwq::_RoomStateEvent_RoomState_default_instance_);
+inline const ::openfoxwq::BroadcastStateEvent_BroadcastState& BroadcastStateEvent::_internal_state() const {
+  const ::openfoxwq::BroadcastStateEvent_BroadcastState* p = _impl_.state_;
+  return p != nullptr ? *p : reinterpret_cast<const ::openfoxwq::BroadcastStateEvent_BroadcastState&>(
+      ::openfoxwq::_BroadcastStateEvent_BroadcastState_default_instance_);
 }
-inline const ::openfoxwq::RoomStateEvent_RoomState& RoomStateEvent::state() const {
-  // @@protoc_insertion_point(field_get:openfoxwq.RoomStateEvent.state)
+inline const ::openfoxwq::BroadcastStateEvent_BroadcastState& BroadcastStateEvent::state() const {
+  // @@protoc_insertion_point(field_get:openfoxwq.BroadcastStateEvent.state)
   return _internal_state();
 }
-inline void RoomStateEvent::unsafe_arena_set_allocated_state(
-    ::openfoxwq::RoomStateEvent_RoomState* state) {
+inline void BroadcastStateEvent::unsafe_arena_set_allocated_state(
+    ::openfoxwq::BroadcastStateEvent_BroadcastState* state) {
   if (GetArenaForAllocation() == nullptr) {
     delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.state_);
   }
@@ -6968,11 +6420,11 @@ inline void RoomStateEvent::unsafe_arena_set_allocated_state(
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:openfoxwq.RoomStateEvent.state)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:openfoxwq.BroadcastStateEvent.state)
 }
-inline ::openfoxwq::RoomStateEvent_RoomState* RoomStateEvent::release_state() {
+inline ::openfoxwq::BroadcastStateEvent_BroadcastState* BroadcastStateEvent::release_state() {
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::openfoxwq::RoomStateEvent_RoomState* temp = _impl_.state_;
+  ::openfoxwq::BroadcastStateEvent_BroadcastState* temp = _impl_.state_;
   _impl_.state_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
@@ -6985,27 +6437,27 @@ inline ::openfoxwq::RoomStateEvent_RoomState* RoomStateEvent::release_state() {
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::openfoxwq::RoomStateEvent_RoomState* RoomStateEvent::unsafe_arena_release_state() {
-  // @@protoc_insertion_point(field_release:openfoxwq.RoomStateEvent.state)
+inline ::openfoxwq::BroadcastStateEvent_BroadcastState* BroadcastStateEvent::unsafe_arena_release_state() {
+  // @@protoc_insertion_point(field_release:openfoxwq.BroadcastStateEvent.state)
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::openfoxwq::RoomStateEvent_RoomState* temp = _impl_.state_;
+  ::openfoxwq::BroadcastStateEvent_BroadcastState* temp = _impl_.state_;
   _impl_.state_ = nullptr;
   return temp;
 }
-inline ::openfoxwq::RoomStateEvent_RoomState* RoomStateEvent::_internal_mutable_state() {
+inline ::openfoxwq::BroadcastStateEvent_BroadcastState* BroadcastStateEvent::_internal_mutable_state() {
   _impl_._has_bits_[0] |= 0x00000001u;
   if (_impl_.state_ == nullptr) {
-    auto* p = CreateMaybeMessage<::openfoxwq::RoomStateEvent_RoomState>(GetArenaForAllocation());
+    auto* p = CreateMaybeMessage<::openfoxwq::BroadcastStateEvent_BroadcastState>(GetArenaForAllocation());
     _impl_.state_ = p;
   }
   return _impl_.state_;
 }
-inline ::openfoxwq::RoomStateEvent_RoomState* RoomStateEvent::mutable_state() {
-  ::openfoxwq::RoomStateEvent_RoomState* _msg = _internal_mutable_state();
-  // @@protoc_insertion_point(field_mutable:openfoxwq.RoomStateEvent.state)
+inline ::openfoxwq::BroadcastStateEvent_BroadcastState* BroadcastStateEvent::mutable_state() {
+  ::openfoxwq::BroadcastStateEvent_BroadcastState* _msg = _internal_mutable_state();
+  // @@protoc_insertion_point(field_mutable:openfoxwq.BroadcastStateEvent.state)
   return _msg;
 }
-inline void RoomStateEvent::set_allocated_state(::openfoxwq::RoomStateEvent_RoomState* state) {
+inline void BroadcastStateEvent::set_allocated_state(::openfoxwq::BroadcastStateEvent_BroadcastState* state) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
     delete _impl_.state_;
@@ -7022,496 +6474,496 @@ inline void RoomStateEvent::set_allocated_state(::openfoxwq::RoomStateEvent_Room
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.state_ = state;
-  // @@protoc_insertion_point(field_set_allocated:openfoxwq.RoomStateEvent.state)
+  // @@protoc_insertion_point(field_set_allocated:openfoxwq.BroadcastStateEvent.state)
 }
 
 // optional int64 move_count = 6;
-inline bool RoomStateEvent::_internal_has_move_count() const {
+inline bool BroadcastStateEvent::_internal_has_move_count() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
 }
-inline bool RoomStateEvent::has_move_count() const {
+inline bool BroadcastStateEvent::has_move_count() const {
   return _internal_has_move_count();
 }
-inline void RoomStateEvent::clear_move_count() {
+inline void BroadcastStateEvent::clear_move_count() {
   _impl_.move_count_ = int64_t{0};
   _impl_._has_bits_[0] &= ~0x00000008u;
 }
-inline int64_t RoomStateEvent::_internal_move_count() const {
+inline int64_t BroadcastStateEvent::_internal_move_count() const {
   return _impl_.move_count_;
 }
-inline int64_t RoomStateEvent::move_count() const {
-  // @@protoc_insertion_point(field_get:openfoxwq.RoomStateEvent.move_count)
+inline int64_t BroadcastStateEvent::move_count() const {
+  // @@protoc_insertion_point(field_get:openfoxwq.BroadcastStateEvent.move_count)
   return _internal_move_count();
 }
-inline void RoomStateEvent::_internal_set_move_count(int64_t value) {
+inline void BroadcastStateEvent::_internal_set_move_count(int64_t value) {
   _impl_._has_bits_[0] |= 0x00000008u;
   _impl_.move_count_ = value;
 }
-inline void RoomStateEvent::set_move_count(int64_t value) {
+inline void BroadcastStateEvent::set_move_count(int64_t value) {
   _internal_set_move_count(value);
-  // @@protoc_insertion_point(field_set:openfoxwq.RoomStateEvent.move_count)
+  // @@protoc_insertion_point(field_set:openfoxwq.BroadcastStateEvent.move_count)
 }
 
 // -------------------------------------------------------------------
 
-// RoomMoveEvent
+// BroadcastMoveEvent
 
 // required int64 player_id = 2;
-inline bool RoomMoveEvent::_internal_has_player_id() const {
+inline bool BroadcastMoveEvent::_internal_has_player_id() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool RoomMoveEvent::has_player_id() const {
+inline bool BroadcastMoveEvent::has_player_id() const {
   return _internal_has_player_id();
 }
-inline void RoomMoveEvent::clear_player_id() {
+inline void BroadcastMoveEvent::clear_player_id() {
   _impl_.player_id_ = int64_t{0};
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline int64_t RoomMoveEvent::_internal_player_id() const {
+inline int64_t BroadcastMoveEvent::_internal_player_id() const {
   return _impl_.player_id_;
 }
-inline int64_t RoomMoveEvent::player_id() const {
-  // @@protoc_insertion_point(field_get:openfoxwq.RoomMoveEvent.player_id)
+inline int64_t BroadcastMoveEvent::player_id() const {
+  // @@protoc_insertion_point(field_get:openfoxwq.BroadcastMoveEvent.player_id)
   return _internal_player_id();
 }
-inline void RoomMoveEvent::_internal_set_player_id(int64_t value) {
+inline void BroadcastMoveEvent::_internal_set_player_id(int64_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.player_id_ = value;
 }
-inline void RoomMoveEvent::set_player_id(int64_t value) {
+inline void BroadcastMoveEvent::set_player_id(int64_t value) {
   _internal_set_player_id(value);
-  // @@protoc_insertion_point(field_set:openfoxwq.RoomMoveEvent.player_id)
+  // @@protoc_insertion_point(field_set:openfoxwq.BroadcastMoveEvent.player_id)
 }
 
-// required int64 room_id = 3;
-inline bool RoomMoveEvent::_internal_has_room_id() const {
+// required int64 broadcast_id = 3;
+inline bool BroadcastMoveEvent::_internal_has_broadcast_id() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool RoomMoveEvent::has_room_id() const {
-  return _internal_has_room_id();
+inline bool BroadcastMoveEvent::has_broadcast_id() const {
+  return _internal_has_broadcast_id();
 }
-inline void RoomMoveEvent::clear_room_id() {
-  _impl_.room_id_ = int64_t{0};
+inline void BroadcastMoveEvent::clear_broadcast_id() {
+  _impl_.broadcast_id_ = int64_t{0};
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline int64_t RoomMoveEvent::_internal_room_id() const {
-  return _impl_.room_id_;
+inline int64_t BroadcastMoveEvent::_internal_broadcast_id() const {
+  return _impl_.broadcast_id_;
 }
-inline int64_t RoomMoveEvent::room_id() const {
-  // @@protoc_insertion_point(field_get:openfoxwq.RoomMoveEvent.room_id)
-  return _internal_room_id();
+inline int64_t BroadcastMoveEvent::broadcast_id() const {
+  // @@protoc_insertion_point(field_get:openfoxwq.BroadcastMoveEvent.broadcast_id)
+  return _internal_broadcast_id();
 }
-inline void RoomMoveEvent::_internal_set_room_id(int64_t value) {
+inline void BroadcastMoveEvent::_internal_set_broadcast_id(int64_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.room_id_ = value;
+  _impl_.broadcast_id_ = value;
 }
-inline void RoomMoveEvent::set_room_id(int64_t value) {
-  _internal_set_room_id(value);
-  // @@protoc_insertion_point(field_set:openfoxwq.RoomMoveEvent.room_id)
+inline void BroadcastMoveEvent::set_broadcast_id(int64_t value) {
+  _internal_set_broadcast_id(value);
+  // @@protoc_insertion_point(field_set:openfoxwq.BroadcastMoveEvent.broadcast_id)
 }
 
 // optional int64 encoded_move = 4;
-inline bool RoomMoveEvent::_internal_has_encoded_move() const {
+inline bool BroadcastMoveEvent::_internal_has_encoded_move() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool RoomMoveEvent::has_encoded_move() const {
+inline bool BroadcastMoveEvent::has_encoded_move() const {
   return _internal_has_encoded_move();
 }
-inline void RoomMoveEvent::clear_encoded_move() {
+inline void BroadcastMoveEvent::clear_encoded_move() {
   _impl_.encoded_move_ = int64_t{0};
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline int64_t RoomMoveEvent::_internal_encoded_move() const {
+inline int64_t BroadcastMoveEvent::_internal_encoded_move() const {
   return _impl_.encoded_move_;
 }
-inline int64_t RoomMoveEvent::encoded_move() const {
-  // @@protoc_insertion_point(field_get:openfoxwq.RoomMoveEvent.encoded_move)
+inline int64_t BroadcastMoveEvent::encoded_move() const {
+  // @@protoc_insertion_point(field_get:openfoxwq.BroadcastMoveEvent.encoded_move)
   return _internal_encoded_move();
 }
-inline void RoomMoveEvent::_internal_set_encoded_move(int64_t value) {
+inline void BroadcastMoveEvent::_internal_set_encoded_move(int64_t value) {
   _impl_._has_bits_[0] |= 0x00000004u;
   _impl_.encoded_move_ = value;
 }
-inline void RoomMoveEvent::set_encoded_move(int64_t value) {
+inline void BroadcastMoveEvent::set_encoded_move(int64_t value) {
   _internal_set_encoded_move(value);
-  // @@protoc_insertion_point(field_set:openfoxwq.RoomMoveEvent.encoded_move)
+  // @@protoc_insertion_point(field_set:openfoxwq.BroadcastMoveEvent.encoded_move)
 }
 
 // optional int64 time_left = 6;
-inline bool RoomMoveEvent::_internal_has_time_left() const {
+inline bool BroadcastMoveEvent::_internal_has_time_left() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
 }
-inline bool RoomMoveEvent::has_time_left() const {
+inline bool BroadcastMoveEvent::has_time_left() const {
   return _internal_has_time_left();
 }
-inline void RoomMoveEvent::clear_time_left() {
+inline void BroadcastMoveEvent::clear_time_left() {
   _impl_.time_left_ = int64_t{0};
   _impl_._has_bits_[0] &= ~0x00000010u;
 }
-inline int64_t RoomMoveEvent::_internal_time_left() const {
+inline int64_t BroadcastMoveEvent::_internal_time_left() const {
   return _impl_.time_left_;
 }
-inline int64_t RoomMoveEvent::time_left() const {
-  // @@protoc_insertion_point(field_get:openfoxwq.RoomMoveEvent.time_left)
+inline int64_t BroadcastMoveEvent::time_left() const {
+  // @@protoc_insertion_point(field_get:openfoxwq.BroadcastMoveEvent.time_left)
   return _internal_time_left();
 }
-inline void RoomMoveEvent::_internal_set_time_left(int64_t value) {
+inline void BroadcastMoveEvent::_internal_set_time_left(int64_t value) {
   _impl_._has_bits_[0] |= 0x00000010u;
   _impl_.time_left_ = value;
 }
-inline void RoomMoveEvent::set_time_left(int64_t value) {
+inline void BroadcastMoveEvent::set_time_left(int64_t value) {
   _internal_set_time_left(value);
-  // @@protoc_insertion_point(field_set:openfoxwq.RoomMoveEvent.time_left)
+  // @@protoc_insertion_point(field_set:openfoxwq.BroadcastMoveEvent.time_left)
 }
 
 // optional int64 move_number = 8;
-inline bool RoomMoveEvent::_internal_has_move_number() const {
+inline bool BroadcastMoveEvent::_internal_has_move_number() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
 }
-inline bool RoomMoveEvent::has_move_number() const {
+inline bool BroadcastMoveEvent::has_move_number() const {
   return _internal_has_move_number();
 }
-inline void RoomMoveEvent::clear_move_number() {
+inline void BroadcastMoveEvent::clear_move_number() {
   _impl_.move_number_ = int64_t{0};
   _impl_._has_bits_[0] &= ~0x00000020u;
 }
-inline int64_t RoomMoveEvent::_internal_move_number() const {
+inline int64_t BroadcastMoveEvent::_internal_move_number() const {
   return _impl_.move_number_;
 }
-inline int64_t RoomMoveEvent::move_number() const {
-  // @@protoc_insertion_point(field_get:openfoxwq.RoomMoveEvent.move_number)
+inline int64_t BroadcastMoveEvent::move_number() const {
+  // @@protoc_insertion_point(field_get:openfoxwq.BroadcastMoveEvent.move_number)
   return _internal_move_number();
 }
-inline void RoomMoveEvent::_internal_set_move_number(int64_t value) {
+inline void BroadcastMoveEvent::_internal_set_move_number(int64_t value) {
   _impl_._has_bits_[0] |= 0x00000020u;
   _impl_.move_number_ = value;
 }
-inline void RoomMoveEvent::set_move_number(int64_t value) {
+inline void BroadcastMoveEvent::set_move_number(int64_t value) {
   _internal_set_move_number(value);
-  // @@protoc_insertion_point(field_set:openfoxwq.RoomMoveEvent.move_number)
+  // @@protoc_insertion_point(field_set:openfoxwq.BroadcastMoveEvent.move_number)
 }
 
 // optional int64 unknown_field_5 = 5;
-inline bool RoomMoveEvent::_internal_has_unknown_field_5() const {
+inline bool BroadcastMoveEvent::_internal_has_unknown_field_5() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
 }
-inline bool RoomMoveEvent::has_unknown_field_5() const {
+inline bool BroadcastMoveEvent::has_unknown_field_5() const {
   return _internal_has_unknown_field_5();
 }
-inline void RoomMoveEvent::clear_unknown_field_5() {
+inline void BroadcastMoveEvent::clear_unknown_field_5() {
   _impl_.unknown_field_5_ = int64_t{0};
   _impl_._has_bits_[0] &= ~0x00000008u;
 }
-inline int64_t RoomMoveEvent::_internal_unknown_field_5() const {
+inline int64_t BroadcastMoveEvent::_internal_unknown_field_5() const {
   return _impl_.unknown_field_5_;
 }
-inline int64_t RoomMoveEvent::unknown_field_5() const {
-  // @@protoc_insertion_point(field_get:openfoxwq.RoomMoveEvent.unknown_field_5)
+inline int64_t BroadcastMoveEvent::unknown_field_5() const {
+  // @@protoc_insertion_point(field_get:openfoxwq.BroadcastMoveEvent.unknown_field_5)
   return _internal_unknown_field_5();
 }
-inline void RoomMoveEvent::_internal_set_unknown_field_5(int64_t value) {
+inline void BroadcastMoveEvent::_internal_set_unknown_field_5(int64_t value) {
   _impl_._has_bits_[0] |= 0x00000008u;
   _impl_.unknown_field_5_ = value;
 }
-inline void RoomMoveEvent::set_unknown_field_5(int64_t value) {
+inline void BroadcastMoveEvent::set_unknown_field_5(int64_t value) {
   _internal_set_unknown_field_5(value);
-  // @@protoc_insertion_point(field_set:openfoxwq.RoomMoveEvent.unknown_field_5)
+  // @@protoc_insertion_point(field_set:openfoxwq.BroadcastMoveEvent.unknown_field_5)
 }
 
 // -------------------------------------------------------------------
 
-// RoomGameResultEvent
+// BroadcastGameResultEvent
 
-// required int64 room_id = 3;
-inline bool RoomGameResultEvent::_internal_has_room_id() const {
+// required int64 broadcast_id = 3;
+inline bool BroadcastGameResultEvent::_internal_has_broadcast_id() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool RoomGameResultEvent::has_room_id() const {
-  return _internal_has_room_id();
+inline bool BroadcastGameResultEvent::has_broadcast_id() const {
+  return _internal_has_broadcast_id();
 }
-inline void RoomGameResultEvent::clear_room_id() {
-  _impl_.room_id_ = int64_t{0};
+inline void BroadcastGameResultEvent::clear_broadcast_id() {
+  _impl_.broadcast_id_ = int64_t{0};
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline int64_t RoomGameResultEvent::_internal_room_id() const {
-  return _impl_.room_id_;
+inline int64_t BroadcastGameResultEvent::_internal_broadcast_id() const {
+  return _impl_.broadcast_id_;
 }
-inline int64_t RoomGameResultEvent::room_id() const {
-  // @@protoc_insertion_point(field_get:openfoxwq.RoomGameResultEvent.room_id)
-  return _internal_room_id();
+inline int64_t BroadcastGameResultEvent::broadcast_id() const {
+  // @@protoc_insertion_point(field_get:openfoxwq.BroadcastGameResultEvent.broadcast_id)
+  return _internal_broadcast_id();
 }
-inline void RoomGameResultEvent::_internal_set_room_id(int64_t value) {
+inline void BroadcastGameResultEvent::_internal_set_broadcast_id(int64_t value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.room_id_ = value;
+  _impl_.broadcast_id_ = value;
 }
-inline void RoomGameResultEvent::set_room_id(int64_t value) {
-  _internal_set_room_id(value);
-  // @@protoc_insertion_point(field_set:openfoxwq.RoomGameResultEvent.room_id)
+inline void BroadcastGameResultEvent::set_broadcast_id(int64_t value) {
+  _internal_set_broadcast_id(value);
+  // @@protoc_insertion_point(field_set:openfoxwq.BroadcastGameResultEvent.broadcast_id)
 }
 
 // optional .openfoxwq.Color winner = 4;
-inline bool RoomGameResultEvent::_internal_has_winner() const {
+inline bool BroadcastGameResultEvent::_internal_has_winner() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
 }
-inline bool RoomGameResultEvent::has_winner() const {
+inline bool BroadcastGameResultEvent::has_winner() const {
   return _internal_has_winner();
 }
-inline void RoomGameResultEvent::clear_winner() {
+inline void BroadcastGameResultEvent::clear_winner() {
   _impl_.winner_ = 0;
   _impl_._has_bits_[0] &= ~0x00000010u;
 }
-inline ::openfoxwq::Color RoomGameResultEvent::_internal_winner() const {
+inline ::openfoxwq::Color BroadcastGameResultEvent::_internal_winner() const {
   return static_cast< ::openfoxwq::Color >(_impl_.winner_);
 }
-inline ::openfoxwq::Color RoomGameResultEvent::winner() const {
-  // @@protoc_insertion_point(field_get:openfoxwq.RoomGameResultEvent.winner)
+inline ::openfoxwq::Color BroadcastGameResultEvent::winner() const {
+  // @@protoc_insertion_point(field_get:openfoxwq.BroadcastGameResultEvent.winner)
   return _internal_winner();
 }
-inline void RoomGameResultEvent::_internal_set_winner(::openfoxwq::Color value) {
+inline void BroadcastGameResultEvent::_internal_set_winner(::openfoxwq::Color value) {
   assert(::openfoxwq::Color_IsValid(value));
   _impl_._has_bits_[0] |= 0x00000010u;
   _impl_.winner_ = value;
 }
-inline void RoomGameResultEvent::set_winner(::openfoxwq::Color value) {
+inline void BroadcastGameResultEvent::set_winner(::openfoxwq::Color value) {
   _internal_set_winner(value);
-  // @@protoc_insertion_point(field_set:openfoxwq.RoomGameResultEvent.winner)
+  // @@protoc_insertion_point(field_set:openfoxwq.BroadcastGameResultEvent.winner)
 }
 
 // optional int64 score_lead = 5;
-inline bool RoomGameResultEvent::_internal_has_score_lead() const {
+inline bool BroadcastGameResultEvent::_internal_has_score_lead() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
 }
-inline bool RoomGameResultEvent::has_score_lead() const {
+inline bool BroadcastGameResultEvent::has_score_lead() const {
   return _internal_has_score_lead();
 }
-inline void RoomGameResultEvent::clear_score_lead() {
+inline void BroadcastGameResultEvent::clear_score_lead() {
   _impl_.score_lead_ = int64_t{0};
   _impl_._has_bits_[0] &= ~0x00000008u;
 }
-inline int64_t RoomGameResultEvent::_internal_score_lead() const {
+inline int64_t BroadcastGameResultEvent::_internal_score_lead() const {
   return _impl_.score_lead_;
 }
-inline int64_t RoomGameResultEvent::score_lead() const {
-  // @@protoc_insertion_point(field_get:openfoxwq.RoomGameResultEvent.score_lead)
+inline int64_t BroadcastGameResultEvent::score_lead() const {
+  // @@protoc_insertion_point(field_get:openfoxwq.BroadcastGameResultEvent.score_lead)
   return _internal_score_lead();
 }
-inline void RoomGameResultEvent::_internal_set_score_lead(int64_t value) {
+inline void BroadcastGameResultEvent::_internal_set_score_lead(int64_t value) {
   _impl_._has_bits_[0] |= 0x00000008u;
   _impl_.score_lead_ = value;
 }
-inline void RoomGameResultEvent::set_score_lead(int64_t value) {
+inline void BroadcastGameResultEvent::set_score_lead(int64_t value) {
   _internal_set_score_lead(value);
-  // @@protoc_insertion_point(field_set:openfoxwq.RoomGameResultEvent.score_lead)
+  // @@protoc_insertion_point(field_set:openfoxwq.BroadcastGameResultEvent.score_lead)
 }
 
 // optional int64 unknown_field_1 = 1;
-inline bool RoomGameResultEvent::_internal_has_unknown_field_1() const {
+inline bool BroadcastGameResultEvent::_internal_has_unknown_field_1() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool RoomGameResultEvent::has_unknown_field_1() const {
+inline bool BroadcastGameResultEvent::has_unknown_field_1() const {
   return _internal_has_unknown_field_1();
 }
-inline void RoomGameResultEvent::clear_unknown_field_1() {
+inline void BroadcastGameResultEvent::clear_unknown_field_1() {
   _impl_.unknown_field_1_ = int64_t{0};
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline int64_t RoomGameResultEvent::_internal_unknown_field_1() const {
+inline int64_t BroadcastGameResultEvent::_internal_unknown_field_1() const {
   return _impl_.unknown_field_1_;
 }
-inline int64_t RoomGameResultEvent::unknown_field_1() const {
-  // @@protoc_insertion_point(field_get:openfoxwq.RoomGameResultEvent.unknown_field_1)
+inline int64_t BroadcastGameResultEvent::unknown_field_1() const {
+  // @@protoc_insertion_point(field_get:openfoxwq.BroadcastGameResultEvent.unknown_field_1)
   return _internal_unknown_field_1();
 }
-inline void RoomGameResultEvent::_internal_set_unknown_field_1(int64_t value) {
+inline void BroadcastGameResultEvent::_internal_set_unknown_field_1(int64_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.unknown_field_1_ = value;
 }
-inline void RoomGameResultEvent::set_unknown_field_1(int64_t value) {
+inline void BroadcastGameResultEvent::set_unknown_field_1(int64_t value) {
   _internal_set_unknown_field_1(value);
-  // @@protoc_insertion_point(field_set:openfoxwq.RoomGameResultEvent.unknown_field_1)
+  // @@protoc_insertion_point(field_set:openfoxwq.BroadcastGameResultEvent.unknown_field_1)
 }
 
 // optional int64 unknown_field_2 = 2;
-inline bool RoomGameResultEvent::_internal_has_unknown_field_2() const {
+inline bool BroadcastGameResultEvent::_internal_has_unknown_field_2() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool RoomGameResultEvent::has_unknown_field_2() const {
+inline bool BroadcastGameResultEvent::has_unknown_field_2() const {
   return _internal_has_unknown_field_2();
 }
-inline void RoomGameResultEvent::clear_unknown_field_2() {
+inline void BroadcastGameResultEvent::clear_unknown_field_2() {
   _impl_.unknown_field_2_ = int64_t{0};
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline int64_t RoomGameResultEvent::_internal_unknown_field_2() const {
+inline int64_t BroadcastGameResultEvent::_internal_unknown_field_2() const {
   return _impl_.unknown_field_2_;
 }
-inline int64_t RoomGameResultEvent::unknown_field_2() const {
-  // @@protoc_insertion_point(field_get:openfoxwq.RoomGameResultEvent.unknown_field_2)
+inline int64_t BroadcastGameResultEvent::unknown_field_2() const {
+  // @@protoc_insertion_point(field_get:openfoxwq.BroadcastGameResultEvent.unknown_field_2)
   return _internal_unknown_field_2();
 }
-inline void RoomGameResultEvent::_internal_set_unknown_field_2(int64_t value) {
+inline void BroadcastGameResultEvent::_internal_set_unknown_field_2(int64_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.unknown_field_2_ = value;
 }
-inline void RoomGameResultEvent::set_unknown_field_2(int64_t value) {
+inline void BroadcastGameResultEvent::set_unknown_field_2(int64_t value) {
   _internal_set_unknown_field_2(value);
-  // @@protoc_insertion_point(field_set:openfoxwq.RoomGameResultEvent.unknown_field_2)
+  // @@protoc_insertion_point(field_set:openfoxwq.BroadcastGameResultEvent.unknown_field_2)
 }
 
 // -------------------------------------------------------------------
 
-// RoomTimeControlEvent
+// BroadcastTimeControlEvent
 
 // required int64 player_id = 2;
-inline bool RoomTimeControlEvent::_internal_has_player_id() const {
+inline bool BroadcastTimeControlEvent::_internal_has_player_id() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool RoomTimeControlEvent::has_player_id() const {
+inline bool BroadcastTimeControlEvent::has_player_id() const {
   return _internal_has_player_id();
 }
-inline void RoomTimeControlEvent::clear_player_id() {
+inline void BroadcastTimeControlEvent::clear_player_id() {
   _impl_.player_id_ = int64_t{0};
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline int64_t RoomTimeControlEvent::_internal_player_id() const {
+inline int64_t BroadcastTimeControlEvent::_internal_player_id() const {
   return _impl_.player_id_;
 }
-inline int64_t RoomTimeControlEvent::player_id() const {
-  // @@protoc_insertion_point(field_get:openfoxwq.RoomTimeControlEvent.player_id)
+inline int64_t BroadcastTimeControlEvent::player_id() const {
+  // @@protoc_insertion_point(field_get:openfoxwq.BroadcastTimeControlEvent.player_id)
   return _internal_player_id();
 }
-inline void RoomTimeControlEvent::_internal_set_player_id(int64_t value) {
+inline void BroadcastTimeControlEvent::_internal_set_player_id(int64_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.player_id_ = value;
 }
-inline void RoomTimeControlEvent::set_player_id(int64_t value) {
+inline void BroadcastTimeControlEvent::set_player_id(int64_t value) {
   _internal_set_player_id(value);
-  // @@protoc_insertion_point(field_set:openfoxwq.RoomTimeControlEvent.player_id)
+  // @@protoc_insertion_point(field_set:openfoxwq.BroadcastTimeControlEvent.player_id)
 }
 
-// required int64 room_id = 3;
-inline bool RoomTimeControlEvent::_internal_has_room_id() const {
+// required int64 broadcast_id = 3;
+inline bool BroadcastTimeControlEvent::_internal_has_broadcast_id() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool RoomTimeControlEvent::has_room_id() const {
-  return _internal_has_room_id();
+inline bool BroadcastTimeControlEvent::has_broadcast_id() const {
+  return _internal_has_broadcast_id();
 }
-inline void RoomTimeControlEvent::clear_room_id() {
-  _impl_.room_id_ = int64_t{0};
+inline void BroadcastTimeControlEvent::clear_broadcast_id() {
+  _impl_.broadcast_id_ = int64_t{0};
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline int64_t RoomTimeControlEvent::_internal_room_id() const {
-  return _impl_.room_id_;
+inline int64_t BroadcastTimeControlEvent::_internal_broadcast_id() const {
+  return _impl_.broadcast_id_;
 }
-inline int64_t RoomTimeControlEvent::room_id() const {
-  // @@protoc_insertion_point(field_get:openfoxwq.RoomTimeControlEvent.room_id)
-  return _internal_room_id();
+inline int64_t BroadcastTimeControlEvent::broadcast_id() const {
+  // @@protoc_insertion_point(field_get:openfoxwq.BroadcastTimeControlEvent.broadcast_id)
+  return _internal_broadcast_id();
 }
-inline void RoomTimeControlEvent::_internal_set_room_id(int64_t value) {
+inline void BroadcastTimeControlEvent::_internal_set_broadcast_id(int64_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.room_id_ = value;
+  _impl_.broadcast_id_ = value;
 }
-inline void RoomTimeControlEvent::set_room_id(int64_t value) {
-  _internal_set_room_id(value);
-  // @@protoc_insertion_point(field_set:openfoxwq.RoomTimeControlEvent.room_id)
+inline void BroadcastTimeControlEvent::set_broadcast_id(int64_t value) {
+  _internal_set_broadcast_id(value);
+  // @@protoc_insertion_point(field_set:openfoxwq.BroadcastTimeControlEvent.broadcast_id)
 }
 
 // optional int64 current_period = 5;
-inline bool RoomTimeControlEvent::_internal_has_current_period() const {
+inline bool BroadcastTimeControlEvent::_internal_has_current_period() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
 }
-inline bool RoomTimeControlEvent::has_current_period() const {
+inline bool BroadcastTimeControlEvent::has_current_period() const {
   return _internal_has_current_period();
 }
-inline void RoomTimeControlEvent::clear_current_period() {
+inline void BroadcastTimeControlEvent::clear_current_period() {
   _impl_.current_period_ = int64_t{0};
   _impl_._has_bits_[0] &= ~0x00000008u;
 }
-inline int64_t RoomTimeControlEvent::_internal_current_period() const {
+inline int64_t BroadcastTimeControlEvent::_internal_current_period() const {
   return _impl_.current_period_;
 }
-inline int64_t RoomTimeControlEvent::current_period() const {
-  // @@protoc_insertion_point(field_get:openfoxwq.RoomTimeControlEvent.current_period)
+inline int64_t BroadcastTimeControlEvent::current_period() const {
+  // @@protoc_insertion_point(field_get:openfoxwq.BroadcastTimeControlEvent.current_period)
   return _internal_current_period();
 }
-inline void RoomTimeControlEvent::_internal_set_current_period(int64_t value) {
+inline void BroadcastTimeControlEvent::_internal_set_current_period(int64_t value) {
   _impl_._has_bits_[0] |= 0x00000008u;
   _impl_.current_period_ = value;
 }
-inline void RoomTimeControlEvent::set_current_period(int64_t value) {
+inline void BroadcastTimeControlEvent::set_current_period(int64_t value) {
   _internal_set_current_period(value);
-  // @@protoc_insertion_point(field_set:openfoxwq.RoomTimeControlEvent.current_period)
+  // @@protoc_insertion_point(field_set:openfoxwq.BroadcastTimeControlEvent.current_period)
 }
 
 // optional int64 time_left = 6;
-inline bool RoomTimeControlEvent::_internal_has_time_left() const {
+inline bool BroadcastTimeControlEvent::_internal_has_time_left() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
 }
-inline bool RoomTimeControlEvent::has_time_left() const {
+inline bool BroadcastTimeControlEvent::has_time_left() const {
   return _internal_has_time_left();
 }
-inline void RoomTimeControlEvent::clear_time_left() {
+inline void BroadcastTimeControlEvent::clear_time_left() {
   _impl_.time_left_ = int64_t{0};
   _impl_._has_bits_[0] &= ~0x00000010u;
 }
-inline int64_t RoomTimeControlEvent::_internal_time_left() const {
+inline int64_t BroadcastTimeControlEvent::_internal_time_left() const {
   return _impl_.time_left_;
 }
-inline int64_t RoomTimeControlEvent::time_left() const {
-  // @@protoc_insertion_point(field_get:openfoxwq.RoomTimeControlEvent.time_left)
+inline int64_t BroadcastTimeControlEvent::time_left() const {
+  // @@protoc_insertion_point(field_get:openfoxwq.BroadcastTimeControlEvent.time_left)
   return _internal_time_left();
 }
-inline void RoomTimeControlEvent::_internal_set_time_left(int64_t value) {
+inline void BroadcastTimeControlEvent::_internal_set_time_left(int64_t value) {
   _impl_._has_bits_[0] |= 0x00000010u;
   _impl_.time_left_ = value;
 }
-inline void RoomTimeControlEvent::set_time_left(int64_t value) {
+inline void BroadcastTimeControlEvent::set_time_left(int64_t value) {
   _internal_set_time_left(value);
-  // @@protoc_insertion_point(field_set:openfoxwq.RoomTimeControlEvent.time_left)
+  // @@protoc_insertion_point(field_set:openfoxwq.BroadcastTimeControlEvent.time_left)
 }
 
 // optional int64 unknown_field_4 = 4;
-inline bool RoomTimeControlEvent::_internal_has_unknown_field_4() const {
+inline bool BroadcastTimeControlEvent::_internal_has_unknown_field_4() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool RoomTimeControlEvent::has_unknown_field_4() const {
+inline bool BroadcastTimeControlEvent::has_unknown_field_4() const {
   return _internal_has_unknown_field_4();
 }
-inline void RoomTimeControlEvent::clear_unknown_field_4() {
+inline void BroadcastTimeControlEvent::clear_unknown_field_4() {
   _impl_.unknown_field_4_ = int64_t{0};
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline int64_t RoomTimeControlEvent::_internal_unknown_field_4() const {
+inline int64_t BroadcastTimeControlEvent::_internal_unknown_field_4() const {
   return _impl_.unknown_field_4_;
 }
-inline int64_t RoomTimeControlEvent::unknown_field_4() const {
-  // @@protoc_insertion_point(field_get:openfoxwq.RoomTimeControlEvent.unknown_field_4)
+inline int64_t BroadcastTimeControlEvent::unknown_field_4() const {
+  // @@protoc_insertion_point(field_get:openfoxwq.BroadcastTimeControlEvent.unknown_field_4)
   return _internal_unknown_field_4();
 }
-inline void RoomTimeControlEvent::_internal_set_unknown_field_4(int64_t value) {
+inline void BroadcastTimeControlEvent::_internal_set_unknown_field_4(int64_t value) {
   _impl_._has_bits_[0] |= 0x00000004u;
   _impl_.unknown_field_4_ = value;
 }
-inline void RoomTimeControlEvent::set_unknown_field_4(int64_t value) {
+inline void BroadcastTimeControlEvent::set_unknown_field_4(int64_t value) {
   _internal_set_unknown_field_4(value);
-  // @@protoc_insertion_point(field_set:openfoxwq.RoomTimeControlEvent.unknown_field_4)
+  // @@protoc_insertion_point(field_set:openfoxwq.BroadcastTimeControlEvent.unknown_field_4)
 }
 
 // -------------------------------------------------------------------
@@ -8093,8 +7545,6 @@ inline void UnknownResponse8::set_unknown_field_2(int64_t value) {
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
-// -------------------------------------------------------------------
-
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------

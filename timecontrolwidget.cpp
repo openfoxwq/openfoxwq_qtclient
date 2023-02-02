@@ -46,13 +46,12 @@ void TimeControlWidget::setPaused(bool value) {
     else m_timer.start();
 }
 
-void TimeControlWidget::setByoyomi(bool) {
-    setPaused(true);
-}
-
 void TimeControlWidget::on_tick() {
     if (m_curTime > 0) {
         m_curTime--;
+        if (m_countdown && 0 < m_curTime && m_curTime <= 10) {
+            m_sfx->countdown(m_curTime);
+        }
         updateDisplayTime();
     }
 }
