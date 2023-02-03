@@ -21,6 +21,7 @@ public:
     void setCountdown(bool value) { m_countdown = value; }
     void setTime(int s);
     void setPaused(bool value);
+    void setHideHours(bool value);
 
 private slots:
     void on_tick();

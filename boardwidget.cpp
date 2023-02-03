@@ -21,6 +21,9 @@ BoardWidget::BoardWidget(QWidget *parent, int boardSize) : QWidget(parent),
 
     setStyleSheet("{ background-image: url(:/assets/badukpan4_mirrored.png) }");
 
+    setMinimumSize(m_boardSize * kMaxCellSize / 8, m_boardSize * kMaxCellSize / 8);
+    setMaximumSize(m_boardSize * kMaxCellSize, m_boardSize * kMaxCellSize);
+
     pointButtons.resize(m_boardSize);
 
     for (int i = 0; i < m_boardSize; ++i) {
@@ -28,9 +31,9 @@ BoardWidget::BoardWidget(QWidget *parent, int boardSize) : QWidget(parent),
         for (int j = 0; j < m_boardSize; ++j) {
             BoardButton *btn = new BoardButton(this);
             btn->setState(openfoxwq::Color::COL_NONE);
-            btn->setIconSize(QSize(BoardButton::kCellSize, BoardButton::kCellSize));
-            const auto [x,y] = BoardButton::pointCoord(i,j);
-            btn->setGeometry(x-BoardButton::kCellHalfSize, y-BoardButton::kCellHalfSize, BoardButton::kCellSize, BoardButton::kCellSize);
+            btn->setIconSize(QSize(cellSize(), cellSize()));
+            const auto [x,y] = BoardButton::pointCoord(i,j, cellSize());
+            btn->setGeometry(x-halfCellSize(), y-halfCellSize(), cellSize(), cellSize());
             btn->setHoveredColor(Qt::black);
 
             connect(btn, &BoardButton::pressed, this, [=](){ emit pointClicked(i, j, nextCol(m_lastState)); });
@@ -43,9 +46,33 @@ BoardWidget::BoardWidget(QWidget *parent, int boardSize) : QWidget(parent),
     }
 }
 
-
 BoardWidget::~BoardWidget() {
     delete ui;
+}
+
+int BoardWidget::cellSize() const {
+    return std::min(width(), height()) / m_boardSize;
+}
+
+int BoardWidget::halfCellSize() const {
+    return cellSize()/2;
+}
+
+QSize BoardWidget::sizeHint() const {
+    return QSize(m_boardSize * kMaxCellSize, m_boardSize * kMaxCellSize);
+}
+
+void BoardWidget::resizeEvent(QResizeEvent *) {
+    if (width() != height()) {
+        const int newSize = std::min(width(), height());
+        resize(newSize, newSize);
+    }
+    for (int i = 0; i < m_boardSize; ++i) {
+        for (int j = 0; j < m_boardSize; ++j) {
+            const auto [x,y] = BoardButton::pointCoord(i,j, cellSize());
+            pointButtons[i][j]->setGeometry(x-halfCellSize(), y-halfCellSize(), cellSize(), cellSize());
+        }
+    }
 }
 
 void BoardWidget::paintEvent(QPaintEvent *)
@@ -220,25 +247,28 @@ void BoardWidget::toggleInteractive() {
 void BoardWidget::drawBoardLines(QPainter& p) {
     p.setPen(Qt::black);
 
+    const int cellSize = std::min(width(), height()) / m_boardSize;
+    const int starPointSize = cellSize / 10;
+
     // Horizontal lines
     for (int i = 0; i < m_boardSize; i++) {
-        const auto [x1, y1] = BoardButton::pointCoord(i, 0);
-        const auto [x2, y2] = BoardButton::pointCoord(i, m_boardSize-1);
+        const auto [x1, y1] = BoardButton::pointCoord(i, 0, cellSize);
+        const auto [x2, y2] = BoardButton::pointCoord(i, m_boardSize-1, cellSize);
         p.drawLine(x1,y1,x2,y2);
     }
 
     // Vertical lines
     for (int i = 0; i < m_boardSize; i++) {
-        const auto [x1, y1] = BoardButton::pointCoord(0, i);
-        const auto [x2, y2] = BoardButton::pointCoord(m_boardSize-1, i);
+        const auto [x1, y1] = BoardButton::pointCoord(0, i, cellSize);
+        const auto [x2, y2] = BoardButton::pointCoord(m_boardSize-1, i, cellSize);
         p.drawLine(x1,y1,x2,y2);
     }
 
     // External rectangle
     {
         const auto offset = 1;
-        const auto [x1, y1] = BoardButton::pointCoord(0, 0);
-        const auto size = (m_boardSize-1) * BoardButton::kCellSize + 2*offset;
+        const auto [x1, y1] = BoardButton::pointCoord(0, 0, cellSize);
+        const auto size = (m_boardSize-1) * cellSize + 2*offset;
         p.drawRect(x1-offset,y1-offset,size,size);
     }
 
@@ -247,8 +277,8 @@ void BoardWidget::drawBoardLines(QPainter& p) {
         p.setBrush(Qt::black);
         for (auto i : {4, 10, 16}) {
             for (auto j : {4, 10, 16}) {
-                const auto [x, y] = BoardButton::pointCoord(i-1, j-1);
-                p.drawEllipse(QPoint(x, y), BoardButton::kStarPointSize, BoardButton::kStarPointSize);
+                const auto [x, y] = BoardButton::pointCoord(i-1, j-1, cellSize);
+                p.drawEllipse(QPoint(x, y), starPointSize, starPointSize);
             }
         }
     }

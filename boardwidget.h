@@ -16,6 +16,8 @@ class BoardWidget : public QWidget
     Q_OBJECT
 
 public:
+    static constexpr int kMaxCellSize = 52;
+
     explicit BoardWidget(QWidget *parent = nullptr, int boardSize = 19);
     ~BoardWidget();
 
@@ -32,19 +34,23 @@ public:
     void setInteractive(bool newInteractive);
     void toggleInteractive();
 
+    QSize sizeHint() const override;
+    void resizeEvent(QResizeEvent *event) override;
+
 signals:
     void pointClicked(int r, int c, openfoxwq::Color state);
 
 private:
     Ui::BoardWidget *ui;
     const int m_boardSize;
-    QIcon blackStone, whiteStone;
     QVector<QVector<BoardButton*>> pointButtons;
     bool m_interactive = false;
     QPair<int, int> m_lastPoint = {-1, -1};
     openfoxwq::Color m_lastState = openfoxwq::Color::COL_WHITE;
     QSet<QString> m_previousPositions;
 
+    int cellSize() const;
+    int halfCellSize() const;
     void drawBoardLines(QPainter&);
 
     using Point = QPair<int, int>;

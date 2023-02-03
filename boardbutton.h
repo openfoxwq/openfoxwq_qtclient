@@ -29,14 +29,10 @@ class BoardButton : public QPushButton
 
 public:
 
-    static constexpr int kCellSize = 52;
-    static constexpr int kCellHalfSize = kCellSize / 2;
-    static constexpr int kStarPointSize = kCellSize / 10;
-
-    static QPair<int,int> pointCoord(int r, int c) {
+    static QPair<int,int> pointCoord(int r, int c, int cellSize) {
         return {
-            kCellSize*c+kCellHalfSize,
-            kCellSize*r+kCellHalfSize,
+            cellSize*c+cellSize/2,
+            cellSize*r+cellSize/2,
         };
     }
 
@@ -63,10 +59,12 @@ private:
     Annotation m_annotation;
     QColor m_hoveredColor;
 
-    static QPoint quarterTrianglePoints[3];
     static QIcon whiteStoneIcon();
     static QIcon blackStoneIcon();
 
+    int cellSize() const;
+    int halfCellSize() const;
+    QVector<QPoint> quarterTrianglePoints() const;
     void drawAnnotation(QPainter& p, const Annotation& annotation);
 };
 

@@ -15,12 +15,6 @@ QIcon BoardButton::blackStoneIcon() {
     return blackStone;
 }
 
-QPoint BoardButton::quarterTrianglePoints[3] = {
-    QPoint(kCellHalfSize, kCellHalfSize),
-    QPoint(kCellSize-2, kCellHalfSize),
-    QPoint(kCellHalfSize, kCellSize-2),
-};
-
 BoardButton::BoardButton(QWidget* parent) :
     QPushButton(parent),
     m_state(openfoxwq::Color::COL_NONE),
@@ -35,6 +29,23 @@ BoardButton::BoardButton(QWidget* parent) :
     setMouseTracking(true);
     setAttribute(Qt::WA_Hover, true);
 }
+
+int BoardButton::cellSize() const {
+    return std::min(width(), height());
+}
+
+int BoardButton::halfCellSize() const {
+    return cellSize() / 2;
+}
+
+QVector<QPoint> BoardButton::quarterTrianglePoints() const {
+    return {
+        QPoint(halfCellSize(), halfCellSize()),
+        QPoint(cellSize()-2, halfCellSize()),
+        QPoint(halfCellSize(), cellSize()-2),
+    };
+}
+
 
 void BoardButton::setState(openfoxwq::Color state) {
     m_state = state;
@@ -74,7 +85,7 @@ void BoardButton::paintEvent(QPaintEvent *)
     QPainter p(this);
     style()->drawPrimitive(QStyle::PE_Widget, &opt, &p, this);
 
-    p.drawPixmap(0, 0, icon().pixmap(icon().actualSize(QSize(kCellSize,kCellSize))));
+    p.drawPixmap(0, 0, icon().pixmap(icon().actualSize(size())));
 
     drawAnnotation(p, m_annotation);
 
@@ -91,10 +102,10 @@ void BoardButton::drawAnnotation(QPainter& p, const Annotation& annotation) {
     case AnnotationType::kNone:
         break;
     case AnnotationType::kQuarterTriangle:
-        p.drawConvexPolygon(quarterTrianglePoints, 3);
+        p.drawConvexPolygon(quarterTrianglePoints());
         break;
     case AnnotationType::kSmallSquare:
-        p.drawRect(kCellSize/4 + 2, kCellSize/4 + 2, kCellHalfSize - 4, kCellHalfSize - 4);
+        p.drawRect(cellSize()/4 + 2, cellSize()/4 + 2, halfCellSize() - 4, halfCellSize() - 4);
         break;
     case AnnotationType::kTriangle:
         // TODO implement

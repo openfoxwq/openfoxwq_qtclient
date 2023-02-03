@@ -15,6 +15,8 @@ RoomTab::RoomTab(QWidget *parent, QWebSocket& ws, SoundFx& sfx, const ModelUtils
     , m_sfx(sfx)
     , m_modelUtils(modelUtils) {
     ui->setupUi(this);
+    ui->splitter_2->setStretchFactor(0, 1000);
+    ui->splitter_2->setStretchFactor(1, 0);
 }
 
 RoomTab::~RoomTab() {

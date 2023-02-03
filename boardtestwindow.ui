@@ -6,9 +6,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1231</width>
-    <height>1024</height>
+    <width>1179</width>
+    <height>858</height>
    </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
   </property>
   <property name="minimumSize">
    <size>
@@ -30,40 +36,18 @@
     background-image: url(:/assets/badukpan4_mirrored.png);
 }</string>
   </property>
-  <widget class="QWidget" name="centralwidget">
-   <widget class="BoardWidget" name="board" native="true">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>0</y>
-      <width>988</width>
-      <height>988</height>
-     </rect>
-    </property>
-    <property name="sizePolicy">
-     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-      <horstretch>0</horstretch>
-      <verstretch>0</verstretch>
-     </sizepolicy>
-    </property>
-    <property name="minimumSize">
-     <size>
-      <width>988</width>
-      <height>988</height>
-     </size>
-    </property>
-    <property name="maximumSize">
-     <size>
-      <width>988</width>
-      <height>988</height>
-     </size>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QWidget#board {
+  <widget class="BoardWidget" name="board">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QWidget#board {
     background-image: url(:/assets/badukpan4_mirrored.png);
 }</string>
-    </property>
-   </widget>
+   </property>
   </widget>
  </widget>
  <customwidgets>

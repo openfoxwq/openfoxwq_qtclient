@@ -46,6 +46,12 @@ void TimeControlWidget::setPaused(bool value) {
     else m_timer.start();
 }
 
+void TimeControlWidget::setHideHours(bool value) {
+    ui->hour1Number->setHidden(value);
+    ui->hour2Number->setHidden(value);
+    ui->hourLabel->setHidden(value);
+}
+
 void TimeControlWidget::on_tick() {
     if (m_curTime > 0) {
         m_curTime--;

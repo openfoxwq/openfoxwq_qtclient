@@ -65,6 +65,10 @@ static QString formatMainTime(int t) {
 
 void MatchCardWidget::setMainTime(int t) {
     ui->mainTimeLabel->setText(formatMainTime(t));
+    if (t < 3600) {
+        ui->blackClockWidget->setHideHours(true);
+        ui->whiteClockWidget->setHideHours(true);
+    }
 }
 
 void MatchCardWidget::setByoyomi(int p, int t) {
