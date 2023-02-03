@@ -55,6 +55,8 @@ MatchRoomTab::MatchRoomTab(QWidget *parent, QWebSocket& ws, SoundFx& sfx, const 
 
     connect(ui->board, &BoardWidget::pointClicked, this, &MatchRoomTab::on_pointClicked);
     ui->board->setInteractive(true);
+
+    on_listParticipantsTimer();
 }
 
 void MatchRoomTab::on_matchStart() {
@@ -261,7 +263,10 @@ void MatchRoomTab::on_countingEvent(const openfoxwq::CountingEvent& event) {
 }
 
 void MatchRoomTab::on_gameResultEvent(const openfoxwq::GameResultEvent& event) {
-    if (event.winner() == m_selfPlayerId) {
+    const openfoxwq::Color myColor = m_selfPlayerId == m_matchStartEvent.match_info().player_id_black()
+            ? openfoxwq::Color::COL_BLACK
+            : openfoxwq::Color::COL_WHITE;
+    if (event.winner() == myColor) {
         m_sfx.winBell();
     }
     updateGameResult(event.winner(), event.score_lead());
