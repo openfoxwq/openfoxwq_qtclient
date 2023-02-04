@@ -10,6 +10,7 @@ ModelUtils::ModelUtils() : m_unknownCountryFlag(":/assets/flag-small/aq.png")
 {
     m_countryFlags[openfoxwq::Country::ALBANIA] = QIcon(":/assets/flag-small/al.png");
     m_countryFlags[openfoxwq::Country::BELARUS] = QIcon(":/assets/flag-small/by.png");
+    m_countryFlags[openfoxwq::Country::BULGARIA] = QIcon(":/assets/flag-small/bg.png");
     m_countryFlags[openfoxwq::Country::CANADA] = QIcon(":/assets/flag-small/ca.png");
     m_countryFlags[openfoxwq::Country::CHILE] = QIcon(":/assets/flag-small/cl.png");
     m_countryFlags[openfoxwq::Country::CHINA] = QIcon(":/assets/flag-small/cn.png");
@@ -25,6 +26,7 @@ ModelUtils::ModelUtils() : m_unknownCountryFlag(":/assets/flag-small/aq.png")
     m_countryFlags[openfoxwq::Country::NETHERLANDS] = QIcon(":/assets/flag-small/nl.png");
     m_countryFlags[openfoxwq::Country::NEWZEALAND] = QIcon(":/assets/flag-small/nz.png");
     m_countryFlags[openfoxwq::Country::PHILIPPINES] = QIcon(":/assets/flag-small/ph.png");
+    m_countryFlags[openfoxwq::Country::PORTUGAL] = QIcon(":/assets/flag-small/pt.png");
     m_countryFlags[openfoxwq::Country::RUSSIA] = QIcon(":/assets/flag-small/ru.png");
     m_countryFlags[openfoxwq::Country::SINGAPORE] = QIcon(":/assets/flag-small/sg.png");
     m_countryFlags[openfoxwq::Country::SOUTHAFRICA] = QIcon(":/assets/flag-small/za.png");
