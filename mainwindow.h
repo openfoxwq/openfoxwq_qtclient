@@ -40,6 +40,14 @@ private slots:
     void on_roomDoubleClicked(const openfoxwq::RoomId& id);
     void on_automatchButton_toggled(bool checked);
 
+    void on_soundButton_toggled(bool checked);
+
+    void on_volumeSlider_valueChanged(int value);
+
+    void on_myProfileButton_clicked();
+
+    void on_voiceLangComboBox_currentIndexChanged(int index);
+
 private:
     Ui::MainWindow *ui;
     QNetworkAccessManager& m_nam;

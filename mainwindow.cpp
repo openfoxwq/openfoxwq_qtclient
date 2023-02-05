@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
+#include <QAudio>
 #include <QCloseEvent>
 #include <QJsonDocument>
 #include <QJsonParseError>
@@ -217,6 +218,7 @@ void MainWindow::on_binaryMessageReceived(QByteArray data) {
     case openfoxwq::WsResponse::kMatchStartEvent:
     {
         ui->automatchButton->setChecked(false);
+        ui->automatchButton->setIcon(QIcon(":/assets/menu/swords.svg"));
         MatchRoomTab *matchRoomTab = new MatchRoomTab(ui->mainTabs, m_nam, m_ws, m_sfx, m_modelUtils, m_myPlayerId, resp.matchstartevent());
 
         const auto roomId = matchRoomTab->roomId();
@@ -345,14 +347,19 @@ void MainWindow::on_roomDoubleClicked(const openfoxwq::RoomId& id) {
 
 void MainWindow::on_automatchButton_toggled(bool checked)
 {
+    static QIcon swordsIcon(":/assets/menu/swords.svg");
+    static QIcon cancelIcon(":/assets/menu/cancel.svg");
+
     openfoxwq::WsRequest req;
     if (checked) {
         const auto presetId = ui->automatchPresetComboBox->currentData().toInt();
         req.mutable_startautomatch()->set_preset_id(presetId);
         ui->automatchButton->setText("Stop Automatch");
+        ui->automatchButton->setIcon(cancelIcon);
     } else {
         req.mutable_stopautomatch();
         ui->automatchButton->setText("Start Automatch");
+        ui->automatchButton->setIcon(swordsIcon);
     }
     m_ws.sendBinaryMessage(QByteArray::fromStdString(req.SerializeAsString()));
 }
@@ -362,3 +369,47 @@ void MainWindow::closeEvent(QCloseEvent *event) {
     disconnect(&m_ws, &QWebSocket::binaryMessageReceived, this, &MainWindow::on_binaryMessageReceived);
     event->accept();
 }
+
+void MainWindow::on_soundButton_toggled(bool checked)
+{
+    static QIcon soundOnIcon(":/assets/menu/sound_on.svg");
+    static QIcon soundOffIcon(":/assets/menu/sound_off.svg");
+
+    m_sfx.setMuted(!checked);
+    ui->volumeSlider->setEnabled(!checked);
+    if (checked) {
+        ui->soundButton->setIcon(soundOnIcon);
+    } else {
+        ui->soundButton->setIcon(soundOffIcon);
+    }
+}
+
+void MainWindow::on_volumeSlider_valueChanged(int value)
+{
+    qreal linearVol = QAudio::convertVolume(value / qreal(100.0), QAudio::LogarithmicVolumeScale, QAudio::LinearVolumeScale);
+    m_sfx.setVolume(linearVol);
+}
+
+void MainWindow::on_myProfileButton_clicked()
+{
+    openfoxwq::WsRequest req;
+    req.mutable_getplayerinfo()->set_id(m_myPlayerId);
+    m_ws.sendBinaryMessage(QByteArray::fromStdString(req.SerializeAsString()));
+}
+
+
+void MainWindow::on_voiceLangComboBox_currentIndexChanged(int index)
+{
+    switch (index) {
+    case 0:
+        m_sfx.setLanguage(QLocale::English);
+        break;
+    case 1:
+        m_sfx.setLanguage(QLocale::Korean);
+        break;
+    case 2:
+        m_sfx.setLanguage(QLocale::Japanese);
+        break;
+    }
+}
+

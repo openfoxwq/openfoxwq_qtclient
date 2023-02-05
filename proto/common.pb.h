@@ -76,6 +76,9 @@ extern ProxyLineInfo_ProxyAddressInfoDefaultTypeInternal _ProxyLineInfo_ProxyAdd
 class RoomId;
 struct RoomIdDefaultTypeInternal;
 extern RoomIdDefaultTypeInternal _RoomId_default_instance_;
+class RoomSettings;
+struct RoomSettingsDefaultTypeInternal;
+extern RoomSettingsDefaultTypeInternal _RoomSettings_default_instance_;
 class VersionInfo;
 struct VersionInfoDefaultTypeInternal;
 extern VersionInfoDefaultTypeInternal _VersionInfo_default_instance_;
@@ -90,6 +93,7 @@ template<> ::openfoxwq::PlayerInfo* Arena::CreateMaybeMessage<::openfoxwq::Playe
 template<> ::openfoxwq::ProxyLineInfo* Arena::CreateMaybeMessage<::openfoxwq::ProxyLineInfo>(Arena*);
 template<> ::openfoxwq::ProxyLineInfo_ProxyAddressInfo* Arena::CreateMaybeMessage<::openfoxwq::ProxyLineInfo_ProxyAddressInfo>(Arena*);
 template<> ::openfoxwq::RoomId* Arena::CreateMaybeMessage<::openfoxwq::RoomId>(Arena*);
+template<> ::openfoxwq::RoomSettings* Arena::CreateMaybeMessage<::openfoxwq::RoomSettings>(Arena*);
 template<> ::openfoxwq::VersionInfo* Arena::CreateMaybeMessage<::openfoxwq::VersionInfo>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
 namespace openfoxwq {
@@ -2129,6 +2133,271 @@ class MatchSettings final :
 };
 // -------------------------------------------------------------------
 
+class RoomSettings final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:openfoxwq.RoomSettings) */ {
+ public:
+  inline RoomSettings() : RoomSettings(nullptr) {}
+  ~RoomSettings() override;
+  explicit PROTOBUF_CONSTEXPR RoomSettings(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  RoomSettings(const RoomSettings& from);
+  RoomSettings(RoomSettings&& from) noexcept
+    : RoomSettings() {
+    *this = ::std::move(from);
+  }
+
+  inline RoomSettings& operator=(const RoomSettings& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline RoomSettings& operator=(RoomSettings&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetOwningArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
+  }
+  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const RoomSettings& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const RoomSettings* internal_default_instance() {
+    return reinterpret_cast<const RoomSettings*>(
+               &_RoomSettings_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    7;
+
+  friend void swap(RoomSettings& a, RoomSettings& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(RoomSettings* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() != nullptr &&
+        GetOwningArena() == other->GetOwningArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() == other->GetOwningArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(RoomSettings* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  RoomSettings* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<RoomSettings>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const RoomSettings& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const RoomSettings& from) {
+    RoomSettings::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  uint8_t* _InternalSerialize(
+      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
+
+  private:
+  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(RoomSettings* other);
+
+  private:
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "openfoxwq.RoomSettings";
+  }
+  protected:
+  explicit RoomSettings(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kBoardSizeFieldNumber = 1,
+    kHandicapFieldNumber = 3,
+    kKomiFieldNumber = 4,
+    kPlayerIdBlackFieldNumber = 5,
+    kMainTimeSecFieldNumber = 6,
+    kByoyomiTimeSecFieldNumber = 7,
+    kByoyomiPeriodsFieldNumber = 8,
+    kPlayerIdWhiteFieldNumber = 26,
+  };
+  // optional int64 board_size = 1;
+  bool has_board_size() const;
+  private:
+  bool _internal_has_board_size() const;
+  public:
+  void clear_board_size();
+  int64_t board_size() const;
+  void set_board_size(int64_t value);
+  private:
+  int64_t _internal_board_size() const;
+  void _internal_set_board_size(int64_t value);
+  public:
+
+  // optional int64 handicap = 3;
+  bool has_handicap() const;
+  private:
+  bool _internal_has_handicap() const;
+  public:
+  void clear_handicap();
+  int64_t handicap() const;
+  void set_handicap(int64_t value);
+  private:
+  int64_t _internal_handicap() const;
+  void _internal_set_handicap(int64_t value);
+  public:
+
+  // optional int64 komi = 4;
+  bool has_komi() const;
+  private:
+  bool _internal_has_komi() const;
+  public:
+  void clear_komi();
+  int64_t komi() const;
+  void set_komi(int64_t value);
+  private:
+  int64_t _internal_komi() const;
+  void _internal_set_komi(int64_t value);
+  public:
+
+  // optional int64 player_id_black = 5;
+  bool has_player_id_black() const;
+  private:
+  bool _internal_has_player_id_black() const;
+  public:
+  void clear_player_id_black();
+  int64_t player_id_black() const;
+  void set_player_id_black(int64_t value);
+  private:
+  int64_t _internal_player_id_black() const;
+  void _internal_set_player_id_black(int64_t value);
+  public:
+
+  // optional int64 main_time_sec = 6;
+  bool has_main_time_sec() const;
+  private:
+  bool _internal_has_main_time_sec() const;
+  public:
+  void clear_main_time_sec();
+  int64_t main_time_sec() const;
+  void set_main_time_sec(int64_t value);
+  private:
+  int64_t _internal_main_time_sec() const;
+  void _internal_set_main_time_sec(int64_t value);
+  public:
+
+  // optional int64 byoyomi_time_sec = 7;
+  bool has_byoyomi_time_sec() const;
+  private:
+  bool _internal_has_byoyomi_time_sec() const;
+  public:
+  void clear_byoyomi_time_sec();
+  int64_t byoyomi_time_sec() const;
+  void set_byoyomi_time_sec(int64_t value);
+  private:
+  int64_t _internal_byoyomi_time_sec() const;
+  void _internal_set_byoyomi_time_sec(int64_t value);
+  public:
+
+  // optional int64 byoyomi_periods = 8;
+  bool has_byoyomi_periods() const;
+  private:
+  bool _internal_has_byoyomi_periods() const;
+  public:
+  void clear_byoyomi_periods();
+  int64_t byoyomi_periods() const;
+  void set_byoyomi_periods(int64_t value);
+  private:
+  int64_t _internal_byoyomi_periods() const;
+  void _internal_set_byoyomi_periods(int64_t value);
+  public:
+
+  // optional int64 player_id_white = 26;
+  bool has_player_id_white() const;
+  private:
+  bool _internal_has_player_id_white() const;
+  public:
+  void clear_player_id_white();
+  int64_t player_id_white() const;
+  void set_player_id_white(int64_t value);
+  private:
+  int64_t _internal_player_id_white() const;
+  void _internal_set_player_id_white(int64_t value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:openfoxwq.RoomSettings)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    int64_t board_size_;
+    int64_t handicap_;
+    int64_t komi_;
+    int64_t player_id_black_;
+    int64_t main_time_sec_;
+    int64_t byoyomi_time_sec_;
+    int64_t byoyomi_periods_;
+    int64_t player_id_white_;
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_proto_2fcommon_2eproto;
+};
+// -------------------------------------------------------------------
+
 class RoomId final :
     public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:openfoxwq.RoomId) */ {
  public:
@@ -2184,7 +2453,7 @@ class RoomId final :
                &_RoomId_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    7;
+    8;
 
   friend void swap(RoomId& a, RoomId& b) {
     a.Swap(&b);
@@ -2389,7 +2658,7 @@ class BroadcastInfo_BroadcastPlayerInfo final :
                &_BroadcastInfo_BroadcastPlayerInfo_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    8;
+    9;
 
   friend void swap(BroadcastInfo_BroadcastPlayerInfo& a, BroadcastInfo_BroadcastPlayerInfo& b) {
     a.Swap(&b);
@@ -2604,7 +2873,7 @@ class BroadcastInfo final :
                &_BroadcastInfo_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    9;
+    10;
 
   friend void swap(BroadcastInfo& a, BroadcastInfo& b) {
     a.Swap(&b);
@@ -5162,6 +5431,234 @@ inline void MatchSettings::set_board_size(int64_t value) {
 
 // -------------------------------------------------------------------
 
+// RoomSettings
+
+// optional int64 board_size = 1;
+inline bool RoomSettings::_internal_has_board_size() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool RoomSettings::has_board_size() const {
+  return _internal_has_board_size();
+}
+inline void RoomSettings::clear_board_size() {
+  _impl_.board_size_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000001u;
+}
+inline int64_t RoomSettings::_internal_board_size() const {
+  return _impl_.board_size_;
+}
+inline int64_t RoomSettings::board_size() const {
+  // @@protoc_insertion_point(field_get:openfoxwq.RoomSettings.board_size)
+  return _internal_board_size();
+}
+inline void RoomSettings::_internal_set_board_size(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000001u;
+  _impl_.board_size_ = value;
+}
+inline void RoomSettings::set_board_size(int64_t value) {
+  _internal_set_board_size(value);
+  // @@protoc_insertion_point(field_set:openfoxwq.RoomSettings.board_size)
+}
+
+// optional int64 handicap = 3;
+inline bool RoomSettings::_internal_has_handicap() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool RoomSettings::has_handicap() const {
+  return _internal_has_handicap();
+}
+inline void RoomSettings::clear_handicap() {
+  _impl_.handicap_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000002u;
+}
+inline int64_t RoomSettings::_internal_handicap() const {
+  return _impl_.handicap_;
+}
+inline int64_t RoomSettings::handicap() const {
+  // @@protoc_insertion_point(field_get:openfoxwq.RoomSettings.handicap)
+  return _internal_handicap();
+}
+inline void RoomSettings::_internal_set_handicap(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000002u;
+  _impl_.handicap_ = value;
+}
+inline void RoomSettings::set_handicap(int64_t value) {
+  _internal_set_handicap(value);
+  // @@protoc_insertion_point(field_set:openfoxwq.RoomSettings.handicap)
+}
+
+// optional int64 komi = 4;
+inline bool RoomSettings::_internal_has_komi() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool RoomSettings::has_komi() const {
+  return _internal_has_komi();
+}
+inline void RoomSettings::clear_komi() {
+  _impl_.komi_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000004u;
+}
+inline int64_t RoomSettings::_internal_komi() const {
+  return _impl_.komi_;
+}
+inline int64_t RoomSettings::komi() const {
+  // @@protoc_insertion_point(field_get:openfoxwq.RoomSettings.komi)
+  return _internal_komi();
+}
+inline void RoomSettings::_internal_set_komi(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000004u;
+  _impl_.komi_ = value;
+}
+inline void RoomSettings::set_komi(int64_t value) {
+  _internal_set_komi(value);
+  // @@protoc_insertion_point(field_set:openfoxwq.RoomSettings.komi)
+}
+
+// optional int64 player_id_black = 5;
+inline bool RoomSettings::_internal_has_player_id_black() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
+  return value;
+}
+inline bool RoomSettings::has_player_id_black() const {
+  return _internal_has_player_id_black();
+}
+inline void RoomSettings::clear_player_id_black() {
+  _impl_.player_id_black_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000008u;
+}
+inline int64_t RoomSettings::_internal_player_id_black() const {
+  return _impl_.player_id_black_;
+}
+inline int64_t RoomSettings::player_id_black() const {
+  // @@protoc_insertion_point(field_get:openfoxwq.RoomSettings.player_id_black)
+  return _internal_player_id_black();
+}
+inline void RoomSettings::_internal_set_player_id_black(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000008u;
+  _impl_.player_id_black_ = value;
+}
+inline void RoomSettings::set_player_id_black(int64_t value) {
+  _internal_set_player_id_black(value);
+  // @@protoc_insertion_point(field_set:openfoxwq.RoomSettings.player_id_black)
+}
+
+// optional int64 main_time_sec = 6;
+inline bool RoomSettings::_internal_has_main_time_sec() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
+  return value;
+}
+inline bool RoomSettings::has_main_time_sec() const {
+  return _internal_has_main_time_sec();
+}
+inline void RoomSettings::clear_main_time_sec() {
+  _impl_.main_time_sec_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000010u;
+}
+inline int64_t RoomSettings::_internal_main_time_sec() const {
+  return _impl_.main_time_sec_;
+}
+inline int64_t RoomSettings::main_time_sec() const {
+  // @@protoc_insertion_point(field_get:openfoxwq.RoomSettings.main_time_sec)
+  return _internal_main_time_sec();
+}
+inline void RoomSettings::_internal_set_main_time_sec(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000010u;
+  _impl_.main_time_sec_ = value;
+}
+inline void RoomSettings::set_main_time_sec(int64_t value) {
+  _internal_set_main_time_sec(value);
+  // @@protoc_insertion_point(field_set:openfoxwq.RoomSettings.main_time_sec)
+}
+
+// optional int64 byoyomi_time_sec = 7;
+inline bool RoomSettings::_internal_has_byoyomi_time_sec() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
+  return value;
+}
+inline bool RoomSettings::has_byoyomi_time_sec() const {
+  return _internal_has_byoyomi_time_sec();
+}
+inline void RoomSettings::clear_byoyomi_time_sec() {
+  _impl_.byoyomi_time_sec_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000020u;
+}
+inline int64_t RoomSettings::_internal_byoyomi_time_sec() const {
+  return _impl_.byoyomi_time_sec_;
+}
+inline int64_t RoomSettings::byoyomi_time_sec() const {
+  // @@protoc_insertion_point(field_get:openfoxwq.RoomSettings.byoyomi_time_sec)
+  return _internal_byoyomi_time_sec();
+}
+inline void RoomSettings::_internal_set_byoyomi_time_sec(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000020u;
+  _impl_.byoyomi_time_sec_ = value;
+}
+inline void RoomSettings::set_byoyomi_time_sec(int64_t value) {
+  _internal_set_byoyomi_time_sec(value);
+  // @@protoc_insertion_point(field_set:openfoxwq.RoomSettings.byoyomi_time_sec)
+}
+
+// optional int64 byoyomi_periods = 8;
+inline bool RoomSettings::_internal_has_byoyomi_periods() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
+  return value;
+}
+inline bool RoomSettings::has_byoyomi_periods() const {
+  return _internal_has_byoyomi_periods();
+}
+inline void RoomSettings::clear_byoyomi_periods() {
+  _impl_.byoyomi_periods_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000040u;
+}
+inline int64_t RoomSettings::_internal_byoyomi_periods() const {
+  return _impl_.byoyomi_periods_;
+}
+inline int64_t RoomSettings::byoyomi_periods() const {
+  // @@protoc_insertion_point(field_get:openfoxwq.RoomSettings.byoyomi_periods)
+  return _internal_byoyomi_periods();
+}
+inline void RoomSettings::_internal_set_byoyomi_periods(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000040u;
+  _impl_.byoyomi_periods_ = value;
+}
+inline void RoomSettings::set_byoyomi_periods(int64_t value) {
+  _internal_set_byoyomi_periods(value);
+  // @@protoc_insertion_point(field_set:openfoxwq.RoomSettings.byoyomi_periods)
+}
+
+// optional int64 player_id_white = 26;
+inline bool RoomSettings::_internal_has_player_id_white() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
+  return value;
+}
+inline bool RoomSettings::has_player_id_white() const {
+  return _internal_has_player_id_white();
+}
+inline void RoomSettings::clear_player_id_white() {
+  _impl_.player_id_white_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000080u;
+}
+inline int64_t RoomSettings::_internal_player_id_white() const {
+  return _impl_.player_id_white_;
+}
+inline int64_t RoomSettings::player_id_white() const {
+  // @@protoc_insertion_point(field_get:openfoxwq.RoomSettings.player_id_white)
+  return _internal_player_id_white();
+}
+inline void RoomSettings::_internal_set_player_id_white(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000080u;
+  _impl_.player_id_white_ = value;
+}
+inline void RoomSettings::set_player_id_white(int64_t value) {
+  _internal_set_player_id_white(value);
+  // @@protoc_insertion_point(field_set:openfoxwq.RoomSettings.player_id_white)
+}
+
+// -------------------------------------------------------------------
+
 // RoomId
 
 // optional int64 id_1 = 1;
@@ -5899,6 +6396,8 @@ inline void BroadcastInfo::set_allocated_player_info_white(::openfoxwq::Broadcas
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------

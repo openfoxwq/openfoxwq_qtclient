@@ -11,6 +11,8 @@ public:
 
     const QLocale::Language &language() const;
     void setLanguage(const QLocale::Language &newLanguage);
+    void setMuted(bool value);
+    void setVolume(qreal value);
 
     void playStone();
     void playStoneCaptureOne();

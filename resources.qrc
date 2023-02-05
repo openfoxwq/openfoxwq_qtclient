@@ -334,5 +334,15 @@
         <file>assets/sound/kr/115-2052.wav</file>
         <file>assets/sound/kr/116-2052.wav</file>
         <file>assets/sound/kr/117-2052.wav</file>
+        <file>assets/menu/account.svg</file>
+        <file>assets/menu/account_search.svg</file>
+        <file>assets/menu/sound_off.svg</file>
+        <file>assets/menu/sound_on.svg</file>
+        <file>assets/menu/broadcast.svg</file>
+        <file>assets/menu/cancel.svg</file>
+        <file>assets/menu/home.svg</file>
+        <file>assets/menu/online.svg</file>
+        <file>assets/menu/swords.svg</file>
+        <file>assets/menu/watching.svg</file>
     </qresource>
 </RCC>

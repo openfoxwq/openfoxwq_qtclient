@@ -34,20 +34,20 @@ MatchRoomTab::MatchRoomTab(QWidget *parent, QNetworkAccessManager& nam, QWebSock
     ui->participantsTable->setColumnWidth(3, 80);
 
     openfoxwq::MatchSettings settings;
-    settings.set_handicap(0); // TODO need to gather from match start event info
     settings.set_chinese_rules(m_matchStartEvent.automatch_preset().chinese_rules());
-    settings.set_main_time_sec(m_matchStartEvent.match_info().main_time_sec());
-    settings.set_byoyomi_periods(m_matchStartEvent.match_info().byoyomi_periods());
-    settings.set_byoyomi_time_sec(m_matchStartEvent.match_info().byoyomi_time_sec());
+    settings.set_handicap(m_matchStartEvent.room_settings().handicap());
+    settings.set_main_time_sec(m_matchStartEvent.room_settings().main_time_sec());
+    settings.set_byoyomi_periods(m_matchStartEvent.room_settings().byoyomi_periods());
+    settings.set_byoyomi_time_sec(m_matchStartEvent.room_settings().byoyomi_time_sec());
 
     for (int i = 0; i < m_matchStartEvent.players_size(); ++i) {
         const auto& player = m_matchStartEvent.players(i);
         if (!player.has_avatar_url()) continue;
         QNetworkRequest req(QUrl(QString::fromStdString(player.avatar_url())));
-        if (player.player_id() == m_matchStartEvent.match_info().player_id_white()) {
+        if (player.player_id() == m_matchStartEvent.room_settings().player_id_white()) {
             m_whiteAvatarReply = m_nam.get(req);
             connect(m_whiteAvatarReply, &QNetworkReply::finished, this, &MatchRoomTab::onWhiteAvatarDownloaded);
-        } else if (player.player_id() == m_matchStartEvent.match_info().player_id_black()) {
+        } else if (player.player_id() == m_matchStartEvent.room_settings().player_id_black()) {
             m_blackAvatarReply = m_nam.get(req);
             connect(m_blackAvatarReply, &QNetworkReply::finished, this, &MatchRoomTab::onBlackAvatarDownloaded);
         }
@@ -55,8 +55,8 @@ MatchRoomTab::MatchRoomTab(QWidget *parent, QNetworkAccessManager& nam, QWebSock
 
     updateSettings(settings);
 
-    m_myTurn = (m_settings.handicap() > 1 && (m_selfPlayerId == m_matchStartEvent.match_info().player_id_white())) ||
-        (m_settings.handicap() <= 1 && (m_selfPlayerId == m_matchStartEvent.match_info().player_id_black()));
+    m_myTurn = (m_settings.handicap() > 1 && (m_selfPlayerId == m_matchStartEvent.room_settings().player_id_white())) ||
+        (m_settings.handicap() <= 1 && (m_selfPlayerId == m_matchStartEvent.room_settings().player_id_black()));
     m_moveNum = 0;
     ui->passButton->setEnabled(m_myTurn);
 
@@ -98,10 +98,10 @@ void MatchRoomTab::on_matchStart() {
     m_sgfHeader += QString("DT[%1]").arg(m_sgfDateTime.toString("yyyy-MM-dd")); // TODO set correctly
     for (int i = 0; i < m_matchStartEvent.players_size(); ++i) {
         const auto& player = m_matchStartEvent.players(i);
-        if (player.player_id() == m_matchStartEvent.match_info().player_id_black()) {
+        if (player.player_id() == m_matchStartEvent.room_settings().player_id_black()) {
             m_sgfHeader += QString("PB[%1]").arg(QString::fromStdString(player.name()));
             m_sgfHeader += QString("BR[%1]").arg(ModelUtils::rankString(player.rank()));
-        } else if (player.player_id() == m_matchStartEvent.match_info().player_id_white()) {
+        } else if (player.player_id() == m_matchStartEvent.room_settings().player_id_white()) {
             m_sgfHeader += QString("PW[%1]").arg(QString::fromStdString(player.name()));
             m_sgfHeader += QString("WR[%1]").arg(ModelUtils::rankString(player.rank()));
         }
@@ -160,7 +160,7 @@ void MatchRoomTab::on_pass(const openfoxwq::PassEvent& event) {
 }
 
 void MatchRoomTab::updatePlayerTime(openfoxwq::Color color, int mainTimeLeft) {
-    const auto byoyomiTime = m_matchStartEvent.match_info().byoyomi_time_sec();
+    const auto byoyomiTime = m_matchStartEvent.room_settings().byoyomi_time_sec();
     switch (color) {
     case openfoxwq::Color::COL_BLACK:
         ui->matchCard->setBlackTime(m_blackInByoyomi ? byoyomiTime : mainTimeLeft);
@@ -178,7 +178,7 @@ void MatchRoomTab::updatePlayerTime(openfoxwq::Color color, int mainTimeLeft) {
 }
 
 void MatchRoomTab::on_countdown(const openfoxwq::CountdownEvent& event) {
-    if (event.byoyomi_periods_left() == m_matchStartEvent.match_info().byoyomi_periods()) {
+    if (event.byoyomi_periods_left() == m_matchStartEvent.room_settings().byoyomi_periods()) {
         m_sfx.byoyomiStarts();
     } else if (event.byoyomi_periods_left() == 2) {
         m_sfx.twoByoyomiLeft();
@@ -186,7 +186,7 @@ void MatchRoomTab::on_countdown(const openfoxwq::CountdownEvent& event) {
         m_sfx.lastByoyomi();
     }
 
-    const auto byoyomiTime = m_matchStartEvent.match_info().byoyomi_time_sec();
+    const auto byoyomiTime = m_matchStartEvent.room_settings().byoyomi_time_sec();
     switch (ui->board->turn()) {
     case openfoxwq::Color::COL_BLACK:
         m_blackInByoyomi = true;
@@ -206,9 +206,9 @@ void MatchRoomTab::on_countdown(const openfoxwq::CountdownEvent& event) {
 }
 
 void MatchRoomTab::on_resumeCountdown(const openfoxwq::ResumeCountdownEvent& event) {
-    if (event.countdown().player_id() == m_matchStartEvent.match_info().player_id_black()) {
+    if (event.countdown().player_id() == m_matchStartEvent.room_settings().player_id_black()) {
         ui->matchCard->setBlackTimerPaused(false);
-    } else if (event.countdown().player_id() == m_matchStartEvent.match_info().player_id_white()) {
+    } else if (event.countdown().player_id() == m_matchStartEvent.room_settings().player_id_white()) {
         ui->matchCard->setWhiteTimerPaused(false);
     }
     // TODO: use event info to set adjusted timer
@@ -283,7 +283,7 @@ void MatchRoomTab::on_countingEvent(const openfoxwq::CountingEvent& event) {
 }
 
 void MatchRoomTab::on_gameResultEvent(const openfoxwq::GameResultEvent& event) {
-    const openfoxwq::Color myColor = m_selfPlayerId == m_matchStartEvent.match_info().player_id_black()
+    const openfoxwq::Color myColor = m_selfPlayerId == m_matchStartEvent.room_settings().player_id_black()
             ? openfoxwq::Color::COL_BLACK
             : openfoxwq::Color::COL_WHITE;
     if (event.winner() == myColor) {

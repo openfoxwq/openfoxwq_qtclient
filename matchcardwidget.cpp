@@ -34,11 +34,11 @@ void MatchCardWidget::setBroadcast(const openfoxwq::BroadcastInfo& room, const M
 void MatchCardWidget::setMatch(const openfoxwq::MatchStartEvent& matchStartEvent, const ModelUtils& modelUtils) {
     for (int i = 0; i < matchStartEvent.players_size(); ++i) {
         const auto& player = matchStartEvent.players(i);
-        if (player.player_id() == matchStartEvent.match_info().player_id_black()) {
+        if (player.player_id() == matchStartEvent.room_settings().player_id_black()) {
             QIcon blackFlag = modelUtils.flagForCountry(player.country());
             ui->blackNickLabel->setText(QString::fromStdString(player.name()) + " " + ModelUtils::rankString(player.rank()));
             ui->blackFlag->setPixmap(blackFlag.pixmap(blackFlag.actualSize(QSize(32,32))));
-        } else if (player.player_id() == matchStartEvent.match_info().player_id_white()) {
+        } else if (player.player_id() == matchStartEvent.room_settings().player_id_white()) {
             QIcon whiteFlag = modelUtils.flagForCountry(player.country());
             ui->whiteNickLabel->setText(QString::fromStdString(player.name()) + " " + ModelUtils::rankString(player.rank()));
             ui->whiteFlag->setPixmap(whiteFlag.pixmap(whiteFlag.actualSize(QSize(32,32))));

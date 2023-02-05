@@ -82,6 +82,36 @@ void SoundFx::setLanguage(const QLocale::Language &newLanguage)
     }
 }
 
+void SoundFx::setMuted(bool value) {
+    m_playStone.setMuted(value);
+    m_playStoneCaptureOne.setMuted(value);
+    m_playStoneCaptureSome.setMuted(value);
+    m_playStoneCaptureMany.setMuted(value);
+    m_winBell.setMuted(value);
+    m_startToPlay.setMuted(value);
+    m_byoyomiStarts.setMuted(value);
+    m_twoByoyomiLeft.setMuted(value);
+    m_lastByoyomi.setMuted(value);
+    for (int i = 1; i <= 10; ++i) {
+        m_countdown[i].setMuted(value);
+    }
+}
+
+void SoundFx::setVolume(qreal value) {
+    m_playStone.setVolume(value);
+    m_playStoneCaptureOne.setVolume(value);
+    m_playStoneCaptureSome.setVolume(value);
+    m_playStoneCaptureMany.setVolume(value);
+    m_winBell.setVolume(value);
+    m_startToPlay.setVolume(value);
+    m_byoyomiStarts.setVolume(value);
+    m_twoByoyomiLeft.setVolume(value);
+    m_lastByoyomi.setVolume(value);
+    for (int i = 1; i <= 10; ++i) {
+        m_countdown[i].setVolume(value);
+    }
+}
+
 void SoundFx::loadLocalized(QString code) {
     m_startToPlay.setSource(QUrl::fromLocalFile(QString(":/assets/sound/%1/115-2052.wav").arg(code)));
     m_byoyomiStarts.setSource(QUrl::fromLocalFile (QString(":/assets/sound/%1/116-2052.wav").arg(code)));
