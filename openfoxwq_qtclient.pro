@@ -75,7 +75,7 @@ FORMS += \
     timeddecisiondialog.ui
 
 INCLUDEPATH += /usr/local/include
-LIBS += /usr/local/lib/libprotobuf.a
+unix:LIBS += -L/usr/local/lib -lprotobuf
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

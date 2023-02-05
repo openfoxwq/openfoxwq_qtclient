@@ -63,8 +63,8 @@ MainWindow::MainWindow(QWidget *parent, QWebSocket& ws, SoundFx& sfx, int64_t my
     }
 
     // Listen to ws events
-    connect(&m_ws, &QWebSocket::disconnected, this, &MainWindow::on_ws_disconnected);
-    connect(&m_ws, &QWebSocket::binaryMessageReceived, this, &MainWindow::on_ws_msg);
+    connect(&m_ws, &QWebSocket::disconnected, this, &MainWindow::on_disconnected);
+    connect(&m_ws, &QWebSocket::binaryMessageReceived, this, &MainWindow::on_binaryMessageReceived);
 
     // Show loading progress dialog
     progressDialog.setMinimum(0);
@@ -87,7 +87,7 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-void MainWindow::on_ws_disconnected() {
+void MainWindow::on_disconnected() {
     qDebug() << "WebSocket disconnected";
     QMessageBox msgBox;
     msgBox.setWindowTitle("Error");
@@ -97,7 +97,7 @@ void MainWindow::on_ws_disconnected() {
     close();
 }
 
-void MainWindow::on_ws_msg(QByteArray data) {
+void MainWindow::on_binaryMessageReceived(QByteArray data) {
     openfoxwq::WsResponse resp;
     if (!resp.ParseFromArray(data.data(), data.size())) {
         qDebug() << "ws: error parsing response";

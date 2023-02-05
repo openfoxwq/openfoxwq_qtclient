@@ -21,9 +21,10 @@ public:
 
 private slots:
     void on_loginButton_clicked();
-    void on_ws_connected();
-    void on_ws_disconnected();
-    void on_ws_msg(QByteArray);
+    void on_connected();
+    void on_disconnected();
+    void on_binaryMessageReceived(QByteArray);
+    void onWsError(QAbstractSocket::SocketError error);
 
 private:
     QWebSocket& m_ws;

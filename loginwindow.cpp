@@ -26,8 +26,9 @@ LoginWindow::LoginWindow(QWidget *parent, QWebSocket& ws, SoundFx& sfx)
     ui->usernameEdit->setText(settings.value("username", "").toString());
     ui->passwordEdit->setText(settings.value("password", "").toString());
 
-    connect(&ws, &QWebSocket::connected, this, &LoginWindow::on_ws_connected);
-    connect(&ws, &QWebSocket::disconnected, this, &LoginWindow::on_ws_disconnected);
+    connect(&ws, &QWebSocket::connected, this, &LoginWindow::on_connected);
+    connect(&ws, &QWebSocket::disconnected, this, &LoginWindow::on_disconnected);
+    connect(&ws, QOverload<QAbstractSocket::SocketError>::of(&QWebSocket::error), this, &LoginWindow::onWsError);
 
     m_ws.open(QUrl("ws://localhost:8999/"));
 
@@ -51,16 +52,23 @@ void LoginWindow::on_loginButton_clicked()
     setDisabled(true);
 }
 
-void LoginWindow::on_ws_connected() {
+void LoginWindow::on_connected() {
     qDebug() << "WebSocket connected";
-    connect(&m_ws, &QWebSocket::binaryMessageReceived, this, &LoginWindow::on_ws_msg);
+    ui->connectingLabel->hide();
+    connect(&m_ws, &QWebSocket::binaryMessageReceived, this, &LoginWindow::on_binaryMessageReceived);
 }
 
-void LoginWindow::on_ws_disconnected() {
+void LoginWindow::on_disconnected() {
     qDebug() << "WebSocket disconnected";
 }
 
-void LoginWindow::on_ws_msg(QByteArray data) {
+void LoginWindow::onWsError(QAbstractSocket::SocketError /* error */) {
+    qDebug() << "ws error: " << m_ws.errorString();
+    QMessageBox::critical(this, "Error", "Failed to connect to local openfoxwq websocket server.\nIs it running?");
+    exit(1);
+}
+
+void LoginWindow::on_binaryMessageReceived(QByteArray data) {
     openfoxwq::WsResponse resp;
     if (!resp.ParseFromArray(data.data(), data.size())) {
         qDebug() << "ws: error parsing response";
@@ -112,9 +120,9 @@ void LoginWindow::on_ws_msg(QByteArray data) {
             mainWindow->showMaximized();
 
             hide();
-            disconnect(&m_ws, &QWebSocket::connected, this, &LoginWindow::on_ws_connected);
-            disconnect(&m_ws, &QWebSocket::disconnected, this, &LoginWindow::on_ws_disconnected);
-            disconnect(&m_ws, &QWebSocket::binaryMessageReceived, this, &LoginWindow::on_ws_msg);
+            disconnect(&m_ws, &QWebSocket::connected, this, &LoginWindow::on_connected);
+            disconnect(&m_ws, &QWebSocket::disconnected, this, &LoginWindow::on_disconnected);
+            disconnect(&m_ws, &QWebSocket::binaryMessageReceived, this, &LoginWindow::on_binaryMessageReceived);
         } else {
             QMessageBox msgBox;
             msgBox.setModal(true);

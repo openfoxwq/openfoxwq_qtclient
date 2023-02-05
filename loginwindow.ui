@@ -151,6 +151,13 @@
       </item>
      </layout>
     </item>
+    <item row="1" column="0">
+     <widget class="QLabel" name="connectingLabel">
+      <property name="text">
+       <string>Connecting to local openfoxwq ws server...</string>
+      </property>
+     </widget>
+    </item>
    </layout>
   </widget>
  </widget>

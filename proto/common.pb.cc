@@ -526,23 +526,25 @@ const char descriptor_table_protodef_proto_2fcommon_2eproto[] PROTOBUF_SECTION_V
   "\033\022\013\n\007RANK_1P\020d\022\013\n\007RANK_2P\020e\022\013\n\007RANK_3P\020f"
   "\022\013\n\007RANK_4P\020g\022\013\n\007RANK_5P\020h\022\013\n\007RANK_6P\020i\022"
   "\013\n\007RANK_7P\020j\022\013\n\007RANK_8P\020k\022\013\n\007RANK_9P\020l\022\014"
-  "\n\010RANK_10P\020m*\205\003\n\007Country\022\013\n\007UNKNOWN\020\000\022\007\n"
-  "\003USA\020\001\022\n\n\006RUSSIA\020\007\022\017\n\013SOUTHAFRICA\020\033\022\017\n\013N"
-  "ETHERLANDS\020\037\022\n\n\006GREECE\020\036\022\n\n\006FRANCE\020!\022\013\n\007"
+  "\n\010RANK_10P\020m*\263\003\n\007Country\022\013\n\007UNKNOWN\020\000\022\007\n"
+  "\003USA\020\001\022\n\n\006RUSSIA\020\007\022\017\n\013SOUTHAFRICA\020\033\022\n\n\006G"
+  "REECE\020\036\022\017\n\013NETHERLANDS\020\037\022\n\n\006FRANCE\020!\022\013\n\007"
   "HUNGARY\020$\022\t\n\005ITALY\020\'\022\006\n\002UK\020,\022\n\n\006SWEDEN\020."
-  "\022\t\n\005CHILE\0208\022\017\n\013PHILIPPINES\020\?\022\016\n\nNEWZEALA"
-  "ND\020@\022\r\n\tSINGAPORE\020A\022\014\n\010THAILAND\020B\022\t\n\005JAP"
-  "AN\020Q\022\n\n\006TAIWAN\020S\022\t\n\005KOREA\020R\022\t\n\005CHINA\020V\022\014"
-  "\n\007GERMANY\020\335\002\022\r\n\010PORTUGAL\020\337\002\022\014\n\007ALBANIA\020\343"
-  "\002\022\r\n\010BULGARIA\020\347\002\022\014\n\007BELARUS\020\367\002\022\014\n\007UKRAIN"
-  "E\020\374\002\022\r\n\010HONGKONG\020\324\006\022\n\n\005MACAU\020\325\006\022\013\n\006CANAD"
-  "A\020\347V*F\n\014PlayerStatus\022\020\n\014PSTATUS_IDLE\020\000\022\021"
-  "\n\rPSTATUS_MATCH\020\001\022\021\n\rPSTATUS_WATCH\020\002B&Z$"
-  "github.com/openfoxwq/openfoxwq/proto"
+  "\022\t\n\005CHILE\0208\022\r\n\tAUSTRALIA\020=\022\017\n\013PHILIPPINE"
+  "S\020\?\022\016\n\nNEWZEALAND\020@\022\r\n\tSINGAPORE\020A\022\014\n\010TH"
+  "AILAND\020B\022\t\n\005JAPAN\020Q\022\t\n\005KOREA\020R\022\n\n\006TAIWAN"
+  "\020S\022\013\n\007VIETNAM\020T\022\t\n\005CHINA\020V\022\014\n\007GERMANY\020\335\002"
+  "\022\r\n\010PORTUGAL\020\337\002\022\014\n\007ALBANIA\020\343\002\022\r\n\010BULGARI"
+  "A\020\347\002\022\014\n\007BELARUS\020\367\002\022\014\n\007UKRAINE\020\374\002\022\r\n\010HONG"
+  "KONG\020\324\006\022\n\n\005MACAU\020\325\006\022\020\n\013SAUDIARABIA\020\307\007\022\013\n"
+  "\006CANADA\020\347V*F\n\014PlayerStatus\022\020\n\014PSTATUS_ID"
+  "LE\020\000\022\021\n\rPSTATUS_MATCH\020\001\022\021\n\rPSTATUS_WATCH"
+  "\020\002B&Z$github.com/openfoxwq/openfoxwq/pro"
+  "to"
   ;
 static ::_pbi::once_flag descriptor_table_proto_2fcommon_2eproto_once;
 const ::_pbi::DescriptorTable descriptor_table_proto_2fcommon_2eproto = {
-    false, false, 3276, descriptor_table_protodef_proto_2fcommon_2eproto,
+    false, false, 3322, descriptor_table_protodef_proto_2fcommon_2eproto,
     "proto/common.proto",
     &descriptor_table_proto_2fcommon_2eproto_once, nullptr, 0, 10,
     schemas, file_default_instances, TableStruct_proto_2fcommon_2eproto::offsets,
@@ -697,6 +699,7 @@ bool Country_IsValid(int value) {
     case 44:
     case 46:
     case 56:
+    case 61:
     case 63:
     case 64:
     case 65:
@@ -704,6 +707,7 @@ bool Country_IsValid(int value) {
     case 81:
     case 82:
     case 83:
+    case 84:
     case 86:
     case 349:
     case 351:
@@ -713,6 +717,7 @@ bool Country_IsValid(int value) {
     case 380:
     case 852:
     case 853:
+    case 967:
     case 11111:
       return true;
     default:

@@ -27,8 +27,8 @@ public:
     ~MainWindow();
 
 private slots:
-    void on_ws_disconnected();
-    void on_ws_msg(QByteArray);
+    void on_disconnected();
+    void on_binaryMessageReceived(QByteArray);
     void on_broadcastTable_doubleClicked(const QModelIndex &index);
     void on_mainTabs_tabCloseRequested(int index);
     void on_findUserButton_clicked();
