@@ -2,6 +2,7 @@
 #define LOGINWINDOW_H
 
 #include <QMainWindow>
+#include <QNetworkAccessManager>
 #include <QWebSocket>
 
 #include "automatchpreset.h"
@@ -16,7 +17,7 @@ class LoginWindow : public QMainWindow
     Q_OBJECT
 
 public:
-    LoginWindow(QWidget *parent, QWebSocket& ws, SoundFx& sfx);
+    LoginWindow(QWidget *parent, QNetworkAccessManager& nam, QWebSocket& ws, SoundFx& sfx);
     ~LoginWindow();
 
 private slots:
@@ -27,6 +28,7 @@ private slots:
     void onWsError(QAbstractSocket::SocketError error);
 
 private:
+    QNetworkAccessManager& m_nam;
     QWebSocket& m_ws;
     SoundFx& m_sfx;
     Ui::LoginWindow *ui;

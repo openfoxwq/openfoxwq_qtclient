@@ -15,8 +15,9 @@
 
 QSettings settings;
 
-LoginWindow::LoginWindow(QWidget *parent, QWebSocket& ws, SoundFx& sfx)
+LoginWindow::LoginWindow(QWidget *parent, QNetworkAccessManager& nam, QWebSocket& ws, SoundFx& sfx)
     : QMainWindow(parent)
+    , m_nam(nam)
     , m_ws(ws)
     , m_sfx(sfx)
     , ui(new Ui::LoginWindow)
@@ -116,13 +117,14 @@ void LoginWindow::on_binaryMessageReceived(QByteArray data) {
                 settings.setValue("password", ui->passwordEdit->text());
             }
 
-            MainWindow* mainWindow = new MainWindow(nullptr, m_ws, m_sfx, resp.login().player_id(), automatchPresets);
+            MainWindow* mainWindow = new MainWindow(nullptr, m_nam,  m_ws, m_sfx, resp.login().player_id(), automatchPresets);
             mainWindow->showMaximized();
 
-            hide();
             disconnect(&m_ws, &QWebSocket::connected, this, &LoginWindow::on_connected);
             disconnect(&m_ws, &QWebSocket::disconnected, this, &LoginWindow::on_disconnected);
             disconnect(&m_ws, &QWebSocket::binaryMessageReceived, this, &LoginWindow::on_binaryMessageReceived);
+            disconnect(&m_ws, QOverload<QAbstractSocket::SocketError>::of(&QWebSocket::error), this, &LoginWindow::onWsError);
+            close();
         } else {
             QMessageBox msgBox;
             msgBox.setModal(true);

@@ -262,3 +262,29 @@ QString ModelUtils::formatScoreLead(int scoreLead) {
     else return QString("%1.%2").arg(i).arg(f);
 }
 
+QPair<QString, bool> ModelUtils::formatGameResult(openfoxwq::Color winner, int64_t scoreLead) {
+    if (winner == openfoxwq::Color::COL_NONE) {
+        return {"Draw", false};
+    }
+    if (winner != openfoxwq::COL_NONE && scoreLead == 0) {
+        return {"Void", false};
+    }
+
+    QString reason;
+    switch (scoreLead) {
+    case -1:
+        reason = "R";
+        break;
+    case -2:
+        reason = "T";
+        break;
+    case -3:
+        reason = "F";
+        break;
+    default:
+        reason = ModelUtils::formatScoreLead(scoreLead);
+        break;
+    }
+    return {QString("%1+%2").arg(ModelUtils::colorShortString(winner), reason), true};
+}
+

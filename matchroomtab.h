@@ -1,6 +1,8 @@
 #ifndef MATCHROOMTAB_H
 #define MATCHROOMTAB_H
 
+#include <QNetworkReply>
+
 #include "roomtab.h"
 #include "proto/play.pb.h"
 
@@ -9,7 +11,8 @@ class MatchRoomTab : public RoomTab
     Q_OBJECT
 
 public:
-    explicit MatchRoomTab(QWidget *parent, QWebSocket& ws, SoundFx& sfx, const ModelUtils& modelUtils, int64_t selfPlayerId, const openfoxwq::MatchStartEvent& matchStartEvent);
+    explicit MatchRoomTab(QWidget *parent, QNetworkAccessManager& nam, QWebSocket& ws, SoundFx& sfx, const ModelUtils& modelUtils, int64_t selfPlayerId, const openfoxwq::MatchStartEvent& matchStartEvent);
+    ~MatchRoomTab();
 
     openfoxwq::RoomId roomId() const { return m_roomId; }
 
@@ -36,6 +39,8 @@ private slots:
     void on_pointClicked(int r, int c, openfoxwq::Color state);
     void on_syncTimer();
     void on_listParticipantsTimer();
+    void onWhiteAvatarDownloaded();
+    void onBlackAvatarDownloaded();
 
 private:
     QTimer m_syncTimer;
@@ -43,6 +48,8 @@ private:
     const int64_t m_selfPlayerId;
     const openfoxwq::MatchStartEvent m_matchStartEvent;
     openfoxwq::RoomId m_roomId;
+    QNetworkReply *m_whiteAvatarReply = nullptr;
+    QNetworkReply *m_blackAvatarReply = nullptr;
     bool m_myTurn;
     int m_moveNum;
     bool m_whiteInByoyomi = false, m_blackInByoyomi = false;

@@ -1,8 +1,6 @@
 #ifndef BROADCASTROOMTAB_H
 #define BROADCASTROOMTAB_H
 
-#include <QWebSocket>
-
 #include "roomtab.h"
 #include "soundfx.h"
 #include "modelutils.h"
@@ -13,7 +11,7 @@ class BroadcastRoomTab : public RoomTab
     Q_OBJECT
 
 public:
-    explicit BroadcastRoomTab(QWidget *parent, QWebSocket& ws, SoundFx& sfx, const ModelUtils& modelutils, const openfoxwq::BroadcastInfo& broadcast);
+    explicit BroadcastRoomTab(QWidget *parent, QNetworkAccessManager& nam, QWebSocket& ws, SoundFx& sfx, const ModelUtils& modelutils, const openfoxwq::BroadcastInfo& broadcast);
 
     bool leaveRoom() override;
 

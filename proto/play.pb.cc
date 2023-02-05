@@ -787,6 +787,7 @@ PROTOBUF_CONSTEXPR MatchStartEvent_MatchPlayerInfo::MatchStartEvent_MatchPlayerI
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
   , /*decltype(_impl_.name_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.avatar_url_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.player_id_)*/int64_t{0}
   , /*decltype(_impl_.rank_)*/0
   , /*decltype(_impl_.country_)*/0} {}
@@ -1914,11 +1915,13 @@ const uint32_t TableStruct_proto_2fplay_2eproto::offsets[] PROTOBUF_SECTION_VARI
   PROTOBUF_FIELD_OFFSET(::openfoxwq::MatchStartEvent_MatchPlayerInfo, _impl_.player_id_),
   PROTOBUF_FIELD_OFFSET(::openfoxwq::MatchStartEvent_MatchPlayerInfo, _impl_.name_),
   PROTOBUF_FIELD_OFFSET(::openfoxwq::MatchStartEvent_MatchPlayerInfo, _impl_.rank_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::MatchStartEvent_MatchPlayerInfo, _impl_.avatar_url_),
   PROTOBUF_FIELD_OFFSET(::openfoxwq::MatchStartEvent_MatchPlayerInfo, _impl_.country_),
-  1,
-  0,
   2,
+  0,
   3,
+  1,
+  4,
   PROTOBUF_FIELD_OFFSET(::openfoxwq::MatchStartEvent_AutomatchPreset, _impl_._has_bits_),
   PROTOBUF_FIELD_OFFSET(::openfoxwq::MatchStartEvent_AutomatchPreset, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -2369,38 +2372,38 @@ static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protode
   { 558, -1, -1, sizeof(::openfoxwq::AcceptMatchRequest)},
   { 564, 571, -1, sizeof(::openfoxwq::AcceptMatchResponse)},
   { 572, 584, -1, sizeof(::openfoxwq::MatchStartEvent_MatchInfo)},
-  { 590, 600, -1, sizeof(::openfoxwq::MatchStartEvent_MatchPlayerInfo)},
-  { 604, 618, -1, sizeof(::openfoxwq::MatchStartEvent_AutomatchPreset)},
-  { 626, 646, -1, sizeof(::openfoxwq::MatchStartEvent)},
-  { 660, 668, -1, sizeof(::openfoxwq::HeartbeatInfo)},
-  { 670, 677, -1, sizeof(::openfoxwq::EnterRoomRequest)},
-  { 678, 687, -1, sizeof(::openfoxwq::EnterRoomResponse)},
-  { 690, 697, -1, sizeof(::openfoxwq::LeaveRoomRequest)},
-  { 698, 706, -1, sizeof(::openfoxwq::LeaveRoomResponse)},
-  { 708, 717, -1, sizeof(::openfoxwq::ListRoomParticipantsRequest)},
-  { 720, 733, -1, sizeof(::openfoxwq::ListRoomParticipantsResponse_RoomParticipantInfo)},
-  { 740, 750, -1, sizeof(::openfoxwq::ListRoomParticipantsResponse)},
-  { 754, 761, -1, sizeof(::openfoxwq::LastTurnInfo)},
-  { 762, 772, -1, sizeof(::openfoxwq::MoveRequest)},
-  { 776, 783, -1, sizeof(::openfoxwq::MoveResponse)},
-  { 784, 791, -1, sizeof(::openfoxwq::PassRequest)},
-  { 792, 799, -1, sizeof(::openfoxwq::PassResponse)},
-  { 800, 807, -1, sizeof(::openfoxwq::SyncMatchTimeRequest)},
-  { 808, 815, -1, sizeof(::openfoxwq::SyncMatchTimeResponse_ElapsedInfo)},
-  { 816, 826, -1, sizeof(::openfoxwq::SyncMatchTimeResponse)},
-  { 830, 842, -1, sizeof(::openfoxwq::MatchPlayerTimeState)},
-  { 848, 861, -1, sizeof(::openfoxwq::NextMoveEvent)},
-  { 868, 878, -1, sizeof(::openfoxwq::PassEvent)},
-  { 882, 894, -1, sizeof(::openfoxwq::CountdownEvent)},
-  { 900, 908, -1, sizeof(::openfoxwq::ResumeCountdownEvent)},
-  { 910, 917, -1, sizeof(::openfoxwq::RequestCountingRequest)},
-  { 918, 925, -1, sizeof(::openfoxwq::RequestCountingResponse)},
-  { 926, 933, -1, sizeof(::openfoxwq::SendCountingDecisionResponse)},
-  { 934, 942, -1, sizeof(::openfoxwq::CountingDecision)},
-  { 944, 958, -1, sizeof(::openfoxwq::CountingEvent)},
-  { 966, 973, -1, sizeof(::openfoxwq::ResignRequest)},
-  { 974, 981, -1, sizeof(::openfoxwq::ResignResponse)},
-  { 982, 996, -1, sizeof(::openfoxwq::GameResultEvent)},
+  { 590, 601, -1, sizeof(::openfoxwq::MatchStartEvent_MatchPlayerInfo)},
+  { 606, 620, -1, sizeof(::openfoxwq::MatchStartEvent_AutomatchPreset)},
+  { 628, 648, -1, sizeof(::openfoxwq::MatchStartEvent)},
+  { 662, 670, -1, sizeof(::openfoxwq::HeartbeatInfo)},
+  { 672, 679, -1, sizeof(::openfoxwq::EnterRoomRequest)},
+  { 680, 689, -1, sizeof(::openfoxwq::EnterRoomResponse)},
+  { 692, 699, -1, sizeof(::openfoxwq::LeaveRoomRequest)},
+  { 700, 708, -1, sizeof(::openfoxwq::LeaveRoomResponse)},
+  { 710, 719, -1, sizeof(::openfoxwq::ListRoomParticipantsRequest)},
+  { 722, 735, -1, sizeof(::openfoxwq::ListRoomParticipantsResponse_RoomParticipantInfo)},
+  { 742, 752, -1, sizeof(::openfoxwq::ListRoomParticipantsResponse)},
+  { 756, 763, -1, sizeof(::openfoxwq::LastTurnInfo)},
+  { 764, 774, -1, sizeof(::openfoxwq::MoveRequest)},
+  { 778, 785, -1, sizeof(::openfoxwq::MoveResponse)},
+  { 786, 793, -1, sizeof(::openfoxwq::PassRequest)},
+  { 794, 801, -1, sizeof(::openfoxwq::PassResponse)},
+  { 802, 809, -1, sizeof(::openfoxwq::SyncMatchTimeRequest)},
+  { 810, 817, -1, sizeof(::openfoxwq::SyncMatchTimeResponse_ElapsedInfo)},
+  { 818, 828, -1, sizeof(::openfoxwq::SyncMatchTimeResponse)},
+  { 832, 844, -1, sizeof(::openfoxwq::MatchPlayerTimeState)},
+  { 850, 863, -1, sizeof(::openfoxwq::NextMoveEvent)},
+  { 870, 880, -1, sizeof(::openfoxwq::PassEvent)},
+  { 884, 896, -1, sizeof(::openfoxwq::CountdownEvent)},
+  { 902, 910, -1, sizeof(::openfoxwq::ResumeCountdownEvent)},
+  { 912, 919, -1, sizeof(::openfoxwq::RequestCountingRequest)},
+  { 920, 927, -1, sizeof(::openfoxwq::RequestCountingResponse)},
+  { 928, 935, -1, sizeof(::openfoxwq::SendCountingDecisionResponse)},
+  { 936, 944, -1, sizeof(::openfoxwq::CountingDecision)},
+  { 946, 960, -1, sizeof(::openfoxwq::CountingEvent)},
+  { 968, 975, -1, sizeof(::openfoxwq::ResignRequest)},
+  { 976, 983, -1, sizeof(::openfoxwq::ResignResponse)},
+  { 984, 998, -1, sizeof(::openfoxwq::GameResultEvent)},
 };
 
 static const ::_pb::Message* const file_default_instances[] = {
@@ -2622,7 +2625,7 @@ const char descriptor_table_protodef_proto_2fplay_2eproto[] PROTOBUF_SECTION_VAR
   "yer_id\030\001 \002(\003\022\014\n\004name\030\003 \001(\t\022\035\n\004rank\030\004 \001(\016"
   "2\017.openfoxwq.Rank\022\022\n\navatar_url\030\022 \001(\t\"\024\n"
   "\022AcceptMatchRequest\")\n\023AcceptMatchRespon"
-  "se\022\022\n\nerror_code\030\001 \001(\003\"\224\007\n\017MatchStartEve"
+  "se\022\022\n\nerror_code\030\001 \001(\003\"\251\007\n\017MatchStartEve"
   "nt\0228\n\nmatch_info\030\001 \001(\0132$.openfoxwq.Match"
   "StartEvent.MatchInfo\022\027\n\017unknown_field_2\030"
   "\002 \001(\003\022\025\n\runix_ts_nanos\030\003 \001(\003\022\027\n\017unknown_"
@@ -2637,178 +2640,179 @@ const char descriptor_table_protodef_proto_2fplay_2eproto[] PROTOBUF_SECTION_VAR
   "\001\n\tMatchInfo\022\022\n\nboard_size\030\001 \001(\003\022\027\n\017play"
   "er_id_black\030\005 \001(\003\022\025\n\rmain_time_sec\030\006 \001(\003"
   "\022\030\n\020byoyomi_time_sec\030\007 \001(\003\022\027\n\017byoyomi_pe"
-  "riods\030\010 \001(\003\022\027\n\017player_id_white\030\032 \001(\003\032v\n\017"
-  "MatchPlayerInfo\022\021\n\tplayer_id\030\001 \001(\003\022\014\n\004na"
-  "me\030\003 \001(\t\022\035\n\004rank\030\004 \001(\0162\017.openfoxwq.Rank\022"
-  "#\n\007country\030\024 \001(\0162\022.openfoxwq.Country\032\266\001\n"
-  "\017AutomatchPreset\022\n\n\002id\030\001 \001(\003\022\022\n\nboard_si"
-  "ze\030\002 \001(\003\022\025\n\rmain_time_sec\030\003 \001(\003\022\027\n\017byoyo"
-  "mi_periods\030\004 \001(\003\022\030\n\020byoyomi_time_sec\030\005 \001"
-  "(\003\022\025\n\rchinese_rules\030\006 \001(\010\022\020\n\010min_duan\030\007 "
-  "\001(\003\022\020\n\010max_duan\030\010 \001(\003\"A\n\rHeartbeatInfo\022\027"
-  "\n\017unknown_field_1\030\001 \001(\003\022\027\n\017unknown_field"
-  "_2\030\002 \001(\003\"1\n\020EnterRoomRequest\022\035\n\002id\030\001 \002(\013"
-  "2\021.openfoxwq.RoomId\"}\n\021EnterRoomResponse"
-  "\022\022\n\nerror_code\030\001 \001(\003\022\"\n\007room_id\030\002 \001(\0132\021."
-  "openfoxwq.RoomId\0220\n\016heartbeat_info\030\003 \001(\013"
-  "2\030.openfoxwq.HeartbeatInfo\"1\n\020LeaveRoomR"
-  "equest\022\035\n\002id\030\001 \002(\0132\021.openfoxwq.RoomId\"K\n"
-  "\021LeaveRoomResponse\022\022\n\nerror_code\030\001 \001(\003\022\""
-  "\n\007room_id\030\002 \001(\0132\021.openfoxwq.RoomId\"f\n\033Li"
-  "stRoomParticipantsRequest\022\035\n\002id\030\001 \002(\0132\021."
-  "openfoxwq.RoomId\022\023\n\013player_id_1\030\002 \002(\003\022\023\n"
-  "\013player_id_2\030\003 \002(\003\"\354\002\n\034ListRoomParticipa"
-  "ntsResponse\022\022\n\nerror_code\030\001 \001(\003\022\035\n\002id\030\002 "
-  "\001(\0132\021.openfoxwq.RoomId\022Q\n\014participants\030\003"
-  " \003(\0132;.openfoxwq.ListRoomParticipantsRes"
-  "ponse.RoomParticipantInfo\022\031\n\021participant"
-  "_count\030\005 \001(\003\032\252\001\n\023RoomParticipantInfo\022\021\n\t"
-  "player_id\030\001 \001(\003\022\014\n\004name\030\002 \001(\t\022\020\n\010name_al"
-  "t\030\003 \001(\t\022\035\n\004rank\030\004 \001(\0162\017.openfoxwq.Rank\022\014"
-  "\n\004wins\030\005 \001(\003\022\016\n\006losses\030\006 \001(\003\022#\n\007country\030"
-  "\t \001(\0162\022.openfoxwq.Country\"\"\n\014LastTurnInf"
-  "o\022\022\n\nmove_count\030\001 \001(\003\"n\n\013MoveRequest\022\t\n\001"
-  "x\030\001 \002(\003\022\t\n\001y\030\002 \002(\003\022\035\n\003col\030\003 \002(\0162\020.openfo"
-  "xwq.Color\022*\n\tlast_turn\030\004 \002(\0132\027.openfoxwq"
-  ".LastTurnInfo\"\"\n\014MoveResponse\022\022\n\nerror_c"
-  "ode\030\001 \001(\003\"9\n\013PassRequest\022*\n\tlast_turn\030\001 "
-  "\002(\0132\027.openfoxwq.LastTurnInfo\"\"\n\014PassResp"
-  "onse\022\022\n\nerror_code\030\001 \001(\003\"\"\n\024SyncMatchTim"
-  "eRequest\022\n\n\002ts\030\001 \002(\003\"\307\001\n\025SyncMatchTimeRe"
-  "sponse\022\n\n\002ts\030\001 \002(\003\022\021\n\tserver_ts\030\002 \001(\003\022B\n"
-  "\014elapsed_info\030\003 \001(\0132,.openfoxwq.SyncMatc"
-  "hTimeResponse.ElapsedInfo\022\"\n\007room_id\030\004 \001"
-  "(\0132\021.openfoxwq.RoomId\032\'\n\013ElapsedInfo\022\030\n\020"
-  "time_elapsed_sec\030\001 \001(\003\"\276\001\n\024MatchPlayerTi"
-  "meState\022\027\n\017unknown_field_1\030\001 \001(\003\022\032\n\022main"
-  "_time_left_sec\030\002 \002(\003\022\034\n\024byoyomi_periods_"
-  "left\030\003 \002(\003\022\034\n\024byoyomi_duration_sec\030\004 \001(\003"
-  "\022\021\n\tplayer_id\030\005 \002(\003\022\"\n\032disconnected_time"
-  "_left_sec\030\006 \001(\003\"\304\001\n\rNextMoveEvent\022\t\n\001x\030\001"
-  " \001(\003\022\t\n\001y\030\002 \001(\003\022\035\n\003col\030\003 \001(\0162\020.openfoxwq"
-  ".Color\0223\n\ntime_state\030\004 \001(\0132\037.openfoxwq.M"
-  "atchPlayerTimeState\022*\n\tlast_turn\030\005 \001(\0132\027"
-  ".openfoxwq.LastTurnInfo\022\021\n\tplayer_id\030\006 \001"
-  "(\003\022\n\n\002ts\030\007 \001(\003\"\230\001\n\tPassEvent\0223\n\ntime_sta"
-  "te\030\001 \001(\0132\037.openfoxwq.MatchPlayerTimeStat"
-  "e\022*\n\tlast_turn\030\002 \001(\0132\027.openfoxwq.LastTur"
-  "nInfo\022\021\n\tplayer_id\030\003 \001(\003\022\027\n\017unknown_fiel"
-  "d_4\030\004 \001(\003\"\256\001\n\016CountdownEvent\022\027\n\017unknown_"
+  "riods\030\010 \001(\003\022\027\n\017player_id_white\030\032 \001(\003\032\212\001\n"
+  "\017MatchPlayerInfo\022\021\n\tplayer_id\030\001 \001(\003\022\014\n\004n"
+  "ame\030\003 \001(\t\022\035\n\004rank\030\004 \001(\0162\017.openfoxwq.Rank"
+  "\022\022\n\navatar_url\030\022 \001(\t\022#\n\007country\030\024 \001(\0162\022."
+  "openfoxwq.Country\032\266\001\n\017AutomatchPreset\022\n\n"
+  "\002id\030\001 \001(\003\022\022\n\nboard_size\030\002 \001(\003\022\025\n\rmain_ti"
+  "me_sec\030\003 \001(\003\022\027\n\017byoyomi_periods\030\004 \001(\003\022\030\n"
+  "\020byoyomi_time_sec\030\005 \001(\003\022\025\n\rchinese_rules"
+  "\030\006 \001(\010\022\020\n\010min_duan\030\007 \001(\003\022\020\n\010max_duan\030\010 \001"
+  "(\003\"A\n\rHeartbeatInfo\022\027\n\017unknown_field_1\030\001"
+  " \001(\003\022\027\n\017unknown_field_2\030\002 \001(\003\"1\n\020EnterRo"
+  "omRequest\022\035\n\002id\030\001 \002(\0132\021.openfoxwq.RoomId"
+  "\"}\n\021EnterRoomResponse\022\022\n\nerror_code\030\001 \001("
+  "\003\022\"\n\007room_id\030\002 \001(\0132\021.openfoxwq.RoomId\0220\n"
+  "\016heartbeat_info\030\003 \001(\0132\030.openfoxwq.Heartb"
+  "eatInfo\"1\n\020LeaveRoomRequest\022\035\n\002id\030\001 \002(\0132"
+  "\021.openfoxwq.RoomId\"K\n\021LeaveRoomResponse\022"
+  "\022\n\nerror_code\030\001 \001(\003\022\"\n\007room_id\030\002 \001(\0132\021.o"
+  "penfoxwq.RoomId\"f\n\033ListRoomParticipantsR"
+  "equest\022\035\n\002id\030\001 \002(\0132\021.openfoxwq.RoomId\022\023\n"
+  "\013player_id_1\030\002 \002(\003\022\023\n\013player_id_2\030\003 \002(\003\""
+  "\354\002\n\034ListRoomParticipantsResponse\022\022\n\nerro"
+  "r_code\030\001 \001(\003\022\035\n\002id\030\002 \001(\0132\021.openfoxwq.Roo"
+  "mId\022Q\n\014participants\030\003 \003(\0132;.openfoxwq.Li"
+  "stRoomParticipantsResponse.RoomParticipa"
+  "ntInfo\022\031\n\021participant_count\030\005 \001(\003\032\252\001\n\023Ro"
+  "omParticipantInfo\022\021\n\tplayer_id\030\001 \001(\003\022\014\n\004"
+  "name\030\002 \001(\t\022\020\n\010name_alt\030\003 \001(\t\022\035\n\004rank\030\004 \001"
+  "(\0162\017.openfoxwq.Rank\022\014\n\004wins\030\005 \001(\003\022\016\n\006los"
+  "ses\030\006 \001(\003\022#\n\007country\030\t \001(\0162\022.openfoxwq.C"
+  "ountry\"\"\n\014LastTurnInfo\022\022\n\nmove_count\030\001 \001"
+  "(\003\"n\n\013MoveRequest\022\t\n\001x\030\001 \002(\003\022\t\n\001y\030\002 \002(\003\022"
+  "\035\n\003col\030\003 \002(\0162\020.openfoxwq.Color\022*\n\tlast_t"
+  "urn\030\004 \002(\0132\027.openfoxwq.LastTurnInfo\"\"\n\014Mo"
+  "veResponse\022\022\n\nerror_code\030\001 \001(\003\"9\n\013PassRe"
+  "quest\022*\n\tlast_turn\030\001 \002(\0132\027.openfoxwq.Las"
+  "tTurnInfo\"\"\n\014PassResponse\022\022\n\nerror_code\030"
+  "\001 \001(\003\"\"\n\024SyncMatchTimeRequest\022\n\n\002ts\030\001 \002("
+  "\003\"\307\001\n\025SyncMatchTimeResponse\022\n\n\002ts\030\001 \002(\003\022"
+  "\021\n\tserver_ts\030\002 \001(\003\022B\n\014elapsed_info\030\003 \001(\013"
+  "2,.openfoxwq.SyncMatchTimeResponse.Elaps"
+  "edInfo\022\"\n\007room_id\030\004 \001(\0132\021.openfoxwq.Room"
+  "Id\032\'\n\013ElapsedInfo\022\030\n\020time_elapsed_sec\030\001 "
+  "\001(\003\"\276\001\n\024MatchPlayerTimeState\022\027\n\017unknown_"
   "field_1\030\001 \001(\003\022\032\n\022main_time_left_sec\030\002 \002("
-  "\003\022\034\n\024byoyomi_periods_left\030\003 \002(\003\022\035\n\025byoyo"
-  "mi_time_left_sec\030\004 \001(\003\022\021\n\tplayer_id\030\005 \002("
-  "\003\022\027\n\017unknown_field_6\030\006 \001(\003\"]\n\024ResumeCoun"
-  "tdownEvent\022\027\n\017unknown_field_1\030\001 \001(\003\022,\n\tc"
-  "ountdown\030\002 \002(\0132\031.openfoxwq.CountdownEven"
-  "t\"1\n\026RequestCountingRequest\022\027\n\017unknown_f"
-  "ield_1\030\001 \001(\003\"-\n\027RequestCountingResponse\022"
-  "\022\n\nerror_code\030\001 \001(\003\"2\n\034SendCountingDecis"
-  "ionResponse\022\022\n\nerror_code\030\001 \001(\003\"J\n\020Count"
-  "ingDecision\022\r\n\005agree\030\001 \002(\010\022\'\n\005stage\030\002 \002("
-  "\0162\030.openfoxwq.CountingStage\"\337\001\n\rCounting"
-  "Event\022\027\n\017unknown_field_1\030\001 \001(\003\022\'\n\005stage\030"
-  "\002 \002(\0162\030.openfoxwq.CountingStage\022\027\n\017unkno"
-  "wn_field_4\030\004 \001(\014\022\021\n\townership\030\005 \001(\t\022\027\n\017u"
-  "nknown_field_6\030\006 \001(\002\022 \n\006winner\030\010 \001(\0162\020.o"
-  "penfoxwq.Color\022\022\n\nscore_lead\030\t \001(\002\022\021\n\tti"
-  "me_left\030\007 \002(\003\"(\n\rResignRequest\022\027\n\017unknow"
-  "n_field_1\030\001 \001(\003\")\n\016ResignResponse\022\027\n\017unk"
-  "nown_field_1\030\001 \001(\003\"\267\001\n\017GameResultEvent\022\027"
-  "\n\017unknown_field_1\030\001 \001(\003\022 \n\006winner\030\002 \002(\0162"
-  "\020.openfoxwq.Color\022\022\n\nscore_lead\030\003 \002(\003\022\027\n"
-  "\017unknown_field_4\030\004 \001(\003\022\017\n\007message\030\005 \001(\t\022"
-  "\r\n\005ts_10\030\n \001(\003\022\r\n\005ts_12\030\014 \001(\003\022\r\n\005ts_13\030\r"
-  " \001(\003*_\n\rCountingStage\022\021\n\rSTAGE_UNKNOWN\020\000"
-  "\022\030\n\024STAGE_AGREE_TO_COUNT\020\001\022!\n\035STAGE_AGRE"
-  "E_WITH_COUNT_RESULT\020\0022\250\033\n\004Play\022h\n\005Login\022"
-  "!.openfoxwq.LoginPlayServerRequest\032\".ope"
-  "nfoxwq.LoginPlayServerResponse\"\030\202\265\030\024\010\330\314\001"
-  "\020\330\314\001\032\n\010\001( 0\0068\241\234\001\022i\n\013ListPlayers\022\035.openfo"
-  "xwq.ListPlayersRequest\032\036.openfoxwq.ListP"
-  "layersResponse\"\031\202\265\030\025\010\330\314\001\020\330\314\001\032\013\010\311\001( 0\0068\316\234"
-  "\0010\001\022m\n\rGetPlayerInfo\022\037.openfoxwq.GetPlay"
-  "erInfoRequest\032 .openfoxwq.GetPlayerInfoR"
-  "esponse\"\031\202\265\030\025\010\330\314\001\020\330\314\001\032\013\010\351\007( 0\0068\313\234\001\022i\n\013Sy"
-  "ncPlayers\022\035.openfoxwq.SyncPlayersRequest"
-  "\032\036.openfoxwq.SyncPlayersResponse\"\033\202\265\030\027\010\330"
-  "\314\001\020\330\314\001\032\r\010\313\001( 0\0068\316\234\001@\003\022f\n\013GetRoomInfo\022\035.o"
-  "penfoxwq.GetRoomInfoRequest\032\036.openfoxwq."
-  "GetRoomInfoResponse\"\030\202\265\030\024\010\330\314\001\020\330\314\001\032\n\010z( 0"
-  "\0068\300\352\001\022`\n\tEnterRoom\022\033.openfoxwq.EnterRoom"
-  "Request\032\034.openfoxwq.EnterRoomResponse\"\030\202"
-  "\265\030\024\010\330\314\001\020\330\314\001\032\n\010d( 0\0068\305\352\001\022`\n\tLeaveRoom\022\033.o"
-  "penfoxwq.LeaveRoomRequest\032\034.openfoxwq.Le"
-  "aveRoomResponse\"\030\202\265\030\024\010\330\314\001\020\330\314\001\032\n\010e( 0\0068\306\352"
-  "\001\022\201\001\n\024ListRoomParticipants\022&.openfoxwq.L"
-  "istRoomParticipantsRequest\032\'.openfoxwq.L"
-  "istRoomParticipantsResponse\"\030\202\265\030\024\010\330\314\001\020\330\314"
-  "\001\032\n\010d( 0\0068\332\352\001\022s\n\035ListenPlayerOnlineCount"
-  "Events\022\026.google.protobuf.Empty\032!.openfox"
-  "wq.PlayerOnlineCountEvent\"\025\202\265\030\021\010\330\314\001\020\330\314\001\032"
-  "\007\010\221\0038\316\234\0010\001\022i\n\030ListenPlayerOnlineEvents\022\026"
-  ".google.protobuf.Empty\032\034.openfoxwq.Playe"
-  "rOnlineEvent\"\025\202\265\030\021\010\330\314\001\020\330\314\001\032\007\010\222\0038\316\234\0010\001\022k\n"
-  "\031ListenPlayerOfflineEvents\022\026.google.prot"
-  "obuf.Empty\032\035.openfoxwq.PlayerOfflineEven"
-  "t\"\025\202\265\030\021\010\330\314\001\020\330\314\001\032\007\010\223\0038\316\234\0010\001\022g\n\027ListenPlay"
-  "erStateEvents\022\026.google.protobuf.Empty\032\033."
-  "openfoxwq.PlayerStateEvent\"\025\202\265\030\021\010\330\314\001\020\330\314\001"
-  "\032\007\010\224\0038\316\234\0010\001\022z\n\021GetAutomatchStats\022#.openf"
-  "oxwq.GetAutomatchStatsRequest\032$.openfoxw"
-  "q.GetAutomatchStatsResponse\"\032\202\265\030\026\010\330\314\001\020\330\314"
-  "\001\032\014\010\261\216\006( 0\0068\266\352\001\022q\n\016StartAutomatch\022 .open"
-  "foxwq.StartAutomatchRequest\032!.openfoxwq."
-  "StartAutomatchResponse\"\032\202\265\030\026\010\330\314\001\020\330\314\001\032\014\010\242"
-  "\216\006( 0\0068\266\352\001\022n\n\032ListenAutomatchFoundEvents"
-  "\022\026.google.protobuf.Empty\032\036.openfoxwq.Aut"
-  "omatchFoundEvent\"\026\202\265\030\022\010\330\314\001\020\330\314\001\032\010\010\254\216\0068\266\352\001"
-  "0\001\022n\n\rStopAutomatch\022\037.openfoxwq.StopAuto"
-  "matchRequest\032 .openfoxwq.StopAutomatchRe"
-  "sponse\"\032\202\265\030\026\010\330\314\001\020\330\314\001\032\014\010\253\216\006( 0\0068\266\352\001\022f\n\013Ac"
-  "ceptMatch\022\035.openfoxwq.AcceptMatchRequest"
-  "\032\036.openfoxwq.AcceptMatchResponse\"\030\202\265\030\024\010\330"
-  "\314\001\020\330\314\001\032\n\010i( 0\0068\230\362\001\022m\n\rSyncMatchTime\022\037.op"
-  "enfoxwq.SyncMatchTimeRequest\032 .openfoxwq"
-  ".SyncMatchTimeResponse\"\031\202\265\030\025\010\330\314\001\020\330\314\001\032\013\010\310"
-  "\001( 0\0068\230\362\001\022R\n\004Move\022\026.openfoxwq.MoveReques"
-  "t\032\027.openfoxwq.MoveResponse\"\031\202\265\030\025\010\330\314\001\020\330\314\001"
-  "\032\013\010\311\001( 0\0068\230\362\001\022R\n\004Pass\022\026.openfoxwq.PassRe"
-  "quest\032\027.openfoxwq.PassResponse\"\031\202\265\030\025\010\330\314\001"
-  "\020\330\314\001\032\013\010\314\001( 0\0068\230\362\001\022s\n\017RequestCounting\022!.o"
-  "penfoxwq.RequestCountingRequest\032\".openfo"
-  "xwq.RequestCountingResponse\"\031\202\265\030\025\010\330\314\001\020\330\314"
-  "\001\032\013\010\255\002( 0\0068\230\362\001\022w\n\024SendCountingDecision\022\033"
-  ".openfoxwq.CountingDecision\032\'.openfoxwq."
-  "SendCountingDecisionResponse\"\031\202\265\030\025\010\330\314\001\020\330"
-  "\314\001\032\013\010\260\002( 0\0068\230\362\001\022X\n\006Resign\022\030.openfoxwq.Re"
-  "signRequest\032\031.openfoxwq.ResignResponse\"\031"
-  "\202\265\030\025\010\330\314\001\020\330\314\001\032\013\010\267\002( 0\0068\230\362\001\022d\n\026ListenMatch"
-  "StartEvents\022\026.google.protobuf.Empty\032\032.op"
-  "enfoxwq.MatchStartEvent\"\024\202\265\030\020\010\330\314\001\020\330\314\001\032\006\010"
-  "k8\230\362\0010\001\022a\n\024ListenNextMoveEvents\022\026.google"
-  ".protobuf.Empty\032\030.openfoxwq.NextMoveEven"
-  "t\"\025\202\265\030\021\010\330\314\001\020\330\314\001\032\007\010\313\0018\230\362\0010\001\022Y\n\020ListenPass"
-  "Events\022\026.google.protobuf.Empty\032\024.openfox"
-  "wq.PassEvent\"\025\202\265\030\021\010\330\314\001\020\330\314\001\032\007\010\316\0018\230\362\0010\001\022b\n"
-  "\025ListenCountdownEvents\022\026.google.protobuf"
-  ".Empty\032\031.openfoxwq.CountdownEvent\"\024\202\265\030\020\010"
-  "\330\314\001\020\330\314\001\032\006\010l8\230\362\0010\001\022n\n\033ListenResumeCountdo"
-  "wnEvents\022\026.google.protobuf.Empty\032\037.openf"
-  "oxwq.ResumeCountdownEvent\"\024\202\265\030\020\010\330\314\001\020\330\314\001\032"
-  "\006\010m8\230\362\0010\001\022g\n\027ListenCountingDecisions\022\026.g"
-  "oogle.protobuf.Empty\032\033.openfoxwq.Countin"
-  "gDecision\"\025\202\265\030\021\010\330\314\001\020\330\314\001\032\007\010\262\0028\230\362\0010\001\022a\n\024Li"
-  "stenCountingEvents\022\026.google.protobuf.Emp"
-  "ty\032\030.openfoxwq.CountingEvent\"\025\202\265\030\021\010\330\314\001\020\330"
-  "\314\001\032\007\010\257\0028\230\362\0010\001\022e\n\026ListenGameResultEvents\022"
-  "\026.google.protobuf.Empty\032\032.openfoxwq.Game"
-  "ResultEvent\"\025\202\265\030\021\010\330\314\001\020\330\314\001\032\007\010\225\0038\230\362\0010\001\022a\n\010"
-  "SyncTime\022\032.openfoxwq.SyncTimeRequest\032\033.o"
-  "penfoxwq.SyncTimeResponse\"\034\202\265\030\030\010\330\314\001\020\330\314\001\032"
-  "\016\010\005( 0\0068\241\234\001@\013H\001\022g\n\010Unknown1\022\036.openfoxwq."
-  "UnknownPlayRequest1\032\037.openfoxwq.UnknownP"
-  "layResponse1\"\032\202\265\030\026\010\330\314\001\020\330\314\001\032\014\010\002( 0\0068\340\352\001@\001"
-  "B&Z$github.com/openfoxwq/openfoxwq/proto"
+  "\003\022\034\n\024byoyomi_periods_left\030\003 \002(\003\022\034\n\024byoyo"
+  "mi_duration_sec\030\004 \001(\003\022\021\n\tplayer_id\030\005 \002(\003"
+  "\022\"\n\032disconnected_time_left_sec\030\006 \001(\003\"\304\001\n"
+  "\rNextMoveEvent\022\t\n\001x\030\001 \001(\003\022\t\n\001y\030\002 \001(\003\022\035\n\003"
+  "col\030\003 \001(\0162\020.openfoxwq.Color\0223\n\ntime_stat"
+  "e\030\004 \001(\0132\037.openfoxwq.MatchPlayerTimeState"
+  "\022*\n\tlast_turn\030\005 \001(\0132\027.openfoxwq.LastTurn"
+  "Info\022\021\n\tplayer_id\030\006 \001(\003\022\n\n\002ts\030\007 \001(\003\"\230\001\n\t"
+  "PassEvent\0223\n\ntime_state\030\001 \001(\0132\037.openfoxw"
+  "q.MatchPlayerTimeState\022*\n\tlast_turn\030\002 \001("
+  "\0132\027.openfoxwq.LastTurnInfo\022\021\n\tplayer_id\030"
+  "\003 \001(\003\022\027\n\017unknown_field_4\030\004 \001(\003\"\256\001\n\016Count"
+  "downEvent\022\027\n\017unknown_field_1\030\001 \001(\003\022\032\n\022ma"
+  "in_time_left_sec\030\002 \002(\003\022\034\n\024byoyomi_period"
+  "s_left\030\003 \002(\003\022\035\n\025byoyomi_time_left_sec\030\004 "
+  "\001(\003\022\021\n\tplayer_id\030\005 \002(\003\022\027\n\017unknown_field_"
+  "6\030\006 \001(\003\"]\n\024ResumeCountdownEvent\022\027\n\017unkno"
+  "wn_field_1\030\001 \001(\003\022,\n\tcountdown\030\002 \002(\0132\031.op"
+  "enfoxwq.CountdownEvent\"1\n\026RequestCountin"
+  "gRequest\022\027\n\017unknown_field_1\030\001 \001(\003\"-\n\027Req"
+  "uestCountingResponse\022\022\n\nerror_code\030\001 \001(\003"
+  "\"2\n\034SendCountingDecisionResponse\022\022\n\nerro"
+  "r_code\030\001 \001(\003\"J\n\020CountingDecision\022\r\n\005agre"
+  "e\030\001 \002(\010\022\'\n\005stage\030\002 \002(\0162\030.openfoxwq.Count"
+  "ingStage\"\337\001\n\rCountingEvent\022\027\n\017unknown_fi"
+  "eld_1\030\001 \001(\003\022\'\n\005stage\030\002 \002(\0162\030.openfoxwq.C"
+  "ountingStage\022\027\n\017unknown_field_4\030\004 \001(\014\022\021\n"
+  "\townership\030\005 \001(\t\022\027\n\017unknown_field_6\030\006 \001("
+  "\002\022 \n\006winner\030\010 \001(\0162\020.openfoxwq.Color\022\022\n\ns"
+  "core_lead\030\t \001(\002\022\021\n\ttime_left\030\007 \002(\003\"(\n\rRe"
+  "signRequest\022\027\n\017unknown_field_1\030\001 \001(\003\")\n\016"
+  "ResignResponse\022\027\n\017unknown_field_1\030\001 \001(\003\""
+  "\267\001\n\017GameResultEvent\022\027\n\017unknown_field_1\030\001"
+  " \001(\003\022 \n\006winner\030\002 \002(\0162\020.openfoxwq.Color\022\022"
+  "\n\nscore_lead\030\003 \002(\003\022\027\n\017unknown_field_4\030\004 "
+  "\001(\003\022\017\n\007message\030\005 \001(\t\022\r\n\005ts_10\030\n \001(\003\022\r\n\005t"
+  "s_12\030\014 \001(\003\022\r\n\005ts_13\030\r \001(\003*_\n\rCountingSta"
+  "ge\022\021\n\rSTAGE_UNKNOWN\020\000\022\030\n\024STAGE_AGREE_TO_"
+  "COUNT\020\001\022!\n\035STAGE_AGREE_WITH_COUNT_RESULT"
+  "\020\0022\250\033\n\004Play\022h\n\005Login\022!.openfoxwq.LoginPl"
+  "ayServerRequest\032\".openfoxwq.LoginPlaySer"
+  "verResponse\"\030\202\265\030\024\010\330\314\001\020\330\314\001\032\n\010\001( 0\0068\241\234\001\022i\n"
+  "\013ListPlayers\022\035.openfoxwq.ListPlayersRequ"
+  "est\032\036.openfoxwq.ListPlayersResponse\"\031\202\265\030"
+  "\025\010\330\314\001\020\330\314\001\032\013\010\311\001( 0\0068\316\234\0010\001\022m\n\rGetPlayerInf"
+  "o\022\037.openfoxwq.GetPlayerInfoRequest\032 .ope"
+  "nfoxwq.GetPlayerInfoResponse\"\031\202\265\030\025\010\330\314\001\020\330"
+  "\314\001\032\013\010\351\007( 0\0068\313\234\001\022i\n\013SyncPlayers\022\035.openfox"
+  "wq.SyncPlayersRequest\032\036.openfoxwq.SyncPl"
+  "ayersResponse\"\033\202\265\030\027\010\330\314\001\020\330\314\001\032\r\010\313\001( 0\0068\316\234\001"
+  "@\003\022f\n\013GetRoomInfo\022\035.openfoxwq.GetRoomInf"
+  "oRequest\032\036.openfoxwq.GetRoomInfoResponse"
+  "\"\030\202\265\030\024\010\330\314\001\020\330\314\001\032\n\010z( 0\0068\300\352\001\022`\n\tEnterRoom\022"
+  "\033.openfoxwq.EnterRoomRequest\032\034.openfoxwq"
+  ".EnterRoomResponse\"\030\202\265\030\024\010\330\314\001\020\330\314\001\032\n\010d( 0\006"
+  "8\305\352\001\022`\n\tLeaveRoom\022\033.openfoxwq.LeaveRoomR"
+  "equest\032\034.openfoxwq.LeaveRoomResponse\"\030\202\265"
+  "\030\024\010\330\314\001\020\330\314\001\032\n\010e( 0\0068\306\352\001\022\201\001\n\024ListRoomParti"
+  "cipants\022&.openfoxwq.ListRoomParticipants"
+  "Request\032\'.openfoxwq.ListRoomParticipants"
+  "Response\"\030\202\265\030\024\010\330\314\001\020\330\314\001\032\n\010d( 0\0068\332\352\001\022s\n\035Li"
+  "stenPlayerOnlineCountEvents\022\026.google.pro"
+  "tobuf.Empty\032!.openfoxwq.PlayerOnlineCoun"
+  "tEvent\"\025\202\265\030\021\010\330\314\001\020\330\314\001\032\007\010\221\0038\316\234\0010\001\022i\n\030Liste"
+  "nPlayerOnlineEvents\022\026.google.protobuf.Em"
+  "pty\032\034.openfoxwq.PlayerOnlineEvent\"\025\202\265\030\021\010"
+  "\330\314\001\020\330\314\001\032\007\010\222\0038\316\234\0010\001\022k\n\031ListenPlayerOfflin"
+  "eEvents\022\026.google.protobuf.Empty\032\035.openfo"
+  "xwq.PlayerOfflineEvent\"\025\202\265\030\021\010\330\314\001\020\330\314\001\032\007\010\223"
+  "\0038\316\234\0010\001\022g\n\027ListenPlayerStateEvents\022\026.goo"
+  "gle.protobuf.Empty\032\033.openfoxwq.PlayerSta"
+  "teEvent\"\025\202\265\030\021\010\330\314\001\020\330\314\001\032\007\010\224\0038\316\234\0010\001\022z\n\021GetA"
+  "utomatchStats\022#.openfoxwq.GetAutomatchSt"
+  "atsRequest\032$.openfoxwq.GetAutomatchStats"
+  "Response\"\032\202\265\030\026\010\330\314\001\020\330\314\001\032\014\010\261\216\006( 0\0068\266\352\001\022q\n\016"
+  "StartAutomatch\022 .openfoxwq.StartAutomatc"
+  "hRequest\032!.openfoxwq.StartAutomatchRespo"
+  "nse\"\032\202\265\030\026\010\330\314\001\020\330\314\001\032\014\010\242\216\006( 0\0068\266\352\001\022n\n\032Liste"
+  "nAutomatchFoundEvents\022\026.google.protobuf."
+  "Empty\032\036.openfoxwq.AutomatchFoundEvent\"\026\202"
+  "\265\030\022\010\330\314\001\020\330\314\001\032\010\010\254\216\0068\266\352\0010\001\022n\n\rStopAutomatch"
+  "\022\037.openfoxwq.StopAutomatchRequest\032 .open"
+  "foxwq.StopAutomatchResponse\"\032\202\265\030\026\010\330\314\001\020\330\314"
+  "\001\032\014\010\253\216\006( 0\0068\266\352\001\022f\n\013AcceptMatch\022\035.openfox"
+  "wq.AcceptMatchRequest\032\036.openfoxwq.Accept"
+  "MatchResponse\"\030\202\265\030\024\010\330\314\001\020\330\314\001\032\n\010i( 0\0068\230\362\001\022"
+  "m\n\rSyncMatchTime\022\037.openfoxwq.SyncMatchTi"
+  "meRequest\032 .openfoxwq.SyncMatchTimeRespo"
+  "nse\"\031\202\265\030\025\010\330\314\001\020\330\314\001\032\013\010\310\001( 0\0068\230\362\001\022R\n\004Move\022\026"
+  ".openfoxwq.MoveRequest\032\027.openfoxwq.MoveR"
+  "esponse\"\031\202\265\030\025\010\330\314\001\020\330\314\001\032\013\010\311\001( 0\0068\230\362\001\022R\n\004Pa"
+  "ss\022\026.openfoxwq.PassRequest\032\027.openfoxwq.P"
+  "assResponse\"\031\202\265\030\025\010\330\314\001\020\330\314\001\032\013\010\314\001( 0\0068\230\362\001\022s"
+  "\n\017RequestCounting\022!.openfoxwq.RequestCou"
+  "ntingRequest\032\".openfoxwq.RequestCounting"
+  "Response\"\031\202\265\030\025\010\330\314\001\020\330\314\001\032\013\010\255\002( 0\0068\230\362\001\022w\n\024S"
+  "endCountingDecision\022\033.openfoxwq.Counting"
+  "Decision\032\'.openfoxwq.SendCountingDecisio"
+  "nResponse\"\031\202\265\030\025\010\330\314\001\020\330\314\001\032\013\010\260\002( 0\0068\230\362\001\022X\n\006"
+  "Resign\022\030.openfoxwq.ResignRequest\032\031.openf"
+  "oxwq.ResignResponse\"\031\202\265\030\025\010\330\314\001\020\330\314\001\032\013\010\267\002( "
+  "0\0068\230\362\001\022d\n\026ListenMatchStartEvents\022\026.googl"
+  "e.protobuf.Empty\032\032.openfoxwq.MatchStartE"
+  "vent\"\024\202\265\030\020\010\330\314\001\020\330\314\001\032\006\010k8\230\362\0010\001\022a\n\024ListenNe"
+  "xtMoveEvents\022\026.google.protobuf.Empty\032\030.o"
+  "penfoxwq.NextMoveEvent\"\025\202\265\030\021\010\330\314\001\020\330\314\001\032\007\010\313"
+  "\0018\230\362\0010\001\022Y\n\020ListenPassEvents\022\026.google.pro"
+  "tobuf.Empty\032\024.openfoxwq.PassEvent\"\025\202\265\030\021\010"
+  "\330\314\001\020\330\314\001\032\007\010\316\0018\230\362\0010\001\022b\n\025ListenCountdownEve"
+  "nts\022\026.google.protobuf.Empty\032\031.openfoxwq."
+  "CountdownEvent\"\024\202\265\030\020\010\330\314\001\020\330\314\001\032\006\010l8\230\362\0010\001\022n"
+  "\n\033ListenResumeCountdownEvents\022\026.google.p"
+  "rotobuf.Empty\032\037.openfoxwq.ResumeCountdow"
+  "nEvent\"\024\202\265\030\020\010\330\314\001\020\330\314\001\032\006\010m8\230\362\0010\001\022g\n\027Listen"
+  "CountingDecisions\022\026.google.protobuf.Empt"
+  "y\032\033.openfoxwq.CountingDecision\"\025\202\265\030\021\010\330\314\001"
+  "\020\330\314\001\032\007\010\262\0028\230\362\0010\001\022a\n\024ListenCountingEvents\022"
+  "\026.google.protobuf.Empty\032\030.openfoxwq.Coun"
+  "tingEvent\"\025\202\265\030\021\010\330\314\001\020\330\314\001\032\007\010\257\0028\230\362\0010\001\022e\n\026Li"
+  "stenGameResultEvents\022\026.google.protobuf.E"
+  "mpty\032\032.openfoxwq.GameResultEvent\"\025\202\265\030\021\010\330"
+  "\314\001\020\330\314\001\032\007\010\225\0038\230\362\0010\001\022a\n\010SyncTime\022\032.openfoxw"
+  "q.SyncTimeRequest\032\033.openfoxwq.SyncTimeRe"
+  "sponse\"\034\202\265\030\030\010\330\314\001\020\330\314\001\032\016\010\005( 0\0068\241\234\001@\013H\001\022g\n\010"
+  "Unknown1\022\036.openfoxwq.UnknownPlayRequest1"
+  "\032\037.openfoxwq.UnknownPlayResponse1\"\032\202\265\030\026\010"
+  "\330\314\001\020\330\314\001\032\014\010\002( 0\0068\340\352\001@\001B&Z$github.com/open"
+  "foxwq/openfoxwq/proto"
   ;
 static const ::_pbi::DescriptorTable* const descriptor_table_proto_2fplay_2eproto_deps[3] = {
   &::descriptor_table_google_2fprotobuf_2fempty_2eproto,
@@ -2817,7 +2821,7 @@ static const ::_pbi::DescriptorTable* const descriptor_table_proto_2fplay_2eprot
 };
 static ::_pbi::once_flag descriptor_table_proto_2fplay_2eproto_once;
 const ::_pbi::DescriptorTable descriptor_table_proto_2fplay_2eproto = {
-    false, false, 12880, descriptor_table_protodef_proto_2fplay_2eproto,
+    false, false, 12901, descriptor_table_protodef_proto_2fplay_2eproto,
     "proto/play.proto",
     &descriptor_table_proto_2fplay_2eproto_once, descriptor_table_proto_2fplay_2eproto_deps, 3, 80,
     schemas, file_default_instances, TableStruct_proto_2fplay_2eproto::offsets,
@@ -15975,16 +15979,19 @@ class MatchStartEvent_MatchPlayerInfo::_Internal {
  public:
   using HasBits = decltype(std::declval<MatchStartEvent_MatchPlayerInfo>()._impl_._has_bits_);
   static void set_has_player_id(HasBits* has_bits) {
-    (*has_bits)[0] |= 2u;
+    (*has_bits)[0] |= 4u;
   }
   static void set_has_name(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static void set_has_rank(HasBits* has_bits) {
-    (*has_bits)[0] |= 4u;
+    (*has_bits)[0] |= 8u;
+  }
+  static void set_has_avatar_url(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
   }
   static void set_has_country(HasBits* has_bits) {
-    (*has_bits)[0] |= 8u;
+    (*has_bits)[0] |= 16u;
   }
 };
 
@@ -16001,6 +16008,7 @@ MatchStartEvent_MatchPlayerInfo::MatchStartEvent_MatchPlayerInfo(const MatchStar
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
     , decltype(_impl_.name_){}
+    , decltype(_impl_.avatar_url_){}
     , decltype(_impl_.player_id_){}
     , decltype(_impl_.rank_){}
     , decltype(_impl_.country_){}};
@@ -16012,6 +16020,14 @@ MatchStartEvent_MatchPlayerInfo::MatchStartEvent_MatchPlayerInfo(const MatchStar
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_name()) {
     _this->_impl_.name_.Set(from._internal_name(), 
+      _this->GetArenaForAllocation());
+  }
+  _impl_.avatar_url_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.avatar_url_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (from._internal_has_avatar_url()) {
+    _this->_impl_.avatar_url_.Set(from._internal_avatar_url(), 
       _this->GetArenaForAllocation());
   }
   ::memcpy(&_impl_.player_id_, &from._impl_.player_id_,
@@ -16028,6 +16044,7 @@ inline void MatchStartEvent_MatchPlayerInfo::SharedCtor(
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
     , decltype(_impl_.name_){}
+    , decltype(_impl_.avatar_url_){}
     , decltype(_impl_.player_id_){int64_t{0}}
     , decltype(_impl_.rank_){0}
     , decltype(_impl_.country_){0}
@@ -16035,6 +16052,10 @@ inline void MatchStartEvent_MatchPlayerInfo::SharedCtor(
   _impl_.name_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.name_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  _impl_.avatar_url_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.avatar_url_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -16050,6 +16071,7 @@ MatchStartEvent_MatchPlayerInfo::~MatchStartEvent_MatchPlayerInfo() {
 inline void MatchStartEvent_MatchPlayerInfo::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   _impl_.name_.Destroy();
+  _impl_.avatar_url_.Destroy();
 }
 
 void MatchStartEvent_MatchPlayerInfo::SetCachedSize(int size) const {
@@ -16063,10 +16085,15 @@ void MatchStartEvent_MatchPlayerInfo::Clear() {
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000001u) {
-    _impl_.name_.ClearNonDefaultToEmpty();
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      _impl_.name_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _impl_.avatar_url_.ClearNonDefaultToEmpty();
+    }
   }
-  if (cached_has_bits & 0x0000000eu) {
+  if (cached_has_bits & 0x0000001cu) {
     ::memset(&_impl_.player_id_, 0, static_cast<size_t>(
         reinterpret_cast<char*>(&_impl_.country_) -
         reinterpret_cast<char*>(&_impl_.player_id_)) + sizeof(_impl_.country_));
@@ -16116,6 +16143,18 @@ const char* MatchStartEvent_MatchPlayerInfo::_InternalParse(const char* ptr, ::_
         } else
           goto handle_unusual;
         continue;
+      // optional string avatar_url = 18;
+      case 18:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 146)) {
+          auto str = _internal_mutable_avatar_url();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+          #ifndef NDEBUG
+          ::_pbi::VerifyUTF8(str, "openfoxwq.MatchStartEvent.MatchPlayerInfo.avatar_url");
+          #endif  // !NDEBUG
+        } else
+          goto handle_unusual;
+        continue;
       // optional .openfoxwq.Country country = 20;
       case 20:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 160)) {
@@ -16161,7 +16200,7 @@ uint8_t* MatchStartEvent_MatchPlayerInfo::_InternalSerialize(
 
   cached_has_bits = _impl_._has_bits_[0];
   // optional int64 player_id = 1;
-  if (cached_has_bits & 0x00000002u) {
+  if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteInt64ToArray(1, this->_internal_player_id(), target);
   }
@@ -16177,14 +16216,24 @@ uint8_t* MatchStartEvent_MatchPlayerInfo::_InternalSerialize(
   }
 
   // optional .openfoxwq.Rank rank = 4;
-  if (cached_has_bits & 0x00000004u) {
+  if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteEnumToArray(
       4, this->_internal_rank(), target);
   }
 
+  // optional string avatar_url = 18;
+  if (cached_has_bits & 0x00000002u) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->_internal_avatar_url().data(), static_cast<int>(this->_internal_avatar_url().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
+      "openfoxwq.MatchStartEvent.MatchPlayerInfo.avatar_url");
+    target = stream->WriteStringMaybeAliased(
+        18, this->_internal_avatar_url(), target);
+  }
+
   // optional .openfoxwq.Country country = 20;
-  if (cached_has_bits & 0x00000008u) {
+  if (cached_has_bits & 0x00000010u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteEnumToArray(
       20, this->_internal_country(), target);
@@ -16207,7 +16256,7 @@ size_t MatchStartEvent_MatchPlayerInfo::ByteSizeLong() const {
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x0000000fu) {
+  if (cached_has_bits & 0x0000001fu) {
     // optional string name = 3;
     if (cached_has_bits & 0x00000001u) {
       total_size += 1 +
@@ -16215,19 +16264,26 @@ size_t MatchStartEvent_MatchPlayerInfo::ByteSizeLong() const {
           this->_internal_name());
     }
 
-    // optional int64 player_id = 1;
+    // optional string avatar_url = 18;
     if (cached_has_bits & 0x00000002u) {
+      total_size += 2 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+          this->_internal_avatar_url());
+    }
+
+    // optional int64 player_id = 1;
+    if (cached_has_bits & 0x00000004u) {
       total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_player_id());
     }
 
     // optional .openfoxwq.Rank rank = 4;
-    if (cached_has_bits & 0x00000004u) {
+    if (cached_has_bits & 0x00000008u) {
       total_size += 1 +
         ::_pbi::WireFormatLite::EnumSize(this->_internal_rank());
     }
 
     // optional .openfoxwq.Country country = 20;
-    if (cached_has_bits & 0x00000008u) {
+    if (cached_has_bits & 0x00000010u) {
       total_size += 2 +
         ::_pbi::WireFormatLite::EnumSize(this->_internal_country());
     }
@@ -16252,17 +16308,20 @@ void MatchStartEvent_MatchPlayerInfo::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message
   (void) cached_has_bits;
 
   cached_has_bits = from._impl_._has_bits_[0];
-  if (cached_has_bits & 0x0000000fu) {
+  if (cached_has_bits & 0x0000001fu) {
     if (cached_has_bits & 0x00000001u) {
       _this->_internal_set_name(from._internal_name());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_impl_.player_id_ = from._impl_.player_id_;
+      _this->_internal_set_avatar_url(from._internal_avatar_url());
     }
     if (cached_has_bits & 0x00000004u) {
-      _this->_impl_.rank_ = from._impl_.rank_;
+      _this->_impl_.player_id_ = from._impl_.player_id_;
     }
     if (cached_has_bits & 0x00000008u) {
+      _this->_impl_.rank_ = from._impl_.rank_;
+    }
+    if (cached_has_bits & 0x00000010u) {
       _this->_impl_.country_ = from._impl_.country_;
     }
     _this->_impl_._has_bits_[0] |= cached_has_bits;
@@ -16290,6 +16349,10 @@ void MatchStartEvent_MatchPlayerInfo::InternalSwap(MatchStartEvent_MatchPlayerIn
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.name_, lhs_arena,
       &other->_impl_.name_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.avatar_url_, lhs_arena,
+      &other->_impl_.avatar_url_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
       PROTOBUF_FIELD_OFFSET(MatchStartEvent_MatchPlayerInfo, _impl_.country_)

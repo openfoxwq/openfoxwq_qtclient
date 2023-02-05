@@ -4,6 +4,7 @@
 
 #include <QApplication>
 #include <QWebSocket>
+#include <QNetworkAccessManager>
 
 int main(int argc, char *argv[])
 {
@@ -15,10 +16,11 @@ int main(int argc, char *argv[])
     // BoardTestWindow w(nullptr);
     // w.show();
 
-    QWebSocket *ws = new QWebSocket;
+    QNetworkAccessManager nam;
+    QWebSocket ws;
     SoundFx soundFx(QLocale::Language::English);
 
-    LoginWindow w(nullptr, *ws, soundFx);
+    LoginWindow w(nullptr, nam, ws, soundFx);
     w.show();
 
     return a.exec();

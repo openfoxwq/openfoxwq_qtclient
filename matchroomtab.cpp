@@ -6,8 +6,8 @@
 #include "timeddecisiondialog.h"
 #include "proto/ws.pb.h"
 
-MatchRoomTab::MatchRoomTab(QWidget *parent, QWebSocket& ws, SoundFx& sfx, const ModelUtils& modelUtils, int64_t selfPlayerId, const openfoxwq::MatchStartEvent& matchStartEvent) :
-    RoomTab(parent, ws, sfx, modelUtils),
+MatchRoomTab::MatchRoomTab(QWidget *parent, QNetworkAccessManager& nam, QWebSocket& ws, SoundFx& sfx, const ModelUtils& modelUtils, int64_t selfPlayerId, const openfoxwq::MatchStartEvent& matchStartEvent) :
+    RoomTab(parent, nam, ws, sfx, modelUtils),
     m_selfPlayerId(selfPlayerId),
     m_matchStartEvent(matchStartEvent)
 {
@@ -40,6 +40,19 @@ MatchRoomTab::MatchRoomTab(QWidget *parent, QWebSocket& ws, SoundFx& sfx, const 
     settings.set_byoyomi_periods(m_matchStartEvent.match_info().byoyomi_periods());
     settings.set_byoyomi_time_sec(m_matchStartEvent.match_info().byoyomi_time_sec());
 
+    for (int i = 0; i < m_matchStartEvent.players_size(); ++i) {
+        const auto& player = m_matchStartEvent.players(i);
+        if (!player.has_avatar_url()) continue;
+        QNetworkRequest req(QUrl(QString::fromStdString(player.avatar_url())));
+        if (player.player_id() == m_matchStartEvent.match_info().player_id_white()) {
+            m_whiteAvatarReply = m_nam.get(req);
+            connect(m_whiteAvatarReply, &QNetworkReply::finished, this, &MatchRoomTab::onWhiteAvatarDownloaded);
+        } else if (player.player_id() == m_matchStartEvent.match_info().player_id_black()) {
+            m_blackAvatarReply = m_nam.get(req);
+            connect(m_blackAvatarReply, &QNetworkReply::finished, this, &MatchRoomTab::onBlackAvatarDownloaded);
+        }
+    }
+
     updateSettings(settings);
 
     m_myTurn = (m_settings.handicap() > 1 && (m_selfPlayerId == m_matchStartEvent.match_info().player_id_white())) ||
@@ -57,6 +70,13 @@ MatchRoomTab::MatchRoomTab(QWidget *parent, QWebSocket& ws, SoundFx& sfx, const 
     ui->board->setInteractive(true);
 
     on_listParticipantsTimer();
+}
+
+MatchRoomTab::~MatchRoomTab() {
+    if (m_whiteAvatarReply)
+        delete m_whiteAvatarReply;
+    if (m_blackAvatarReply)
+        delete m_blackAvatarReply;
 }
 
 void MatchRoomTab::on_matchStart() {
@@ -278,22 +298,8 @@ void MatchRoomTab::on_gameResultEvent(const openfoxwq::GameResultEvent& event) {
     ui->requestCountingButton->setDisabled(true);
     ui->resignButton->setDisabled(true);
 
-    QString reason;
-    switch (event.score_lead()) {
-    case -1:
-        reason = "R";
-        break;
-    case -2:
-        reason = "T";
-        break;
-    case -3:
-        reason = "F";
-        break;
-    default:
-        reason = ModelUtils::formatScoreLead(event.score_lead());
-        break;
-    }
-    m_sgfHeader += QString("RE[%1+%2]").arg(ModelUtils::colorShortString(event.winner()), reason);
+    const auto [result, hasWinner] = ModelUtils::formatGameResult(event.winner(), event.score_lead());
+    m_sgfHeader += QString("RE[%1]").arg(result);
 }
 
 void MatchRoomTab::on_roomParticipants(const openfoxwq::ListRoomParticipantsResponse &resp) {
@@ -427,4 +433,16 @@ void MatchRoomTab::toggleTurn() {
     m_myTurn = !m_myTurn;
     m_moveNum++;
     ui->passButton->setEnabled(m_myTurn);
+}
+
+void MatchRoomTab::onWhiteAvatarDownloaded() {
+    QPixmap pixmap;
+    pixmap.loadFromData(m_whiteAvatarReply->readAll());
+    ui->matchCard->setWhiteAvatar(pixmap);
+}
+
+void MatchRoomTab::onBlackAvatarDownloaded() {
+    QPixmap pixmap;
+    pixmap.loadFromData(m_blackAvatarReply->readAll());
+    ui->matchCard->setBlackAvatar(pixmap);
 }

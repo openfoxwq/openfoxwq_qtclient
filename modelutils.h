@@ -33,6 +33,7 @@ public:
     static QString broadcastStateString(openfoxwq::BroadcastInfo_BroadcastState broadcastState);
     static QString roomIdString(openfoxwq::RoomId roomId);
     static QString formatScoreLead(int scoreLead);
+    static QPair<QString, bool> formatGameResult(openfoxwq::Color winner, int64_t scoreLead);
 
 
 private:

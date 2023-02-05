@@ -3,6 +3,7 @@
 
 #include <chrono>
 
+#include <QNetworkAccessManager>
 #include <QWebSocket>
 #include <QWidget>
 #include <QTimer>
@@ -21,13 +22,14 @@ class RoomTab : public QWidget
     Q_OBJECT
 
 public:
-    explicit RoomTab(QWidget *parent, QWebSocket& ws, SoundFx& sfx, const ModelUtils& modelUtils);
+    explicit RoomTab(QWidget *parent, QNetworkAccessManager& nam, QWebSocket& ws, SoundFx& sfx, const ModelUtils& modelUtils);
     virtual ~RoomTab();
 
     virtual bool leaveRoom() = 0;
 
 protected:
     Ui::RoomTab *ui;
+    QNetworkAccessManager& m_nam;
     QWebSocket& m_ws;
     SoundFx& m_sfx;
     const ModelUtils& m_modelUtils;

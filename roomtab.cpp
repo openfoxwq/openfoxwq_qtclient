@@ -8,9 +8,10 @@
 #include <stringutils.h>
 #include <proto/ws.pb.h>
 
-RoomTab::RoomTab(QWidget *parent, QWebSocket& ws, SoundFx& sfx, const ModelUtils& modelUtils) :
+RoomTab::RoomTab(QWidget *parent, QNetworkAccessManager& nam, QWebSocket& ws, SoundFx& sfx, const ModelUtils& modelUtils) :
     QWidget(parent)
     , ui(new Ui::RoomTab)
+    , m_nam(nam)
     , m_ws(ws)
     , m_sfx(sfx)
     , m_modelUtils(modelUtils) {
@@ -108,29 +109,18 @@ void RoomTab::putHandicapStones() {
 }
 
 void RoomTab::updateGameResult(openfoxwq::Color winner, int64_t scoreLead) {
-    QString resultStr = QString("%1+ %2").arg(ModelUtils::colorShortString(winner), ModelUtils::formatScoreLead(scoreLead));
-    ui->msgList->addItem(QString("Game Result: %1").arg(resultStr));
+    const auto [result, hasWinner] = ModelUtils::formatGameResult(winner, scoreLead);
+    ui->msgList->addItem(QString("Game Result: %1").arg(result));
 
     QMessageBox msgBox;
-    msgBox.setWindowTitle("Result");
+    msgBox.setWindowTitle("Game Result");
 
     ui->matchCard->setBlackPeriodsLeft(1);
     ui->matchCard->setBlackTime(0);
     ui->matchCard->setWhitePeriodsLeft(1);
     ui->matchCard->setWhiteTime(0);
 
-    QString reason;
-    if (scoreLead == -1) {
-        reason = "resignation";
-    } else if (scoreLead == -2) {
-        reason = "timeout";
-    } else if (scoreLead == -3) {
-        reason = "forfeit";
-    } else {
-        reason = ModelUtils::formatScoreLead(scoreLead);
-    }
-
-    msgBox.setText(QString("%1 wins by %2").arg(ModelUtils::colorString(winner), reason));
+    msgBox.setText(result);
     msgBox.exec();
 }
 

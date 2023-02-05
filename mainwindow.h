@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include <QStandardItemModel>
+#include <QNetworkAccessManager>
 #include <QWebSocket>
 #include <QProgressDialog>
 
@@ -23,8 +24,10 @@ class MainWindow : public QMainWindow
     Q_OBJECT
 
 public:
-    explicit MainWindow(QWidget *parent, QWebSocket& ws, SoundFx& sfx, int64_t myPlayerId, QVector<AutomatchPreset> automatchPresets);
+    explicit MainWindow(QWidget *parent, QNetworkAccessManager& nam, QWebSocket& ws, SoundFx& sfx, int64_t myPlayerId, QVector<AutomatchPreset> automatchPresets);
     ~MainWindow();
+
+    void closeEvent(QCloseEvent *event) override;
 
 private slots:
     void on_disconnected();
@@ -39,6 +42,7 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
+    QNetworkAccessManager& m_nam;
     QWebSocket& m_ws;
     SoundFx& m_sfx;
     const int64_t m_myPlayerId;

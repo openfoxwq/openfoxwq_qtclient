@@ -35,12 +35,14 @@ public:
     void setBlackPeriodsLeft(int p);
     void setBlackCaptures(int c);
     void setBlackCountdown(bool value);
+    void setBlackAvatar(QPixmap pixmap);
 
     void setWhiteTime(int t);
     void setWhiteTimerPaused(bool value);
     void setWhitePeriodsLeft(int p);
     void setWhiteCaptures(int c);
     void setWhiteCountdown(bool value);
+    void setWhiteAvatar(QPixmap pixmap);
 
 
 signals:

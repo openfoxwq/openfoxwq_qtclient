@@ -9865,6 +9865,7 @@ class MatchStartEvent_MatchPlayerInfo final :
 
   enum : int {
     kNameFieldNumber = 3,
+    kAvatarUrlFieldNumber = 18,
     kPlayerIdFieldNumber = 1,
     kRankFieldNumber = 4,
     kCountryFieldNumber = 20,
@@ -9885,6 +9886,24 @@ class MatchStartEvent_MatchPlayerInfo final :
   const std::string& _internal_name() const;
   inline PROTOBUF_ALWAYS_INLINE void _internal_set_name(const std::string& value);
   std::string* _internal_mutable_name();
+  public:
+
+  // optional string avatar_url = 18;
+  bool has_avatar_url() const;
+  private:
+  bool _internal_has_avatar_url() const;
+  public:
+  void clear_avatar_url();
+  const std::string& avatar_url() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_avatar_url(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_avatar_url();
+  PROTOBUF_NODISCARD std::string* release_avatar_url();
+  void set_allocated_avatar_url(std::string* avatar_url);
+  private:
+  const std::string& _internal_avatar_url() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_avatar_url(const std::string& value);
+  std::string* _internal_mutable_avatar_url();
   public:
 
   // optional int64 player_id = 1;
@@ -9937,6 +9956,7 @@ class MatchStartEvent_MatchPlayerInfo final :
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr name_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr avatar_url_;
     int64_t player_id_;
     int rank_;
     int country_;
@@ -22705,7 +22725,7 @@ inline void MatchStartEvent_MatchInfo::set_player_id_white(int64_t value) {
 
 // optional int64 player_id = 1;
 inline bool MatchStartEvent_MatchPlayerInfo::_internal_has_player_id() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
 inline bool MatchStartEvent_MatchPlayerInfo::has_player_id() const {
@@ -22713,7 +22733,7 @@ inline bool MatchStartEvent_MatchPlayerInfo::has_player_id() const {
 }
 inline void MatchStartEvent_MatchPlayerInfo::clear_player_id() {
   _impl_.player_id_ = int64_t{0};
-  _impl_._has_bits_[0] &= ~0x00000002u;
+  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline int64_t MatchStartEvent_MatchPlayerInfo::_internal_player_id() const {
   return _impl_.player_id_;
@@ -22723,7 +22743,7 @@ inline int64_t MatchStartEvent_MatchPlayerInfo::player_id() const {
   return _internal_player_id();
 }
 inline void MatchStartEvent_MatchPlayerInfo::_internal_set_player_id(int64_t value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  _impl_._has_bits_[0] |= 0x00000004u;
   _impl_.player_id_ = value;
 }
 inline void MatchStartEvent_MatchPlayerInfo::set_player_id(int64_t value) {
@@ -22801,7 +22821,7 @@ inline void MatchStartEvent_MatchPlayerInfo::set_allocated_name(std::string* nam
 
 // optional .openfoxwq.Rank rank = 4;
 inline bool MatchStartEvent_MatchPlayerInfo::_internal_has_rank() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
 }
 inline bool MatchStartEvent_MatchPlayerInfo::has_rank() const {
@@ -22809,7 +22829,7 @@ inline bool MatchStartEvent_MatchPlayerInfo::has_rank() const {
 }
 inline void MatchStartEvent_MatchPlayerInfo::clear_rank() {
   _impl_.rank_ = 0;
-  _impl_._has_bits_[0] &= ~0x00000004u;
+  _impl_._has_bits_[0] &= ~0x00000008u;
 }
 inline ::openfoxwq::Rank MatchStartEvent_MatchPlayerInfo::_internal_rank() const {
   return static_cast< ::openfoxwq::Rank >(_impl_.rank_);
@@ -22820,7 +22840,7 @@ inline ::openfoxwq::Rank MatchStartEvent_MatchPlayerInfo::rank() const {
 }
 inline void MatchStartEvent_MatchPlayerInfo::_internal_set_rank(::openfoxwq::Rank value) {
   assert(::openfoxwq::Rank_IsValid(value));
-  _impl_._has_bits_[0] |= 0x00000004u;
+  _impl_._has_bits_[0] |= 0x00000008u;
   _impl_.rank_ = value;
 }
 inline void MatchStartEvent_MatchPlayerInfo::set_rank(::openfoxwq::Rank value) {
@@ -22828,9 +22848,77 @@ inline void MatchStartEvent_MatchPlayerInfo::set_rank(::openfoxwq::Rank value) {
   // @@protoc_insertion_point(field_set:openfoxwq.MatchStartEvent.MatchPlayerInfo.rank)
 }
 
+// optional string avatar_url = 18;
+inline bool MatchStartEvent_MatchPlayerInfo::_internal_has_avatar_url() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool MatchStartEvent_MatchPlayerInfo::has_avatar_url() const {
+  return _internal_has_avatar_url();
+}
+inline void MatchStartEvent_MatchPlayerInfo::clear_avatar_url() {
+  _impl_.avatar_url_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000002u;
+}
+inline const std::string& MatchStartEvent_MatchPlayerInfo::avatar_url() const {
+  // @@protoc_insertion_point(field_get:openfoxwq.MatchStartEvent.MatchPlayerInfo.avatar_url)
+  return _internal_avatar_url();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void MatchStartEvent_MatchPlayerInfo::set_avatar_url(ArgT0&& arg0, ArgT... args) {
+ _impl_._has_bits_[0] |= 0x00000002u;
+ _impl_.avatar_url_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:openfoxwq.MatchStartEvent.MatchPlayerInfo.avatar_url)
+}
+inline std::string* MatchStartEvent_MatchPlayerInfo::mutable_avatar_url() {
+  std::string* _s = _internal_mutable_avatar_url();
+  // @@protoc_insertion_point(field_mutable:openfoxwq.MatchStartEvent.MatchPlayerInfo.avatar_url)
+  return _s;
+}
+inline const std::string& MatchStartEvent_MatchPlayerInfo::_internal_avatar_url() const {
+  return _impl_.avatar_url_.Get();
+}
+inline void MatchStartEvent_MatchPlayerInfo::_internal_set_avatar_url(const std::string& value) {
+  _impl_._has_bits_[0] |= 0x00000002u;
+  _impl_.avatar_url_.Set(value, GetArenaForAllocation());
+}
+inline std::string* MatchStartEvent_MatchPlayerInfo::_internal_mutable_avatar_url() {
+  _impl_._has_bits_[0] |= 0x00000002u;
+  return _impl_.avatar_url_.Mutable(GetArenaForAllocation());
+}
+inline std::string* MatchStartEvent_MatchPlayerInfo::release_avatar_url() {
+  // @@protoc_insertion_point(field_release:openfoxwq.MatchStartEvent.MatchPlayerInfo.avatar_url)
+  if (!_internal_has_avatar_url()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000002u;
+  auto* p = _impl_.avatar_url_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.avatar_url_.IsDefault()) {
+    _impl_.avatar_url_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void MatchStartEvent_MatchPlayerInfo::set_allocated_avatar_url(std::string* avatar_url) {
+  if (avatar_url != nullptr) {
+    _impl_._has_bits_[0] |= 0x00000002u;
+  } else {
+    _impl_._has_bits_[0] &= ~0x00000002u;
+  }
+  _impl_.avatar_url_.SetAllocated(avatar_url, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.avatar_url_.IsDefault()) {
+    _impl_.avatar_url_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:openfoxwq.MatchStartEvent.MatchPlayerInfo.avatar_url)
+}
+
 // optional .openfoxwq.Country country = 20;
 inline bool MatchStartEvent_MatchPlayerInfo::_internal_has_country() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
+  bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
 }
 inline bool MatchStartEvent_MatchPlayerInfo::has_country() const {
@@ -22838,7 +22926,7 @@ inline bool MatchStartEvent_MatchPlayerInfo::has_country() const {
 }
 inline void MatchStartEvent_MatchPlayerInfo::clear_country() {
   _impl_.country_ = 0;
-  _impl_._has_bits_[0] &= ~0x00000008u;
+  _impl_._has_bits_[0] &= ~0x00000010u;
 }
 inline ::openfoxwq::Country MatchStartEvent_MatchPlayerInfo::_internal_country() const {
   return static_cast< ::openfoxwq::Country >(_impl_.country_);
@@ -22849,7 +22937,7 @@ inline ::openfoxwq::Country MatchStartEvent_MatchPlayerInfo::country() const {
 }
 inline void MatchStartEvent_MatchPlayerInfo::_internal_set_country(::openfoxwq::Country value) {
   assert(::openfoxwq::Country_IsValid(value));
-  _impl_._has_bits_[0] |= 0x00000008u;
+  _impl_._has_bits_[0] |= 0x00000010u;
   _impl_.country_ = value;
 }
 inline void MatchStartEvent_MatchPlayerInfo::set_country(::openfoxwq::Country value) {

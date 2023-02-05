@@ -3,8 +3,8 @@
 #include "ui_roomtab.h"
 #include "proto/ws.pb.h"
 
-BroadcastRoomTab::BroadcastRoomTab(QWidget *parent, QWebSocket& ws, SoundFx& sfx, const ModelUtils& modelUtils, const openfoxwq::BroadcastInfo& broadcastInfo)
-    : RoomTab(parent, ws, sfx, modelUtils), m_broadcast(broadcastInfo)
+BroadcastRoomTab::BroadcastRoomTab(QWidget *parent, QNetworkAccessManager& nam, QWebSocket& ws, SoundFx& sfx, const ModelUtils& modelUtils, const openfoxwq::BroadcastInfo& broadcastInfo)
+    : RoomTab(parent, nam, ws, sfx, modelUtils), m_broadcast(broadcastInfo)
 {
     ui->matchCard->setBroadcast(m_broadcast, m_modelUtils);
     ui->msgList->addItem("Welcome to broadcast room " + QString::number(m_broadcast.id()));

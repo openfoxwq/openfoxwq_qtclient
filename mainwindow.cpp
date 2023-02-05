@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
+#include <QCloseEvent>
 #include <QJsonDocument>
 #include <QJsonParseError>
 #include <QJsonArray>
@@ -21,9 +22,10 @@
 #include <proto/play.pb.h>
 #include <proto/ws.pb.h>
 
-MainWindow::MainWindow(QWidget *parent, QWebSocket& ws, SoundFx& sfx, int64_t myPlayerId, QVector<AutomatchPreset> automatchPresets) :
+MainWindow::MainWindow(QWidget *parent, QNetworkAccessManager& nam, QWebSocket& ws, SoundFx& sfx, int64_t myPlayerId, QVector<AutomatchPreset> automatchPresets) :
     QMainWindow(parent),
     ui(new Ui::MainWindow),
+    m_nam(nam),
     m_ws(ws),
     m_sfx(sfx),
     m_myPlayerId(myPlayerId),
@@ -215,7 +217,7 @@ void MainWindow::on_binaryMessageReceived(QByteArray data) {
     case openfoxwq::WsResponse::kMatchStartEvent:
     {
         ui->automatchButton->setChecked(false);
-        MatchRoomTab *matchRoomTab = new MatchRoomTab(ui->mainTabs, m_ws, m_sfx, m_modelUtils, m_myPlayerId, resp.matchstartevent());
+        MatchRoomTab *matchRoomTab = new MatchRoomTab(ui->mainTabs, m_nam, m_ws, m_sfx, m_modelUtils, m_myPlayerId, resp.matchstartevent());
 
         const auto roomId = matchRoomTab->roomId();
         qDebug() << "Match starts: " << ModelUtils::roomIdString(roomId);
@@ -285,7 +287,7 @@ void MainWindow::on_binaryMessageReceived(QByteArray data) {
 void MainWindow::on_broadcastTable_doubleClicked(const QModelIndex &index)
 {
     const openfoxwq::BroadcastInfo& broadcastInfo = m_broadcastModel.getBroadcast(index.row());
-    BroadcastRoomTab *broadcastRoomTab = new BroadcastRoomTab(ui->mainTabs, m_ws, m_sfx, m_modelUtils, broadcastInfo);
+    BroadcastRoomTab *broadcastRoomTab = new BroadcastRoomTab(ui->mainTabs, m_nam, m_ws, m_sfx, m_modelUtils, broadcastInfo);
 
     ui->mainTabs->addTab(broadcastRoomTab, QString("%1: Room %2").arg(ModelUtils::broadcastTypeString(broadcastInfo.type())).arg(broadcastInfo.id()));
     ui->mainTabs->setCurrentWidget(broadcastRoomTab);
@@ -355,3 +357,8 @@ void MainWindow::on_automatchButton_toggled(bool checked)
     m_ws.sendBinaryMessage(QByteArray::fromStdString(req.SerializeAsString()));
 }
 
+void MainWindow::closeEvent(QCloseEvent *event) {
+    disconnect(&m_ws, &QWebSocket::disconnected, this, &MainWindow::on_disconnected);
+    disconnect(&m_ws, &QWebSocket::binaryMessageReceived, this, &MainWindow::on_binaryMessageReceived);
+    event->accept();
+}

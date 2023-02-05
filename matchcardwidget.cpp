@@ -110,6 +110,10 @@ void MatchCardWidget::setBlackCountdown(bool value) {
     ui->blackClockWidget->setCountdown(value);
 }
 
+void MatchCardWidget::setBlackAvatar(QPixmap pixmap) {
+    ui->blackAvatarLabel->setPixmap(pixmap);
+}
+
 void MatchCardWidget::setWhiteTime(int t) {
     ui->whiteClockWidget->setTime(t);
 }
@@ -128,4 +132,8 @@ void MatchCardWidget::setWhiteCaptures(int c) {
 
 void MatchCardWidget::setWhiteCountdown(bool value) {
     ui->whiteClockWidget->setCountdown(value);
+}
+
+void MatchCardWidget::setWhiteAvatar(QPixmap pixmap) {
+    ui->whiteAvatarLabel->setPixmap(pixmap);
 }
