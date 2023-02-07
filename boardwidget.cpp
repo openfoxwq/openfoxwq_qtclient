@@ -210,7 +210,7 @@ bool BoardWidget::movePiece(int r, int c, openfoxwq::Color state, int *captureCo
     // Update last point annotations
     m_lastState = state;
     const auto & [lr, lc] = m_lastPoint;
-    if (lr != -1) {
+    if (lr != -1 && pointButtons[lr][lc]->getAnnotation().type == AnnotationType::kQuarterTriangle) {
         pointButtons[lr][lc]->clearAnnotation();
     }
     m_lastPoint = {r, c};

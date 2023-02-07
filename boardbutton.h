@@ -42,6 +42,7 @@ public:
 
     void setState(openfoxwq::Color state);
     void setAnnotation(const Annotation &newAnnotation);
+    Annotation getAnnotation() const;
     void clearAnnotation();
 
     openfoxwq::Color getState() const;

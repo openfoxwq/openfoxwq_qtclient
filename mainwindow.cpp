@@ -7,6 +7,7 @@
 #include <QJsonParseError>
 #include <QJsonArray>
 #include <QDebug>
+#include <QSettings>
 #include <QStyledItemDelegate>
 #include <QMessageBox>
 
@@ -32,7 +33,8 @@ MainWindow::MainWindow(QWidget *parent, QNetworkAccessManager& nam, QWebSocket& 
     m_myPlayerId(myPlayerId),
     m_automatchPresets(automatchPresets),
     m_broadcastModel(this, m_modelUtils),
-    m_playerModel(this, m_modelUtils)
+    m_playerModel(this, m_modelUtils),
+    m_automatchPresetSettingKey(QString("%d/automatch_preset_id").arg(myPlayerId))
 {
     ui->setupUi(this);
 
@@ -58,10 +60,15 @@ MainWindow::MainWindow(QWidget *parent, QNetworkAccessManager& nam, QWebSocket& 
     ui->splitter->setStretchFactor(1, 1);
 
     // Add automatch presets
+    const int presetPreference = m_settings.value(m_automatchPresetSettingKey, -1).toInt();
     int presetIndex = 0;
     for (const auto &preset : qAsConst(m_automatchPresets)) {
         ui->automatchPresetComboBox->addItem(preset.nameEng());
-        ui->automatchPresetComboBox->setItemData(presetIndex++, QVariant(preset.id()));
+        ui->automatchPresetComboBox->setItemData(presetIndex, preset.id());
+        if (presetPreference == preset.id()) {
+            ui->automatchPresetComboBox->setCurrentIndex(presetIndex);
+        }
+        presetIndex++;
         qDebug() << "automatch preset: " << preset.id() << " " << preset.nameEng();
     }
 
@@ -379,8 +386,10 @@ void MainWindow::on_soundButton_toggled(bool checked)
     ui->volumeSlider->setEnabled(!checked);
     if (checked) {
         ui->soundButton->setIcon(soundOnIcon);
+        ui->soundButton->setText("Sound On");
     } else {
         ui->soundButton->setIcon(soundOffIcon);
+        ui->soundButton->setText("Sound Off");
     }
 }
 
@@ -411,5 +420,11 @@ void MainWindow::on_voiceLangComboBox_currentIndexChanged(int index)
         m_sfx.setLanguage(QLocale::Japanese);
         break;
     }
+}
+
+void MainWindow::on_automatchPresetComboBox_currentIndexChanged(int index)
+{
+    const auto presetId = ui->automatchPresetComboBox->itemData(index).toInt();
+    m_settings.setValue(m_automatchPresetSettingKey, presetId);
 }
 

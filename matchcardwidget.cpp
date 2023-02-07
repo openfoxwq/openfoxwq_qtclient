@@ -27,11 +27,13 @@ void MatchCardWidget::setBroadcast(const openfoxwq::BroadcastInfo& room, const M
     ui->whiteFlag->setPixmap(whiteFlag.pixmap(whiteFlag.actualSize(QSize(32,32))));
     // Black player
     QIcon blackFlag = modelUtils.flagForCountry(room.player_info_black().country());
-    ui->blackNickLabel->setText(QString::fromStdString(room.player_info_black().name()) + " " + ModelUtils::rankString(room.player_info_black().rank()));
+    ui->blackNickLabel->setText(ModelUtils::rankString(room.player_info_black().rank()) + " " + QString::fromStdString(room.player_info_black().name()));
     ui->blackFlag->setPixmap(blackFlag.pixmap(blackFlag.actualSize(QSize(32,32))));
 }
 
 void MatchCardWidget::setMatch(const openfoxwq::MatchStartEvent& matchStartEvent, const ModelUtils& modelUtils) {
+    m_whitePlayerUid = matchStartEvent.room_settings().player_id_white();
+    m_blackPlayerUid = matchStartEvent.room_settings().player_id_black();
     for (int i = 0; i < matchStartEvent.players_size(); ++i) {
         const auto& player = matchStartEvent.players(i);
         if (player.player_id() == matchStartEvent.room_settings().player_id_black()) {
@@ -111,7 +113,7 @@ void MatchCardWidget::setBlackCountdown(bool value) {
 }
 
 void MatchCardWidget::setBlackAvatar(QPixmap pixmap) {
-    ui->blackAvatarLabel->setPixmap(pixmap);
+    ui->blackAvatarButton->setIcon(pixmap);
 }
 
 void MatchCardWidget::setWhiteTime(int t) {
@@ -135,5 +137,17 @@ void MatchCardWidget::setWhiteCountdown(bool value) {
 }
 
 void MatchCardWidget::setWhiteAvatar(QPixmap pixmap) {
-    ui->whiteAvatarLabel->setPixmap(pixmap);
+    ui->whiteAvatarButton->setIcon(pixmap);
 }
+
+void MatchCardWidget::on_whiteAvatarButton_clicked()
+{
+    emit playerInfoRequested(m_whitePlayerUid);
+}
+
+
+void MatchCardWidget::on_blackAvatarButton_clicked()
+{
+    emit playerInfoRequested(m_blackPlayerUid);
+}
+

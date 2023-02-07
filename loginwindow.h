@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include <QNetworkAccessManager>
+#include <QSettings>
 #include <QWebSocket>
 
 #include "automatchpreset.h"
@@ -28,6 +29,7 @@ private slots:
     void onWsError(QAbstractSocket::SocketError error);
 
 private:
+    QSettings m_settings;
     QNetworkAccessManager& m_nam;
     QWebSocket& m_ws;
     SoundFx& m_sfx;

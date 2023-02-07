@@ -13,7 +13,6 @@
 #include <mainwindow.h>
 #include <proto/ws.pb.h>
 
-QSettings settings;
 
 LoginWindow::LoginWindow(QWidget *parent, QNetworkAccessManager& nam, QWebSocket& ws, SoundFx& sfx)
     : QMainWindow(parent)
@@ -24,8 +23,8 @@ LoginWindow::LoginWindow(QWidget *parent, QNetworkAccessManager& nam, QWebSocket
 {
     ui->setupUi(this);
 
-    ui->usernameEdit->setText(settings.value("username", "").toString());
-    ui->passwordEdit->setText(settings.value("password", "").toString());
+    ui->usernameEdit->setText(m_settings.value("username", "").toString());
+    ui->passwordEdit->setText(m_settings.value("password", "").toString());
 
     connect(&ws, &QWebSocket::connected, this, &LoginWindow::on_connected);
     connect(&ws, &QWebSocket::disconnected, this, &LoginWindow::on_disconnected);
@@ -113,8 +112,8 @@ void LoginWindow::on_binaryMessageReceived(QByteArray data) {
     case openfoxwq::WsResponse::kLogin:
         if (resp.login().has_player_id() && resp.login().player_id() != 0) {
             if (ui->rememberPasswordCheckBox->isChecked()) {
-                settings.setValue("username", ui->usernameEdit->text());
-                settings.setValue("password", ui->passwordEdit->text());
+                m_settings.setValue("username", ui->usernameEdit->text());
+                m_settings.setValue("password", ui->passwordEdit->text());
             }
 
             MainWindow* mainWindow = new MainWindow(nullptr, m_nam,  m_ws, m_sfx, resp.login().player_id(), automatchPresets);

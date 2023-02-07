@@ -1,6 +1,7 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
+#include <QSettings>
 #include <QMainWindow>
 #include <QStandardItemModel>
 #include <QNetworkAccessManager>
@@ -48,8 +49,11 @@ private slots:
 
     void on_voiceLangComboBox_currentIndexChanged(int index);
 
+    void on_automatchPresetComboBox_currentIndexChanged(int index);
+
 private:
     Ui::MainWindow *ui;
+    QSettings m_settings;
     QNetworkAccessManager& m_nam;
     QWebSocket& m_ws;
     SoundFx& m_sfx;
@@ -61,6 +65,7 @@ private:
     PlayerModel m_playerModel;
     QMap<int, BroadcastRoomTab*> m_activeBroadcastRooms;
     QMap<int, MatchRoomTab*> m_activeMatchRooms;
+    const QString m_automatchPresetSettingKey;
 
     int initialBroadcastPages = 0;
     int lastBroadcastPage = 0;

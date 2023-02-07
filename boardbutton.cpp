@@ -72,6 +72,10 @@ void BoardButton::setAnnotation(const Annotation &newAnnotation)
     repaint();
 }
 
+Annotation BoardButton::getAnnotation() const {
+    return m_annotation;
+}
+
 void BoardButton::clearAnnotation() {
     m_annotation.type = AnnotationType::kNone;
     repaint();
@@ -95,32 +99,73 @@ void BoardButton::paintEvent(QPaintEvent *)
 }
 
 void BoardButton::drawAnnotation(QPainter& p, const Annotation& annotation) {
-    p.setPen(annotation.color);
-    p.setBrush(annotation.color);
+
+    if (annotation.type == AnnotationType::kText) {
+        const int margin = 8;
+        QFont font = p.font();
+        int lo = 9;
+        int hi = 80;
+        while (hi-lo > 1) {
+            const int mid = (lo+hi)/2;
+            QFont f(font.family(), mid, font.weight(), font.italic());
+            QRect r = QFontMetrics(f).boundingRect(annotation.data);
+            if (r.width()+margin > rect().width() || r.height()+margin > rect().height()) {
+                hi = mid;
+            } else {
+                lo = mid;
+            }
+        }
+        QFont targetFont(font.family(), lo, font.weight(), font.italic());
+        p.setFont(targetFont);
+    }
 
     switch (annotation.type) {
     case AnnotationType::kNone:
         break;
     case AnnotationType::kQuarterTriangle:
+        p.setPen(annotation.color);
+        p.setBrush(annotation.color);
         p.drawConvexPolygon(quarterTrianglePoints());
         break;
     case AnnotationType::kSmallSquare:
+        p.setPen(annotation.color);
+        p.setBrush(annotation.color);
         p.drawRect(cellSize()/4 + 2, cellSize()/4 + 2, halfCellSize() - 4, halfCellSize() - 4);
         break;
-    case AnnotationType::kTriangle:
-        // TODO implement
+    case AnnotationType::kTriangle: {
+        const QPoint points[3] = {
+            QPoint(halfCellSize(), halfCellSize()/2),
+            QPoint(cellSize() - halfCellSize()/2, cellSize() - halfCellSize()/2),
+            QPoint(halfCellSize()/2, cellSize() - halfCellSize()/2),
+        };
+        p.setPen(QPen(annotation.color, 3));
+        p.drawPolygon(points, 3);
         break;
+    }
     case AnnotationType::kCircle:
-        // TODO implement
+        p.setPen(QPen(annotation.color, 3));
+        p.drawEllipse(QPoint(halfCellSize(), halfCellSize()), 2*halfCellSize()/3, 2*halfCellSize()/3);
         break;
     case AnnotationType::kSquare:
-        // TODO implement
+        p.setPen(QPen(annotation.color, 3));
+        p.drawRect(halfCellSize()/2, halfCellSize()/2, halfCellSize(), halfCellSize());
         break;
-    case AnnotationType::kCross:
-        // TODO implement
+    case AnnotationType::kCross: {
+        const QPoint points[4] = {
+            QPoint(halfCellSize()/2, halfCellSize()/2),
+            QPoint(cellSize() - halfCellSize()/2, cellSize() - halfCellSize()/2),
+            QPoint(halfCellSize()/2, cellSize() - halfCellSize()/2),
+            QPoint(cellSize() - halfCellSize()/2, halfCellSize()/2),
+        };
+        p.setPen(QPen(annotation.color, 3));
+        p.drawPolygon(points, 2);
+        p.drawPolygon(points+2, 2);
         break;
+    }
     case AnnotationType::kText:
-        // TODO implement
+        p.setPen(annotation.color);
+        p.setBrush(annotation.color);
+        p.drawText(rect(), Qt::AlignHCenter | Qt::AlignVCenter, annotation.data);
         break;
     }
 }

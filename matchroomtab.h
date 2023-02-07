@@ -2,6 +2,7 @@
 #define MATCHROOMTAB_H
 
 #include <QNetworkReply>
+#include <QSettings>
 
 #include "roomtab.h"
 #include "proto/play.pb.h"
@@ -43,6 +44,7 @@ private slots:
     void onBlackAvatarDownloaded();
 
 private:
+    QSettings m_sysSettings;
     QTimer m_syncTimer;
     QTimer m_listParticipantsTimer;
     const int64_t m_selfPlayerId;
@@ -58,6 +60,7 @@ private:
     QDateTime m_sgfDateTime;
     QString m_sgfHeader;
     QString m_sgfMoves;
+    bool m_hasResult = false;
 
     void updatePlayerTime(openfoxwq::Color color, int mainTimeLeft);
     void toggleTurn();

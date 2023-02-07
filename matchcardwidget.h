@@ -44,12 +44,19 @@ public:
     void setWhiteCountdown(bool value);
     void setWhiteAvatar(QPixmap pixmap);
 
-
 signals:
+    void playerInfoRequested(int64_t uid);
+
+private slots:
+    void on_whiteAvatarButton_clicked();
+
+    void on_blackAvatarButton_clicked();
 
 private:
     Ui::MatchCardWidget *ui;
     SoundFx* m_sfx;
+    int64_t m_whitePlayerUid = 0;
+    int64_t m_blackPlayerUid = 0;
 
 };
 

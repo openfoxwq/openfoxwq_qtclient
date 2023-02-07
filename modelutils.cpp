@@ -35,6 +35,7 @@ ModelUtils::ModelUtils() : m_unknownCountryFlag(":/assets/flag-small/aq.png")
     m_countryFlags[openfoxwq::Country::SWEDEN] = QIcon(":/assets/flag-small/se.png");
     m_countryFlags[openfoxwq::Country::TAIWAN] = QIcon(":/assets/flag-small/tw.png");
     m_countryFlags[openfoxwq::Country::THAILAND] = QIcon(":/assets/flag-small/th.png");
+    m_countryFlags[openfoxwq::Country::TURKEY] = QIcon(":/assets/flag-small/tr.png");
     m_countryFlags[openfoxwq::Country::UKRAINE] = QIcon(":/assets/flag-small/ua.png");
     m_countryFlags[openfoxwq::Country::UK] = QIcon(":/assets/flag-small/uk.png");
     m_countryFlags[openfoxwq::Country::USA] = QIcon(":/assets/flag-small/us.png");
@@ -71,6 +72,7 @@ QString ModelUtils::countryString(openfoxwq::Country country) {
     case openfoxwq::Country::SWEDEN: return "Sweden";
     case openfoxwq::Country::TAIWAN: return "Taiwan";
     case openfoxwq::Country::THAILAND: return "Thailand";
+    case openfoxwq::Country::TURKEY: return "Turkey";
     case openfoxwq::Country::UKRAINE: return "Ukraine";
     case openfoxwq::Country::UK: return "United Kingdom";
     case openfoxwq::Country::USA: return "United States";

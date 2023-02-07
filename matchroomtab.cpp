@@ -2,6 +2,7 @@
 #include "ui_roomtab.h"
 
 #include <QFileDialog>
+#include <QMessageBox>
 
 #include "timeddecisiondialog.h"
 #include "proto/ws.pb.h"
@@ -26,6 +27,12 @@ MatchRoomTab::MatchRoomTab(QWidget *parent, QNetworkAccessManager& nam, QWebSock
     ui->board->setInteractive(false);
     ui->matchCard->setMatch(m_matchStartEvent, m_modelUtils);
     ui->matchCard->setSfx(&m_sfx);
+    connect(ui->matchCard, &MatchCardWidget::playerInfoRequested, this, [=](int64_t uid) {
+        openfoxwq::WsRequest req;
+        req.mutable_getplayerinfo()->set_id(uid);
+        m_ws.sendBinaryMessage(QByteArray::fromStdString(req.SerializeAsString()));
+    });
+
     ui->msgList->addItem("Welcome to match room " + QString("%1|%2").arg(m_roomId.id_2()).arg(m_roomId.id_3()));
 
     ui->participantsTable->setColumnWidth(0, 150);
@@ -300,6 +307,7 @@ void MatchRoomTab::on_gameResultEvent(const openfoxwq::GameResultEvent& event) {
 
     const auto [result, hasWinner] = ModelUtils::formatGameResult(event.winner(), event.score_lead());
     m_sgfHeader += QString("RE[%1]").arg(result);
+    m_hasResult = true;
 }
 
 void MatchRoomTab::on_roomParticipants(const openfoxwq::ListRoomParticipantsResponse &resp) {
@@ -372,10 +380,14 @@ void MatchRoomTab::on_pointClicked(int r, int c, openfoxwq::Color state) {
 }
 
 bool MatchRoomTab::leaveRoom() {
-    openfoxwq::WsRequest req;
-    *req.mutable_leaveroom()->mutable_room_id() = m_roomId;
-    m_ws.sendBinaryMessage(QByteArray::fromStdString(req.SerializeAsString()));
-    return true;
+    if (m_hasResult || QMessageBox::question(this, "Confirm", "Do you really want to leave the room and forfeit the game?") == QMessageBox::StandardButton::Yes) {
+        openfoxwq::WsRequest req;
+        *req.mutable_leaveroom()->mutable_room_id() = m_roomId;
+        m_ws.sendBinaryMessage(QByteArray::fromStdString(req.SerializeAsString()));
+        return true;
+    } else {
+        return false;
+    }
 }
 
 void MatchRoomTab::on_passButton_clicked() {
@@ -396,37 +408,46 @@ void MatchRoomTab::on_aiRefereeButton_clicked() {
 }
 
 void MatchRoomTab::on_requestCountingButton_clicked() {
-    openfoxwq::WsRequest req;
-    auto* requestCounting = req.mutable_requestcounting();
-    requestCounting->set_room_id_2(m_roomId.id_2());
-    m_ws.sendBinaryMessage(QByteArray::fromStdString(req.SerializeAsString()));
+    if (QMessageBox::question(this, "Confirm", "Do you really want to request automatic counting?") == QMessageBox::StandardButton::Yes) {
+        openfoxwq::WsRequest req;
+        auto* requestCounting = req.mutable_requestcounting();
+        requestCounting->set_room_id_2(m_roomId.id_2());
+        m_ws.sendBinaryMessage(QByteArray::fromStdString(req.SerializeAsString()));
 
-    ui->msgList->addItem("Automatic counting requested.");
-    m_curStage = openfoxwq::CountingStage::STAGE_AGREE_TO_COUNT;
-    ui->matchCard->setBlackTimerPaused(true);
-    ui->matchCard->setWhiteTimerPaused(true);
+        ui->msgList->addItem("Automatic counting requested.");
+        m_curStage = openfoxwq::CountingStage::STAGE_AGREE_TO_COUNT;
+        ui->matchCard->setBlackTimerPaused(true);
+        ui->matchCard->setWhiteTimerPaused(true);
+    }
 }
 
 void MatchRoomTab::on_resignButton_clicked() {
-    openfoxwq::WsRequest req;
-    auto* resign = req.mutable_resign();
-    resign->set_room_id_2(m_roomId.id_2());
-    m_ws.sendBinaryMessage(QByteArray::fromStdString(req.SerializeAsString()));
+    if (QMessageBox::question(this, "Confirm", "Do you really want to resign?") == QMessageBox::StandardButton::Yes) {
+        openfoxwq::WsRequest req;
+        auto* resign = req.mutable_resign();
+        resign->set_room_id_2(m_roomId.id_2());
+        m_ws.sendBinaryMessage(QByteArray::fromStdString(req.SerializeAsString()));
+    }
 }
 
 void MatchRoomTab::on_saveSgfButton_clicked() {
+    const QString sgfDirKey = "sgf_dir";
+    QString dir = m_sysSettings.value(sgfDirKey, "").toString();
     QString defaultName = QString("%1_%2 - %3 vs %4.sgf").arg(
             m_sgfDateTime.toString("yyyy.MM.dd"),
             m_sgfDateTime.toString("hh.mm.ss"),
             QString::fromStdString(m_matchStartEvent.players(0).name()),
             QString::fromStdString(m_matchStartEvent.players(1).name()));
-    auto sgfFileName = QFileDialog::getSaveFileName(this, "Save Game", defaultName, "Smart Game Format (*.sgf)");
+    auto sgfFileName = QFileDialog::getSaveFileName(this, "Save Game", QString("%1/%2").arg(dir, defaultName), "Smart Game Format (*.sgf)");
     QFile file(sgfFileName);
     if (!file.open(QIODevice::WriteOnly | QIODevice::Text))
         return;
+    QFileInfo fileInfo(file);
     QTextStream out(&file);
     out << "(" << m_sgfHeader << m_sgfMoves << ")";
     file.close();
+
+    m_sysSettings.setValue(sgfDirKey, fileInfo.absoluteDir().path());
 }
 
 void MatchRoomTab::toggleTurn() {

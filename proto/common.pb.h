@@ -258,6 +258,7 @@ enum Country : int {
   TAIWAN = 83,
   VIETNAM = 84,
   CHINA = 86,
+  TURKEY = 90,
   GERMANY = 349,
   PORTUGAL = 351,
   ALBANIA = 355,
