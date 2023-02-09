@@ -126,12 +126,18 @@ PROTOBUF_CONSTEXPR PlayerInfo::PlayerInfo(
   , /*decltype(_impl_.country_)*/0
   , /*decltype(_impl_.club_id_)*/int64_t{0}
   , /*decltype(_impl_.unknown_field_8_)*/int64_t{0}
-  , /*decltype(_impl_.accepting_matches_)*/false
-  , /*decltype(_impl_.status_)*/0
   , /*decltype(_impl_.ranked_wins_)*/int64_t{0}
   , /*decltype(_impl_.ranked_losses_)*/int64_t{0}
+  , /*decltype(_impl_.status_)*/0
+  , /*decltype(_impl_.sex_)*/0
   , /*decltype(_impl_.unknown_field_13_)*/int64_t{0}
-  , /*decltype(_impl_.foxcoin_)*/int64_t{0}} {}
+  , /*decltype(_impl_.foxcoin_)*/int64_t{0}
+  , /*decltype(_impl_.flair_)*/0
+  , /*decltype(_impl_.accepting_matches_)*/false
+  , /*decltype(_impl_.ai_)*/false
+  , /*decltype(_impl_.amateur_6d_)*/false
+  , /*decltype(_impl_.membership_valid_until_)*/int64_t{0}
+  , /*decltype(_impl_.membership_type_)*/0} {}
 struct PlayerInfoDefaultTypeInternal {
   PROTOBUF_CONSTEXPR PlayerInfoDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -242,7 +248,7 @@ struct BroadcastInfoDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 BroadcastInfoDefaultTypeInternal _BroadcastInfo_default_instance_;
 }  // namespace openfoxwq
 static ::_pb::Metadata file_level_metadata_proto_2fcommon_2eproto[11];
-static const ::_pb::EnumDescriptor* file_level_enum_descriptors_proto_2fcommon_2eproto[6];
+static const ::_pb::EnumDescriptor* file_level_enum_descriptors_proto_2fcommon_2eproto[9];
 static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_proto_2fcommon_2eproto = nullptr;
 
 const uint32_t TableStruct_proto_2fcommon_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
@@ -358,7 +364,13 @@ const uint32_t TableStruct_proto_2fcommon_2eproto::offsets[] PROTOBUF_SECTION_VA
   PROTOBUF_FIELD_OFFSET(::openfoxwq::PlayerInfo, _impl_.status_),
   PROTOBUF_FIELD_OFFSET(::openfoxwq::PlayerInfo, _impl_.ranked_wins_),
   PROTOBUF_FIELD_OFFSET(::openfoxwq::PlayerInfo, _impl_.ranked_losses_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::PlayerInfo, _impl_.sex_),
   PROTOBUF_FIELD_OFFSET(::openfoxwq::PlayerInfo, _impl_.foxcoin_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::PlayerInfo, _impl_.flair_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::PlayerInfo, _impl_.membership_type_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::PlayerInfo, _impl_.membership_valid_until_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::PlayerInfo, _impl_.ai_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::PlayerInfo, _impl_.amateur_6d_),
   PROTOBUF_FIELD_OFFSET(::openfoxwq::PlayerInfo, _impl_.unknown_field_8_),
   PROTOBUF_FIELD_OFFSET(::openfoxwq::PlayerInfo, _impl_.unknown_field_13_),
   2,
@@ -367,11 +379,17 @@ const uint32_t TableStruct_proto_2fcommon_2eproto::offsets[] PROTOBUF_SECTION_VA
   3,
   4,
   5,
+  14,
+  9,
   7,
   8,
-  9,
   10,
   12,
+  13,
+  18,
+  17,
+  15,
+  16,
   6,
   11,
   PROTOBUF_FIELD_OFFSET(::openfoxwq::MatchSettings, _impl_._has_bits_),
@@ -479,12 +497,12 @@ static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protode
   { 32, 41, -1, sizeof(::openfoxwq::ProxyLineInfo)},
   { 44, 52, -1, sizeof(::openfoxwq::LobbySvrInfo_NameLocEntry_DoNotUse)},
   { 54, 78, -1, sizeof(::openfoxwq::LobbySvrInfo)},
-  { 96, 115, -1, sizeof(::openfoxwq::PlayerInfo)},
-  { 128, 143, -1, sizeof(::openfoxwq::MatchSettings)},
-  { 152, 166, -1, sizeof(::openfoxwq::RoomSettings)},
-  { 174, 184, -1, sizeof(::openfoxwq::RoomId)},
-  { 188, 198, -1, sizeof(::openfoxwq::BroadcastInfo_BroadcastPlayerInfo)},
-  { 202, 217, -1, sizeof(::openfoxwq::BroadcastInfo)},
+  { 96, 121, -1, sizeof(::openfoxwq::PlayerInfo)},
+  { 140, 155, -1, sizeof(::openfoxwq::MatchSettings)},
+  { 164, 178, -1, sizeof(::openfoxwq::RoomSettings)},
+  { 186, 196, -1, sizeof(::openfoxwq::RoomId)},
+  { 200, 210, -1, sizeof(::openfoxwq::BroadcastInfo_BroadcastPlayerInfo)},
+  { 214, 229, -1, sizeof(::openfoxwq::BroadcastInfo)},
 };
 
 static const ::_pb::Message* const file_default_instances[] = {
@@ -523,78 +541,90 @@ const char descriptor_table_protodef_proto_2fcommon_2eproto[] PROTOBUF_SECTION_V
   "penfoxwq.LobbySvrInfo.NameLocEntry\022\027\n\017un"
   "known_field_7\030\007 \001(\003\022\027\n\017unknown_field_8\030\010"
   " \001(\003\032.\n\014NameLocEntry\022\013\n\003key\030\001 \001(\005\022\r\n\005val"
-  "ue\030\002 \001(\t:\0028\001\"\313\002\n\nPlayerInfo\022\021\n\tplayer_id"
+  "ue\030\002 \001(\t:\0028\001\"\375\003\n\nPlayerInfo\022\021\n\tplayer_id"
   "\030\001 \002(\003\022\014\n\004name\030\002 \001(\t\022\023\n\013name_native\030\003 \001("
   "\t\022\035\n\004rank\030\004 \001(\0162\017.openfoxwq.Rank\022#\n\007coun"
   "try\030\005 \001(\0162\022.openfoxwq.Country\022\017\n\007club_id"
   "\030\006 \001(\003\022\031\n\021accepting_matches\030\007 \001(\010\022\'\n\006sta"
   "tus\030\t \001(\0162\027.openfoxwq.PlayerStatus\022\023\n\013ra"
-  "nked_wins\030\n \001(\003\022\025\n\rranked_losses\030\013 \001(\003\022\017"
-  "\n\007foxcoin\030\025 \001(\003\022\027\n\017unknown_field_8\030\010 \001(\003"
-  "\022\030\n\020unknown_field_13\030\r \001(\003\"\327\001\n\rMatchSett"
-  "ings\022\027\n\017player_id_first\030\001 \002(\003\022\030\n\020player_"
-  "id_second\030\002 \002(\003\022\020\n\010handicap\030\004 \001(\003\022\014\n\004kom"
-  "i\030\005 \001(\003\022\025\n\rmain_time_sec\030\007 \002(\003\022\030\n\020byoyom"
-  "i_time_sec\030\010 \002(\003\022\027\n\017byoyomi_periods\030\t \002("
-  "\003\022\025\n\rchinese_rules\030\n \001(\010\022\022\n\nboard_size\030\020"
-  " \002(\003\"\276\001\n\014RoomSettings\022\022\n\nboard_size\030\001 \001("
-  "\003\022\020\n\010handicap\030\003 \001(\003\022\014\n\004komi\030\004 \001(\003\022\027\n\017pla"
-  "yer_id_black\030\005 \001(\003\022\025\n\rmain_time_sec\030\006 \001("
-  "\003\022\030\n\020byoyomi_time_sec\030\007 \001(\003\022\027\n\017byoyomi_p"
-  "eriods\030\010 \001(\003\022\027\n\017player_id_white\030\032 \001(\003\"@\n"
-  "\006RoomId\022\014\n\004id_1\030\001 \001(\003\022\014\n\004id_2\030\002 \001(\003\022\014\n\004i"
-  "d_3\030\003 \001(\003\022\014\n\004id_4\030\004 \001(\003\"\334\005\n\rBroadcastInf"
-  "o\022\n\n\002id\030\001 \002(\003\0224\n\004type\030\003 \002(\0162&.openfoxwq."
-  "BroadcastInfo.BroadcastType\0226\n\005state\030\010 \001"
-  "(\0162\'.openfoxwq.BroadcastInfo.BroadcastSt"
-  "ate\022\023\n\013broadcaster\030\t \001(\t\022\024\n\014online_count"
-  "\030\n \002(\003\022\027\n\017player_id_black\030\013 \002(\003\022\027\n\017playe"
-  "r_id_white\030\014 \002(\003\022G\n\021player_info_black\030\r "
-  "\002(\0132,.openfoxwq.BroadcastInfo.BroadcastP"
-  "layerInfo\022G\n\021player_info_white\030\016 \002(\0132,.o"
-  "penfoxwq.BroadcastInfo.BroadcastPlayerIn"
-  "fo\032y\n\023BroadcastPlayerInfo\022\014\n\004name\030\001 \001(\t\022"
-  "\020\n\010name_alt\030\002 \001(\t\022\035\n\004rank\030\003 \001(\0162\017.openfo"
-  "xwq.Rank\022#\n\007country\030\004 \001(\0162\022.openfoxwq.Co"
-  "untry\"g\n\rBroadcastType\022\016\n\nRT_UNKNOWN\020\000\022\014"
-  "\n\010RT_MATCH\020\001\022\020\n\014RT_BROADCAST\020\004\022\021\n\rRT_COM"
-  "MENTARY\020\005\022\023\n\017RT_CHAMPIONSHIP\020\006\"~\n\016Broadc"
-  "astState\022\016\n\nRS_UNKNOWN\020\000\022\016\n\nRS_OPENING\020\001"
-  "\022\016\n\nRS_1PERIOD\020\002\022\021\n\rRS_MIDDLEGAME\020\003\022\016\n\nR"
-  "S_ENDGAME\020\004\022\n\n\006RS_END\020\005\022\r\n\tRS_REVIEW\020\006*3"
-  "\n\005Color\022\014\n\010COL_NONE\020\000\022\r\n\tCOL_BLACK\020\001\022\r\n\t"
-  "COL_WHITE\020\002*\377\003\n\004Rank\022\014\n\010RANK_18K\020\000\022\014\n\010RA"
-  "NK_17K\020\001\022\014\n\010RANK_16K\020\002\022\014\n\010RANK_15K\020\003\022\014\n\010"
-  "RANK_14K\020\004\022\014\n\010RANK_13K\020\005\022\014\n\010RANK_12K\020\006\022\014"
-  "\n\010RANK_11K\020\007\022\014\n\010RANK_10K\020\010\022\013\n\007RANK_9K\020\t\022"
-  "\013\n\007RANK_8K\020\n\022\013\n\007RANK_7K\020\013\022\013\n\007RANK_6K\020\014\022\013"
-  "\n\007RANK_5K\020\r\022\013\n\007RANK_4K\020\016\022\013\n\007RANK_3K\020\017\022\013\n"
-  "\007RANK_2K\020\020\022\013\n\007RANK_1K\020\021\022\013\n\007RANK_1D\020\022\022\013\n\007"
-  "RANK_2D\020\023\022\013\n\007RANK_3D\020\024\022\013\n\007RANK_4D\020\025\022\013\n\007R"
-  "ANK_5D\020\026\022\013\n\007RANK_6D\020\027\022\013\n\007RANK_7D\020\030\022\013\n\007RA"
-  "NK_8D\020\031\022\013\n\007RANK_9D\020\032\022\014\n\010RANK_10D\020\033\022\013\n\007RA"
-  "NK_1P\020d\022\013\n\007RANK_2P\020e\022\013\n\007RANK_3P\020f\022\013\n\007RAN"
-  "K_4P\020g\022\013\n\007RANK_5P\020h\022\013\n\007RANK_6P\020i\022\013\n\007RANK"
-  "_7P\020j\022\013\n\007RANK_8P\020k\022\013\n\007RANK_9P\020l\022\014\n\010RANK_"
-  "10P\020m*\277\003\n\007Country\022\013\n\007UNKNOWN\020\000\022\007\n\003USA\020\001\022"
-  "\n\n\006RUSSIA\020\007\022\017\n\013SOUTHAFRICA\020\033\022\n\n\006GREECE\020\036"
-  "\022\017\n\013NETHERLANDS\020\037\022\n\n\006FRANCE\020!\022\013\n\007HUNGARY"
-  "\020$\022\t\n\005ITALY\020\'\022\006\n\002UK\020,\022\n\n\006SWEDEN\020.\022\t\n\005CHI"
-  "LE\0208\022\r\n\tAUSTRALIA\020=\022\017\n\013PHILIPPINES\020\?\022\016\n\n"
-  "NEWZEALAND\020@\022\r\n\tSINGAPORE\020A\022\014\n\010THAILAND\020"
-  "B\022\t\n\005JAPAN\020Q\022\t\n\005KOREA\020R\022\n\n\006TAIWAN\020S\022\013\n\007V"
-  "IETNAM\020T\022\t\n\005CHINA\020V\022\n\n\006TURKEY\020Z\022\014\n\007GERMA"
-  "NY\020\335\002\022\r\n\010PORTUGAL\020\337\002\022\014\n\007ALBANIA\020\343\002\022\r\n\010BU"
-  "LGARIA\020\347\002\022\014\n\007BELARUS\020\367\002\022\014\n\007UKRAINE\020\374\002\022\r\n"
-  "\010HONGKONG\020\324\006\022\n\n\005MACAU\020\325\006\022\020\n\013SAUDIARABIA\020"
-  "\307\007\022\013\n\006CANADA\020\347V*F\n\014PlayerStatus\022\020\n\014PSTAT"
-  "US_IDLE\020\000\022\021\n\rPSTATUS_MATCH\020\001\022\021\n\rPSTATUS_"
-  "WATCH\020\002B&Z$github.com/openfoxwq/openfoxw"
-  "q/proto"
+  "nked_wins\030\n \001(\003\022\025\n\rranked_losses\030\013 \001(\003\022\033"
+  "\n\003sex\030\016 \001(\0162\016.openfoxwq.Sex\022\017\n\007foxcoin\030\025"
+  " \001(\003\022\037\n\005flair\030\032 \001(\0162\020.openfoxwq.Flair\0222\n"
+  "\017membership_type\030\033 \001(\0162\031.openfoxwq.Membe"
+  "rshipType\022\036\n\026membership_valid_until\030\034 \001("
+  "\003\022\n\n\002ai\030$ \001(\010\022\022\n\namateur_6d\030% \001(\010\022\027\n\017unk"
+  "nown_field_8\030\010 \001(\003\022\030\n\020unknown_field_13\030\r"
+  " \001(\003\"\327\001\n\rMatchSettings\022\027\n\017player_id_firs"
+  "t\030\001 \002(\003\022\030\n\020player_id_second\030\002 \002(\003\022\020\n\010han"
+  "dicap\030\004 \001(\003\022\014\n\004komi\030\005 \001(\003\022\025\n\rmain_time_s"
+  "ec\030\007 \002(\003\022\030\n\020byoyomi_time_sec\030\010 \002(\003\022\027\n\017by"
+  "oyomi_periods\030\t \002(\003\022\025\n\rchinese_rules\030\n \001"
+  "(\010\022\022\n\nboard_size\030\020 \002(\003\"\276\001\n\014RoomSettings\022"
+  "\022\n\nboard_size\030\001 \001(\003\022\020\n\010handicap\030\003 \001(\003\022\014\n"
+  "\004komi\030\004 \001(\003\022\027\n\017player_id_black\030\005 \001(\003\022\025\n\r"
+  "main_time_sec\030\006 \001(\003\022\030\n\020byoyomi_time_sec\030"
+  "\007 \001(\003\022\027\n\017byoyomi_periods\030\010 \001(\003\022\027\n\017player"
+  "_id_white\030\032 \001(\003\"@\n\006RoomId\022\014\n\004id_1\030\001 \001(\003\022"
+  "\014\n\004id_2\030\002 \001(\003\022\014\n\004id_3\030\003 \001(\003\022\014\n\004id_4\030\004 \001("
+  "\003\"\334\005\n\rBroadcastInfo\022\n\n\002id\030\001 \002(\003\0224\n\004type\030"
+  "\003 \002(\0162&.openfoxwq.BroadcastInfo.Broadcas"
+  "tType\0226\n\005state\030\010 \001(\0162\'.openfoxwq.Broadca"
+  "stInfo.BroadcastState\022\023\n\013broadcaster\030\t \001"
+  "(\t\022\024\n\014online_count\030\n \002(\003\022\027\n\017player_id_bl"
+  "ack\030\013 \002(\003\022\027\n\017player_id_white\030\014 \002(\003\022G\n\021pl"
+  "ayer_info_black\030\r \002(\0132,.openfoxwq.Broadc"
+  "astInfo.BroadcastPlayerInfo\022G\n\021player_in"
+  "fo_white\030\016 \002(\0132,.openfoxwq.BroadcastInfo"
+  ".BroadcastPlayerInfo\032y\n\023BroadcastPlayerI"
+  "nfo\022\014\n\004name\030\001 \001(\t\022\020\n\010name_alt\030\002 \001(\t\022\035\n\004r"
+  "ank\030\003 \001(\0162\017.openfoxwq.Rank\022#\n\007country\030\004 "
+  "\001(\0162\022.openfoxwq.Country\"g\n\rBroadcastType"
+  "\022\016\n\nRT_UNKNOWN\020\000\022\014\n\010RT_MATCH\020\001\022\020\n\014RT_BRO"
+  "ADCAST\020\004\022\021\n\rRT_COMMENTARY\020\005\022\023\n\017RT_CHAMPI"
+  "ONSHIP\020\006\"~\n\016BroadcastState\022\016\n\nRS_UNKNOWN"
+  "\020\000\022\016\n\nRS_OPENING\020\001\022\016\n\nRS_1PERIOD\020\002\022\021\n\rRS"
+  "_MIDDLEGAME\020\003\022\016\n\nRS_ENDGAME\020\004\022\n\n\006RS_END\020"
+  "\005\022\r\n\tRS_REVIEW\020\006*3\n\005Color\022\014\n\010COL_NONE\020\000\022"
+  "\r\n\tCOL_BLACK\020\001\022\r\n\tCOL_WHITE\020\002*\377\003\n\004Rank\022\014"
+  "\n\010RANK_18K\020\000\022\014\n\010RANK_17K\020\001\022\014\n\010RANK_16K\020\002"
+  "\022\014\n\010RANK_15K\020\003\022\014\n\010RANK_14K\020\004\022\014\n\010RANK_13K"
+  "\020\005\022\014\n\010RANK_12K\020\006\022\014\n\010RANK_11K\020\007\022\014\n\010RANK_1"
+  "0K\020\010\022\013\n\007RANK_9K\020\t\022\013\n\007RANK_8K\020\n\022\013\n\007RANK_7"
+  "K\020\013\022\013\n\007RANK_6K\020\014\022\013\n\007RANK_5K\020\r\022\013\n\007RANK_4K"
+  "\020\016\022\013\n\007RANK_3K\020\017\022\013\n\007RANK_2K\020\020\022\013\n\007RANK_1K\020"
+  "\021\022\013\n\007RANK_1D\020\022\022\013\n\007RANK_2D\020\023\022\013\n\007RANK_3D\020\024"
+  "\022\013\n\007RANK_4D\020\025\022\013\n\007RANK_5D\020\026\022\013\n\007RANK_6D\020\027\022"
+  "\013\n\007RANK_7D\020\030\022\013\n\007RANK_8D\020\031\022\013\n\007RANK_9D\020\032\022\014"
+  "\n\010RANK_10D\020\033\022\013\n\007RANK_1P\020d\022\013\n\007RANK_2P\020e\022\013"
+  "\n\007RANK_3P\020f\022\013\n\007RANK_4P\020g\022\013\n\007RANK_5P\020h\022\013\n"
+  "\007RANK_6P\020i\022\013\n\007RANK_7P\020j\022\013\n\007RANK_8P\020k\022\013\n\007"
+  "RANK_9P\020l\022\014\n\010RANK_10P\020m*\203\004\n\007Country\022\013\n\007U"
+  "NKNOWN\020\000\022\007\n\003USA\020\001\022\n\n\006RUSSIA\020\007\022\017\n\013SOUTHAF"
+  "RICA\020\033\022\n\n\006GREECE\020\036\022\017\n\013NETHERLANDS\020\037\022\013\n\007B"
+  "ELGIUM\020 \022\n\n\006FRANCE\020!\022\013\n\007HUNGARY\020$\022\t\n\005ITA"
+  "LY\020\'\022\013\n\007AUSTRIA\020+\022\006\n\002UK\020,\022\n\n\006SWEDEN\020.\022\t\n"
+  "\005CHILE\0208\022\r\n\tAUSTRALIA\020=\022\r\n\tINDONESIA\020>\022\017"
+  "\n\013PHILIPPINES\020\?\022\016\n\nNEWZEALAND\020@\022\r\n\tSINGA"
+  "PORE\020A\022\014\n\010THAILAND\020B\022\t\n\005JAPAN\020Q\022\t\n\005KOREA"
+  "\020R\022\n\n\006TAIWAN\020S\022\013\n\007VIETNAM\020T\022\t\n\005CHINA\020V\022\n"
+  "\n\006TURKEY\020Z\022\014\n\007NIGERIA\020\352\001\022\014\n\007GERMANY\020\335\002\022\r"
+  "\n\010PORTUGAL\020\337\002\022\014\n\007ALBANIA\020\343\002\022\r\n\010BULGARIA\020"
+  "\347\002\022\013\n\006LATVIA\020\363\002\022\014\n\007BELARUS\020\367\002\022\014\n\007UKRAINE"
+  "\020\374\002\022\r\n\010HONGKONG\020\324\006\022\n\n\005MACAU\020\325\006\022\020\n\013SAUDIA"
+  "RABIA\020\307\007\022\013\n\006CANADA\020\347V*F\n\014PlayerStatus\022\020\n"
+  "\014PSTATUS_IDLE\020\000\022\021\n\rPSTATUS_MATCH\020\001\022\021\n\rPS"
+  "TATUS_WATCH\020\002*#\n\003Sex\022\014\n\010SEX_MALE\020\000\022\016\n\nSE"
+  "X_FEMALE\020\001*\207\001\n\005Flair\022\021\n\rFLAIR_UNKNOWN\020\000\022"
+  "\r\n\tFLAIR_PRO\020\001\022\024\n\020FLAIR_GOLD_CROWN\020\002\022\025\n\021"
+  "FLAIR_TOP_AMATEUR\020\003\022\026\n\022FLAIR_SILVER_CROW"
+  "N\020\004\022\027\n\023FLAIR_ELITE_AMATEUR\020\005*Q\n\016Membersh"
+  "ipType\022\023\n\017MEMBERSHIP_NONE\020\000\022\025\n\021MEMBERSHI"
+  "P_SILVER\020\001\022\023\n\017MEMBERSHIP_GOLD\020\002B&Z$githu"
+  "b.com/openfoxwq/openfoxwq/proto"
   ;
 static ::_pbi::once_flag descriptor_table_proto_2fcommon_2eproto_once;
 const ::_pbi::DescriptorTable descriptor_table_proto_2fcommon_2eproto = {
-    false, false, 3527, descriptor_table_protodef_proto_2fcommon_2eproto,
+    false, false, 4031, descriptor_table_protodef_proto_2fcommon_2eproto,
     "proto/common.proto",
     &descriptor_table_proto_2fcommon_2eproto_once, nullptr, 0, 11,
     schemas, file_default_instances, TableStruct_proto_2fcommon_2eproto::offsets,
@@ -743,13 +773,16 @@ bool Country_IsValid(int value) {
     case 27:
     case 30:
     case 31:
+    case 32:
     case 33:
     case 36:
     case 39:
+    case 43:
     case 44:
     case 46:
     case 56:
     case 61:
+    case 62:
     case 63:
     case 64:
     case 65:
@@ -760,10 +793,12 @@ bool Country_IsValid(int value) {
     case 84:
     case 86:
     case 90:
+    case 234:
     case 349:
     case 351:
     case 355:
     case 359:
+    case 371:
     case 375:
     case 380:
     case 852:
@@ -781,6 +816,53 @@ const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* PlayerStatus_descriptor() {
   return file_level_enum_descriptors_proto_2fcommon_2eproto[5];
 }
 bool PlayerStatus_IsValid(int value) {
+  switch (value) {
+    case 0:
+    case 1:
+    case 2:
+      return true;
+    default:
+      return false;
+  }
+}
+
+const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* Sex_descriptor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_proto_2fcommon_2eproto);
+  return file_level_enum_descriptors_proto_2fcommon_2eproto[6];
+}
+bool Sex_IsValid(int value) {
+  switch (value) {
+    case 0:
+    case 1:
+      return true;
+    default:
+      return false;
+  }
+}
+
+const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* Flair_descriptor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_proto_2fcommon_2eproto);
+  return file_level_enum_descriptors_proto_2fcommon_2eproto[7];
+}
+bool Flair_IsValid(int value) {
+  switch (value) {
+    case 0:
+    case 1:
+    case 2:
+    case 3:
+    case 4:
+    case 5:
+      return true;
+    default:
+      return false;
+  }
+}
+
+const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* MembershipType_descriptor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_proto_2fcommon_2eproto);
+  return file_level_enum_descriptors_proto_2fcommon_2eproto[8];
+}
+bool MembershipType_IsValid(int value) {
   switch (value) {
     case 0:
     case 1:
@@ -2947,19 +3029,37 @@ class PlayerInfo::_Internal {
     (*has_bits)[0] |= 32u;
   }
   static void set_has_accepting_matches(HasBits* has_bits) {
-    (*has_bits)[0] |= 128u;
+    (*has_bits)[0] |= 16384u;
   }
   static void set_has_status(HasBits* has_bits) {
-    (*has_bits)[0] |= 256u;
-  }
-  static void set_has_ranked_wins(HasBits* has_bits) {
     (*has_bits)[0] |= 512u;
   }
+  static void set_has_ranked_wins(HasBits* has_bits) {
+    (*has_bits)[0] |= 128u;
+  }
   static void set_has_ranked_losses(HasBits* has_bits) {
+    (*has_bits)[0] |= 256u;
+  }
+  static void set_has_sex(HasBits* has_bits) {
     (*has_bits)[0] |= 1024u;
   }
   static void set_has_foxcoin(HasBits* has_bits) {
     (*has_bits)[0] |= 4096u;
+  }
+  static void set_has_flair(HasBits* has_bits) {
+    (*has_bits)[0] |= 8192u;
+  }
+  static void set_has_membership_type(HasBits* has_bits) {
+    (*has_bits)[0] |= 262144u;
+  }
+  static void set_has_membership_valid_until(HasBits* has_bits) {
+    (*has_bits)[0] |= 131072u;
+  }
+  static void set_has_ai(HasBits* has_bits) {
+    (*has_bits)[0] |= 32768u;
+  }
+  static void set_has_amateur_6d(HasBits* has_bits) {
+    (*has_bits)[0] |= 65536u;
   }
   static void set_has_unknown_field_8(HasBits* has_bits) {
     (*has_bits)[0] |= 64u;
@@ -2991,12 +3091,18 @@ PlayerInfo::PlayerInfo(const PlayerInfo& from)
     , decltype(_impl_.country_){}
     , decltype(_impl_.club_id_){}
     , decltype(_impl_.unknown_field_8_){}
-    , decltype(_impl_.accepting_matches_){}
-    , decltype(_impl_.status_){}
     , decltype(_impl_.ranked_wins_){}
     , decltype(_impl_.ranked_losses_){}
+    , decltype(_impl_.status_){}
+    , decltype(_impl_.sex_){}
     , decltype(_impl_.unknown_field_13_){}
-    , decltype(_impl_.foxcoin_){}};
+    , decltype(_impl_.foxcoin_){}
+    , decltype(_impl_.flair_){}
+    , decltype(_impl_.accepting_matches_){}
+    , decltype(_impl_.ai_){}
+    , decltype(_impl_.amateur_6d_){}
+    , decltype(_impl_.membership_valid_until_){}
+    , decltype(_impl_.membership_type_){}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   _impl_.name_.InitDefault();
@@ -3016,8 +3122,8 @@ PlayerInfo::PlayerInfo(const PlayerInfo& from)
       _this->GetArenaForAllocation());
   }
   ::memcpy(&_impl_.player_id_, &from._impl_.player_id_,
-    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.foxcoin_) -
-    reinterpret_cast<char*>(&_impl_.player_id_)) + sizeof(_impl_.foxcoin_));
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.membership_type_) -
+    reinterpret_cast<char*>(&_impl_.player_id_)) + sizeof(_impl_.membership_type_));
   // @@protoc_insertion_point(copy_constructor:openfoxwq.PlayerInfo)
 }
 
@@ -3035,12 +3141,18 @@ inline void PlayerInfo::SharedCtor(
     , decltype(_impl_.country_){0}
     , decltype(_impl_.club_id_){int64_t{0}}
     , decltype(_impl_.unknown_field_8_){int64_t{0}}
-    , decltype(_impl_.accepting_matches_){false}
-    , decltype(_impl_.status_){0}
     , decltype(_impl_.ranked_wins_){int64_t{0}}
     , decltype(_impl_.ranked_losses_){int64_t{0}}
+    , decltype(_impl_.status_){0}
+    , decltype(_impl_.sex_){0}
     , decltype(_impl_.unknown_field_13_){int64_t{0}}
     , decltype(_impl_.foxcoin_){int64_t{0}}
+    , decltype(_impl_.flair_){0}
+    , decltype(_impl_.accepting_matches_){false}
+    , decltype(_impl_.ai_){false}
+    , decltype(_impl_.amateur_6d_){false}
+    , decltype(_impl_.membership_valid_until_){int64_t{0}}
+    , decltype(_impl_.membership_type_){0}
   };
   _impl_.name_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -3088,13 +3200,18 @@ void PlayerInfo::Clear() {
   }
   if (cached_has_bits & 0x000000fcu) {
     ::memset(&_impl_.player_id_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&_impl_.accepting_matches_) -
-        reinterpret_cast<char*>(&_impl_.player_id_)) + sizeof(_impl_.accepting_matches_));
+        reinterpret_cast<char*>(&_impl_.ranked_wins_) -
+        reinterpret_cast<char*>(&_impl_.player_id_)) + sizeof(_impl_.ranked_wins_));
   }
-  if (cached_has_bits & 0x00001f00u) {
-    ::memset(&_impl_.status_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&_impl_.foxcoin_) -
-        reinterpret_cast<char*>(&_impl_.status_)) + sizeof(_impl_.foxcoin_));
+  if (cached_has_bits & 0x0000ff00u) {
+    ::memset(&_impl_.ranked_losses_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&_impl_.ai_) -
+        reinterpret_cast<char*>(&_impl_.ranked_losses_)) + sizeof(_impl_.ai_));
+  }
+  if (cached_has_bits & 0x00070000u) {
+    ::memset(&_impl_.amateur_6d_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&_impl_.membership_type_) -
+        reinterpret_cast<char*>(&_impl_.amateur_6d_)) + sizeof(_impl_.membership_type_));
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
@@ -3233,11 +3350,77 @@ const char* PlayerInfo::_InternalParse(const char* ptr, ::_pbi::ParseContext* ct
         } else
           goto handle_unusual;
         continue;
+      // optional .openfoxwq.Sex sex = 14;
+      case 14:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 112)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+          if (PROTOBUF_PREDICT_TRUE(::openfoxwq::Sex_IsValid(val))) {
+            _internal_set_sex(static_cast<::openfoxwq::Sex>(val));
+          } else {
+            ::PROTOBUF_NAMESPACE_ID::internal::WriteVarint(14, val, mutable_unknown_fields());
+          }
+        } else
+          goto handle_unusual;
+        continue;
       // optional int64 foxcoin = 21;
       case 21:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 168)) {
           _Internal::set_has_foxcoin(&has_bits);
           _impl_.foxcoin_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional .openfoxwq.Flair flair = 26;
+      case 26:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 208)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+          if (PROTOBUF_PREDICT_TRUE(::openfoxwq::Flair_IsValid(val))) {
+            _internal_set_flair(static_cast<::openfoxwq::Flair>(val));
+          } else {
+            ::PROTOBUF_NAMESPACE_ID::internal::WriteVarint(26, val, mutable_unknown_fields());
+          }
+        } else
+          goto handle_unusual;
+        continue;
+      // optional .openfoxwq.MembershipType membership_type = 27;
+      case 27:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 216)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+          if (PROTOBUF_PREDICT_TRUE(::openfoxwq::MembershipType_IsValid(val))) {
+            _internal_set_membership_type(static_cast<::openfoxwq::MembershipType>(val));
+          } else {
+            ::PROTOBUF_NAMESPACE_ID::internal::WriteVarint(27, val, mutable_unknown_fields());
+          }
+        } else
+          goto handle_unusual;
+        continue;
+      // optional int64 membership_valid_until = 28;
+      case 28:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 224)) {
+          _Internal::set_has_membership_valid_until(&has_bits);
+          _impl_.membership_valid_until_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional bool ai = 36;
+      case 36:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
+          _Internal::set_has_ai(&has_bits);
+          _impl_.ai_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional bool amateur_6d = 37;
+      case 37:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
+          _Internal::set_has_amateur_6d(&has_bits);
+          _impl_.amateur_6d_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -3320,7 +3503,7 @@ uint8_t* PlayerInfo::_InternalSerialize(
   }
 
   // optional bool accepting_matches = 7;
-  if (cached_has_bits & 0x00000080u) {
+  if (cached_has_bits & 0x00004000u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(7, this->_internal_accepting_matches(), target);
   }
@@ -3332,20 +3515,20 @@ uint8_t* PlayerInfo::_InternalSerialize(
   }
 
   // optional .openfoxwq.PlayerStatus status = 9;
-  if (cached_has_bits & 0x00000100u) {
+  if (cached_has_bits & 0x00000200u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteEnumToArray(
       9, this->_internal_status(), target);
   }
 
   // optional int64 ranked_wins = 10;
-  if (cached_has_bits & 0x00000200u) {
+  if (cached_has_bits & 0x00000080u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteInt64ToArray(10, this->_internal_ranked_wins(), target);
   }
 
   // optional int64 ranked_losses = 11;
-  if (cached_has_bits & 0x00000400u) {
+  if (cached_has_bits & 0x00000100u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteInt64ToArray(11, this->_internal_ranked_losses(), target);
   }
@@ -3356,10 +3539,49 @@ uint8_t* PlayerInfo::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteInt64ToArray(13, this->_internal_unknown_field_13(), target);
   }
 
+  // optional .openfoxwq.Sex sex = 14;
+  if (cached_has_bits & 0x00000400u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      14, this->_internal_sex(), target);
+  }
+
   // optional int64 foxcoin = 21;
   if (cached_has_bits & 0x00001000u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteInt64ToArray(21, this->_internal_foxcoin(), target);
+  }
+
+  // optional .openfoxwq.Flair flair = 26;
+  if (cached_has_bits & 0x00002000u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      26, this->_internal_flair(), target);
+  }
+
+  // optional .openfoxwq.MembershipType membership_type = 27;
+  if (cached_has_bits & 0x00040000u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      27, this->_internal_membership_type(), target);
+  }
+
+  // optional int64 membership_valid_until = 28;
+  if (cached_has_bits & 0x00020000u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(28, this->_internal_membership_valid_until(), target);
+  }
+
+  // optional bool ai = 36;
+  if (cached_has_bits & 0x00008000u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(36, this->_internal_ai(), target);
+  }
+
+  // optional bool amateur_6d = 37;
+  if (cached_has_bits & 0x00010000u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(37, this->_internal_amateur_6d(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -3422,27 +3644,28 @@ size_t PlayerInfo::ByteSizeLong() const {
       total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_unknown_field_8());
     }
 
-    // optional bool accepting_matches = 7;
+    // optional int64 ranked_wins = 10;
     if (cached_has_bits & 0x00000080u) {
-      total_size += 1 + 1;
+      total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_ranked_wins());
     }
 
   }
-  if (cached_has_bits & 0x00001f00u) {
-    // optional .openfoxwq.PlayerStatus status = 9;
+  if (cached_has_bits & 0x0000ff00u) {
+    // optional int64 ranked_losses = 11;
     if (cached_has_bits & 0x00000100u) {
+      total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_ranked_losses());
+    }
+
+    // optional .openfoxwq.PlayerStatus status = 9;
+    if (cached_has_bits & 0x00000200u) {
       total_size += 1 +
         ::_pbi::WireFormatLite::EnumSize(this->_internal_status());
     }
 
-    // optional int64 ranked_wins = 10;
-    if (cached_has_bits & 0x00000200u) {
-      total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_ranked_wins());
-    }
-
-    // optional int64 ranked_losses = 11;
+    // optional .openfoxwq.Sex sex = 14;
     if (cached_has_bits & 0x00000400u) {
-      total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_ranked_losses());
+      total_size += 1 +
+        ::_pbi::WireFormatLite::EnumSize(this->_internal_sex());
     }
 
     // optional int64 unknown_field_13 = 13;
@@ -3455,6 +3678,42 @@ size_t PlayerInfo::ByteSizeLong() const {
       total_size += 2 +
         ::_pbi::WireFormatLite::Int64Size(
           this->_internal_foxcoin());
+    }
+
+    // optional .openfoxwq.Flair flair = 26;
+    if (cached_has_bits & 0x00002000u) {
+      total_size += 2 +
+        ::_pbi::WireFormatLite::EnumSize(this->_internal_flair());
+    }
+
+    // optional bool accepting_matches = 7;
+    if (cached_has_bits & 0x00004000u) {
+      total_size += 1 + 1;
+    }
+
+    // optional bool ai = 36;
+    if (cached_has_bits & 0x00008000u) {
+      total_size += 2 + 1;
+    }
+
+  }
+  if (cached_has_bits & 0x00070000u) {
+    // optional bool amateur_6d = 37;
+    if (cached_has_bits & 0x00010000u) {
+      total_size += 2 + 1;
+    }
+
+    // optional int64 membership_valid_until = 28;
+    if (cached_has_bits & 0x00020000u) {
+      total_size += 2 +
+        ::_pbi::WireFormatLite::Int64Size(
+          this->_internal_membership_valid_until());
+    }
+
+    // optional .openfoxwq.MembershipType membership_type = 27;
+    if (cached_has_bits & 0x00040000u) {
+      total_size += 2 +
+        ::_pbi::WireFormatLite::EnumSize(this->_internal_membership_type());
     }
 
   }
@@ -3500,25 +3759,46 @@ void PlayerInfo::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PRO
       _this->_impl_.unknown_field_8_ = from._impl_.unknown_field_8_;
     }
     if (cached_has_bits & 0x00000080u) {
-      _this->_impl_.accepting_matches_ = from._impl_.accepting_matches_;
+      _this->_impl_.ranked_wins_ = from._impl_.ranked_wins_;
     }
     _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
-  if (cached_has_bits & 0x00001f00u) {
+  if (cached_has_bits & 0x0000ff00u) {
     if (cached_has_bits & 0x00000100u) {
-      _this->_impl_.status_ = from._impl_.status_;
+      _this->_impl_.ranked_losses_ = from._impl_.ranked_losses_;
     }
     if (cached_has_bits & 0x00000200u) {
-      _this->_impl_.ranked_wins_ = from._impl_.ranked_wins_;
+      _this->_impl_.status_ = from._impl_.status_;
     }
     if (cached_has_bits & 0x00000400u) {
-      _this->_impl_.ranked_losses_ = from._impl_.ranked_losses_;
+      _this->_impl_.sex_ = from._impl_.sex_;
     }
     if (cached_has_bits & 0x00000800u) {
       _this->_impl_.unknown_field_13_ = from._impl_.unknown_field_13_;
     }
     if (cached_has_bits & 0x00001000u) {
       _this->_impl_.foxcoin_ = from._impl_.foxcoin_;
+    }
+    if (cached_has_bits & 0x00002000u) {
+      _this->_impl_.flair_ = from._impl_.flair_;
+    }
+    if (cached_has_bits & 0x00004000u) {
+      _this->_impl_.accepting_matches_ = from._impl_.accepting_matches_;
+    }
+    if (cached_has_bits & 0x00008000u) {
+      _this->_impl_.ai_ = from._impl_.ai_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
+  }
+  if (cached_has_bits & 0x00070000u) {
+    if (cached_has_bits & 0x00010000u) {
+      _this->_impl_.amateur_6d_ = from._impl_.amateur_6d_;
+    }
+    if (cached_has_bits & 0x00020000u) {
+      _this->_impl_.membership_valid_until_ = from._impl_.membership_valid_until_;
+    }
+    if (cached_has_bits & 0x00040000u) {
+      _this->_impl_.membership_type_ = from._impl_.membership_type_;
     }
     _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
@@ -3552,8 +3832,8 @@ void PlayerInfo::InternalSwap(PlayerInfo* other) {
       &other->_impl_.name_native_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(PlayerInfo, _impl_.foxcoin_)
-      + sizeof(PlayerInfo::_impl_.foxcoin_)
+      PROTOBUF_FIELD_OFFSET(PlayerInfo, _impl_.membership_type_)
+      + sizeof(PlayerInfo::_impl_.membership_type_)
       - PROTOBUF_FIELD_OFFSET(PlayerInfo, _impl_.player_id_)>(
           reinterpret_cast<char*>(&_impl_.player_id_),
           reinterpret_cast<char*>(&other->_impl_.player_id_));

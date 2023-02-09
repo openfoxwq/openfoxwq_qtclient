@@ -344,5 +344,16 @@
         <file>assets/menu/online.svg</file>
         <file>assets/menu/swords.svg</file>
         <file>assets/menu/watching.svg</file>
+        <file>assets/flair/amateur-6d.png</file>
+        <file>assets/flair/elite-amateur.png</file>
+        <file>assets/flair/gold-crown.png</file>
+        <file>assets/flair/gold-member.png</file>
+        <file>assets/flair/pro-female.png</file>
+        <file>assets/flair/pro-male.png</file>
+        <file>assets/flair/row-6-column-5.png</file>
+        <file>assets/flair/row-6-column-9.png</file>
+        <file>assets/flair/silver-crown.png</file>
+        <file>assets/flair/silver-member.png</file>
+        <file>assets/flair/top-amateur.png</file>
     </qresource>
 </RCC>

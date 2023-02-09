@@ -112,15 +112,14 @@ void RoomTab::updateGameResult(openfoxwq::Color winner, int64_t scoreLead) {
     const auto [result, hasWinner] = ModelUtils::formatGameResult(winner, scoreLead);
     ui->msgList->addItem(QString("Game Result: %1").arg(result));
 
-    QMessageBox msgBox;
-    msgBox.setWindowTitle("Game Result");
-
     ui->matchCard->setBlackPeriodsLeft(1);
     ui->matchCard->setBlackTime(0);
     ui->matchCard->setWhitePeriodsLeft(1);
     ui->matchCard->setWhiteTime(0);
 
-    msgBox.setText(result);
+    QMessageBox msgBox;
+    msgBox.setWindowTitle("Game Result");
+    msgBox.setText(ModelUtils::longFormatGameResult(winner, scoreLead));
     msgBox.exec();
 }
 

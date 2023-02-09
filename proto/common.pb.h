@@ -242,13 +242,16 @@ enum Country : int {
   SOUTHAFRICA = 27,
   GREECE = 30,
   NETHERLANDS = 31,
+  BELGIUM = 32,
   FRANCE = 33,
   HUNGARY = 36,
   ITALY = 39,
+  AUSTRIA = 43,
   UK = 44,
   SWEDEN = 46,
   CHILE = 56,
   AUSTRALIA = 61,
+  INDONESIA = 62,
   PHILIPPINES = 63,
   NEWZEALAND = 64,
   SINGAPORE = 65,
@@ -259,10 +262,12 @@ enum Country : int {
   VIETNAM = 84,
   CHINA = 86,
   TURKEY = 90,
+  NIGERIA = 234,
   GERMANY = 349,
   PORTUGAL = 351,
   ALBANIA = 355,
   BULGARIA = 359,
+  LATVIA = 371,
   BELARUS = 375,
   UKRAINE = 380,
   HONGKONG = 852,
@@ -312,6 +317,80 @@ inline bool PlayerStatus_Parse(
     ::PROTOBUF_NAMESPACE_ID::ConstStringParam name, PlayerStatus* value) {
   return ::PROTOBUF_NAMESPACE_ID::internal::ParseNamedEnum<PlayerStatus>(
     PlayerStatus_descriptor(), name, value);
+}
+enum Sex : int {
+  SEX_MALE = 0,
+  SEX_FEMALE = 1
+};
+bool Sex_IsValid(int value);
+constexpr Sex Sex_MIN = SEX_MALE;
+constexpr Sex Sex_MAX = SEX_FEMALE;
+constexpr int Sex_ARRAYSIZE = Sex_MAX + 1;
+
+const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* Sex_descriptor();
+template<typename T>
+inline const std::string& Sex_Name(T enum_t_value) {
+  static_assert(::std::is_same<T, Sex>::value ||
+    ::std::is_integral<T>::value,
+    "Incorrect type passed to function Sex_Name.");
+  return ::PROTOBUF_NAMESPACE_ID::internal::NameOfEnum(
+    Sex_descriptor(), enum_t_value);
+}
+inline bool Sex_Parse(
+    ::PROTOBUF_NAMESPACE_ID::ConstStringParam name, Sex* value) {
+  return ::PROTOBUF_NAMESPACE_ID::internal::ParseNamedEnum<Sex>(
+    Sex_descriptor(), name, value);
+}
+enum Flair : int {
+  FLAIR_UNKNOWN = 0,
+  FLAIR_PRO = 1,
+  FLAIR_GOLD_CROWN = 2,
+  FLAIR_TOP_AMATEUR = 3,
+  FLAIR_SILVER_CROWN = 4,
+  FLAIR_ELITE_AMATEUR = 5
+};
+bool Flair_IsValid(int value);
+constexpr Flair Flair_MIN = FLAIR_UNKNOWN;
+constexpr Flair Flair_MAX = FLAIR_ELITE_AMATEUR;
+constexpr int Flair_ARRAYSIZE = Flair_MAX + 1;
+
+const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* Flair_descriptor();
+template<typename T>
+inline const std::string& Flair_Name(T enum_t_value) {
+  static_assert(::std::is_same<T, Flair>::value ||
+    ::std::is_integral<T>::value,
+    "Incorrect type passed to function Flair_Name.");
+  return ::PROTOBUF_NAMESPACE_ID::internal::NameOfEnum(
+    Flair_descriptor(), enum_t_value);
+}
+inline bool Flair_Parse(
+    ::PROTOBUF_NAMESPACE_ID::ConstStringParam name, Flair* value) {
+  return ::PROTOBUF_NAMESPACE_ID::internal::ParseNamedEnum<Flair>(
+    Flair_descriptor(), name, value);
+}
+enum MembershipType : int {
+  MEMBERSHIP_NONE = 0,
+  MEMBERSHIP_SILVER = 1,
+  MEMBERSHIP_GOLD = 2
+};
+bool MembershipType_IsValid(int value);
+constexpr MembershipType MembershipType_MIN = MEMBERSHIP_NONE;
+constexpr MembershipType MembershipType_MAX = MEMBERSHIP_GOLD;
+constexpr int MembershipType_ARRAYSIZE = MembershipType_MAX + 1;
+
+const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* MembershipType_descriptor();
+template<typename T>
+inline const std::string& MembershipType_Name(T enum_t_value) {
+  static_assert(::std::is_same<T, MembershipType>::value ||
+    ::std::is_integral<T>::value,
+    "Incorrect type passed to function MembershipType_Name.");
+  return ::PROTOBUF_NAMESPACE_ID::internal::NameOfEnum(
+    MembershipType_descriptor(), enum_t_value);
+}
+inline bool MembershipType_Parse(
+    ::PROTOBUF_NAMESPACE_ID::ConstStringParam name, MembershipType* value) {
+  return ::PROTOBUF_NAMESPACE_ID::internal::ParseNamedEnum<MembershipType>(
+    MembershipType_descriptor(), name, value);
 }
 // ===================================================================
 
@@ -1636,12 +1715,18 @@ class PlayerInfo final :
     kCountryFieldNumber = 5,
     kClubIdFieldNumber = 6,
     kUnknownField8FieldNumber = 8,
-    kAcceptingMatchesFieldNumber = 7,
-    kStatusFieldNumber = 9,
     kRankedWinsFieldNumber = 10,
     kRankedLossesFieldNumber = 11,
+    kStatusFieldNumber = 9,
+    kSexFieldNumber = 14,
     kUnknownField13FieldNumber = 13,
     kFoxcoinFieldNumber = 21,
+    kFlairFieldNumber = 26,
+    kAcceptingMatchesFieldNumber = 7,
+    kAiFieldNumber = 36,
+    kAmateur6DFieldNumber = 37,
+    kMembershipValidUntilFieldNumber = 28,
+    kMembershipTypeFieldNumber = 27,
   };
   // optional string name = 2;
   bool has_name() const;
@@ -1744,32 +1829,6 @@ class PlayerInfo final :
   void _internal_set_unknown_field_8(int64_t value);
   public:
 
-  // optional bool accepting_matches = 7;
-  bool has_accepting_matches() const;
-  private:
-  bool _internal_has_accepting_matches() const;
-  public:
-  void clear_accepting_matches();
-  bool accepting_matches() const;
-  void set_accepting_matches(bool value);
-  private:
-  bool _internal_accepting_matches() const;
-  void _internal_set_accepting_matches(bool value);
-  public:
-
-  // optional .openfoxwq.PlayerStatus status = 9;
-  bool has_status() const;
-  private:
-  bool _internal_has_status() const;
-  public:
-  void clear_status();
-  ::openfoxwq::PlayerStatus status() const;
-  void set_status(::openfoxwq::PlayerStatus value);
-  private:
-  ::openfoxwq::PlayerStatus _internal_status() const;
-  void _internal_set_status(::openfoxwq::PlayerStatus value);
-  public:
-
   // optional int64 ranked_wins = 10;
   bool has_ranked_wins() const;
   private:
@@ -1794,6 +1853,32 @@ class PlayerInfo final :
   private:
   int64_t _internal_ranked_losses() const;
   void _internal_set_ranked_losses(int64_t value);
+  public:
+
+  // optional .openfoxwq.PlayerStatus status = 9;
+  bool has_status() const;
+  private:
+  bool _internal_has_status() const;
+  public:
+  void clear_status();
+  ::openfoxwq::PlayerStatus status() const;
+  void set_status(::openfoxwq::PlayerStatus value);
+  private:
+  ::openfoxwq::PlayerStatus _internal_status() const;
+  void _internal_set_status(::openfoxwq::PlayerStatus value);
+  public:
+
+  // optional .openfoxwq.Sex sex = 14;
+  bool has_sex() const;
+  private:
+  bool _internal_has_sex() const;
+  public:
+  void clear_sex();
+  ::openfoxwq::Sex sex() const;
+  void set_sex(::openfoxwq::Sex value);
+  private:
+  ::openfoxwq::Sex _internal_sex() const;
+  void _internal_set_sex(::openfoxwq::Sex value);
   public:
 
   // optional int64 unknown_field_13 = 13;
@@ -1822,6 +1907,84 @@ class PlayerInfo final :
   void _internal_set_foxcoin(int64_t value);
   public:
 
+  // optional .openfoxwq.Flair flair = 26;
+  bool has_flair() const;
+  private:
+  bool _internal_has_flair() const;
+  public:
+  void clear_flair();
+  ::openfoxwq::Flair flair() const;
+  void set_flair(::openfoxwq::Flair value);
+  private:
+  ::openfoxwq::Flair _internal_flair() const;
+  void _internal_set_flair(::openfoxwq::Flair value);
+  public:
+
+  // optional bool accepting_matches = 7;
+  bool has_accepting_matches() const;
+  private:
+  bool _internal_has_accepting_matches() const;
+  public:
+  void clear_accepting_matches();
+  bool accepting_matches() const;
+  void set_accepting_matches(bool value);
+  private:
+  bool _internal_accepting_matches() const;
+  void _internal_set_accepting_matches(bool value);
+  public:
+
+  // optional bool ai = 36;
+  bool has_ai() const;
+  private:
+  bool _internal_has_ai() const;
+  public:
+  void clear_ai();
+  bool ai() const;
+  void set_ai(bool value);
+  private:
+  bool _internal_ai() const;
+  void _internal_set_ai(bool value);
+  public:
+
+  // optional bool amateur_6d = 37;
+  bool has_amateur_6d() const;
+  private:
+  bool _internal_has_amateur_6d() const;
+  public:
+  void clear_amateur_6d();
+  bool amateur_6d() const;
+  void set_amateur_6d(bool value);
+  private:
+  bool _internal_amateur_6d() const;
+  void _internal_set_amateur_6d(bool value);
+  public:
+
+  // optional int64 membership_valid_until = 28;
+  bool has_membership_valid_until() const;
+  private:
+  bool _internal_has_membership_valid_until() const;
+  public:
+  void clear_membership_valid_until();
+  int64_t membership_valid_until() const;
+  void set_membership_valid_until(int64_t value);
+  private:
+  int64_t _internal_membership_valid_until() const;
+  void _internal_set_membership_valid_until(int64_t value);
+  public:
+
+  // optional .openfoxwq.MembershipType membership_type = 27;
+  bool has_membership_type() const;
+  private:
+  bool _internal_has_membership_type() const;
+  public:
+  void clear_membership_type();
+  ::openfoxwq::MembershipType membership_type() const;
+  void set_membership_type(::openfoxwq::MembershipType value);
+  private:
+  ::openfoxwq::MembershipType _internal_membership_type() const;
+  void _internal_set_membership_type(::openfoxwq::MembershipType value);
+  public:
+
   // @@protoc_insertion_point(class_scope:openfoxwq.PlayerInfo)
  private:
   class _Internal;
@@ -1839,12 +2002,18 @@ class PlayerInfo final :
     int country_;
     int64_t club_id_;
     int64_t unknown_field_8_;
-    bool accepting_matches_;
-    int status_;
     int64_t ranked_wins_;
     int64_t ranked_losses_;
+    int status_;
+    int sex_;
     int64_t unknown_field_13_;
     int64_t foxcoin_;
+    int flair_;
+    bool accepting_matches_;
+    bool ai_;
+    bool amateur_6d_;
+    int64_t membership_valid_until_;
+    int membership_type_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_proto_2fcommon_2eproto;
@@ -4979,7 +5148,7 @@ inline void PlayerInfo::set_club_id(int64_t value) {
 
 // optional bool accepting_matches = 7;
 inline bool PlayerInfo::_internal_has_accepting_matches() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
+  bool value = (_impl_._has_bits_[0] & 0x00004000u) != 0;
   return value;
 }
 inline bool PlayerInfo::has_accepting_matches() const {
@@ -4987,7 +5156,7 @@ inline bool PlayerInfo::has_accepting_matches() const {
 }
 inline void PlayerInfo::clear_accepting_matches() {
   _impl_.accepting_matches_ = false;
-  _impl_._has_bits_[0] &= ~0x00000080u;
+  _impl_._has_bits_[0] &= ~0x00004000u;
 }
 inline bool PlayerInfo::_internal_accepting_matches() const {
   return _impl_.accepting_matches_;
@@ -4997,7 +5166,7 @@ inline bool PlayerInfo::accepting_matches() const {
   return _internal_accepting_matches();
 }
 inline void PlayerInfo::_internal_set_accepting_matches(bool value) {
-  _impl_._has_bits_[0] |= 0x00000080u;
+  _impl_._has_bits_[0] |= 0x00004000u;
   _impl_.accepting_matches_ = value;
 }
 inline void PlayerInfo::set_accepting_matches(bool value) {
@@ -5007,7 +5176,7 @@ inline void PlayerInfo::set_accepting_matches(bool value) {
 
 // optional .openfoxwq.PlayerStatus status = 9;
 inline bool PlayerInfo::_internal_has_status() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000100u) != 0;
+  bool value = (_impl_._has_bits_[0] & 0x00000200u) != 0;
   return value;
 }
 inline bool PlayerInfo::has_status() const {
@@ -5015,7 +5184,7 @@ inline bool PlayerInfo::has_status() const {
 }
 inline void PlayerInfo::clear_status() {
   _impl_.status_ = 0;
-  _impl_._has_bits_[0] &= ~0x00000100u;
+  _impl_._has_bits_[0] &= ~0x00000200u;
 }
 inline ::openfoxwq::PlayerStatus PlayerInfo::_internal_status() const {
   return static_cast< ::openfoxwq::PlayerStatus >(_impl_.status_);
@@ -5026,7 +5195,7 @@ inline ::openfoxwq::PlayerStatus PlayerInfo::status() const {
 }
 inline void PlayerInfo::_internal_set_status(::openfoxwq::PlayerStatus value) {
   assert(::openfoxwq::PlayerStatus_IsValid(value));
-  _impl_._has_bits_[0] |= 0x00000100u;
+  _impl_._has_bits_[0] |= 0x00000200u;
   _impl_.status_ = value;
 }
 inline void PlayerInfo::set_status(::openfoxwq::PlayerStatus value) {
@@ -5036,7 +5205,7 @@ inline void PlayerInfo::set_status(::openfoxwq::PlayerStatus value) {
 
 // optional int64 ranked_wins = 10;
 inline bool PlayerInfo::_internal_has_ranked_wins() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000200u) != 0;
+  bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
   return value;
 }
 inline bool PlayerInfo::has_ranked_wins() const {
@@ -5044,7 +5213,7 @@ inline bool PlayerInfo::has_ranked_wins() const {
 }
 inline void PlayerInfo::clear_ranked_wins() {
   _impl_.ranked_wins_ = int64_t{0};
-  _impl_._has_bits_[0] &= ~0x00000200u;
+  _impl_._has_bits_[0] &= ~0x00000080u;
 }
 inline int64_t PlayerInfo::_internal_ranked_wins() const {
   return _impl_.ranked_wins_;
@@ -5054,7 +5223,7 @@ inline int64_t PlayerInfo::ranked_wins() const {
   return _internal_ranked_wins();
 }
 inline void PlayerInfo::_internal_set_ranked_wins(int64_t value) {
-  _impl_._has_bits_[0] |= 0x00000200u;
+  _impl_._has_bits_[0] |= 0x00000080u;
   _impl_.ranked_wins_ = value;
 }
 inline void PlayerInfo::set_ranked_wins(int64_t value) {
@@ -5064,7 +5233,7 @@ inline void PlayerInfo::set_ranked_wins(int64_t value) {
 
 // optional int64 ranked_losses = 11;
 inline bool PlayerInfo::_internal_has_ranked_losses() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000400u) != 0;
+  bool value = (_impl_._has_bits_[0] & 0x00000100u) != 0;
   return value;
 }
 inline bool PlayerInfo::has_ranked_losses() const {
@@ -5072,7 +5241,7 @@ inline bool PlayerInfo::has_ranked_losses() const {
 }
 inline void PlayerInfo::clear_ranked_losses() {
   _impl_.ranked_losses_ = int64_t{0};
-  _impl_._has_bits_[0] &= ~0x00000400u;
+  _impl_._has_bits_[0] &= ~0x00000100u;
 }
 inline int64_t PlayerInfo::_internal_ranked_losses() const {
   return _impl_.ranked_losses_;
@@ -5082,12 +5251,41 @@ inline int64_t PlayerInfo::ranked_losses() const {
   return _internal_ranked_losses();
 }
 inline void PlayerInfo::_internal_set_ranked_losses(int64_t value) {
-  _impl_._has_bits_[0] |= 0x00000400u;
+  _impl_._has_bits_[0] |= 0x00000100u;
   _impl_.ranked_losses_ = value;
 }
 inline void PlayerInfo::set_ranked_losses(int64_t value) {
   _internal_set_ranked_losses(value);
   // @@protoc_insertion_point(field_set:openfoxwq.PlayerInfo.ranked_losses)
+}
+
+// optional .openfoxwq.Sex sex = 14;
+inline bool PlayerInfo::_internal_has_sex() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000400u) != 0;
+  return value;
+}
+inline bool PlayerInfo::has_sex() const {
+  return _internal_has_sex();
+}
+inline void PlayerInfo::clear_sex() {
+  _impl_.sex_ = 0;
+  _impl_._has_bits_[0] &= ~0x00000400u;
+}
+inline ::openfoxwq::Sex PlayerInfo::_internal_sex() const {
+  return static_cast< ::openfoxwq::Sex >(_impl_.sex_);
+}
+inline ::openfoxwq::Sex PlayerInfo::sex() const {
+  // @@protoc_insertion_point(field_get:openfoxwq.PlayerInfo.sex)
+  return _internal_sex();
+}
+inline void PlayerInfo::_internal_set_sex(::openfoxwq::Sex value) {
+  assert(::openfoxwq::Sex_IsValid(value));
+  _impl_._has_bits_[0] |= 0x00000400u;
+  _impl_.sex_ = value;
+}
+inline void PlayerInfo::set_sex(::openfoxwq::Sex value) {
+  _internal_set_sex(value);
+  // @@protoc_insertion_point(field_set:openfoxwq.PlayerInfo.sex)
 }
 
 // optional int64 foxcoin = 21;
@@ -5116,6 +5314,148 @@ inline void PlayerInfo::_internal_set_foxcoin(int64_t value) {
 inline void PlayerInfo::set_foxcoin(int64_t value) {
   _internal_set_foxcoin(value);
   // @@protoc_insertion_point(field_set:openfoxwq.PlayerInfo.foxcoin)
+}
+
+// optional .openfoxwq.Flair flair = 26;
+inline bool PlayerInfo::_internal_has_flair() const {
+  bool value = (_impl_._has_bits_[0] & 0x00002000u) != 0;
+  return value;
+}
+inline bool PlayerInfo::has_flair() const {
+  return _internal_has_flair();
+}
+inline void PlayerInfo::clear_flair() {
+  _impl_.flair_ = 0;
+  _impl_._has_bits_[0] &= ~0x00002000u;
+}
+inline ::openfoxwq::Flair PlayerInfo::_internal_flair() const {
+  return static_cast< ::openfoxwq::Flair >(_impl_.flair_);
+}
+inline ::openfoxwq::Flair PlayerInfo::flair() const {
+  // @@protoc_insertion_point(field_get:openfoxwq.PlayerInfo.flair)
+  return _internal_flair();
+}
+inline void PlayerInfo::_internal_set_flair(::openfoxwq::Flair value) {
+  assert(::openfoxwq::Flair_IsValid(value));
+  _impl_._has_bits_[0] |= 0x00002000u;
+  _impl_.flair_ = value;
+}
+inline void PlayerInfo::set_flair(::openfoxwq::Flair value) {
+  _internal_set_flair(value);
+  // @@protoc_insertion_point(field_set:openfoxwq.PlayerInfo.flair)
+}
+
+// optional .openfoxwq.MembershipType membership_type = 27;
+inline bool PlayerInfo::_internal_has_membership_type() const {
+  bool value = (_impl_._has_bits_[0] & 0x00040000u) != 0;
+  return value;
+}
+inline bool PlayerInfo::has_membership_type() const {
+  return _internal_has_membership_type();
+}
+inline void PlayerInfo::clear_membership_type() {
+  _impl_.membership_type_ = 0;
+  _impl_._has_bits_[0] &= ~0x00040000u;
+}
+inline ::openfoxwq::MembershipType PlayerInfo::_internal_membership_type() const {
+  return static_cast< ::openfoxwq::MembershipType >(_impl_.membership_type_);
+}
+inline ::openfoxwq::MembershipType PlayerInfo::membership_type() const {
+  // @@protoc_insertion_point(field_get:openfoxwq.PlayerInfo.membership_type)
+  return _internal_membership_type();
+}
+inline void PlayerInfo::_internal_set_membership_type(::openfoxwq::MembershipType value) {
+  assert(::openfoxwq::MembershipType_IsValid(value));
+  _impl_._has_bits_[0] |= 0x00040000u;
+  _impl_.membership_type_ = value;
+}
+inline void PlayerInfo::set_membership_type(::openfoxwq::MembershipType value) {
+  _internal_set_membership_type(value);
+  // @@protoc_insertion_point(field_set:openfoxwq.PlayerInfo.membership_type)
+}
+
+// optional int64 membership_valid_until = 28;
+inline bool PlayerInfo::_internal_has_membership_valid_until() const {
+  bool value = (_impl_._has_bits_[0] & 0x00020000u) != 0;
+  return value;
+}
+inline bool PlayerInfo::has_membership_valid_until() const {
+  return _internal_has_membership_valid_until();
+}
+inline void PlayerInfo::clear_membership_valid_until() {
+  _impl_.membership_valid_until_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00020000u;
+}
+inline int64_t PlayerInfo::_internal_membership_valid_until() const {
+  return _impl_.membership_valid_until_;
+}
+inline int64_t PlayerInfo::membership_valid_until() const {
+  // @@protoc_insertion_point(field_get:openfoxwq.PlayerInfo.membership_valid_until)
+  return _internal_membership_valid_until();
+}
+inline void PlayerInfo::_internal_set_membership_valid_until(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00020000u;
+  _impl_.membership_valid_until_ = value;
+}
+inline void PlayerInfo::set_membership_valid_until(int64_t value) {
+  _internal_set_membership_valid_until(value);
+  // @@protoc_insertion_point(field_set:openfoxwq.PlayerInfo.membership_valid_until)
+}
+
+// optional bool ai = 36;
+inline bool PlayerInfo::_internal_has_ai() const {
+  bool value = (_impl_._has_bits_[0] & 0x00008000u) != 0;
+  return value;
+}
+inline bool PlayerInfo::has_ai() const {
+  return _internal_has_ai();
+}
+inline void PlayerInfo::clear_ai() {
+  _impl_.ai_ = false;
+  _impl_._has_bits_[0] &= ~0x00008000u;
+}
+inline bool PlayerInfo::_internal_ai() const {
+  return _impl_.ai_;
+}
+inline bool PlayerInfo::ai() const {
+  // @@protoc_insertion_point(field_get:openfoxwq.PlayerInfo.ai)
+  return _internal_ai();
+}
+inline void PlayerInfo::_internal_set_ai(bool value) {
+  _impl_._has_bits_[0] |= 0x00008000u;
+  _impl_.ai_ = value;
+}
+inline void PlayerInfo::set_ai(bool value) {
+  _internal_set_ai(value);
+  // @@protoc_insertion_point(field_set:openfoxwq.PlayerInfo.ai)
+}
+
+// optional bool amateur_6d = 37;
+inline bool PlayerInfo::_internal_has_amateur_6d() const {
+  bool value = (_impl_._has_bits_[0] & 0x00010000u) != 0;
+  return value;
+}
+inline bool PlayerInfo::has_amateur_6d() const {
+  return _internal_has_amateur_6d();
+}
+inline void PlayerInfo::clear_amateur_6d() {
+  _impl_.amateur_6d_ = false;
+  _impl_._has_bits_[0] &= ~0x00010000u;
+}
+inline bool PlayerInfo::_internal_amateur_6d() const {
+  return _impl_.amateur_6d_;
+}
+inline bool PlayerInfo::amateur_6d() const {
+  // @@protoc_insertion_point(field_get:openfoxwq.PlayerInfo.amateur_6d)
+  return _internal_amateur_6d();
+}
+inline void PlayerInfo::_internal_set_amateur_6d(bool value) {
+  _impl_._has_bits_[0] |= 0x00010000u;
+  _impl_.amateur_6d_ = value;
+}
+inline void PlayerInfo::set_amateur_6d(bool value) {
+  _internal_set_amateur_6d(value);
+  // @@protoc_insertion_point(field_set:openfoxwq.PlayerInfo.amateur_6d)
 }
 
 // optional int64 unknown_field_8 = 8;
@@ -6453,6 +6793,21 @@ template <> struct is_proto_enum< ::openfoxwq::PlayerStatus> : ::std::true_type 
 template <>
 inline const EnumDescriptor* GetEnumDescriptor< ::openfoxwq::PlayerStatus>() {
   return ::openfoxwq::PlayerStatus_descriptor();
+}
+template <> struct is_proto_enum< ::openfoxwq::Sex> : ::std::true_type {};
+template <>
+inline const EnumDescriptor* GetEnumDescriptor< ::openfoxwq::Sex>() {
+  return ::openfoxwq::Sex_descriptor();
+}
+template <> struct is_proto_enum< ::openfoxwq::Flair> : ::std::true_type {};
+template <>
+inline const EnumDescriptor* GetEnumDescriptor< ::openfoxwq::Flair>() {
+  return ::openfoxwq::Flair_descriptor();
+}
+template <> struct is_proto_enum< ::openfoxwq::MembershipType> : ::std::true_type {};
+template <>
+inline const EnumDescriptor* GetEnumDescriptor< ::openfoxwq::MembershipType>() {
+  return ::openfoxwq::MembershipType_descriptor();
 }
 
 PROTOBUF_NAMESPACE_CLOSE

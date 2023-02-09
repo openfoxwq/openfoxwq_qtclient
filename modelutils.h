@@ -22,6 +22,7 @@ public:
     QStandardItem* alignedString(QString s, Qt::Alignment, QString tooltip = "", QBrush fg = Qt::transparent) const;
     QStandardItem* nickWithFlag(openfoxwq::Country country, QString nick, Qt::Alignment alignment, QString tooltip = "", QBrush fg = Qt::transparent) const;
     QIcon flagForCountry(openfoxwq::Country country) const;
+    QStandardItem* flair(const openfoxwq::PlayerInfo& player) const;
 
     static QString colorString(openfoxwq::Color color);
     static QString colorShortString(openfoxwq::Color color);
@@ -34,6 +35,8 @@ public:
     static QString roomIdString(openfoxwq::RoomId roomId);
     static QString formatScoreLead(int scoreLead);
     static QPair<QString, bool> formatGameResult(openfoxwq::Color winner, int64_t scoreLead);
+    static QString longFormatGameResult(openfoxwq::Color winner, int64_t scoreLead);
+    static QString formatMemberTenure(int64_t sec);
 
 
 private:

@@ -1,6 +1,7 @@
 #include "playerinfodialog.h"
 #include "ui_playerinfodialog.h"
 
+#include <chrono>
 
 PlayerInfoDialog::PlayerInfoDialog(QWidget *parent, const openfoxwq::GetPlayerInfoResponse& playerInfo, const ModelUtils& modelUtils) :
     QDialog(parent),
@@ -22,6 +23,10 @@ PlayerInfoDialog::PlayerInfoDialog(QWidget *parent, const openfoxwq::GetPlayerIn
                 .arg(playerInfo.overall_results().stamina())
     );
     ui->foxCoinsLabel->setText(QString::number(playerInfo.foxcoin()));
+
+    const int64_t now = std::chrono::duration_cast<std::chrono::seconds>(std::chrono::system_clock::now().time_since_epoch()).count();
+    int64_t memberTenureSec = now - playerInfo.register_info().member_since_unix_ts();
+    ui->memberSinceLabel->setText(ModelUtils::formatMemberTenure(memberTenureSec));
 
     const auto [rankNumber, rankType] = ModelUtils::rankNumberTypeString(playerInfo.rank());
     ui->rankNumberLabel->setText(rankNumber);

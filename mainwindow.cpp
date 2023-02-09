@@ -24,6 +24,31 @@
 #include <proto/play.pb.h>
 #include <proto/ws.pb.h>
 
+static QVector<int> collectColumnWidths(QTableView* tableView) {
+    const int n = tableView->horizontalHeader()->count();
+    QVector<int> ret(n);
+    for (int i = 0; i < n; ++i) {
+        ret[i] = tableView->columnWidth(i);
+    }
+    return ret;
+}
+
+static void restoreColumnWidths(QTableView* tableView, const QVector<int>& w) {
+    const int n = tableView->horizontalHeader()->count();
+    bool needsFixing = false;
+    for (int i = 0; i < n; ++i) {
+        if (tableView->columnWidth(i) == 0) {
+            needsFixing = true;
+            break;
+        }
+    }
+    if (needsFixing) {
+        for (int i = 0; i < n; ++i) {
+            tableView->setColumnWidth(i, w[i]);
+        }
+    }
+}
+
 MainWindow::MainWindow(QWidget *parent, QNetworkAccessManager& nam, QWebSocket& ws, SoundFx& sfx, int64_t myPlayerId, QVector<AutomatchPreset> automatchPresets) :
     QMainWindow(parent),
     ui(new Ui::MainWindow),
@@ -34,9 +59,13 @@ MainWindow::MainWindow(QWidget *parent, QNetworkAccessManager& nam, QWebSocket& 
     m_automatchPresets(automatchPresets),
     m_broadcastModel(this, m_modelUtils),
     m_playerModel(this, m_modelUtils),
-    m_automatchPresetSettingKey(QString("%d/automatch_preset_id").arg(myPlayerId))
+    m_automatchPresetSettingKey(QString("%1/automatch_preset_id").arg(myPlayerId))
 {
     ui->setupUi(this);
+
+    connect(&m_modelSortTimer, &QTimer::timeout, this, &MainWindow::onModelSortTimeout);
+    m_modelSortTimer.setSingleShot(false);
+    m_modelSortTimer.start(10000);
 
     // Setup broadcast table
     ui->broadcastTable->setModel(&m_broadcastModel);
@@ -50,11 +79,6 @@ MainWindow::MainWindow(QWidget *parent, QNetworkAccessManager& nam, QWebSocket& 
 
     // Setup player table
     ui->playerTable->setModel(&m_playerModel);
-
-    ui->playerTable->setColumnWidth(0, 150);
-    ui->playerTable->setColumnWidth(1, 60);
-    ui->playerTable->setColumnWidth(2, 80);
-    ui->playerTable->setColumnWidth(3, 80);
 
     ui->splitter->setStretchFactor(0, 4);
     ui->splitter->setStretchFactor(1, 1);
@@ -118,6 +142,9 @@ void MainWindow::on_binaryMessageReceived(QByteArray data) {
     // google::protobuf::TextFormat::PrintToString(resp, &debugStr);
     // qDebug() << "ws resp: " << QString::fromStdString(debugStr);
 
+    const auto broadcastColumnWidths = collectColumnWidths(ui->broadcastTable);
+    const auto playersColumnWidths = collectColumnWidths(ui->playerTable);
+
     switch (resp.resp_case()) {
     // ================================================================================
     // List responses
@@ -130,7 +157,9 @@ void MainWindow::on_binaryMessageReceived(QByteArray data) {
         }
         if (resp.listplayers().has_online_count()) {
             ui->onlineCountLabel->setText(QString("Online: %1").arg(resp.listplayers().online_count()));
+            m_playerModel.sortSpecial();
         }
+        ui->playerTable->resizeColumnsToContents();
         break;
     case openfoxwq::WsResponse::kListBroadcasts:
         initialBroadcastPages = resp.listbroadcasts().page_count();
@@ -139,6 +168,8 @@ void MainWindow::on_binaryMessageReceived(QByteArray data) {
         for (int i = 0; i < resp.listbroadcasts().broadcasts_size(); ++i) {
             m_broadcastModel.update(resp.listbroadcasts().broadcasts(i));
         }
+        m_broadcastModel.sortSpecial();
+        ui->broadcastTable->resizeColumnsToContents();
         break;
     case openfoxwq::WsResponse::kListRoomParticipants:
         if (auto roomId = resp.listroomparticipants().id().id_2(); m_activeMatchRooms.contains(roomId)) {
@@ -188,9 +219,13 @@ void MainWindow::on_binaryMessageReceived(QByteArray data) {
         m_playerModel.remove(resp.playerofflineevent().player_id());
         break;
     case openfoxwq::WsResponse::kPlayerStateEvent:
+    {
         ui->onlineCountLabel->setText(QString("Online: %1").arg(resp.playerstateevent().online_count()));
-        m_playerModel.update(resp.playerstateevent().player_info());
+        if (m_playerModel.contains(resp.playerstateevent().player_info().player_id())) {
+            m_playerModel.update(resp.playerstateevent().player_info());
+        }
         break;
+    }
 
     // ================================================================================
     case openfoxwq::WsResponse::kGetPlayerInfo:
@@ -283,6 +318,9 @@ void MainWindow::on_binaryMessageReceived(QByteArray data) {
     default:
         break;
     }
+
+    restoreColumnWidths(ui->broadcastTable, broadcastColumnWidths);
+    restoreColumnWidths(ui->playerTable, playersColumnWidths);
 
     if (progressDialog.isVisible()) {
         progressDialog.setMaximum(initialPlayerPages+initialBroadcastPages);
@@ -428,3 +466,16 @@ void MainWindow::on_automatchPresetComboBox_currentIndexChanged(int index)
     m_settings.setValue(m_automatchPresetSettingKey, presetId);
 }
 
+
+void MainWindow::onModelSortTimeout() {
+    {
+        const auto broadcastColumnWidths = collectColumnWidths(ui->broadcastTable);
+        m_broadcastModel.sortSpecial();
+        restoreColumnWidths(ui->broadcastTable, broadcastColumnWidths);
+    }
+    {
+        const auto playersColumnWidths = collectColumnWidths(ui->playerTable);
+        m_playerModel.sortSpecial();
+        restoreColumnWidths(ui->playerTable, playersColumnWidths);
+    }
+}

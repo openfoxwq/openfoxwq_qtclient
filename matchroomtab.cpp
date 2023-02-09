@@ -139,8 +139,14 @@ void MatchRoomTab::on_matchStart() {
 
 void MatchRoomTab::on_nextMoveEvent(const openfoxwq::NextMoveEvent& event) {
     if (event.last_turn().move_count() > m_moveNum) {
+        const auto &[lr, lc] = ui->board->lastPoint();
+        if (lr != -1 && lc != -1) {
+            ui->board->setAnnotation(lr, lc, Annotation{AnnotationType::kNone});
+        }
+
         int captures = 0;
         ui->board->movePiece(event.y(), event.x(), event.col(), &captures);
+        ui->board->setAnnotation(event.y(), event.x(), Annotation{ AnnotationType::kQuarterTriangle, event.col() == openfoxwq::Color::COL_BLACK ? Qt::white : Qt::black});
 
         if (captures == 0) m_sfx.playStone();
         else if (captures == 1) m_sfx.playStoneCaptureOne();
@@ -354,8 +360,13 @@ void MatchRoomTab::on_pointClicked(int r, int c, openfoxwq::Color state) {
         return;
     }
 
+    const auto &[lr, lc] = ui->board->lastPoint();
     int captures = 0;
     if (ui->board->movePiece(r, c, state, &captures)) {
+        if (lr != -1 && lc != -1) {
+            ui->board->setAnnotation(lr, lc, Annotation{AnnotationType::kNone});
+        }
+        ui->board->setAnnotation(r, c, Annotation{ AnnotationType::kQuarterTriangle, state == openfoxwq::Color::COL_BLACK ? Qt::white : Qt::black});
 
         if (captures == 0) m_sfx.playStone();
         else if (captures == 1) m_sfx.playStoneCaptureOne();

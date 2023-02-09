@@ -20,6 +20,7 @@ public:
     bool contains(BroadcastId) const;
     void remove(BroadcastId);
     int size() const;
+    void sortSpecial();
 
     const openfoxwq::BroadcastInfo& getBroadcastById(BroadcastId id) const;
     const openfoxwq::BroadcastInfo& getBroadcast(int index) const;
@@ -28,6 +29,8 @@ private:
     const ModelUtils& m_modelUtils;
     QVector<openfoxwq::BroadcastInfo> m_broadcasts;
     QMap<BroadcastId, int> m_broadcastIndex;
+
+    void updateRow(int index, const openfoxwq::BroadcastInfo& broadcast);
 };
 
 #endif // BROADCASTMODEL_H

@@ -98,15 +98,18 @@ extern GetPlayerInfoRequestDefaultTypeInternal _GetPlayerInfoRequest_default_ins
 class GetPlayerInfoResponse;
 struct GetPlayerInfoResponseDefaultTypeInternal;
 extern GetPlayerInfoResponseDefaultTypeInternal _GetPlayerInfoResponse_default_instance_;
-class GetPlayerInfoResponse_AdditionalInfo;
-struct GetPlayerInfoResponse_AdditionalInfoDefaultTypeInternal;
-extern GetPlayerInfoResponse_AdditionalInfoDefaultTypeInternal _GetPlayerInfoResponse_AdditionalInfo_default_instance_;
+class GetPlayerInfoResponse_MembershipInfo;
+struct GetPlayerInfoResponse_MembershipInfoDefaultTypeInternal;
+extern GetPlayerInfoResponse_MembershipInfoDefaultTypeInternal _GetPlayerInfoResponse_MembershipInfo_default_instance_;
 class GetPlayerInfoResponse_OverallResults;
 struct GetPlayerInfoResponse_OverallResultsDefaultTypeInternal;
 extern GetPlayerInfoResponse_OverallResultsDefaultTypeInternal _GetPlayerInfoResponse_OverallResults_default_instance_;
 class GetPlayerInfoResponse_PerformanceRecord;
 struct GetPlayerInfoResponse_PerformanceRecordDefaultTypeInternal;
 extern GetPlayerInfoResponse_PerformanceRecordDefaultTypeInternal _GetPlayerInfoResponse_PerformanceRecord_default_instance_;
+class GetPlayerInfoResponse_PlayerFlair;
+struct GetPlayerInfoResponse_PlayerFlairDefaultTypeInternal;
+extern GetPlayerInfoResponse_PlayerFlairDefaultTypeInternal _GetPlayerInfoResponse_PlayerFlair_default_instance_;
 class GetPlayerInfoResponse_ProInfo;
 struct GetPlayerInfoResponse_ProInfoDefaultTypeInternal;
 extern GetPlayerInfoResponse_ProInfoDefaultTypeInternal _GetPlayerInfoResponse_ProInfo_default_instance_;
@@ -131,6 +134,21 @@ extern GetPlayerInfoResponse_Rooms_RoomDefaultTypeInternal _GetPlayerInfoRespons
 class GetPlayerInfoResponse_Rooms_Room_ShortPlayerInfo;
 struct GetPlayerInfoResponse_Rooms_Room_ShortPlayerInfoDefaultTypeInternal;
 extern GetPlayerInfoResponse_Rooms_Room_ShortPlayerInfoDefaultTypeInternal _GetPlayerInfoResponse_Rooms_Room_ShortPlayerInfo_default_instance_;
+class GetPlayerInfoResponse_Unknown10;
+struct GetPlayerInfoResponse_Unknown10DefaultTypeInternal;
+extern GetPlayerInfoResponse_Unknown10DefaultTypeInternal _GetPlayerInfoResponse_Unknown10_default_instance_;
+class GetPlayerInfoResponse_Unknown11;
+struct GetPlayerInfoResponse_Unknown11DefaultTypeInternal;
+extern GetPlayerInfoResponse_Unknown11DefaultTypeInternal _GetPlayerInfoResponse_Unknown11_default_instance_;
+class GetPlayerInfoResponse_Unknown19;
+struct GetPlayerInfoResponse_Unknown19DefaultTypeInternal;
+extern GetPlayerInfoResponse_Unknown19DefaultTypeInternal _GetPlayerInfoResponse_Unknown19_default_instance_;
+class GetPlayerInfoResponse_Unknown22;
+struct GetPlayerInfoResponse_Unknown22DefaultTypeInternal;
+extern GetPlayerInfoResponse_Unknown22DefaultTypeInternal _GetPlayerInfoResponse_Unknown22_default_instance_;
+class GetPlayerInfoResponse_Unknown23;
+struct GetPlayerInfoResponse_Unknown23DefaultTypeInternal;
+extern GetPlayerInfoResponse_Unknown23DefaultTypeInternal _GetPlayerInfoResponse_Unknown23_default_instance_;
 class GetRoomInfoRequest;
 struct GetRoomInfoRequestDefaultTypeInternal;
 extern GetRoomInfoRequestDefaultTypeInternal _GetRoomInfoRequest_default_instance_;
@@ -304,9 +322,10 @@ template<> ::openfoxwq::GetAutomatchStatsResponse* Arena::CreateMaybeMessage<::o
 template<> ::openfoxwq::GetAutomatchStatsResponse_PopulationEntry_DoNotUse* Arena::CreateMaybeMessage<::openfoxwq::GetAutomatchStatsResponse_PopulationEntry_DoNotUse>(Arena*);
 template<> ::openfoxwq::GetPlayerInfoRequest* Arena::CreateMaybeMessage<::openfoxwq::GetPlayerInfoRequest>(Arena*);
 template<> ::openfoxwq::GetPlayerInfoResponse* Arena::CreateMaybeMessage<::openfoxwq::GetPlayerInfoResponse>(Arena*);
-template<> ::openfoxwq::GetPlayerInfoResponse_AdditionalInfo* Arena::CreateMaybeMessage<::openfoxwq::GetPlayerInfoResponse_AdditionalInfo>(Arena*);
+template<> ::openfoxwq::GetPlayerInfoResponse_MembershipInfo* Arena::CreateMaybeMessage<::openfoxwq::GetPlayerInfoResponse_MembershipInfo>(Arena*);
 template<> ::openfoxwq::GetPlayerInfoResponse_OverallResults* Arena::CreateMaybeMessage<::openfoxwq::GetPlayerInfoResponse_OverallResults>(Arena*);
 template<> ::openfoxwq::GetPlayerInfoResponse_PerformanceRecord* Arena::CreateMaybeMessage<::openfoxwq::GetPlayerInfoResponse_PerformanceRecord>(Arena*);
+template<> ::openfoxwq::GetPlayerInfoResponse_PlayerFlair* Arena::CreateMaybeMessage<::openfoxwq::GetPlayerInfoResponse_PlayerFlair>(Arena*);
 template<> ::openfoxwq::GetPlayerInfoResponse_ProInfo* Arena::CreateMaybeMessage<::openfoxwq::GetPlayerInfoResponse_ProInfo>(Arena*);
 template<> ::openfoxwq::GetPlayerInfoResponse_RecentRecord* Arena::CreateMaybeMessage<::openfoxwq::GetPlayerInfoResponse_RecentRecord>(Arena*);
 template<> ::openfoxwq::GetPlayerInfoResponse_RecentRecord_Unknown1* Arena::CreateMaybeMessage<::openfoxwq::GetPlayerInfoResponse_RecentRecord_Unknown1>(Arena*);
@@ -315,6 +334,11 @@ template<> ::openfoxwq::GetPlayerInfoResponse_Results* Arena::CreateMaybeMessage
 template<> ::openfoxwq::GetPlayerInfoResponse_Rooms* Arena::CreateMaybeMessage<::openfoxwq::GetPlayerInfoResponse_Rooms>(Arena*);
 template<> ::openfoxwq::GetPlayerInfoResponse_Rooms_Room* Arena::CreateMaybeMessage<::openfoxwq::GetPlayerInfoResponse_Rooms_Room>(Arena*);
 template<> ::openfoxwq::GetPlayerInfoResponse_Rooms_Room_ShortPlayerInfo* Arena::CreateMaybeMessage<::openfoxwq::GetPlayerInfoResponse_Rooms_Room_ShortPlayerInfo>(Arena*);
+template<> ::openfoxwq::GetPlayerInfoResponse_Unknown10* Arena::CreateMaybeMessage<::openfoxwq::GetPlayerInfoResponse_Unknown10>(Arena*);
+template<> ::openfoxwq::GetPlayerInfoResponse_Unknown11* Arena::CreateMaybeMessage<::openfoxwq::GetPlayerInfoResponse_Unknown11>(Arena*);
+template<> ::openfoxwq::GetPlayerInfoResponse_Unknown19* Arena::CreateMaybeMessage<::openfoxwq::GetPlayerInfoResponse_Unknown19>(Arena*);
+template<> ::openfoxwq::GetPlayerInfoResponse_Unknown22* Arena::CreateMaybeMessage<::openfoxwq::GetPlayerInfoResponse_Unknown22>(Arena*);
+template<> ::openfoxwq::GetPlayerInfoResponse_Unknown23* Arena::CreateMaybeMessage<::openfoxwq::GetPlayerInfoResponse_Unknown23>(Arena*);
 template<> ::openfoxwq::GetRoomInfoRequest* Arena::CreateMaybeMessage<::openfoxwq::GetRoomInfoRequest>(Arena*);
 template<> ::openfoxwq::GetRoomInfoResponse* Arena::CreateMaybeMessage<::openfoxwq::GetRoomInfoResponse>(Arena*);
 template<> ::openfoxwq::GetRoomInfoResponse_PlayerEntry* Arena::CreateMaybeMessage<::openfoxwq::GetRoomInfoResponse_PlayerEntry>(Arena*);
@@ -3472,24 +3496,24 @@ class GetPlayerInfoResponse_Rooms final :
 };
 // -------------------------------------------------------------------
 
-class GetPlayerInfoResponse_AdditionalInfo final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:openfoxwq.GetPlayerInfoResponse.AdditionalInfo) */ {
+class GetPlayerInfoResponse_MembershipInfo final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:openfoxwq.GetPlayerInfoResponse.MembershipInfo) */ {
  public:
-  inline GetPlayerInfoResponse_AdditionalInfo() : GetPlayerInfoResponse_AdditionalInfo(nullptr) {}
-  ~GetPlayerInfoResponse_AdditionalInfo() override;
-  explicit PROTOBUF_CONSTEXPR GetPlayerInfoResponse_AdditionalInfo(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline GetPlayerInfoResponse_MembershipInfo() : GetPlayerInfoResponse_MembershipInfo(nullptr) {}
+  ~GetPlayerInfoResponse_MembershipInfo() override;
+  explicit PROTOBUF_CONSTEXPR GetPlayerInfoResponse_MembershipInfo(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  GetPlayerInfoResponse_AdditionalInfo(const GetPlayerInfoResponse_AdditionalInfo& from);
-  GetPlayerInfoResponse_AdditionalInfo(GetPlayerInfoResponse_AdditionalInfo&& from) noexcept
-    : GetPlayerInfoResponse_AdditionalInfo() {
+  GetPlayerInfoResponse_MembershipInfo(const GetPlayerInfoResponse_MembershipInfo& from);
+  GetPlayerInfoResponse_MembershipInfo(GetPlayerInfoResponse_MembershipInfo&& from) noexcept
+    : GetPlayerInfoResponse_MembershipInfo() {
     *this = ::std::move(from);
   }
 
-  inline GetPlayerInfoResponse_AdditionalInfo& operator=(const GetPlayerInfoResponse_AdditionalInfo& from) {
+  inline GetPlayerInfoResponse_MembershipInfo& operator=(const GetPlayerInfoResponse_MembershipInfo& from) {
     CopyFrom(from);
     return *this;
   }
-  inline GetPlayerInfoResponse_AdditionalInfo& operator=(GetPlayerInfoResponse_AdditionalInfo&& from) noexcept {
+  inline GetPlayerInfoResponse_MembershipInfo& operator=(GetPlayerInfoResponse_MembershipInfo&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -3519,20 +3543,20 @@ class GetPlayerInfoResponse_AdditionalInfo final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const GetPlayerInfoResponse_AdditionalInfo& default_instance() {
+  static const GetPlayerInfoResponse_MembershipInfo& default_instance() {
     return *internal_default_instance();
   }
-  static inline const GetPlayerInfoResponse_AdditionalInfo* internal_default_instance() {
-    return reinterpret_cast<const GetPlayerInfoResponse_AdditionalInfo*>(
-               &_GetPlayerInfoResponse_AdditionalInfo_default_instance_);
+  static inline const GetPlayerInfoResponse_MembershipInfo* internal_default_instance() {
+    return reinterpret_cast<const GetPlayerInfoResponse_MembershipInfo*>(
+               &_GetPlayerInfoResponse_MembershipInfo_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     15;
 
-  friend void swap(GetPlayerInfoResponse_AdditionalInfo& a, GetPlayerInfoResponse_AdditionalInfo& b) {
+  friend void swap(GetPlayerInfoResponse_MembershipInfo& a, GetPlayerInfoResponse_MembershipInfo& b) {
     a.Swap(&b);
   }
-  inline void Swap(GetPlayerInfoResponse_AdditionalInfo* other) {
+  inline void Swap(GetPlayerInfoResponse_MembershipInfo* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -3545,7 +3569,7 @@ class GetPlayerInfoResponse_AdditionalInfo final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(GetPlayerInfoResponse_AdditionalInfo* other) {
+  void UnsafeArenaSwap(GetPlayerInfoResponse_MembershipInfo* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -3553,14 +3577,14 @@ class GetPlayerInfoResponse_AdditionalInfo final :
 
   // implements Message ----------------------------------------------
 
-  GetPlayerInfoResponse_AdditionalInfo* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<GetPlayerInfoResponse_AdditionalInfo>(arena);
+  GetPlayerInfoResponse_MembershipInfo* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<GetPlayerInfoResponse_MembershipInfo>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const GetPlayerInfoResponse_AdditionalInfo& from);
+  void CopyFrom(const GetPlayerInfoResponse_MembershipInfo& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const GetPlayerInfoResponse_AdditionalInfo& from) {
-    GetPlayerInfoResponse_AdditionalInfo::MergeImpl(*this, from);
+  void MergeFrom( const GetPlayerInfoResponse_MembershipInfo& from) {
+    GetPlayerInfoResponse_MembershipInfo::MergeImpl(*this, from);
   }
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
@@ -3578,15 +3602,725 @@ class GetPlayerInfoResponse_AdditionalInfo final :
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(GetPlayerInfoResponse_AdditionalInfo* other);
+  void InternalSwap(GetPlayerInfoResponse_MembershipInfo* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "openfoxwq.GetPlayerInfoResponse.AdditionalInfo";
+    return "openfoxwq.GetPlayerInfoResponse.MembershipInfo";
   }
   protected:
-  explicit GetPlayerInfoResponse_AdditionalInfo(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit GetPlayerInfoResponse_MembershipInfo(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kValidUntilFieldNumber = 2,
+    kTypeFieldNumber = 1,
+  };
+  // optional int64 valid_until = 2;
+  bool has_valid_until() const;
+  private:
+  bool _internal_has_valid_until() const;
+  public:
+  void clear_valid_until();
+  int64_t valid_until() const;
+  void set_valid_until(int64_t value);
+  private:
+  int64_t _internal_valid_until() const;
+  void _internal_set_valid_until(int64_t value);
+  public:
+
+  // optional .openfoxwq.MembershipType type = 1;
+  bool has_type() const;
+  private:
+  bool _internal_has_type() const;
+  public:
+  void clear_type();
+  ::openfoxwq::MembershipType type() const;
+  void set_type(::openfoxwq::MembershipType value);
+  private:
+  ::openfoxwq::MembershipType _internal_type() const;
+  void _internal_set_type(::openfoxwq::MembershipType value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:openfoxwq.GetPlayerInfoResponse.MembershipInfo)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    int64_t valid_until_;
+    int type_;
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_proto_2fplay_2eproto;
+};
+// -------------------------------------------------------------------
+
+class GetPlayerInfoResponse_PlayerFlair final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:openfoxwq.GetPlayerInfoResponse.PlayerFlair) */ {
+ public:
+  inline GetPlayerInfoResponse_PlayerFlair() : GetPlayerInfoResponse_PlayerFlair(nullptr) {}
+  ~GetPlayerInfoResponse_PlayerFlair() override;
+  explicit PROTOBUF_CONSTEXPR GetPlayerInfoResponse_PlayerFlair(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  GetPlayerInfoResponse_PlayerFlair(const GetPlayerInfoResponse_PlayerFlair& from);
+  GetPlayerInfoResponse_PlayerFlair(GetPlayerInfoResponse_PlayerFlair&& from) noexcept
+    : GetPlayerInfoResponse_PlayerFlair() {
+    *this = ::std::move(from);
+  }
+
+  inline GetPlayerInfoResponse_PlayerFlair& operator=(const GetPlayerInfoResponse_PlayerFlair& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline GetPlayerInfoResponse_PlayerFlair& operator=(GetPlayerInfoResponse_PlayerFlair&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetOwningArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
+  }
+  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const GetPlayerInfoResponse_PlayerFlair& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const GetPlayerInfoResponse_PlayerFlair* internal_default_instance() {
+    return reinterpret_cast<const GetPlayerInfoResponse_PlayerFlair*>(
+               &_GetPlayerInfoResponse_PlayerFlair_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    16;
+
+  friend void swap(GetPlayerInfoResponse_PlayerFlair& a, GetPlayerInfoResponse_PlayerFlair& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(GetPlayerInfoResponse_PlayerFlair* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() != nullptr &&
+        GetOwningArena() == other->GetOwningArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() == other->GetOwningArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(GetPlayerInfoResponse_PlayerFlair* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  GetPlayerInfoResponse_PlayerFlair* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<GetPlayerInfoResponse_PlayerFlair>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const GetPlayerInfoResponse_PlayerFlair& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const GetPlayerInfoResponse_PlayerFlair& from) {
+    GetPlayerInfoResponse_PlayerFlair::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  uint8_t* _InternalSerialize(
+      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
+
+  private:
+  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(GetPlayerInfoResponse_PlayerFlair* other);
+
+  private:
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "openfoxwq.GetPlayerInfoResponse.PlayerFlair";
+  }
+  protected:
+  explicit GetPlayerInfoResponse_PlayerFlair(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kAiFieldNumber = 2,
+  };
+  // optional bool ai = 2;
+  bool has_ai() const;
+  private:
+  bool _internal_has_ai() const;
+  public:
+  void clear_ai();
+  bool ai() const;
+  void set_ai(bool value);
+  private:
+  bool _internal_ai() const;
+  void _internal_set_ai(bool value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:openfoxwq.GetPlayerInfoResponse.PlayerFlair)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    bool ai_;
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_proto_2fplay_2eproto;
+};
+// -------------------------------------------------------------------
+
+class GetPlayerInfoResponse_Unknown10 final :
+    public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:openfoxwq.GetPlayerInfoResponse.Unknown10) */ {
+ public:
+  inline GetPlayerInfoResponse_Unknown10() : GetPlayerInfoResponse_Unknown10(nullptr) {}
+  explicit PROTOBUF_CONSTEXPR GetPlayerInfoResponse_Unknown10(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  GetPlayerInfoResponse_Unknown10(const GetPlayerInfoResponse_Unknown10& from);
+  GetPlayerInfoResponse_Unknown10(GetPlayerInfoResponse_Unknown10&& from) noexcept
+    : GetPlayerInfoResponse_Unknown10() {
+    *this = ::std::move(from);
+  }
+
+  inline GetPlayerInfoResponse_Unknown10& operator=(const GetPlayerInfoResponse_Unknown10& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline GetPlayerInfoResponse_Unknown10& operator=(GetPlayerInfoResponse_Unknown10&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetOwningArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
+  }
+  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const GetPlayerInfoResponse_Unknown10& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const GetPlayerInfoResponse_Unknown10* internal_default_instance() {
+    return reinterpret_cast<const GetPlayerInfoResponse_Unknown10*>(
+               &_GetPlayerInfoResponse_Unknown10_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    17;
+
+  friend void swap(GetPlayerInfoResponse_Unknown10& a, GetPlayerInfoResponse_Unknown10& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(GetPlayerInfoResponse_Unknown10* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() != nullptr &&
+        GetOwningArena() == other->GetOwningArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() == other->GetOwningArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(GetPlayerInfoResponse_Unknown10* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  GetPlayerInfoResponse_Unknown10* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<GetPlayerInfoResponse_Unknown10>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyFrom;
+  inline void CopyFrom(const GetPlayerInfoResponse_Unknown10& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeFrom;
+  void MergeFrom(const GetPlayerInfoResponse_Unknown10& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl(*this, from);
+  }
+  public:
+
+  private:
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "openfoxwq.GetPlayerInfoResponse.Unknown10";
+  }
+  protected:
+  explicit GetPlayerInfoResponse_Unknown10(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // @@protoc_insertion_point(class_scope:openfoxwq.GetPlayerInfoResponse.Unknown10)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  struct Impl_ {
+  };
+  friend struct ::TableStruct_proto_2fplay_2eproto;
+};
+// -------------------------------------------------------------------
+
+class GetPlayerInfoResponse_Unknown11 final :
+    public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:openfoxwq.GetPlayerInfoResponse.Unknown11) */ {
+ public:
+  inline GetPlayerInfoResponse_Unknown11() : GetPlayerInfoResponse_Unknown11(nullptr) {}
+  explicit PROTOBUF_CONSTEXPR GetPlayerInfoResponse_Unknown11(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  GetPlayerInfoResponse_Unknown11(const GetPlayerInfoResponse_Unknown11& from);
+  GetPlayerInfoResponse_Unknown11(GetPlayerInfoResponse_Unknown11&& from) noexcept
+    : GetPlayerInfoResponse_Unknown11() {
+    *this = ::std::move(from);
+  }
+
+  inline GetPlayerInfoResponse_Unknown11& operator=(const GetPlayerInfoResponse_Unknown11& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline GetPlayerInfoResponse_Unknown11& operator=(GetPlayerInfoResponse_Unknown11&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetOwningArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
+  }
+  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const GetPlayerInfoResponse_Unknown11& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const GetPlayerInfoResponse_Unknown11* internal_default_instance() {
+    return reinterpret_cast<const GetPlayerInfoResponse_Unknown11*>(
+               &_GetPlayerInfoResponse_Unknown11_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    18;
+
+  friend void swap(GetPlayerInfoResponse_Unknown11& a, GetPlayerInfoResponse_Unknown11& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(GetPlayerInfoResponse_Unknown11* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() != nullptr &&
+        GetOwningArena() == other->GetOwningArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() == other->GetOwningArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(GetPlayerInfoResponse_Unknown11* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  GetPlayerInfoResponse_Unknown11* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<GetPlayerInfoResponse_Unknown11>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyFrom;
+  inline void CopyFrom(const GetPlayerInfoResponse_Unknown11& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeFrom;
+  void MergeFrom(const GetPlayerInfoResponse_Unknown11& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl(*this, from);
+  }
+  public:
+
+  private:
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "openfoxwq.GetPlayerInfoResponse.Unknown11";
+  }
+  protected:
+  explicit GetPlayerInfoResponse_Unknown11(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // @@protoc_insertion_point(class_scope:openfoxwq.GetPlayerInfoResponse.Unknown11)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  struct Impl_ {
+  };
+  friend struct ::TableStruct_proto_2fplay_2eproto;
+};
+// -------------------------------------------------------------------
+
+class GetPlayerInfoResponse_Unknown19 final :
+    public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:openfoxwq.GetPlayerInfoResponse.Unknown19) */ {
+ public:
+  inline GetPlayerInfoResponse_Unknown19() : GetPlayerInfoResponse_Unknown19(nullptr) {}
+  explicit PROTOBUF_CONSTEXPR GetPlayerInfoResponse_Unknown19(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  GetPlayerInfoResponse_Unknown19(const GetPlayerInfoResponse_Unknown19& from);
+  GetPlayerInfoResponse_Unknown19(GetPlayerInfoResponse_Unknown19&& from) noexcept
+    : GetPlayerInfoResponse_Unknown19() {
+    *this = ::std::move(from);
+  }
+
+  inline GetPlayerInfoResponse_Unknown19& operator=(const GetPlayerInfoResponse_Unknown19& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline GetPlayerInfoResponse_Unknown19& operator=(GetPlayerInfoResponse_Unknown19&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetOwningArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
+  }
+  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const GetPlayerInfoResponse_Unknown19& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const GetPlayerInfoResponse_Unknown19* internal_default_instance() {
+    return reinterpret_cast<const GetPlayerInfoResponse_Unknown19*>(
+               &_GetPlayerInfoResponse_Unknown19_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    19;
+
+  friend void swap(GetPlayerInfoResponse_Unknown19& a, GetPlayerInfoResponse_Unknown19& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(GetPlayerInfoResponse_Unknown19* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() != nullptr &&
+        GetOwningArena() == other->GetOwningArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() == other->GetOwningArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(GetPlayerInfoResponse_Unknown19* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  GetPlayerInfoResponse_Unknown19* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<GetPlayerInfoResponse_Unknown19>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyFrom;
+  inline void CopyFrom(const GetPlayerInfoResponse_Unknown19& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeFrom;
+  void MergeFrom(const GetPlayerInfoResponse_Unknown19& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl(*this, from);
+  }
+  public:
+
+  private:
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "openfoxwq.GetPlayerInfoResponse.Unknown19";
+  }
+  protected:
+  explicit GetPlayerInfoResponse_Unknown19(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // @@protoc_insertion_point(class_scope:openfoxwq.GetPlayerInfoResponse.Unknown19)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  struct Impl_ {
+  };
+  friend struct ::TableStruct_proto_2fplay_2eproto;
+};
+// -------------------------------------------------------------------
+
+class GetPlayerInfoResponse_Unknown22 final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:openfoxwq.GetPlayerInfoResponse.Unknown22) */ {
+ public:
+  inline GetPlayerInfoResponse_Unknown22() : GetPlayerInfoResponse_Unknown22(nullptr) {}
+  ~GetPlayerInfoResponse_Unknown22() override;
+  explicit PROTOBUF_CONSTEXPR GetPlayerInfoResponse_Unknown22(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  GetPlayerInfoResponse_Unknown22(const GetPlayerInfoResponse_Unknown22& from);
+  GetPlayerInfoResponse_Unknown22(GetPlayerInfoResponse_Unknown22&& from) noexcept
+    : GetPlayerInfoResponse_Unknown22() {
+    *this = ::std::move(from);
+  }
+
+  inline GetPlayerInfoResponse_Unknown22& operator=(const GetPlayerInfoResponse_Unknown22& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline GetPlayerInfoResponse_Unknown22& operator=(GetPlayerInfoResponse_Unknown22&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetOwningArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
+  }
+  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const GetPlayerInfoResponse_Unknown22& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const GetPlayerInfoResponse_Unknown22* internal_default_instance() {
+    return reinterpret_cast<const GetPlayerInfoResponse_Unknown22*>(
+               &_GetPlayerInfoResponse_Unknown22_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    20;
+
+  friend void swap(GetPlayerInfoResponse_Unknown22& a, GetPlayerInfoResponse_Unknown22& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(GetPlayerInfoResponse_Unknown22* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() != nullptr &&
+        GetOwningArena() == other->GetOwningArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() == other->GetOwningArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(GetPlayerInfoResponse_Unknown22* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  GetPlayerInfoResponse_Unknown22* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<GetPlayerInfoResponse_Unknown22>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const GetPlayerInfoResponse_Unknown22& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const GetPlayerInfoResponse_Unknown22& from) {
+    GetPlayerInfoResponse_Unknown22::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  uint8_t* _InternalSerialize(
+      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
+
+  private:
+  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(GetPlayerInfoResponse_Unknown22* other);
+
+  private:
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "openfoxwq.GetPlayerInfoResponse.Unknown22";
+  }
+  protected:
+  explicit GetPlayerInfoResponse_Unknown22(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   public:
 
@@ -3667,7 +4401,7 @@ class GetPlayerInfoResponse_AdditionalInfo final :
   void _internal_set_unknown_field_2(int64_t value);
   public:
 
-  // @@protoc_insertion_point(class_scope:openfoxwq.GetPlayerInfoResponse.AdditionalInfo)
+  // @@protoc_insertion_point(class_scope:openfoxwq.GetPlayerInfoResponse.Unknown22)
  private:
   class _Internal;
 
@@ -3683,6 +4417,131 @@ class GetPlayerInfoResponse_AdditionalInfo final :
     int64_t unknown_field_2_;
   };
   union { Impl_ _impl_; };
+  friend struct ::TableStruct_proto_2fplay_2eproto;
+};
+// -------------------------------------------------------------------
+
+class GetPlayerInfoResponse_Unknown23 final :
+    public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:openfoxwq.GetPlayerInfoResponse.Unknown23) */ {
+ public:
+  inline GetPlayerInfoResponse_Unknown23() : GetPlayerInfoResponse_Unknown23(nullptr) {}
+  explicit PROTOBUF_CONSTEXPR GetPlayerInfoResponse_Unknown23(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  GetPlayerInfoResponse_Unknown23(const GetPlayerInfoResponse_Unknown23& from);
+  GetPlayerInfoResponse_Unknown23(GetPlayerInfoResponse_Unknown23&& from) noexcept
+    : GetPlayerInfoResponse_Unknown23() {
+    *this = ::std::move(from);
+  }
+
+  inline GetPlayerInfoResponse_Unknown23& operator=(const GetPlayerInfoResponse_Unknown23& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline GetPlayerInfoResponse_Unknown23& operator=(GetPlayerInfoResponse_Unknown23&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetOwningArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
+  }
+  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const GetPlayerInfoResponse_Unknown23& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const GetPlayerInfoResponse_Unknown23* internal_default_instance() {
+    return reinterpret_cast<const GetPlayerInfoResponse_Unknown23*>(
+               &_GetPlayerInfoResponse_Unknown23_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    21;
+
+  friend void swap(GetPlayerInfoResponse_Unknown23& a, GetPlayerInfoResponse_Unknown23& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(GetPlayerInfoResponse_Unknown23* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() != nullptr &&
+        GetOwningArena() == other->GetOwningArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() == other->GetOwningArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(GetPlayerInfoResponse_Unknown23* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  GetPlayerInfoResponse_Unknown23* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<GetPlayerInfoResponse_Unknown23>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyFrom;
+  inline void CopyFrom(const GetPlayerInfoResponse_Unknown23& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeFrom;
+  void MergeFrom(const GetPlayerInfoResponse_Unknown23& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl(*this, from);
+  }
+  public:
+
+  private:
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "openfoxwq.GetPlayerInfoResponse.Unknown23";
+  }
+  protected:
+  explicit GetPlayerInfoResponse_Unknown23(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // @@protoc_insertion_point(class_scope:openfoxwq.GetPlayerInfoResponse.Unknown23)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  struct Impl_ {
+  };
   friend struct ::TableStruct_proto_2fplay_2eproto;
 };
 // -------------------------------------------------------------------
@@ -3742,7 +4601,7 @@ class GetPlayerInfoResponse final :
                &_GetPlayerInfoResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    16;
+    22;
 
   friend void swap(GetPlayerInfoResponse& a, GetPlayerInfoResponse& b) {
     a.Swap(&b);
@@ -3819,7 +4678,13 @@ class GetPlayerInfoResponse final :
   typedef GetPlayerInfoResponse_PerformanceRecord PerformanceRecord;
   typedef GetPlayerInfoResponse_Results Results;
   typedef GetPlayerInfoResponse_Rooms Rooms;
-  typedef GetPlayerInfoResponse_AdditionalInfo AdditionalInfo;
+  typedef GetPlayerInfoResponse_MembershipInfo MembershipInfo;
+  typedef GetPlayerInfoResponse_PlayerFlair PlayerFlair;
+  typedef GetPlayerInfoResponse_Unknown10 Unknown10;
+  typedef GetPlayerInfoResponse_Unknown11 Unknown11;
+  typedef GetPlayerInfoResponse_Unknown19 Unknown19;
+  typedef GetPlayerInfoResponse_Unknown22 Unknown22;
+  typedef GetPlayerInfoResponse_Unknown23 Unknown23;
 
   typedef GetPlayerInfoResponse_ResultsType ResultsType;
   static constexpr ResultsType OVERALL =
@@ -3865,11 +4730,17 @@ class GetPlayerInfoResponse final :
     kInfoOptionsFieldNumber = 2,
     kRegisterInfoFieldNumber = 8,
     kRecentRecordFieldNumber = 9,
+    kUnknownField10FieldNumber = 10,
+    kUnknownField11FieldNumber = 11,
     kOverallResultsFieldNumber = 12,
+    kMembershipInfoFieldNumber = 13,
+    kFlairFieldNumber = 14,
     kProInfoFieldNumber = 15,
     kPerfRecordFieldNumber = 18,
+    kUnknownField19FieldNumber = 19,
     kRoomsFieldNumber = 20,
-    kAdditionalInfoFieldNumber = 22,
+    kUnknownField22FieldNumber = 22,
+    kUnknownField23FieldNumber = 23,
     kErrorCodeFieldNumber = 1,
     kSeachedPlayerIdFieldNumber = 3,
     kPlayerIdFieldNumber = 5,
@@ -3966,6 +4837,42 @@ class GetPlayerInfoResponse final :
       ::openfoxwq::GetPlayerInfoResponse_RecentRecord* recent_record);
   ::openfoxwq::GetPlayerInfoResponse_RecentRecord* unsafe_arena_release_recent_record();
 
+  // optional .openfoxwq.GetPlayerInfoResponse.Unknown10 unknown_field_10 = 10;
+  bool has_unknown_field_10() const;
+  private:
+  bool _internal_has_unknown_field_10() const;
+  public:
+  void clear_unknown_field_10();
+  const ::openfoxwq::GetPlayerInfoResponse_Unknown10& unknown_field_10() const;
+  PROTOBUF_NODISCARD ::openfoxwq::GetPlayerInfoResponse_Unknown10* release_unknown_field_10();
+  ::openfoxwq::GetPlayerInfoResponse_Unknown10* mutable_unknown_field_10();
+  void set_allocated_unknown_field_10(::openfoxwq::GetPlayerInfoResponse_Unknown10* unknown_field_10);
+  private:
+  const ::openfoxwq::GetPlayerInfoResponse_Unknown10& _internal_unknown_field_10() const;
+  ::openfoxwq::GetPlayerInfoResponse_Unknown10* _internal_mutable_unknown_field_10();
+  public:
+  void unsafe_arena_set_allocated_unknown_field_10(
+      ::openfoxwq::GetPlayerInfoResponse_Unknown10* unknown_field_10);
+  ::openfoxwq::GetPlayerInfoResponse_Unknown10* unsafe_arena_release_unknown_field_10();
+
+  // optional .openfoxwq.GetPlayerInfoResponse.Unknown11 unknown_field_11 = 11;
+  bool has_unknown_field_11() const;
+  private:
+  bool _internal_has_unknown_field_11() const;
+  public:
+  void clear_unknown_field_11();
+  const ::openfoxwq::GetPlayerInfoResponse_Unknown11& unknown_field_11() const;
+  PROTOBUF_NODISCARD ::openfoxwq::GetPlayerInfoResponse_Unknown11* release_unknown_field_11();
+  ::openfoxwq::GetPlayerInfoResponse_Unknown11* mutable_unknown_field_11();
+  void set_allocated_unknown_field_11(::openfoxwq::GetPlayerInfoResponse_Unknown11* unknown_field_11);
+  private:
+  const ::openfoxwq::GetPlayerInfoResponse_Unknown11& _internal_unknown_field_11() const;
+  ::openfoxwq::GetPlayerInfoResponse_Unknown11* _internal_mutable_unknown_field_11();
+  public:
+  void unsafe_arena_set_allocated_unknown_field_11(
+      ::openfoxwq::GetPlayerInfoResponse_Unknown11* unknown_field_11);
+  ::openfoxwq::GetPlayerInfoResponse_Unknown11* unsafe_arena_release_unknown_field_11();
+
   // optional .openfoxwq.GetPlayerInfoResponse.OverallResults overall_results = 12;
   bool has_overall_results() const;
   private:
@@ -3983,6 +4890,42 @@ class GetPlayerInfoResponse final :
   void unsafe_arena_set_allocated_overall_results(
       ::openfoxwq::GetPlayerInfoResponse_OverallResults* overall_results);
   ::openfoxwq::GetPlayerInfoResponse_OverallResults* unsafe_arena_release_overall_results();
+
+  // optional .openfoxwq.GetPlayerInfoResponse.MembershipInfo membership_info = 13;
+  bool has_membership_info() const;
+  private:
+  bool _internal_has_membership_info() const;
+  public:
+  void clear_membership_info();
+  const ::openfoxwq::GetPlayerInfoResponse_MembershipInfo& membership_info() const;
+  PROTOBUF_NODISCARD ::openfoxwq::GetPlayerInfoResponse_MembershipInfo* release_membership_info();
+  ::openfoxwq::GetPlayerInfoResponse_MembershipInfo* mutable_membership_info();
+  void set_allocated_membership_info(::openfoxwq::GetPlayerInfoResponse_MembershipInfo* membership_info);
+  private:
+  const ::openfoxwq::GetPlayerInfoResponse_MembershipInfo& _internal_membership_info() const;
+  ::openfoxwq::GetPlayerInfoResponse_MembershipInfo* _internal_mutable_membership_info();
+  public:
+  void unsafe_arena_set_allocated_membership_info(
+      ::openfoxwq::GetPlayerInfoResponse_MembershipInfo* membership_info);
+  ::openfoxwq::GetPlayerInfoResponse_MembershipInfo* unsafe_arena_release_membership_info();
+
+  // optional .openfoxwq.GetPlayerInfoResponse.PlayerFlair flair = 14;
+  bool has_flair() const;
+  private:
+  bool _internal_has_flair() const;
+  public:
+  void clear_flair();
+  const ::openfoxwq::GetPlayerInfoResponse_PlayerFlair& flair() const;
+  PROTOBUF_NODISCARD ::openfoxwq::GetPlayerInfoResponse_PlayerFlair* release_flair();
+  ::openfoxwq::GetPlayerInfoResponse_PlayerFlair* mutable_flair();
+  void set_allocated_flair(::openfoxwq::GetPlayerInfoResponse_PlayerFlair* flair);
+  private:
+  const ::openfoxwq::GetPlayerInfoResponse_PlayerFlair& _internal_flair() const;
+  ::openfoxwq::GetPlayerInfoResponse_PlayerFlair* _internal_mutable_flair();
+  public:
+  void unsafe_arena_set_allocated_flair(
+      ::openfoxwq::GetPlayerInfoResponse_PlayerFlair* flair);
+  ::openfoxwq::GetPlayerInfoResponse_PlayerFlair* unsafe_arena_release_flair();
 
   // optional .openfoxwq.GetPlayerInfoResponse.ProInfo pro_info = 15;
   bool has_pro_info() const;
@@ -4020,6 +4963,24 @@ class GetPlayerInfoResponse final :
       ::openfoxwq::GetPlayerInfoResponse_PerformanceRecord* perf_record);
   ::openfoxwq::GetPlayerInfoResponse_PerformanceRecord* unsafe_arena_release_perf_record();
 
+  // optional .openfoxwq.GetPlayerInfoResponse.Unknown19 unknown_field_19 = 19;
+  bool has_unknown_field_19() const;
+  private:
+  bool _internal_has_unknown_field_19() const;
+  public:
+  void clear_unknown_field_19();
+  const ::openfoxwq::GetPlayerInfoResponse_Unknown19& unknown_field_19() const;
+  PROTOBUF_NODISCARD ::openfoxwq::GetPlayerInfoResponse_Unknown19* release_unknown_field_19();
+  ::openfoxwq::GetPlayerInfoResponse_Unknown19* mutable_unknown_field_19();
+  void set_allocated_unknown_field_19(::openfoxwq::GetPlayerInfoResponse_Unknown19* unknown_field_19);
+  private:
+  const ::openfoxwq::GetPlayerInfoResponse_Unknown19& _internal_unknown_field_19() const;
+  ::openfoxwq::GetPlayerInfoResponse_Unknown19* _internal_mutable_unknown_field_19();
+  public:
+  void unsafe_arena_set_allocated_unknown_field_19(
+      ::openfoxwq::GetPlayerInfoResponse_Unknown19* unknown_field_19);
+  ::openfoxwq::GetPlayerInfoResponse_Unknown19* unsafe_arena_release_unknown_field_19();
+
   // optional .openfoxwq.GetPlayerInfoResponse.Rooms rooms = 20;
   bool has_rooms() const;
   private:
@@ -4038,23 +4999,41 @@ class GetPlayerInfoResponse final :
       ::openfoxwq::GetPlayerInfoResponse_Rooms* rooms);
   ::openfoxwq::GetPlayerInfoResponse_Rooms* unsafe_arena_release_rooms();
 
-  // optional .openfoxwq.GetPlayerInfoResponse.AdditionalInfo additional_info = 22;
-  bool has_additional_info() const;
+  // optional .openfoxwq.GetPlayerInfoResponse.Unknown22 unknown_field_22 = 22;
+  bool has_unknown_field_22() const;
   private:
-  bool _internal_has_additional_info() const;
+  bool _internal_has_unknown_field_22() const;
   public:
-  void clear_additional_info();
-  const ::openfoxwq::GetPlayerInfoResponse_AdditionalInfo& additional_info() const;
-  PROTOBUF_NODISCARD ::openfoxwq::GetPlayerInfoResponse_AdditionalInfo* release_additional_info();
-  ::openfoxwq::GetPlayerInfoResponse_AdditionalInfo* mutable_additional_info();
-  void set_allocated_additional_info(::openfoxwq::GetPlayerInfoResponse_AdditionalInfo* additional_info);
+  void clear_unknown_field_22();
+  const ::openfoxwq::GetPlayerInfoResponse_Unknown22& unknown_field_22() const;
+  PROTOBUF_NODISCARD ::openfoxwq::GetPlayerInfoResponse_Unknown22* release_unknown_field_22();
+  ::openfoxwq::GetPlayerInfoResponse_Unknown22* mutable_unknown_field_22();
+  void set_allocated_unknown_field_22(::openfoxwq::GetPlayerInfoResponse_Unknown22* unknown_field_22);
   private:
-  const ::openfoxwq::GetPlayerInfoResponse_AdditionalInfo& _internal_additional_info() const;
-  ::openfoxwq::GetPlayerInfoResponse_AdditionalInfo* _internal_mutable_additional_info();
+  const ::openfoxwq::GetPlayerInfoResponse_Unknown22& _internal_unknown_field_22() const;
+  ::openfoxwq::GetPlayerInfoResponse_Unknown22* _internal_mutable_unknown_field_22();
   public:
-  void unsafe_arena_set_allocated_additional_info(
-      ::openfoxwq::GetPlayerInfoResponse_AdditionalInfo* additional_info);
-  ::openfoxwq::GetPlayerInfoResponse_AdditionalInfo* unsafe_arena_release_additional_info();
+  void unsafe_arena_set_allocated_unknown_field_22(
+      ::openfoxwq::GetPlayerInfoResponse_Unknown22* unknown_field_22);
+  ::openfoxwq::GetPlayerInfoResponse_Unknown22* unsafe_arena_release_unknown_field_22();
+
+  // optional .openfoxwq.GetPlayerInfoResponse.Unknown23 unknown_field_23 = 23;
+  bool has_unknown_field_23() const;
+  private:
+  bool _internal_has_unknown_field_23() const;
+  public:
+  void clear_unknown_field_23();
+  const ::openfoxwq::GetPlayerInfoResponse_Unknown23& unknown_field_23() const;
+  PROTOBUF_NODISCARD ::openfoxwq::GetPlayerInfoResponse_Unknown23* release_unknown_field_23();
+  ::openfoxwq::GetPlayerInfoResponse_Unknown23* mutable_unknown_field_23();
+  void set_allocated_unknown_field_23(::openfoxwq::GetPlayerInfoResponse_Unknown23* unknown_field_23);
+  private:
+  const ::openfoxwq::GetPlayerInfoResponse_Unknown23& _internal_unknown_field_23() const;
+  ::openfoxwq::GetPlayerInfoResponse_Unknown23* _internal_mutable_unknown_field_23();
+  public:
+  void unsafe_arena_set_allocated_unknown_field_23(
+      ::openfoxwq::GetPlayerInfoResponse_Unknown23* unknown_field_23);
+  ::openfoxwq::GetPlayerInfoResponse_Unknown23* unsafe_arena_release_unknown_field_23();
 
   // required int64 error_code = 1;
   bool has_error_code() const;
@@ -4139,11 +5118,17 @@ class GetPlayerInfoResponse final :
     ::openfoxwq::InfoOptions* info_options_;
     ::openfoxwq::GetPlayerInfoResponse_RegisterInfo* register_info_;
     ::openfoxwq::GetPlayerInfoResponse_RecentRecord* recent_record_;
+    ::openfoxwq::GetPlayerInfoResponse_Unknown10* unknown_field_10_;
+    ::openfoxwq::GetPlayerInfoResponse_Unknown11* unknown_field_11_;
     ::openfoxwq::GetPlayerInfoResponse_OverallResults* overall_results_;
+    ::openfoxwq::GetPlayerInfoResponse_MembershipInfo* membership_info_;
+    ::openfoxwq::GetPlayerInfoResponse_PlayerFlair* flair_;
     ::openfoxwq::GetPlayerInfoResponse_ProInfo* pro_info_;
     ::openfoxwq::GetPlayerInfoResponse_PerformanceRecord* perf_record_;
+    ::openfoxwq::GetPlayerInfoResponse_Unknown19* unknown_field_19_;
     ::openfoxwq::GetPlayerInfoResponse_Rooms* rooms_;
-    ::openfoxwq::GetPlayerInfoResponse_AdditionalInfo* additional_info_;
+    ::openfoxwq::GetPlayerInfoResponse_Unknown22* unknown_field_22_;
+    ::openfoxwq::GetPlayerInfoResponse_Unknown23* unknown_field_23_;
     int64_t error_code_;
     int64_t seached_player_id_;
     int64_t player_id_;
@@ -4210,7 +5195,7 @@ class InfoOptions final :
                &_InfoOptions_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    17;
+    23;
 
   friend void swap(InfoOptions& a, InfoOptions& b) {
     a.Swap(&b);
@@ -4385,7 +5370,7 @@ class SyncTimeRequest final :
                &_SyncTimeRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    18;
+    24;
 
   friend void swap(SyncTimeRequest& a, SyncTimeRequest& b) {
     a.Swap(&b);
@@ -4545,7 +5530,7 @@ class SyncTimeResponse final :
                &_SyncTimeResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    19;
+    25;
 
   friend void swap(SyncTimeResponse& a, SyncTimeResponse& b) {
     a.Swap(&b);
@@ -4723,7 +5708,7 @@ class SyncPlayersRequest final :
                &_SyncPlayersRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    20;
+    26;
 
   friend void swap(SyncPlayersRequest& a, SyncPlayersRequest& b) {
     a.Swap(&b);
@@ -4883,7 +5868,7 @@ class SyncPlayersResponse final :
                &_SyncPlayersResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    21;
+    27;
 
   friend void swap(SyncPlayersResponse& a, SyncPlayersResponse& b) {
     a.Swap(&b);
@@ -5061,7 +6046,7 @@ class PlayerStateEvent final :
                &_PlayerStateEvent_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    22;
+    28;
 
   friend void swap(PlayerStateEvent& a, PlayerStateEvent& b) {
     a.Swap(&b);
@@ -5259,7 +6244,7 @@ class PlayerOnlineCountEvent final :
                &_PlayerOnlineCountEvent_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    23;
+    29;
 
   friend void swap(PlayerOnlineCountEvent& a, PlayerOnlineCountEvent& b) {
     a.Swap(&b);
@@ -5434,7 +6419,7 @@ class PlayerOnlineEvent final :
                &_PlayerOnlineEvent_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    24;
+    30;
 
   friend void swap(PlayerOnlineEvent& a, PlayerOnlineEvent& b) {
     a.Swap(&b);
@@ -5632,7 +6617,7 @@ class PlayerOfflineEvent final :
                &_PlayerOfflineEvent_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    25;
+    31;
 
   friend void swap(PlayerOfflineEvent& a, PlayerOfflineEvent& b) {
     a.Swap(&b);
@@ -5825,7 +6810,7 @@ class UnknownPlayRequest1_UnknownPlayRequest1Nested1 final :
                &_UnknownPlayRequest1_UnknownPlayRequest1Nested1_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    26;
+    32;
 
   friend void swap(UnknownPlayRequest1_UnknownPlayRequest1Nested1& a, UnknownPlayRequest1_UnknownPlayRequest1Nested1& b) {
     a.Swap(&b);
@@ -5990,7 +6975,7 @@ class UnknownPlayRequest1 final :
                &_UnknownPlayRequest1_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    27;
+    33;
 
   friend void swap(UnknownPlayRequest1& a, UnknownPlayRequest1& b) {
     a.Swap(&b);
@@ -6175,7 +7160,7 @@ class UnknownPlayResponse1 final :
                &_UnknownPlayResponse1_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    28;
+    34;
 
   friend void swap(UnknownPlayResponse1& a, UnknownPlayResponse1& b) {
     a.Swap(&b);
@@ -6335,7 +7320,7 @@ class GetRoomInfoRequest final :
                &_GetRoomInfoRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    29;
+    35;
 
   friend void swap(GetRoomInfoRequest& a, GetRoomInfoRequest& b) {
     a.Swap(&b);
@@ -6500,7 +7485,7 @@ class GetRoomInfoResponse_Unknown2 final :
                &_GetRoomInfoResponse_Unknown2_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    30;
+    36;
 
   friend void swap(GetRoomInfoResponse_Unknown2& a, GetRoomInfoResponse_Unknown2& b) {
     a.Swap(&b);
@@ -6675,7 +7660,7 @@ class GetRoomInfoResponse_PlayerEntry final :
                &_GetRoomInfoResponse_PlayerEntry_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    31;
+    37;
 
   friend void swap(GetRoomInfoResponse_PlayerEntry& a, GetRoomInfoResponse_PlayerEntry& b) {
     a.Swap(&b);
@@ -6969,7 +7954,7 @@ class GetRoomInfoResponse_Unknown5 final :
                &_GetRoomInfoResponse_Unknown5_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    32;
+    38;
 
   friend void swap(GetRoomInfoResponse_Unknown5& a, GetRoomInfoResponse_Unknown5& b) {
     a.Swap(&b);
@@ -7095,7 +8080,7 @@ class GetRoomInfoResponse_RoomInfo final :
                &_GetRoomInfoResponse_RoomInfo_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    33;
+    39;
 
   friend void swap(GetRoomInfoResponse_RoomInfo& a, GetRoomInfoResponse_RoomInfo& b) {
     a.Swap(&b);
@@ -7365,7 +8350,7 @@ class GetRoomInfoResponse final :
                &_GetRoomInfoResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    34;
+    40;
 
   friend void swap(GetRoomInfoResponse& a, GetRoomInfoResponse& b) {
     a.Swap(&b);
@@ -7569,7 +8554,7 @@ class GetAutomatchStatsRequest final :
                &_GetAutomatchStatsRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    35;
+    41;
 
   friend void swap(GetAutomatchStatsRequest& a, GetAutomatchStatsRequest& b) {
     a.Swap(&b);
@@ -7719,7 +8704,7 @@ class GetAutomatchStatsResponse final :
                &_GetAutomatchStatsResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    37;
+    43;
 
   friend void swap(GetAutomatchStatsResponse& a, GetAutomatchStatsResponse& b) {
     a.Swap(&b);
@@ -7905,7 +8890,7 @@ class StartAutomatchRequest final :
                &_StartAutomatchRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    38;
+    44;
 
   friend void swap(StartAutomatchRequest& a, StartAutomatchRequest& b) {
     a.Swap(&b);
@@ -8080,7 +9065,7 @@ class StartAutomatchResponse final :
                &_StartAutomatchResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    39;
+    45;
 
   friend void swap(StartAutomatchResponse& a, StartAutomatchResponse& b) {
     a.Swap(&b);
@@ -8269,7 +9254,7 @@ class StopAutomatchRequest final :
                &_StopAutomatchRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    40;
+    46;
 
   friend void swap(StopAutomatchRequest& a, StopAutomatchRequest& b) {
     a.Swap(&b);
@@ -8395,7 +9380,7 @@ class StopAutomatchResponse final :
                &_StopAutomatchResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    41;
+    47;
 
   friend void swap(StopAutomatchResponse& a, StopAutomatchResponse& b) {
     a.Swap(&b);
@@ -8555,7 +9540,7 @@ class AutomatchFoundEvent_RoomParticipant final :
                &_AutomatchFoundEvent_RoomParticipant_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    42;
+    48;
 
   friend void swap(AutomatchFoundEvent_RoomParticipant& a, AutomatchFoundEvent_RoomParticipant& b) {
     a.Swap(&b);
@@ -8770,7 +9755,7 @@ class AutomatchFoundEvent final :
                &_AutomatchFoundEvent_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    43;
+    49;
 
   friend void swap(AutomatchFoundEvent& a, AutomatchFoundEvent& b) {
     a.Swap(&b);
@@ -9011,7 +9996,7 @@ class AcceptMatchRequest final :
                &_AcceptMatchRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    44;
+    50;
 
   friend void swap(AcceptMatchRequest& a, AcceptMatchRequest& b) {
     a.Swap(&b);
@@ -9137,7 +10122,7 @@ class AcceptMatchResponse final :
                &_AcceptMatchResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    45;
+    51;
 
   friend void swap(AcceptMatchResponse& a, AcceptMatchResponse& b) {
     a.Swap(&b);
@@ -9297,7 +10282,7 @@ class MatchStartEvent_MatchPlayerInfo final :
                &_MatchStartEvent_MatchPlayerInfo_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    46;
+    52;
 
   friend void swap(MatchStartEvent_MatchPlayerInfo& a, MatchStartEvent_MatchPlayerInfo& b) {
     a.Swap(&b);
@@ -9527,7 +10512,7 @@ class MatchStartEvent_AutomatchPreset final :
                &_MatchStartEvent_AutomatchPreset_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    47;
+    53;
 
   friend void swap(MatchStartEvent_AutomatchPreset& a, MatchStartEvent_AutomatchPreset& b) {
     a.Swap(&b);
@@ -9792,7 +10777,7 @@ class MatchStartEvent final :
                &_MatchStartEvent_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    48;
+    54;
 
   friend void swap(MatchStartEvent& a, MatchStartEvent& b) {
     a.Swap(&b);
@@ -10170,7 +11155,7 @@ class HeartbeatInfo final :
                &_HeartbeatInfo_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    49;
+    55;
 
   friend void swap(HeartbeatInfo& a, HeartbeatInfo& b) {
     a.Swap(&b);
@@ -10345,7 +11330,7 @@ class EnterRoomRequest final :
                &_EnterRoomRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    50;
+    56;
 
   friend void swap(EnterRoomRequest& a, EnterRoomRequest& b) {
     a.Swap(&b);
@@ -10510,7 +11495,7 @@ class EnterRoomResponse final :
                &_EnterRoomResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    51;
+    57;
 
   friend void swap(EnterRoomResponse& a, EnterRoomResponse& b) {
     a.Swap(&b);
@@ -10710,7 +11695,7 @@ class LeaveRoomRequest final :
                &_LeaveRoomRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    52;
+    58;
 
   friend void swap(LeaveRoomRequest& a, LeaveRoomRequest& b) {
     a.Swap(&b);
@@ -10875,7 +11860,7 @@ class LeaveRoomResponse final :
                &_LeaveRoomResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    53;
+    59;
 
   friend void swap(LeaveRoomResponse& a, LeaveRoomResponse& b) {
     a.Swap(&b);
@@ -11055,7 +12040,7 @@ class ListRoomParticipantsRequest final :
                &_ListRoomParticipantsRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    54;
+    60;
 
   friend void swap(ListRoomParticipantsRequest& a, ListRoomParticipantsRequest& b) {
     a.Swap(&b);
@@ -11253,7 +12238,7 @@ class ListRoomParticipantsResponse_RoomParticipantInfo final :
                &_ListRoomParticipantsResponse_RoomParticipantInfo_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    55;
+    61;
 
   friend void swap(ListRoomParticipantsResponse_RoomParticipantInfo& a, ListRoomParticipantsResponse_RoomParticipantInfo& b) {
     a.Swap(&b);
@@ -11513,7 +12498,7 @@ class ListRoomParticipantsResponse final :
                &_ListRoomParticipantsResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    56;
+    62;
 
   friend void swap(ListRoomParticipantsResponse& a, ListRoomParticipantsResponse& b) {
     a.Swap(&b);
@@ -11730,7 +12715,7 @@ class LastTurnInfo final :
                &_LastTurnInfo_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    57;
+    63;
 
   friend void swap(LastTurnInfo& a, LastTurnInfo& b) {
     a.Swap(&b);
@@ -11890,7 +12875,7 @@ class MoveRequest final :
                &_MoveRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    58;
+    64;
 
   friend void swap(MoveRequest& a, MoveRequest& b) {
     a.Swap(&b);
@@ -12103,7 +13088,7 @@ class MoveResponse final :
                &_MoveResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    59;
+    65;
 
   friend void swap(MoveResponse& a, MoveResponse& b) {
     a.Swap(&b);
@@ -12263,7 +13248,7 @@ class PassRequest final :
                &_PassRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    60;
+    66;
 
   friend void swap(PassRequest& a, PassRequest& b) {
     a.Swap(&b);
@@ -12428,7 +13413,7 @@ class PassResponse final :
                &_PassResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    61;
+    67;
 
   friend void swap(PassResponse& a, PassResponse& b) {
     a.Swap(&b);
@@ -12588,7 +13573,7 @@ class SyncMatchTimeRequest final :
                &_SyncMatchTimeRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    62;
+    68;
 
   friend void swap(SyncMatchTimeRequest& a, SyncMatchTimeRequest& b) {
     a.Swap(&b);
@@ -12748,7 +13733,7 @@ class SyncMatchTimeResponse_ElapsedInfo final :
                &_SyncMatchTimeResponse_ElapsedInfo_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    63;
+    69;
 
   friend void swap(SyncMatchTimeResponse_ElapsedInfo& a, SyncMatchTimeResponse_ElapsedInfo& b) {
     a.Swap(&b);
@@ -12908,7 +13893,7 @@ class SyncMatchTimeResponse final :
                &_SyncMatchTimeResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    64;
+    70;
 
   friend void swap(SyncMatchTimeResponse& a, SyncMatchTimeResponse& b) {
     a.Swap(&b);
@@ -13125,7 +14110,7 @@ class MatchPlayerTimeState final :
                &_MatchPlayerTimeState_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    65;
+    71;
 
   friend void swap(MatchPlayerTimeState& a, MatchPlayerTimeState& b) {
     a.Swap(&b);
@@ -13363,7 +14348,7 @@ class NextMoveEvent final :
                &_NextMoveEvent_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    66;
+    72;
 
   friend void swap(NextMoveEvent& a, NextMoveEvent& b) {
     a.Swap(&b);
@@ -13623,7 +14608,7 @@ class PassEvent final :
                &_PassEvent_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    67;
+    73;
 
   friend void swap(PassEvent& a, PassEvent& b) {
     a.Swap(&b);
@@ -13838,7 +14823,7 @@ class CountdownEvent final :
                &_CountdownEvent_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    68;
+    74;
 
   friend void swap(CountdownEvent& a, CountdownEvent& b) {
     a.Swap(&b);
@@ -14076,7 +15061,7 @@ class ResumeCountdownEvent final :
                &_ResumeCountdownEvent_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    69;
+    75;
 
   friend void swap(ResumeCountdownEvent& a, ResumeCountdownEvent& b) {
     a.Swap(&b);
@@ -14256,7 +15241,7 @@ class RequestCountingRequest final :
                &_RequestCountingRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    70;
+    76;
 
   friend void swap(RequestCountingRequest& a, RequestCountingRequest& b) {
     a.Swap(&b);
@@ -14416,7 +15401,7 @@ class RequestCountingResponse final :
                &_RequestCountingResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    71;
+    77;
 
   friend void swap(RequestCountingResponse& a, RequestCountingResponse& b) {
     a.Swap(&b);
@@ -14576,7 +15561,7 @@ class SendCountingDecisionResponse final :
                &_SendCountingDecisionResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    72;
+    78;
 
   friend void swap(SendCountingDecisionResponse& a, SendCountingDecisionResponse& b) {
     a.Swap(&b);
@@ -14736,7 +15721,7 @@ class CountingDecision final :
                &_CountingDecision_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    73;
+    79;
 
   friend void swap(CountingDecision& a, CountingDecision& b) {
     a.Swap(&b);
@@ -14914,7 +15899,7 @@ class CountingEvent final :
                &_CountingEvent_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    74;
+    80;
 
   friend void swap(CountingEvent& a, CountingEvent& b) {
     a.Swap(&b);
@@ -15192,7 +16177,7 @@ class ResignRequest final :
                &_ResignRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    75;
+    81;
 
   friend void swap(ResignRequest& a, ResignRequest& b) {
     a.Swap(&b);
@@ -15352,7 +16337,7 @@ class ResignResponse final :
                &_ResignResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    76;
+    82;
 
   friend void swap(ResignResponse& a, ResignResponse& b) {
     a.Swap(&b);
@@ -15512,7 +16497,7 @@ class GameResultEvent final :
                &_GameResultEvent_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    77;
+    83;
 
   friend void swap(GameResultEvent& a, GameResultEvent& b) {
     a.Swap(&b);
@@ -18015,105 +19000,210 @@ inline void GetPlayerInfoResponse_Rooms::set_unknown_field_4(int64_t value) {
 
 // -------------------------------------------------------------------
 
-// GetPlayerInfoResponse_AdditionalInfo
+// GetPlayerInfoResponse_MembershipInfo
 
-// optional int64 unknown_field_1 = 1;
-inline bool GetPlayerInfoResponse_AdditionalInfo::_internal_has_unknown_field_1() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+// optional .openfoxwq.MembershipType type = 1;
+inline bool GetPlayerInfoResponse_MembershipInfo::_internal_has_type() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool GetPlayerInfoResponse_AdditionalInfo::has_unknown_field_1() const {
-  return _internal_has_unknown_field_1();
+inline bool GetPlayerInfoResponse_MembershipInfo::has_type() const {
+  return _internal_has_type();
 }
-inline void GetPlayerInfoResponse_AdditionalInfo::clear_unknown_field_1() {
-  _impl_.unknown_field_1_ = int64_t{0};
-  _impl_._has_bits_[0] &= ~0x00000004u;
+inline void GetPlayerInfoResponse_MembershipInfo::clear_type() {
+  _impl_.type_ = 0;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline int64_t GetPlayerInfoResponse_AdditionalInfo::_internal_unknown_field_1() const {
-  return _impl_.unknown_field_1_;
+inline ::openfoxwq::MembershipType GetPlayerInfoResponse_MembershipInfo::_internal_type() const {
+  return static_cast< ::openfoxwq::MembershipType >(_impl_.type_);
 }
-inline int64_t GetPlayerInfoResponse_AdditionalInfo::unknown_field_1() const {
-  // @@protoc_insertion_point(field_get:openfoxwq.GetPlayerInfoResponse.AdditionalInfo.unknown_field_1)
-  return _internal_unknown_field_1();
+inline ::openfoxwq::MembershipType GetPlayerInfoResponse_MembershipInfo::type() const {
+  // @@protoc_insertion_point(field_get:openfoxwq.GetPlayerInfoResponse.MembershipInfo.type)
+  return _internal_type();
 }
-inline void GetPlayerInfoResponse_AdditionalInfo::_internal_set_unknown_field_1(int64_t value) {
-  _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.unknown_field_1_ = value;
+inline void GetPlayerInfoResponse_MembershipInfo::_internal_set_type(::openfoxwq::MembershipType value) {
+  assert(::openfoxwq::MembershipType_IsValid(value));
+  _impl_._has_bits_[0] |= 0x00000002u;
+  _impl_.type_ = value;
 }
-inline void GetPlayerInfoResponse_AdditionalInfo::set_unknown_field_1(int64_t value) {
-  _internal_set_unknown_field_1(value);
-  // @@protoc_insertion_point(field_set:openfoxwq.GetPlayerInfoResponse.AdditionalInfo.unknown_field_1)
-}
-
-// optional int64 unknown_field_2 = 2;
-inline bool GetPlayerInfoResponse_AdditionalInfo::_internal_has_unknown_field_2() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
-  return value;
-}
-inline bool GetPlayerInfoResponse_AdditionalInfo::has_unknown_field_2() const {
-  return _internal_has_unknown_field_2();
-}
-inline void GetPlayerInfoResponse_AdditionalInfo::clear_unknown_field_2() {
-  _impl_.unknown_field_2_ = int64_t{0};
-  _impl_._has_bits_[0] &= ~0x00000008u;
-}
-inline int64_t GetPlayerInfoResponse_AdditionalInfo::_internal_unknown_field_2() const {
-  return _impl_.unknown_field_2_;
-}
-inline int64_t GetPlayerInfoResponse_AdditionalInfo::unknown_field_2() const {
-  // @@protoc_insertion_point(field_get:openfoxwq.GetPlayerInfoResponse.AdditionalInfo.unknown_field_2)
-  return _internal_unknown_field_2();
-}
-inline void GetPlayerInfoResponse_AdditionalInfo::_internal_set_unknown_field_2(int64_t value) {
-  _impl_._has_bits_[0] |= 0x00000008u;
-  _impl_.unknown_field_2_ = value;
-}
-inline void GetPlayerInfoResponse_AdditionalInfo::set_unknown_field_2(int64_t value) {
-  _internal_set_unknown_field_2(value);
-  // @@protoc_insertion_point(field_set:openfoxwq.GetPlayerInfoResponse.AdditionalInfo.unknown_field_2)
+inline void GetPlayerInfoResponse_MembershipInfo::set_type(::openfoxwq::MembershipType value) {
+  _internal_set_type(value);
+  // @@protoc_insertion_point(field_set:openfoxwq.GetPlayerInfoResponse.MembershipInfo.type)
 }
 
-// optional string unknown_field_3 = 3;
-inline bool GetPlayerInfoResponse_AdditionalInfo::_internal_has_unknown_field_3() const {
+// optional int64 valid_until = 2;
+inline bool GetPlayerInfoResponse_MembershipInfo::_internal_has_valid_until() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool GetPlayerInfoResponse_AdditionalInfo::has_unknown_field_3() const {
+inline bool GetPlayerInfoResponse_MembershipInfo::has_valid_until() const {
+  return _internal_has_valid_until();
+}
+inline void GetPlayerInfoResponse_MembershipInfo::clear_valid_until() {
+  _impl_.valid_until_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000001u;
+}
+inline int64_t GetPlayerInfoResponse_MembershipInfo::_internal_valid_until() const {
+  return _impl_.valid_until_;
+}
+inline int64_t GetPlayerInfoResponse_MembershipInfo::valid_until() const {
+  // @@protoc_insertion_point(field_get:openfoxwq.GetPlayerInfoResponse.MembershipInfo.valid_until)
+  return _internal_valid_until();
+}
+inline void GetPlayerInfoResponse_MembershipInfo::_internal_set_valid_until(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000001u;
+  _impl_.valid_until_ = value;
+}
+inline void GetPlayerInfoResponse_MembershipInfo::set_valid_until(int64_t value) {
+  _internal_set_valid_until(value);
+  // @@protoc_insertion_point(field_set:openfoxwq.GetPlayerInfoResponse.MembershipInfo.valid_until)
+}
+
+// -------------------------------------------------------------------
+
+// GetPlayerInfoResponse_PlayerFlair
+
+// optional bool ai = 2;
+inline bool GetPlayerInfoResponse_PlayerFlair::_internal_has_ai() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool GetPlayerInfoResponse_PlayerFlair::has_ai() const {
+  return _internal_has_ai();
+}
+inline void GetPlayerInfoResponse_PlayerFlair::clear_ai() {
+  _impl_.ai_ = false;
+  _impl_._has_bits_[0] &= ~0x00000001u;
+}
+inline bool GetPlayerInfoResponse_PlayerFlair::_internal_ai() const {
+  return _impl_.ai_;
+}
+inline bool GetPlayerInfoResponse_PlayerFlair::ai() const {
+  // @@protoc_insertion_point(field_get:openfoxwq.GetPlayerInfoResponse.PlayerFlair.ai)
+  return _internal_ai();
+}
+inline void GetPlayerInfoResponse_PlayerFlair::_internal_set_ai(bool value) {
+  _impl_._has_bits_[0] |= 0x00000001u;
+  _impl_.ai_ = value;
+}
+inline void GetPlayerInfoResponse_PlayerFlair::set_ai(bool value) {
+  _internal_set_ai(value);
+  // @@protoc_insertion_point(field_set:openfoxwq.GetPlayerInfoResponse.PlayerFlair.ai)
+}
+
+// -------------------------------------------------------------------
+
+// GetPlayerInfoResponse_Unknown10
+
+// -------------------------------------------------------------------
+
+// GetPlayerInfoResponse_Unknown11
+
+// -------------------------------------------------------------------
+
+// GetPlayerInfoResponse_Unknown19
+
+// -------------------------------------------------------------------
+
+// GetPlayerInfoResponse_Unknown22
+
+// optional int64 unknown_field_1 = 1;
+inline bool GetPlayerInfoResponse_Unknown22::_internal_has_unknown_field_1() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool GetPlayerInfoResponse_Unknown22::has_unknown_field_1() const {
+  return _internal_has_unknown_field_1();
+}
+inline void GetPlayerInfoResponse_Unknown22::clear_unknown_field_1() {
+  _impl_.unknown_field_1_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000004u;
+}
+inline int64_t GetPlayerInfoResponse_Unknown22::_internal_unknown_field_1() const {
+  return _impl_.unknown_field_1_;
+}
+inline int64_t GetPlayerInfoResponse_Unknown22::unknown_field_1() const {
+  // @@protoc_insertion_point(field_get:openfoxwq.GetPlayerInfoResponse.Unknown22.unknown_field_1)
+  return _internal_unknown_field_1();
+}
+inline void GetPlayerInfoResponse_Unknown22::_internal_set_unknown_field_1(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000004u;
+  _impl_.unknown_field_1_ = value;
+}
+inline void GetPlayerInfoResponse_Unknown22::set_unknown_field_1(int64_t value) {
+  _internal_set_unknown_field_1(value);
+  // @@protoc_insertion_point(field_set:openfoxwq.GetPlayerInfoResponse.Unknown22.unknown_field_1)
+}
+
+// optional int64 unknown_field_2 = 2;
+inline bool GetPlayerInfoResponse_Unknown22::_internal_has_unknown_field_2() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
+  return value;
+}
+inline bool GetPlayerInfoResponse_Unknown22::has_unknown_field_2() const {
+  return _internal_has_unknown_field_2();
+}
+inline void GetPlayerInfoResponse_Unknown22::clear_unknown_field_2() {
+  _impl_.unknown_field_2_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000008u;
+}
+inline int64_t GetPlayerInfoResponse_Unknown22::_internal_unknown_field_2() const {
+  return _impl_.unknown_field_2_;
+}
+inline int64_t GetPlayerInfoResponse_Unknown22::unknown_field_2() const {
+  // @@protoc_insertion_point(field_get:openfoxwq.GetPlayerInfoResponse.Unknown22.unknown_field_2)
+  return _internal_unknown_field_2();
+}
+inline void GetPlayerInfoResponse_Unknown22::_internal_set_unknown_field_2(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000008u;
+  _impl_.unknown_field_2_ = value;
+}
+inline void GetPlayerInfoResponse_Unknown22::set_unknown_field_2(int64_t value) {
+  _internal_set_unknown_field_2(value);
+  // @@protoc_insertion_point(field_set:openfoxwq.GetPlayerInfoResponse.Unknown22.unknown_field_2)
+}
+
+// optional string unknown_field_3 = 3;
+inline bool GetPlayerInfoResponse_Unknown22::_internal_has_unknown_field_3() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool GetPlayerInfoResponse_Unknown22::has_unknown_field_3() const {
   return _internal_has_unknown_field_3();
 }
-inline void GetPlayerInfoResponse_AdditionalInfo::clear_unknown_field_3() {
+inline void GetPlayerInfoResponse_Unknown22::clear_unknown_field_3() {
   _impl_.unknown_field_3_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& GetPlayerInfoResponse_AdditionalInfo::unknown_field_3() const {
-  // @@protoc_insertion_point(field_get:openfoxwq.GetPlayerInfoResponse.AdditionalInfo.unknown_field_3)
+inline const std::string& GetPlayerInfoResponse_Unknown22::unknown_field_3() const {
+  // @@protoc_insertion_point(field_get:openfoxwq.GetPlayerInfoResponse.Unknown22.unknown_field_3)
   return _internal_unknown_field_3();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void GetPlayerInfoResponse_AdditionalInfo::set_unknown_field_3(ArgT0&& arg0, ArgT... args) {
+void GetPlayerInfoResponse_Unknown22::set_unknown_field_3(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.unknown_field_3_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:openfoxwq.GetPlayerInfoResponse.AdditionalInfo.unknown_field_3)
+  // @@protoc_insertion_point(field_set:openfoxwq.GetPlayerInfoResponse.Unknown22.unknown_field_3)
 }
-inline std::string* GetPlayerInfoResponse_AdditionalInfo::mutable_unknown_field_3() {
+inline std::string* GetPlayerInfoResponse_Unknown22::mutable_unknown_field_3() {
   std::string* _s = _internal_mutable_unknown_field_3();
-  // @@protoc_insertion_point(field_mutable:openfoxwq.GetPlayerInfoResponse.AdditionalInfo.unknown_field_3)
+  // @@protoc_insertion_point(field_mutable:openfoxwq.GetPlayerInfoResponse.Unknown22.unknown_field_3)
   return _s;
 }
-inline const std::string& GetPlayerInfoResponse_AdditionalInfo::_internal_unknown_field_3() const {
+inline const std::string& GetPlayerInfoResponse_Unknown22::_internal_unknown_field_3() const {
   return _impl_.unknown_field_3_.Get();
 }
-inline void GetPlayerInfoResponse_AdditionalInfo::_internal_set_unknown_field_3(const std::string& value) {
+inline void GetPlayerInfoResponse_Unknown22::_internal_set_unknown_field_3(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.unknown_field_3_.Set(value, GetArenaForAllocation());
 }
-inline std::string* GetPlayerInfoResponse_AdditionalInfo::_internal_mutable_unknown_field_3() {
+inline std::string* GetPlayerInfoResponse_Unknown22::_internal_mutable_unknown_field_3() {
   _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.unknown_field_3_.Mutable(GetArenaForAllocation());
 }
-inline std::string* GetPlayerInfoResponse_AdditionalInfo::release_unknown_field_3() {
-  // @@protoc_insertion_point(field_release:openfoxwq.GetPlayerInfoResponse.AdditionalInfo.unknown_field_3)
+inline std::string* GetPlayerInfoResponse_Unknown22::release_unknown_field_3() {
+  // @@protoc_insertion_point(field_release:openfoxwq.GetPlayerInfoResponse.Unknown22.unknown_field_3)
   if (!_internal_has_unknown_field_3()) {
     return nullptr;
   }
@@ -18126,7 +19216,7 @@ inline std::string* GetPlayerInfoResponse_AdditionalInfo::release_unknown_field_
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void GetPlayerInfoResponse_AdditionalInfo::set_allocated_unknown_field_3(std::string* unknown_field_3) {
+inline void GetPlayerInfoResponse_Unknown22::set_allocated_unknown_field_3(std::string* unknown_field_3) {
   if (unknown_field_3 != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
@@ -18138,50 +19228,50 @@ inline void GetPlayerInfoResponse_AdditionalInfo::set_allocated_unknown_field_3(
     _impl_.unknown_field_3_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:openfoxwq.GetPlayerInfoResponse.AdditionalInfo.unknown_field_3)
+  // @@protoc_insertion_point(field_set_allocated:openfoxwq.GetPlayerInfoResponse.Unknown22.unknown_field_3)
 }
 
 // optional string unknown_field_4 = 4;
-inline bool GetPlayerInfoResponse_AdditionalInfo::_internal_has_unknown_field_4() const {
+inline bool GetPlayerInfoResponse_Unknown22::_internal_has_unknown_field_4() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool GetPlayerInfoResponse_AdditionalInfo::has_unknown_field_4() const {
+inline bool GetPlayerInfoResponse_Unknown22::has_unknown_field_4() const {
   return _internal_has_unknown_field_4();
 }
-inline void GetPlayerInfoResponse_AdditionalInfo::clear_unknown_field_4() {
+inline void GetPlayerInfoResponse_Unknown22::clear_unknown_field_4() {
   _impl_.unknown_field_4_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& GetPlayerInfoResponse_AdditionalInfo::unknown_field_4() const {
-  // @@protoc_insertion_point(field_get:openfoxwq.GetPlayerInfoResponse.AdditionalInfo.unknown_field_4)
+inline const std::string& GetPlayerInfoResponse_Unknown22::unknown_field_4() const {
+  // @@protoc_insertion_point(field_get:openfoxwq.GetPlayerInfoResponse.Unknown22.unknown_field_4)
   return _internal_unknown_field_4();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void GetPlayerInfoResponse_AdditionalInfo::set_unknown_field_4(ArgT0&& arg0, ArgT... args) {
+void GetPlayerInfoResponse_Unknown22::set_unknown_field_4(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
  _impl_.unknown_field_4_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:openfoxwq.GetPlayerInfoResponse.AdditionalInfo.unknown_field_4)
+  // @@protoc_insertion_point(field_set:openfoxwq.GetPlayerInfoResponse.Unknown22.unknown_field_4)
 }
-inline std::string* GetPlayerInfoResponse_AdditionalInfo::mutable_unknown_field_4() {
+inline std::string* GetPlayerInfoResponse_Unknown22::mutable_unknown_field_4() {
   std::string* _s = _internal_mutable_unknown_field_4();
-  // @@protoc_insertion_point(field_mutable:openfoxwq.GetPlayerInfoResponse.AdditionalInfo.unknown_field_4)
+  // @@protoc_insertion_point(field_mutable:openfoxwq.GetPlayerInfoResponse.Unknown22.unknown_field_4)
   return _s;
 }
-inline const std::string& GetPlayerInfoResponse_AdditionalInfo::_internal_unknown_field_4() const {
+inline const std::string& GetPlayerInfoResponse_Unknown22::_internal_unknown_field_4() const {
   return _impl_.unknown_field_4_.Get();
 }
-inline void GetPlayerInfoResponse_AdditionalInfo::_internal_set_unknown_field_4(const std::string& value) {
+inline void GetPlayerInfoResponse_Unknown22::_internal_set_unknown_field_4(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.unknown_field_4_.Set(value, GetArenaForAllocation());
 }
-inline std::string* GetPlayerInfoResponse_AdditionalInfo::_internal_mutable_unknown_field_4() {
+inline std::string* GetPlayerInfoResponse_Unknown22::_internal_mutable_unknown_field_4() {
   _impl_._has_bits_[0] |= 0x00000002u;
   return _impl_.unknown_field_4_.Mutable(GetArenaForAllocation());
 }
-inline std::string* GetPlayerInfoResponse_AdditionalInfo::release_unknown_field_4() {
-  // @@protoc_insertion_point(field_release:openfoxwq.GetPlayerInfoResponse.AdditionalInfo.unknown_field_4)
+inline std::string* GetPlayerInfoResponse_Unknown22::release_unknown_field_4() {
+  // @@protoc_insertion_point(field_release:openfoxwq.GetPlayerInfoResponse.Unknown22.unknown_field_4)
   if (!_internal_has_unknown_field_4()) {
     return nullptr;
   }
@@ -18194,7 +19284,7 @@ inline std::string* GetPlayerInfoResponse_AdditionalInfo::release_unknown_field_
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void GetPlayerInfoResponse_AdditionalInfo::set_allocated_unknown_field_4(std::string* unknown_field_4) {
+inline void GetPlayerInfoResponse_Unknown22::set_allocated_unknown_field_4(std::string* unknown_field_4) {
   if (unknown_field_4 != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
@@ -18206,8 +19296,12 @@ inline void GetPlayerInfoResponse_AdditionalInfo::set_allocated_unknown_field_4(
     _impl_.unknown_field_4_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:openfoxwq.GetPlayerInfoResponse.AdditionalInfo.unknown_field_4)
+  // @@protoc_insertion_point(field_set_allocated:openfoxwq.GetPlayerInfoResponse.Unknown22.unknown_field_4)
 }
+
+// -------------------------------------------------------------------
+
+// GetPlayerInfoResponse_Unknown23
 
 // -------------------------------------------------------------------
 
@@ -18215,7 +19309,7 @@ inline void GetPlayerInfoResponse_AdditionalInfo::set_allocated_unknown_field_4(
 
 // required int64 error_code = 1;
 inline bool GetPlayerInfoResponse::_internal_has_error_code() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000200u) != 0;
+  bool value = (_impl_._has_bits_[0] & 0x00008000u) != 0;
   return value;
 }
 inline bool GetPlayerInfoResponse::has_error_code() const {
@@ -18223,7 +19317,7 @@ inline bool GetPlayerInfoResponse::has_error_code() const {
 }
 inline void GetPlayerInfoResponse::clear_error_code() {
   _impl_.error_code_ = int64_t{0};
-  _impl_._has_bits_[0] &= ~0x00000200u;
+  _impl_._has_bits_[0] &= ~0x00008000u;
 }
 inline int64_t GetPlayerInfoResponse::_internal_error_code() const {
   return _impl_.error_code_;
@@ -18233,7 +19327,7 @@ inline int64_t GetPlayerInfoResponse::error_code() const {
   return _internal_error_code();
 }
 inline void GetPlayerInfoResponse::_internal_set_error_code(int64_t value) {
-  _impl_._has_bits_[0] |= 0x00000200u;
+  _impl_._has_bits_[0] |= 0x00008000u;
   _impl_.error_code_ = value;
 }
 inline void GetPlayerInfoResponse::set_error_code(int64_t value) {
@@ -18333,7 +19427,7 @@ inline void GetPlayerInfoResponse::set_allocated_info_options(::openfoxwq::InfoO
 
 // optional int64 seached_player_id = 3;
 inline bool GetPlayerInfoResponse::_internal_has_seached_player_id() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000400u) != 0;
+  bool value = (_impl_._has_bits_[0] & 0x00010000u) != 0;
   return value;
 }
 inline bool GetPlayerInfoResponse::has_seached_player_id() const {
@@ -18341,7 +19435,7 @@ inline bool GetPlayerInfoResponse::has_seached_player_id() const {
 }
 inline void GetPlayerInfoResponse::clear_seached_player_id() {
   _impl_.seached_player_id_ = int64_t{0};
-  _impl_._has_bits_[0] &= ~0x00000400u;
+  _impl_._has_bits_[0] &= ~0x00010000u;
 }
 inline int64_t GetPlayerInfoResponse::_internal_seached_player_id() const {
   return _impl_.seached_player_id_;
@@ -18351,7 +19445,7 @@ inline int64_t GetPlayerInfoResponse::seached_player_id() const {
   return _internal_seached_player_id();
 }
 inline void GetPlayerInfoResponse::_internal_set_seached_player_id(int64_t value) {
-  _impl_._has_bits_[0] |= 0x00000400u;
+  _impl_._has_bits_[0] |= 0x00010000u;
   _impl_.seached_player_id_ = value;
 }
 inline void GetPlayerInfoResponse::set_seached_player_id(int64_t value) {
@@ -18429,7 +19523,7 @@ inline void GetPlayerInfoResponse::set_allocated_searched_player_name(std::strin
 
 // optional int64 player_id = 5;
 inline bool GetPlayerInfoResponse::_internal_has_player_id() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000800u) != 0;
+  bool value = (_impl_._has_bits_[0] & 0x00020000u) != 0;
   return value;
 }
 inline bool GetPlayerInfoResponse::has_player_id() const {
@@ -18437,7 +19531,7 @@ inline bool GetPlayerInfoResponse::has_player_id() const {
 }
 inline void GetPlayerInfoResponse::clear_player_id() {
   _impl_.player_id_ = int64_t{0};
-  _impl_._has_bits_[0] &= ~0x00000800u;
+  _impl_._has_bits_[0] &= ~0x00020000u;
 }
 inline int64_t GetPlayerInfoResponse::_internal_player_id() const {
   return _impl_.player_id_;
@@ -18447,7 +19541,7 @@ inline int64_t GetPlayerInfoResponse::player_id() const {
   return _internal_player_id();
 }
 inline void GetPlayerInfoResponse::_internal_set_player_id(int64_t value) {
-  _impl_._has_bits_[0] |= 0x00000800u;
+  _impl_._has_bits_[0] |= 0x00020000u;
   _impl_.player_id_ = value;
 }
 inline void GetPlayerInfoResponse::set_player_id(int64_t value) {
@@ -18457,7 +19551,7 @@ inline void GetPlayerInfoResponse::set_player_id(int64_t value) {
 
 // optional int64 foxcoin = 6;
 inline bool GetPlayerInfoResponse::_internal_has_foxcoin() const {
-  bool value = (_impl_._has_bits_[0] & 0x00001000u) != 0;
+  bool value = (_impl_._has_bits_[0] & 0x00040000u) != 0;
   return value;
 }
 inline bool GetPlayerInfoResponse::has_foxcoin() const {
@@ -18465,7 +19559,7 @@ inline bool GetPlayerInfoResponse::has_foxcoin() const {
 }
 inline void GetPlayerInfoResponse::clear_foxcoin() {
   _impl_.foxcoin_ = int64_t{0};
-  _impl_._has_bits_[0] &= ~0x00001000u;
+  _impl_._has_bits_[0] &= ~0x00040000u;
 }
 inline int64_t GetPlayerInfoResponse::_internal_foxcoin() const {
   return _impl_.foxcoin_;
@@ -18475,7 +19569,7 @@ inline int64_t GetPlayerInfoResponse::foxcoin() const {
   return _internal_foxcoin();
 }
 inline void GetPlayerInfoResponse::_internal_set_foxcoin(int64_t value) {
-  _impl_._has_bits_[0] |= 0x00001000u;
+  _impl_._has_bits_[0] |= 0x00040000u;
   _impl_.foxcoin_ = value;
 }
 inline void GetPlayerInfoResponse::set_foxcoin(int64_t value) {
@@ -18485,7 +19579,7 @@ inline void GetPlayerInfoResponse::set_foxcoin(int64_t value) {
 
 // optional .openfoxwq.Rank rank = 7;
 inline bool GetPlayerInfoResponse::_internal_has_rank() const {
-  bool value = (_impl_._has_bits_[0] & 0x00002000u) != 0;
+  bool value = (_impl_._has_bits_[0] & 0x00080000u) != 0;
   return value;
 }
 inline bool GetPlayerInfoResponse::has_rank() const {
@@ -18493,7 +19587,7 @@ inline bool GetPlayerInfoResponse::has_rank() const {
 }
 inline void GetPlayerInfoResponse::clear_rank() {
   _impl_.rank_ = 0;
-  _impl_._has_bits_[0] &= ~0x00002000u;
+  _impl_._has_bits_[0] &= ~0x00080000u;
 }
 inline ::openfoxwq::Rank GetPlayerInfoResponse::_internal_rank() const {
   return static_cast< ::openfoxwq::Rank >(_impl_.rank_);
@@ -18504,7 +19598,7 @@ inline ::openfoxwq::Rank GetPlayerInfoResponse::rank() const {
 }
 inline void GetPlayerInfoResponse::_internal_set_rank(::openfoxwq::Rank value) {
   assert(::openfoxwq::Rank_IsValid(value));
-  _impl_._has_bits_[0] |= 0x00002000u;
+  _impl_._has_bits_[0] |= 0x00080000u;
   _impl_.rank_ = value;
 }
 inline void GetPlayerInfoResponse::set_rank(::openfoxwq::Rank value) {
@@ -18692,9 +19786,189 @@ inline void GetPlayerInfoResponse::set_allocated_recent_record(::openfoxwq::GetP
   // @@protoc_insertion_point(field_set_allocated:openfoxwq.GetPlayerInfoResponse.recent_record)
 }
 
+// optional .openfoxwq.GetPlayerInfoResponse.Unknown10 unknown_field_10 = 10;
+inline bool GetPlayerInfoResponse::_internal_has_unknown_field_10() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
+  PROTOBUF_ASSUME(!value || _impl_.unknown_field_10_ != nullptr);
+  return value;
+}
+inline bool GetPlayerInfoResponse::has_unknown_field_10() const {
+  return _internal_has_unknown_field_10();
+}
+inline void GetPlayerInfoResponse::clear_unknown_field_10() {
+  if (_impl_.unknown_field_10_ != nullptr) _impl_.unknown_field_10_->Clear();
+  _impl_._has_bits_[0] &= ~0x00000010u;
+}
+inline const ::openfoxwq::GetPlayerInfoResponse_Unknown10& GetPlayerInfoResponse::_internal_unknown_field_10() const {
+  const ::openfoxwq::GetPlayerInfoResponse_Unknown10* p = _impl_.unknown_field_10_;
+  return p != nullptr ? *p : reinterpret_cast<const ::openfoxwq::GetPlayerInfoResponse_Unknown10&>(
+      ::openfoxwq::_GetPlayerInfoResponse_Unknown10_default_instance_);
+}
+inline const ::openfoxwq::GetPlayerInfoResponse_Unknown10& GetPlayerInfoResponse::unknown_field_10() const {
+  // @@protoc_insertion_point(field_get:openfoxwq.GetPlayerInfoResponse.unknown_field_10)
+  return _internal_unknown_field_10();
+}
+inline void GetPlayerInfoResponse::unsafe_arena_set_allocated_unknown_field_10(
+    ::openfoxwq::GetPlayerInfoResponse_Unknown10* unknown_field_10) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.unknown_field_10_);
+  }
+  _impl_.unknown_field_10_ = unknown_field_10;
+  if (unknown_field_10) {
+    _impl_._has_bits_[0] |= 0x00000010u;
+  } else {
+    _impl_._has_bits_[0] &= ~0x00000010u;
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:openfoxwq.GetPlayerInfoResponse.unknown_field_10)
+}
+inline ::openfoxwq::GetPlayerInfoResponse_Unknown10* GetPlayerInfoResponse::release_unknown_field_10() {
+  _impl_._has_bits_[0] &= ~0x00000010u;
+  ::openfoxwq::GetPlayerInfoResponse_Unknown10* temp = _impl_.unknown_field_10_;
+  _impl_.unknown_field_10_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::openfoxwq::GetPlayerInfoResponse_Unknown10* GetPlayerInfoResponse::unsafe_arena_release_unknown_field_10() {
+  // @@protoc_insertion_point(field_release:openfoxwq.GetPlayerInfoResponse.unknown_field_10)
+  _impl_._has_bits_[0] &= ~0x00000010u;
+  ::openfoxwq::GetPlayerInfoResponse_Unknown10* temp = _impl_.unknown_field_10_;
+  _impl_.unknown_field_10_ = nullptr;
+  return temp;
+}
+inline ::openfoxwq::GetPlayerInfoResponse_Unknown10* GetPlayerInfoResponse::_internal_mutable_unknown_field_10() {
+  _impl_._has_bits_[0] |= 0x00000010u;
+  if (_impl_.unknown_field_10_ == nullptr) {
+    auto* p = CreateMaybeMessage<::openfoxwq::GetPlayerInfoResponse_Unknown10>(GetArenaForAllocation());
+    _impl_.unknown_field_10_ = p;
+  }
+  return _impl_.unknown_field_10_;
+}
+inline ::openfoxwq::GetPlayerInfoResponse_Unknown10* GetPlayerInfoResponse::mutable_unknown_field_10() {
+  ::openfoxwq::GetPlayerInfoResponse_Unknown10* _msg = _internal_mutable_unknown_field_10();
+  // @@protoc_insertion_point(field_mutable:openfoxwq.GetPlayerInfoResponse.unknown_field_10)
+  return _msg;
+}
+inline void GetPlayerInfoResponse::set_allocated_unknown_field_10(::openfoxwq::GetPlayerInfoResponse_Unknown10* unknown_field_10) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete _impl_.unknown_field_10_;
+  }
+  if (unknown_field_10) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(unknown_field_10);
+    if (message_arena != submessage_arena) {
+      unknown_field_10 = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, unknown_field_10, submessage_arena);
+    }
+    _impl_._has_bits_[0] |= 0x00000010u;
+  } else {
+    _impl_._has_bits_[0] &= ~0x00000010u;
+  }
+  _impl_.unknown_field_10_ = unknown_field_10;
+  // @@protoc_insertion_point(field_set_allocated:openfoxwq.GetPlayerInfoResponse.unknown_field_10)
+}
+
+// optional .openfoxwq.GetPlayerInfoResponse.Unknown11 unknown_field_11 = 11;
+inline bool GetPlayerInfoResponse::_internal_has_unknown_field_11() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
+  PROTOBUF_ASSUME(!value || _impl_.unknown_field_11_ != nullptr);
+  return value;
+}
+inline bool GetPlayerInfoResponse::has_unknown_field_11() const {
+  return _internal_has_unknown_field_11();
+}
+inline void GetPlayerInfoResponse::clear_unknown_field_11() {
+  if (_impl_.unknown_field_11_ != nullptr) _impl_.unknown_field_11_->Clear();
+  _impl_._has_bits_[0] &= ~0x00000020u;
+}
+inline const ::openfoxwq::GetPlayerInfoResponse_Unknown11& GetPlayerInfoResponse::_internal_unknown_field_11() const {
+  const ::openfoxwq::GetPlayerInfoResponse_Unknown11* p = _impl_.unknown_field_11_;
+  return p != nullptr ? *p : reinterpret_cast<const ::openfoxwq::GetPlayerInfoResponse_Unknown11&>(
+      ::openfoxwq::_GetPlayerInfoResponse_Unknown11_default_instance_);
+}
+inline const ::openfoxwq::GetPlayerInfoResponse_Unknown11& GetPlayerInfoResponse::unknown_field_11() const {
+  // @@protoc_insertion_point(field_get:openfoxwq.GetPlayerInfoResponse.unknown_field_11)
+  return _internal_unknown_field_11();
+}
+inline void GetPlayerInfoResponse::unsafe_arena_set_allocated_unknown_field_11(
+    ::openfoxwq::GetPlayerInfoResponse_Unknown11* unknown_field_11) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.unknown_field_11_);
+  }
+  _impl_.unknown_field_11_ = unknown_field_11;
+  if (unknown_field_11) {
+    _impl_._has_bits_[0] |= 0x00000020u;
+  } else {
+    _impl_._has_bits_[0] &= ~0x00000020u;
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:openfoxwq.GetPlayerInfoResponse.unknown_field_11)
+}
+inline ::openfoxwq::GetPlayerInfoResponse_Unknown11* GetPlayerInfoResponse::release_unknown_field_11() {
+  _impl_._has_bits_[0] &= ~0x00000020u;
+  ::openfoxwq::GetPlayerInfoResponse_Unknown11* temp = _impl_.unknown_field_11_;
+  _impl_.unknown_field_11_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::openfoxwq::GetPlayerInfoResponse_Unknown11* GetPlayerInfoResponse::unsafe_arena_release_unknown_field_11() {
+  // @@protoc_insertion_point(field_release:openfoxwq.GetPlayerInfoResponse.unknown_field_11)
+  _impl_._has_bits_[0] &= ~0x00000020u;
+  ::openfoxwq::GetPlayerInfoResponse_Unknown11* temp = _impl_.unknown_field_11_;
+  _impl_.unknown_field_11_ = nullptr;
+  return temp;
+}
+inline ::openfoxwq::GetPlayerInfoResponse_Unknown11* GetPlayerInfoResponse::_internal_mutable_unknown_field_11() {
+  _impl_._has_bits_[0] |= 0x00000020u;
+  if (_impl_.unknown_field_11_ == nullptr) {
+    auto* p = CreateMaybeMessage<::openfoxwq::GetPlayerInfoResponse_Unknown11>(GetArenaForAllocation());
+    _impl_.unknown_field_11_ = p;
+  }
+  return _impl_.unknown_field_11_;
+}
+inline ::openfoxwq::GetPlayerInfoResponse_Unknown11* GetPlayerInfoResponse::mutable_unknown_field_11() {
+  ::openfoxwq::GetPlayerInfoResponse_Unknown11* _msg = _internal_mutable_unknown_field_11();
+  // @@protoc_insertion_point(field_mutable:openfoxwq.GetPlayerInfoResponse.unknown_field_11)
+  return _msg;
+}
+inline void GetPlayerInfoResponse::set_allocated_unknown_field_11(::openfoxwq::GetPlayerInfoResponse_Unknown11* unknown_field_11) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete _impl_.unknown_field_11_;
+  }
+  if (unknown_field_11) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(unknown_field_11);
+    if (message_arena != submessage_arena) {
+      unknown_field_11 = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, unknown_field_11, submessage_arena);
+    }
+    _impl_._has_bits_[0] |= 0x00000020u;
+  } else {
+    _impl_._has_bits_[0] &= ~0x00000020u;
+  }
+  _impl_.unknown_field_11_ = unknown_field_11;
+  // @@protoc_insertion_point(field_set_allocated:openfoxwq.GetPlayerInfoResponse.unknown_field_11)
+}
+
 // optional .openfoxwq.GetPlayerInfoResponse.OverallResults overall_results = 12;
 inline bool GetPlayerInfoResponse::_internal_has_overall_results() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
+  bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   PROTOBUF_ASSUME(!value || _impl_.overall_results_ != nullptr);
   return value;
 }
@@ -18703,7 +19977,7 @@ inline bool GetPlayerInfoResponse::has_overall_results() const {
 }
 inline void GetPlayerInfoResponse::clear_overall_results() {
   if (_impl_.overall_results_ != nullptr) _impl_.overall_results_->Clear();
-  _impl_._has_bits_[0] &= ~0x00000010u;
+  _impl_._has_bits_[0] &= ~0x00000040u;
 }
 inline const ::openfoxwq::GetPlayerInfoResponse_OverallResults& GetPlayerInfoResponse::_internal_overall_results() const {
   const ::openfoxwq::GetPlayerInfoResponse_OverallResults* p = _impl_.overall_results_;
@@ -18721,14 +19995,14 @@ inline void GetPlayerInfoResponse::unsafe_arena_set_allocated_overall_results(
   }
   _impl_.overall_results_ = overall_results;
   if (overall_results) {
-    _impl_._has_bits_[0] |= 0x00000010u;
+    _impl_._has_bits_[0] |= 0x00000040u;
   } else {
-    _impl_._has_bits_[0] &= ~0x00000010u;
+    _impl_._has_bits_[0] &= ~0x00000040u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:openfoxwq.GetPlayerInfoResponse.overall_results)
 }
 inline ::openfoxwq::GetPlayerInfoResponse_OverallResults* GetPlayerInfoResponse::release_overall_results() {
-  _impl_._has_bits_[0] &= ~0x00000010u;
+  _impl_._has_bits_[0] &= ~0x00000040u;
   ::openfoxwq::GetPlayerInfoResponse_OverallResults* temp = _impl_.overall_results_;
   _impl_.overall_results_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -18744,13 +20018,13 @@ inline ::openfoxwq::GetPlayerInfoResponse_OverallResults* GetPlayerInfoResponse:
 }
 inline ::openfoxwq::GetPlayerInfoResponse_OverallResults* GetPlayerInfoResponse::unsafe_arena_release_overall_results() {
   // @@protoc_insertion_point(field_release:openfoxwq.GetPlayerInfoResponse.overall_results)
-  _impl_._has_bits_[0] &= ~0x00000010u;
+  _impl_._has_bits_[0] &= ~0x00000040u;
   ::openfoxwq::GetPlayerInfoResponse_OverallResults* temp = _impl_.overall_results_;
   _impl_.overall_results_ = nullptr;
   return temp;
 }
 inline ::openfoxwq::GetPlayerInfoResponse_OverallResults* GetPlayerInfoResponse::_internal_mutable_overall_results() {
-  _impl_._has_bits_[0] |= 0x00000010u;
+  _impl_._has_bits_[0] |= 0x00000040u;
   if (_impl_.overall_results_ == nullptr) {
     auto* p = CreateMaybeMessage<::openfoxwq::GetPlayerInfoResponse_OverallResults>(GetArenaForAllocation());
     _impl_.overall_results_ = p;
@@ -18774,17 +20048,197 @@ inline void GetPlayerInfoResponse::set_allocated_overall_results(::openfoxwq::Ge
       overall_results = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, overall_results, submessage_arena);
     }
-    _impl_._has_bits_[0] |= 0x00000010u;
+    _impl_._has_bits_[0] |= 0x00000040u;
   } else {
-    _impl_._has_bits_[0] &= ~0x00000010u;
+    _impl_._has_bits_[0] &= ~0x00000040u;
   }
   _impl_.overall_results_ = overall_results;
   // @@protoc_insertion_point(field_set_allocated:openfoxwq.GetPlayerInfoResponse.overall_results)
 }
 
+// optional .openfoxwq.GetPlayerInfoResponse.MembershipInfo membership_info = 13;
+inline bool GetPlayerInfoResponse::_internal_has_membership_info() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
+  PROTOBUF_ASSUME(!value || _impl_.membership_info_ != nullptr);
+  return value;
+}
+inline bool GetPlayerInfoResponse::has_membership_info() const {
+  return _internal_has_membership_info();
+}
+inline void GetPlayerInfoResponse::clear_membership_info() {
+  if (_impl_.membership_info_ != nullptr) _impl_.membership_info_->Clear();
+  _impl_._has_bits_[0] &= ~0x00000080u;
+}
+inline const ::openfoxwq::GetPlayerInfoResponse_MembershipInfo& GetPlayerInfoResponse::_internal_membership_info() const {
+  const ::openfoxwq::GetPlayerInfoResponse_MembershipInfo* p = _impl_.membership_info_;
+  return p != nullptr ? *p : reinterpret_cast<const ::openfoxwq::GetPlayerInfoResponse_MembershipInfo&>(
+      ::openfoxwq::_GetPlayerInfoResponse_MembershipInfo_default_instance_);
+}
+inline const ::openfoxwq::GetPlayerInfoResponse_MembershipInfo& GetPlayerInfoResponse::membership_info() const {
+  // @@protoc_insertion_point(field_get:openfoxwq.GetPlayerInfoResponse.membership_info)
+  return _internal_membership_info();
+}
+inline void GetPlayerInfoResponse::unsafe_arena_set_allocated_membership_info(
+    ::openfoxwq::GetPlayerInfoResponse_MembershipInfo* membership_info) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.membership_info_);
+  }
+  _impl_.membership_info_ = membership_info;
+  if (membership_info) {
+    _impl_._has_bits_[0] |= 0x00000080u;
+  } else {
+    _impl_._has_bits_[0] &= ~0x00000080u;
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:openfoxwq.GetPlayerInfoResponse.membership_info)
+}
+inline ::openfoxwq::GetPlayerInfoResponse_MembershipInfo* GetPlayerInfoResponse::release_membership_info() {
+  _impl_._has_bits_[0] &= ~0x00000080u;
+  ::openfoxwq::GetPlayerInfoResponse_MembershipInfo* temp = _impl_.membership_info_;
+  _impl_.membership_info_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::openfoxwq::GetPlayerInfoResponse_MembershipInfo* GetPlayerInfoResponse::unsafe_arena_release_membership_info() {
+  // @@protoc_insertion_point(field_release:openfoxwq.GetPlayerInfoResponse.membership_info)
+  _impl_._has_bits_[0] &= ~0x00000080u;
+  ::openfoxwq::GetPlayerInfoResponse_MembershipInfo* temp = _impl_.membership_info_;
+  _impl_.membership_info_ = nullptr;
+  return temp;
+}
+inline ::openfoxwq::GetPlayerInfoResponse_MembershipInfo* GetPlayerInfoResponse::_internal_mutable_membership_info() {
+  _impl_._has_bits_[0] |= 0x00000080u;
+  if (_impl_.membership_info_ == nullptr) {
+    auto* p = CreateMaybeMessage<::openfoxwq::GetPlayerInfoResponse_MembershipInfo>(GetArenaForAllocation());
+    _impl_.membership_info_ = p;
+  }
+  return _impl_.membership_info_;
+}
+inline ::openfoxwq::GetPlayerInfoResponse_MembershipInfo* GetPlayerInfoResponse::mutable_membership_info() {
+  ::openfoxwq::GetPlayerInfoResponse_MembershipInfo* _msg = _internal_mutable_membership_info();
+  // @@protoc_insertion_point(field_mutable:openfoxwq.GetPlayerInfoResponse.membership_info)
+  return _msg;
+}
+inline void GetPlayerInfoResponse::set_allocated_membership_info(::openfoxwq::GetPlayerInfoResponse_MembershipInfo* membership_info) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete _impl_.membership_info_;
+  }
+  if (membership_info) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(membership_info);
+    if (message_arena != submessage_arena) {
+      membership_info = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, membership_info, submessage_arena);
+    }
+    _impl_._has_bits_[0] |= 0x00000080u;
+  } else {
+    _impl_._has_bits_[0] &= ~0x00000080u;
+  }
+  _impl_.membership_info_ = membership_info;
+  // @@protoc_insertion_point(field_set_allocated:openfoxwq.GetPlayerInfoResponse.membership_info)
+}
+
+// optional .openfoxwq.GetPlayerInfoResponse.PlayerFlair flair = 14;
+inline bool GetPlayerInfoResponse::_internal_has_flair() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000100u) != 0;
+  PROTOBUF_ASSUME(!value || _impl_.flair_ != nullptr);
+  return value;
+}
+inline bool GetPlayerInfoResponse::has_flair() const {
+  return _internal_has_flair();
+}
+inline void GetPlayerInfoResponse::clear_flair() {
+  if (_impl_.flair_ != nullptr) _impl_.flair_->Clear();
+  _impl_._has_bits_[0] &= ~0x00000100u;
+}
+inline const ::openfoxwq::GetPlayerInfoResponse_PlayerFlair& GetPlayerInfoResponse::_internal_flair() const {
+  const ::openfoxwq::GetPlayerInfoResponse_PlayerFlair* p = _impl_.flair_;
+  return p != nullptr ? *p : reinterpret_cast<const ::openfoxwq::GetPlayerInfoResponse_PlayerFlair&>(
+      ::openfoxwq::_GetPlayerInfoResponse_PlayerFlair_default_instance_);
+}
+inline const ::openfoxwq::GetPlayerInfoResponse_PlayerFlair& GetPlayerInfoResponse::flair() const {
+  // @@protoc_insertion_point(field_get:openfoxwq.GetPlayerInfoResponse.flair)
+  return _internal_flair();
+}
+inline void GetPlayerInfoResponse::unsafe_arena_set_allocated_flair(
+    ::openfoxwq::GetPlayerInfoResponse_PlayerFlair* flair) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.flair_);
+  }
+  _impl_.flair_ = flair;
+  if (flair) {
+    _impl_._has_bits_[0] |= 0x00000100u;
+  } else {
+    _impl_._has_bits_[0] &= ~0x00000100u;
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:openfoxwq.GetPlayerInfoResponse.flair)
+}
+inline ::openfoxwq::GetPlayerInfoResponse_PlayerFlair* GetPlayerInfoResponse::release_flair() {
+  _impl_._has_bits_[0] &= ~0x00000100u;
+  ::openfoxwq::GetPlayerInfoResponse_PlayerFlair* temp = _impl_.flair_;
+  _impl_.flair_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::openfoxwq::GetPlayerInfoResponse_PlayerFlair* GetPlayerInfoResponse::unsafe_arena_release_flair() {
+  // @@protoc_insertion_point(field_release:openfoxwq.GetPlayerInfoResponse.flair)
+  _impl_._has_bits_[0] &= ~0x00000100u;
+  ::openfoxwq::GetPlayerInfoResponse_PlayerFlair* temp = _impl_.flair_;
+  _impl_.flair_ = nullptr;
+  return temp;
+}
+inline ::openfoxwq::GetPlayerInfoResponse_PlayerFlair* GetPlayerInfoResponse::_internal_mutable_flair() {
+  _impl_._has_bits_[0] |= 0x00000100u;
+  if (_impl_.flair_ == nullptr) {
+    auto* p = CreateMaybeMessage<::openfoxwq::GetPlayerInfoResponse_PlayerFlair>(GetArenaForAllocation());
+    _impl_.flair_ = p;
+  }
+  return _impl_.flair_;
+}
+inline ::openfoxwq::GetPlayerInfoResponse_PlayerFlair* GetPlayerInfoResponse::mutable_flair() {
+  ::openfoxwq::GetPlayerInfoResponse_PlayerFlair* _msg = _internal_mutable_flair();
+  // @@protoc_insertion_point(field_mutable:openfoxwq.GetPlayerInfoResponse.flair)
+  return _msg;
+}
+inline void GetPlayerInfoResponse::set_allocated_flair(::openfoxwq::GetPlayerInfoResponse_PlayerFlair* flair) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete _impl_.flair_;
+  }
+  if (flair) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(flair);
+    if (message_arena != submessage_arena) {
+      flair = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, flair, submessage_arena);
+    }
+    _impl_._has_bits_[0] |= 0x00000100u;
+  } else {
+    _impl_._has_bits_[0] &= ~0x00000100u;
+  }
+  _impl_.flair_ = flair;
+  // @@protoc_insertion_point(field_set_allocated:openfoxwq.GetPlayerInfoResponse.flair)
+}
+
 // optional .openfoxwq.GetPlayerInfoResponse.ProInfo pro_info = 15;
 inline bool GetPlayerInfoResponse::_internal_has_pro_info() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
+  bool value = (_impl_._has_bits_[0] & 0x00000200u) != 0;
   PROTOBUF_ASSUME(!value || _impl_.pro_info_ != nullptr);
   return value;
 }
@@ -18793,7 +20247,7 @@ inline bool GetPlayerInfoResponse::has_pro_info() const {
 }
 inline void GetPlayerInfoResponse::clear_pro_info() {
   if (_impl_.pro_info_ != nullptr) _impl_.pro_info_->Clear();
-  _impl_._has_bits_[0] &= ~0x00000020u;
+  _impl_._has_bits_[0] &= ~0x00000200u;
 }
 inline const ::openfoxwq::GetPlayerInfoResponse_ProInfo& GetPlayerInfoResponse::_internal_pro_info() const {
   const ::openfoxwq::GetPlayerInfoResponse_ProInfo* p = _impl_.pro_info_;
@@ -18811,14 +20265,14 @@ inline void GetPlayerInfoResponse::unsafe_arena_set_allocated_pro_info(
   }
   _impl_.pro_info_ = pro_info;
   if (pro_info) {
-    _impl_._has_bits_[0] |= 0x00000020u;
+    _impl_._has_bits_[0] |= 0x00000200u;
   } else {
-    _impl_._has_bits_[0] &= ~0x00000020u;
+    _impl_._has_bits_[0] &= ~0x00000200u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:openfoxwq.GetPlayerInfoResponse.pro_info)
 }
 inline ::openfoxwq::GetPlayerInfoResponse_ProInfo* GetPlayerInfoResponse::release_pro_info() {
-  _impl_._has_bits_[0] &= ~0x00000020u;
+  _impl_._has_bits_[0] &= ~0x00000200u;
   ::openfoxwq::GetPlayerInfoResponse_ProInfo* temp = _impl_.pro_info_;
   _impl_.pro_info_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -18834,13 +20288,13 @@ inline ::openfoxwq::GetPlayerInfoResponse_ProInfo* GetPlayerInfoResponse::releas
 }
 inline ::openfoxwq::GetPlayerInfoResponse_ProInfo* GetPlayerInfoResponse::unsafe_arena_release_pro_info() {
   // @@protoc_insertion_point(field_release:openfoxwq.GetPlayerInfoResponse.pro_info)
-  _impl_._has_bits_[0] &= ~0x00000020u;
+  _impl_._has_bits_[0] &= ~0x00000200u;
   ::openfoxwq::GetPlayerInfoResponse_ProInfo* temp = _impl_.pro_info_;
   _impl_.pro_info_ = nullptr;
   return temp;
 }
 inline ::openfoxwq::GetPlayerInfoResponse_ProInfo* GetPlayerInfoResponse::_internal_mutable_pro_info() {
-  _impl_._has_bits_[0] |= 0x00000020u;
+  _impl_._has_bits_[0] |= 0x00000200u;
   if (_impl_.pro_info_ == nullptr) {
     auto* p = CreateMaybeMessage<::openfoxwq::GetPlayerInfoResponse_ProInfo>(GetArenaForAllocation());
     _impl_.pro_info_ = p;
@@ -18864,9 +20318,9 @@ inline void GetPlayerInfoResponse::set_allocated_pro_info(::openfoxwq::GetPlayer
       pro_info = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, pro_info, submessage_arena);
     }
-    _impl_._has_bits_[0] |= 0x00000020u;
+    _impl_._has_bits_[0] |= 0x00000200u;
   } else {
-    _impl_._has_bits_[0] &= ~0x00000020u;
+    _impl_._has_bits_[0] &= ~0x00000200u;
   }
   _impl_.pro_info_ = pro_info;
   // @@protoc_insertion_point(field_set_allocated:openfoxwq.GetPlayerInfoResponse.pro_info)
@@ -18874,7 +20328,7 @@ inline void GetPlayerInfoResponse::set_allocated_pro_info(::openfoxwq::GetPlayer
 
 // optional .openfoxwq.GetPlayerInfoResponse.PerformanceRecord perf_record = 18;
 inline bool GetPlayerInfoResponse::_internal_has_perf_record() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
+  bool value = (_impl_._has_bits_[0] & 0x00000400u) != 0;
   PROTOBUF_ASSUME(!value || _impl_.perf_record_ != nullptr);
   return value;
 }
@@ -18883,7 +20337,7 @@ inline bool GetPlayerInfoResponse::has_perf_record() const {
 }
 inline void GetPlayerInfoResponse::clear_perf_record() {
   if (_impl_.perf_record_ != nullptr) _impl_.perf_record_->Clear();
-  _impl_._has_bits_[0] &= ~0x00000040u;
+  _impl_._has_bits_[0] &= ~0x00000400u;
 }
 inline const ::openfoxwq::GetPlayerInfoResponse_PerformanceRecord& GetPlayerInfoResponse::_internal_perf_record() const {
   const ::openfoxwq::GetPlayerInfoResponse_PerformanceRecord* p = _impl_.perf_record_;
@@ -18901,14 +20355,14 @@ inline void GetPlayerInfoResponse::unsafe_arena_set_allocated_perf_record(
   }
   _impl_.perf_record_ = perf_record;
   if (perf_record) {
-    _impl_._has_bits_[0] |= 0x00000040u;
+    _impl_._has_bits_[0] |= 0x00000400u;
   } else {
-    _impl_._has_bits_[0] &= ~0x00000040u;
+    _impl_._has_bits_[0] &= ~0x00000400u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:openfoxwq.GetPlayerInfoResponse.perf_record)
 }
 inline ::openfoxwq::GetPlayerInfoResponse_PerformanceRecord* GetPlayerInfoResponse::release_perf_record() {
-  _impl_._has_bits_[0] &= ~0x00000040u;
+  _impl_._has_bits_[0] &= ~0x00000400u;
   ::openfoxwq::GetPlayerInfoResponse_PerformanceRecord* temp = _impl_.perf_record_;
   _impl_.perf_record_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -18924,13 +20378,13 @@ inline ::openfoxwq::GetPlayerInfoResponse_PerformanceRecord* GetPlayerInfoRespon
 }
 inline ::openfoxwq::GetPlayerInfoResponse_PerformanceRecord* GetPlayerInfoResponse::unsafe_arena_release_perf_record() {
   // @@protoc_insertion_point(field_release:openfoxwq.GetPlayerInfoResponse.perf_record)
-  _impl_._has_bits_[0] &= ~0x00000040u;
+  _impl_._has_bits_[0] &= ~0x00000400u;
   ::openfoxwq::GetPlayerInfoResponse_PerformanceRecord* temp = _impl_.perf_record_;
   _impl_.perf_record_ = nullptr;
   return temp;
 }
 inline ::openfoxwq::GetPlayerInfoResponse_PerformanceRecord* GetPlayerInfoResponse::_internal_mutable_perf_record() {
-  _impl_._has_bits_[0] |= 0x00000040u;
+  _impl_._has_bits_[0] |= 0x00000400u;
   if (_impl_.perf_record_ == nullptr) {
     auto* p = CreateMaybeMessage<::openfoxwq::GetPlayerInfoResponse_PerformanceRecord>(GetArenaForAllocation());
     _impl_.perf_record_ = p;
@@ -18954,12 +20408,102 @@ inline void GetPlayerInfoResponse::set_allocated_perf_record(::openfoxwq::GetPla
       perf_record = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, perf_record, submessage_arena);
     }
-    _impl_._has_bits_[0] |= 0x00000040u;
+    _impl_._has_bits_[0] |= 0x00000400u;
   } else {
-    _impl_._has_bits_[0] &= ~0x00000040u;
+    _impl_._has_bits_[0] &= ~0x00000400u;
   }
   _impl_.perf_record_ = perf_record;
   // @@protoc_insertion_point(field_set_allocated:openfoxwq.GetPlayerInfoResponse.perf_record)
+}
+
+// optional .openfoxwq.GetPlayerInfoResponse.Unknown19 unknown_field_19 = 19;
+inline bool GetPlayerInfoResponse::_internal_has_unknown_field_19() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000800u) != 0;
+  PROTOBUF_ASSUME(!value || _impl_.unknown_field_19_ != nullptr);
+  return value;
+}
+inline bool GetPlayerInfoResponse::has_unknown_field_19() const {
+  return _internal_has_unknown_field_19();
+}
+inline void GetPlayerInfoResponse::clear_unknown_field_19() {
+  if (_impl_.unknown_field_19_ != nullptr) _impl_.unknown_field_19_->Clear();
+  _impl_._has_bits_[0] &= ~0x00000800u;
+}
+inline const ::openfoxwq::GetPlayerInfoResponse_Unknown19& GetPlayerInfoResponse::_internal_unknown_field_19() const {
+  const ::openfoxwq::GetPlayerInfoResponse_Unknown19* p = _impl_.unknown_field_19_;
+  return p != nullptr ? *p : reinterpret_cast<const ::openfoxwq::GetPlayerInfoResponse_Unknown19&>(
+      ::openfoxwq::_GetPlayerInfoResponse_Unknown19_default_instance_);
+}
+inline const ::openfoxwq::GetPlayerInfoResponse_Unknown19& GetPlayerInfoResponse::unknown_field_19() const {
+  // @@protoc_insertion_point(field_get:openfoxwq.GetPlayerInfoResponse.unknown_field_19)
+  return _internal_unknown_field_19();
+}
+inline void GetPlayerInfoResponse::unsafe_arena_set_allocated_unknown_field_19(
+    ::openfoxwq::GetPlayerInfoResponse_Unknown19* unknown_field_19) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.unknown_field_19_);
+  }
+  _impl_.unknown_field_19_ = unknown_field_19;
+  if (unknown_field_19) {
+    _impl_._has_bits_[0] |= 0x00000800u;
+  } else {
+    _impl_._has_bits_[0] &= ~0x00000800u;
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:openfoxwq.GetPlayerInfoResponse.unknown_field_19)
+}
+inline ::openfoxwq::GetPlayerInfoResponse_Unknown19* GetPlayerInfoResponse::release_unknown_field_19() {
+  _impl_._has_bits_[0] &= ~0x00000800u;
+  ::openfoxwq::GetPlayerInfoResponse_Unknown19* temp = _impl_.unknown_field_19_;
+  _impl_.unknown_field_19_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::openfoxwq::GetPlayerInfoResponse_Unknown19* GetPlayerInfoResponse::unsafe_arena_release_unknown_field_19() {
+  // @@protoc_insertion_point(field_release:openfoxwq.GetPlayerInfoResponse.unknown_field_19)
+  _impl_._has_bits_[0] &= ~0x00000800u;
+  ::openfoxwq::GetPlayerInfoResponse_Unknown19* temp = _impl_.unknown_field_19_;
+  _impl_.unknown_field_19_ = nullptr;
+  return temp;
+}
+inline ::openfoxwq::GetPlayerInfoResponse_Unknown19* GetPlayerInfoResponse::_internal_mutable_unknown_field_19() {
+  _impl_._has_bits_[0] |= 0x00000800u;
+  if (_impl_.unknown_field_19_ == nullptr) {
+    auto* p = CreateMaybeMessage<::openfoxwq::GetPlayerInfoResponse_Unknown19>(GetArenaForAllocation());
+    _impl_.unknown_field_19_ = p;
+  }
+  return _impl_.unknown_field_19_;
+}
+inline ::openfoxwq::GetPlayerInfoResponse_Unknown19* GetPlayerInfoResponse::mutable_unknown_field_19() {
+  ::openfoxwq::GetPlayerInfoResponse_Unknown19* _msg = _internal_mutable_unknown_field_19();
+  // @@protoc_insertion_point(field_mutable:openfoxwq.GetPlayerInfoResponse.unknown_field_19)
+  return _msg;
+}
+inline void GetPlayerInfoResponse::set_allocated_unknown_field_19(::openfoxwq::GetPlayerInfoResponse_Unknown19* unknown_field_19) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete _impl_.unknown_field_19_;
+  }
+  if (unknown_field_19) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(unknown_field_19);
+    if (message_arena != submessage_arena) {
+      unknown_field_19 = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, unknown_field_19, submessage_arena);
+    }
+    _impl_._has_bits_[0] |= 0x00000800u;
+  } else {
+    _impl_._has_bits_[0] &= ~0x00000800u;
+  }
+  _impl_.unknown_field_19_ = unknown_field_19;
+  // @@protoc_insertion_point(field_set_allocated:openfoxwq.GetPlayerInfoResponse.unknown_field_19)
 }
 
 // repeated .openfoxwq.GetPlayerInfoResponse.Results results = 16;
@@ -19004,7 +20548,7 @@ GetPlayerInfoResponse::results() const {
 
 // optional .openfoxwq.GetPlayerInfoResponse.Rooms rooms = 20;
 inline bool GetPlayerInfoResponse::_internal_has_rooms() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
+  bool value = (_impl_._has_bits_[0] & 0x00001000u) != 0;
   PROTOBUF_ASSUME(!value || _impl_.rooms_ != nullptr);
   return value;
 }
@@ -19013,7 +20557,7 @@ inline bool GetPlayerInfoResponse::has_rooms() const {
 }
 inline void GetPlayerInfoResponse::clear_rooms() {
   if (_impl_.rooms_ != nullptr) _impl_.rooms_->Clear();
-  _impl_._has_bits_[0] &= ~0x00000080u;
+  _impl_._has_bits_[0] &= ~0x00001000u;
 }
 inline const ::openfoxwq::GetPlayerInfoResponse_Rooms& GetPlayerInfoResponse::_internal_rooms() const {
   const ::openfoxwq::GetPlayerInfoResponse_Rooms* p = _impl_.rooms_;
@@ -19031,14 +20575,14 @@ inline void GetPlayerInfoResponse::unsafe_arena_set_allocated_rooms(
   }
   _impl_.rooms_ = rooms;
   if (rooms) {
-    _impl_._has_bits_[0] |= 0x00000080u;
+    _impl_._has_bits_[0] |= 0x00001000u;
   } else {
-    _impl_._has_bits_[0] &= ~0x00000080u;
+    _impl_._has_bits_[0] &= ~0x00001000u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:openfoxwq.GetPlayerInfoResponse.rooms)
 }
 inline ::openfoxwq::GetPlayerInfoResponse_Rooms* GetPlayerInfoResponse::release_rooms() {
-  _impl_._has_bits_[0] &= ~0x00000080u;
+  _impl_._has_bits_[0] &= ~0x00001000u;
   ::openfoxwq::GetPlayerInfoResponse_Rooms* temp = _impl_.rooms_;
   _impl_.rooms_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -19054,13 +20598,13 @@ inline ::openfoxwq::GetPlayerInfoResponse_Rooms* GetPlayerInfoResponse::release_
 }
 inline ::openfoxwq::GetPlayerInfoResponse_Rooms* GetPlayerInfoResponse::unsafe_arena_release_rooms() {
   // @@protoc_insertion_point(field_release:openfoxwq.GetPlayerInfoResponse.rooms)
-  _impl_._has_bits_[0] &= ~0x00000080u;
+  _impl_._has_bits_[0] &= ~0x00001000u;
   ::openfoxwq::GetPlayerInfoResponse_Rooms* temp = _impl_.rooms_;
   _impl_.rooms_ = nullptr;
   return temp;
 }
 inline ::openfoxwq::GetPlayerInfoResponse_Rooms* GetPlayerInfoResponse::_internal_mutable_rooms() {
-  _impl_._has_bits_[0] |= 0x00000080u;
+  _impl_._has_bits_[0] |= 0x00001000u;
   if (_impl_.rooms_ == nullptr) {
     auto* p = CreateMaybeMessage<::openfoxwq::GetPlayerInfoResponse_Rooms>(GetArenaForAllocation());
     _impl_.rooms_ = p;
@@ -19084,53 +20628,53 @@ inline void GetPlayerInfoResponse::set_allocated_rooms(::openfoxwq::GetPlayerInf
       rooms = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, rooms, submessage_arena);
     }
-    _impl_._has_bits_[0] |= 0x00000080u;
+    _impl_._has_bits_[0] |= 0x00001000u;
   } else {
-    _impl_._has_bits_[0] &= ~0x00000080u;
+    _impl_._has_bits_[0] &= ~0x00001000u;
   }
   _impl_.rooms_ = rooms;
   // @@protoc_insertion_point(field_set_allocated:openfoxwq.GetPlayerInfoResponse.rooms)
 }
 
-// optional .openfoxwq.GetPlayerInfoResponse.AdditionalInfo additional_info = 22;
-inline bool GetPlayerInfoResponse::_internal_has_additional_info() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000100u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.additional_info_ != nullptr);
+// optional .openfoxwq.GetPlayerInfoResponse.Unknown22 unknown_field_22 = 22;
+inline bool GetPlayerInfoResponse::_internal_has_unknown_field_22() const {
+  bool value = (_impl_._has_bits_[0] & 0x00002000u) != 0;
+  PROTOBUF_ASSUME(!value || _impl_.unknown_field_22_ != nullptr);
   return value;
 }
-inline bool GetPlayerInfoResponse::has_additional_info() const {
-  return _internal_has_additional_info();
+inline bool GetPlayerInfoResponse::has_unknown_field_22() const {
+  return _internal_has_unknown_field_22();
 }
-inline void GetPlayerInfoResponse::clear_additional_info() {
-  if (_impl_.additional_info_ != nullptr) _impl_.additional_info_->Clear();
-  _impl_._has_bits_[0] &= ~0x00000100u;
+inline void GetPlayerInfoResponse::clear_unknown_field_22() {
+  if (_impl_.unknown_field_22_ != nullptr) _impl_.unknown_field_22_->Clear();
+  _impl_._has_bits_[0] &= ~0x00002000u;
 }
-inline const ::openfoxwq::GetPlayerInfoResponse_AdditionalInfo& GetPlayerInfoResponse::_internal_additional_info() const {
-  const ::openfoxwq::GetPlayerInfoResponse_AdditionalInfo* p = _impl_.additional_info_;
-  return p != nullptr ? *p : reinterpret_cast<const ::openfoxwq::GetPlayerInfoResponse_AdditionalInfo&>(
-      ::openfoxwq::_GetPlayerInfoResponse_AdditionalInfo_default_instance_);
+inline const ::openfoxwq::GetPlayerInfoResponse_Unknown22& GetPlayerInfoResponse::_internal_unknown_field_22() const {
+  const ::openfoxwq::GetPlayerInfoResponse_Unknown22* p = _impl_.unknown_field_22_;
+  return p != nullptr ? *p : reinterpret_cast<const ::openfoxwq::GetPlayerInfoResponse_Unknown22&>(
+      ::openfoxwq::_GetPlayerInfoResponse_Unknown22_default_instance_);
 }
-inline const ::openfoxwq::GetPlayerInfoResponse_AdditionalInfo& GetPlayerInfoResponse::additional_info() const {
-  // @@protoc_insertion_point(field_get:openfoxwq.GetPlayerInfoResponse.additional_info)
-  return _internal_additional_info();
+inline const ::openfoxwq::GetPlayerInfoResponse_Unknown22& GetPlayerInfoResponse::unknown_field_22() const {
+  // @@protoc_insertion_point(field_get:openfoxwq.GetPlayerInfoResponse.unknown_field_22)
+  return _internal_unknown_field_22();
 }
-inline void GetPlayerInfoResponse::unsafe_arena_set_allocated_additional_info(
-    ::openfoxwq::GetPlayerInfoResponse_AdditionalInfo* additional_info) {
+inline void GetPlayerInfoResponse::unsafe_arena_set_allocated_unknown_field_22(
+    ::openfoxwq::GetPlayerInfoResponse_Unknown22* unknown_field_22) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.additional_info_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.unknown_field_22_);
   }
-  _impl_.additional_info_ = additional_info;
-  if (additional_info) {
-    _impl_._has_bits_[0] |= 0x00000100u;
+  _impl_.unknown_field_22_ = unknown_field_22;
+  if (unknown_field_22) {
+    _impl_._has_bits_[0] |= 0x00002000u;
   } else {
-    _impl_._has_bits_[0] &= ~0x00000100u;
+    _impl_._has_bits_[0] &= ~0x00002000u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:openfoxwq.GetPlayerInfoResponse.additional_info)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:openfoxwq.GetPlayerInfoResponse.unknown_field_22)
 }
-inline ::openfoxwq::GetPlayerInfoResponse_AdditionalInfo* GetPlayerInfoResponse::release_additional_info() {
-  _impl_._has_bits_[0] &= ~0x00000100u;
-  ::openfoxwq::GetPlayerInfoResponse_AdditionalInfo* temp = _impl_.additional_info_;
-  _impl_.additional_info_ = nullptr;
+inline ::openfoxwq::GetPlayerInfoResponse_Unknown22* GetPlayerInfoResponse::release_unknown_field_22() {
+  _impl_._has_bits_[0] &= ~0x00002000u;
+  ::openfoxwq::GetPlayerInfoResponse_Unknown22* temp = _impl_.unknown_field_22_;
+  _impl_.unknown_field_22_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -19142,44 +20686,134 @@ inline ::openfoxwq::GetPlayerInfoResponse_AdditionalInfo* GetPlayerInfoResponse:
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::openfoxwq::GetPlayerInfoResponse_AdditionalInfo* GetPlayerInfoResponse::unsafe_arena_release_additional_info() {
-  // @@protoc_insertion_point(field_release:openfoxwq.GetPlayerInfoResponse.additional_info)
-  _impl_._has_bits_[0] &= ~0x00000100u;
-  ::openfoxwq::GetPlayerInfoResponse_AdditionalInfo* temp = _impl_.additional_info_;
-  _impl_.additional_info_ = nullptr;
+inline ::openfoxwq::GetPlayerInfoResponse_Unknown22* GetPlayerInfoResponse::unsafe_arena_release_unknown_field_22() {
+  // @@protoc_insertion_point(field_release:openfoxwq.GetPlayerInfoResponse.unknown_field_22)
+  _impl_._has_bits_[0] &= ~0x00002000u;
+  ::openfoxwq::GetPlayerInfoResponse_Unknown22* temp = _impl_.unknown_field_22_;
+  _impl_.unknown_field_22_ = nullptr;
   return temp;
 }
-inline ::openfoxwq::GetPlayerInfoResponse_AdditionalInfo* GetPlayerInfoResponse::_internal_mutable_additional_info() {
-  _impl_._has_bits_[0] |= 0x00000100u;
-  if (_impl_.additional_info_ == nullptr) {
-    auto* p = CreateMaybeMessage<::openfoxwq::GetPlayerInfoResponse_AdditionalInfo>(GetArenaForAllocation());
-    _impl_.additional_info_ = p;
+inline ::openfoxwq::GetPlayerInfoResponse_Unknown22* GetPlayerInfoResponse::_internal_mutable_unknown_field_22() {
+  _impl_._has_bits_[0] |= 0x00002000u;
+  if (_impl_.unknown_field_22_ == nullptr) {
+    auto* p = CreateMaybeMessage<::openfoxwq::GetPlayerInfoResponse_Unknown22>(GetArenaForAllocation());
+    _impl_.unknown_field_22_ = p;
   }
-  return _impl_.additional_info_;
+  return _impl_.unknown_field_22_;
 }
-inline ::openfoxwq::GetPlayerInfoResponse_AdditionalInfo* GetPlayerInfoResponse::mutable_additional_info() {
-  ::openfoxwq::GetPlayerInfoResponse_AdditionalInfo* _msg = _internal_mutable_additional_info();
-  // @@protoc_insertion_point(field_mutable:openfoxwq.GetPlayerInfoResponse.additional_info)
+inline ::openfoxwq::GetPlayerInfoResponse_Unknown22* GetPlayerInfoResponse::mutable_unknown_field_22() {
+  ::openfoxwq::GetPlayerInfoResponse_Unknown22* _msg = _internal_mutable_unknown_field_22();
+  // @@protoc_insertion_point(field_mutable:openfoxwq.GetPlayerInfoResponse.unknown_field_22)
   return _msg;
 }
-inline void GetPlayerInfoResponse::set_allocated_additional_info(::openfoxwq::GetPlayerInfoResponse_AdditionalInfo* additional_info) {
+inline void GetPlayerInfoResponse::set_allocated_unknown_field_22(::openfoxwq::GetPlayerInfoResponse_Unknown22* unknown_field_22) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete _impl_.additional_info_;
+    delete _impl_.unknown_field_22_;
   }
-  if (additional_info) {
+  if (unknown_field_22) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(additional_info);
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(unknown_field_22);
     if (message_arena != submessage_arena) {
-      additional_info = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, additional_info, submessage_arena);
+      unknown_field_22 = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, unknown_field_22, submessage_arena);
     }
-    _impl_._has_bits_[0] |= 0x00000100u;
+    _impl_._has_bits_[0] |= 0x00002000u;
   } else {
-    _impl_._has_bits_[0] &= ~0x00000100u;
+    _impl_._has_bits_[0] &= ~0x00002000u;
   }
-  _impl_.additional_info_ = additional_info;
-  // @@protoc_insertion_point(field_set_allocated:openfoxwq.GetPlayerInfoResponse.additional_info)
+  _impl_.unknown_field_22_ = unknown_field_22;
+  // @@protoc_insertion_point(field_set_allocated:openfoxwq.GetPlayerInfoResponse.unknown_field_22)
+}
+
+// optional .openfoxwq.GetPlayerInfoResponse.Unknown23 unknown_field_23 = 23;
+inline bool GetPlayerInfoResponse::_internal_has_unknown_field_23() const {
+  bool value = (_impl_._has_bits_[0] & 0x00004000u) != 0;
+  PROTOBUF_ASSUME(!value || _impl_.unknown_field_23_ != nullptr);
+  return value;
+}
+inline bool GetPlayerInfoResponse::has_unknown_field_23() const {
+  return _internal_has_unknown_field_23();
+}
+inline void GetPlayerInfoResponse::clear_unknown_field_23() {
+  if (_impl_.unknown_field_23_ != nullptr) _impl_.unknown_field_23_->Clear();
+  _impl_._has_bits_[0] &= ~0x00004000u;
+}
+inline const ::openfoxwq::GetPlayerInfoResponse_Unknown23& GetPlayerInfoResponse::_internal_unknown_field_23() const {
+  const ::openfoxwq::GetPlayerInfoResponse_Unknown23* p = _impl_.unknown_field_23_;
+  return p != nullptr ? *p : reinterpret_cast<const ::openfoxwq::GetPlayerInfoResponse_Unknown23&>(
+      ::openfoxwq::_GetPlayerInfoResponse_Unknown23_default_instance_);
+}
+inline const ::openfoxwq::GetPlayerInfoResponse_Unknown23& GetPlayerInfoResponse::unknown_field_23() const {
+  // @@protoc_insertion_point(field_get:openfoxwq.GetPlayerInfoResponse.unknown_field_23)
+  return _internal_unknown_field_23();
+}
+inline void GetPlayerInfoResponse::unsafe_arena_set_allocated_unknown_field_23(
+    ::openfoxwq::GetPlayerInfoResponse_Unknown23* unknown_field_23) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.unknown_field_23_);
+  }
+  _impl_.unknown_field_23_ = unknown_field_23;
+  if (unknown_field_23) {
+    _impl_._has_bits_[0] |= 0x00004000u;
+  } else {
+    _impl_._has_bits_[0] &= ~0x00004000u;
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:openfoxwq.GetPlayerInfoResponse.unknown_field_23)
+}
+inline ::openfoxwq::GetPlayerInfoResponse_Unknown23* GetPlayerInfoResponse::release_unknown_field_23() {
+  _impl_._has_bits_[0] &= ~0x00004000u;
+  ::openfoxwq::GetPlayerInfoResponse_Unknown23* temp = _impl_.unknown_field_23_;
+  _impl_.unknown_field_23_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::openfoxwq::GetPlayerInfoResponse_Unknown23* GetPlayerInfoResponse::unsafe_arena_release_unknown_field_23() {
+  // @@protoc_insertion_point(field_release:openfoxwq.GetPlayerInfoResponse.unknown_field_23)
+  _impl_._has_bits_[0] &= ~0x00004000u;
+  ::openfoxwq::GetPlayerInfoResponse_Unknown23* temp = _impl_.unknown_field_23_;
+  _impl_.unknown_field_23_ = nullptr;
+  return temp;
+}
+inline ::openfoxwq::GetPlayerInfoResponse_Unknown23* GetPlayerInfoResponse::_internal_mutable_unknown_field_23() {
+  _impl_._has_bits_[0] |= 0x00004000u;
+  if (_impl_.unknown_field_23_ == nullptr) {
+    auto* p = CreateMaybeMessage<::openfoxwq::GetPlayerInfoResponse_Unknown23>(GetArenaForAllocation());
+    _impl_.unknown_field_23_ = p;
+  }
+  return _impl_.unknown_field_23_;
+}
+inline ::openfoxwq::GetPlayerInfoResponse_Unknown23* GetPlayerInfoResponse::mutable_unknown_field_23() {
+  ::openfoxwq::GetPlayerInfoResponse_Unknown23* _msg = _internal_mutable_unknown_field_23();
+  // @@protoc_insertion_point(field_mutable:openfoxwq.GetPlayerInfoResponse.unknown_field_23)
+  return _msg;
+}
+inline void GetPlayerInfoResponse::set_allocated_unknown_field_23(::openfoxwq::GetPlayerInfoResponse_Unknown23* unknown_field_23) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete _impl_.unknown_field_23_;
+  }
+  if (unknown_field_23) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(unknown_field_23);
+    if (message_arena != submessage_arena) {
+      unknown_field_23 = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, unknown_field_23, submessage_arena);
+    }
+    _impl_._has_bits_[0] |= 0x00004000u;
+  } else {
+    _impl_._has_bits_[0] &= ~0x00004000u;
+  }
+  _impl_.unknown_field_23_ = unknown_field_23;
+  // @@protoc_insertion_point(field_set_allocated:openfoxwq.GetPlayerInfoResponse.unknown_field_23)
 }
 
 // -------------------------------------------------------------------
@@ -26562,6 +28196,18 @@ inline void GameResultEvent::set_ts_13(int64_t value) {
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------

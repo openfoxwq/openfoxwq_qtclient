@@ -10,7 +10,9 @@ ModelUtils::ModelUtils() : m_unknownCountryFlag(":/assets/flag-small/aq.png")
 {
     m_countryFlags[openfoxwq::Country::ALBANIA] = QIcon(":/assets/flag-small/al.png");
     m_countryFlags[openfoxwq::Country::AUSTRALIA] = QIcon(":/assets/flag-small/au.png");
+    m_countryFlags[openfoxwq::Country::AUSTRIA] = QIcon(":/assets/flag-small/at.png");
     m_countryFlags[openfoxwq::Country::BELARUS] = QIcon(":/assets/flag-small/by.png");
+    m_countryFlags[openfoxwq::Country::BELGIUM] = QIcon(":/assets/flag-small/be.png");
     m_countryFlags[openfoxwq::Country::BULGARIA] = QIcon(":/assets/flag-small/bg.png");
     m_countryFlags[openfoxwq::Country::CANADA] = QIcon(":/assets/flag-small/ca.png");
     m_countryFlags[openfoxwq::Country::CHILE] = QIcon(":/assets/flag-small/cl.png");
@@ -20,12 +22,15 @@ ModelUtils::ModelUtils() : m_unknownCountryFlag(":/assets/flag-small/aq.png")
     m_countryFlags[openfoxwq::Country::GREECE] = QIcon(":/assets/flag-small/gr.png");
     m_countryFlags[openfoxwq::Country::HONGKONG] = QIcon(":/assets/flag-small/hk.png");
     m_countryFlags[openfoxwq::Country::HUNGARY] = QIcon(":/assets/flag-small/hu.png");
+    m_countryFlags[openfoxwq::Country::INDONESIA] = QIcon(":/assets/flag-small/id.png");
     m_countryFlags[openfoxwq::Country::ITALY] = QIcon(":/assets/flag-small/it.png");
     m_countryFlags[openfoxwq::Country::JAPAN] = QIcon(":/assets/flag-small/jp.png");
     m_countryFlags[openfoxwq::Country::KOREA] = QIcon(":/assets/flag-small/kr.png");
+    m_countryFlags[openfoxwq::Country::LATVIA] = QIcon(":/assets/flag-small/lv.png");
     m_countryFlags[openfoxwq::Country::MACAU] = QIcon(":/assets/flag-small/mo.png");
     m_countryFlags[openfoxwq::Country::NETHERLANDS] = QIcon(":/assets/flag-small/nl.png");
     m_countryFlags[openfoxwq::Country::NEWZEALAND] = QIcon(":/assets/flag-small/nz.png");
+    m_countryFlags[openfoxwq::Country::NIGERIA] = QIcon(":/assets/flag-small/ng.png");
     m_countryFlags[openfoxwq::Country::PHILIPPINES] = QIcon(":/assets/flag-small/ph.png");
     m_countryFlags[openfoxwq::Country::PORTUGAL] = QIcon(":/assets/flag-small/pt.png");
     m_countryFlags[openfoxwq::Country::RUSSIA] = QIcon(":/assets/flag-small/ru.png");
@@ -37,7 +42,7 @@ ModelUtils::ModelUtils() : m_unknownCountryFlag(":/assets/flag-small/aq.png")
     m_countryFlags[openfoxwq::Country::THAILAND] = QIcon(":/assets/flag-small/th.png");
     m_countryFlags[openfoxwq::Country::TURKEY] = QIcon(":/assets/flag-small/tr.png");
     m_countryFlags[openfoxwq::Country::UKRAINE] = QIcon(":/assets/flag-small/ua.png");
-    m_countryFlags[openfoxwq::Country::UK] = QIcon(":/assets/flag-small/uk.png");
+    m_countryFlags[openfoxwq::Country::UK] = QIcon(":/assets/flag-small/gb.png");
     m_countryFlags[openfoxwq::Country::USA] = QIcon(":/assets/flag-small/us.png");
     m_countryFlags[openfoxwq::Country::VIETNAM] = QIcon(":/assets/flag-small/vn.png");
 }
@@ -47,7 +52,9 @@ QString ModelUtils::countryString(openfoxwq::Country country) {
     case openfoxwq::Country::UNKNOWN: return "?";
     case openfoxwq::Country::ALBANIA: return "Albania";
     case openfoxwq::Country::AUSTRALIA: return "Australia";
+    case openfoxwq::Country::AUSTRIA: return "Austria";
     case openfoxwq::Country::BELARUS: return "Belarus";
+    case openfoxwq::Country::BELGIUM: return "Belgium";
     case openfoxwq::Country::BULGARIA: return "Bulgaria";
     case openfoxwq::Country::CANADA: return "Canada";
     case openfoxwq::Country::CHILE: return "Chile";
@@ -57,12 +64,15 @@ QString ModelUtils::countryString(openfoxwq::Country country) {
     case openfoxwq::Country::GREECE: return "Greece";
     case openfoxwq::Country::HONGKONG: return "Hong Kong";
     case openfoxwq::Country::HUNGARY: return "Hungary";
+    case openfoxwq::Country::INDONESIA: return "Indonesia";
     case openfoxwq::Country::ITALY: return "Italy";
     case openfoxwq::Country::JAPAN: return "Japan";
     case openfoxwq::Country::KOREA: return "South Korea";
+    case openfoxwq::Country::LATVIA: return "Latvia";
     case openfoxwq::Country::MACAU: return "Macau";
     case openfoxwq::Country::NETHERLANDS: return "Netherlands";
     case openfoxwq::Country::NEWZEALAND: return "New Zealand";
+    case openfoxwq::Country::NIGERIA: return "Nigeria";
     case openfoxwq::Country::PHILIPPINES: return "Philippines";
     case openfoxwq::Country::PORTUGAL: return "Portugal";
     case openfoxwq::Country::RUSSIA: return "Russia";
@@ -84,7 +94,7 @@ QStandardItem* ModelUtils::alignedString(QString s, Qt::Alignment alignment, QSt
     QStandardItem *ret = new QStandardItem(s);
     ret->setTextAlignment(Qt::AlignVCenter | alignment);
     ret->setToolTip(tooltip);
-    if (fg != Qt::transparent) {
+    if (fg.color() != Qt::transparent) {
         ret->setForeground(fg);
     }
     return ret;
@@ -94,7 +104,7 @@ QStandardItem* ModelUtils::nickWithFlag(openfoxwq::Country country, QString nick
     QStandardItem *ret = new QStandardItem(flagForCountry(country), nick);
     ret->setTextAlignment(Qt::AlignVCenter | alignment);
     ret->setToolTip(tooltip);
-    if (fg != Qt::transparent) {
+    if (fg.color() != Qt::transparent) {
         ret->setForeground(fg);
     }
     return ret;
@@ -106,6 +116,74 @@ QIcon ModelUtils::flagForCountry(openfoxwq::Country country) const {
         return *it;
     }
     return m_unknownCountryFlag;
+}
+
+QStandardItem* ModelUtils::flair(const openfoxwq::PlayerInfo& player) const {
+    QStandardItem *item = new QStandardItem();
+    QFont font = item->font();
+    font.setBold(true);
+    item->setFont(font);
+    if (player.ai()) {
+        item->setText("AI");
+        switch (player.flair()) {
+        case openfoxwq::Flair::FLAIR_GOLD_CROWN:
+            item->setForeground(QColor(0xff, 0xd7, 0x00, 0xff));
+            break;
+        case openfoxwq::Flair::FLAIR_SILVER_CROWN:
+            item->setForeground(QColor(0xc0, 0xc0, 0xc0, 0xff));
+            break;
+        case openfoxwq::Flair::FLAIR_PRO:
+            item->setForeground(QColor(0x00, 0xff, 0x7f, 0xff));
+            break;
+        default:
+            break;
+        }
+    } else {
+        switch (player.flair()) {
+        case openfoxwq::Flair::FLAIR_TOP_AMATEUR:
+            item->setIcon(QIcon(":/assets/flair/top-amateur.png"));
+            item->setToolTip("Top Amateur");
+            break;
+        case openfoxwq::Flair::FLAIR_ELITE_AMATEUR:
+            item->setIcon(QIcon(":/assets/flair/elite-amateur.png"));
+            item->setToolTip("Elite Amateur");
+            break;
+        case openfoxwq::Flair::FLAIR_PRO:
+            if (player.sex() == openfoxwq::Sex::SEX_MALE)
+                item->setIcon(QIcon(":/assets/flair/pro-male.png"));
+            else
+                item->setIcon(QIcon(":/assets/flair/pro-female.png"));
+            item->setToolTip("Professional");
+            break;
+        case openfoxwq::Flair::FLAIR_GOLD_CROWN:
+            item->setIcon(QIcon(":/assets/flair/gold-crown.png"));
+            item->setToolTip("World Champion");
+            break;
+        case openfoxwq::Flair::FLAIR_SILVER_CROWN:
+            item->setIcon(QIcon(":/assets/flair/silver-crown.png"));
+            item->setToolTip("World Vice-Champion or National Champion");
+            break;
+        default:
+            if (player.amateur_6d()) {
+                item->setIcon(QIcon(":/assets/flair/amateur-6d.png"));
+            } else {
+                switch (player.membership_type()) {
+                case openfoxwq::MEMBERSHIP_GOLD:
+                    item->setIcon(QIcon(":/assets/flair/gold-member.png"));
+                    item->setToolTip("Gold Membership");
+                    break;
+                case openfoxwq::MEMBERSHIP_SILVER:
+                    item->setIcon(QIcon(":/assets/flair/silver-member.png"));
+                    item->setToolTip("Silver Membership");
+                    break;
+                default:
+                    break;
+                }
+                break;
+            }
+        }
+    }
+    return item;
 }
 
 QString ModelUtils::colorString(openfoxwq::Color col) {
@@ -290,3 +368,57 @@ QPair<QString, bool> ModelUtils::formatGameResult(openfoxwq::Color winner, int64
     return {QString("%1+%2").arg(ModelUtils::colorShortString(winner), reason), true};
 }
 
+QString ModelUtils::longFormatGameResult(openfoxwq::Color winner, int64_t scoreLead) {
+    if (winner == openfoxwq::Color::COL_NONE) {
+        return "Draw";
+    }
+    if (winner != openfoxwq::COL_NONE && scoreLead == 0) {
+        return "Game is void";
+    }
+
+    QString reason;
+    switch (scoreLead) {
+    case -1:
+        reason = "resignation";
+        break;
+    case -2:
+        reason = "time";
+        break;
+    case -3:
+        reason = "forfeit";
+        break;
+    default:
+        reason = ModelUtils::formatScoreLead(scoreLead);
+        break;
+    }
+    return QString("%1 wins by %2").arg(ModelUtils::colorString(winner), reason);
+}
+
+QString ModelUtils::formatMemberTenure(int64_t sec) {
+    static QVector<QPair<QString, int64_t>> units = {
+        {"year",31556952},
+        {"month", 2629746},
+        {"week", 604800},
+        {"day", 86400},
+        {"hour", 3600},
+        {"minute", 60},
+    };
+
+    int parts = 0;
+    bool first = true;
+    QString ret;
+    for (const auto &[unitName, unit] : units) {
+        if (parts >= 3) break;
+        if (sec < unit) continue;
+
+        if (!first) ret += ", ";
+        first = false;
+
+        const int64_t cnt = sec / unit;
+
+        ret += QString("%1 %2%3").arg(cnt).arg(unitName, (cnt > 1) ? "s" : "");
+        sec %= unit;
+        parts++;
+    }
+    return ret;
+}

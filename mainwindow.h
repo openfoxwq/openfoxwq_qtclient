@@ -50,6 +50,7 @@ private slots:
     void on_voiceLangComboBox_currentIndexChanged(int index);
 
     void on_automatchPresetComboBox_currentIndexChanged(int index);
+    void onModelSortTimeout();
 
 private:
     Ui::MainWindow *ui;
@@ -66,6 +67,7 @@ private:
     QMap<int, BroadcastRoomTab*> m_activeBroadcastRooms;
     QMap<int, MatchRoomTab*> m_activeMatchRooms;
     const QString m_automatchPresetSettingKey;
+    QTimer m_modelSortTimer;
 
     int initialBroadcastPages = 0;
     int lastBroadcastPage = 0;

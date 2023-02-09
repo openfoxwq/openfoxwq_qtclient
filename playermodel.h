@@ -20,6 +20,7 @@ public:
     bool contains(PlayerId) const;
     void remove(PlayerId);
     int size() const;
+    void sortSpecial();
 
     const openfoxwq::PlayerInfo& getPlayerById(PlayerId id) const;
     const openfoxwq::PlayerInfo& getPlayer(int id) const;
@@ -28,6 +29,8 @@ private:
     const ModelUtils& m_modelUtils;
     QVector<openfoxwq::PlayerInfo> m_players;
     QMap<PlayerId, int> m_playerIndex;
+
+    void updateRow(int index, const openfoxwq::PlayerInfo& player);
 };
 
 #endif // PLAYERMODEL_H

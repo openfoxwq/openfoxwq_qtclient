@@ -94,6 +94,10 @@ void BoardWidget::toggleTurn() {
     m_lastState = nextCol(m_lastState);
 }
 
+QPair<int, int> BoardWidget::lastPoint() const {
+    return m_lastPoint;
+}
+
 openfoxwq::Color BoardWidget::getExtendedState(int r, int c, const QMap<Point, openfoxwq::Color> &additionalPoints) {
     auto it = additionalPoints.find({r,c});
     if (it != additionalPoints.end())
@@ -209,16 +213,7 @@ bool BoardWidget::movePiece(int r, int c, openfoxwq::Color state, int *captureCo
 
     // Update last point annotations
     m_lastState = state;
-    const auto & [lr, lc] = m_lastPoint;
-    if (lr != -1 && pointButtons[lr][lc]->getAnnotation().type == AnnotationType::kQuarterTriangle) {
-        pointButtons[lr][lc]->clearAnnotation();
-    }
     m_lastPoint = {r, c};
-    pointButtons[r][c]->setAnnotation(Annotation{
-        AnnotationType::kQuarterTriangle,
-        state == openfoxwq::Color::COL_BLACK ? Qt::white : Qt::black,
-        "",
-    });
     return true;
 }
 

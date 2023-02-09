@@ -229,6 +229,29 @@
           </property>
          </widget>
         </item>
+        <item row="5" column="0">
+         <widget class="QLabel" name="label_12">
+          <property name="text">
+           <string>Member Since:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="1">
+         <widget class="QLabel" name="memberSinceLabel">
+          <property name="font">
+           <font>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::Box</enum>
+          </property>
+          <property name="text">
+           <string>2013-09-18</string>
+          </property>
+         </widget>
+        </item>
        </layout>
       </item>
      </layout>
@@ -654,7 +677,7 @@
       </sizepolicy>
      </property>
      <property name="title">
-      <string>Current Rooms</string>
+      <string>Current Activity</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>

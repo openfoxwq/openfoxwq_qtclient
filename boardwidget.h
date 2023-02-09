@@ -25,6 +25,7 @@ public:
     void paintEvent(QPaintEvent *) override;
     bool movePiece(int r, int c, openfoxwq::Color state, int *captureCount = nullptr);
     openfoxwq::Color turn() const;
+    QPair<int, int> lastPoint() const;
     void toggleTurn();
     void setAnnotation(int r, int c, Annotation);
     openfoxwq::Color getPoint(int r, int c) const;
