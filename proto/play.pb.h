@@ -116,9 +116,9 @@ extern GetPlayerInfoResponse_ProInfoDefaultTypeInternal _GetPlayerInfoResponse_P
 class GetPlayerInfoResponse_RecentRecord;
 struct GetPlayerInfoResponse_RecentRecordDefaultTypeInternal;
 extern GetPlayerInfoResponse_RecentRecordDefaultTypeInternal _GetPlayerInfoResponse_RecentRecord_default_instance_;
-class GetPlayerInfoResponse_RecentRecord_Unknown1;
-struct GetPlayerInfoResponse_RecentRecord_Unknown1DefaultTypeInternal;
-extern GetPlayerInfoResponse_RecentRecord_Unknown1DefaultTypeInternal _GetPlayerInfoResponse_RecentRecord_Unknown1_default_instance_;
+class GetPlayerInfoResponse_RecentRecord_RankRequirements;
+struct GetPlayerInfoResponse_RecentRecord_RankRequirementsDefaultTypeInternal;
+extern GetPlayerInfoResponse_RecentRecord_RankRequirementsDefaultTypeInternal _GetPlayerInfoResponse_RecentRecord_RankRequirements_default_instance_;
 class GetPlayerInfoResponse_RegisterInfo;
 struct GetPlayerInfoResponse_RegisterInfoDefaultTypeInternal;
 extern GetPlayerInfoResponse_RegisterInfoDefaultTypeInternal _GetPlayerInfoResponse_RegisterInfo_default_instance_;
@@ -328,7 +328,7 @@ template<> ::openfoxwq::GetPlayerInfoResponse_PerformanceRecord* Arena::CreateMa
 template<> ::openfoxwq::GetPlayerInfoResponse_PlayerFlair* Arena::CreateMaybeMessage<::openfoxwq::GetPlayerInfoResponse_PlayerFlair>(Arena*);
 template<> ::openfoxwq::GetPlayerInfoResponse_ProInfo* Arena::CreateMaybeMessage<::openfoxwq::GetPlayerInfoResponse_ProInfo>(Arena*);
 template<> ::openfoxwq::GetPlayerInfoResponse_RecentRecord* Arena::CreateMaybeMessage<::openfoxwq::GetPlayerInfoResponse_RecentRecord>(Arena*);
-template<> ::openfoxwq::GetPlayerInfoResponse_RecentRecord_Unknown1* Arena::CreateMaybeMessage<::openfoxwq::GetPlayerInfoResponse_RecentRecord_Unknown1>(Arena*);
+template<> ::openfoxwq::GetPlayerInfoResponse_RecentRecord_RankRequirements* Arena::CreateMaybeMessage<::openfoxwq::GetPlayerInfoResponse_RecentRecord_RankRequirements>(Arena*);
 template<> ::openfoxwq::GetPlayerInfoResponse_RegisterInfo* Arena::CreateMaybeMessage<::openfoxwq::GetPlayerInfoResponse_RegisterInfo>(Arena*);
 template<> ::openfoxwq::GetPlayerInfoResponse_Results* Arena::CreateMaybeMessage<::openfoxwq::GetPlayerInfoResponse_Results>(Arena*);
 template<> ::openfoxwq::GetPlayerInfoResponse_Rooms* Arena::CreateMaybeMessage<::openfoxwq::GetPlayerInfoResponse_Rooms>(Arena*);
@@ -1552,6 +1552,7 @@ class GetPlayerInfoResponse_RegisterInfo final :
     kPlayerIdFieldNumber = 1,
     kMemberSinceUnixTsFieldNumber = 8,
     kCountryFieldNumber = 7,
+    kSexFieldNumber = 9,
   };
   // required string name_native = 4;
   bool has_name_native() const;
@@ -1628,6 +1629,19 @@ class GetPlayerInfoResponse_RegisterInfo final :
   void _internal_set_country(::openfoxwq::Country value);
   public:
 
+  // required .openfoxwq.Sex sex = 9;
+  bool has_sex() const;
+  private:
+  bool _internal_has_sex() const;
+  public:
+  void clear_sex();
+  ::openfoxwq::Sex sex() const;
+  void set_sex(::openfoxwq::Sex value);
+  private:
+  ::openfoxwq::Sex _internal_sex() const;
+  void _internal_set_sex(::openfoxwq::Sex value);
+  public:
+
   // @@protoc_insertion_point(class_scope:openfoxwq.GetPlayerInfoResponse.RegisterInfo)
  private:
   class _Internal;
@@ -1646,29 +1660,31 @@ class GetPlayerInfoResponse_RegisterInfo final :
     int64_t player_id_;
     int64_t member_since_unix_ts_;
     int country_;
+    int sex_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_proto_2fplay_2eproto;
 };
 // -------------------------------------------------------------------
 
-class GetPlayerInfoResponse_RecentRecord_Unknown1 final :
-    public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:openfoxwq.GetPlayerInfoResponse.RecentRecord.Unknown1) */ {
+class GetPlayerInfoResponse_RecentRecord_RankRequirements final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:openfoxwq.GetPlayerInfoResponse.RecentRecord.RankRequirements) */ {
  public:
-  inline GetPlayerInfoResponse_RecentRecord_Unknown1() : GetPlayerInfoResponse_RecentRecord_Unknown1(nullptr) {}
-  explicit PROTOBUF_CONSTEXPR GetPlayerInfoResponse_RecentRecord_Unknown1(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline GetPlayerInfoResponse_RecentRecord_RankRequirements() : GetPlayerInfoResponse_RecentRecord_RankRequirements(nullptr) {}
+  ~GetPlayerInfoResponse_RecentRecord_RankRequirements() override;
+  explicit PROTOBUF_CONSTEXPR GetPlayerInfoResponse_RecentRecord_RankRequirements(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  GetPlayerInfoResponse_RecentRecord_Unknown1(const GetPlayerInfoResponse_RecentRecord_Unknown1& from);
-  GetPlayerInfoResponse_RecentRecord_Unknown1(GetPlayerInfoResponse_RecentRecord_Unknown1&& from) noexcept
-    : GetPlayerInfoResponse_RecentRecord_Unknown1() {
+  GetPlayerInfoResponse_RecentRecord_RankRequirements(const GetPlayerInfoResponse_RecentRecord_RankRequirements& from);
+  GetPlayerInfoResponse_RecentRecord_RankRequirements(GetPlayerInfoResponse_RecentRecord_RankRequirements&& from) noexcept
+    : GetPlayerInfoResponse_RecentRecord_RankRequirements() {
     *this = ::std::move(from);
   }
 
-  inline GetPlayerInfoResponse_RecentRecord_Unknown1& operator=(const GetPlayerInfoResponse_RecentRecord_Unknown1& from) {
+  inline GetPlayerInfoResponse_RecentRecord_RankRequirements& operator=(const GetPlayerInfoResponse_RecentRecord_RankRequirements& from) {
     CopyFrom(from);
     return *this;
   }
-  inline GetPlayerInfoResponse_RecentRecord_Unknown1& operator=(GetPlayerInfoResponse_RecentRecord_Unknown1&& from) noexcept {
+  inline GetPlayerInfoResponse_RecentRecord_RankRequirements& operator=(GetPlayerInfoResponse_RecentRecord_RankRequirements&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -1698,20 +1714,20 @@ class GetPlayerInfoResponse_RecentRecord_Unknown1 final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const GetPlayerInfoResponse_RecentRecord_Unknown1& default_instance() {
+  static const GetPlayerInfoResponse_RecentRecord_RankRequirements& default_instance() {
     return *internal_default_instance();
   }
-  static inline const GetPlayerInfoResponse_RecentRecord_Unknown1* internal_default_instance() {
-    return reinterpret_cast<const GetPlayerInfoResponse_RecentRecord_Unknown1*>(
-               &_GetPlayerInfoResponse_RecentRecord_Unknown1_default_instance_);
+  static inline const GetPlayerInfoResponse_RecentRecord_RankRequirements* internal_default_instance() {
+    return reinterpret_cast<const GetPlayerInfoResponse_RecentRecord_RankRequirements*>(
+               &_GetPlayerInfoResponse_RecentRecord_RankRequirements_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     6;
 
-  friend void swap(GetPlayerInfoResponse_RecentRecord_Unknown1& a, GetPlayerInfoResponse_RecentRecord_Unknown1& b) {
+  friend void swap(GetPlayerInfoResponse_RecentRecord_RankRequirements& a, GetPlayerInfoResponse_RecentRecord_RankRequirements& b) {
     a.Swap(&b);
   }
-  inline void Swap(GetPlayerInfoResponse_RecentRecord_Unknown1* other) {
+  inline void Swap(GetPlayerInfoResponse_RecentRecord_RankRequirements* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -1724,7 +1740,7 @@ class GetPlayerInfoResponse_RecentRecord_Unknown1 final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(GetPlayerInfoResponse_RecentRecord_Unknown1* other) {
+  void UnsafeArenaSwap(GetPlayerInfoResponse_RecentRecord_RankRequirements* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -1732,26 +1748,40 @@ class GetPlayerInfoResponse_RecentRecord_Unknown1 final :
 
   // implements Message ----------------------------------------------
 
-  GetPlayerInfoResponse_RecentRecord_Unknown1* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<GetPlayerInfoResponse_RecentRecord_Unknown1>(arena);
+  GetPlayerInfoResponse_RecentRecord_RankRequirements* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<GetPlayerInfoResponse_RecentRecord_RankRequirements>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyFrom;
-  inline void CopyFrom(const GetPlayerInfoResponse_RecentRecord_Unknown1& from) {
-    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const GetPlayerInfoResponse_RecentRecord_RankRequirements& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const GetPlayerInfoResponse_RecentRecord_RankRequirements& from) {
+    GetPlayerInfoResponse_RecentRecord_RankRequirements::MergeImpl(*this, from);
   }
-  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeFrom;
-  void MergeFrom(const GetPlayerInfoResponse_RecentRecord_Unknown1& from) {
-    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl(*this, from);
-  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
   public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  uint8_t* _InternalSerialize(
+      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
+
+  private:
+  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(GetPlayerInfoResponse_RecentRecord_RankRequirements* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "openfoxwq.GetPlayerInfoResponse.RecentRecord.Unknown1";
+    return "openfoxwq.GetPlayerInfoResponse.RecentRecord.RankRequirements";
   }
   protected:
-  explicit GetPlayerInfoResponse_RecentRecord_Unknown1(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit GetPlayerInfoResponse_RecentRecord_RankRequirements(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   public:
 
@@ -1764,7 +1794,65 @@ class GetPlayerInfoResponse_RecentRecord_Unknown1 final :
 
   // accessors -------------------------------------------------------
 
-  // @@protoc_insertion_point(class_scope:openfoxwq.GetPlayerInfoResponse.RecentRecord.Unknown1)
+  enum : int {
+    kUp1FieldNumber = 1,
+    kUp2FieldNumber = 2,
+    kDown1FieldNumber = 3,
+    kDown2FieldNumber = 4,
+  };
+  // optional int64 up1 = 1;
+  bool has_up1() const;
+  private:
+  bool _internal_has_up1() const;
+  public:
+  void clear_up1();
+  int64_t up1() const;
+  void set_up1(int64_t value);
+  private:
+  int64_t _internal_up1() const;
+  void _internal_set_up1(int64_t value);
+  public:
+
+  // optional int64 up2 = 2;
+  bool has_up2() const;
+  private:
+  bool _internal_has_up2() const;
+  public:
+  void clear_up2();
+  int64_t up2() const;
+  void set_up2(int64_t value);
+  private:
+  int64_t _internal_up2() const;
+  void _internal_set_up2(int64_t value);
+  public:
+
+  // optional int64 down1 = 3;
+  bool has_down1() const;
+  private:
+  bool _internal_has_down1() const;
+  public:
+  void clear_down1();
+  int64_t down1() const;
+  void set_down1(int64_t value);
+  private:
+  int64_t _internal_down1() const;
+  void _internal_set_down1(int64_t value);
+  public:
+
+  // optional int64 down2 = 4;
+  bool has_down2() const;
+  private:
+  bool _internal_has_down2() const;
+  public:
+  void clear_down2();
+  int64_t down2() const;
+  void set_down2(int64_t value);
+  private:
+  int64_t _internal_down2() const;
+  void _internal_set_down2(int64_t value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:openfoxwq.GetPlayerInfoResponse.RecentRecord.RankRequirements)
  private:
   class _Internal;
 
@@ -1772,7 +1860,14 @@ class GetPlayerInfoResponse_RecentRecord_Unknown1 final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    int64_t up1_;
+    int64_t up2_;
+    int64_t down1_;
+    int64_t down2_;
   };
+  union { Impl_ _impl_; };
   friend struct ::TableStruct_proto_2fplay_2eproto;
 };
 // -------------------------------------------------------------------
@@ -1902,14 +1997,14 @@ class GetPlayerInfoResponse_RecentRecord final :
 
   // nested types ----------------------------------------------------
 
-  typedef GetPlayerInfoResponse_RecentRecord_Unknown1 Unknown1;
+  typedef GetPlayerInfoResponse_RecentRecord_RankRequirements RankRequirements;
 
   // accessors -------------------------------------------------------
 
   enum : int {
     kStreakFieldNumber = 2,
     kUnknownField3FieldNumber = 3,
-    kUnknownField1FieldNumber = 1,
+    kRankRequirementsFieldNumber = 1,
   };
   // optional string streak = 2;
   bool has_streak() const;
@@ -1947,23 +2042,23 @@ class GetPlayerInfoResponse_RecentRecord final :
   std::string* _internal_mutable_unknown_field_3();
   public:
 
-  // optional .openfoxwq.GetPlayerInfoResponse.RecentRecord.Unknown1 unknown_field_1 = 1;
-  bool has_unknown_field_1() const;
+  // optional .openfoxwq.GetPlayerInfoResponse.RecentRecord.RankRequirements rank_requirements = 1;
+  bool has_rank_requirements() const;
   private:
-  bool _internal_has_unknown_field_1() const;
+  bool _internal_has_rank_requirements() const;
   public:
-  void clear_unknown_field_1();
-  const ::openfoxwq::GetPlayerInfoResponse_RecentRecord_Unknown1& unknown_field_1() const;
-  PROTOBUF_NODISCARD ::openfoxwq::GetPlayerInfoResponse_RecentRecord_Unknown1* release_unknown_field_1();
-  ::openfoxwq::GetPlayerInfoResponse_RecentRecord_Unknown1* mutable_unknown_field_1();
-  void set_allocated_unknown_field_1(::openfoxwq::GetPlayerInfoResponse_RecentRecord_Unknown1* unknown_field_1);
+  void clear_rank_requirements();
+  const ::openfoxwq::GetPlayerInfoResponse_RecentRecord_RankRequirements& rank_requirements() const;
+  PROTOBUF_NODISCARD ::openfoxwq::GetPlayerInfoResponse_RecentRecord_RankRequirements* release_rank_requirements();
+  ::openfoxwq::GetPlayerInfoResponse_RecentRecord_RankRequirements* mutable_rank_requirements();
+  void set_allocated_rank_requirements(::openfoxwq::GetPlayerInfoResponse_RecentRecord_RankRequirements* rank_requirements);
   private:
-  const ::openfoxwq::GetPlayerInfoResponse_RecentRecord_Unknown1& _internal_unknown_field_1() const;
-  ::openfoxwq::GetPlayerInfoResponse_RecentRecord_Unknown1* _internal_mutable_unknown_field_1();
+  const ::openfoxwq::GetPlayerInfoResponse_RecentRecord_RankRequirements& _internal_rank_requirements() const;
+  ::openfoxwq::GetPlayerInfoResponse_RecentRecord_RankRequirements* _internal_mutable_rank_requirements();
   public:
-  void unsafe_arena_set_allocated_unknown_field_1(
-      ::openfoxwq::GetPlayerInfoResponse_RecentRecord_Unknown1* unknown_field_1);
-  ::openfoxwq::GetPlayerInfoResponse_RecentRecord_Unknown1* unsafe_arena_release_unknown_field_1();
+  void unsafe_arena_set_allocated_rank_requirements(
+      ::openfoxwq::GetPlayerInfoResponse_RecentRecord_RankRequirements* rank_requirements);
+  ::openfoxwq::GetPlayerInfoResponse_RecentRecord_RankRequirements* unsafe_arena_release_rank_requirements();
 
   // @@protoc_insertion_point(class_scope:openfoxwq.GetPlayerInfoResponse.RecentRecord)
  private:
@@ -1977,7 +2072,7 @@ class GetPlayerInfoResponse_RecentRecord final :
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr streak_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr unknown_field_3_;
-    ::openfoxwq::GetPlayerInfoResponse_RecentRecord_Unknown1* unknown_field_1_;
+    ::openfoxwq::GetPlayerInfoResponse_RecentRecord_RankRequirements* rank_requirements_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_proto_2fplay_2eproto;
@@ -3799,8 +3894,22 @@ class GetPlayerInfoResponse_PlayerFlair final :
   // accessors -------------------------------------------------------
 
   enum : int {
+    kFlairFieldNumber = 1,
     kAiFieldNumber = 2,
   };
+  // optional .openfoxwq.Flair flair = 1;
+  bool has_flair() const;
+  private:
+  bool _internal_has_flair() const;
+  public:
+  void clear_flair();
+  ::openfoxwq::Flair flair() const;
+  void set_flair(::openfoxwq::Flair value);
+  private:
+  ::openfoxwq::Flair _internal_flair() const;
+  void _internal_set_flair(::openfoxwq::Flair value);
+  public:
+
   // optional bool ai = 2;
   bool has_ai() const;
   private:
@@ -3824,6 +3933,7 @@ class GetPlayerInfoResponse_PlayerFlair final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    int flair_;
     bool ai_;
   };
   union { Impl_ _impl_; };
@@ -17536,53 +17646,194 @@ inline void GetPlayerInfoResponse_RegisterInfo::set_member_since_unix_ts(int64_t
   // @@protoc_insertion_point(field_set:openfoxwq.GetPlayerInfoResponse.RegisterInfo.member_since_unix_ts)
 }
 
+// required .openfoxwq.Sex sex = 9;
+inline bool GetPlayerInfoResponse_RegisterInfo::_internal_has_sex() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
+  return value;
+}
+inline bool GetPlayerInfoResponse_RegisterInfo::has_sex() const {
+  return _internal_has_sex();
+}
+inline void GetPlayerInfoResponse_RegisterInfo::clear_sex() {
+  _impl_.sex_ = 0;
+  _impl_._has_bits_[0] &= ~0x00000020u;
+}
+inline ::openfoxwq::Sex GetPlayerInfoResponse_RegisterInfo::_internal_sex() const {
+  return static_cast< ::openfoxwq::Sex >(_impl_.sex_);
+}
+inline ::openfoxwq::Sex GetPlayerInfoResponse_RegisterInfo::sex() const {
+  // @@protoc_insertion_point(field_get:openfoxwq.GetPlayerInfoResponse.RegisterInfo.sex)
+  return _internal_sex();
+}
+inline void GetPlayerInfoResponse_RegisterInfo::_internal_set_sex(::openfoxwq::Sex value) {
+  assert(::openfoxwq::Sex_IsValid(value));
+  _impl_._has_bits_[0] |= 0x00000020u;
+  _impl_.sex_ = value;
+}
+inline void GetPlayerInfoResponse_RegisterInfo::set_sex(::openfoxwq::Sex value) {
+  _internal_set_sex(value);
+  // @@protoc_insertion_point(field_set:openfoxwq.GetPlayerInfoResponse.RegisterInfo.sex)
+}
+
 // -------------------------------------------------------------------
 
-// GetPlayerInfoResponse_RecentRecord_Unknown1
+// GetPlayerInfoResponse_RecentRecord_RankRequirements
+
+// optional int64 up1 = 1;
+inline bool GetPlayerInfoResponse_RecentRecord_RankRequirements::_internal_has_up1() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool GetPlayerInfoResponse_RecentRecord_RankRequirements::has_up1() const {
+  return _internal_has_up1();
+}
+inline void GetPlayerInfoResponse_RecentRecord_RankRequirements::clear_up1() {
+  _impl_.up1_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000001u;
+}
+inline int64_t GetPlayerInfoResponse_RecentRecord_RankRequirements::_internal_up1() const {
+  return _impl_.up1_;
+}
+inline int64_t GetPlayerInfoResponse_RecentRecord_RankRequirements::up1() const {
+  // @@protoc_insertion_point(field_get:openfoxwq.GetPlayerInfoResponse.RecentRecord.RankRequirements.up1)
+  return _internal_up1();
+}
+inline void GetPlayerInfoResponse_RecentRecord_RankRequirements::_internal_set_up1(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000001u;
+  _impl_.up1_ = value;
+}
+inline void GetPlayerInfoResponse_RecentRecord_RankRequirements::set_up1(int64_t value) {
+  _internal_set_up1(value);
+  // @@protoc_insertion_point(field_set:openfoxwq.GetPlayerInfoResponse.RecentRecord.RankRequirements.up1)
+}
+
+// optional int64 up2 = 2;
+inline bool GetPlayerInfoResponse_RecentRecord_RankRequirements::_internal_has_up2() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool GetPlayerInfoResponse_RecentRecord_RankRequirements::has_up2() const {
+  return _internal_has_up2();
+}
+inline void GetPlayerInfoResponse_RecentRecord_RankRequirements::clear_up2() {
+  _impl_.up2_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000002u;
+}
+inline int64_t GetPlayerInfoResponse_RecentRecord_RankRequirements::_internal_up2() const {
+  return _impl_.up2_;
+}
+inline int64_t GetPlayerInfoResponse_RecentRecord_RankRequirements::up2() const {
+  // @@protoc_insertion_point(field_get:openfoxwq.GetPlayerInfoResponse.RecentRecord.RankRequirements.up2)
+  return _internal_up2();
+}
+inline void GetPlayerInfoResponse_RecentRecord_RankRequirements::_internal_set_up2(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000002u;
+  _impl_.up2_ = value;
+}
+inline void GetPlayerInfoResponse_RecentRecord_RankRequirements::set_up2(int64_t value) {
+  _internal_set_up2(value);
+  // @@protoc_insertion_point(field_set:openfoxwq.GetPlayerInfoResponse.RecentRecord.RankRequirements.up2)
+}
+
+// optional int64 down1 = 3;
+inline bool GetPlayerInfoResponse_RecentRecord_RankRequirements::_internal_has_down1() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool GetPlayerInfoResponse_RecentRecord_RankRequirements::has_down1() const {
+  return _internal_has_down1();
+}
+inline void GetPlayerInfoResponse_RecentRecord_RankRequirements::clear_down1() {
+  _impl_.down1_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000004u;
+}
+inline int64_t GetPlayerInfoResponse_RecentRecord_RankRequirements::_internal_down1() const {
+  return _impl_.down1_;
+}
+inline int64_t GetPlayerInfoResponse_RecentRecord_RankRequirements::down1() const {
+  // @@protoc_insertion_point(field_get:openfoxwq.GetPlayerInfoResponse.RecentRecord.RankRequirements.down1)
+  return _internal_down1();
+}
+inline void GetPlayerInfoResponse_RecentRecord_RankRequirements::_internal_set_down1(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000004u;
+  _impl_.down1_ = value;
+}
+inline void GetPlayerInfoResponse_RecentRecord_RankRequirements::set_down1(int64_t value) {
+  _internal_set_down1(value);
+  // @@protoc_insertion_point(field_set:openfoxwq.GetPlayerInfoResponse.RecentRecord.RankRequirements.down1)
+}
+
+// optional int64 down2 = 4;
+inline bool GetPlayerInfoResponse_RecentRecord_RankRequirements::_internal_has_down2() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
+  return value;
+}
+inline bool GetPlayerInfoResponse_RecentRecord_RankRequirements::has_down2() const {
+  return _internal_has_down2();
+}
+inline void GetPlayerInfoResponse_RecentRecord_RankRequirements::clear_down2() {
+  _impl_.down2_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000008u;
+}
+inline int64_t GetPlayerInfoResponse_RecentRecord_RankRequirements::_internal_down2() const {
+  return _impl_.down2_;
+}
+inline int64_t GetPlayerInfoResponse_RecentRecord_RankRequirements::down2() const {
+  // @@protoc_insertion_point(field_get:openfoxwq.GetPlayerInfoResponse.RecentRecord.RankRequirements.down2)
+  return _internal_down2();
+}
+inline void GetPlayerInfoResponse_RecentRecord_RankRequirements::_internal_set_down2(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000008u;
+  _impl_.down2_ = value;
+}
+inline void GetPlayerInfoResponse_RecentRecord_RankRequirements::set_down2(int64_t value) {
+  _internal_set_down2(value);
+  // @@protoc_insertion_point(field_set:openfoxwq.GetPlayerInfoResponse.RecentRecord.RankRequirements.down2)
+}
 
 // -------------------------------------------------------------------
 
 // GetPlayerInfoResponse_RecentRecord
 
-// optional .openfoxwq.GetPlayerInfoResponse.RecentRecord.Unknown1 unknown_field_1 = 1;
-inline bool GetPlayerInfoResponse_RecentRecord::_internal_has_unknown_field_1() const {
+// optional .openfoxwq.GetPlayerInfoResponse.RecentRecord.RankRequirements rank_requirements = 1;
+inline bool GetPlayerInfoResponse_RecentRecord::_internal_has_rank_requirements() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.unknown_field_1_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.rank_requirements_ != nullptr);
   return value;
 }
-inline bool GetPlayerInfoResponse_RecentRecord::has_unknown_field_1() const {
-  return _internal_has_unknown_field_1();
+inline bool GetPlayerInfoResponse_RecentRecord::has_rank_requirements() const {
+  return _internal_has_rank_requirements();
 }
-inline void GetPlayerInfoResponse_RecentRecord::clear_unknown_field_1() {
-  if (_impl_.unknown_field_1_ != nullptr) _impl_.unknown_field_1_->Clear();
+inline void GetPlayerInfoResponse_RecentRecord::clear_rank_requirements() {
+  if (_impl_.rank_requirements_ != nullptr) _impl_.rank_requirements_->Clear();
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline const ::openfoxwq::GetPlayerInfoResponse_RecentRecord_Unknown1& GetPlayerInfoResponse_RecentRecord::_internal_unknown_field_1() const {
-  const ::openfoxwq::GetPlayerInfoResponse_RecentRecord_Unknown1* p = _impl_.unknown_field_1_;
-  return p != nullptr ? *p : reinterpret_cast<const ::openfoxwq::GetPlayerInfoResponse_RecentRecord_Unknown1&>(
-      ::openfoxwq::_GetPlayerInfoResponse_RecentRecord_Unknown1_default_instance_);
+inline const ::openfoxwq::GetPlayerInfoResponse_RecentRecord_RankRequirements& GetPlayerInfoResponse_RecentRecord::_internal_rank_requirements() const {
+  const ::openfoxwq::GetPlayerInfoResponse_RecentRecord_RankRequirements* p = _impl_.rank_requirements_;
+  return p != nullptr ? *p : reinterpret_cast<const ::openfoxwq::GetPlayerInfoResponse_RecentRecord_RankRequirements&>(
+      ::openfoxwq::_GetPlayerInfoResponse_RecentRecord_RankRequirements_default_instance_);
 }
-inline const ::openfoxwq::GetPlayerInfoResponse_RecentRecord_Unknown1& GetPlayerInfoResponse_RecentRecord::unknown_field_1() const {
-  // @@protoc_insertion_point(field_get:openfoxwq.GetPlayerInfoResponse.RecentRecord.unknown_field_1)
-  return _internal_unknown_field_1();
+inline const ::openfoxwq::GetPlayerInfoResponse_RecentRecord_RankRequirements& GetPlayerInfoResponse_RecentRecord::rank_requirements() const {
+  // @@protoc_insertion_point(field_get:openfoxwq.GetPlayerInfoResponse.RecentRecord.rank_requirements)
+  return _internal_rank_requirements();
 }
-inline void GetPlayerInfoResponse_RecentRecord::unsafe_arena_set_allocated_unknown_field_1(
-    ::openfoxwq::GetPlayerInfoResponse_RecentRecord_Unknown1* unknown_field_1) {
+inline void GetPlayerInfoResponse_RecentRecord::unsafe_arena_set_allocated_rank_requirements(
+    ::openfoxwq::GetPlayerInfoResponse_RecentRecord_RankRequirements* rank_requirements) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.unknown_field_1_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.rank_requirements_);
   }
-  _impl_.unknown_field_1_ = unknown_field_1;
-  if (unknown_field_1) {
+  _impl_.rank_requirements_ = rank_requirements;
+  if (rank_requirements) {
     _impl_._has_bits_[0] |= 0x00000004u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000004u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:openfoxwq.GetPlayerInfoResponse.RecentRecord.unknown_field_1)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:openfoxwq.GetPlayerInfoResponse.RecentRecord.rank_requirements)
 }
-inline ::openfoxwq::GetPlayerInfoResponse_RecentRecord_Unknown1* GetPlayerInfoResponse_RecentRecord::release_unknown_field_1() {
+inline ::openfoxwq::GetPlayerInfoResponse_RecentRecord_RankRequirements* GetPlayerInfoResponse_RecentRecord::release_rank_requirements() {
   _impl_._has_bits_[0] &= ~0x00000004u;
-  ::openfoxwq::GetPlayerInfoResponse_RecentRecord_Unknown1* temp = _impl_.unknown_field_1_;
-  _impl_.unknown_field_1_ = nullptr;
+  ::openfoxwq::GetPlayerInfoResponse_RecentRecord_RankRequirements* temp = _impl_.rank_requirements_;
+  _impl_.rank_requirements_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -17594,44 +17845,44 @@ inline ::openfoxwq::GetPlayerInfoResponse_RecentRecord_Unknown1* GetPlayerInfoRe
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::openfoxwq::GetPlayerInfoResponse_RecentRecord_Unknown1* GetPlayerInfoResponse_RecentRecord::unsafe_arena_release_unknown_field_1() {
-  // @@protoc_insertion_point(field_release:openfoxwq.GetPlayerInfoResponse.RecentRecord.unknown_field_1)
+inline ::openfoxwq::GetPlayerInfoResponse_RecentRecord_RankRequirements* GetPlayerInfoResponse_RecentRecord::unsafe_arena_release_rank_requirements() {
+  // @@protoc_insertion_point(field_release:openfoxwq.GetPlayerInfoResponse.RecentRecord.rank_requirements)
   _impl_._has_bits_[0] &= ~0x00000004u;
-  ::openfoxwq::GetPlayerInfoResponse_RecentRecord_Unknown1* temp = _impl_.unknown_field_1_;
-  _impl_.unknown_field_1_ = nullptr;
+  ::openfoxwq::GetPlayerInfoResponse_RecentRecord_RankRequirements* temp = _impl_.rank_requirements_;
+  _impl_.rank_requirements_ = nullptr;
   return temp;
 }
-inline ::openfoxwq::GetPlayerInfoResponse_RecentRecord_Unknown1* GetPlayerInfoResponse_RecentRecord::_internal_mutable_unknown_field_1() {
+inline ::openfoxwq::GetPlayerInfoResponse_RecentRecord_RankRequirements* GetPlayerInfoResponse_RecentRecord::_internal_mutable_rank_requirements() {
   _impl_._has_bits_[0] |= 0x00000004u;
-  if (_impl_.unknown_field_1_ == nullptr) {
-    auto* p = CreateMaybeMessage<::openfoxwq::GetPlayerInfoResponse_RecentRecord_Unknown1>(GetArenaForAllocation());
-    _impl_.unknown_field_1_ = p;
+  if (_impl_.rank_requirements_ == nullptr) {
+    auto* p = CreateMaybeMessage<::openfoxwq::GetPlayerInfoResponse_RecentRecord_RankRequirements>(GetArenaForAllocation());
+    _impl_.rank_requirements_ = p;
   }
-  return _impl_.unknown_field_1_;
+  return _impl_.rank_requirements_;
 }
-inline ::openfoxwq::GetPlayerInfoResponse_RecentRecord_Unknown1* GetPlayerInfoResponse_RecentRecord::mutable_unknown_field_1() {
-  ::openfoxwq::GetPlayerInfoResponse_RecentRecord_Unknown1* _msg = _internal_mutable_unknown_field_1();
-  // @@protoc_insertion_point(field_mutable:openfoxwq.GetPlayerInfoResponse.RecentRecord.unknown_field_1)
+inline ::openfoxwq::GetPlayerInfoResponse_RecentRecord_RankRequirements* GetPlayerInfoResponse_RecentRecord::mutable_rank_requirements() {
+  ::openfoxwq::GetPlayerInfoResponse_RecentRecord_RankRequirements* _msg = _internal_mutable_rank_requirements();
+  // @@protoc_insertion_point(field_mutable:openfoxwq.GetPlayerInfoResponse.RecentRecord.rank_requirements)
   return _msg;
 }
-inline void GetPlayerInfoResponse_RecentRecord::set_allocated_unknown_field_1(::openfoxwq::GetPlayerInfoResponse_RecentRecord_Unknown1* unknown_field_1) {
+inline void GetPlayerInfoResponse_RecentRecord::set_allocated_rank_requirements(::openfoxwq::GetPlayerInfoResponse_RecentRecord_RankRequirements* rank_requirements) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete _impl_.unknown_field_1_;
+    delete _impl_.rank_requirements_;
   }
-  if (unknown_field_1) {
+  if (rank_requirements) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(unknown_field_1);
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(rank_requirements);
     if (message_arena != submessage_arena) {
-      unknown_field_1 = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, unknown_field_1, submessage_arena);
+      rank_requirements = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, rank_requirements, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000004u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000004u;
   }
-  _impl_.unknown_field_1_ = unknown_field_1;
-  // @@protoc_insertion_point(field_set_allocated:openfoxwq.GetPlayerInfoResponse.RecentRecord.unknown_field_1)
+  _impl_.rank_requirements_ = rank_requirements;
+  // @@protoc_insertion_point(field_set_allocated:openfoxwq.GetPlayerInfoResponse.RecentRecord.rank_requirements)
 }
 
 // optional string streak = 2;
@@ -19063,9 +19314,38 @@ inline void GetPlayerInfoResponse_MembershipInfo::set_valid_until(int64_t value)
 
 // GetPlayerInfoResponse_PlayerFlair
 
+// optional .openfoxwq.Flair flair = 1;
+inline bool GetPlayerInfoResponse_PlayerFlair::_internal_has_flair() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool GetPlayerInfoResponse_PlayerFlair::has_flair() const {
+  return _internal_has_flair();
+}
+inline void GetPlayerInfoResponse_PlayerFlair::clear_flair() {
+  _impl_.flair_ = 0;
+  _impl_._has_bits_[0] &= ~0x00000001u;
+}
+inline ::openfoxwq::Flair GetPlayerInfoResponse_PlayerFlair::_internal_flair() const {
+  return static_cast< ::openfoxwq::Flair >(_impl_.flair_);
+}
+inline ::openfoxwq::Flair GetPlayerInfoResponse_PlayerFlair::flair() const {
+  // @@protoc_insertion_point(field_get:openfoxwq.GetPlayerInfoResponse.PlayerFlair.flair)
+  return _internal_flair();
+}
+inline void GetPlayerInfoResponse_PlayerFlair::_internal_set_flair(::openfoxwq::Flair value) {
+  assert(::openfoxwq::Flair_IsValid(value));
+  _impl_._has_bits_[0] |= 0x00000001u;
+  _impl_.flair_ = value;
+}
+inline void GetPlayerInfoResponse_PlayerFlair::set_flair(::openfoxwq::Flair value) {
+  _internal_set_flair(value);
+  // @@protoc_insertion_point(field_set:openfoxwq.GetPlayerInfoResponse.PlayerFlair.flair)
+}
+
 // optional bool ai = 2;
 inline bool GetPlayerInfoResponse_PlayerFlair::_internal_has_ai() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
 inline bool GetPlayerInfoResponse_PlayerFlair::has_ai() const {
@@ -19073,7 +19353,7 @@ inline bool GetPlayerInfoResponse_PlayerFlair::has_ai() const {
 }
 inline void GetPlayerInfoResponse_PlayerFlair::clear_ai() {
   _impl_.ai_ = false;
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline bool GetPlayerInfoResponse_PlayerFlair::_internal_ai() const {
   return _impl_.ai_;
@@ -19083,7 +19363,7 @@ inline bool GetPlayerInfoResponse_PlayerFlair::ai() const {
   return _internal_ai();
 }
 inline void GetPlayerInfoResponse_PlayerFlair::_internal_set_ai(bool value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.ai_ = value;
 }
 inline void GetPlayerInfoResponse_PlayerFlair::set_ai(bool value) {

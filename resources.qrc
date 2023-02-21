@@ -350,10 +350,14 @@
         <file>assets/flair/gold-member.png</file>
         <file>assets/flair/pro-female.png</file>
         <file>assets/flair/pro-male.png</file>
-        <file>assets/flair/row-6-column-5.png</file>
-        <file>assets/flair/row-6-column-9.png</file>
         <file>assets/flair/silver-crown.png</file>
         <file>assets/flair/silver-member.png</file>
         <file>assets/flair/top-amateur.png</file>
+        <file>assets/menu/rank_up_2.svg</file>
+        <file>assets/menu/rank_up_1.svg</file>
+        <file>assets/menu/rank_down_1.svg</file>
+        <file>assets/menu/rank_down_2.svg</file>
+        <file>assets/flair/gold-crown-female.png</file>
+        <file>assets/flair/silver-crown-female.png</file>
     </qresource>
 </RCC>

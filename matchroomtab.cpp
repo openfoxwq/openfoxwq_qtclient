@@ -139,7 +139,7 @@ void MatchRoomTab::on_matchStart() {
 
 void MatchRoomTab::on_nextMoveEvent(const openfoxwq::NextMoveEvent& event) {
     if (event.last_turn().move_count() > m_moveNum) {
-        const auto &[lr, lc] = ui->board->lastPoint();
+        const auto [lr, lc] = ui->board->lastPoint();
         if (lr != -1 && lc != -1) {
             ui->board->setAnnotation(lr, lc, Annotation{AnnotationType::kNone});
         }
@@ -360,7 +360,7 @@ void MatchRoomTab::on_pointClicked(int r, int c, openfoxwq::Color state) {
         return;
     }
 
-    const auto &[lr, lc] = ui->board->lastPoint();
+    const auto [lr, lc] = ui->board->lastPoint();
     int captures = 0;
     if (ui->board->movePiece(r, c, state, &captures)) {
         if (lr != -1 && lc != -1) {

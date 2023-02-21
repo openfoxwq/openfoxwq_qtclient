@@ -109,7 +109,8 @@ PROTOBUF_CONSTEXPR GetPlayerInfoResponse_RegisterInfo::GetPlayerInfoResponse_Reg
   , /*decltype(_impl_.name_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.player_id_)*/int64_t{0}
   , /*decltype(_impl_.member_since_unix_ts_)*/int64_t{0}
-  , /*decltype(_impl_.country_)*/0} {}
+  , /*decltype(_impl_.country_)*/0
+  , /*decltype(_impl_.sex_)*/0} {}
 struct GetPlayerInfoResponse_RegisterInfoDefaultTypeInternal {
   PROTOBUF_CONSTEXPR GetPlayerInfoResponse_RegisterInfoDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -119,24 +120,30 @@ struct GetPlayerInfoResponse_RegisterInfoDefaultTypeInternal {
   };
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetPlayerInfoResponse_RegisterInfoDefaultTypeInternal _GetPlayerInfoResponse_RegisterInfo_default_instance_;
-PROTOBUF_CONSTEXPR GetPlayerInfoResponse_RecentRecord_Unknown1::GetPlayerInfoResponse_RecentRecord_Unknown1(
-    ::_pbi::ConstantInitialized) {}
-struct GetPlayerInfoResponse_RecentRecord_Unknown1DefaultTypeInternal {
-  PROTOBUF_CONSTEXPR GetPlayerInfoResponse_RecentRecord_Unknown1DefaultTypeInternal()
+PROTOBUF_CONSTEXPR GetPlayerInfoResponse_RecentRecord_RankRequirements::GetPlayerInfoResponse_RecentRecord_RankRequirements(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.up1_)*/int64_t{0}
+  , /*decltype(_impl_.up2_)*/int64_t{0}
+  , /*decltype(_impl_.down1_)*/int64_t{0}
+  , /*decltype(_impl_.down2_)*/int64_t{0}} {}
+struct GetPlayerInfoResponse_RecentRecord_RankRequirementsDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR GetPlayerInfoResponse_RecentRecord_RankRequirementsDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
-  ~GetPlayerInfoResponse_RecentRecord_Unknown1DefaultTypeInternal() {}
+  ~GetPlayerInfoResponse_RecentRecord_RankRequirementsDefaultTypeInternal() {}
   union {
-    GetPlayerInfoResponse_RecentRecord_Unknown1 _instance;
+    GetPlayerInfoResponse_RecentRecord_RankRequirements _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetPlayerInfoResponse_RecentRecord_Unknown1DefaultTypeInternal _GetPlayerInfoResponse_RecentRecord_Unknown1_default_instance_;
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetPlayerInfoResponse_RecentRecord_RankRequirementsDefaultTypeInternal _GetPlayerInfoResponse_RecentRecord_RankRequirements_default_instance_;
 PROTOBUF_CONSTEXPR GetPlayerInfoResponse_RecentRecord::GetPlayerInfoResponse_RecentRecord(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
   , /*decltype(_impl_.streak_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.unknown_field_3_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.unknown_field_1_)*/nullptr} {}
+  , /*decltype(_impl_.rank_requirements_)*/nullptr} {}
 struct GetPlayerInfoResponse_RecentRecordDefaultTypeInternal {
   PROTOBUF_CONSTEXPR GetPlayerInfoResponse_RecentRecordDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -286,6 +293,7 @@ PROTOBUF_CONSTEXPR GetPlayerInfoResponse_PlayerFlair::GetPlayerInfoResponse_Play
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.flair_)*/0
   , /*decltype(_impl_.ai_)*/false} {}
 struct GetPlayerInfoResponse_PlayerFlairDefaultTypeInternal {
   PROTOBUF_CONSTEXPR GetPlayerInfoResponse_PlayerFlairDefaultTypeInternal()
@@ -1427,24 +1435,34 @@ const uint32_t TableStruct_proto_2fplay_2eproto::offsets[] PROTOBUF_SECTION_VARI
   PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoResponse_RegisterInfo, _impl_.name_),
   PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoResponse_RegisterInfo, _impl_.country_),
   PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoResponse_RegisterInfo, _impl_.member_since_unix_ts_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoResponse_RegisterInfo, _impl_.sex_),
   2,
   0,
   1,
   4,
   3,
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoResponse_RecentRecord_Unknown1, _internal_metadata_),
+  5,
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoResponse_RecentRecord_RankRequirements, _impl_._has_bits_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoResponse_RecentRecord_RankRequirements, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoResponse_RecentRecord_RankRequirements, _impl_.up1_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoResponse_RecentRecord_RankRequirements, _impl_.up2_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoResponse_RecentRecord_RankRequirements, _impl_.down1_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoResponse_RecentRecord_RankRequirements, _impl_.down2_),
+  0,
+  1,
+  2,
+  3,
   PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoResponse_RecentRecord, _impl_._has_bits_),
   PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoResponse_RecentRecord, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoResponse_RecentRecord, _impl_.unknown_field_1_),
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoResponse_RecentRecord, _impl_.rank_requirements_),
   PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoResponse_RecentRecord, _impl_.streak_),
   PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoResponse_RecentRecord, _impl_.unknown_field_3_),
   2,
@@ -1568,8 +1586,10 @@ const uint32_t TableStruct_proto_2fplay_2eproto::offsets[] PROTOBUF_SECTION_VARI
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoResponse_PlayerFlair, _impl_.flair_),
   PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoResponse_PlayerFlair, _impl_.ai_),
   0,
+  1,
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::openfoxwq::GetPlayerInfoResponse_Unknown10, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -2385,85 +2405,85 @@ static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protode
   { 22, 29, -1, sizeof(::openfoxwq::ListPlayersRequest)},
   { 30, 42, -1, sizeof(::openfoxwq::ListPlayersResponse)},
   { 48, 57, -1, sizeof(::openfoxwq::GetPlayerInfoRequest)},
-  { 60, 71, -1, sizeof(::openfoxwq::GetPlayerInfoResponse_RegisterInfo)},
-  { 76, -1, -1, sizeof(::openfoxwq::GetPlayerInfoResponse_RecentRecord_Unknown1)},
-  { 82, 91, -1, sizeof(::openfoxwq::GetPlayerInfoResponse_RecentRecord)},
-  { 94, 103, -1, sizeof(::openfoxwq::GetPlayerInfoResponse_OverallResults)},
-  { 106, 118, -1, sizeof(::openfoxwq::GetPlayerInfoResponse_ProInfo)},
-  { 124, 134, -1, sizeof(::openfoxwq::GetPlayerInfoResponse_PerformanceRecord)},
-  { 138, 148, -1, sizeof(::openfoxwq::GetPlayerInfoResponse_Results)},
-  { 152, 163, -1, sizeof(::openfoxwq::GetPlayerInfoResponse_Rooms_Room_ShortPlayerInfo)},
-  { 168, 178, -1, sizeof(::openfoxwq::GetPlayerInfoResponse_Rooms_Room)},
-  { 182, 192, -1, sizeof(::openfoxwq::GetPlayerInfoResponse_Rooms)},
-  { 196, 204, -1, sizeof(::openfoxwq::GetPlayerInfoResponse_MembershipInfo)},
-  { 206, 213, -1, sizeof(::openfoxwq::GetPlayerInfoResponse_PlayerFlair)},
-  { 214, -1, -1, sizeof(::openfoxwq::GetPlayerInfoResponse_Unknown10)},
-  { 220, -1, -1, sizeof(::openfoxwq::GetPlayerInfoResponse_Unknown11)},
-  { 226, -1, -1, sizeof(::openfoxwq::GetPlayerInfoResponse_Unknown19)},
-  { 232, 242, -1, sizeof(::openfoxwq::GetPlayerInfoResponse_Unknown22)},
-  { 246, -1, -1, sizeof(::openfoxwq::GetPlayerInfoResponse_Unknown23)},
-  { 252, 279, -1, sizeof(::openfoxwq::GetPlayerInfoResponse)},
-  { 300, 308, -1, sizeof(::openfoxwq::InfoOptions)},
-  { 310, 317, -1, sizeof(::openfoxwq::SyncTimeRequest)},
-  { 318, 326, -1, sizeof(::openfoxwq::SyncTimeResponse)},
-  { 328, 335, -1, sizeof(::openfoxwq::SyncPlayersRequest)},
-  { 336, 344, -1, sizeof(::openfoxwq::SyncPlayersResponse)},
-  { 346, 355, -1, sizeof(::openfoxwq::PlayerStateEvent)},
-  { 358, 366, -1, sizeof(::openfoxwq::PlayerOnlineCountEvent)},
-  { 368, 377, -1, sizeof(::openfoxwq::PlayerOnlineEvent)},
-  { 380, 389, -1, sizeof(::openfoxwq::PlayerOfflineEvent)},
-  { 392, 399, -1, sizeof(::openfoxwq::UnknownPlayRequest1_UnknownPlayRequest1Nested1)},
-  { 400, 408, -1, sizeof(::openfoxwq::UnknownPlayRequest1)},
-  { 410, 417, -1, sizeof(::openfoxwq::UnknownPlayResponse1)},
-  { 418, 425, -1, sizeof(::openfoxwq::GetRoomInfoRequest)},
-  { 426, 434, -1, sizeof(::openfoxwq::GetRoomInfoResponse_Unknown2)},
-  { 436, 451, -1, sizeof(::openfoxwq::GetRoomInfoResponse_PlayerEntry)},
-  { 460, -1, -1, sizeof(::openfoxwq::GetRoomInfoResponse_Unknown5)},
-  { 466, 479, -1, sizeof(::openfoxwq::GetRoomInfoResponse_RoomInfo)},
-  { 486, 495, -1, sizeof(::openfoxwq::GetRoomInfoResponse)},
-  { 498, -1, -1, sizeof(::openfoxwq::GetAutomatchStatsRequest)},
-  { 504, 512, -1, sizeof(::openfoxwq::GetAutomatchStatsResponse_PopulationEntry_DoNotUse)},
-  { 514, 522, -1, sizeof(::openfoxwq::GetAutomatchStatsResponse)},
-  { 524, 532, -1, sizeof(::openfoxwq::StartAutomatchRequest)},
-  { 534, 543, -1, sizeof(::openfoxwq::StartAutomatchResponse)},
-  { 546, -1, -1, sizeof(::openfoxwq::StopAutomatchRequest)},
-  { 552, 559, -1, sizeof(::openfoxwq::StopAutomatchResponse)},
-  { 560, 570, -1, sizeof(::openfoxwq::AutomatchFoundEvent_RoomParticipant)},
-  { 574, 586, -1, sizeof(::openfoxwq::AutomatchFoundEvent)},
-  { 592, -1, -1, sizeof(::openfoxwq::AcceptMatchRequest)},
-  { 598, 605, -1, sizeof(::openfoxwq::AcceptMatchResponse)},
-  { 606, 617, -1, sizeof(::openfoxwq::MatchStartEvent_MatchPlayerInfo)},
-  { 622, 636, -1, sizeof(::openfoxwq::MatchStartEvent_AutomatchPreset)},
-  { 644, 664, -1, sizeof(::openfoxwq::MatchStartEvent)},
-  { 678, 686, -1, sizeof(::openfoxwq::HeartbeatInfo)},
-  { 688, 695, -1, sizeof(::openfoxwq::EnterRoomRequest)},
-  { 696, 705, -1, sizeof(::openfoxwq::EnterRoomResponse)},
-  { 708, 715, -1, sizeof(::openfoxwq::LeaveRoomRequest)},
-  { 716, 724, -1, sizeof(::openfoxwq::LeaveRoomResponse)},
-  { 726, 735, -1, sizeof(::openfoxwq::ListRoomParticipantsRequest)},
-  { 738, 751, -1, sizeof(::openfoxwq::ListRoomParticipantsResponse_RoomParticipantInfo)},
-  { 758, 768, -1, sizeof(::openfoxwq::ListRoomParticipantsResponse)},
-  { 772, 779, -1, sizeof(::openfoxwq::LastTurnInfo)},
-  { 780, 790, -1, sizeof(::openfoxwq::MoveRequest)},
-  { 794, 801, -1, sizeof(::openfoxwq::MoveResponse)},
-  { 802, 809, -1, sizeof(::openfoxwq::PassRequest)},
-  { 810, 817, -1, sizeof(::openfoxwq::PassResponse)},
-  { 818, 825, -1, sizeof(::openfoxwq::SyncMatchTimeRequest)},
-  { 826, 833, -1, sizeof(::openfoxwq::SyncMatchTimeResponse_ElapsedInfo)},
-  { 834, 844, -1, sizeof(::openfoxwq::SyncMatchTimeResponse)},
-  { 848, 860, -1, sizeof(::openfoxwq::MatchPlayerTimeState)},
-  { 866, 879, -1, sizeof(::openfoxwq::NextMoveEvent)},
-  { 886, 896, -1, sizeof(::openfoxwq::PassEvent)},
-  { 900, 912, -1, sizeof(::openfoxwq::CountdownEvent)},
-  { 918, 926, -1, sizeof(::openfoxwq::ResumeCountdownEvent)},
-  { 928, 935, -1, sizeof(::openfoxwq::RequestCountingRequest)},
-  { 936, 943, -1, sizeof(::openfoxwq::RequestCountingResponse)},
-  { 944, 951, -1, sizeof(::openfoxwq::SendCountingDecisionResponse)},
-  { 952, 960, -1, sizeof(::openfoxwq::CountingDecision)},
-  { 962, 976, -1, sizeof(::openfoxwq::CountingEvent)},
-  { 984, 991, -1, sizeof(::openfoxwq::ResignRequest)},
-  { 992, 999, -1, sizeof(::openfoxwq::ResignResponse)},
-  { 1000, 1014, -1, sizeof(::openfoxwq::GameResultEvent)},
+  { 60, 72, -1, sizeof(::openfoxwq::GetPlayerInfoResponse_RegisterInfo)},
+  { 78, 88, -1, sizeof(::openfoxwq::GetPlayerInfoResponse_RecentRecord_RankRequirements)},
+  { 92, 101, -1, sizeof(::openfoxwq::GetPlayerInfoResponse_RecentRecord)},
+  { 104, 113, -1, sizeof(::openfoxwq::GetPlayerInfoResponse_OverallResults)},
+  { 116, 128, -1, sizeof(::openfoxwq::GetPlayerInfoResponse_ProInfo)},
+  { 134, 144, -1, sizeof(::openfoxwq::GetPlayerInfoResponse_PerformanceRecord)},
+  { 148, 158, -1, sizeof(::openfoxwq::GetPlayerInfoResponse_Results)},
+  { 162, 173, -1, sizeof(::openfoxwq::GetPlayerInfoResponse_Rooms_Room_ShortPlayerInfo)},
+  { 178, 188, -1, sizeof(::openfoxwq::GetPlayerInfoResponse_Rooms_Room)},
+  { 192, 202, -1, sizeof(::openfoxwq::GetPlayerInfoResponse_Rooms)},
+  { 206, 214, -1, sizeof(::openfoxwq::GetPlayerInfoResponse_MembershipInfo)},
+  { 216, 224, -1, sizeof(::openfoxwq::GetPlayerInfoResponse_PlayerFlair)},
+  { 226, -1, -1, sizeof(::openfoxwq::GetPlayerInfoResponse_Unknown10)},
+  { 232, -1, -1, sizeof(::openfoxwq::GetPlayerInfoResponse_Unknown11)},
+  { 238, -1, -1, sizeof(::openfoxwq::GetPlayerInfoResponse_Unknown19)},
+  { 244, 254, -1, sizeof(::openfoxwq::GetPlayerInfoResponse_Unknown22)},
+  { 258, -1, -1, sizeof(::openfoxwq::GetPlayerInfoResponse_Unknown23)},
+  { 264, 291, -1, sizeof(::openfoxwq::GetPlayerInfoResponse)},
+  { 312, 320, -1, sizeof(::openfoxwq::InfoOptions)},
+  { 322, 329, -1, sizeof(::openfoxwq::SyncTimeRequest)},
+  { 330, 338, -1, sizeof(::openfoxwq::SyncTimeResponse)},
+  { 340, 347, -1, sizeof(::openfoxwq::SyncPlayersRequest)},
+  { 348, 356, -1, sizeof(::openfoxwq::SyncPlayersResponse)},
+  { 358, 367, -1, sizeof(::openfoxwq::PlayerStateEvent)},
+  { 370, 378, -1, sizeof(::openfoxwq::PlayerOnlineCountEvent)},
+  { 380, 389, -1, sizeof(::openfoxwq::PlayerOnlineEvent)},
+  { 392, 401, -1, sizeof(::openfoxwq::PlayerOfflineEvent)},
+  { 404, 411, -1, sizeof(::openfoxwq::UnknownPlayRequest1_UnknownPlayRequest1Nested1)},
+  { 412, 420, -1, sizeof(::openfoxwq::UnknownPlayRequest1)},
+  { 422, 429, -1, sizeof(::openfoxwq::UnknownPlayResponse1)},
+  { 430, 437, -1, sizeof(::openfoxwq::GetRoomInfoRequest)},
+  { 438, 446, -1, sizeof(::openfoxwq::GetRoomInfoResponse_Unknown2)},
+  { 448, 463, -1, sizeof(::openfoxwq::GetRoomInfoResponse_PlayerEntry)},
+  { 472, -1, -1, sizeof(::openfoxwq::GetRoomInfoResponse_Unknown5)},
+  { 478, 491, -1, sizeof(::openfoxwq::GetRoomInfoResponse_RoomInfo)},
+  { 498, 507, -1, sizeof(::openfoxwq::GetRoomInfoResponse)},
+  { 510, -1, -1, sizeof(::openfoxwq::GetAutomatchStatsRequest)},
+  { 516, 524, -1, sizeof(::openfoxwq::GetAutomatchStatsResponse_PopulationEntry_DoNotUse)},
+  { 526, 534, -1, sizeof(::openfoxwq::GetAutomatchStatsResponse)},
+  { 536, 544, -1, sizeof(::openfoxwq::StartAutomatchRequest)},
+  { 546, 555, -1, sizeof(::openfoxwq::StartAutomatchResponse)},
+  { 558, -1, -1, sizeof(::openfoxwq::StopAutomatchRequest)},
+  { 564, 571, -1, sizeof(::openfoxwq::StopAutomatchResponse)},
+  { 572, 582, -1, sizeof(::openfoxwq::AutomatchFoundEvent_RoomParticipant)},
+  { 586, 598, -1, sizeof(::openfoxwq::AutomatchFoundEvent)},
+  { 604, -1, -1, sizeof(::openfoxwq::AcceptMatchRequest)},
+  { 610, 617, -1, sizeof(::openfoxwq::AcceptMatchResponse)},
+  { 618, 629, -1, sizeof(::openfoxwq::MatchStartEvent_MatchPlayerInfo)},
+  { 634, 648, -1, sizeof(::openfoxwq::MatchStartEvent_AutomatchPreset)},
+  { 656, 676, -1, sizeof(::openfoxwq::MatchStartEvent)},
+  { 690, 698, -1, sizeof(::openfoxwq::HeartbeatInfo)},
+  { 700, 707, -1, sizeof(::openfoxwq::EnterRoomRequest)},
+  { 708, 717, -1, sizeof(::openfoxwq::EnterRoomResponse)},
+  { 720, 727, -1, sizeof(::openfoxwq::LeaveRoomRequest)},
+  { 728, 736, -1, sizeof(::openfoxwq::LeaveRoomResponse)},
+  { 738, 747, -1, sizeof(::openfoxwq::ListRoomParticipantsRequest)},
+  { 750, 763, -1, sizeof(::openfoxwq::ListRoomParticipantsResponse_RoomParticipantInfo)},
+  { 770, 780, -1, sizeof(::openfoxwq::ListRoomParticipantsResponse)},
+  { 784, 791, -1, sizeof(::openfoxwq::LastTurnInfo)},
+  { 792, 802, -1, sizeof(::openfoxwq::MoveRequest)},
+  { 806, 813, -1, sizeof(::openfoxwq::MoveResponse)},
+  { 814, 821, -1, sizeof(::openfoxwq::PassRequest)},
+  { 822, 829, -1, sizeof(::openfoxwq::PassResponse)},
+  { 830, 837, -1, sizeof(::openfoxwq::SyncMatchTimeRequest)},
+  { 838, 845, -1, sizeof(::openfoxwq::SyncMatchTimeResponse_ElapsedInfo)},
+  { 846, 856, -1, sizeof(::openfoxwq::SyncMatchTimeResponse)},
+  { 860, 872, -1, sizeof(::openfoxwq::MatchPlayerTimeState)},
+  { 878, 891, -1, sizeof(::openfoxwq::NextMoveEvent)},
+  { 898, 908, -1, sizeof(::openfoxwq::PassEvent)},
+  { 912, 924, -1, sizeof(::openfoxwq::CountdownEvent)},
+  { 930, 938, -1, sizeof(::openfoxwq::ResumeCountdownEvent)},
+  { 940, 947, -1, sizeof(::openfoxwq::RequestCountingRequest)},
+  { 948, 955, -1, sizeof(::openfoxwq::RequestCountingResponse)},
+  { 956, 963, -1, sizeof(::openfoxwq::SendCountingDecisionResponse)},
+  { 964, 972, -1, sizeof(::openfoxwq::CountingDecision)},
+  { 974, 988, -1, sizeof(::openfoxwq::CountingEvent)},
+  { 996, 1003, -1, sizeof(::openfoxwq::ResignRequest)},
+  { 1004, 1011, -1, sizeof(::openfoxwq::ResignResponse)},
+  { 1012, 1026, -1, sizeof(::openfoxwq::GameResultEvent)},
 };
 
 static const ::_pb::Message* const file_default_instances[] = {
@@ -2473,7 +2493,7 @@ static const ::_pb::Message* const file_default_instances[] = {
   &::openfoxwq::_ListPlayersResponse_default_instance_._instance,
   &::openfoxwq::_GetPlayerInfoRequest_default_instance_._instance,
   &::openfoxwq::_GetPlayerInfoResponse_RegisterInfo_default_instance_._instance,
-  &::openfoxwq::_GetPlayerInfoResponse_RecentRecord_Unknown1_default_instance_._instance,
+  &::openfoxwq::_GetPlayerInfoResponse_RecentRecord_RankRequirements_default_instance_._instance,
   &::openfoxwq::_GetPlayerInfoResponse_RecentRecord_default_instance_._instance,
   &::openfoxwq::_GetPlayerInfoResponse_OverallResults_default_instance_._instance,
   &::openfoxwq::_GetPlayerInfoResponse_ProInfo_default_instance_._instance,
@@ -2569,7 +2589,7 @@ const char descriptor_table_protodef_proto_2fplay_2eproto[] PROTOBUF_SECTION_VAR
   "ield_6\030\006 \001(\003\"l\n\024GetPlayerInfoRequest\022\021\n\t"
   "player_id\030\001 \001(\003\022\023\n\013player_name\030\002 \001(\t\022,\n\014"
   "info_options\030\003 \002(\0132\026.openfoxwq.InfoOptio"
-  "ns\"\240\025\n\025GetPlayerInfoResponse\022\022\n\nerror_co"
+  "ns\"\250\026\n\025GetPlayerInfoResponse\022\022\n\nerror_co"
   "de\030\001 \002(\003\022,\n\014info_options\030\002 \002(\0132\026.openfox"
   "wq.InfoOptions\022\031\n\021seached_player_id\030\003 \001("
   "\003\022\034\n\024searched_player_name\030\004 \001(\t\022\021\n\tplaye"
@@ -2598,290 +2618,294 @@ const char descriptor_table_protodef_proto_2fplay_2eproto[] PROTOBUF_SECTION_VAR
   "d_22\030\026 \001(\0132*.openfoxwq.GetPlayerInfoResp"
   "onse.Unknown22\022D\n\020unknown_field_23\030\027 \001(\013"
   "2*.openfoxwq.GetPlayerInfoResponse.Unkno"
-  "wn23\032\207\001\n\014RegisterInfo\022\021\n\tplayer_id\030\001 \002(\003"
+  "wn23\032\244\001\n\014RegisterInfo\022\021\n\tplayer_id\030\001 \002(\003"
   "\022\023\n\013name_native\030\004 \002(\t\022\014\n\004name\030\005 \002(\t\022#\n\007c"
   "ountry\030\007 \002(\0162\022.openfoxwq.Country\022\034\n\024memb"
-  "er_since_unix_ts\030\010 \002(\003\032\224\001\n\014RecentRecord\022"
-  "O\n\017unknown_field_1\030\001 \001(\01326.openfoxwq.Get"
-  "PlayerInfoResponse.RecentRecord.Unknown1"
-  "\022\016\n\006streak\030\002 \001(\t\022\027\n\017unknown_field_3\030\003 \001("
-  "\t\032\n\n\010Unknown1\032=\n\016OverallResults\022\016\n\006ratin"
-  "g\030\001 \001(\003\022\n\n\002wr\030\002 \001(\003\022\017\n\007stamina\030\003 \001(\003\032\215\001\n"
-  "\007ProInfo\022\027\n\017unknown_field_1\030\001 \001(\003\022\027\n\017unk"
-  "nown_field_2\030\002 \001(\003\022\r\n\005name1\030\003 \001(\t\022\r\n\005nam"
-  "e2\030\004 \001(\t\022\035\n\004rank\030\005 \001(\0162\017.openfoxwq.Rank\022"
-  "\023\n\013association\030\006 \001(\003\032`\n\021PerformanceRecor"
-  "d\022\035\n\004rank\030\001 \001(\0162\017.openfoxwq.Rank\022\n\n\002wr\030\002"
-  " \001(\003\022\017\n\007stamina\030\003 \001(\003\022\017\n\007foxcoin\030\005 \001(\003\032r"
-  "\n\007Results\022:\n\004type\030\001 \002(\0162,.openfoxwq.GetP"
-  "layerInfoResponse.ResultsType\022\014\n\004wins\030\002 "
-  "\002(\003\022\016\n\006losses\030\003 \002(\003\022\r\n\005draws\030\004 \002(\003\032\364\003\n\005R"
-  "ooms\022:\n\005rooms\030\001 \003(\0132+.openfoxwq.GetPlaye"
-  "rInfoResponse.Rooms.Room\022\027\n\017unknown_fiel"
-  "d_2\030\002 \001(\003\022\027\n\017unknown_field_3\030\003 \001(\003\022\027\n\017un"
-  "known_field_4\030\004 \001(\003\032\343\002\n\004Room\022\035\n\002id\030\001 \001(\013"
-  "2\021.openfoxwq.RoomId\022\027\n\017unknown_field_2\030\002"
-  " \001(\003\022L\n\007player1\030\003 \001(\0132;.openfoxwq.GetPla"
-  "yerInfoResponse.Rooms.Room.ShortPlayerIn"
-  "fo\022L\n\007player2\030\004 \001(\0132;.openfoxwq.GetPlaye"
-  "rInfoResponse.Rooms.Room.ShortPlayerInfo"
-  "\032\206\001\n\017ShortPlayerInfo\022\021\n\tplayer_id\030\001 \001(\003\022"
-  "\035\n\004rank\030\002 \001(\0162\017.openfoxwq.Rank\022#\n\007countr"
-  "y\030\003 \001(\0162\022.openfoxwq.Country\022\r\n\005name4\030\004 \001"
-  "(\t\022\r\n\005name5\030\005 \001(\t\032N\n\016MembershipInfo\022\'\n\004t"
-  "ype\030\001 \001(\0162\031.openfoxwq.MembershipType\022\023\n\013"
-  "valid_until\030\002 \001(\003\032\031\n\013PlayerFlair\022\n\n\002ai\030\002"
-  " \001(\010\032\013\n\tUnknown10\032\013\n\tUnknown11\032\013\n\tUnknow"
-  "n19\032o\n\tUnknown22\022\027\n\017unknown_field_1\030\001 \001("
-  "\003\022\027\n\017unknown_field_2\030\002 \001(\003\022\027\n\017unknown_fi"
-  "eld_3\030\003 \001(\t\022\027\n\017unknown_field_4\030\004 \001(\t\032\013\n\t"
-  "Unknown23\"J\n\013ResultsType\022\013\n\007OVERALL\020\000\022\010\n"
-  "\004FREE\020\001\022\n\n\006RANKED\020\002\022\013\n\007UNKNOWN\020\004\022\013\n\007CURR"
-  "ENT\020\005\"\?\n\013InfoOptions\022\027\n\017unknown_field_1\030"
-  "\001 \002(\003\022\027\n\017unknown_field_2\030\002 \001(\003\"\"\n\017SyncTi"
-  "meRequest\022\017\n\007unix_ts\030\001 \002(\003\"7\n\020SyncTimeRe"
-  "sponse\022\017\n\007unix_ts\030\001 \002(\003\022\022\n\nunix_ts_us\030\002 "
-  "\002(\003\"-\n\022SyncPlayersRequest\022\027\n\017unknown_fie"
-  "ld_1\030\001 \002(\003\"G\n\023SyncPlayersResponse\022\027\n\017unk"
-  "nown_field_1\030\001 \002(\003\022\027\n\017unknown_field_2\030\002 "
-  "\002(\003\"m\n\020PlayerStateEvent\022*\n\013player_info\030\001"
-  " \002(\0132\025.openfoxwq.PlayerInfo\022\024\n\014online_co"
-  "unt\030\002 \002(\003\022\027\n\017unknown_field_3\030\003 \001(\003\"G\n\026Pl"
-  "ayerOnlineCountEvent\022\027\n\017unknown_field_1\030"
-  "\001 \001(\003\022\024\n\014online_count\030\002 \002(\003\"n\n\021PlayerOnl"
-  "ineEvent\022*\n\013player_info\030\001 \002(\0132\025.openfoxw"
-  "q.PlayerInfo\022\024\n\014online_count\030\002 \002(\003\022\027\n\017un"
-  "known_field_3\030\003 \001(\003\"V\n\022PlayerOfflineEven"
-  "t\022\021\n\tplayer_id\030\001 \002(\003\022\024\n\014online_count\030\002 \002"
-  "(\003\022\027\n\017unknown_field_3\030\003 \001(\003\"\265\001\n\023UnknownP"
-  "layRequest1\022R\n\017unknown_field_1\030\001 \002(\01329.o"
-  "penfoxwq.UnknownPlayRequest1.UnknownPlay"
-  "Request1Nested1\022\027\n\017unknown_field_2\030\002 \002(\003"
-  "\0321\n\032UnknownPlayRequest1Nested1\022\023\n\013mac_ad"
-  "dress\030\001 \002(\t\"/\n\024UnknownPlayResponse1\022\027\n\017u"
-  "nknown_field_1\030\001 \001(\003\"3\n\022GetRoomInfoReque"
-  "st\022\035\n\002id\030\001 \002(\0132\021.openfoxwq.RoomId\"\333\005\n\023Ge"
-  "tRoomInfoResponse\022\022\n\nerror_code\030\001 \001(\003\022@\n"
-  "\017unknown_field_2\030\002 \003(\0132\'.openfoxwq.GetRo"
-  "omInfoResponse.Unknown2\022:\n\troom_info\030\003 \001"
-  "(\0132\'.openfoxwq.GetRoomInfoResponse.RoomI"
-  "nfo\032<\n\010Unknown2\022\027\n\017unknown_field_1\030\001 \001(\003"
-  "\022\027\n\017unknown_field_2\030\002 \001(\003\032\323\001\n\013PlayerEntr"
-  "y\022\n\n\002id\030\001 \001(\003\022\014\n\004name\030\002 \001(\t\022\035\n\004rank\030\003 \001("
-  "\0162\017.openfoxwq.Rank\022\021\n\tmain_time\030\t \001(\003\022\027\n"
-  "\017byoyomi_periods\030\n \001(\003\022\024\n\014byoyomi_time\030\013"
-  " \001(\003\022\022\n\navatar_url\030\r \001(\t\022#\n\007country\030\017 \001("
-  "\0162\022.openfoxwq.Country\022\020\n\010name_alt\030\020 \001(\t\032"
-  "\n\n\010Unknown5\032\221\002\n\010RoomInfo\022\035\n\002id\030\001 \001(\0132\021.o"
-  "penfoxwq.RoomId\022;\n\007players\030\002 \003(\0132*.openf"
-  "oxwq.GetRoomInfoResponse.PlayerEntry\022)\n\010"
-  "settings\030\003 \001(\0132\027.openfoxwq.RoomSettings\022"
-  "\027\n\017unknown_field_4\030\004 \001(\003\022@\n\017unknown_fiel"
-  "d_5\030\005 \001(\0132\'.openfoxwq.GetRoomInfoRespons"
-  "e.Unknown5\022\017\n\007ts_unix\030\006 \001(\003\022\022\n\nts_unix_n"
-  "s\030\014 \001(\003\"\032\n\030GetAutomatchStatsRequest\"\254\001\n\031"
-  "GetAutomatchStatsResponse\022\022\n\nerror_code\030"
-  "\001 \001(\003\022H\n\npopulation\030\002 \003(\01324.openfoxwq.Ge"
-  "tAutomatchStatsResponse.PopulationEntry\032"
-  "1\n\017PopulationEntry\022\013\n\003key\030\001 \001(\003\022\r\n\005value"
-  "\030\002 \001(\003:\0028\001\"C\n\025StartAutomatchRequest\022\021\n\tp"
-  "reset_id\030\001 \002(\003\022\027\n\017unknown_field_2\030\002 \001(\003\""
-  "^\n\026StartAutomatchResponse\022\022\n\nerror_code\030"
-  "\001 \001(\003\022\027\n\017unknown_field_2\030\002 \001(\003\022\027\n\017unknow"
-  "n_field_3\030\003 \001(\003\"\026\n\024StopAutomatchRequest\""
-  "+\n\025StopAutomatchResponse\022\022\n\nerror_code\030\001"
-  " \001(\003\"\250\002\n\023AutomatchFoundEvent\022\022\n\nerror_co"
-  "de\030\001 \001(\003\022\021\n\troom_id_1\030\002 \001(\003\022\021\n\troom_id_2"
-  "\030\003 \001(\003\022\021\n\troom_id_3\030\004 \001(\003\022D\n\014participant"
-  "s\030\005 \003(\0132..openfoxwq.AutomatchFoundEvent."
-  "RoomParticipant\022\027\n\017unknown_field_6\030\006 \001(\003"
-  "\032e\n\017RoomParticipant\022\021\n\tplayer_id\030\001 \002(\003\022\014"
-  "\n\004name\030\003 \001(\t\022\035\n\004rank\030\004 \001(\0162\017.openfoxwq.R"
-  "ank\022\022\n\navatar_url\030\022 \001(\t\"\024\n\022AcceptMatchRe"
-  "quest\")\n\023AcceptMatchResponse\022\022\n\nerror_co"
-  "de\030\001 \001(\003\"\201\006\n\017MatchStartEvent\022.\n\rroom_set"
-  "tings\030\001 \001(\0132\027.openfoxwq.RoomSettings\022\027\n\017"
-  "unknown_field_2\030\002 \001(\003\022\025\n\runix_ts_nanos\030\003"
-  " \001(\003\022\027\n\017unknown_field_4\030\004 \001(\003\022\027\n\017unknown"
-  "_field_6\030\006 \001(\003\022\017\n\007unix_ts\030\007 \001(\003\022\031\n\021unix_"
-  "ts_nanos_str\030\010 \001(\t\022;\n\007players\030\t \003(\0132*.op"
-  "enfoxwq.MatchStartEvent.MatchPlayerInfo\022"
-  "\021\n\troom_id_1\030\013 \001(\003\022\021\n\troom_id_2\030\014 \001(\003\022\021\n"
-  "\troom_id_3\030\016 \001(\003\022\021\n\troom_id_4\030\r \001(\003\022\033\n\023a"
-  "utomatch_preset_id\030\017 \001(\003\022D\n\020automatch_pr"
-  "eset\030\021 \001(\0132*.openfoxwq.MatchStartEvent.A"
-  "utomatchPreset\032\212\001\n\017MatchPlayerInfo\022\021\n\tpl"
-  "ayer_id\030\001 \001(\003\022\014\n\004name\030\003 \001(\t\022\035\n\004rank\030\004 \001("
-  "\0162\017.openfoxwq.Rank\022\022\n\navatar_url\030\022 \001(\t\022#"
-  "\n\007country\030\024 \001(\0162\022.openfoxwq.Country\032\266\001\n\017"
-  "AutomatchPreset\022\n\n\002id\030\001 \001(\003\022\022\n\nboard_siz"
-  "e\030\002 \001(\003\022\025\n\rmain_time_sec\030\003 \001(\003\022\027\n\017byoyom"
-  "i_periods\030\004 \001(\003\022\030\n\020byoyomi_time_sec\030\005 \001("
-  "\003\022\025\n\rchinese_rules\030\006 \001(\010\022\020\n\010min_duan\030\007 \001"
-  "(\003\022\020\n\010max_duan\030\010 \001(\003\"A\n\rHeartbeatInfo\022\027\n"
-  "\017unknown_field_1\030\001 \001(\003\022\027\n\017unknown_field_"
-  "2\030\002 \001(\003\"1\n\020EnterRoomRequest\022\035\n\002id\030\001 \002(\0132"
-  "\021.openfoxwq.RoomId\"}\n\021EnterRoomResponse\022"
-  "\022\n\nerror_code\030\001 \001(\003\022\"\n\007room_id\030\002 \001(\0132\021.o"
-  "penfoxwq.RoomId\0220\n\016heartbeat_info\030\003 \001(\0132"
-  "\030.openfoxwq.HeartbeatInfo\"1\n\020LeaveRoomRe"
-  "quest\022\035\n\002id\030\001 \002(\0132\021.openfoxwq.RoomId\"K\n\021"
-  "LeaveRoomResponse\022\022\n\nerror_code\030\001 \001(\003\022\"\n"
-  "\007room_id\030\002 \001(\0132\021.openfoxwq.RoomId\"f\n\033Lis"
-  "tRoomParticipantsRequest\022\035\n\002id\030\001 \002(\0132\021.o"
-  "penfoxwq.RoomId\022\023\n\013player_id_1\030\002 \002(\003\022\023\n\013"
-  "player_id_2\030\003 \002(\003\"\354\002\n\034ListRoomParticipan"
-  "tsResponse\022\022\n\nerror_code\030\001 \001(\003\022\035\n\002id\030\002 \001"
-  "(\0132\021.openfoxwq.RoomId\022Q\n\014participants\030\003 "
-  "\003(\0132;.openfoxwq.ListRoomParticipantsResp"
-  "onse.RoomParticipantInfo\022\031\n\021participant_"
-  "count\030\005 \001(\003\032\252\001\n\023RoomParticipantInfo\022\021\n\tp"
-  "layer_id\030\001 \001(\003\022\014\n\004name\030\002 \001(\t\022\020\n\010name_alt"
-  "\030\003 \001(\t\022\035\n\004rank\030\004 \001(\0162\017.openfoxwq.Rank\022\014\n"
-  "\004wins\030\005 \001(\003\022\016\n\006losses\030\006 \001(\003\022#\n\007country\030\t"
-  " \001(\0162\022.openfoxwq.Country\"\"\n\014LastTurnInfo"
-  "\022\022\n\nmove_count\030\001 \001(\003\"n\n\013MoveRequest\022\t\n\001x"
-  "\030\001 \002(\003\022\t\n\001y\030\002 \002(\003\022\035\n\003col\030\003 \002(\0162\020.openfox"
-  "wq.Color\022*\n\tlast_turn\030\004 \002(\0132\027.openfoxwq."
-  "LastTurnInfo\"\"\n\014MoveResponse\022\022\n\nerror_co"
-  "de\030\001 \001(\003\"9\n\013PassRequest\022*\n\tlast_turn\030\001 \002"
-  "(\0132\027.openfoxwq.LastTurnInfo\"\"\n\014PassRespo"
-  "nse\022\022\n\nerror_code\030\001 \001(\003\"\"\n\024SyncMatchTime"
-  "Request\022\n\n\002ts\030\001 \002(\003\"\307\001\n\025SyncMatchTimeRes"
-  "ponse\022\n\n\002ts\030\001 \002(\003\022\021\n\tserver_ts\030\002 \001(\003\022B\n\014"
-  "elapsed_info\030\003 \001(\0132,.openfoxwq.SyncMatch"
-  "TimeResponse.ElapsedInfo\022\"\n\007room_id\030\004 \001("
-  "\0132\021.openfoxwq.RoomId\032\'\n\013ElapsedInfo\022\030\n\020t"
-  "ime_elapsed_sec\030\001 \001(\003\"\276\001\n\024MatchPlayerTim"
-  "eState\022\027\n\017unknown_field_1\030\001 \001(\003\022\032\n\022main_"
-  "time_left_sec\030\002 \002(\003\022\034\n\024byoyomi_periods_l"
-  "eft\030\003 \002(\003\022\034\n\024byoyomi_duration_sec\030\004 \001(\003\022"
-  "\021\n\tplayer_id\030\005 \002(\003\022\"\n\032disconnected_time_"
-  "left_sec\030\006 \001(\003\"\304\001\n\rNextMoveEvent\022\t\n\001x\030\001 "
-  "\001(\003\022\t\n\001y\030\002 \001(\003\022\035\n\003col\030\003 \001(\0162\020.openfoxwq."
-  "Color\0223\n\ntime_state\030\004 \001(\0132\037.openfoxwq.Ma"
-  "tchPlayerTimeState\022*\n\tlast_turn\030\005 \001(\0132\027."
-  "openfoxwq.LastTurnInfo\022\021\n\tplayer_id\030\006 \001("
-  "\003\022\n\n\002ts\030\007 \001(\003\"\230\001\n\tPassEvent\0223\n\ntime_stat"
-  "e\030\001 \001(\0132\037.openfoxwq.MatchPlayerTimeState"
-  "\022*\n\tlast_turn\030\002 \001(\0132\027.openfoxwq.LastTurn"
-  "Info\022\021\n\tplayer_id\030\003 \001(\003\022\027\n\017unknown_field"
-  "_4\030\004 \001(\003\"\256\001\n\016CountdownEvent\022\027\n\017unknown_f"
-  "ield_1\030\001 \001(\003\022\032\n\022main_time_left_sec\030\002 \002(\003"
-  "\022\034\n\024byoyomi_periods_left\030\003 \002(\003\022\035\n\025byoyom"
-  "i_time_left_sec\030\004 \001(\003\022\021\n\tplayer_id\030\005 \002(\003"
-  "\022\027\n\017unknown_field_6\030\006 \001(\003\"]\n\024ResumeCount"
-  "downEvent\022\027\n\017unknown_field_1\030\001 \001(\003\022,\n\tco"
-  "untdown\030\002 \002(\0132\031.openfoxwq.CountdownEvent"
-  "\"1\n\026RequestCountingRequest\022\027\n\017unknown_fi"
-  "eld_1\030\001 \001(\003\"-\n\027RequestCountingResponse\022\022"
-  "\n\nerror_code\030\001 \001(\003\"2\n\034SendCountingDecisi"
-  "onResponse\022\022\n\nerror_code\030\001 \001(\003\"J\n\020Counti"
-  "ngDecision\022\r\n\005agree\030\001 \002(\010\022\'\n\005stage\030\002 \002(\016"
-  "2\030.openfoxwq.CountingStage\"\337\001\n\rCountingE"
-  "vent\022\027\n\017unknown_field_1\030\001 \001(\003\022\'\n\005stage\030\002"
-  " \002(\0162\030.openfoxwq.CountingStage\022\027\n\017unknow"
-  "n_field_4\030\004 \001(\014\022\021\n\townership\030\005 \001(\t\022\027\n\017un"
-  "known_field_6\030\006 \001(\002\022 \n\006winner\030\010 \001(\0162\020.op"
-  "enfoxwq.Color\022\022\n\nscore_lead\030\t \001(\002\022\021\n\ttim"
-  "e_left\030\007 \002(\003\"(\n\rResignRequest\022\027\n\017unknown"
-  "_field_1\030\001 \001(\003\")\n\016ResignResponse\022\027\n\017unkn"
-  "own_field_1\030\001 \001(\003\"\267\001\n\017GameResultEvent\022\027\n"
-  "\017unknown_field_1\030\001 \001(\003\022 \n\006winner\030\002 \002(\0162\020"
-  ".openfoxwq.Color\022\022\n\nscore_lead\030\003 \002(\003\022\027\n\017"
-  "unknown_field_4\030\004 \001(\003\022\017\n\007message\030\005 \001(\t\022\r"
-  "\n\005ts_10\030\n \001(\003\022\r\n\005ts_12\030\014 \001(\003\022\r\n\005ts_13\030\r "
-  "\001(\003*_\n\rCountingStage\022\021\n\rSTAGE_UNKNOWN\020\000\022"
-  "\030\n\024STAGE_AGREE_TO_COUNT\020\001\022!\n\035STAGE_AGREE"
-  "_WITH_COUNT_RESULT\020\0022\250\033\n\004Play\022h\n\005Login\022!"
-  ".openfoxwq.LoginPlayServerRequest\032\".open"
-  "foxwq.LoginPlayServerResponse\"\030\202\265\030\024\010\330\314\001\020"
-  "\330\314\001\032\n\010\001( 0\0068\241\234\001\022i\n\013ListPlayers\022\035.openfox"
-  "wq.ListPlayersRequest\032\036.openfoxwq.ListPl"
-  "ayersResponse\"\031\202\265\030\025\010\330\314\001\020\330\314\001\032\013\010\311\001( 0\0068\316\234\001"
-  "0\001\022m\n\rGetPlayerInfo\022\037.openfoxwq.GetPlaye"
-  "rInfoRequest\032 .openfoxwq.GetPlayerInfoRe"
-  "sponse\"\031\202\265\030\025\010\330\314\001\020\330\314\001\032\013\010\351\007( 0\0068\313\234\001\022i\n\013Syn"
-  "cPlayers\022\035.openfoxwq.SyncPlayersRequest\032"
-  "\036.openfoxwq.SyncPlayersResponse\"\033\202\265\030\027\010\330\314"
-  "\001\020\330\314\001\032\r\010\313\001( 0\0068\316\234\001@\003\022f\n\013GetRoomInfo\022\035.op"
-  "enfoxwq.GetRoomInfoRequest\032\036.openfoxwq.G"
-  "etRoomInfoResponse\"\030\202\265\030\024\010\330\314\001\020\330\314\001\032\n\010z( 0\006"
-  "8\300\352\001\022`\n\tEnterRoom\022\033.openfoxwq.EnterRoomR"
-  "equest\032\034.openfoxwq.EnterRoomResponse\"\030\202\265"
-  "\030\024\010\330\314\001\020\330\314\001\032\n\010d( 0\0068\305\352\001\022`\n\tLeaveRoom\022\033.op"
-  "enfoxwq.LeaveRoomRequest\032\034.openfoxwq.Lea"
-  "veRoomResponse\"\030\202\265\030\024\010\330\314\001\020\330\314\001\032\n\010e( 0\0068\306\352\001"
-  "\022\201\001\n\024ListRoomParticipants\022&.openfoxwq.Li"
-  "stRoomParticipantsRequest\032\'.openfoxwq.Li"
-  "stRoomParticipantsResponse\"\030\202\265\030\024\010\330\314\001\020\330\314\001"
-  "\032\n\010d( 0\0068\332\352\001\022s\n\035ListenPlayerOnlineCountE"
-  "vents\022\026.google.protobuf.Empty\032!.openfoxw"
-  "q.PlayerOnlineCountEvent\"\025\202\265\030\021\010\330\314\001\020\330\314\001\032\007"
-  "\010\221\0038\316\234\0010\001\022i\n\030ListenPlayerOnlineEvents\022\026."
-  "google.protobuf.Empty\032\034.openfoxwq.Player"
-  "OnlineEvent\"\025\202\265\030\021\010\330\314\001\020\330\314\001\032\007\010\222\0038\316\234\0010\001\022k\n\031"
-  "ListenPlayerOfflineEvents\022\026.google.proto"
-  "buf.Empty\032\035.openfoxwq.PlayerOfflineEvent"
-  "\"\025\202\265\030\021\010\330\314\001\020\330\314\001\032\007\010\223\0038\316\234\0010\001\022g\n\027ListenPlaye"
-  "rStateEvents\022\026.google.protobuf.Empty\032\033.o"
-  "penfoxwq.PlayerStateEvent\"\025\202\265\030\021\010\330\314\001\020\330\314\001\032"
-  "\007\010\224\0038\316\234\0010\001\022z\n\021GetAutomatchStats\022#.openfo"
-  "xwq.GetAutomatchStatsRequest\032$.openfoxwq"
-  ".GetAutomatchStatsResponse\"\032\202\265\030\026\010\330\314\001\020\330\314\001"
-  "\032\014\010\261\216\006( 0\0068\266\352\001\022q\n\016StartAutomatch\022 .openf"
-  "oxwq.StartAutomatchRequest\032!.openfoxwq.S"
-  "tartAutomatchResponse\"\032\202\265\030\026\010\330\314\001\020\330\314\001\032\014\010\242\216"
-  "\006( 0\0068\266\352\001\022n\n\032ListenAutomatchFoundEvents\022"
-  "\026.google.protobuf.Empty\032\036.openfoxwq.Auto"
-  "matchFoundEvent\"\026\202\265\030\022\010\330\314\001\020\330\314\001\032\010\010\254\216\0068\266\352\0010"
-  "\001\022n\n\rStopAutomatch\022\037.openfoxwq.StopAutom"
-  "atchRequest\032 .openfoxwq.StopAutomatchRes"
-  "ponse\"\032\202\265\030\026\010\330\314\001\020\330\314\001\032\014\010\253\216\006( 0\0068\266\352\001\022f\n\013Acc"
-  "eptMatch\022\035.openfoxwq.AcceptMatchRequest\032"
-  "\036.openfoxwq.AcceptMatchResponse\"\030\202\265\030\024\010\330\314"
-  "\001\020\330\314\001\032\n\010i( 0\0068\230\362\001\022m\n\rSyncMatchTime\022\037.ope"
-  "nfoxwq.SyncMatchTimeRequest\032 .openfoxwq."
-  "SyncMatchTimeResponse\"\031\202\265\030\025\010\330\314\001\020\330\314\001\032\013\010\310\001"
-  "( 0\0068\230\362\001\022R\n\004Move\022\026.openfoxwq.MoveRequest"
-  "\032\027.openfoxwq.MoveResponse\"\031\202\265\030\025\010\330\314\001\020\330\314\001\032"
-  "\013\010\311\001( 0\0068\230\362\001\022R\n\004Pass\022\026.openfoxwq.PassReq"
-  "uest\032\027.openfoxwq.PassResponse\"\031\202\265\030\025\010\330\314\001\020"
-  "\330\314\001\032\013\010\314\001( 0\0068\230\362\001\022s\n\017RequestCounting\022!.op"
-  "enfoxwq.RequestCountingRequest\032\".openfox"
-  "wq.RequestCountingResponse\"\031\202\265\030\025\010\330\314\001\020\330\314\001"
-  "\032\013\010\255\002( 0\0068\230\362\001\022w\n\024SendCountingDecision\022\033."
-  "openfoxwq.CountingDecision\032\'.openfoxwq.S"
-  "endCountingDecisionResponse\"\031\202\265\030\025\010\330\314\001\020\330\314"
-  "\001\032\013\010\260\002( 0\0068\230\362\001\022X\n\006Resign\022\030.openfoxwq.Res"
-  "ignRequest\032\031.openfoxwq.ResignResponse\"\031\202"
-  "\265\030\025\010\330\314\001\020\330\314\001\032\013\010\267\002( 0\0068\230\362\001\022d\n\026ListenMatchS"
-  "tartEvents\022\026.google.protobuf.Empty\032\032.ope"
-  "nfoxwq.MatchStartEvent\"\024\202\265\030\020\010\330\314\001\020\330\314\001\032\006\010k"
-  "8\230\362\0010\001\022a\n\024ListenNextMoveEvents\022\026.google."
-  "protobuf.Empty\032\030.openfoxwq.NextMoveEvent"
-  "\"\025\202\265\030\021\010\330\314\001\020\330\314\001\032\007\010\313\0018\230\362\0010\001\022Y\n\020ListenPassE"
-  "vents\022\026.google.protobuf.Empty\032\024.openfoxw"
-  "q.PassEvent\"\025\202\265\030\021\010\330\314\001\020\330\314\001\032\007\010\316\0018\230\362\0010\001\022b\n\025"
-  "ListenCountdownEvents\022\026.google.protobuf."
-  "Empty\032\031.openfoxwq.CountdownEvent\"\024\202\265\030\020\010\330"
-  "\314\001\020\330\314\001\032\006\010l8\230\362\0010\001\022n\n\033ListenResumeCountdow"
-  "nEvents\022\026.google.protobuf.Empty\032\037.openfo"
-  "xwq.ResumeCountdownEvent\"\024\202\265\030\020\010\330\314\001\020\330\314\001\032\006"
-  "\010m8\230\362\0010\001\022g\n\027ListenCountingDecisions\022\026.go"
-  "ogle.protobuf.Empty\032\033.openfoxwq.Counting"
-  "Decision\"\025\202\265\030\021\010\330\314\001\020\330\314\001\032\007\010\262\0028\230\362\0010\001\022a\n\024Lis"
-  "tenCountingEvents\022\026.google.protobuf.Empt"
-  "y\032\030.openfoxwq.CountingEvent\"\025\202\265\030\021\010\330\314\001\020\330\314"
-  "\001\032\007\010\257\0028\230\362\0010\001\022e\n\026ListenGameResultEvents\022\026"
-  ".google.protobuf.Empty\032\032.openfoxwq.GameR"
-  "esultEvent\"\025\202\265\030\021\010\330\314\001\020\330\314\001\032\007\010\225\0038\230\362\0010\001\022a\n\010S"
-  "yncTime\022\032.openfoxwq.SyncTimeRequest\032\033.op"
-  "enfoxwq.SyncTimeResponse\"\034\202\265\030\030\010\330\314\001\020\330\314\001\032\016"
-  "\010\005( 0\0068\241\234\001@\013H\001\022g\n\010Unknown1\022\036.openfoxwq.U"
-  "nknownPlayRequest1\032\037.openfoxwq.UnknownPl"
-  "ayResponse1\"\032\202\265\030\026\010\330\314\001\020\330\314\001\032\014\010\002( 0\0068\340\352\001@\001B"
-  "&Z$github.com/openfoxwq/openfoxwq/proto"
+  "er_since_unix_ts\030\010 \002(\003\022\033\n\003sex\030\t \002(\0162\016.op"
+  "enfoxwq.Sex\032\336\001\n\014RecentRecord\022Y\n\021rank_req"
+  "uirements\030\001 \001(\0132>.openfoxwq.GetPlayerInf"
+  "oResponse.RecentRecord.RankRequirements\022"
+  "\016\n\006streak\030\002 \001(\t\022\027\n\017unknown_field_3\030\003 \001(\t"
+  "\032J\n\020RankRequirements\022\013\n\003up1\030\001 \001(\003\022\013\n\003up2"
+  "\030\002 \001(\003\022\r\n\005down1\030\003 \001(\003\022\r\n\005down2\030\004 \001(\003\032=\n\016"
+  "OverallResults\022\016\n\006rating\030\001 \001(\003\022\n\n\002wr\030\002 \001"
+  "(\003\022\017\n\007stamina\030\003 \001(\003\032\215\001\n\007ProInfo\022\027\n\017unkno"
+  "wn_field_1\030\001 \001(\003\022\027\n\017unknown_field_2\030\002 \001("
+  "\003\022\r\n\005name1\030\003 \001(\t\022\r\n\005name2\030\004 \001(\t\022\035\n\004rank\030"
+  "\005 \001(\0162\017.openfoxwq.Rank\022\023\n\013association\030\006 "
+  "\001(\003\032`\n\021PerformanceRecord\022\035\n\004rank\030\001 \001(\0162\017"
+  ".openfoxwq.Rank\022\n\n\002wr\030\002 \001(\003\022\017\n\007stamina\030\003"
+  " \001(\003\022\017\n\007foxcoin\030\005 \001(\003\032r\n\007Results\022:\n\004type"
+  "\030\001 \002(\0162,.openfoxwq.GetPlayerInfoResponse"
+  ".ResultsType\022\014\n\004wins\030\002 \002(\003\022\016\n\006losses\030\003 \002"
+  "(\003\022\r\n\005draws\030\004 \002(\003\032\364\003\n\005Rooms\022:\n\005rooms\030\001 \003"
+  "(\0132+.openfoxwq.GetPlayerInfoResponse.Roo"
+  "ms.Room\022\027\n\017unknown_field_2\030\002 \001(\003\022\027\n\017unkn"
+  "own_field_3\030\003 \001(\003\022\027\n\017unknown_field_4\030\004 \001"
+  "(\003\032\343\002\n\004Room\022\035\n\002id\030\001 \001(\0132\021.openfoxwq.Room"
+  "Id\022\027\n\017unknown_field_2\030\002 \001(\003\022L\n\007player1\030\003"
+  " \001(\0132;.openfoxwq.GetPlayerInfoResponse.R"
+  "ooms.Room.ShortPlayerInfo\022L\n\007player2\030\004 \001"
+  "(\0132;.openfoxwq.GetPlayerInfoResponse.Roo"
+  "ms.Room.ShortPlayerInfo\032\206\001\n\017ShortPlayerI"
+  "nfo\022\021\n\tplayer_id\030\001 \001(\003\022\035\n\004rank\030\002 \001(\0162\017.o"
+  "penfoxwq.Rank\022#\n\007country\030\003 \001(\0162\022.openfox"
+  "wq.Country\022\r\n\005name4\030\004 \001(\t\022\r\n\005name5\030\005 \001(\t"
+  "\032N\n\016MembershipInfo\022\'\n\004type\030\001 \001(\0162\031.openf"
+  "oxwq.MembershipType\022\023\n\013valid_until\030\002 \001(\003"
+  "\032:\n\013PlayerFlair\022\037\n\005flair\030\001 \001(\0162\020.openfox"
+  "wq.Flair\022\n\n\002ai\030\002 \001(\010\032\013\n\tUnknown10\032\013\n\tUnk"
+  "nown11\032\013\n\tUnknown19\032o\n\tUnknown22\022\027\n\017unkn"
+  "own_field_1\030\001 \001(\003\022\027\n\017unknown_field_2\030\002 \001"
+  "(\003\022\027\n\017unknown_field_3\030\003 \001(\t\022\027\n\017unknown_f"
+  "ield_4\030\004 \001(\t\032\013\n\tUnknown23\"J\n\013ResultsType"
+  "\022\013\n\007OVERALL\020\000\022\010\n\004FREE\020\001\022\n\n\006RANKED\020\002\022\013\n\007U"
+  "NKNOWN\020\004\022\013\n\007CURRENT\020\005\"\?\n\013InfoOptions\022\027\n\017"
+  "unknown_field_1\030\001 \002(\003\022\027\n\017unknown_field_2"
+  "\030\002 \001(\003\"\"\n\017SyncTimeRequest\022\017\n\007unix_ts\030\001 \002"
+  "(\003\"7\n\020SyncTimeResponse\022\017\n\007unix_ts\030\001 \002(\003\022"
+  "\022\n\nunix_ts_us\030\002 \002(\003\"-\n\022SyncPlayersReques"
+  "t\022\027\n\017unknown_field_1\030\001 \002(\003\"G\n\023SyncPlayer"
+  "sResponse\022\027\n\017unknown_field_1\030\001 \002(\003\022\027\n\017un"
+  "known_field_2\030\002 \002(\003\"m\n\020PlayerStateEvent\022"
+  "*\n\013player_info\030\001 \002(\0132\025.openfoxwq.PlayerI"
+  "nfo\022\024\n\014online_count\030\002 \002(\003\022\027\n\017unknown_fie"
+  "ld_3\030\003 \001(\003\"G\n\026PlayerOnlineCountEvent\022\027\n\017"
+  "unknown_field_1\030\001 \001(\003\022\024\n\014online_count\030\002 "
+  "\002(\003\"n\n\021PlayerOnlineEvent\022*\n\013player_info\030"
+  "\001 \002(\0132\025.openfoxwq.PlayerInfo\022\024\n\014online_c"
+  "ount\030\002 \002(\003\022\027\n\017unknown_field_3\030\003 \001(\003\"V\n\022P"
+  "layerOfflineEvent\022\021\n\tplayer_id\030\001 \002(\003\022\024\n\014"
+  "online_count\030\002 \002(\003\022\027\n\017unknown_field_3\030\003 "
+  "\001(\003\"\265\001\n\023UnknownPlayRequest1\022R\n\017unknown_f"
+  "ield_1\030\001 \002(\01329.openfoxwq.UnknownPlayRequ"
+  "est1.UnknownPlayRequest1Nested1\022\027\n\017unkno"
+  "wn_field_2\030\002 \002(\003\0321\n\032UnknownPlayRequest1N"
+  "ested1\022\023\n\013mac_address\030\001 \002(\t\"/\n\024UnknownPl"
+  "ayResponse1\022\027\n\017unknown_field_1\030\001 \001(\003\"3\n\022"
+  "GetRoomInfoRequest\022\035\n\002id\030\001 \002(\0132\021.openfox"
+  "wq.RoomId\"\333\005\n\023GetRoomInfoResponse\022\022\n\nerr"
+  "or_code\030\001 \001(\003\022@\n\017unknown_field_2\030\002 \003(\0132\'"
+  ".openfoxwq.GetRoomInfoResponse.Unknown2\022"
+  ":\n\troom_info\030\003 \001(\0132\'.openfoxwq.GetRoomIn"
+  "foResponse.RoomInfo\032<\n\010Unknown2\022\027\n\017unkno"
+  "wn_field_1\030\001 \001(\003\022\027\n\017unknown_field_2\030\002 \001("
+  "\003\032\323\001\n\013PlayerEntry\022\n\n\002id\030\001 \001(\003\022\014\n\004name\030\002 "
+  "\001(\t\022\035\n\004rank\030\003 \001(\0162\017.openfoxwq.Rank\022\021\n\tma"
+  "in_time\030\t \001(\003\022\027\n\017byoyomi_periods\030\n \001(\003\022\024"
+  "\n\014byoyomi_time\030\013 \001(\003\022\022\n\navatar_url\030\r \001(\t"
+  "\022#\n\007country\030\017 \001(\0162\022.openfoxwq.Country\022\020\n"
+  "\010name_alt\030\020 \001(\t\032\n\n\010Unknown5\032\221\002\n\010RoomInfo"
+  "\022\035\n\002id\030\001 \001(\0132\021.openfoxwq.RoomId\022;\n\007playe"
+  "rs\030\002 \003(\0132*.openfoxwq.GetRoomInfoResponse"
+  ".PlayerEntry\022)\n\010settings\030\003 \001(\0132\027.openfox"
+  "wq.RoomSettings\022\027\n\017unknown_field_4\030\004 \001(\003"
+  "\022@\n\017unknown_field_5\030\005 \001(\0132\'.openfoxwq.Ge"
+  "tRoomInfoResponse.Unknown5\022\017\n\007ts_unix\030\006 "
+  "\001(\003\022\022\n\nts_unix_ns\030\014 \001(\003\"\032\n\030GetAutomatchS"
+  "tatsRequest\"\254\001\n\031GetAutomatchStatsRespons"
+  "e\022\022\n\nerror_code\030\001 \001(\003\022H\n\npopulation\030\002 \003("
+  "\01324.openfoxwq.GetAutomatchStatsResponse."
+  "PopulationEntry\0321\n\017PopulationEntry\022\013\n\003ke"
+  "y\030\001 \001(\003\022\r\n\005value\030\002 \001(\003:\0028\001\"C\n\025StartAutom"
+  "atchRequest\022\021\n\tpreset_id\030\001 \002(\003\022\027\n\017unknow"
+  "n_field_2\030\002 \001(\003\"^\n\026StartAutomatchRespons"
+  "e\022\022\n\nerror_code\030\001 \001(\003\022\027\n\017unknown_field_2"
+  "\030\002 \001(\003\022\027\n\017unknown_field_3\030\003 \001(\003\"\026\n\024StopA"
+  "utomatchRequest\"+\n\025StopAutomatchResponse"
+  "\022\022\n\nerror_code\030\001 \001(\003\"\250\002\n\023AutomatchFoundE"
+  "vent\022\022\n\nerror_code\030\001 \001(\003\022\021\n\troom_id_1\030\002 "
+  "\001(\003\022\021\n\troom_id_2\030\003 \001(\003\022\021\n\troom_id_3\030\004 \001("
+  "\003\022D\n\014participants\030\005 \003(\0132..openfoxwq.Auto"
+  "matchFoundEvent.RoomParticipant\022\027\n\017unkno"
+  "wn_field_6\030\006 \001(\003\032e\n\017RoomParticipant\022\021\n\tp"
+  "layer_id\030\001 \002(\003\022\014\n\004name\030\003 \001(\t\022\035\n\004rank\030\004 \001"
+  "(\0162\017.openfoxwq.Rank\022\022\n\navatar_url\030\022 \001(\t\""
+  "\024\n\022AcceptMatchRequest\")\n\023AcceptMatchResp"
+  "onse\022\022\n\nerror_code\030\001 \001(\003\"\201\006\n\017MatchStartE"
+  "vent\022.\n\rroom_settings\030\001 \001(\0132\027.openfoxwq."
+  "RoomSettings\022\027\n\017unknown_field_2\030\002 \001(\003\022\025\n"
+  "\runix_ts_nanos\030\003 \001(\003\022\027\n\017unknown_field_4\030"
+  "\004 \001(\003\022\027\n\017unknown_field_6\030\006 \001(\003\022\017\n\007unix_t"
+  "s\030\007 \001(\003\022\031\n\021unix_ts_nanos_str\030\010 \001(\t\022;\n\007pl"
+  "ayers\030\t \003(\0132*.openfoxwq.MatchStartEvent."
+  "MatchPlayerInfo\022\021\n\troom_id_1\030\013 \001(\003\022\021\n\tro"
+  "om_id_2\030\014 \001(\003\022\021\n\troom_id_3\030\016 \001(\003\022\021\n\troom"
+  "_id_4\030\r \001(\003\022\033\n\023automatch_preset_id\030\017 \001(\003"
+  "\022D\n\020automatch_preset\030\021 \001(\0132*.openfoxwq.M"
+  "atchStartEvent.AutomatchPreset\032\212\001\n\017Match"
+  "PlayerInfo\022\021\n\tplayer_id\030\001 \001(\003\022\014\n\004name\030\003 "
+  "\001(\t\022\035\n\004rank\030\004 \001(\0162\017.openfoxwq.Rank\022\022\n\nav"
+  "atar_url\030\022 \001(\t\022#\n\007country\030\024 \001(\0162\022.openfo"
+  "xwq.Country\032\266\001\n\017AutomatchPreset\022\n\n\002id\030\001 "
+  "\001(\003\022\022\n\nboard_size\030\002 \001(\003\022\025\n\rmain_time_sec"
+  "\030\003 \001(\003\022\027\n\017byoyomi_periods\030\004 \001(\003\022\030\n\020byoyo"
+  "mi_time_sec\030\005 \001(\003\022\025\n\rchinese_rules\030\006 \001(\010"
+  "\022\020\n\010min_duan\030\007 \001(\003\022\020\n\010max_duan\030\010 \001(\003\"A\n\r"
+  "HeartbeatInfo\022\027\n\017unknown_field_1\030\001 \001(\003\022\027"
+  "\n\017unknown_field_2\030\002 \001(\003\"1\n\020EnterRoomRequ"
+  "est\022\035\n\002id\030\001 \002(\0132\021.openfoxwq.RoomId\"}\n\021En"
+  "terRoomResponse\022\022\n\nerror_code\030\001 \001(\003\022\"\n\007r"
+  "oom_id\030\002 \001(\0132\021.openfoxwq.RoomId\0220\n\016heart"
+  "beat_info\030\003 \001(\0132\030.openfoxwq.HeartbeatInf"
+  "o\"1\n\020LeaveRoomRequest\022\035\n\002id\030\001 \002(\0132\021.open"
+  "foxwq.RoomId\"K\n\021LeaveRoomResponse\022\022\n\nerr"
+  "or_code\030\001 \001(\003\022\"\n\007room_id\030\002 \001(\0132\021.openfox"
+  "wq.RoomId\"f\n\033ListRoomParticipantsRequest"
+  "\022\035\n\002id\030\001 \002(\0132\021.openfoxwq.RoomId\022\023\n\013playe"
+  "r_id_1\030\002 \002(\003\022\023\n\013player_id_2\030\003 \002(\003\"\354\002\n\034Li"
+  "stRoomParticipantsResponse\022\022\n\nerror_code"
+  "\030\001 \001(\003\022\035\n\002id\030\002 \001(\0132\021.openfoxwq.RoomId\022Q\n"
+  "\014participants\030\003 \003(\0132;.openfoxwq.ListRoom"
+  "ParticipantsResponse.RoomParticipantInfo"
+  "\022\031\n\021participant_count\030\005 \001(\003\032\252\001\n\023RoomPart"
+  "icipantInfo\022\021\n\tplayer_id\030\001 \001(\003\022\014\n\004name\030\002"
+  " \001(\t\022\020\n\010name_alt\030\003 \001(\t\022\035\n\004rank\030\004 \001(\0162\017.o"
+  "penfoxwq.Rank\022\014\n\004wins\030\005 \001(\003\022\016\n\006losses\030\006 "
+  "\001(\003\022#\n\007country\030\t \001(\0162\022.openfoxwq.Country"
+  "\"\"\n\014LastTurnInfo\022\022\n\nmove_count\030\001 \001(\003\"n\n\013"
+  "MoveRequest\022\t\n\001x\030\001 \002(\003\022\t\n\001y\030\002 \002(\003\022\035\n\003col"
+  "\030\003 \002(\0162\020.openfoxwq.Color\022*\n\tlast_turn\030\004 "
+  "\002(\0132\027.openfoxwq.LastTurnInfo\"\"\n\014MoveResp"
+  "onse\022\022\n\nerror_code\030\001 \001(\003\"9\n\013PassRequest\022"
+  "*\n\tlast_turn\030\001 \002(\0132\027.openfoxwq.LastTurnI"
+  "nfo\"\"\n\014PassResponse\022\022\n\nerror_code\030\001 \001(\003\""
+  "\"\n\024SyncMatchTimeRequest\022\n\n\002ts\030\001 \002(\003\"\307\001\n\025"
+  "SyncMatchTimeResponse\022\n\n\002ts\030\001 \002(\003\022\021\n\tser"
+  "ver_ts\030\002 \001(\003\022B\n\014elapsed_info\030\003 \001(\0132,.ope"
+  "nfoxwq.SyncMatchTimeResponse.ElapsedInfo"
+  "\022\"\n\007room_id\030\004 \001(\0132\021.openfoxwq.RoomId\032\'\n\013"
+  "ElapsedInfo\022\030\n\020time_elapsed_sec\030\001 \001(\003\"\276\001"
+  "\n\024MatchPlayerTimeState\022\027\n\017unknown_field_"
+  "1\030\001 \001(\003\022\032\n\022main_time_left_sec\030\002 \002(\003\022\034\n\024b"
+  "yoyomi_periods_left\030\003 \002(\003\022\034\n\024byoyomi_dur"
+  "ation_sec\030\004 \001(\003\022\021\n\tplayer_id\030\005 \002(\003\022\"\n\032di"
+  "sconnected_time_left_sec\030\006 \001(\003\"\304\001\n\rNextM"
+  "oveEvent\022\t\n\001x\030\001 \001(\003\022\t\n\001y\030\002 \001(\003\022\035\n\003col\030\003 "
+  "\001(\0162\020.openfoxwq.Color\0223\n\ntime_state\030\004 \001("
+  "\0132\037.openfoxwq.MatchPlayerTimeState\022*\n\tla"
+  "st_turn\030\005 \001(\0132\027.openfoxwq.LastTurnInfo\022\021"
+  "\n\tplayer_id\030\006 \001(\003\022\n\n\002ts\030\007 \001(\003\"\230\001\n\tPassEv"
+  "ent\0223\n\ntime_state\030\001 \001(\0132\037.openfoxwq.Matc"
+  "hPlayerTimeState\022*\n\tlast_turn\030\002 \001(\0132\027.op"
+  "enfoxwq.LastTurnInfo\022\021\n\tplayer_id\030\003 \001(\003\022"
+  "\027\n\017unknown_field_4\030\004 \001(\003\"\256\001\n\016CountdownEv"
+  "ent\022\027\n\017unknown_field_1\030\001 \001(\003\022\032\n\022main_tim"
+  "e_left_sec\030\002 \002(\003\022\034\n\024byoyomi_periods_left"
+  "\030\003 \002(\003\022\035\n\025byoyomi_time_left_sec\030\004 \001(\003\022\021\n"
+  "\tplayer_id\030\005 \002(\003\022\027\n\017unknown_field_6\030\006 \001("
+  "\003\"]\n\024ResumeCountdownEvent\022\027\n\017unknown_fie"
+  "ld_1\030\001 \001(\003\022,\n\tcountdown\030\002 \002(\0132\031.openfoxw"
+  "q.CountdownEvent\"1\n\026RequestCountingReque"
+  "st\022\027\n\017unknown_field_1\030\001 \001(\003\"-\n\027RequestCo"
+  "untingResponse\022\022\n\nerror_code\030\001 \001(\003\"2\n\034Se"
+  "ndCountingDecisionResponse\022\022\n\nerror_code"
+  "\030\001 \001(\003\"J\n\020CountingDecision\022\r\n\005agree\030\001 \002("
+  "\010\022\'\n\005stage\030\002 \002(\0162\030.openfoxwq.CountingSta"
+  "ge\"\337\001\n\rCountingEvent\022\027\n\017unknown_field_1\030"
+  "\001 \001(\003\022\'\n\005stage\030\002 \002(\0162\030.openfoxwq.Countin"
+  "gStage\022\027\n\017unknown_field_4\030\004 \001(\014\022\021\n\towner"
+  "ship\030\005 \001(\t\022\027\n\017unknown_field_6\030\006 \001(\002\022 \n\006w"
+  "inner\030\010 \001(\0162\020.openfoxwq.Color\022\022\n\nscore_l"
+  "ead\030\t \001(\002\022\021\n\ttime_left\030\007 \002(\003\"(\n\rResignRe"
+  "quest\022\027\n\017unknown_field_1\030\001 \001(\003\")\n\016Resign"
+  "Response\022\027\n\017unknown_field_1\030\001 \001(\003\"\267\001\n\017Ga"
+  "meResultEvent\022\027\n\017unknown_field_1\030\001 \001(\003\022 "
+  "\n\006winner\030\002 \002(\0162\020.openfoxwq.Color\022\022\n\nscor"
+  "e_lead\030\003 \002(\003\022\027\n\017unknown_field_4\030\004 \001(\003\022\017\n"
+  "\007message\030\005 \001(\t\022\r\n\005ts_10\030\n \001(\003\022\r\n\005ts_12\030\014"
+  " \001(\003\022\r\n\005ts_13\030\r \001(\003*_\n\rCountingStage\022\021\n\r"
+  "STAGE_UNKNOWN\020\000\022\030\n\024STAGE_AGREE_TO_COUNT\020"
+  "\001\022!\n\035STAGE_AGREE_WITH_COUNT_RESULT\020\0022\250\033\n"
+  "\004Play\022h\n\005Login\022!.openfoxwq.LoginPlayServ"
+  "erRequest\032\".openfoxwq.LoginPlayServerRes"
+  "ponse\"\030\202\265\030\024\010\330\314\001\020\330\314\001\032\n\010\001( 0\0068\241\234\001\022i\n\013ListP"
+  "layers\022\035.openfoxwq.ListPlayersRequest\032\036."
+  "openfoxwq.ListPlayersResponse\"\031\202\265\030\025\010\330\314\001\020"
+  "\330\314\001\032\013\010\311\001( 0\0068\316\234\0010\001\022m\n\rGetPlayerInfo\022\037.op"
+  "enfoxwq.GetPlayerInfoRequest\032 .openfoxwq"
+  ".GetPlayerInfoResponse\"\031\202\265\030\025\010\330\314\001\020\330\314\001\032\013\010\351"
+  "\007( 0\0068\313\234\001\022i\n\013SyncPlayers\022\035.openfoxwq.Syn"
+  "cPlayersRequest\032\036.openfoxwq.SyncPlayersR"
+  "esponse\"\033\202\265\030\027\010\330\314\001\020\330\314\001\032\r\010\313\001( 0\0068\316\234\001@\003\022f\n\013"
+  "GetRoomInfo\022\035.openfoxwq.GetRoomInfoReque"
+  "st\032\036.openfoxwq.GetRoomInfoResponse\"\030\202\265\030\024"
+  "\010\330\314\001\020\330\314\001\032\n\010z( 0\0068\300\352\001\022`\n\tEnterRoom\022\033.open"
+  "foxwq.EnterRoomRequest\032\034.openfoxwq.Enter"
+  "RoomResponse\"\030\202\265\030\024\010\330\314\001\020\330\314\001\032\n\010d( 0\0068\305\352\001\022`"
+  "\n\tLeaveRoom\022\033.openfoxwq.LeaveRoomRequest"
+  "\032\034.openfoxwq.LeaveRoomResponse\"\030\202\265\030\024\010\330\314\001"
+  "\020\330\314\001\032\n\010e( 0\0068\306\352\001\022\201\001\n\024ListRoomParticipant"
+  "s\022&.openfoxwq.ListRoomParticipantsReques"
+  "t\032\'.openfoxwq.ListRoomParticipantsRespon"
+  "se\"\030\202\265\030\024\010\330\314\001\020\330\314\001\032\n\010d( 0\0068\332\352\001\022s\n\035ListenPl"
+  "ayerOnlineCountEvents\022\026.google.protobuf."
+  "Empty\032!.openfoxwq.PlayerOnlineCountEvent"
+  "\"\025\202\265\030\021\010\330\314\001\020\330\314\001\032\007\010\221\0038\316\234\0010\001\022i\n\030ListenPlaye"
+  "rOnlineEvents\022\026.google.protobuf.Empty\032\034."
+  "openfoxwq.PlayerOnlineEvent\"\025\202\265\030\021\010\330\314\001\020\330\314"
+  "\001\032\007\010\222\0038\316\234\0010\001\022k\n\031ListenPlayerOfflineEvent"
+  "s\022\026.google.protobuf.Empty\032\035.openfoxwq.Pl"
+  "ayerOfflineEvent\"\025\202\265\030\021\010\330\314\001\020\330\314\001\032\007\010\223\0038\316\234\0010"
+  "\001\022g\n\027ListenPlayerStateEvents\022\026.google.pr"
+  "otobuf.Empty\032\033.openfoxwq.PlayerStateEven"
+  "t\"\025\202\265\030\021\010\330\314\001\020\330\314\001\032\007\010\224\0038\316\234\0010\001\022z\n\021GetAutomat"
+  "chStats\022#.openfoxwq.GetAutomatchStatsReq"
+  "uest\032$.openfoxwq.GetAutomatchStatsRespon"
+  "se\"\032\202\265\030\026\010\330\314\001\020\330\314\001\032\014\010\261\216\006( 0\0068\266\352\001\022q\n\016StartA"
+  "utomatch\022 .openfoxwq.StartAutomatchReque"
+  "st\032!.openfoxwq.StartAutomatchResponse\"\032\202"
+  "\265\030\026\010\330\314\001\020\330\314\001\032\014\010\242\216\006( 0\0068\266\352\001\022n\n\032ListenAutom"
+  "atchFoundEvents\022\026.google.protobuf.Empty\032"
+  "\036.openfoxwq.AutomatchFoundEvent\"\026\202\265\030\022\010\330\314"
+  "\001\020\330\314\001\032\010\010\254\216\0068\266\352\0010\001\022n\n\rStopAutomatch\022\037.ope"
+  "nfoxwq.StopAutomatchRequest\032 .openfoxwq."
+  "StopAutomatchResponse\"\032\202\265\030\026\010\330\314\001\020\330\314\001\032\014\010\253\216"
+  "\006( 0\0068\266\352\001\022f\n\013AcceptMatch\022\035.openfoxwq.Acc"
+  "eptMatchRequest\032\036.openfoxwq.AcceptMatchR"
+  "esponse\"\030\202\265\030\024\010\330\314\001\020\330\314\001\032\n\010i( 0\0068\230\362\001\022m\n\rSyn"
+  "cMatchTime\022\037.openfoxwq.SyncMatchTimeRequ"
+  "est\032 .openfoxwq.SyncMatchTimeResponse\"\031\202"
+  "\265\030\025\010\330\314\001\020\330\314\001\032\013\010\310\001( 0\0068\230\362\001\022R\n\004Move\022\026.openf"
+  "oxwq.MoveRequest\032\027.openfoxwq.MoveRespons"
+  "e\"\031\202\265\030\025\010\330\314\001\020\330\314\001\032\013\010\311\001( 0\0068\230\362\001\022R\n\004Pass\022\026.o"
+  "penfoxwq.PassRequest\032\027.openfoxwq.PassRes"
+  "ponse\"\031\202\265\030\025\010\330\314\001\020\330\314\001\032\013\010\314\001( 0\0068\230\362\001\022s\n\017Requ"
+  "estCounting\022!.openfoxwq.RequestCountingR"
+  "equest\032\".openfoxwq.RequestCountingRespon"
+  "se\"\031\202\265\030\025\010\330\314\001\020\330\314\001\032\013\010\255\002( 0\0068\230\362\001\022w\n\024SendCou"
+  "ntingDecision\022\033.openfoxwq.CountingDecisi"
+  "on\032\'.openfoxwq.SendCountingDecisionRespo"
+  "nse\"\031\202\265\030\025\010\330\314\001\020\330\314\001\032\013\010\260\002( 0\0068\230\362\001\022X\n\006Resign"
+  "\022\030.openfoxwq.ResignRequest\032\031.openfoxwq.R"
+  "esignResponse\"\031\202\265\030\025\010\330\314\001\020\330\314\001\032\013\010\267\002( 0\0068\230\362\001"
+  "\022d\n\026ListenMatchStartEvents\022\026.google.prot"
+  "obuf.Empty\032\032.openfoxwq.MatchStartEvent\"\024"
+  "\202\265\030\020\010\330\314\001\020\330\314\001\032\006\010k8\230\362\0010\001\022a\n\024ListenNextMove"
+  "Events\022\026.google.protobuf.Empty\032\030.openfox"
+  "wq.NextMoveEvent\"\025\202\265\030\021\010\330\314\001\020\330\314\001\032\007\010\313\0018\230\362\0010"
+  "\001\022Y\n\020ListenPassEvents\022\026.google.protobuf."
+  "Empty\032\024.openfoxwq.PassEvent\"\025\202\265\030\021\010\330\314\001\020\330\314"
+  "\001\032\007\010\316\0018\230\362\0010\001\022b\n\025ListenCountdownEvents\022\026."
+  "google.protobuf.Empty\032\031.openfoxwq.Countd"
+  "ownEvent\"\024\202\265\030\020\010\330\314\001\020\330\314\001\032\006\010l8\230\362\0010\001\022n\n\033List"
+  "enResumeCountdownEvents\022\026.google.protobu"
+  "f.Empty\032\037.openfoxwq.ResumeCountdownEvent"
+  "\"\024\202\265\030\020\010\330\314\001\020\330\314\001\032\006\010m8\230\362\0010\001\022g\n\027ListenCounti"
+  "ngDecisions\022\026.google.protobuf.Empty\032\033.op"
+  "enfoxwq.CountingDecision\"\025\202\265\030\021\010\330\314\001\020\330\314\001\032\007"
+  "\010\262\0028\230\362\0010\001\022a\n\024ListenCountingEvents\022\026.goog"
+  "le.protobuf.Empty\032\030.openfoxwq.CountingEv"
+  "ent\"\025\202\265\030\021\010\330\314\001\020\330\314\001\032\007\010\257\0028\230\362\0010\001\022e\n\026ListenGa"
+  "meResultEvents\022\026.google.protobuf.Empty\032\032"
+  ".openfoxwq.GameResultEvent\"\025\202\265\030\021\010\330\314\001\020\330\314\001"
+  "\032\007\010\225\0038\230\362\0010\001\022a\n\010SyncTime\022\032.openfoxwq.Sync"
+  "TimeRequest\032\033.openfoxwq.SyncTimeResponse"
+  "\"\034\202\265\030\030\010\330\314\001\020\330\314\001\032\016\010\005( 0\0068\241\234\001@\013H\001\022g\n\010Unknow"
+  "n1\022\036.openfoxwq.UnknownPlayRequest1\032\037.ope"
+  "nfoxwq.UnknownPlayResponse1\"\032\202\265\030\026\010\330\314\001\020\330\314"
+  "\001\032\014\010\002( 0\0068\340\352\001@\001B&Z$github.com/openfoxwq/"
+  "openfoxwq/proto"
   ;
 static const ::_pbi::DescriptorTable* const descriptor_table_proto_2fplay_2eproto_deps[3] = {
   &::descriptor_table_google_2fprotobuf_2fempty_2eproto,
@@ -2890,7 +2914,7 @@ static const ::_pbi::DescriptorTable* const descriptor_table_proto_2fplay_2eprot
 };
 static ::_pbi::once_flag descriptor_table_proto_2fplay_2eproto_once;
 const ::_pbi::DescriptorTable descriptor_table_proto_2fplay_2eproto = {
-    false, false, 13119, descriptor_table_protodef_proto_2fplay_2eproto,
+    false, false, 13255, descriptor_table_protodef_proto_2fplay_2eproto,
     "proto/play.proto",
     &descriptor_table_proto_2fplay_2eproto_once, descriptor_table_proto_2fplay_2eproto_deps, 3, 84,
     schemas, file_default_instances, TableStruct_proto_2fplay_2eproto::offsets,
@@ -4360,8 +4384,11 @@ class GetPlayerInfoResponse_RegisterInfo::_Internal {
   static void set_has_member_since_unix_ts(HasBits* has_bits) {
     (*has_bits)[0] |= 8u;
   }
+  static void set_has_sex(HasBits* has_bits) {
+    (*has_bits)[0] |= 32u;
+  }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x0000001f) ^ 0x0000001f) != 0;
+    return ((has_bits[0] & 0x0000003f) ^ 0x0000003f) != 0;
   }
 };
 
@@ -4381,7 +4408,8 @@ GetPlayerInfoResponse_RegisterInfo::GetPlayerInfoResponse_RegisterInfo(const Get
     , decltype(_impl_.name_){}
     , decltype(_impl_.player_id_){}
     , decltype(_impl_.member_since_unix_ts_){}
-    , decltype(_impl_.country_){}};
+    , decltype(_impl_.country_){}
+    , decltype(_impl_.sex_){}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   _impl_.name_native_.InitDefault();
@@ -4401,8 +4429,8 @@ GetPlayerInfoResponse_RegisterInfo::GetPlayerInfoResponse_RegisterInfo(const Get
       _this->GetArenaForAllocation());
   }
   ::memcpy(&_impl_.player_id_, &from._impl_.player_id_,
-    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.country_) -
-    reinterpret_cast<char*>(&_impl_.player_id_)) + sizeof(_impl_.country_));
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.sex_) -
+    reinterpret_cast<char*>(&_impl_.player_id_)) + sizeof(_impl_.sex_));
   // @@protoc_insertion_point(copy_constructor:openfoxwq.GetPlayerInfoResponse.RegisterInfo)
 }
 
@@ -4418,6 +4446,7 @@ inline void GetPlayerInfoResponse_RegisterInfo::SharedCtor(
     , decltype(_impl_.player_id_){int64_t{0}}
     , decltype(_impl_.member_since_unix_ts_){int64_t{0}}
     , decltype(_impl_.country_){0}
+    , decltype(_impl_.sex_){0}
   };
   _impl_.name_native_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -4463,10 +4492,10 @@ void GetPlayerInfoResponse_RegisterInfo::Clear() {
       _impl_.name_.ClearNonDefaultToEmpty();
     }
   }
-  if (cached_has_bits & 0x0000001cu) {
+  if (cached_has_bits & 0x0000003cu) {
     ::memset(&_impl_.player_id_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&_impl_.country_) -
-        reinterpret_cast<char*>(&_impl_.player_id_)) + sizeof(_impl_.country_));
+        reinterpret_cast<char*>(&_impl_.sex_) -
+        reinterpret_cast<char*>(&_impl_.player_id_)) + sizeof(_impl_.sex_));
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
@@ -4531,6 +4560,19 @@ const char* GetPlayerInfoResponse_RegisterInfo::_InternalParse(const char* ptr, 
           _Internal::set_has_member_since_unix_ts(&has_bits);
           _impl_.member_since_unix_ts_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // required .openfoxwq.Sex sex = 9;
+      case 9:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 72)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+          if (PROTOBUF_PREDICT_TRUE(::openfoxwq::Sex_IsValid(val))) {
+            _internal_set_sex(static_cast<::openfoxwq::Sex>(val));
+          } else {
+            ::PROTOBUF_NAMESPACE_ID::internal::WriteVarint(9, val, mutable_unknown_fields());
+          }
         } else
           goto handle_unusual;
         continue;
@@ -4604,6 +4646,13 @@ uint8_t* GetPlayerInfoResponse_RegisterInfo::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteInt64ToArray(8, this->_internal_member_since_unix_ts(), target);
   }
 
+  // required .openfoxwq.Sex sex = 9;
+  if (cached_has_bits & 0x00000020u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      9, this->_internal_sex(), target);
+  }
+
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
@@ -4646,13 +4695,19 @@ size_t GetPlayerInfoResponse_RegisterInfo::RequiredFieldsByteSizeFallback() cons
       ::_pbi::WireFormatLite::EnumSize(this->_internal_country());
   }
 
+  if (_internal_has_sex()) {
+    // required .openfoxwq.Sex sex = 9;
+    total_size += 1 +
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_sex());
+  }
+
   return total_size;
 }
 size_t GetPlayerInfoResponse_RegisterInfo::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:openfoxwq.GetPlayerInfoResponse.RegisterInfo)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x0000001f) ^ 0x0000001f) == 0) {  // All required fields are present.
+  if (((_impl_._has_bits_[0] & 0x0000003f) ^ 0x0000003f) == 0) {  // All required fields are present.
     // required string name_native = 4;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
@@ -4672,6 +4727,10 @@ size_t GetPlayerInfoResponse_RegisterInfo::ByteSizeLong() const {
     // required .openfoxwq.Country country = 7;
     total_size += 1 +
       ::_pbi::WireFormatLite::EnumSize(this->_internal_country());
+
+    // required .openfoxwq.Sex sex = 9;
+    total_size += 1 +
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_sex());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -4699,7 +4758,7 @@ void GetPlayerInfoResponse_RegisterInfo::MergeImpl(::PROTOBUF_NAMESPACE_ID::Mess
   (void) cached_has_bits;
 
   cached_has_bits = from._impl_._has_bits_[0];
-  if (cached_has_bits & 0x0000001fu) {
+  if (cached_has_bits & 0x0000003fu) {
     if (cached_has_bits & 0x00000001u) {
       _this->_internal_set_name_native(from._internal_name_native());
     }
@@ -4714,6 +4773,9 @@ void GetPlayerInfoResponse_RegisterInfo::MergeImpl(::PROTOBUF_NAMESPACE_ID::Mess
     }
     if (cached_has_bits & 0x00000010u) {
       _this->_impl_.country_ = from._impl_.country_;
+    }
+    if (cached_has_bits & 0x00000020u) {
+      _this->_impl_.sex_ = from._impl_.sex_;
     }
     _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
@@ -4747,8 +4809,8 @@ void GetPlayerInfoResponse_RegisterInfo::InternalSwap(GetPlayerInfoResponse_Regi
       &other->_impl_.name_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(GetPlayerInfoResponse_RegisterInfo, _impl_.country_)
-      + sizeof(GetPlayerInfoResponse_RegisterInfo::_impl_.country_)
+      PROTOBUF_FIELD_OFFSET(GetPlayerInfoResponse_RegisterInfo, _impl_.sex_)
+      + sizeof(GetPlayerInfoResponse_RegisterInfo::_impl_.sex_)
       - PROTOBUF_FIELD_OFFSET(GetPlayerInfoResponse_RegisterInfo, _impl_.player_id_)>(
           reinterpret_cast<char*>(&_impl_.player_id_),
           reinterpret_cast<char*>(&other->_impl_.player_id_));
@@ -4762,39 +4824,292 @@ void GetPlayerInfoResponse_RegisterInfo::InternalSwap(GetPlayerInfoResponse_Regi
 
 // ===================================================================
 
-class GetPlayerInfoResponse_RecentRecord_Unknown1::_Internal {
+class GetPlayerInfoResponse_RecentRecord_RankRequirements::_Internal {
  public:
+  using HasBits = decltype(std::declval<GetPlayerInfoResponse_RecentRecord_RankRequirements>()._impl_._has_bits_);
+  static void set_has_up1(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static void set_has_up2(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static void set_has_down1(HasBits* has_bits) {
+    (*has_bits)[0] |= 4u;
+  }
+  static void set_has_down2(HasBits* has_bits) {
+    (*has_bits)[0] |= 8u;
+  }
 };
 
-GetPlayerInfoResponse_RecentRecord_Unknown1::GetPlayerInfoResponse_RecentRecord_Unknown1(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+GetPlayerInfoResponse_RecentRecord_RankRequirements::GetPlayerInfoResponse_RecentRecord_RankRequirements(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase(arena, is_message_owned) {
-  // @@protoc_insertion_point(arena_constructor:openfoxwq.GetPlayerInfoResponse.RecentRecord.Unknown1)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:openfoxwq.GetPlayerInfoResponse.RecentRecord.RankRequirements)
 }
-GetPlayerInfoResponse_RecentRecord_Unknown1::GetPlayerInfoResponse_RecentRecord_Unknown1(const GetPlayerInfoResponse_RecentRecord_Unknown1& from)
-  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase() {
-  GetPlayerInfoResponse_RecentRecord_Unknown1* const _this = this; (void)_this;
+GetPlayerInfoResponse_RecentRecord_RankRequirements::GetPlayerInfoResponse_RecentRecord_RankRequirements(const GetPlayerInfoResponse_RecentRecord_RankRequirements& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  GetPlayerInfoResponse_RecentRecord_RankRequirements* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.up1_){}
+    , decltype(_impl_.up2_){}
+    , decltype(_impl_.down1_){}
+    , decltype(_impl_.down2_){}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  // @@protoc_insertion_point(copy_constructor:openfoxwq.GetPlayerInfoResponse.RecentRecord.Unknown1)
+  ::memcpy(&_impl_.up1_, &from._impl_.up1_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.down2_) -
+    reinterpret_cast<char*>(&_impl_.up1_)) + sizeof(_impl_.down2_));
+  // @@protoc_insertion_point(copy_constructor:openfoxwq.GetPlayerInfoResponse.RecentRecord.RankRequirements)
 }
 
+inline void GetPlayerInfoResponse_RecentRecord_RankRequirements::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.up1_){int64_t{0}}
+    , decltype(_impl_.up2_){int64_t{0}}
+    , decltype(_impl_.down1_){int64_t{0}}
+    , decltype(_impl_.down2_){int64_t{0}}
+  };
+}
 
+GetPlayerInfoResponse_RecentRecord_RankRequirements::~GetPlayerInfoResponse_RecentRecord_RankRequirements() {
+  // @@protoc_insertion_point(destructor:openfoxwq.GetPlayerInfoResponse.RecentRecord.RankRequirements)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
 
+inline void GetPlayerInfoResponse_RecentRecord_RankRequirements::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+}
 
+void GetPlayerInfoResponse_RecentRecord_RankRequirements::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData GetPlayerInfoResponse_RecentRecord_Unknown1::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl,
-    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl,
+void GetPlayerInfoResponse_RecentRecord_RankRequirements::Clear() {
+// @@protoc_insertion_point(message_clear_start:openfoxwq.GetPlayerInfoResponse.RecentRecord.RankRequirements)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x0000000fu) {
+    ::memset(&_impl_.up1_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&_impl_.down2_) -
+        reinterpret_cast<char*>(&_impl_.up1_)) + sizeof(_impl_.down2_));
+  }
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* GetPlayerInfoResponse_RecentRecord_RankRequirements::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // optional int64 up1 = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_up1(&has_bits);
+          _impl_.up1_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional int64 up2 = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          _Internal::set_has_up2(&has_bits);
+          _impl_.up2_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional int64 down1 = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
+          _Internal::set_has_down1(&has_bits);
+          _impl_.down1_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional int64 down2 = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
+          _Internal::set_has_down2(&has_bits);
+          _impl_.down2_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  _impl_._has_bits_.Or(has_bits);
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* GetPlayerInfoResponse_RecentRecord_RankRequirements::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:openfoxwq.GetPlayerInfoResponse.RecentRecord.RankRequirements)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  // optional int64 up1 = 1;
+  if (cached_has_bits & 0x00000001u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(1, this->_internal_up1(), target);
+  }
+
+  // optional int64 up2 = 2;
+  if (cached_has_bits & 0x00000002u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(2, this->_internal_up2(), target);
+  }
+
+  // optional int64 down1 = 3;
+  if (cached_has_bits & 0x00000004u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(3, this->_internal_down1(), target);
+  }
+
+  // optional int64 down2 = 4;
+  if (cached_has_bits & 0x00000008u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(4, this->_internal_down2(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:openfoxwq.GetPlayerInfoResponse.RecentRecord.RankRequirements)
+  return target;
+}
+
+size_t GetPlayerInfoResponse_RecentRecord_RankRequirements::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:openfoxwq.GetPlayerInfoResponse.RecentRecord.RankRequirements)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x0000000fu) {
+    // optional int64 up1 = 1;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_up1());
+    }
+
+    // optional int64 up2 = 2;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_up2());
+    }
+
+    // optional int64 down1 = 3;
+    if (cached_has_bits & 0x00000004u) {
+      total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_down1());
+    }
+
+    // optional int64 down2 = 4;
+    if (cached_has_bits & 0x00000008u) {
+      total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_down2());
+    }
+
+  }
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData GetPlayerInfoResponse_RecentRecord_RankRequirements::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    GetPlayerInfoResponse_RecentRecord_RankRequirements::MergeImpl
 };
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetPlayerInfoResponse_RecentRecord_Unknown1::GetClassData() const { return &_class_data_; }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetPlayerInfoResponse_RecentRecord_RankRequirements::GetClassData() const { return &_class_data_; }
 
 
+void GetPlayerInfoResponse_RecentRecord_RankRequirements::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<GetPlayerInfoResponse_RecentRecord_RankRequirements*>(&to_msg);
+  auto& from = static_cast<const GetPlayerInfoResponse_RecentRecord_RankRequirements&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:openfoxwq.GetPlayerInfoResponse.RecentRecord.RankRequirements)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
 
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x0000000fu) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_impl_.up1_ = from._impl_.up1_;
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_impl_.up2_ = from._impl_.up2_;
+    }
+    if (cached_has_bits & 0x00000004u) {
+      _this->_impl_.down1_ = from._impl_.down1_;
+    }
+    if (cached_has_bits & 0x00000008u) {
+      _this->_impl_.down2_ = from._impl_.down2_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
 
+void GetPlayerInfoResponse_RecentRecord_RankRequirements::CopyFrom(const GetPlayerInfoResponse_RecentRecord_RankRequirements& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:openfoxwq.GetPlayerInfoResponse.RecentRecord.RankRequirements)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
 
+bool GetPlayerInfoResponse_RecentRecord_RankRequirements::IsInitialized() const {
+  return true;
+}
 
+void GetPlayerInfoResponse_RecentRecord_RankRequirements::InternalSwap(GetPlayerInfoResponse_RecentRecord_RankRequirements* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(GetPlayerInfoResponse_RecentRecord_RankRequirements, _impl_.down2_)
+      + sizeof(GetPlayerInfoResponse_RecentRecord_RankRequirements::_impl_.down2_)
+      - PROTOBUF_FIELD_OFFSET(GetPlayerInfoResponse_RecentRecord_RankRequirements, _impl_.up1_)>(
+          reinterpret_cast<char*>(&_impl_.up1_),
+          reinterpret_cast<char*>(&other->_impl_.up1_));
+}
 
-::PROTOBUF_NAMESPACE_ID::Metadata GetPlayerInfoResponse_RecentRecord_Unknown1::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata GetPlayerInfoResponse_RecentRecord_RankRequirements::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_proto_2fplay_2eproto_getter, &descriptor_table_proto_2fplay_2eproto_once,
       file_level_metadata_proto_2fplay_2eproto[6]);
@@ -4805,8 +5120,8 @@ const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetPlayerInfoResponse_RecentRe
 class GetPlayerInfoResponse_RecentRecord::_Internal {
  public:
   using HasBits = decltype(std::declval<GetPlayerInfoResponse_RecentRecord>()._impl_._has_bits_);
-  static const ::openfoxwq::GetPlayerInfoResponse_RecentRecord_Unknown1& unknown_field_1(const GetPlayerInfoResponse_RecentRecord* msg);
-  static void set_has_unknown_field_1(HasBits* has_bits) {
+  static const ::openfoxwq::GetPlayerInfoResponse_RecentRecord_RankRequirements& rank_requirements(const GetPlayerInfoResponse_RecentRecord* msg);
+  static void set_has_rank_requirements(HasBits* has_bits) {
     (*has_bits)[0] |= 4u;
   }
   static void set_has_streak(HasBits* has_bits) {
@@ -4817,9 +5132,9 @@ class GetPlayerInfoResponse_RecentRecord::_Internal {
   }
 };
 
-const ::openfoxwq::GetPlayerInfoResponse_RecentRecord_Unknown1&
-GetPlayerInfoResponse_RecentRecord::_Internal::unknown_field_1(const GetPlayerInfoResponse_RecentRecord* msg) {
-  return *msg->_impl_.unknown_field_1_;
+const ::openfoxwq::GetPlayerInfoResponse_RecentRecord_RankRequirements&
+GetPlayerInfoResponse_RecentRecord::_Internal::rank_requirements(const GetPlayerInfoResponse_RecentRecord* msg) {
+  return *msg->_impl_.rank_requirements_;
 }
 GetPlayerInfoResponse_RecentRecord::GetPlayerInfoResponse_RecentRecord(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
@@ -4835,7 +5150,7 @@ GetPlayerInfoResponse_RecentRecord::GetPlayerInfoResponse_RecentRecord(const Get
     , /*decltype(_impl_._cached_size_)*/{}
     , decltype(_impl_.streak_){}
     , decltype(_impl_.unknown_field_3_){}
-    , decltype(_impl_.unknown_field_1_){nullptr}};
+    , decltype(_impl_.rank_requirements_){nullptr}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   _impl_.streak_.InitDefault();
@@ -4854,8 +5169,8 @@ GetPlayerInfoResponse_RecentRecord::GetPlayerInfoResponse_RecentRecord(const Get
     _this->_impl_.unknown_field_3_.Set(from._internal_unknown_field_3(), 
       _this->GetArenaForAllocation());
   }
-  if (from._internal_has_unknown_field_1()) {
-    _this->_impl_.unknown_field_1_ = new ::openfoxwq::GetPlayerInfoResponse_RecentRecord_Unknown1(*from._impl_.unknown_field_1_);
+  if (from._internal_has_rank_requirements()) {
+    _this->_impl_.rank_requirements_ = new ::openfoxwq::GetPlayerInfoResponse_RecentRecord_RankRequirements(*from._impl_.rank_requirements_);
   }
   // @@protoc_insertion_point(copy_constructor:openfoxwq.GetPlayerInfoResponse.RecentRecord)
 }
@@ -4869,7 +5184,7 @@ inline void GetPlayerInfoResponse_RecentRecord::SharedCtor(
     , /*decltype(_impl_._cached_size_)*/{}
     , decltype(_impl_.streak_){}
     , decltype(_impl_.unknown_field_3_){}
-    , decltype(_impl_.unknown_field_1_){nullptr}
+    , decltype(_impl_.rank_requirements_){nullptr}
   };
   _impl_.streak_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -4894,7 +5209,7 @@ inline void GetPlayerInfoResponse_RecentRecord::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   _impl_.streak_.Destroy();
   _impl_.unknown_field_3_.Destroy();
-  if (this != internal_default_instance()) delete _impl_.unknown_field_1_;
+  if (this != internal_default_instance()) delete _impl_.rank_requirements_;
 }
 
 void GetPlayerInfoResponse_RecentRecord::SetCachedSize(int size) const {
@@ -4916,8 +5231,8 @@ void GetPlayerInfoResponse_RecentRecord::Clear() {
       _impl_.unknown_field_3_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000004u) {
-      GOOGLE_DCHECK(_impl_.unknown_field_1_ != nullptr);
-      _impl_.unknown_field_1_->Clear();
+      GOOGLE_DCHECK(_impl_.rank_requirements_ != nullptr);
+      _impl_.rank_requirements_->Clear();
     }
   }
   _impl_._has_bits_.Clear();
@@ -4931,10 +5246,10 @@ const char* GetPlayerInfoResponse_RecentRecord::_InternalParse(const char* ptr, 
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // optional .openfoxwq.GetPlayerInfoResponse.RecentRecord.Unknown1 unknown_field_1 = 1;
+      // optional .openfoxwq.GetPlayerInfoResponse.RecentRecord.RankRequirements rank_requirements = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_unknown_field_1(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_rank_requirements(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -4994,11 +5309,11 @@ uint8_t* GetPlayerInfoResponse_RecentRecord::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // optional .openfoxwq.GetPlayerInfoResponse.RecentRecord.Unknown1 unknown_field_1 = 1;
+  // optional .openfoxwq.GetPlayerInfoResponse.RecentRecord.RankRequirements rank_requirements = 1;
   if (cached_has_bits & 0x00000004u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(1, _Internal::unknown_field_1(this),
-        _Internal::unknown_field_1(this).GetCachedSize(), target, stream);
+      InternalWriteMessage(1, _Internal::rank_requirements(this),
+        _Internal::rank_requirements(this).GetCachedSize(), target, stream);
   }
 
   // optional string streak = 2;
@@ -5053,11 +5368,11 @@ size_t GetPlayerInfoResponse_RecentRecord::ByteSizeLong() const {
           this->_internal_unknown_field_3());
     }
 
-    // optional .openfoxwq.GetPlayerInfoResponse.RecentRecord.Unknown1 unknown_field_1 = 1;
+    // optional .openfoxwq.GetPlayerInfoResponse.RecentRecord.RankRequirements rank_requirements = 1;
     if (cached_has_bits & 0x00000004u) {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          *_impl_.unknown_field_1_);
+          *_impl_.rank_requirements_);
     }
 
   }
@@ -5088,8 +5403,8 @@ void GetPlayerInfoResponse_RecentRecord::MergeImpl(::PROTOBUF_NAMESPACE_ID::Mess
       _this->_internal_set_unknown_field_3(from._internal_unknown_field_3());
     }
     if (cached_has_bits & 0x00000004u) {
-      _this->_internal_mutable_unknown_field_1()->::openfoxwq::GetPlayerInfoResponse_RecentRecord_Unknown1::MergeFrom(
-          from._internal_unknown_field_1());
+      _this->_internal_mutable_rank_requirements()->::openfoxwq::GetPlayerInfoResponse_RecentRecord_RankRequirements::MergeFrom(
+          from._internal_rank_requirements());
     }
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
@@ -5120,7 +5435,7 @@ void GetPlayerInfoResponse_RecentRecord::InternalSwap(GetPlayerInfoResponse_Rece
       &_impl_.unknown_field_3_, lhs_arena,
       &other->_impl_.unknown_field_3_, rhs_arena
   );
-  swap(_impl_.unknown_field_1_, other->_impl_.unknown_field_1_);
+  swap(_impl_.rank_requirements_, other->_impl_.rank_requirements_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata GetPlayerInfoResponse_RecentRecord::GetMetadata() const {
@@ -7716,8 +8031,11 @@ void GetPlayerInfoResponse_MembershipInfo::InternalSwap(GetPlayerInfoResponse_Me
 class GetPlayerInfoResponse_PlayerFlair::_Internal {
  public:
   using HasBits = decltype(std::declval<GetPlayerInfoResponse_PlayerFlair>()._impl_._has_bits_);
-  static void set_has_ai(HasBits* has_bits) {
+  static void set_has_flair(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
+  }
+  static void set_has_ai(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
   }
 };
 
@@ -7733,10 +8051,13 @@ GetPlayerInfoResponse_PlayerFlair::GetPlayerInfoResponse_PlayerFlair(const GetPl
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.flair_){}
     , decltype(_impl_.ai_){}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _this->_impl_.ai_ = from._impl_.ai_;
+  ::memcpy(&_impl_.flair_, &from._impl_.flair_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.ai_) -
+    reinterpret_cast<char*>(&_impl_.flair_)) + sizeof(_impl_.ai_));
   // @@protoc_insertion_point(copy_constructor:openfoxwq.GetPlayerInfoResponse.PlayerFlair)
 }
 
@@ -7747,6 +8068,7 @@ inline void GetPlayerInfoResponse_PlayerFlair::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.flair_){0}
     , decltype(_impl_.ai_){false}
   };
 }
@@ -7774,7 +8096,12 @@ void GetPlayerInfoResponse_PlayerFlair::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.ai_ = false;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    ::memset(&_impl_.flair_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&_impl_.ai_) -
+        reinterpret_cast<char*>(&_impl_.flair_)) + sizeof(_impl_.ai_));
+  }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
@@ -7786,6 +8113,19 @@ const char* GetPlayerInfoResponse_PlayerFlair::_InternalParse(const char* ptr, :
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
+      // optional .openfoxwq.Flair flair = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+          if (PROTOBUF_PREDICT_TRUE(::openfoxwq::Flair_IsValid(val))) {
+            _internal_set_flair(static_cast<::openfoxwq::Flair>(val));
+          } else {
+            ::PROTOBUF_NAMESPACE_ID::internal::WriteVarint(1, val, mutable_unknown_fields());
+          }
+        } else
+          goto handle_unusual;
+        continue;
       // optional bool ai = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
@@ -7826,8 +8166,15 @@ uint8_t* GetPlayerInfoResponse_PlayerFlair::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // optional bool ai = 2;
+  // optional .openfoxwq.Flair flair = 1;
   if (cached_has_bits & 0x00000001u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      1, this->_internal_flair(), target);
+  }
+
+  // optional bool ai = 2;
+  if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(2, this->_internal_ai(), target);
   }
@@ -7848,12 +8195,20 @@ size_t GetPlayerInfoResponse_PlayerFlair::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // optional bool ai = 2;
   cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000001u) {
-    total_size += 1 + 1;
-  }
+  if (cached_has_bits & 0x00000003u) {
+    // optional .openfoxwq.Flair flair = 1;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += 1 +
+        ::_pbi::WireFormatLite::EnumSize(this->_internal_flair());
+    }
 
+    // optional bool ai = 2;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += 1 + 1;
+    }
+
+  }
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
@@ -7872,8 +8227,15 @@ void GetPlayerInfoResponse_PlayerFlair::MergeImpl(::PROTOBUF_NAMESPACE_ID::Messa
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_ai()) {
-    _this->_internal_set_ai(from._internal_ai());
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_impl_.flair_ = from._impl_.flair_;
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_impl_.ai_ = from._impl_.ai_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -7893,7 +8255,12 @@ void GetPlayerInfoResponse_PlayerFlair::InternalSwap(GetPlayerInfoResponse_Playe
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
-  swap(_impl_.ai_, other->_impl_.ai_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(GetPlayerInfoResponse_PlayerFlair, _impl_.ai_)
+      + sizeof(GetPlayerInfoResponse_PlayerFlair::_impl_.ai_)
+      - PROTOBUF_FIELD_OFFSET(GetPlayerInfoResponse_PlayerFlair, _impl_.flair_)>(
+          reinterpret_cast<char*>(&_impl_.flair_),
+          reinterpret_cast<char*>(&other->_impl_.flair_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata GetPlayerInfoResponse_PlayerFlair::GetMetadata() const {
@@ -25710,9 +26077,9 @@ template<> PROTOBUF_NOINLINE ::openfoxwq::GetPlayerInfoResponse_RegisterInfo*
 Arena::CreateMaybeMessage< ::openfoxwq::GetPlayerInfoResponse_RegisterInfo >(Arena* arena) {
   return Arena::CreateMessageInternal< ::openfoxwq::GetPlayerInfoResponse_RegisterInfo >(arena);
 }
-template<> PROTOBUF_NOINLINE ::openfoxwq::GetPlayerInfoResponse_RecentRecord_Unknown1*
-Arena::CreateMaybeMessage< ::openfoxwq::GetPlayerInfoResponse_RecentRecord_Unknown1 >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::openfoxwq::GetPlayerInfoResponse_RecentRecord_Unknown1 >(arena);
+template<> PROTOBUF_NOINLINE ::openfoxwq::GetPlayerInfoResponse_RecentRecord_RankRequirements*
+Arena::CreateMaybeMessage< ::openfoxwq::GetPlayerInfoResponse_RecentRecord_RankRequirements >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::openfoxwq::GetPlayerInfoResponse_RecentRecord_RankRequirements >(arena);
 }
 template<> PROTOBUF_NOINLINE ::openfoxwq::GetPlayerInfoResponse_RecentRecord*
 Arena::CreateMaybeMessage< ::openfoxwq::GetPlayerInfoResponse_RecentRecord >(Arena* arena) {

@@ -32,6 +32,11 @@ PlayerInfoDialog::PlayerInfoDialog(QWidget *parent, const openfoxwq::GetPlayerIn
     ui->rankNumberLabel->setText(rankNumber);
     ui->rankTypeLabel->setText(rankType);
 
+    ui->rankUp1Label->setText(QString::number(playerInfo.recent_record().rank_requirements().up1()));
+    ui->rankUp2Label->setText(QString::number(playerInfo.recent_record().rank_requirements().up2()));
+    ui->rankDown1Label->setText(QString::number(playerInfo.recent_record().rank_requirements().down1()));
+    ui->rankDown2Label->setText(QString::number(playerInfo.recent_record().rank_requirements().down2()));
+
     for (int i = 0; i < playerInfo.results_size(); ++i) {
         const QString labelText = QString("%1 W / %2 L")
                                              .arg(playerInfo.results(i).wins())

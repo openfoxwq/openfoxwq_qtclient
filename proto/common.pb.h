@@ -249,7 +249,10 @@ enum Country : int {
   AUSTRIA = 43,
   UK = 44,
   SWEDEN = 46,
+  NORWAY = 47,
+  MEXICO = 52,
   CHILE = 56,
+  MALAYSIA = 60,
   AUSTRALIA = 61,
   INDONESIA = 62,
   PHILIPPINES = 63,
@@ -273,6 +276,7 @@ enum Country : int {
   HONGKONG = 852,
   MACAU = 853,
   SAUDIARABIA = 967,
+  ISRAEL = 973,
   CANADA = 11111
 };
 bool Country_IsValid(int value);
@@ -342,7 +346,7 @@ inline bool Sex_Parse(
     Sex_descriptor(), name, value);
 }
 enum Flair : int {
-  FLAIR_UNKNOWN = 0,
+  FLAIR_NONE = 0,
   FLAIR_PRO = 1,
   FLAIR_GOLD_CROWN = 2,
   FLAIR_TOP_AMATEUR = 3,
@@ -350,7 +354,7 @@ enum Flair : int {
   FLAIR_ELITE_AMATEUR = 5
 };
 bool Flair_IsValid(int value);
-constexpr Flair Flair_MIN = FLAIR_UNKNOWN;
+constexpr Flair Flair_MIN = FLAIR_NONE;
 constexpr Flair Flair_MAX = FLAIR_ELITE_AMATEUR;
 constexpr int Flair_ARRAYSIZE = Flair_MAX + 1;
 

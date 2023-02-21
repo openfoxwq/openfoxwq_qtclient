@@ -90,7 +90,7 @@ void PlayerModel::sortSpecial() {
         {openfoxwq::Flair::FLAIR_PRO, 3},
         {openfoxwq::Flair::FLAIR_ELITE_AMATEUR, 4},
         {openfoxwq::Flair::FLAIR_TOP_AMATEUR, 5},
-        {openfoxwq::Flair::FLAIR_UNKNOWN, 1<<20},
+        {openfoxwq::Flair::FLAIR_NONE, 1<<20},
     };
     std::sort(m_players.begin(), m_players.end(), [](const openfoxwq::PlayerInfo& p1, const openfoxwq::PlayerInfo& p2) {
         auto p1Rank = p1.rank();

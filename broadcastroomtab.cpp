@@ -33,18 +33,31 @@ void BroadcastRoomTab::on_stateEvent(const openfoxwq::BroadcastStateEvent& event
     } else {
         ui->matchCard->setWhiteTimerPaused(false);
     }
+
+    const auto [lr, lc] = ui->board->lastPoint();
+    if (lr != -1 && lc != -1) {
+        ui->board->setAnnotation(lr, lc, Annotation{ AnnotationType::kQuarterTriangle, curCol == openfoxwq::Color::COL_BLACK ? Qt::black : Qt::white});
+    }
 }
 
 void BroadcastRoomTab::on_moveEvent(const openfoxwq::BroadcastMoveEvent& event) {
+    // Remove previous move annotation.
+    const auto [lr, lc] = ui->board->lastPoint();
+    if (lr != -1 && lc != -1) {
+        ui->board->setAnnotation(lr, lc, Annotation{AnnotationType::kNone});
+    }
+
     const auto [r, c] = decodeMove(event.encoded_move());
     if (event.player_id() == m_broadcast.player_id_black()) {
         ui->board->movePiece(r, c, openfoxwq::Color::COL_BLACK);
+        ui->board->setAnnotation(r, c, Annotation{ AnnotationType::kQuarterTriangle, Qt::white});
         m_sfx.playStone();
         ui->matchCard->setBlackTime(event.time_left()>>2);
         ui->matchCard->setBlackTimerPaused(true);
         ui->matchCard->setWhiteTimerPaused(false);
     } else if (event.player_id() == m_broadcast.player_id_white()) {
         ui->board->movePiece(r, c, openfoxwq::Color::COL_WHITE);
+        ui->board->setAnnotation(r, c, Annotation{ AnnotationType::kQuarterTriangle, Qt::black});
         m_sfx.playStone();
         ui->matchCard->setWhiteTime(event.time_left()>>2);
         ui->matchCard->setWhiteTimerPaused(true);

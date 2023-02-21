@@ -23,14 +23,18 @@ ModelUtils::ModelUtils() : m_unknownCountryFlag(":/assets/flag-small/aq.png")
     m_countryFlags[openfoxwq::Country::HONGKONG] = QIcon(":/assets/flag-small/hk.png");
     m_countryFlags[openfoxwq::Country::HUNGARY] = QIcon(":/assets/flag-small/hu.png");
     m_countryFlags[openfoxwq::Country::INDONESIA] = QIcon(":/assets/flag-small/id.png");
+    m_countryFlags[openfoxwq::Country::ISRAEL] = QIcon(":/assets/flag-small/il.png");
     m_countryFlags[openfoxwq::Country::ITALY] = QIcon(":/assets/flag-small/it.png");
     m_countryFlags[openfoxwq::Country::JAPAN] = QIcon(":/assets/flag-small/jp.png");
     m_countryFlags[openfoxwq::Country::KOREA] = QIcon(":/assets/flag-small/kr.png");
     m_countryFlags[openfoxwq::Country::LATVIA] = QIcon(":/assets/flag-small/lv.png");
     m_countryFlags[openfoxwq::Country::MACAU] = QIcon(":/assets/flag-small/mo.png");
+    m_countryFlags[openfoxwq::Country::MALAYSIA] = QIcon(":/assets/flag-small/my.png");
+    m_countryFlags[openfoxwq::Country::MEXICO] = QIcon(":/assets/flag-small/mx.png");
     m_countryFlags[openfoxwq::Country::NETHERLANDS] = QIcon(":/assets/flag-small/nl.png");
     m_countryFlags[openfoxwq::Country::NEWZEALAND] = QIcon(":/assets/flag-small/nz.png");
     m_countryFlags[openfoxwq::Country::NIGERIA] = QIcon(":/assets/flag-small/ng.png");
+    m_countryFlags[openfoxwq::Country::NORWAY] = QIcon(":/assets/flag-small/no.png");
     m_countryFlags[openfoxwq::Country::PHILIPPINES] = QIcon(":/assets/flag-small/ph.png");
     m_countryFlags[openfoxwq::Country::PORTUGAL] = QIcon(":/assets/flag-small/pt.png");
     m_countryFlags[openfoxwq::Country::RUSSIA] = QIcon(":/assets/flag-small/ru.png");
@@ -65,14 +69,18 @@ QString ModelUtils::countryString(openfoxwq::Country country) {
     case openfoxwq::Country::HONGKONG: return "Hong Kong";
     case openfoxwq::Country::HUNGARY: return "Hungary";
     case openfoxwq::Country::INDONESIA: return "Indonesia";
+    case openfoxwq::Country::ISRAEL: return "Israel";
     case openfoxwq::Country::ITALY: return "Italy";
     case openfoxwq::Country::JAPAN: return "Japan";
     case openfoxwq::Country::KOREA: return "South Korea";
     case openfoxwq::Country::LATVIA: return "Latvia";
     case openfoxwq::Country::MACAU: return "Macau";
+    case openfoxwq::Country::MALAYSIA: return "Malaysia";
+    case openfoxwq::Country::MEXICO: return "Mexico";
     case openfoxwq::Country::NETHERLANDS: return "Netherlands";
     case openfoxwq::Country::NEWZEALAND: return "New Zealand";
     case openfoxwq::Country::NIGERIA: return "Nigeria";
+    case openfoxwq::Country::NORWAY: return "Norway";
     case openfoxwq::Country::PHILIPPINES: return "Philippines";
     case openfoxwq::Country::PORTUGAL: return "Portugal";
     case openfoxwq::Country::RUSSIA: return "Russia";
@@ -156,11 +164,19 @@ QStandardItem* ModelUtils::flair(const openfoxwq::PlayerInfo& player) const {
             item->setToolTip("Professional");
             break;
         case openfoxwq::Flair::FLAIR_GOLD_CROWN:
-            item->setIcon(QIcon(":/assets/flair/gold-crown.png"));
+            if (player.sex() == openfoxwq::Sex::SEX_MALE) {
+                item->setIcon(QIcon(":/assets/flair/gold-crown.png"));
+            } else {
+                item->setIcon(QIcon(":/assets/flair/gold-crown-female.png"));
+            }
             item->setToolTip("World Champion");
             break;
         case openfoxwq::Flair::FLAIR_SILVER_CROWN:
-            item->setIcon(QIcon(":/assets/flair/silver-crown.png"));
+            if (player.sex() == openfoxwq::Sex::SEX_MALE) {
+                item->setIcon(QIcon(":/assets/flair/silver-crown.png"));
+            } else {
+                item->setIcon(QIcon(":/assets/flair/silver-crown-female.png"));
+            }
             item->setToolTip("World Vice-Champion or National Champion");
             break;
         default:
@@ -298,8 +314,10 @@ QPair<QString, QString> ModelUtils::rankNumberTypeString(openfoxwq::Rank rank) {
 }
 
 QBrush ModelUtils::colorForRank(openfoxwq::Rank rank) {
-    if (rank >= openfoxwq::Rank::RANK_1P) return QColor(11, 106, 214, 255);
-    if (rank >= openfoxwq::Rank::RANK_1D) return QColor(204, 78, 80, 255);
+    if (rank >= openfoxwq::Rank::RANK_1P) return Qt::blue;
+    if (rank >= openfoxwq::Rank::RANK_9D) return Qt::red;
+    if (rank >= openfoxwq::Rank::RANK_7D) return Qt::darkMagenta;
+    if (rank >= openfoxwq::Rank::RANK_4D) return Qt::darkGreen;
     if (rank <= openfoxwq::Rank::RANK_10K) return Qt::gray;
     return Qt::transparent;
 }
