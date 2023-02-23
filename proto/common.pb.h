@@ -1735,7 +1735,7 @@ class PlayerInfo final :
     kMembershipValidUntilFieldNumber = 28,
     kMembershipTypeFieldNumber = 27,
   };
-  // optional string name = 2;
+  // optional bytes name = 2;
   bool has_name() const;
   private:
   bool _internal_has_name() const;
@@ -1753,7 +1753,7 @@ class PlayerInfo final :
   std::string* _internal_mutable_name();
   public:
 
-  // optional string name_native = 3;
+  // optional bytes name_native = 3;
   bool has_name_native() const;
   private:
   bool _internal_has_name_native() const;
@@ -2913,7 +2913,7 @@ class BroadcastInfo_BroadcastPlayerInfo final :
     kRankFieldNumber = 3,
     kCountryFieldNumber = 4,
   };
-  // optional string name = 1;
+  // optional bytes name = 1;
   bool has_name() const;
   private:
   bool _internal_has_name() const;
@@ -2931,7 +2931,7 @@ class BroadcastInfo_BroadcastPlayerInfo final :
   std::string* _internal_mutable_name();
   public:
 
-  // optional string name_alt = 2;
+  // optional bytes name_alt = 2;
   bool has_name_alt() const;
   private:
   bool _internal_has_name_alt() const;
@@ -4931,7 +4931,7 @@ inline void PlayerInfo::set_player_id(int64_t value) {
   // @@protoc_insertion_point(field_set:openfoxwq.PlayerInfo.player_id)
 }
 
-// optional string name = 2;
+// optional bytes name = 2;
 inline bool PlayerInfo::_internal_has_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -4951,7 +4951,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void PlayerInfo::set_name(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.name_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.name_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:openfoxwq.PlayerInfo.name)
 }
 inline std::string* PlayerInfo::mutable_name() {
@@ -4999,7 +4999,7 @@ inline void PlayerInfo::set_allocated_name(std::string* name) {
   // @@protoc_insertion_point(field_set_allocated:openfoxwq.PlayerInfo.name)
 }
 
-// optional string name_native = 3;
+// optional bytes name_native = 3;
 inline bool PlayerInfo::_internal_has_name_native() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -5019,7 +5019,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void PlayerInfo::set_name_native(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.name_native_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.name_native_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:openfoxwq.PlayerInfo.name_native)
 }
 inline std::string* PlayerInfo::mutable_name_native() {
@@ -6125,7 +6125,7 @@ inline void RoomId::set_id_4(int64_t value) {
 
 // BroadcastInfo_BroadcastPlayerInfo
 
-// optional string name = 1;
+// optional bytes name = 1;
 inline bool BroadcastInfo_BroadcastPlayerInfo::_internal_has_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -6145,7 +6145,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void BroadcastInfo_BroadcastPlayerInfo::set_name(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.name_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.name_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:openfoxwq.BroadcastInfo.BroadcastPlayerInfo.name)
 }
 inline std::string* BroadcastInfo_BroadcastPlayerInfo::mutable_name() {
@@ -6193,7 +6193,7 @@ inline void BroadcastInfo_BroadcastPlayerInfo::set_allocated_name(std::string* n
   // @@protoc_insertion_point(field_set_allocated:openfoxwq.BroadcastInfo.BroadcastPlayerInfo.name)
 }
 
-// optional string name_alt = 2;
+// optional bytes name_alt = 2;
 inline bool BroadcastInfo_BroadcastPlayerInfo::_internal_has_name_alt() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -6213,7 +6213,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void BroadcastInfo_BroadcastPlayerInfo::set_name_alt(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.name_alt_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.name_alt_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:openfoxwq.BroadcastInfo.BroadcastPlayerInfo.name_alt)
 }
 inline std::string* BroadcastInfo_BroadcastPlayerInfo::mutable_name_alt() {

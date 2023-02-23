@@ -281,7 +281,7 @@ class WsLoginRequest final :
     kUsernameFieldNumber = 1,
     kPasswordFieldNumber = 2,
   };
-  // required string username = 1;
+  // required bytes username = 1;
   bool has_username() const;
   private:
   bool _internal_has_username() const;
@@ -996,7 +996,7 @@ class WsGetPlayerInfoRequest final :
     kNameFieldNumber = 1,
     kIdFieldNumber = 2,
   };
-  // string name = 1;
+  // bytes name = 1;
   bool has_name() const;
   private:
   bool _internal_has_name() const;
@@ -5082,7 +5082,7 @@ class WsResponse final :
 #endif  // __GNUC__
 // WsLoginRequest
 
-// required string username = 1;
+// required bytes username = 1;
 inline bool WsLoginRequest::_internal_has_username() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -5102,7 +5102,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void WsLoginRequest::set_username(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.username_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.username_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:openfoxwq.WsLoginRequest.username)
 }
 inline std::string* WsLoginRequest::mutable_username() {
@@ -5460,7 +5460,7 @@ inline WsLeaveRoomRequest::RoomCase WsLeaveRoomRequest::room_case() const {
 
 // WsGetPlayerInfoRequest
 
-// string name = 1;
+// bytes name = 1;
 inline bool WsGetPlayerInfoRequest::_internal_has_name() const {
   return info_case() == kName;
 }
@@ -5487,7 +5487,7 @@ inline void WsGetPlayerInfoRequest::set_name(ArgT0&& arg0, ArgT... args) {
     set_has_name();
     _impl_.info_.name_.InitDefault();
   }
-  _impl_.info_.name_.Set( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  _impl_.info_.name_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:openfoxwq.WsGetPlayerInfoRequest.name)
 }
 inline std::string* WsGetPlayerInfoRequest::mutable_name() {

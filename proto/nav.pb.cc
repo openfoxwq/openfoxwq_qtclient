@@ -229,7 +229,7 @@ const char descriptor_table_protodef_proto_2fnav_2eproto[] PROTOBUF_SECTION_VARI
   "erversRequest\022\021\n\tplayer_id\030\001 \002(\003\"C\n\023List"
   "ServersResponse\022,\n\013server_info\030\003 \001(\0132\027.o"
   "penfoxwq.LobbySvrInfo\"\206\001\n\014LoginRequest\022\014"
-  "\n\004user\030\001 \002(\t\022\013\n\003app\030\002 \002(\t\022\025\n\rpassword_ha"
+  "\n\004user\030\001 \002(\014\022\013\n\003app\030\002 \002(\t\022\025\n\rpassword_ha"
   "sh\030\003 \002(\t\022\026\n\016client_version\030\005 \002(\003\022\023\n\013mac_"
   "address\030\007 \002(\t\022\027\n\017unknown_field_4\030\004 \001(\003\"\245"
   "\003\n\rLoginResponse\022\021\n\tplayer_id\030\002 \002(\003\022*\n\013p"
@@ -849,15 +849,12 @@ const char* LoginRequest::_InternalParse(const char* ptr, ::_pbi::ParseContext* 
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string user = 1;
+      // required bytes user = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_user();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "openfoxwq.LoginRequest.user");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
@@ -946,13 +943,9 @@ uint8_t* LoginRequest::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string user = 1;
+  // required bytes user = 1;
   if (cached_has_bits & 0x00000001u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_user().data(), static_cast<int>(this->_internal_user().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "openfoxwq.LoginRequest.user");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         1, this->_internal_user(), target);
   }
 
@@ -1011,9 +1004,9 @@ size_t LoginRequest::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_user()) {
-    // required string user = 1;
+    // required bytes user = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_user());
   }
 
@@ -1050,9 +1043,9 @@ size_t LoginRequest::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x0000002f) ^ 0x0000002f) == 0) {  // All required fields are present.
-    // required string user = 1;
+    // required bytes user = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_user());
 
     // required string app = 2;

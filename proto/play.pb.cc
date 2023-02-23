@@ -2587,12 +2587,12 @@ const char descriptor_table_protodef_proto_2fplay_2eproto[] PROTOBUF_SECTION_VAR
   "\022\022\n\npage_count\030\004 \002(\003\022\024\n\014online_count\030\005 \001"
   "(\003\022\027\n\017unknown_field_1\030\001 \001(\003\022\027\n\017unknown_f"
   "ield_6\030\006 \001(\003\"l\n\024GetPlayerInfoRequest\022\021\n\t"
-  "player_id\030\001 \001(\003\022\023\n\013player_name\030\002 \001(\t\022,\n\014"
+  "player_id\030\001 \001(\003\022\023\n\013player_name\030\002 \001(\014\022,\n\014"
   "info_options\030\003 \002(\0132\026.openfoxwq.InfoOptio"
   "ns\"\250\026\n\025GetPlayerInfoResponse\022\022\n\nerror_co"
   "de\030\001 \002(\003\022,\n\014info_options\030\002 \002(\0132\026.openfox"
   "wq.InfoOptions\022\031\n\021seached_player_id\030\003 \001("
-  "\003\022\034\n\024searched_player_name\030\004 \001(\t\022\021\n\tplaye"
+  "\003\022\034\n\024searched_player_name\030\004 \001(\014\022\021\n\tplaye"
   "r_id\030\005 \001(\003\022\017\n\007foxcoin\030\006 \001(\003\022\035\n\004rank\030\007 \001("
   "\0162\017.openfoxwq.Rank\022D\n\rregister_info\030\010 \001("
   "\0132-.openfoxwq.GetPlayerInfoResponse.Regi"
@@ -2619,7 +2619,7 @@ const char descriptor_table_protodef_proto_2fplay_2eproto[] PROTOBUF_SECTION_VAR
   "onse.Unknown22\022D\n\020unknown_field_23\030\027 \001(\013"
   "2*.openfoxwq.GetPlayerInfoResponse.Unkno"
   "wn23\032\244\001\n\014RegisterInfo\022\021\n\tplayer_id\030\001 \002(\003"
-  "\022\023\n\013name_native\030\004 \002(\t\022\014\n\004name\030\005 \002(\t\022#\n\007c"
+  "\022\023\n\013name_native\030\004 \002(\014\022\014\n\004name\030\005 \002(\014\022#\n\007c"
   "ountry\030\007 \002(\0162\022.openfoxwq.Country\022\034\n\024memb"
   "er_since_unix_ts\030\010 \002(\003\022\033\n\003sex\030\t \002(\0162\016.op"
   "enfoxwq.Sex\032\336\001\n\014RecentRecord\022Y\n\021rank_req"
@@ -2631,7 +2631,7 @@ const char descriptor_table_protodef_proto_2fplay_2eproto[] PROTOBUF_SECTION_VAR
   "OverallResults\022\016\n\006rating\030\001 \001(\003\022\n\n\002wr\030\002 \001"
   "(\003\022\017\n\007stamina\030\003 \001(\003\032\215\001\n\007ProInfo\022\027\n\017unkno"
   "wn_field_1\030\001 \001(\003\022\027\n\017unknown_field_2\030\002 \001("
-  "\003\022\r\n\005name1\030\003 \001(\t\022\r\n\005name2\030\004 \001(\t\022\035\n\004rank\030"
+  "\003\022\r\n\005name1\030\003 \001(\014\022\r\n\005name2\030\004 \001(\014\022\035\n\004rank\030"
   "\005 \001(\0162\017.openfoxwq.Rank\022\023\n\013association\030\006 "
   "\001(\003\032`\n\021PerformanceRecord\022\035\n\004rank\030\001 \001(\0162\017"
   ".openfoxwq.Rank\022\n\n\002wr\030\002 \001(\003\022\017\n\007stamina\030\003"
@@ -2650,7 +2650,7 @@ const char descriptor_table_protodef_proto_2fplay_2eproto[] PROTOBUF_SECTION_VAR
   "ms.Room.ShortPlayerInfo\032\206\001\n\017ShortPlayerI"
   "nfo\022\021\n\tplayer_id\030\001 \001(\003\022\035\n\004rank\030\002 \001(\0162\017.o"
   "penfoxwq.Rank\022#\n\007country\030\003 \001(\0162\022.openfox"
-  "wq.Country\022\r\n\005name4\030\004 \001(\t\022\r\n\005name5\030\005 \001(\t"
+  "wq.Country\022\r\n\005name4\030\004 \001(\014\022\r\n\005name5\030\005 \001(\014"
   "\032N\n\016MembershipInfo\022\'\n\004type\030\001 \001(\0162\031.openf"
   "oxwq.MembershipType\022\023\n\013valid_until\030\002 \001(\003"
   "\032:\n\013PlayerFlair\022\037\n\005flair\030\001 \001(\0162\020.openfox"
@@ -2691,11 +2691,11 @@ const char descriptor_table_protodef_proto_2fplay_2eproto[] PROTOBUF_SECTION_VAR
   "foResponse.RoomInfo\032<\n\010Unknown2\022\027\n\017unkno"
   "wn_field_1\030\001 \001(\003\022\027\n\017unknown_field_2\030\002 \001("
   "\003\032\323\001\n\013PlayerEntry\022\n\n\002id\030\001 \001(\003\022\014\n\004name\030\002 "
-  "\001(\t\022\035\n\004rank\030\003 \001(\0162\017.openfoxwq.Rank\022\021\n\tma"
+  "\001(\014\022\035\n\004rank\030\003 \001(\0162\017.openfoxwq.Rank\022\021\n\tma"
   "in_time\030\t \001(\003\022\027\n\017byoyomi_periods\030\n \001(\003\022\024"
   "\n\014byoyomi_time\030\013 \001(\003\022\022\n\navatar_url\030\r \001(\t"
   "\022#\n\007country\030\017 \001(\0162\022.openfoxwq.Country\022\020\n"
-  "\010name_alt\030\020 \001(\t\032\n\n\010Unknown5\032\221\002\n\010RoomInfo"
+  "\010name_alt\030\020 \001(\014\032\n\n\010Unknown5\032\221\002\n\010RoomInfo"
   "\022\035\n\002id\030\001 \001(\0132\021.openfoxwq.RoomId\022;\n\007playe"
   "rs\030\002 \003(\0132*.openfoxwq.GetRoomInfoResponse"
   ".PlayerEntry\022)\n\010settings\030\003 \001(\0132\027.openfox"
@@ -2719,7 +2719,7 @@ const char descriptor_table_protodef_proto_2fplay_2eproto[] PROTOBUF_SECTION_VAR
   "\003\022D\n\014participants\030\005 \003(\0132..openfoxwq.Auto"
   "matchFoundEvent.RoomParticipant\022\027\n\017unkno"
   "wn_field_6\030\006 \001(\003\032e\n\017RoomParticipant\022\021\n\tp"
-  "layer_id\030\001 \002(\003\022\014\n\004name\030\003 \001(\t\022\035\n\004rank\030\004 \001"
+  "layer_id\030\001 \002(\003\022\014\n\004name\030\003 \001(\014\022\035\n\004rank\030\004 \001"
   "(\0162\017.openfoxwq.Rank\022\022\n\navatar_url\030\022 \001(\t\""
   "\024\n\022AcceptMatchRequest\")\n\023AcceptMatchResp"
   "onse\022\022\n\nerror_code\030\001 \001(\003\"\201\006\n\017MatchStartE"
@@ -2735,7 +2735,7 @@ const char descriptor_table_protodef_proto_2fplay_2eproto[] PROTOBUF_SECTION_VAR
   "\022D\n\020automatch_preset\030\021 \001(\0132*.openfoxwq.M"
   "atchStartEvent.AutomatchPreset\032\212\001\n\017Match"
   "PlayerInfo\022\021\n\tplayer_id\030\001 \001(\003\022\014\n\004name\030\003 "
-  "\001(\t\022\035\n\004rank\030\004 \001(\0162\017.openfoxwq.Rank\022\022\n\nav"
+  "\001(\014\022\035\n\004rank\030\004 \001(\0162\017.openfoxwq.Rank\022\022\n\nav"
   "atar_url\030\022 \001(\t\022#\n\007country\030\024 \001(\0162\022.openfo"
   "xwq.Country\032\266\001\n\017AutomatchPreset\022\n\n\002id\030\001 "
   "\001(\003\022\022\n\nboard_size\030\002 \001(\003\022\025\n\rmain_time_sec"
@@ -2760,7 +2760,7 @@ const char descriptor_table_protodef_proto_2fplay_2eproto[] PROTOBUF_SECTION_VAR
   "ParticipantsResponse.RoomParticipantInfo"
   "\022\031\n\021participant_count\030\005 \001(\003\032\252\001\n\023RoomPart"
   "icipantInfo\022\021\n\tplayer_id\030\001 \001(\003\022\014\n\004name\030\002"
-  " \001(\t\022\020\n\010name_alt\030\003 \001(\t\022\035\n\004rank\030\004 \001(\0162\017.o"
+  " \001(\014\022\020\n\010name_alt\030\003 \001(\014\022\035\n\004rank\030\004 \001(\0162\017.o"
   "penfoxwq.Rank\022\014\n\004wins\030\005 \001(\003\022\016\n\006losses\030\006 "
   "\001(\003\022#\n\007country\030\t \001(\0162\022.openfoxwq.Country"
   "\"\"\n\014LastTurnInfo\022\022\n\nmove_count\030\001 \001(\003\"n\n\013"
@@ -4181,15 +4181,12 @@ const char* GetPlayerInfoRequest::_InternalParse(const char* ptr, ::_pbi::ParseC
         } else
           goto handle_unusual;
         continue;
-      // optional string player_name = 2;
+      // optional bytes player_name = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_player_name();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "openfoxwq.GetPlayerInfoRequest.player_name");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
@@ -4238,13 +4235,9 @@ uint8_t* GetPlayerInfoRequest::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteInt64ToArray(1, this->_internal_player_id(), target);
   }
 
-  // optional string player_name = 2;
+  // optional bytes player_name = 2;
   if (cached_has_bits & 0x00000001u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_player_name().data(), static_cast<int>(this->_internal_player_name().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "openfoxwq.GetPlayerInfoRequest.player_name");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         2, this->_internal_player_name(), target);
   }
 
@@ -4277,11 +4270,11 @@ size_t GetPlayerInfoRequest::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // optional string player_name = 2;
+  // optional bytes player_name = 2;
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_player_name());
   }
 
@@ -4517,27 +4510,21 @@ const char* GetPlayerInfoResponse_RegisterInfo::_InternalParse(const char* ptr, 
         } else
           goto handle_unusual;
         continue;
-      // required string name_native = 4;
+      // required bytes name_native = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           auto str = _internal_mutable_name_native();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "openfoxwq.GetPlayerInfoResponse.RegisterInfo.name_native");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
-      // required string name = 5;
+      // required bytes name = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
           auto str = _internal_mutable_name();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "openfoxwq.GetPlayerInfoResponse.RegisterInfo.name");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
@@ -4613,23 +4600,15 @@ uint8_t* GetPlayerInfoResponse_RegisterInfo::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteInt64ToArray(1, this->_internal_player_id(), target);
   }
 
-  // required string name_native = 4;
+  // required bytes name_native = 4;
   if (cached_has_bits & 0x00000001u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_name_native().data(), static_cast<int>(this->_internal_name_native().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "openfoxwq.GetPlayerInfoResponse.RegisterInfo.name_native");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         4, this->_internal_name_native(), target);
   }
 
-  // required string name = 5;
+  // required bytes name = 5;
   if (cached_has_bits & 0x00000002u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_name().data(), static_cast<int>(this->_internal_name().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "openfoxwq.GetPlayerInfoResponse.RegisterInfo.name");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         5, this->_internal_name(), target);
   }
 
@@ -4666,16 +4645,16 @@ size_t GetPlayerInfoResponse_RegisterInfo::RequiredFieldsByteSizeFallback() cons
   size_t total_size = 0;
 
   if (_internal_has_name_native()) {
-    // required string name_native = 4;
+    // required bytes name_native = 4;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_name_native());
   }
 
   if (_internal_has_name()) {
-    // required string name = 5;
+    // required bytes name = 5;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_name());
   }
 
@@ -4708,14 +4687,14 @@ size_t GetPlayerInfoResponse_RegisterInfo::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x0000003f) ^ 0x0000003f) == 0) {  // All required fields are present.
-    // required string name_native = 4;
+    // required bytes name_native = 4;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_name_native());
 
-    // required string name = 5;
+    // required bytes name = 5;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_name());
 
     // required int64 player_id = 1;
@@ -5868,27 +5847,21 @@ const char* GetPlayerInfoResponse_ProInfo::_InternalParse(const char* ptr, ::_pb
         } else
           goto handle_unusual;
         continue;
-      // optional string name1 = 3;
+      // optional bytes name1 = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_name1();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "openfoxwq.GetPlayerInfoResponse.ProInfo.name1");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
-      // optional string name2 = 4;
+      // optional bytes name2 = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           auto str = _internal_mutable_name2();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "openfoxwq.GetPlayerInfoResponse.ProInfo.name2");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
@@ -5957,23 +5930,15 @@ uint8_t* GetPlayerInfoResponse_ProInfo::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteInt64ToArray(2, this->_internal_unknown_field_2(), target);
   }
 
-  // optional string name1 = 3;
+  // optional bytes name1 = 3;
   if (cached_has_bits & 0x00000001u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_name1().data(), static_cast<int>(this->_internal_name1().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "openfoxwq.GetPlayerInfoResponse.ProInfo.name1");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         3, this->_internal_name1(), target);
   }
 
-  // optional string name2 = 4;
+  // optional bytes name2 = 4;
   if (cached_has_bits & 0x00000002u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_name2().data(), static_cast<int>(this->_internal_name2().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "openfoxwq.GetPlayerInfoResponse.ProInfo.name2");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         4, this->_internal_name2(), target);
   }
 
@@ -6008,17 +5973,17 @@ size_t GetPlayerInfoResponse_ProInfo::ByteSizeLong() const {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x0000003fu) {
-    // optional string name1 = 3;
+    // optional bytes name1 = 3;
     if (cached_has_bits & 0x00000001u) {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_name1());
     }
 
-    // optional string name2 = 4;
+    // optional bytes name2 = 4;
     if (cached_has_bits & 0x00000002u) {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_name2());
     }
 
@@ -6919,27 +6884,21 @@ const char* GetPlayerInfoResponse_Rooms_Room_ShortPlayerInfo::_InternalParse(con
         } else
           goto handle_unusual;
         continue;
-      // optional string name4 = 4;
+      // optional bytes name4 = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           auto str = _internal_mutable_name4();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "openfoxwq.GetPlayerInfoResponse.Rooms.Room.ShortPlayerInfo.name4");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
-      // optional string name5 = 5;
+      // optional bytes name5 = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
           auto str = _internal_mutable_name5();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "openfoxwq.GetPlayerInfoResponse.Rooms.Room.ShortPlayerInfo.name5");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
@@ -6994,23 +6953,15 @@ uint8_t* GetPlayerInfoResponse_Rooms_Room_ShortPlayerInfo::_InternalSerialize(
       3, this->_internal_country(), target);
   }
 
-  // optional string name4 = 4;
+  // optional bytes name4 = 4;
   if (cached_has_bits & 0x00000001u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_name4().data(), static_cast<int>(this->_internal_name4().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "openfoxwq.GetPlayerInfoResponse.Rooms.Room.ShortPlayerInfo.name4");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         4, this->_internal_name4(), target);
   }
 
-  // optional string name5 = 5;
+  // optional bytes name5 = 5;
   if (cached_has_bits & 0x00000002u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_name5().data(), static_cast<int>(this->_internal_name5().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "openfoxwq.GetPlayerInfoResponse.Rooms.Room.ShortPlayerInfo.name5");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         5, this->_internal_name5(), target);
   }
 
@@ -7032,17 +6983,17 @@ size_t GetPlayerInfoResponse_Rooms_Room_ShortPlayerInfo::ByteSizeLong() const {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x0000001fu) {
-    // optional string name4 = 4;
+    // optional bytes name4 = 4;
     if (cached_has_bits & 0x00000001u) {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_name4());
     }
 
-    // optional string name5 = 5;
+    // optional bytes name5 = 5;
     if (cached_has_bits & 0x00000002u) {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_name5());
     }
 
@@ -9197,15 +9148,12 @@ const char* GetPlayerInfoResponse::_InternalParse(const char* ptr, ::_pbi::Parse
         } else
           goto handle_unusual;
         continue;
-      // optional string searched_player_name = 4;
+      // optional bytes searched_player_name = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           auto str = _internal_mutable_searched_player_name();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "openfoxwq.GetPlayerInfoResponse.searched_player_name");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
@@ -9407,13 +9355,9 @@ uint8_t* GetPlayerInfoResponse::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteInt64ToArray(3, this->_internal_seached_player_id(), target);
   }
 
-  // optional string searched_player_name = 4;
+  // optional bytes searched_player_name = 4;
   if (cached_has_bits & 0x00000001u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_searched_player_name().data(), static_cast<int>(this->_internal_searched_player_name().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "openfoxwq.GetPlayerInfoResponse.searched_player_name");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         4, this->_internal_searched_player_name(), target);
   }
 
@@ -9588,11 +9532,11 @@ size_t GetPlayerInfoResponse::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
-  // optional string searched_player_name = 4;
+  // optional bytes searched_player_name = 4;
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_searched_player_name());
   }
 
@@ -13446,15 +13390,12 @@ const char* GetRoomInfoResponse_PlayerEntry::_InternalParse(const char* ptr, ::_
         } else
           goto handle_unusual;
         continue;
-      // optional string name = 2;
+      // optional bytes name = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_name();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "openfoxwq.GetRoomInfoResponse.PlayerEntry.name");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
@@ -13523,15 +13464,12 @@ const char* GetRoomInfoResponse_PlayerEntry::_InternalParse(const char* ptr, ::_
         } else
           goto handle_unusual;
         continue;
-      // optional string name_alt = 16;
+      // optional bytes name_alt = 16;
       case 16:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 130)) {
           auto str = _internal_mutable_name_alt();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "openfoxwq.GetRoomInfoResponse.PlayerEntry.name_alt");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
@@ -13572,13 +13510,9 @@ uint8_t* GetRoomInfoResponse_PlayerEntry::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteInt64ToArray(1, this->_internal_id(), target);
   }
 
-  // optional string name = 2;
+  // optional bytes name = 2;
   if (cached_has_bits & 0x00000001u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_name().data(), static_cast<int>(this->_internal_name().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "openfoxwq.GetRoomInfoResponse.PlayerEntry.name");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         2, this->_internal_name(), target);
   }
 
@@ -13624,13 +13558,9 @@ uint8_t* GetRoomInfoResponse_PlayerEntry::_InternalSerialize(
       15, this->_internal_country(), target);
   }
 
-  // optional string name_alt = 16;
+  // optional bytes name_alt = 16;
   if (cached_has_bits & 0x00000004u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_name_alt().data(), static_cast<int>(this->_internal_name_alt().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "openfoxwq.GetRoomInfoResponse.PlayerEntry.name_alt");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         16, this->_internal_name_alt(), target);
   }
 
@@ -13652,10 +13582,10 @@ size_t GetRoomInfoResponse_PlayerEntry::ByteSizeLong() const {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x000000ffu) {
-    // optional string name = 2;
+    // optional bytes name = 2;
     if (cached_has_bits & 0x00000001u) {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_name());
     }
 
@@ -13666,10 +13596,10 @@ size_t GetRoomInfoResponse_PlayerEntry::ByteSizeLong() const {
           this->_internal_avatar_url());
     }
 
-    // optional string name_alt = 16;
+    // optional bytes name_alt = 16;
     if (cached_has_bits & 0x00000004u) {
       total_size += 2 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_name_alt());
     }
 
@@ -15740,15 +15670,12 @@ const char* AutomatchFoundEvent_RoomParticipant::_InternalParse(const char* ptr,
         } else
           goto handle_unusual;
         continue;
-      // optional string name = 3;
+      // optional bytes name = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_name();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "openfoxwq.AutomatchFoundEvent.RoomParticipant.name");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
@@ -15814,13 +15741,9 @@ uint8_t* AutomatchFoundEvent_RoomParticipant::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteInt64ToArray(1, this->_internal_player_id(), target);
   }
 
-  // optional string name = 3;
+  // optional bytes name = 3;
   if (cached_has_bits & 0x00000001u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_name().data(), static_cast<int>(this->_internal_name().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "openfoxwq.AutomatchFoundEvent.RoomParticipant.name");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         3, this->_internal_name(), target);
   }
 
@@ -15863,10 +15786,10 @@ size_t AutomatchFoundEvent_RoomParticipant::ByteSizeLong() const {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
-    // optional string name = 3;
+    // optional bytes name = 3;
     if (cached_has_bits & 0x00000001u) {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_name());
     }
 
@@ -16694,15 +16617,12 @@ const char* MatchStartEvent_MatchPlayerInfo::_InternalParse(const char* ptr, ::_
         } else
           goto handle_unusual;
         continue;
-      // optional string name = 3;
+      // optional bytes name = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_name();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "openfoxwq.MatchStartEvent.MatchPlayerInfo.name");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
@@ -16781,13 +16701,9 @@ uint8_t* MatchStartEvent_MatchPlayerInfo::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteInt64ToArray(1, this->_internal_player_id(), target);
   }
 
-  // optional string name = 3;
+  // optional bytes name = 3;
   if (cached_has_bits & 0x00000001u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_name().data(), static_cast<int>(this->_internal_name().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "openfoxwq.MatchStartEvent.MatchPlayerInfo.name");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         3, this->_internal_name(), target);
   }
 
@@ -16833,10 +16749,10 @@ size_t MatchStartEvent_MatchPlayerInfo::ByteSizeLong() const {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x0000001fu) {
-    // optional string name = 3;
+    // optional bytes name = 3;
     if (cached_has_bits & 0x00000001u) {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_name());
     }
 
@@ -19678,27 +19594,21 @@ const char* ListRoomParticipantsResponse_RoomParticipantInfo::_InternalParse(con
         } else
           goto handle_unusual;
         continue;
-      // optional string name = 2;
+      // optional bytes name = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_name();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "openfoxwq.ListRoomParticipantsResponse.RoomParticipantInfo.name");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
-      // optional string name_alt = 3;
+      // optional bytes name_alt = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_name_alt();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "openfoxwq.ListRoomParticipantsResponse.RoomParticipantInfo.name_alt");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
@@ -19783,23 +19693,15 @@ uint8_t* ListRoomParticipantsResponse_RoomParticipantInfo::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteInt64ToArray(1, this->_internal_player_id(), target);
   }
 
-  // optional string name = 2;
+  // optional bytes name = 2;
   if (cached_has_bits & 0x00000001u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_name().data(), static_cast<int>(this->_internal_name().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "openfoxwq.ListRoomParticipantsResponse.RoomParticipantInfo.name");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         2, this->_internal_name(), target);
   }
 
-  // optional string name_alt = 3;
+  // optional bytes name_alt = 3;
   if (cached_has_bits & 0x00000002u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_name_alt().data(), static_cast<int>(this->_internal_name_alt().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "openfoxwq.ListRoomParticipantsResponse.RoomParticipantInfo.name_alt");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         3, this->_internal_name_alt(), target);
   }
 
@@ -19847,17 +19749,17 @@ size_t ListRoomParticipantsResponse_RoomParticipantInfo::ByteSizeLong() const {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x0000007fu) {
-    // optional string name = 2;
+    // optional bytes name = 2;
     if (cached_has_bits & 0x00000001u) {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_name());
     }
 
-    // optional string name_alt = 3;
+    // optional bytes name_alt = 3;
     if (cached_has_bits & 0x00000002u) {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_name_alt());
     }
 

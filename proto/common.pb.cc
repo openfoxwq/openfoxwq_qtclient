@@ -542,8 +542,8 @@ const char descriptor_table_protodef_proto_2fcommon_2eproto[] PROTOBUF_SECTION_V
   "known_field_7\030\007 \001(\003\022\027\n\017unknown_field_8\030\010"
   " \001(\003\032.\n\014NameLocEntry\022\013\n\003key\030\001 \001(\005\022\r\n\005val"
   "ue\030\002 \001(\t:\0028\001\"\375\003\n\nPlayerInfo\022\021\n\tplayer_id"
-  "\030\001 \002(\003\022\014\n\004name\030\002 \001(\t\022\023\n\013name_native\030\003 \001("
-  "\t\022\035\n\004rank\030\004 \001(\0162\017.openfoxwq.Rank\022#\n\007coun"
+  "\030\001 \002(\003\022\014\n\004name\030\002 \001(\014\022\023\n\013name_native\030\003 \001("
+  "\014\022\035\n\004rank\030\004 \001(\0162\017.openfoxwq.Rank\022#\n\007coun"
   "try\030\005 \001(\0162\022.openfoxwq.Country\022\017\n\007club_id"
   "\030\006 \001(\003\022\031\n\021accepting_matches\030\007 \001(\010\022\'\n\006sta"
   "tus\030\t \001(\0162\027.openfoxwq.PlayerStatus\022\023\n\013ra"
@@ -576,7 +576,7 @@ const char descriptor_table_protodef_proto_2fcommon_2eproto[] PROTOBUF_SECTION_V
   "astInfo.BroadcastPlayerInfo\022G\n\021player_in"
   "fo_white\030\016 \002(\0132,.openfoxwq.BroadcastInfo"
   ".BroadcastPlayerInfo\032y\n\023BroadcastPlayerI"
-  "nfo\022\014\n\004name\030\001 \001(\t\022\020\n\010name_alt\030\002 \001(\t\022\035\n\004r"
+  "nfo\022\014\n\004name\030\001 \001(\014\022\020\n\010name_alt\030\002 \001(\014\022\035\n\004r"
   "ank\030\003 \001(\0162\017.openfoxwq.Rank\022#\n\007country\030\004 "
   "\001(\0162\022.openfoxwq.Country\"g\n\rBroadcastType"
   "\022\016\n\nRT_UNKNOWN\020\000\022\014\n\010RT_MATCH\020\001\022\020\n\014RT_BRO"
@@ -3242,27 +3242,21 @@ const char* PlayerInfo::_InternalParse(const char* ptr, ::_pbi::ParseContext* ct
         } else
           goto handle_unusual;
         continue;
-      // optional string name = 2;
+      // optional bytes name = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_name();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "openfoxwq.PlayerInfo.name");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
-      // optional string name_native = 3;
+      // optional bytes name_native = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_name_native();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "openfoxwq.PlayerInfo.name_native");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
@@ -3471,23 +3465,15 @@ uint8_t* PlayerInfo::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteInt64ToArray(1, this->_internal_player_id(), target);
   }
 
-  // optional string name = 2;
+  // optional bytes name = 2;
   if (cached_has_bits & 0x00000001u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_name().data(), static_cast<int>(this->_internal_name().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "openfoxwq.PlayerInfo.name");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         2, this->_internal_name(), target);
   }
 
-  // optional string name_native = 3;
+  // optional bytes name_native = 3;
   if (cached_has_bits & 0x00000002u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_name_native().data(), static_cast<int>(this->_internal_name_native().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "openfoxwq.PlayerInfo.name_native");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         3, this->_internal_name_native(), target);
   }
 
@@ -3615,17 +3601,17 @@ size_t PlayerInfo::ByteSizeLong() const {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
-    // optional string name = 2;
+    // optional bytes name = 2;
     if (cached_has_bits & 0x00000001u) {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_name());
     }
 
-    // optional string name_native = 3;
+    // optional bytes name_native = 3;
     if (cached_has_bits & 0x00000002u) {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_name_native());
     }
 
@@ -5155,27 +5141,21 @@ const char* BroadcastInfo_BroadcastPlayerInfo::_InternalParse(const char* ptr, :
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // optional string name = 1;
+      // optional bytes name = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_name();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "openfoxwq.BroadcastInfo.BroadcastPlayerInfo.name");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
-      // optional string name_alt = 2;
+      // optional bytes name_alt = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_name_alt();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "openfoxwq.BroadcastInfo.BroadcastPlayerInfo.name_alt");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
@@ -5236,23 +5216,15 @@ uint8_t* BroadcastInfo_BroadcastPlayerInfo::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // optional string name = 1;
+  // optional bytes name = 1;
   if (cached_has_bits & 0x00000001u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_name().data(), static_cast<int>(this->_internal_name().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "openfoxwq.BroadcastInfo.BroadcastPlayerInfo.name");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         1, this->_internal_name(), target);
   }
 
-  // optional string name_alt = 2;
+  // optional bytes name_alt = 2;
   if (cached_has_bits & 0x00000002u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_name_alt().data(), static_cast<int>(this->_internal_name_alt().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "openfoxwq.BroadcastInfo.BroadcastPlayerInfo.name_alt");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         2, this->_internal_name_alt(), target);
   }
 
@@ -5288,17 +5260,17 @@ size_t BroadcastInfo_BroadcastPlayerInfo::ByteSizeLong() const {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x0000000fu) {
-    // optional string name = 1;
+    // optional bytes name = 1;
     if (cached_has_bits & 0x00000001u) {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_name());
     }
 
-    // optional string name_alt = 2;
+    // optional bytes name_alt = 2;
     if (cached_has_bits & 0x00000002u) {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_name_alt());
     }
 

@@ -1351,7 +1351,7 @@ class GetPlayerInfoRequest final :
     kInfoOptionsFieldNumber = 3,
     kPlayerIdFieldNumber = 1,
   };
-  // optional string player_name = 2;
+  // optional bytes player_name = 2;
   bool has_player_name() const;
   private:
   bool _internal_has_player_name() const;
@@ -1554,7 +1554,7 @@ class GetPlayerInfoResponse_RegisterInfo final :
     kCountryFieldNumber = 7,
     kSexFieldNumber = 9,
   };
-  // required string name_native = 4;
+  // required bytes name_native = 4;
   bool has_name_native() const;
   private:
   bool _internal_has_name_native() const;
@@ -1572,7 +1572,7 @@ class GetPlayerInfoResponse_RegisterInfo final :
   std::string* _internal_mutable_name_native();
   public:
 
-  // required string name = 5;
+  // required bytes name = 5;
   bool has_name() const;
   private:
   bool _internal_has_name() const;
@@ -2404,7 +2404,7 @@ class GetPlayerInfoResponse_ProInfo final :
     kAssociationFieldNumber = 6,
     kRankFieldNumber = 5,
   };
-  // optional string name1 = 3;
+  // optional bytes name1 = 3;
   bool has_name1() const;
   private:
   bool _internal_has_name1() const;
@@ -2422,7 +2422,7 @@ class GetPlayerInfoResponse_ProInfo final :
   std::string* _internal_mutable_name1();
   public:
 
-  // optional string name2 = 4;
+  // optional bytes name2 = 4;
   bool has_name2() const;
   private:
   bool _internal_has_name2() const;
@@ -3061,7 +3061,7 @@ class GetPlayerInfoResponse_Rooms_Room_ShortPlayerInfo final :
     kRankFieldNumber = 2,
     kCountryFieldNumber = 3,
   };
-  // optional string name4 = 4;
+  // optional bytes name4 = 4;
   bool has_name4() const;
   private:
   bool _internal_has_name4() const;
@@ -3079,7 +3079,7 @@ class GetPlayerInfoResponse_Rooms_Room_ShortPlayerInfo final :
   std::string* _internal_mutable_name4();
   public:
 
-  // optional string name5 = 5;
+  // optional bytes name5 = 5;
   bool has_name5() const;
   private:
   bool _internal_has_name5() const;
@@ -4875,7 +4875,7 @@ class GetPlayerInfoResponse final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::openfoxwq::GetPlayerInfoResponse_Results >&
       results() const;
 
-  // optional string searched_player_name = 4;
+  // optional bytes searched_player_name = 4;
   bool has_searched_player_name() const;
   private:
   bool _internal_has_searched_player_name() const;
@@ -7853,7 +7853,7 @@ class GetRoomInfoResponse_PlayerEntry final :
     kByoyomiPeriodsFieldNumber = 10,
     kByoyomiTimeFieldNumber = 11,
   };
-  // optional string name = 2;
+  // optional bytes name = 2;
   bool has_name() const;
   private:
   bool _internal_has_name() const;
@@ -7889,7 +7889,7 @@ class GetRoomInfoResponse_PlayerEntry final :
   std::string* _internal_mutable_avatar_url();
   public:
 
-  // optional string name_alt = 16;
+  // optional bytes name_alt = 16;
   bool has_name_alt() const;
   private:
   bool _internal_has_name_alt() const;
@@ -9728,7 +9728,7 @@ class AutomatchFoundEvent_RoomParticipant final :
     kPlayerIdFieldNumber = 1,
     kRankFieldNumber = 4,
   };
-  // optional string name = 3;
+  // optional bytes name = 3;
   bool has_name() const;
   private:
   bool _internal_has_name() const;
@@ -10471,7 +10471,7 @@ class MatchStartEvent_MatchPlayerInfo final :
     kRankFieldNumber = 4,
     kCountryFieldNumber = 20,
   };
-  // optional string name = 3;
+  // optional bytes name = 3;
   bool has_name() const;
   private:
   bool _internal_has_name() const;
@@ -12429,7 +12429,7 @@ class ListRoomParticipantsResponse_RoomParticipantInfo final :
     kRankFieldNumber = 4,
     kCountryFieldNumber = 9,
   };
-  // optional string name = 2;
+  // optional bytes name = 2;
   bool has_name() const;
   private:
   bool _internal_has_name() const;
@@ -12447,7 +12447,7 @@ class ListRoomParticipantsResponse_RoomParticipantInfo final :
   std::string* _internal_mutable_name();
   public:
 
-  // optional string name_alt = 3;
+  // optional bytes name_alt = 3;
   bool has_name_alt() const;
   private:
   bool _internal_has_name_alt() const;
@@ -17263,7 +17263,7 @@ inline void GetPlayerInfoRequest::set_player_id(int64_t value) {
   // @@protoc_insertion_point(field_set:openfoxwq.GetPlayerInfoRequest.player_id)
 }
 
-// optional string player_name = 2;
+// optional bytes player_name = 2;
 inline bool GetPlayerInfoRequest::_internal_has_player_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -17283,7 +17283,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void GetPlayerInfoRequest::set_player_name(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.player_name_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.player_name_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:openfoxwq.GetPlayerInfoRequest.player_name)
 }
 inline std::string* GetPlayerInfoRequest::mutable_player_name() {
@@ -17453,7 +17453,7 @@ inline void GetPlayerInfoResponse_RegisterInfo::set_player_id(int64_t value) {
   // @@protoc_insertion_point(field_set:openfoxwq.GetPlayerInfoResponse.RegisterInfo.player_id)
 }
 
-// required string name_native = 4;
+// required bytes name_native = 4;
 inline bool GetPlayerInfoResponse_RegisterInfo::_internal_has_name_native() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -17473,7 +17473,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void GetPlayerInfoResponse_RegisterInfo::set_name_native(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.name_native_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.name_native_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:openfoxwq.GetPlayerInfoResponse.RegisterInfo.name_native)
 }
 inline std::string* GetPlayerInfoResponse_RegisterInfo::mutable_name_native() {
@@ -17521,7 +17521,7 @@ inline void GetPlayerInfoResponse_RegisterInfo::set_allocated_name_native(std::s
   // @@protoc_insertion_point(field_set_allocated:openfoxwq.GetPlayerInfoResponse.RegisterInfo.name_native)
 }
 
-// required string name = 5;
+// required bytes name = 5;
 inline bool GetPlayerInfoResponse_RegisterInfo::_internal_has_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -17541,7 +17541,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void GetPlayerInfoResponse_RegisterInfo::set_name(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.name_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.name_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:openfoxwq.GetPlayerInfoResponse.RegisterInfo.name)
 }
 inline std::string* GetPlayerInfoResponse_RegisterInfo::mutable_name() {
@@ -18169,7 +18169,7 @@ inline void GetPlayerInfoResponse_ProInfo::set_unknown_field_2(int64_t value) {
   // @@protoc_insertion_point(field_set:openfoxwq.GetPlayerInfoResponse.ProInfo.unknown_field_2)
 }
 
-// optional string name1 = 3;
+// optional bytes name1 = 3;
 inline bool GetPlayerInfoResponse_ProInfo::_internal_has_name1() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -18189,7 +18189,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void GetPlayerInfoResponse_ProInfo::set_name1(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.name1_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.name1_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:openfoxwq.GetPlayerInfoResponse.ProInfo.name1)
 }
 inline std::string* GetPlayerInfoResponse_ProInfo::mutable_name1() {
@@ -18237,7 +18237,7 @@ inline void GetPlayerInfoResponse_ProInfo::set_allocated_name1(std::string* name
   // @@protoc_insertion_point(field_set_allocated:openfoxwq.GetPlayerInfoResponse.ProInfo.name1)
 }
 
-// optional string name2 = 4;
+// optional bytes name2 = 4;
 inline bool GetPlayerInfoResponse_ProInfo::_internal_has_name2() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -18257,7 +18257,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void GetPlayerInfoResponse_ProInfo::set_name2(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.name2_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.name2_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:openfoxwq.GetPlayerInfoResponse.ProInfo.name2)
 }
 inline std::string* GetPlayerInfoResponse_ProInfo::mutable_name2() {
@@ -18686,7 +18686,7 @@ inline void GetPlayerInfoResponse_Rooms_Room_ShortPlayerInfo::set_country(::open
   // @@protoc_insertion_point(field_set:openfoxwq.GetPlayerInfoResponse.Rooms.Room.ShortPlayerInfo.country)
 }
 
-// optional string name4 = 4;
+// optional bytes name4 = 4;
 inline bool GetPlayerInfoResponse_Rooms_Room_ShortPlayerInfo::_internal_has_name4() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -18706,7 +18706,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void GetPlayerInfoResponse_Rooms_Room_ShortPlayerInfo::set_name4(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.name4_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.name4_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:openfoxwq.GetPlayerInfoResponse.Rooms.Room.ShortPlayerInfo.name4)
 }
 inline std::string* GetPlayerInfoResponse_Rooms_Room_ShortPlayerInfo::mutable_name4() {
@@ -18754,7 +18754,7 @@ inline void GetPlayerInfoResponse_Rooms_Room_ShortPlayerInfo::set_allocated_name
   // @@protoc_insertion_point(field_set_allocated:openfoxwq.GetPlayerInfoResponse.Rooms.Room.ShortPlayerInfo.name4)
 }
 
-// optional string name5 = 5;
+// optional bytes name5 = 5;
 inline bool GetPlayerInfoResponse_Rooms_Room_ShortPlayerInfo::_internal_has_name5() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -18774,7 +18774,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void GetPlayerInfoResponse_Rooms_Room_ShortPlayerInfo::set_name5(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.name5_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.name5_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:openfoxwq.GetPlayerInfoResponse.Rooms.Room.ShortPlayerInfo.name5)
 }
 inline std::string* GetPlayerInfoResponse_Rooms_Room_ShortPlayerInfo::mutable_name5() {
@@ -19733,7 +19733,7 @@ inline void GetPlayerInfoResponse::set_seached_player_id(int64_t value) {
   // @@protoc_insertion_point(field_set:openfoxwq.GetPlayerInfoResponse.seached_player_id)
 }
 
-// optional string searched_player_name = 4;
+// optional bytes searched_player_name = 4;
 inline bool GetPlayerInfoResponse::_internal_has_searched_player_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -19753,7 +19753,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void GetPlayerInfoResponse::set_searched_player_name(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.searched_player_name_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.searched_player_name_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:openfoxwq.GetPlayerInfoResponse.searched_player_name)
 }
 inline std::string* GetPlayerInfoResponse::mutable_searched_player_name() {
@@ -22191,7 +22191,7 @@ inline void GetRoomInfoResponse_PlayerEntry::set_id(int64_t value) {
   // @@protoc_insertion_point(field_set:openfoxwq.GetRoomInfoResponse.PlayerEntry.id)
 }
 
-// optional string name = 2;
+// optional bytes name = 2;
 inline bool GetRoomInfoResponse_PlayerEntry::_internal_has_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -22211,7 +22211,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void GetRoomInfoResponse_PlayerEntry::set_name(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.name_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.name_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:openfoxwq.GetRoomInfoResponse.PlayerEntry.name)
 }
 inline std::string* GetRoomInfoResponse_PlayerEntry::mutable_name() {
@@ -22469,7 +22469,7 @@ inline void GetRoomInfoResponse_PlayerEntry::set_country(::openfoxwq::Country va
   // @@protoc_insertion_point(field_set:openfoxwq.GetRoomInfoResponse.PlayerEntry.country)
 }
 
-// optional string name_alt = 16;
+// optional bytes name_alt = 16;
 inline bool GetRoomInfoResponse_PlayerEntry::_internal_has_name_alt() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -22489,7 +22489,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void GetRoomInfoResponse_PlayerEntry::set_name_alt(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.name_alt_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.name_alt_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:openfoxwq.GetRoomInfoResponse.PlayerEntry.name_alt)
 }
 inline std::string* GetRoomInfoResponse_PlayerEntry::mutable_name_alt() {
@@ -23378,7 +23378,7 @@ inline void AutomatchFoundEvent_RoomParticipant::set_player_id(int64_t value) {
   // @@protoc_insertion_point(field_set:openfoxwq.AutomatchFoundEvent.RoomParticipant.player_id)
 }
 
-// optional string name = 3;
+// optional bytes name = 3;
 inline bool AutomatchFoundEvent_RoomParticipant::_internal_has_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -23398,7 +23398,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void AutomatchFoundEvent_RoomParticipant::set_name(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.name_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.name_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:openfoxwq.AutomatchFoundEvent.RoomParticipant.name)
 }
 inline std::string* AutomatchFoundEvent_RoomParticipant::mutable_name() {
@@ -23795,7 +23795,7 @@ inline void MatchStartEvent_MatchPlayerInfo::set_player_id(int64_t value) {
   // @@protoc_insertion_point(field_set:openfoxwq.MatchStartEvent.MatchPlayerInfo.player_id)
 }
 
-// optional string name = 3;
+// optional bytes name = 3;
 inline bool MatchStartEvent_MatchPlayerInfo::_internal_has_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -23815,7 +23815,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void MatchStartEvent_MatchPlayerInfo::set_name(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.name_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.name_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:openfoxwq.MatchStartEvent.MatchPlayerInfo.name)
 }
 inline std::string* MatchStartEvent_MatchPlayerInfo::mutable_name() {
@@ -25535,7 +25535,7 @@ inline void ListRoomParticipantsResponse_RoomParticipantInfo::set_player_id(int6
   // @@protoc_insertion_point(field_set:openfoxwq.ListRoomParticipantsResponse.RoomParticipantInfo.player_id)
 }
 
-// optional string name = 2;
+// optional bytes name = 2;
 inline bool ListRoomParticipantsResponse_RoomParticipantInfo::_internal_has_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -25555,7 +25555,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void ListRoomParticipantsResponse_RoomParticipantInfo::set_name(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.name_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.name_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:openfoxwq.ListRoomParticipantsResponse.RoomParticipantInfo.name)
 }
 inline std::string* ListRoomParticipantsResponse_RoomParticipantInfo::mutable_name() {
@@ -25603,7 +25603,7 @@ inline void ListRoomParticipantsResponse_RoomParticipantInfo::set_allocated_name
   // @@protoc_insertion_point(field_set_allocated:openfoxwq.ListRoomParticipantsResponse.RoomParticipantInfo.name)
 }
 
-// optional string name_alt = 3;
+// optional bytes name_alt = 3;
 inline bool ListRoomParticipantsResponse_RoomParticipantInfo::_internal_has_name_alt() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -25623,7 +25623,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void ListRoomParticipantsResponse_RoomParticipantInfo::set_name_alt(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.name_alt_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.name_alt_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:openfoxwq.ListRoomParticipantsResponse.RoomParticipantInfo.name_alt)
 }
 inline std::string* ListRoomParticipantsResponse_RoomParticipantInfo::mutable_name_alt() {

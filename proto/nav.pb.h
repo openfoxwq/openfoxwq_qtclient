@@ -538,7 +538,7 @@ class LoginRequest final :
     kUnknownField4FieldNumber = 4,
     kClientVersionFieldNumber = 5,
   };
-  // required string user = 1;
+  // required bytes user = 1;
   bool has_user() const;
   private:
   bool _internal_has_user() const;
@@ -1469,7 +1469,7 @@ inline void ListServersResponse::set_allocated_server_info(::openfoxwq::LobbySvr
 
 // LoginRequest
 
-// required string user = 1;
+// required bytes user = 1;
 inline bool LoginRequest::_internal_has_user() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1489,7 +1489,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void LoginRequest::set_user(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.user_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.user_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:openfoxwq.LoginRequest.user)
 }
 inline std::string* LoginRequest::mutable_user() {

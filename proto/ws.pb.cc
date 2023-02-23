@@ -661,14 +661,14 @@ const char descriptor_table_protodef_proto_2fws_2eproto[] PROTOBUF_SECTION_VARIA
   "\n\016proto/ws.proto\022\topenfoxwq\032\022proto/commo"
   "n.proto\032\017proto/fox.proto\032\017proto/nav.prot"
   "o\032\025proto/broadcast.proto\032\020proto/play.pro"
-  "to\"4\n\016WsLoginRequest\022\020\n\010username\030\001 \002(\t\022\020"
+  "to\"4\n\016WsLoginRequest\022\020\n\010username\030\001 \002(\014\022\020"
   "\n\010password\030\002 \002(\t\"\026\n\024WsGetInitDataRequest"
   "\"Z\n\022WsEnterRoomRequest\022\026\n\014broadcast_id\030\001"
   " \001(\003H\000\022$\n\007room_id\030\002 \001(\0132\021.openfoxwq.Room"
   "IdH\000B\006\n\004room\"Z\n\022WsLeaveRoomRequest\022\026\n\014br"
   "oadcast_id\030\001 \001(\003H\000\022$\n\007room_id\030\002 \001(\0132\021.op"
   "enfoxwq.RoomIdH\000B\006\n\004room\">\n\026WsGetPlayerI"
-  "nfoRequest\022\016\n\004name\030\001 \001(\tH\000\022\014\n\002id\030\002 \001(\003H\000"
+  "nfoRequest\022\016\n\004name\030\001 \001(\014H\000\022\014\n\002id\030\002 \001(\003H\000"
   "B\006\n\004info\",\n\027WsStartAutomatchRequest\022\021\n\tp"
   "reset_id\030\001 \002(\003\"\030\n\026WsStopAutomatchRequest"
   "\"0\n\017WsSyncMatchTime\022\021\n\troom_id_2\030\001 \002(\003\022\n"
@@ -900,15 +900,12 @@ const char* WsLoginRequest::_InternalParse(const char* ptr, ::_pbi::ParseContext
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string username = 1;
+      // required bytes username = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_username();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "openfoxwq.WsLoginRequest.username");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
@@ -955,13 +952,9 @@ uint8_t* WsLoginRequest::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string username = 1;
+  // required bytes username = 1;
   if (cached_has_bits & 0x00000001u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_username().data(), static_cast<int>(this->_internal_username().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "openfoxwq.WsLoginRequest.username");
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         1, this->_internal_username(), target);
   }
 
@@ -988,9 +981,9 @@ size_t WsLoginRequest::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_username()) {
-    // required string username = 1;
+    // required bytes username = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_username());
   }
 
@@ -1008,9 +1001,9 @@ size_t WsLoginRequest::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required string username = 1;
+    // required bytes username = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_username());
 
     // required string password = 2;
@@ -1810,15 +1803,12 @@ const char* WsGetPlayerInfoRequest::_InternalParse(const char* ptr, ::_pbi::Pars
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string name = 1;
+      // bytes name = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_name();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          #ifndef NDEBUG
-          ::_pbi::VerifyUTF8(str, "openfoxwq.WsGetPlayerInfoRequest.name");
-          #endif  // !NDEBUG
         } else
           goto handle_unusual;
         continue;
@@ -1861,11 +1851,7 @@ uint8_t* WsGetPlayerInfoRequest::_InternalSerialize(
 
   switch (info_case()) {
     case kName: {
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-        this->_internal_name().data(), static_cast<int>(this->_internal_name().length()),
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-        "openfoxwq.WsGetPlayerInfoRequest.name");
-      target = stream->WriteStringMaybeAliased(
+      target = stream->WriteBytesMaybeAliased(
           1, this->_internal_name(), target);
       break;
     }
@@ -1893,10 +1879,10 @@ size_t WsGetPlayerInfoRequest::ByteSizeLong() const {
   (void) cached_has_bits;
 
   switch (info_case()) {
-    // string name = 1;
+    // bytes name = 1;
     case kName: {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_name());
       break;
     }
