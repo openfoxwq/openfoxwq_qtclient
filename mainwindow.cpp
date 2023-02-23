@@ -415,14 +415,14 @@ void MainWindow::closeEvent(QCloseEvent *event) {
     event->accept();
 }
 
-void MainWindow::on_soundButton_toggled(bool checked)
+void MainWindow::on_soundButton_toggled(bool muted)
 {
     static QIcon soundOnIcon(":/assets/menu/sound_on.svg");
     static QIcon soundOffIcon(":/assets/menu/sound_off.svg");
 
-    m_sfx.setMuted(!checked);
-    ui->volumeSlider->setEnabled(!checked);
-    if (checked) {
+    m_sfx.setMuted(muted);
+    ui->volumeSlider->setEnabled(!muted);
+    if (muted) {
         ui->soundButton->setIcon(soundOnIcon);
         ui->soundButton->setText("Sound On");
     } else {

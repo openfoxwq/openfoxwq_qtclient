@@ -17,6 +17,7 @@ ModelUtils::ModelUtils() : m_unknownCountryFlag(":/assets/flag-small/aq.png")
     m_countryFlags[openfoxwq::Country::CANADA] = QIcon(":/assets/flag-small/ca.png");
     m_countryFlags[openfoxwq::Country::CHILE] = QIcon(":/assets/flag-small/cl.png");
     m_countryFlags[openfoxwq::Country::CHINA] = QIcon(":/assets/flag-small/cn.png");
+    m_countryFlags[openfoxwq::Country::EGYPT] = QIcon(":/assets/flag-small/eg.png");
     m_countryFlags[openfoxwq::Country::FRANCE] = QIcon(":/assets/flag-small/fr.png");
     m_countryFlags[openfoxwq::Country::GERMANY] = QIcon(":/assets/flag-small/de.png");
     m_countryFlags[openfoxwq::Country::GREECE] = QIcon(":/assets/flag-small/gr.png");
@@ -36,11 +37,13 @@ ModelUtils::ModelUtils() : m_unknownCountryFlag(":/assets/flag-small/aq.png")
     m_countryFlags[openfoxwq::Country::NIGERIA] = QIcon(":/assets/flag-small/ng.png");
     m_countryFlags[openfoxwq::Country::NORWAY] = QIcon(":/assets/flag-small/no.png");
     m_countryFlags[openfoxwq::Country::PHILIPPINES] = QIcon(":/assets/flag-small/ph.png");
+    m_countryFlags[openfoxwq::Country::POLAND] = QIcon(":/assets/flag-small/pl.png");
     m_countryFlags[openfoxwq::Country::PORTUGAL] = QIcon(":/assets/flag-small/pt.png");
     m_countryFlags[openfoxwq::Country::RUSSIA] = QIcon(":/assets/flag-small/ru.png");
     m_countryFlags[openfoxwq::Country::SAUDIARABIA] = QIcon(":/assets/flag-small/sa.png");
     m_countryFlags[openfoxwq::Country::SINGAPORE] = QIcon(":/assets/flag-small/sg.png");
     m_countryFlags[openfoxwq::Country::SOUTHAFRICA] = QIcon(":/assets/flag-small/za.png");
+    m_countryFlags[openfoxwq::Country::SPAIN] = QIcon(":/assets/flag-small/es.png");
     m_countryFlags[openfoxwq::Country::SWEDEN] = QIcon(":/assets/flag-small/se.png");
     m_countryFlags[openfoxwq::Country::TAIWAN] = QIcon(":/assets/flag-small/tw.png");
     m_countryFlags[openfoxwq::Country::THAILAND] = QIcon(":/assets/flag-small/th.png");
@@ -63,6 +66,7 @@ QString ModelUtils::countryString(openfoxwq::Country country) {
     case openfoxwq::Country::CANADA: return "Canada";
     case openfoxwq::Country::CHILE: return "Chile";
     case openfoxwq::Country::CHINA: return "China";
+    case openfoxwq::Country::EGYPT: return "Egypt";
     case openfoxwq::Country::FRANCE: return "France";
     case openfoxwq::Country::GERMANY: return "Germany";
     case openfoxwq::Country::GREECE: return "Greece";
@@ -82,11 +86,13 @@ QString ModelUtils::countryString(openfoxwq::Country country) {
     case openfoxwq::Country::NIGERIA: return "Nigeria";
     case openfoxwq::Country::NORWAY: return "Norway";
     case openfoxwq::Country::PHILIPPINES: return "Philippines";
+    case openfoxwq::Country::POLAND: return "Poland";
     case openfoxwq::Country::PORTUGAL: return "Portugal";
     case openfoxwq::Country::RUSSIA: return "Russia";
     case openfoxwq::Country::SAUDIARABIA: return "Saudi Arabia";
     case openfoxwq::Country::SINGAPORE: return "Singapore";
     case openfoxwq::Country::SOUTHAFRICA: return "South Africa";
+    case openfoxwq::Country::SPAIN: return "Spain";
     case openfoxwq::Country::SWEDEN: return "Sweden";
     case openfoxwq::Country::TAIWAN: return "Taiwan";
     case openfoxwq::Country::THAILAND: return "Thailand";
